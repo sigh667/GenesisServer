@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+
+    <data name="AllRequestsListItemText" type="System.String">
+        <value>所有请求</value>
+    </data>
+    <data name="ByCategoryListItemText" type="System.String">
+        <value>按类别</value>
+    </data>
+    <data name="ByTimeListItemText" type="System.String">
+        <value>按时间</value>
+    </data>
+    <data name="ConfigureCustomErrorPagesLinkText" type="System.String">
+        <value>配置自定义错误页</value>
+    </data>
+    <data name="DisplayTraceInfoLabel" type="System.String">
+        <value>在单个页上显示跟踪信息</value>
+    </data>
+    <data name="DisplayTraceOutputForLabel" type="System.String">
+        <value>为以下请求显示跟踪输出:</value>
+    </data>
+    <data name="EnableDebugLabel" type="System.String">
+        <value>启用调试</value>
+    </data>
+    <data name="EnableTraceLabel" type="System.String">
+        <value>捕获跟踪信息</value>
+    </data>
+    <data name="Instructions" type="System.String">
+        <value>配置调试和跟踪应用程序的设置。</value>
+    </data>
+    <data name="LocalRequestsOnlyListItemText" type="System.String">
+        <value>仅本地请求</value>
+    </data>
+    <data name="MostRecentTraceResultsListItemText" type="System.String">
+        <value>最新跟踪结果</value>
+    </data>
+    <data name="NumberOfTraceRequestsToCache" type="System.String">
+        <value>要缓存的跟踪请求数: </value>
+    </data>
+    <data name="OldestTraceResultsListItemText" type="System.String">
+        <value>最早的跟踪结果</value>
+    </data>
+    <data name="SortOrderForTraceResultsLabel" type="System.String">
+        <value>选择跟踪结果的排序顺序:</value>
+    </data>
+    <data name="Title" type="System.String">
+        <value>配置调试和跟踪</value>
+    </data>
+    <data name="WhichTraceResultsToCacheLabel" type="System.String">
+        <value>选择要缓存的跟踪结果:</value>
+    </data>
+    <data name="InvalidId" type="System.String">
+        <value>遇到无效 ID: </value>
+    </data>
+</root>

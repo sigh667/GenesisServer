@@ -1,0 +1,40 @@
+package com.mokylin.test;
+option java_package = "com.mokylin.bleach.test.gameserver.net";
+option java_outer_classname = "MockCGMessage";
+
+import "MockMessageType.proto";
+
+message CGTEST{
+	option (cg_message_type) = CG_TEST;
+	required int32 id = 1;
+	required string name = 2;
+	required int64 other = 3;
+}
+
+message CGMAKELOVE{
+	option (cg_message_type) = CG_MAKE_LOVE;
+	required string withWho = 1;
+}
+
+message CGLogin{
+	option (cg_message_type) = CG_LOGIN;
+	required int64 id = 1;
+	required string name = 2;
+	required int32 pass = 3;
+	required float ratio = 4;
+	repeated Player players = 5;
+}
+
+message Player{
+	required string human = 1;
+}
+
+message GCLogin{
+	option (gc_message_type) = GC_LOGIN;
+	repeated Player players = 1;
+	required int64 id = 2;
+	required string name = 3;
+	required int32 pass = 4;
+	required float money = 5;
+	required double exp = 6;
+}

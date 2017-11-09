@@ -1,0 +1,148 @@
+package com.mokylin;
+import "MessageType.proto";
+option java_package = "com.mokylin.bleach.protobuf";
+option java_outer_classname = "HeroMessage";
+
+
+/**
+ * 客户端请求，雇佣一个Hero
+ */
+message CGHireHero {
+	option (cg_message_type) = CG_HIRE_HERO;
+	/**模板ID*/
+	required int32 templateId = 1;
+}
+
+/**
+ * 客户端请求，Hero升星
+ */
+message CGHeroStarUp {
+	option (cg_message_type) = CG_HERO_STAR_UP;
+	/**UUID*/
+	required int64 id = 1;
+}
+
+/**
+ * 客户端请求，Hero升品质
+ */
+message CGHeroQualityUp {
+	option (cg_message_type) = CG_HERO_QUALITY_UP;
+	/**UUID*/
+	required int64 id = 1;
+}
+
+/**
+ * 客户端请求，给某Hero的技能升级
+ */
+message CGHeroSkillLevelUp {
+	option (cg_message_type) = CG_HERO_SKILL_LEVEL_UP;
+	/**Hero的UUID*/
+	required int64 id = 1;
+	/**技能模板ID*/
+	required int32 templateId = 2;
+	/**要升几级 */
+	required int32 levelUpCount = 3;
+}
+
+/**
+ * 客户端请求，给某Hero穿戴装备
+ */
+message CGHeroWearEquip {
+	option (cg_message_type) = CG_HERO_WEAR_EQUIP;
+	/**Hero的UUID*/
+	required int64 id = 1;
+	/**穿戴的位置 */
+	required int32 position = 2;
+}
+
+/**
+ * 客户端请求，买技能点
+ */
+message CGBuySkillPoint {
+	option (cg_message_type) = CG_BUY_SKILL_POINT;
+}
+
+///////////////////////////////////////////////////////////////////
+/**
+ * 服务器通知，所有英雄信息
+ */
+message GCAllHeroInfo {
+	option (gc_message_type) = GC_ALL_HERO_INFO;
+	repeated HeroInfo heroInfos = 1;
+	repeated HeroUnOwn heroUnOwns = 2;
+}
+/**
+ * 尚未拥有的英雄的碎片数量
+ */
+message HeroUnOwn {
+	/**模板ID*/
+	required int32 templateId = 2;
+	/**英雄碎片数量*/
+	required int32 fragmentCount = 4;
+}
+/**
+ *单个英雄的详细信息
+ */
+message HeroInfo {
+	/**UUID*/
+	required int64 id = 1;
+	/**模板ID*/
+	required int32 templateId = 2;
+	/**级别*/
+	required int32 level = 3;
+	/**英雄碎片数量*/
+	required int32 fragmentCount = 4;
+	/**英雄已经学会的技能 */
+	repeated HeroSkillInfo heroSkillInfos = 5;
+	/**英雄已经穿戴的装备 */
+	repeated HeroEquipInfo heroEquipInfos = 6;
+	/**星星数 */
+	required int32 starCount = 7;
+}
+/**
+ * Hero的技能信息
+ */
+message HeroSkillInfo {
+	/**模板ID*/
+	required int32 templateId = 1;
+	/**级别*/
+	required int32 level = 2;
+}
+/**
+ * Hero的装备信息
+ */
+message HeroEquipInfo {
+	/**穿戴的位置 */
+	required int32 position = 1;
+	/**附魔等级 */
+	required int32 enchantingLevel = 2;
+	/**附魔进度 */
+	required int32 enchantingExp = 3;
+}
+
+/**
+ */
+message GCHeroUpdate {
+	option (gc_message_type) = GC_HERO_UPDATE;
+	required HeroInfo heroInfo = 1;
+}
+
+/**
+ * 服务器通知，添加一个Hero
+ */
+message GCHeroAdd {
+	option (gc_message_type) = GC_HERO_ADD;
+	required HeroInfo heroAdd = 1;
+}
+
+/**
+ * 服务器通知，Hero属性变化
+ */
+message GCChangedProps {
+	option (gc_message_type) = GC_HERO_CHANGED_PROPS;
+	repeated PropData changedProps = 1;
+}
+message PropData {
+	required int32 propId = 1;
+	required float value = 2;
+}

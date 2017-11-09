@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Configuration.Install</name>
+  </assembly>
+  <members>
+    <member name="T:System.Configuration.Install.AssemblyInstaller">
+      <summary>加载一个程序集，并运行其中的所有安装程序。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.#ctor">
+      <summary>初始化 <see cref="T:System.Configuration.Install.AssemblyInstaller" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.#ctor(System.Reflection.Assembly,System.String[])">
+      <summary>初始化 <see cref="T:System.Configuration.Install.AssemblyInstaller" /> 类的新实例，并且指定要安装的程序集以及在创建新的 <see cref="T:System.Configuration.Install.InstallContext" /> 对象时要使用的命令行。</summary>
+      <param name="assembly">要安装的 <see cref="T:System.Reflection.Assembly" />。 </param>
+      <param name="commandLine">在为程序集安装创建新的 <see cref="T:System.Configuration.Install.InstallContext" /> 对象时要使用的命令行。 </param>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.#ctor(System.String,System.String[])">
+      <summary>初始化 <see cref="T:System.Configuration.Install.AssemblyInstaller" /> 类的新实例，并且指定在为程序集安装创建新的 <see cref="T:System.Configuration.Install.InstallContext" /> 对象时要安装的程序集的文件名和要使用的命令行。</summary>
+      <param name="fileName">要安装的程序集的文件名。 </param>
+      <param name="commandLine">在为程序集安装创建新的 <see cref="T:System.Configuration.Install.InstallContext" /> 对象时要使用的命令行。 </param>
+    </member>
+    <member name="P:System.Configuration.Install.AssemblyInstaller.Assembly">
+      <summary>获取或设置要安装的程序集。</summary>
+      <returns>
+        <see cref="T:System.Reflection.Assembly" />，它定义要安装的程序集。</returns>
+      <exception cref="T:System.ArgumentNullException">属性值为 null。 </exception>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.CheckIfInstallable(System.String)">
+      <summary>检查是否可以安装指定的程序集。</summary>
+      <param name="assemblyName">要在其中搜索安装程序的程序集。 </param>
+      <exception cref="T:System.Exception">不能安装指定的程序集。 </exception>
+    </member>
+    <member name="P:System.Configuration.Install.AssemblyInstaller.CommandLine">
+      <summary>获取或设置在为程序集安装创建新的 <see cref="T:System.Configuration.Install.InstallContext" /> 对象时要使用的命令行。</summary>
+      <returns>
+        <see cref="T:System.String" /> 类型的数组，它代表在为程序集安装创建新的 <see cref="T:System.Configuration.Install.InstallContext" /> 对象时要使用的命令行。</returns>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.Commit(System.Collections.IDictionary)">
+      <summary>完成安装事务。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含安装程序集合中所有安装程序都运行后计算机的状态。 </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="savedState" /> 参数为 null。- 或 - 保存的状态 <see cref="T:System.Collections.IDictionary" /> 可能已损坏。- 或 - 未能找到文件。 </exception>
+      <exception cref="T:System.Exception">该集合中的一个安装程序的 <see cref="E:System.Configuration.Install.Installer.Committing" /> 事件处理程序出现错误。- 或 - 该集合中的一个安装程序的 <see cref="E:System.Configuration.Install.Installer.Committed" /> 事件处理程序出现错误。- 或 - 在安装的 <see cref="M:System.Configuration.Install.AssemblyInstaller.Commit(System.Collections.IDictionary)" /> 阶段发生异常。该异常被忽略，安装继续进行。但是，安装完成后应用程序可能无法正常工作。- 或 - 在一个程序集中未找到安装程序类型。- 或 - 未能创建一个安装程序类型的实例。 </exception>
+      <exception cref="T:System.Configuration.Install.InstallException">在安装的 <see cref="M:System.Configuration.Install.AssemblyInstaller.Commit(System.Collections.IDictionary)" /> 阶段发生异常。该异常被忽略，安装继续进行。但是，安装完成后应用程序可能无法正常工作。 </exception>
+    </member>
+    <member name="P:System.Configuration.Install.AssemblyInstaller.HelpText">
+      <summary>获取安装程序集合中所有安装程序的帮助文字。</summary>
+      <returns>安装程序集合中所有安装程序的帮助文本，包括每个安装程序的用途说明以及可以传递给每个安装程序并为其所识别的（安装程序的）命令行选项。</returns>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.Install(System.Collections.IDictionary)">
+      <summary>执行安装。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它用于保存执行提交、回滚或卸载操作所需的信息。 </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="savedState" /> 参数为 null。- 或 - 未能找到文件。 </exception>
+      <exception cref="T:System.Exception">该集合的一个安装程序的 <see cref="E:System.Configuration.Install.Installer.BeforeInstall" /> 事件处理程序发生异常。- 或 - 该集合的一个安装程序的 <see cref="E:System.Configuration.Install.Installer.AfterInstall" /> 事件处理程序发生异常。- 或 - 在一个程序集中未找到安装程序类型。- 或 - 未能创建一个安装程序类型的实例。 </exception>
+    </member>
+    <member name="P:System.Configuration.Install.AssemblyInstaller.Path">
+      <summary>获取或设置要安装的程序集的路径。</summary>
+      <returns>要安装的程序集的路径。</returns>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.Rollback(System.Collections.IDictionary)">
+      <summary>将计算机还原为安装前的状态。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含计算机的安装前状态。 </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="savedState" /> 参数为 null。- 或 - 保存的状态 <see cref="T:System.Collections.IDictionary" /> 可能已损坏。- 或 - 未能找到文件。 </exception>
+      <exception cref="T:System.Exception">该集合的一个安装程序的 <see cref="E:System.Configuration.Install.Installer.BeforeRollback" /> 事件处理程序发生异常。- 或 - 该集合的一个安装程序的 <see cref="E:System.Configuration.Install.Installer.AfterRollback" /> 事件处理程序发生异常。- 或 - 在安装的 <see cref="M:System.Configuration.Install.AssemblyInstaller.Rollback(System.Collections.IDictionary)" /> 阶段发生异常。该异常被忽略，回滚继续进行。但是，回滚完成后计算机可能无法完全还原为其初始状态。- 或 - 在一个程序集中未找到安装程序类型。- 或 - 未能创建一个安装程序类型的实例。 </exception>
+      <exception cref="T:System.Configuration.Install.InstallException">在安装的 <see cref="M:System.Configuration.Install.AssemblyInstaller.Rollback(System.Collections.IDictionary)" /> 阶段发生异常。该异常被忽略，回滚继续进行。但是，回滚完成后计算机可能无法完全还原为其初始状态。 </exception>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.Uninstall(System.Collections.IDictionary)">
+      <summary>移除安装。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含计算机的安装后状态。 </param>
+      <exception cref="T:System.ArgumentException">保存的状态 <see cref="T:System.Collections.IDictionary" /> 可能已损坏。- 或 - 未能找到文件。 </exception>
+      <exception cref="T:System.Exception">该集合中的一个安装程序的 <see cref="E:System.Configuration.Install.Installer.BeforeUninstall" /> 事件处理程序出现错误。- 或 - 该集合中的一个安装程序的 <see cref="E:System.Configuration.Install.Installer.AfterUninstall" /> 事件处理程序出现错误。- 或 - 卸载时发生异常。该异常被忽略，卸载继续进行。但是，卸载完成后应用程序可能未完全卸载。- 或 - 在一个程序集中未找到安装程序类型。- 或 - 未能创建一个安装程序类型的实例。- 或 - 未能删除文件。 </exception>
+      <exception cref="T:System.Configuration.Install.InstallException">卸载时发生异常。该异常被忽略，卸载继续进行。但是，卸载完成后应用程序可能未完全卸载。 </exception>
+    </member>
+    <member name="P:System.Configuration.Install.AssemblyInstaller.UseNewContext">
+      <summary>获取或设置一个值，该值指示是否要为程序集安装创建新的 <see cref="T:System.Configuration.Install.InstallContext" /> 对象。</summary>
+      <returns>
+如果要为程序集安装创建一个新的 <see cref="T:System.Configuration.Install.InstallContext" /> 对象，则为 true；否则为 false。默认为 true。</returns>
+    </member>
+    <member name="T:System.Configuration.Install.ComponentInstaller">
+      <summary>指定一个安装程序，该程序从组件复制属性以供安装时使用。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.ComponentInstaller.#ctor">
+      <summary>初始化 <see cref="T:System.Configuration.Install.ComponentInstaller" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.ComponentInstaller.CopyFromComponent(System.ComponentModel.IComponent)">
+      <summary>在派生类中被重写时，从指定的组件复制安装时需要的所有属性。</summary>
+      <param name="component">从其复制的组件。 </param>
+    </member>
+    <member name="M:System.Configuration.Install.ComponentInstaller.IsEquivalentInstaller(System.Configuration.Install.ComponentInstaller)">
+      <summary>确定指定的安装程序是否与此安装程序安装相同的对象。</summary>
+      <returns>
+如果此安装程序和 <paramref name="otherInstaller" /> 参数指定的安装程序安装相同的对象，则为 true；否则为 false。</returns>
+      <param name="otherInstaller">要比较的安装程序。 </param>
+    </member>
+    <member name="T:System.Configuration.Install.IManagedInstaller">
+      <summary>为托管安装程序提供一个接口。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.IManagedInstaller.ManagedInstall(System.String,System.Int32)">
+      <summary>执行托管安装。</summary>
+      <returns>installutil.exe 的返回代码。成功安装返回 0。其他值表示安装失败。</returns>
+      <param name="commandLine">指定安装的命令行。</param>
+      <param name="hInstall">安装的句柄。</param>
+    </member>
+    <member name="T:System.Configuration.Install.InstallContext">
+      <summary>包含关于当前安装的信息。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.InstallContext.#ctor">
+      <summary>初始化 <see cref="T:System.Configuration.Install.InstallContext" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.InstallContext.#ctor(System.String,System.String[])">
+      <summary>初始化 <see cref="T:System.Configuration.Install.InstallContext" /> 类的新实例，并创建安装的日志文件。</summary>
+      <param name="logFilePath">此安装的日志文件的路径，或者如果无须创建日志文件，则为 null。 </param>
+      <param name="commandLine">运行安装程序时输入的命令行参数，或者如果未输入任何内容，则为 null。 </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallContext.IsParameterTrue(System.String)">
+      <summary>确定指定的命令行参数是否为 true。</summary>
+      <returns>
+如果指定的参数设置为“是”、“真”、“1”或空字符串 ("")，则为 true；否则为 false。</returns>
+      <param name="paramName">要检查的命令行参数的名称。 </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallContext.LogMessage(System.String)">
+      <summary>将消息写入控制台和安装的日志文件。</summary>
+      <param name="message">要写入的消息。 </param>
+    </member>
+    <member name="P:System.Configuration.Install.InstallContext.Parameters">
+      <summary>获取在运行 InstallUtil.exe 时输入的命令行参数。</summary>
+      <returns>一个 <see cref="T:System.Collections.Specialized.StringDictionary" />，它代表运行可执行安装文件时输入的命令行参数。</returns>
+    </member>
+    <member name="M:System.Configuration.Install.InstallContext.ParseCommandLine(System.String[])">
+      <summary>将命令行参数分析到字符串字典中。</summary>
+      <returns>包含已分析的命令行参数的 <see cref="T:System.Collections.Specialized.StringDictionary" />。</returns>
+      <param name="args">包含命令行参数的数组。 </param>
+    </member>
+    <member name="T:System.Configuration.Install.Installer">
+      <summary>提供自定义安装的基础。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.#ctor">
+      <summary>初始化 <see cref="T:System.Configuration.Install.Installer" /> 类的新实例。</summary>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.AfterInstall">
+      <summary>在 <see cref="P:System.Configuration.Install.Installer.Installers" /> 属性中的所有安装程序的 <see cref="M:System.Configuration.Install.Installer.Install(System.Collections.IDictionary)" /> 方法都运行后发生。</summary>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.AfterRollback">
+      <summary>在回滚 <see cref="P:System.Configuration.Install.Installer.Installers" /> 属性中所有安装程序的安装后发生。</summary>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.AfterUninstall">
+      <summary>在 <see cref="P:System.Configuration.Install.Installer.Installers" /> 属性中所有安装程序都执行它们的卸载操作后发生。</summary>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.BeforeInstall">
+      <summary>在安装程序集合中每个安装程序的 <see cref="M:System.Configuration.Install.Installer.Install(System.Collections.IDictionary)" /> 方法运行前发生。</summary>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.BeforeRollback">
+      <summary>在回滚 <see cref="P:System.Configuration.Install.Installer.Installers" /> 属性中的安装程序前发生。</summary>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.BeforeUninstall">
+      <summary>在 <see cref="P:System.Configuration.Install.Installer.Installers" /> 属性中的安装程序执行它们的卸载操作前发生。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.Commit(System.Collections.IDictionary)">
+      <summary>在派生类中重写时，完成安装事务。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含在集合中所有安装程序都运行后的计算机的状态。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="savedState" /> 参数为 null。- 或 - 保存的状态 <see cref="T:System.Collections.IDictionary" /> 可能已损坏。</exception>
+      <exception cref="T:System.Configuration.Install.InstallException">在安装的 <see cref="M:System.Configuration.Install.Installer.Commit(System.Collections.IDictionary)" /> 阶段发生异常。忽略该异常，安装继续进行。但是在安装完成后，应用程序可能无法正常工作。</exception>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.Committed">
+      <summary>在 <see cref="P:System.Configuration.Install.Installer.Installers" /> 属性中的所有安装程序均提交它们的安装后发生。</summary>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.Committing">
+      <summary>在 <see cref="P:System.Configuration.Install.Installer.Installers" /> 属性中的安装程序提交它们的安装前发生。</summary>
+    </member>
+    <member name="P:System.Configuration.Install.Installer.Context">
+      <summary>获取或设置关于当前安装的信息。</summary>
+      <returns>一个 <see cref="T:System.Configuration.Install.InstallContext" />，它包含关于当前安装的信息。</returns>
+    </member>
+    <member name="P:System.Configuration.Install.Installer.HelpText">
+      <summary>获取安装程序集合中所有安装程序的帮助文字。</summary>
+      <returns>安装程序集合中所有安装程序的帮助文本，包括安装程序的用途说明以及可执行安装文件（如 InstallUtil.exe 实用工具）的命令行选项，这些选项可以传递给该安装程序并为其所识别。</returns>
+      <exception cref="T:System.NullReferenceException">安装程序集合中的安装程序之一指定了一个 null 引用，而不是帮助文本。此异常的一个可能原因是定义了要包含帮助文本的字段，但未对其进行初始化。</exception>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.Install(System.Collections.IDictionary)">
+      <summary>在派生类中被重写时，执行安装。</summary>
+      <param name="stateSaver">
+        <see cref="T:System.Collections.IDictionary" />，它用于保存执行提交、回滚或卸载操作所需的信息。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="stateSaver" /> 参数为 null。</exception>
+      <exception cref="T:System.Exception">该集合的一个安装程序的 <see cref="E:System.Configuration.Install.Installer.BeforeInstall" /> 事件处理程序发生异常。- 或 - 该集合的一个安装程序的 <see cref="E:System.Configuration.Install.Installer.AfterInstall" /> 事件处理程序发生异常。</exception>
+    </member>
+    <member name="P:System.Configuration.Install.Installer.Installers">
+      <summary>获取该安装程序包含的安装程序的集合。</summary>
+      <returns>一个 <see cref="T:System.Configuration.Install.InstallerCollection" />，它包含与该安装程序关联的安装程序的集合。</returns>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnAfterInstall(System.Collections.IDictionary)">
+      <summary>引发 <see cref="E:System.Configuration.Install.Installer.AfterInstall" /> 事件。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含在 <see cref="P:System.Configuration.Install.Installer.Installers" /> 属性中包含的所有安装程序都完成它们的安装后计算机的状态。</param>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnAfterRollback(System.Collections.IDictionary)">
+      <summary>引发 <see cref="E:System.Configuration.Install.Installer.AfterRollback" /> 事件。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含在 <see cref="P:System.Configuration.Install.Installer.Installers" /> 属性中包含的安装程序回滚之后计算机的状态。</param>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnAfterUninstall(System.Collections.IDictionary)">
+      <summary>引发 <see cref="E:System.Configuration.Install.Installer.AfterUninstall" /> 事件。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含在 <see cref="P:System.Configuration.Install.Installer.Installers" /> 属性中包含的所有安装程序都卸载后计算机的状态。</param>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnBeforeInstall(System.Collections.IDictionary)">
+      <summary>引发 <see cref="E:System.Configuration.Install.Installer.BeforeInstall" /> 事件。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含在安装 <see cref="P:System.Configuration.Install.Installer.Installers" /> 属性中的安装程序之前计算机的状态。此时，该 <see cref="T:System.Collections.IDictionary" /> 对象应为空。</param>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnBeforeRollback(System.Collections.IDictionary)">
+      <summary>引发 <see cref="E:System.Configuration.Install.Installer.BeforeRollback" /> 事件。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含在回滚 <see cref="P:System.Configuration.Install.Installer.Installers" /> 属性中的安装程序之前计算机的状态。</param>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnBeforeUninstall(System.Collections.IDictionary)">
+      <summary>引发 <see cref="E:System.Configuration.Install.Installer.BeforeUninstall" /> 事件。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含在 <see cref="P:System.Configuration.Install.Installer.Installers" /> 属性中的安装程序卸载它们的安装之前计算机的状态。</param>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnCommitted(System.Collections.IDictionary)">
+      <summary>引发 <see cref="E:System.Configuration.Install.Installer.Committed" /> 事件。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含在 <see cref="P:System.Configuration.Install.Installer.Installers" /> 属性中所有安装程序都运行后计算机的状态。</param>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnCommitting(System.Collections.IDictionary)">
+      <summary>引发 <see cref="E:System.Configuration.Install.Installer.Committing" /> 事件。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含提交 <see cref="P:System.Configuration.Install.Installer.Installers" /> 属性中的安装程序之前计算机的状态。</param>
+    </member>
+    <member name="P:System.Configuration.Install.Installer.Parent">
+      <summary>获取或设置包含该安装程序所属的集合的安装程序。</summary>
+      <returns>一个 <see cref="T:System.Configuration.Install.Installer" />，它包含此实例所属的集合，或者如果此实例不属于集合，则为 null。</returns>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.Rollback(System.Collections.IDictionary)">
+      <summary>在派生类中重写时，还原计算机的安装前状态。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含计算机的安装前状态。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="savedState" /> 参数为 null。- 或 - 保存的状态 <see cref="T:System.Collections.IDictionary" /> 可能已损坏。</exception>
+      <exception cref="T:System.Configuration.Install.InstallException">在安装的 <see cref="M:System.Configuration.Install.Installer.Rollback(System.Collections.IDictionary)" /> 阶段发生异常。忽略该异常，回滚继续进行。但是，回滚完成后计算机可能无法完全还原为其初始状态。</exception>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.Uninstall(System.Collections.IDictionary)">
+      <summary>在派生类中重写时，移除安装。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含安装完成后计算机的状态。</param>
+      <exception cref="T:System.ArgumentException">保存的状态 <see cref="T:System.Collections.IDictionary" /> 可能已损坏。</exception>
+      <exception cref="T:System.Configuration.Install.InstallException">卸载时发生异常。忽略该异常，卸载继续进行。但是，卸载完成后应用程序可能未完全卸载。</exception>
+    </member>
+    <member name="T:System.Configuration.Install.InstallerCollection">
+      <summary>包含要在安装过程中运行的安装程序的集合。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.Add(System.Configuration.Install.Installer)">
+      <summary>向该安装程序集合添加指定的安装程序。</summary>
+      <returns>所添加安装程序的从零开始的索引。</returns>
+      <param name="value">一个 <see cref="T:System.Configuration.Install.Installer" />，它代表要添加到集合中的安装程序。 </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.AddRange(System.Configuration.Install.Installer[])">
+      <summary>向此集合添加一组指定的安装程序。</summary>
+      <param name="value">一个 <see cref="T:System.Configuration.Install.Installer" /> 类型的数组，它代表要添加到此集合的安装程序。 </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.AddRange(System.Configuration.Install.InstallerCollection)">
+      <summary>向此集合添加指定的安装程序的集合。</summary>
+      <param name="value">一个 <see cref="T:System.Configuration.Install.InstallerCollection" />，它代表要添加到此集合的安装程序。 </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.Contains(System.Configuration.Install.Installer)">
+      <summary>确定指定的安装程序是否包含在集合中。</summary>
+      <returns>
+如果指定的安装程序在此集合中，则为 true；否则为 false。</returns>
+      <param name="value">一个 <see cref="T:System.Configuration.Install.Installer" />，它代表要查找的安装程序。 </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.CopyTo(System.Configuration.Install.Installer[],System.Int32)">
+      <summary>将集合中的项复制到数组（从指定的索引处开始）。</summary>
+      <param name="array">要复制到的数组。 </param>
+      <param name="index">数组的索引，在该处粘贴集合。 </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.IndexOf(System.Configuration.Install.Installer)">
+      <summary>确定集合中指定安装程序的索引。</summary>
+      <returns>集合中安装程序的从零开始的索引。</returns>
+      <param name="value">要在集合中定位的 <see cref="T:System.Configuration.Install.Installer" />。 </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.Insert(System.Int32,System.Configuration.Install.Installer)">
+      <summary>将指定的安装程序插入集合中的指定索引处。</summary>
+      <param name="index">从零开始的索引，在该处插入安装程序。 </param>
+      <param name="value">要插入的 <see cref="T:System.Configuration.Install.Installer" />。 </param>
+    </member>
+    <member name="P:System.Configuration.Install.InstallerCollection.Item(System.Int32)">
+      <summary>获取或设置指定索引处的安装程序。</summary>
+      <returns>一个 <see cref="T:System.Configuration.Install.Installer" />，它代表指定索引处的安装程序。</returns>
+      <param name="index">要获取或设置的安装程序的从零开始的索引。 </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.OnInsert(System.Int32,System.Object)">
+      <summary>在将一个新的安装程序插入此集合之前执行其他自定义进程。</summary>
+      <param name="index">从零开始的索引，在该处插入 <paramref name="value" />。</param>
+      <param name="value">
+        <paramref name="index" /> 处的安装程序的新值。</param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.OnRemove(System.Int32,System.Object)">
+      <summary>在将一个安装程序从此集合移除之前执行其他自定义进程。</summary>
+      <param name="index">从零开始的索引，可在该位置找到 <paramref name="value" />。</param>
+      <param name="value">要从 <paramref name="index" /> 移除的安装程序。 </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.OnSet(System.Int32,System.Object,System.Object)">
+      <summary>将现有的安装程序设置为新值之前执行其他自定义进程。</summary>
+      <param name="index">从零开始的索引，在该位置替换 <paramref name="oldValue" />。</param>
+      <param name="oldValue">要用 <paramref name="newValue" /> 替换的值。</param>
+      <param name="newValue">
+        <paramref name="index" /> 处的安装程序的新值。</param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.Remove(System.Configuration.Install.Installer)">
+      <summary>从集合中移除指定的 <see cref="T:System.Configuration.Install.Installer" />。</summary>
+      <param name="value">一个 <see cref="T:System.Configuration.Install.Installer" />，它代表要移除的安装程序。 </param>
+    </member>
+    <member name="T:System.Configuration.Install.InstallEventArgs">
+      <summary>为下列事件提供数据：<see cref="E:System.Configuration.Install.Installer.BeforeInstall" />、<see cref="E:System.Configuration.Install.Installer.AfterInstall" />、<see cref="E:System.Configuration.Install.Installer.Committing" />、<see cref="E:System.Configuration.Install.Installer.Committed" />、<see cref="E:System.Configuration.Install.Installer.BeforeRollback" />、<see cref="E:System.Configuration.Install.Installer.AfterRollback" />、<see cref="E:System.Configuration.Install.Installer.BeforeUninstall" />、<see cref="E:System.Configuration.Install.Installer.AfterUninstall" />。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.InstallEventArgs.#ctor">
+      <summary>初始化 <see cref="T:System.Configuration.Install.InstallEventArgs" /> 类的新实例，并保留 <see cref="P:System.Configuration.Install.InstallEventArgs.SavedState" /> 属性为空。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.InstallEventArgs.#ctor(System.Collections.IDictionary)">
+      <summary>初始化 <see cref="T:System.Configuration.Install.InstallEventArgs" /> 类的新实例，并指定 <see cref="P:System.Configuration.Install.InstallEventArgs.SavedState" /> 属性的值。</summary>
+      <param name="savedState">表示当前安装状态的 <see cref="T:System.Collections.IDictionary" />。 </param>
+    </member>
+    <member name="P:System.Configuration.Install.InstallEventArgs.SavedState">
+      <summary>获取表示当前安装状态的 <see cref="T:System.Collections.IDictionary" />。</summary>
+      <returns>表示当前安装状态的 <see cref="T:System.Collections.IDictionary" />。</returns>
+    </member>
+    <member name="T:System.Configuration.Install.InstallEventHandler">
+      <summary>代表将处理 <see cref="T:System.Configuration.Install.Installer" /> 的 <see cref="E:System.Configuration.Install.Installer.BeforeInstall" />、<see cref="E:System.Configuration.Install.Installer.AfterInstall" />、<see cref="E:System.Configuration.Install.Installer.Committing" />、<see cref="E:System.Configuration.Install.Installer.Committed" />、<see cref="E:System.Configuration.Install.Installer.BeforeRollback" />、<see cref="E:System.Configuration.Install.Installer.AfterRollback" />、<see cref="E:System.Configuration.Install.Installer.BeforeUninstall" /> 或 <see cref="E:System.Configuration.Install.Installer.AfterUninstall" /> 事件的方法。</summary>
+      <param name="sender">事件源。 </param>
+      <param name="e">包含事件数据的 <see cref="T:System.Configuration.Install.InstallEventArgs" />。 </param>
+    </member>
+    <member name="T:System.Configuration.Install.InstallException">
+      <summary>在安装的提交、回滚或卸载阶段发生错误时引发的异常。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.InstallException.#ctor">
+      <summary>初始化 <see cref="T:System.Configuration.Install.InstallException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.InstallException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>用序列化数据初始化 <see cref="T:System.Configuration.Install.InstallException" /> 类的新实例。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它存有有关所引发异常的序列化的对象数据。 </param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含有关源或目标的上下文信息。 </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallException.#ctor(System.String)">
+      <summary>初始化 <see cref="T:System.Configuration.Install.InstallException" /> 类的新实例，并指定要显示给用户的消息。</summary>
+      <param name="message">要显示给用户的消息。 </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallException.#ctor(System.String,System.Exception)">
+      <summary>初始化 <see cref="T:System.Configuration.Install.InstallException" /> 类的新实例，并指定要向用户显示的消息，以及对作为该异常原因的内部异常的引用。</summary>
+      <param name="message">要显示给用户的消息。 </param>
+      <param name="innerException">导致当前异常的异常。如果 <paramref name="innerException" /> 参数不为 null，则当前异常在处理内部异常的 catch 块中引发。 </param>
+    </member>
+    <member name="T:System.Configuration.Install.ManagedInstallerClass">
+      <summary>表示托管安装。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.ManagedInstallerClass.#ctor">
+      <summary>初始化 <see cref="T:System.Configuration.Install.ManagedInstallerClass" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.ManagedInstallerClass.InstallHelper(System.String[])">
+      <summary>使用安装程序工具 (Installutil.exe) 的功能。</summary>
+      <param name="args">传递给安装程序工具的参数。</param>
+    </member>
+    <member name="M:System.Configuration.Install.ManagedInstallerClass.System#Configuration#Install#IManagedInstaller#ManagedInstall(System.String,System.Int32)">
+      <summary>有关此成员的说明，请参见 <see cref="M:System.Configuration.Install.IManagedInstaller.ManagedInstall(System.String,System.Int32)" />。</summary>
+      <returns>installutil.exe 的返回代码。成功安装返回 0。其他值表示安装失败。</returns>
+      <param name="argString">要安装的命令行。</param>
+      <param name="hInstall">安装的句柄。</param>
+    </member>
+    <member name="T:System.Configuration.Install.TransactedInstaller">
+      <summary>定义要么完全成功要么失败后将计算机保留在其初始状态的安装程序。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.TransactedInstaller.#ctor">
+      <summary>初始化 <see cref="T:System.Configuration.Install.TransactedInstaller" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Configuration.Install.TransactedInstaller.Install(System.Collections.IDictionary)">
+      <summary>执行安装。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，此方法在其中保存执行提交、回滚或卸载操作所需的信息。 </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="savedState" /> 参数为 null。 </exception>
+      <exception cref="T:System.Exception">安装失败，将被回滚。 </exception>
+    </member>
+    <member name="M:System.Configuration.Install.TransactedInstaller.Uninstall(System.Collections.IDictionary)">
+      <summary>移除安装。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含安装完成后计算机的状态。 </param>
+    </member>
+    <member name="T:System.Configuration.Install.UninstallAction">
+      <summary>指定安装程序在卸载时应进行的操作。</summary>
+    </member>
+    <member name="F:System.Configuration.Install.UninstallAction.Remove">
+      <summary>移除安装程序创建的资源。</summary>
+    </member>
+    <member name="F:System.Configuration.Install.UninstallAction.NoAction">
+      <summary>保留安装程序创建的原有资源。</summary>
+    </member>
+    <member name="T:System.Diagnostics.EventLogInstaller">
+      <summary>使您能够安装和配置应用程序在运行时所读取或写入的事件日志。 </summary>
+    </member>
+    <member name="M:System.Diagnostics.EventLogInstaller.#ctor">
+      <summary>初始化 <see cref="T:System.Diagnostics.EventLogInstaller" /> 类的新实例。 </summary>
+    </member>
+    <member name="P:System.Diagnostics.EventLogInstaller.CategoryCount">
+      <summary>获取或设置类别资源文件中类别的数目。</summary>
+      <returns>类别资源文件中的类别的数目。默认值为零。</returns>
+    </member>
+    <member name="P:System.Diagnostics.EventLogInstaller.CategoryResourceFile">
+      <summary>获取或设置包含源的类别字符串的资源文件的路径。</summary>
+      <returns>类别资源文件的路径。默认值为空字符串 ("")。</returns>
+    </member>
+    <member name="M:System.Diagnostics.EventLogInstaller.CopyFromComponent(System.ComponentModel.IComponent)">
+      <summary>复制安装时所需要的 <see cref="T:System.Diagnostics.EventLog" /> 组件（与事件日志对应）的属性值。</summary>
+      <param name="component">用作 <see cref="T:System.Diagnostics.EventLogInstaller" /> 的模板的 <see cref="T:System.ComponentModel.IComponent" />。 </param>
+      <exception cref="T:System.ArgumentException">指定的组件不是 <see cref="T:System.Diagnostics.EventLog" />。- 或 - 指定组件的 <see cref="P:System.Diagnostics.EventLog.Log" /> 或 <see cref="P:System.Diagnostics.EventLog.Source" /> 属性为 null 或空。 </exception>
+    </member>
+    <member name="M:System.Diagnostics.EventLogInstaller.Install(System.Collections.IDictionary)">
+      <summary>执行安装并将事件日志信息写入注册表。</summary>
+      <param name="stateSaver">
+        <see cref="T:System.Collections.IDictionary" />，用于保存执行回滚或卸载操作所需的信息。 </param>
+      <exception cref="T:System.PlatformNotSupportedException">安装程序试图使用的平台不是 Windows NT 4.0 或更新版本。 </exception>
+      <exception cref="T:System.ArgumentException">已经为另一个事件日志注册了 <see cref="P:System.Diagnostics.EventLogInstaller.Source" /> 属性中指定的名称。</exception>
+    </member>
+    <member name="M:System.Diagnostics.EventLogInstaller.IsEquivalentInstaller(System.Configuration.Install.ComponentInstaller)">
+      <summary>确定安装程序和指定的另一个安装程序是否引用同一个源。</summary>
+      <returns>
+如果当前安装程序和由 <paramref name="otherInstaller" /> 参数指定的安装程序安装或卸载相同的源，则为 true；否则为 false。</returns>
+      <param name="otherInstaller">要比较的安装程序。 </param>
+    </member>
+    <member name="P:System.Diagnostics.EventLogInstaller.Log">
+      <summary>获取或设置要向其设置源的日志的名称。</summary>
+      <returns>日志的名称。这可以是 Application、System 或一个自定义的日志名称。默认值为空字符串 ("")。</returns>
+    </member>
+    <member name="P:System.Diagnostics.EventLogInstaller.MessageResourceFile">
+      <summary>获取或设置资源文件的路径，该文件包含源的消息格式字符串。</summary>
+      <returns>消息资源文件的路径。默认值为空字符串 ("")。</returns>
+    </member>
+    <member name="P:System.Diagnostics.EventLogInstaller.ParameterResourceFile">
+      <summary>获取或设置资源文件的路径，该文件包含源的消息参数字符串。</summary>
+      <returns>消息参数资源文件的路径。默认值为空字符串 ("")。</returns>
+    </member>
+    <member name="M:System.Diagnostics.EventLogInstaller.Rollback(System.Collections.IDictionary)">
+      <summary>通过回滚安装过程写入注册表的事件日志信息，将计算机还原为安装前的状态。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含计算机的安装前状态。 </param>
+    </member>
+    <member name="P:System.Diagnostics.EventLogInstaller.Source">
+      <summary>获取或设置要在日志中注册的源名称。</summary>
+      <returns>要在事件日志中注册为项源的名称。默认值为空字符串 ("")。</returns>
+    </member>
+    <member name="M:System.Diagnostics.EventLogInstaller.Uninstall(System.Collections.IDictionary)">
+      <summary>通过从注册表中移除事件日志信息来移除安装。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含计算机的安装前状态。 </param>
+    </member>
+    <member name="P:System.Diagnostics.EventLogInstaller.UninstallAction">
+      <summary>获取或设置一个值，以指示 安装程序工具 (Installutil.exe) 在卸载时应删除事件日志还是保留其安装状态。</summary>
+      <returns>
+        <see cref="T:System.Configuration.Install.UninstallAction" /> 值之一，它指示在卸载 <see cref="T:System.Diagnostics.EventLog" /> 时将事件日志保留在何种状态。默认为 Remove。</returns>
+      <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+        <see cref="P:System.Diagnostics.EventLogInstaller.UninstallAction" /> 包含无效值。只有 Remove 和 NoAction 才是此属性的有效值。</exception>
+    </member>
+    <member name="T:System.Diagnostics.PerformanceCounterInstaller">
+      <summary>指定 <see cref="T:System.Diagnostics.PerformanceCounter" /> 组件的安装程序。</summary>
+    </member>
+    <member name="M:System.Diagnostics.PerformanceCounterInstaller.#ctor">
+      <summary>初始化 <see cref="T:System.Diagnostics.PerformanceCounterInstaller" /> 类的新实例。</summary>
+    </member>
+    <member name="P:System.Diagnostics.PerformanceCounterInstaller.CategoryHelp">
+      <summary>获取或设置性能计数器的描述性消息。</summary>
+      <returns>性能计数器的描述性消息。</returns>
+      <exception cref="T:System.ArgumentNullException">值设置为 null。</exception>
+    </member>
+    <member name="P:System.Diagnostics.PerformanceCounterInstaller.CategoryName">
+      <summary>获取或设置性能计数器的性能类别名称。</summary>
+      <returns>性能计数器的性能类别名称。</returns>
+      <exception cref="T:System.ArgumentNullException">值设置为 null。</exception>
+      <exception cref="T:System.ArgumentException">值不是有效的类别名称。</exception>
+    </member>
+    <member name="P:System.Diagnostics.PerformanceCounterInstaller.CategoryType">
+      <summary>获取或设置性能计数器类别类型。</summary>
+      <returns>
+        <see cref="T:System.Diagnostics.PerformanceCounterCategoryType" /> 值之一。</returns>
+      <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">该值不是 <see cref="T:System.Diagnostics.PerformanceCounterCategoryType" />。</exception>
+    </member>
+    <member name="M:System.Diagnostics.PerformanceCounterInstaller.CopyFromComponent(System.ComponentModel.IComponent)">
+      <summary>从指定的组件为性能计数器复制安装时需要的所有属性。</summary>
+      <param name="component">从其复制的组件。</param>
+      <exception cref="T:System.ArgumentException">指定的组件不是 <see cref="T:System.Diagnostics.PerformanceCounter" />。- 或 -指定的 <see cref="T:System.Diagnostics.PerformanceCounter" /> 不完整。- 或 -试图安装不同类别中的多个计数器。</exception>
+    </member>
+    <member name="P:System.Diagnostics.PerformanceCounterInstaller.Counters">
+      <summary>获取与要安装的计数器有关的数据集合。</summary>
+      <returns>一个 <see cref="T:System.Diagnostics.CounterCreationDataCollection" />，它包含要安装的计数器的名称、帮助消息和类型。</returns>
+    </member>
+    <member name="M:System.Diagnostics.PerformanceCounterInstaller.Install(System.Collections.IDictionary)">
+      <summary>执行安装。</summary>
+      <param name="stateSaver">
+        <see cref="T:System.Collections.IDictionary" />，它用于保存执行提交、回滚或卸载操作所需的信息。</param>
+    </member>
+    <member name="M:System.Diagnostics.PerformanceCounterInstaller.Rollback(System.Collections.IDictionary)">
+      <summary>将计算机还原为安装前的状态。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含计算机的安装前状态。</param>
+    </member>
+    <member name="M:System.Diagnostics.PerformanceCounterInstaller.Uninstall(System.Collections.IDictionary)">
+      <summary>移除安装。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" />，它包含计算机的安装后状态。</param>
+    </member>
+    <member name="P:System.Diagnostics.PerformanceCounterInstaller.UninstallAction">
+      <summary>获取一个值，该值指示在卸载时是否移除性能计数器</summary>
+      <returns>
+        <see cref="T:System.Configuration.Install.UninstallAction" /> 值之一。默认为 Remove。</returns>
+      <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">值不是 <see cref="T:System.Configuration.Install.UninstallAction" />。</exception>
+    </member>
+  </members>
+</doc>

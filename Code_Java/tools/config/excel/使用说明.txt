@@ -1,0 +1,54 @@
+1.在model包下面直接写相应的txt文件，其中填写规则如下：
+
+	约束条件：
+	(1)Collection(n,n)   表示为一个集合，即字段类型为List,Map,Set以及数组时，
+		需要加上该约束条件，第一个n表示组数，第二个n表示每组的个数。
+		三个参数：Collection(开始列-1, 组数, 间隔+1) 
+	(2)Object(n)   表示引用的为另一个template，此时需要加上该约束，而且类型要用
+		全称类名,其中n表示一共点多少列。
+	(3)EmbedObject(n)	表示一个嵌入一个对象，对象类型即为定义该字段的类型，对象内部
+		的字段的数据来源于n所定义的列，对象内部字段的值与其定义的注释和这些列的顺序决定。
+	(3)x=true   表示该变量为一个x坐标,在代码生成时会自动加上
+				x = x * BlockData.DEFAULT_BLOCK_WIDTH;
+	(4)y=true	表示该变量为一个y坐标,在代码生成时会自动加上 
+				y = y * BlockData.DEFAULT_BLOCK_HEIGHT;
+	(5)minValue=1	表示该值的最小值为1,在代码生成时会自动加上
+				if(x<1) {
+					throw new TemplateConfigException("", this.getId(),
+					"**不得小于**");
+				}
+	(6)maxValue=10	表示该值的最大值为100，同maxValue
+	(7)notNull=false 默认notNull为true
+	(8)maxLen=1  最大长度为1
+	(9)minLen=1 最小长度为1
+	注：如果为x或y坐标，默认范围为0~1000，如果有额外的限定，请自定义最大值及最小值，
+	         即在加约束条件时加上minValue和maxValue约束，不加的话为minValue=0,maxValue=1000
+	(10)genLua 表示该值不需要翻译为lua脚本代码
+	(11)multiLang 标志该值是否需要多语言
+	
+	
+	
+	文档中的书写格式：
+	[类型] [字段名];[约束条件] [//注释]
+	其中[约束条件] [//注释]为可选的
+
+		(1)如果某一单独的列不需要读，则只需用;来表示该行，如果为对象、数组、Map、List、Set
+				中不需要读的一列，则需要在相应的对象定义处用@BeanFieldNumber(number = 0)
+				来表示。
+		(2)如果读取的为一个数组则：
+				String[] tmp;[Collection(5,1)]//数组
+		(3)如果为一个List、Map、Set，则：
+				List<com.imop.wetzt.gameserver.quest.SpecialBonus> bonus;[Collection(3,4)]//集合
+		(4)如果为一个对象，则
+				com.imop.webzt.gameserver.quest.SpecialDestination dest;[Object(12)]//对象
+		(5)如果为一个x或y坐标：
+				int x;[x=true;minValue=1;maxValue=100]//有范围的最大值及最小值的坐标
+    		
+2.配置说明：
+	在model_template_gen.config中的填写如下：
+	[txt名] [gs/ws/core/ls] [要生成的全称类名] [父类名]  [//注释]
+	说明：上面的gs/ws/core/ls 表示如果填gs，表示生成的类会在gameserver的项目中生成,其它同理
+	
+	
+	
+	

@@ -1,0 +1,108 @@
+package ${packageName};
+
+import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
+#foreach($type in $types)
+import $type;
+#end
+
+/**
+ * $comment
+ * 
+ * @author CodeGenerator, don't modify this file please.
+ */
+
+@ExcelRowBinding
+public abstract class $className extends $father {
+	
+#foreach($field in $fields)
+	/** $field.comment */
+	#foreach($anot in $field.anotations)
+$anot
+	#end
+protected $field.fieldType $field.fieldName;
+
+#end
+
+#foreach($field in $fields)
+#if($field.fieldType == 'boolean')
+	public $field.fieldType is${field.bigName}() {
+#else
+	public $field.fieldType get${field.bigName}() {
+#end
+		return this.$field.fieldName;
+	}
+
+	public void set${field.bigName}($field.fieldType $field.fieldName) {
+#if($field.notNull)
+#if($field.fieldType == "long" || $field.fieldType == "int" || $field.fieldType == "byte" || $field.fieldType == "short" || $field.fieldType == "char" || $field.fieldType == "double" || $field.fieldType == "float")
+		if ($field.fieldName == 0) {
+			throw new TemplateConfigException(this.getSheetName(), this.getId(),
+					$field.startLine, "[$field.comment]$field.fieldName不可以为0");
+		}
+#elseif($field.fieldType == "String")
+		if (StringUtils.isEmpty($field.fieldName)) {
+			throw new TemplateConfigException(this.getSheetName(), this.getId(),
+					$field.startLine, "[$field.comment]$field.fieldName不可以为空");
+		}
+#elseif($field.fieldType != "boolean")
+		if ($field.fieldName == null) {
+			throw new TemplateConfigException(this.getSheetName(), this.getId(),
+					$field.startLine, "[$field.comment]$field.fieldName不可以为空");
+		}	
+#end
+#end
+#if($field.fieldType == "String" && $field.minLen != -1)
+		if(${field.fieldName}.trim().length() < $field.minLen) {
+			throw new TemplateConfigException(this.getSheetName(), this.getId(),
+					$field.startLine, "[$field.comment]$field.fieldName长度不得小于$field.minLen");
+		}
+#end
+#if($field.fieldType == "String" && $field.maxLen != -1)
+		if(${field.fieldName}.trim().length() > $field.maxLen) {
+			throw new TemplateConfigException(this.getSheetName(), this.getId(),
+					$field.startLine, "[$field.comment]$field.fieldName长度不得大于$field.maxLen");
+		}
+#end
+#if($field.xpoint)
+		if ($field.fieldName > $field.maxValue || $field.fieldName < $field.minValue) {
+			throw new TemplateConfigException(this.getSheetName(), this.getId(),
+					$field.startLine, "X坐标值不合法，应为$field.minValue至$field.maxValue之间的格子坐标");
+		}
+
+#elseif($field.ypoint)
+		if ($field.fieldName > $field.maxValue || $field.fieldName < $field.minValue) {
+			throw new TemplateConfigException(this.getSheetName(), this.getId(),
+					$field.startLine, "Y坐标值不合法，应为$field.minValue至$field.maxValue之间的格子坐标");
+		}
+
+#elseif($field.minValue != -1 && $field.maxValue != -1)
+		if ($field.fieldName > $field.maxValue || $field.fieldName < $field.minValue) {
+			throw new TemplateConfigException(this.getSheetName(), this.getId(),
+					$field.startLine, "[$field.comment]$field.fieldName的值不合法，应为$field.minValue至$field.maxValue之间");
+		}
+		this.$field.fieldName = $field.fieldName;
+#elseif($field.minValue != -1)
+		if ($field.fieldName < $field.minValue) {
+			throw new TemplateConfigException(this.getSheetName(), this.getId(),
+					$field.startLine, "[$field.comment]$field.fieldName的值不得小于$field.minValue");
+		}
+		this.$field.fieldName = $field.fieldName;
+#elseif($field.maxValue != -1)
+		if ($field.fieldName > $field.maxValue) {
+			throw new TemplateConfigException(this.getSheetName(), this.getId(),
+					$field.startLine, "[$field.comment]$field.fieldName的值不得大于$field.maxValue");
+		}
+		this.$field.fieldName = $field.fieldName;
+#else
+		this.$field.fieldName = $field.fieldName;
+#end
+	}
+	
+#end
+
+	@Override
+	public String toString() {
+		return "$className[#foreach($field in $fields)$field.fieldName=" + $field.fieldName + ",#end]";
+
+	}
+}

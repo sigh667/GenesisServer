@@ -1,0 +1,13 @@
+package com.mokylin;
+option java_package = "com.mokylin.bleach.protobuf.db";
+option java_outer_classname = "DBDrop";
+
+message DropInfos{
+	repeated ItemDropInfo itemDropInfo = 1;
+	required int64 lastResetNegativeDropValueTime = 2; //最后一次重置负数掉落值的时间//
+}
+
+message ItemDropInfo{
+	required int32 itemTemplateId = 1;
+	required int32 dropValue = 2; //掉落值，用来和阈值做对比的//
+}

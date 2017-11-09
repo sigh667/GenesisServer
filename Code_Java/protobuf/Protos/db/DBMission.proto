@@ -1,0 +1,38 @@
+package com.mokylin;
+option java_package = "com.mokylin.bleach.protobuf.db";
+option java_outer_classname = "DBMission";
+
+/**
+ * 战役系统在数据库中的存储。
+ */
+message DBMissionInfo{
+	required MissionInfo missionInfo = 1;
+	required int64 lastResetStageEliteTime = 2; //最后一次刷新精英关卡的时间//
+}
+
+/**
+ * 战役系统登录时下发给客户端的信息以及在数据库中的存储。
+ */
+message MissionInfo{
+	repeated StageInfo stages = 1;
+	repeated StageEliteInfo stageElites = 2;
+}
+
+/**
+ * 普通关卡信息。
+ */
+message StageInfo{
+	required int32 templateId = 1;
+	required int32 stars = 2; //星星数//
+	required bool isTreasureOpen = 3; //宝箱是否已领取//
+}
+
+/**
+ * 精英关卡信息。
+ */
+message StageEliteInfo{
+	required int32 templateId = 1;
+	required int32 stars = 2; //星星数//
+	required int32 attackTimes = 3; //精英关卡攻打次数,从0开始,0代表没有打过//
+	required int32 resetTimes = 4; //精英关卡下一次是第几次重置，从1开始//
+}

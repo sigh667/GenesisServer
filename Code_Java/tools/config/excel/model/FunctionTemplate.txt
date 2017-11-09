@@ -1,0 +1,1 @@
+boolean defaultOpen;[notNull=false]//是否默认开放

@@ -1,0 +1,1 @@
+long[] shopRefreshPriceArr;[Collection(2,1)]//每个商店的刷新价格

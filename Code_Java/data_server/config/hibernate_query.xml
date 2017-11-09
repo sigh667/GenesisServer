@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mop.webzt.db.model">
+
+	<!-- 使用到的 -->
+	<!-- 查询某服的所有账号 -->
+	<query name="selectAccounts">
+	<![CDATA[
+		FROM AccountEntity WHERE currentServerId = :currentServerId
+	]]>
+	</query>
+
+	<!-- 查询某服的所有角色 -->
+	<query name="selectHumans">
+	<![CDATA[
+		FROM HumanEntity WHERE originalServerId = :originalServerId
+	]]>
+	</query>
+	
+	<!-- 查询某角色的所有道具 -->
+	<query name="queryItem">
+	<![CDATA[
+		FROM ItemEntity WHERE humanId = :humanId
+	]]>
+	</query>
+	
+	<!-- 查询某角色的所有英雄 -->
+	<query name="queryHero">
+	<![CDATA[
+		FROM HeroEntity WHERE humanId = :humanId
+	]]>
+	</query>
+	
+	<!-- 查询某角色的所有商店 -->
+	<query name="queryShop">
+	<![CDATA[
+		FROM ShopEntity WHERE humanId = :humanId
+	]]>
+	</query>
+	
+	<!-- 查询指定服务器的物品打折信息 -->
+	<query name="queryShopDiscount">
+	<![CDATA[
+		FROM ShopDiscountEntity WHERE serverId = :serverId
+	]]>
+	</query>
+	
+	<!-- 查询某角色的功能开启信息 -->
+	<query name="queryFunction">
+	<![CDATA[
+		FROM FunctionEntity WHERE humanId = :humanId
+	]]>
+	</query>
+	
+	<!-- 使用到的 -->
+	
+</hibernate-mapping>

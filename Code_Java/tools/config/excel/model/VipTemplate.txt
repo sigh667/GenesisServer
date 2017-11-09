@@ -1,0 +1,2 @@
+long upgradeExp;[minValue=0] //达到该经验值则升级
+int[] privileges;[Collection(22,1)] //对应VIP的权限

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/core/lib/protobuf-java-2.5.0.jar" sourcepath="/core/lib-src/protobuf-java-2.5.0-sources.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

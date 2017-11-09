@@ -1,0 +1,6 @@
+String type;//分类：技术斩
+int itemId;//对应的灵魂石道具ID
+int baseStar;[minValue=1;maxValue=7]//初始星星数
+int hireCostItemCount;[minValue=1]//直接召唤所需灵石数量
+int decomposeToItemCount;[minValue=1]//整卡兑换碎片数
+int isAlwaysInHeroPanel;[notNull=false]//是否一直显示在Hero面板中（为false的话，如果未拥有此Hero的碎片或卡，则此Hero不显示）

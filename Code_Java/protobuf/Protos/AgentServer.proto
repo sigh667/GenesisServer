@@ -1,0 +1,32 @@
+package com.mokylin;
+import "MessageType.proto";
+option java_package = "com.mokylin.bleach.protobuf.agentserver";
+option java_outer_classname = "AgentMessage";
+
+// 测试消息
+message CGTestMsg {
+	option (cg_message_type) = CG_TEST_MSG;
+	repeated string strlist = 1;
+	required int32 type = 2;
+	required int32 size = 3;
+	repeated int64 times = 4;
+}
+
+message CGGameServerInfo {
+	option (cg_message_type) = CG_GAME_SERVER_INFO;
+	required int32 serverId = 1;
+}
+
+/**
+ * 需要广播给多个客户端的消息
+ */
+message MGBroadCast {
+	option (mg_message_type) = MG_BROAD_CAST;
+	/**要广播给这些玩家 */
+	repeated int64 uuids = 1;
+	/**消息类型 */
+	required int32 type = 2;
+	/**消息体 */
+	required bytes data = 3;
+
+}

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>IEExecRemote</name>
+  </assembly>
+  <members>
+    <member name="T:IEHost.Execute.IEExecuteRemote">
+      <summary>
+                    在 Internet 上运行托管应用程序。
+                </summary>
+    </member>
+    <member name="M:IEHost.Execute.IEExecuteRemote.#ctor">
+      <summary>
+                    初始化 <see cref="T:IEHost.Execute.IEExecuteRemote" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:IEHost.Execute.IEExecuteRemote.Exception">
+      <summary>
+                    如果引发异常，则获取异常。
+                </summary>
+      <returns>
+                    序列化的异常，在未引发异常时为 null。
+                </returns>
+    </member>
+    <member name="M:IEHost.Execute.IEExecuteRemote.ExecuteAsAssembly(System.String,System.Security.Policy.Evidence,System.Byte[],System.Configuration.Assemblies.AssemblyHashAlgorithm)">
+      <summary>
+                    通过给定程序集的文件名或路径、安全证据、哈希值和哈希算法来加载程序集并调用入口点。
+                </summary>
+      <returns>
+加载的程序集。
+                </returns>
+      <param name="file">
+包含程序集清单的文件的名称或路径。
+                </param>
+      <param name="evidence">
+用于加载程序集的证据。
+                </param>
+      <param name="hash">
+计算所得的哈希代码的值。
+                </param>
+      <param name="id">
+                    用于哈希文件和生成强名称签名的哈希算法。
+                </param>
+    </member>
+    <member name="M:IEHost.Execute.IEExecuteRemote.ExecuteAsDll(System.String,System.Security.Policy.Evidence,System.Object)">
+      <summary>
+                    .NET Framework 的当前版本中未实现此方法。
+                </summary>
+      <returns>
+                    始终为 E_NOTIMPL。
+                </returns>
+      <param name="file">
+未使用。
+                </param>
+      <param name="evidence">
+未使用。
+                </param>
+      <param name="pars">
+未使用。
+                </param>
+    </member>
+    <member name="M:IEHost.Execute.IEExecuteRemote.InitializeLifetimeService">
+      <summary>
+                    通过防止创建租约来给予 <see cref="T:IEHost.Execute.IEExecuteRemote" /> 对象无限生存期。
+                </summary>
+      <returns>
+                    始终为 null。
+                </returns>
+    </member>
+    <member name="M:IEHost.Execute.IEExecuteRemote.ExecuteAsAssembly(System.String,System.Security.Policy.Evidence)">
+      <summary>
+                    通过给定程序集的文件名或路径和安全证据来加载程序集并调用入口点。
+                </summary>
+      <returns>
+加载的程序集。
+                </returns>
+      <param name="file">
+包含程序集清单的文件的名称或路径。
+                </param>
+      <param name="evidence">
+用于加载程序集的证据。
+                </param>
+    </member>
+  </members>
+</doc>

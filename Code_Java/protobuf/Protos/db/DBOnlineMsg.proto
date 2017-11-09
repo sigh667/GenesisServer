@@ -1,0 +1,20 @@
+package com.mokylin;
+option java_package = "com.mokylin.bleach.protobuf.db";
+option java_outer_classname = "DBOnlineMsgBlob";
+
+/**
+ * 玩家未处理的在线消息
+ */
+message OnlineMsg {
+	repeated MsgData msgDatas = 1;
+}
+
+/**
+ * 单个消息
+ */
+message MsgData {
+	/**消息类型 */
+	required int32 type = 1;
+	/**消息体 */
+	required bytes data = 2;
+}

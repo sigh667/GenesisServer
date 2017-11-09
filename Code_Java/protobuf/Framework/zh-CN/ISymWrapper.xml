@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ISymWrapper</name>
+  </assembly>
+  <members>
+    <member name="T:System.Diagnostics.SymbolStore.SymBinder">
+      <summary>表示托管代码的符号联编程序。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymBinder.#ctor">
+      <summary>初始化 <see cref="T:System.Diagnostics.SymbolStore.SymBinder" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymBinder.{dtor}">
+      <summary>释放由当前实例控制的资源。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymBinder.Finalize">
+      <summary>释放由当前实例控制的资源。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymBinder.GetReader(System.Int32,System.String,System.String)">
+      <summary>使用指向元数据接口的指定 32 位整数指针、指定的文件名以及指定的搜索路径获取当前文件的符号读取器的接口。</summary>
+      <returns>
+        <see cref="T:System.Diagnostics.SymbolStore.ISymbolReader" /> 接口，它读取调试符号。</returns>
+      <param name="importer">指向元数据导入接口的 32 位整数。</param>
+      <param name="filename">需要读取器接口的文件名称。</param>
+      <param name="searchPath">用于查找符号文件的搜索路径。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymBinder.GetReader(System.IntPtr,System.String,System.String)">
+      <summary>使用指向元数据接口的指定指针、指定的文件名以及指定的搜索路径获取当前文件的符号读取器的接口。</summary>
+      <returns>
+        <see cref="T:System.Diagnostics.SymbolStore.ISymbolReader" /> 接口，它读取调试符号。</returns>
+      <param name="importer">指向元数据导入接口的 <see cref="T:System.IntPtr" /> 结构。</param>
+      <param name="filename">需要读取器接口的文件名称。</param>
+      <param name="searchPath">用于查找符号文件的搜索路径。</param>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymDocument">
+      <summary>表示符号存储区所引用的文档。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedDocument*)">
+      <summary>使用指向非托管 ISymUnmanagedDocument 对象的指定指针初始化 <see cref="T:System.Diagnostics.SymbolStore.SymDocument" /> 类的新实例。</summary>
+      <param name="pDocument">指向 ISymUnmanagedDocument 接口的指针。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.{dtor}">
+      <summary>释放由当前实例控制的资源。</summary>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymDocument.CheckSumAlgorithmId">
+      <summary>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</summary>
+      <returns>在所有情况下均为 <see cref="T:System.NotSupportedException" />。</returns>
+      <exception cref="T:System.NotSupportedException">在所有情况下。</exception>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymDocument.DocumentType">
+      <summary>获取当前文档的类型。</summary>
+      <returns>当前文档的类型。</returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.Finalize">
+      <summary>在通过垃圾回收将 <see cref="T:System.Diagnostics.SymbolStore.SymReader" /> 回收之前，释放非托管资源并执行其他清理操作。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.FindClosestLine(System.Int32)">
+      <summary>在当前文档中的一行不一定是序列点的情况下，返回最近的作为序列点的行的行号。</summary>
+      <returns>与指定行距离最近的序列点的行号。</returns>
+      <param name="line">文档中的指定行。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.GetCheckSum">
+      <summary>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</summary>
+      <returns>在所有情况下均为 <see cref="T:System.NotSupportedException" />。</returns>
+      <exception cref="T:System.NotSupportedException">在所有情况下。</exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.GetSourceRange(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</summary>
+      <returns>在所有情况下均为 <see cref="T:System.NotSupportedException" />。</returns>
+      <param name="startLine">未使用此参数。</param>
+      <param name="startColumn">未使用此参数。</param>
+      <param name="endLine">未使用此参数。</param>
+      <param name="endColumn">未使用此参数。</param>
+      <exception cref="T:System.NotSupportedException">在所有情况下。</exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.GetUnmanaged">
+      <summary>获取指向此 <see cref="T:System.Diagnostics.SymbolStore.SymDocument" /> 实例的原始非托管 ISymUnmanagedDocument 接口的指针。</summary>
+      <returns>指向此 <see cref="T:System.Diagnostics.SymbolStore.SymDocument" /> 的原始非托管 ISymUnmanagedDocument 接口的指针。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymDocument.HasEmbeddedSource">
+      <summary>指示当前文档的源是否存储在符号存储区中。</summary>
+      <returns>
+            如果当前文档的源存储在符号存储区中，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymDocument.Language">
+      <summary>获取当前文档的语言。</summary>
+      <returns>表示当前文档的语言的 <see cref="T:System.Guid" />。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymDocument.LanguageVendor">
+      <summary>获取当前文档的语言供应商。</summary>
+      <returns>表示当前文档的语言供应商的 <see cref="T:System.Guid" />。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymDocument.SourceLength">
+      <summary>获取嵌入源的长度（以字节表示）。</summary>
+      <returns>当前文档的源长度。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymDocument.URL">
+      <summary>获取当前文档的 URL。</summary>
+      <returns>当前文档的 URL。</returns>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymDocumentWriter">
+      <summary>提供用于写入到符号存储区引用的文档的方法。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedDocumentWriter*)">
+      <summary>初始化 <see cref="T:System.Diagnostics.SymbolStore.SymDocumentWriter" /> 类的新实例。</summary>
+      <param name="pDocumentWriter">非托管文档编写器的指针。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.{dtor}">
+      <summary>释放 <see cref="T:System.Diagnostics.SymbolStore.SymDocumentWriter" /> 对象的当前实例所持有的资源。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.Finalize">
+      <summary>在通过垃圾回收将 <see cref="T:System.Diagnostics.SymbolStore.SymDocumentWriter" /> 回收之前，释放非托管资源并执行其他清理操作。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.GetUnmanaged">
+      <summary>获取当前实例的非托管文档编写器。</summary>
+      <returns>当前 <see cref="T:System.Diagnostics.SymbolStore.SymDocumentWriter" /> 实例的非托管文档编写器。</returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.SetCheckSum(System.Guid,System.Byte[])">
+      <summary>在所有情况下引发 <see cref="T:System.NotImplementedException" />。</summary>
+      <param name="algorithmId">未使用此参数。</param>
+      <param name="source">未使用此参数。</param>
+      <exception cref="T:System.NotImplementedException">在所有情况下。</exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.SetSource(System.Byte[])">
+      <summary>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</summary>
+      <param name="source">未使用此参数。</param>
+      <exception cref="T:System.NotSupportedException">在所有情况下。</exception>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymMethod">
+      <summary>表示符号存储区内的方法。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedMethod*)">
+      <summary>从指向非托管接口的原始指针初始化 <see cref="T:System.Diagnostics.SymbolStore.SymMethod" /> 类的新实例。</summary>
+      <param name="pMethod">指向非托管 COM ISymUnmanagedMethod 对象的原始指针。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.{dtor}">
+      <summary>释放 <see cref="T:System.Diagnostics.SymbolStore.SymMethod" /> 对象的当前实例所持有的资源。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.Finalize">
+      <summary>在通过垃圾回收将 <see cref="T:System.Diagnostics.SymbolStore.SymMethod" /> 回收之前，释放非托管资源并执行其他清理操作。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.GetNamespace">
+      <summary>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</summary>
+      <returns>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</returns>
+      <exception cref="T:System.NotSupportedException">在所有情况下。</exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.GetOffset(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32)">
+      <summary>获取与指定位置对应的方法内的 Microsoft 中间语言 (MSIL) 偏移量。</summary>
+      <returns>文档中指定位置的当前方法中的 IL 偏移量。</returns>
+      <param name="document">为其请求偏移量的文档。</param>
+      <param name="line">为其请求偏移量的文档行。</param>
+      <param name="column">为其请求偏移量的文档列。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.GetParameters">
+      <summary>获取当前方法的参数。</summary>
+      <returns>当前方法的参数数组。</returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.GetRanges(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32)">
+      <summary>获取与 Microsoft 中间语言 (MSIL) 偏移量的范围对应的起始和结束偏移量对的数组，给定位置在此方法内包括该数组。</summary>
+      <returns>起始和结束 IL 偏移量对的数组。</returns>
+      <param name="document">为其请求 IL 偏移量范围的文档。</param>
+      <param name="line">为其请求 IL 偏移量范围的文档行。</param>
+      <param name="column">为其请求 IL 偏移量范围的文档列。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.GetScope(System.Int32)">
+      <summary>返回与方法内的一个偏移量对应的最封闭的词法范围。</summary>
+      <returns>此方法内给定 IL 偏移量的最封闭的词法范围。</returns>
+      <param name="offset">要查找的此方法内的 IL 偏移量。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.GetSequencePoints(System.Int32[],System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[],System.Int32[],System.Int32[])">
+      <summary>获取当前方法的序列点并在指定数组中存储这些信息。</summary>
+      <param name="offsets">一个数组，在其中存储序列点相对于该方法的开头的 IL 偏移量。</param>
+      <param name="documents">在其中存储序列点所在的文档的数组。</param>
+      <param name="lines">在其中存储序列点所在的文档中的行的数组。</param>
+      <param name="columns">在其中存储序列点所在的文档中的列的数组。</param>
+      <param name="endLines">序列点结束的文档中的行的数组。</param>
+      <param name="endColumns">序列点结束的文档中的列的数组。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.GetSourceStartEnd(System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[])">
+      <summary>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</summary>
+      <returns>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</returns>
+      <param name="docs">未使用此参数。</param>
+      <param name="lines">未使用此参数。</param>
+      <param name="columns">未使用此参数。</param>
+      <exception cref="T:System.NotSupportedException">在所有情况下。</exception>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymMethod.RootScope">
+      <summary>获取当前方法的根词法范围。此范围包括整个方法。</summary>
+      <returns>包括整个方法的根词法范围。</returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.RootScopeInternal">
+      <summary>获取当前方法的根词法范围。此范围包括整个方法。</summary>
+      <returns>包括整个方法的根词法范围。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymMethod.SequencePointCount">
+      <summary>获取方法中序列点的计数。</summary>
+      <returns>方法中序列点的计数。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymMethod.Token">
+      <summary>获取 <see cref="T:System.Diagnostics.SymbolStore.SymbolToken" />，它包含当前方法的元数据。</summary>
+      <returns>当前方法的元数据标记。</returns>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymReader">
+      <summary>提供对文档、方法以及符号存储区中变量的访问。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedReader*)">
+      <summary>使用指向非托管 ISymUnmanagedReader 对象的指定指针初始化 <see cref="T:System.Diagnostics.SymbolStore.SymReader" /> 类的新实例。</summary>
+      <param name="pReader">指向非托管 ISymUnmanagedReader 对象的指针。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.{dtor}">
+      <summary>此方法仅内部使用。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.Finalize">
+      <summary>在通过垃圾回收将 <see cref="T:System.Diagnostics.SymbolStore.SymReader" /> 回收之前，释放非托管资源并执行其他清理操作。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetDocument(System.String,System.Guid,System.Guid,System.Guid)">
+      <summary>获取由文档的 URL 指定的文档，以及语言、语言提供商和类型（这三项是可选的）。</summary>
+      <returns>具有指定 URL 的文档（如果在符号存储区中找到它），如果该文档不存在，则为 null。</returns>
+      <param name="url">标识文档的 URL。</param>
+      <param name="language">文档语言。您可以指定此参数为 <see cref="F:System.Guid.Empty" /> 以指示任何语言。</param>
+      <param name="languageVendor">文档语言的供应商标识。您可以指定此参数为 <see cref="F:System.Guid.Empty" /> 以指示任何语言提供商。</param>
+      <param name="documentType">文档的类型。您可以指定此参数为 <see cref="F:System.Guid.Empty" /> 以指示任何文档类型。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetDocuments">
+      <summary>获取在符号存储区中定义的所有文档的数组。</summary>
+      <returns>在符号存储区中定义的所有文档的数组。</returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetGlobalVariables">
+      <summary>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</summary>
+      <returns>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</returns>
+      <exception cref="T:System.NotSupportedException">在所有情况下。</exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetMethod(System.Diagnostics.SymbolStore.SymbolToken)">
+      <summary>在给定方法的标识符的情况下，获取符号读取器方法对象。</summary>
+      <returns>指定方法标识符表示的符号读取器方法对象。</returns>
+      <param name="method">方法的元数据标记。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetMethod(System.Diagnostics.SymbolStore.SymbolToken,System.Int32)">
+      <summary>在给定方法的标识符及其编辑和连续版本的情况下，获取符号读取器方法对象。</summary>
+      <returns>指定方法标识符和版本的符号读取器方法对象。</returns>
+      <param name="method">方法的元数据标记。</param>
+      <param name="version">方法的编辑和连续版本。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetMethodFromDocumentPosition(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32)">
+      <summary>获取包含文档中的指定位置的符号读取器方法对象。</summary>
+      <returns>文档中指定位置的符号读取器方法对象。</returns>
+      <param name="document">方法所在的文档。</param>
+      <param name="line">文档内行的位置。行带有编号，从 1 开始。</param>
+      <param name="column">文档内列的位置。列带有编号，从 1 开始。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetNamespaces">
+      <summary>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</summary>
+      <returns>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</returns>
+      <exception cref="T:System.NotSupportedException">在所有情况下。</exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetSymAttribute(System.Diagnostics.SymbolStore.SymbolToken,System.String)">
+      <summary>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</summary>
+      <returns>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</returns>
+      <param name="parent">未使用此参数。</param>
+      <param name="name">未使用此参数。</param>
+      <exception cref="T:System.NotSupportedException">在所有情况下。</exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetVariables(System.Diagnostics.SymbolStore.SymbolToken)">
+      <summary>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</summary>
+      <returns>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</returns>
+      <param name="parent">未使用此参数。</param>
+      <exception cref="T:System.NotSupportedException">在所有情况下。</exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.ReplaceSymbolStore(System.String,System.IntPtr)">
+      <summary>用增量符号存储区替换现有的符号存储区。</summary>
+      <param name="fileName">包含符号存储区的文件的名称，如果使用内存中的存储区，则为 null。</param>
+      <param name="stream">指向符号存储区的输入流的指针，如果使用磁盘上的存储区，则为 <see cref="F:System.IntPtr.Zero" />。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.UpdateSymbolStore(System.String,System.IntPtr)">
+      <summary>使用增量符号存储区更新现有的符号存储区。</summary>
+      <param name="fileName">包含符号存储区的文件的名称，如果使用内存中的存储区，则为 null。</param>
+      <param name="stream">指向符号存储区的输入流的指针，如果使用磁盘上的存储区，则为 <see cref="F:System.IntPtr.Zero" />。</param>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymReader.UserEntryPoint">
+      <summary>获取方法的元数据标记，它指定为模块的用户入口点（如果有的话）。</summary>
+      <returns>方法的元数据标记，它是模块的用户入口点。</returns>
+      <exception cref="T:System.Runtime.InteropServices.COMException">未找到入口点。</exception>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymScope">
+      <summary>表示 <see cref="T:System.Diagnostics.SymbolStore.SymMethod" /> 内的词法范围，提供对范围及其子范围和父范围的起始和结束偏移量的访问。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedScope*)">
+      <summary>使用指向非托管 ISymUnmanagedScope 对象的指定指针初始化 <see cref="T:System.Diagnostics.SymbolStore.SymScope" /> 类的新实例。</summary>
+      <param name="pScope">指向非托管 ISymUnmanagedScope 对象的指针。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.{dtor}">
+      <summary>释放由当前实例控制的资源。</summary>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymScope.EndOffset">
+      <summary>获取当前词法范围的结束偏移量。</summary>
+      <returns>结束 IL 偏移量。该偏移量是从当前词法范围的方法的开头的偏移量。</returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.Finalize">
+      <summary>在通过垃圾回收将 <see cref="T:System.Diagnostics.SymbolStore.SymScope" /> 回收之前，释放非托管资源并执行其他清理操作。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.GetChildren">
+      <summary>获取当前词法范围的子词法范围。</summary>
+      <returns>词法范围由当前词法范围封闭。</returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.GetLocals">
+      <summary>获取当前词法范围内的局部变量。</summary>
+      <returns>当前词法范围内的局部变量。</returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.GetNamespaces">
+      <summary>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</summary>
+      <returns>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymScope.Method">
+      <summary>获取包含当前词法范围的方法。</summary>
+      <returns>包含当前词法范围的方法。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymScope.Parent">
+      <summary>获取当前范围的父词法范围。</summary>
+      <returns>当前范围的封闭词法范围。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymScope.StartOffset">
+      <summary>获取当前词法范围的起始偏移量。</summary>
+      <returns>起始 IL 偏移量。该偏移量是从当前词法范围的方法的开头的偏移量。</returns>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymVariable">
+      <summary>表示符号存储区内的变量。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymVariable.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedVariable*)">
+      <summary>使用指向非托管 ISymUnmanagedVariable 对象的指定指针初始化 <see cref="T:System.Diagnostics.SymbolStore.SymVariable" /> 类的新实例。</summary>
+      <param name="pVariable">指向非托管 ISymUnmanagedVariable 对象的指针。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymVariable.{dtor}">
+      <summary>释放由当前实例控制的资源。</summary>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.AddressField1">
+      <summary>获取变量的第一个地址。</summary>
+      <returns>变量的第一个地址。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.AddressField2">
+      <summary>获取变量的第二个地址。</summary>
+      <returns>变量的第二个地址。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.AddressField3">
+      <summary>获取变量的第三个地址。</summary>
+      <returns>变量的第三个地址。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.AddressKind">
+      <summary>获取 <see cref="T:System.Diagnostics.SymbolStore.SymAddressKind" /> 描述地址类型的值。</summary>
+      <returns>地址类型。<see cref="T:System.Diagnostics.SymbolStore.SymAddressKind" /> 值之一。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.Attributes">
+      <summary>获取变量的属性。</summary>
+      <returns>变量属性。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.EndOffset">
+      <summary>获取变量范围内的变量的结束偏移量。</summary>
+      <returns>变量的结束偏移量。</returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymVariable.Finalize">
+      <summary>在通过垃圾回收将 <see cref="T:System.Diagnostics.SymbolStore.SymVariable" /> 回收之前，释放非托管资源并执行其他清理操作。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymVariable.GetSignature">
+      <summary>获取变量签名。</summary>
+      <returns>作为不透明 Blob 的变量签名。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.Name">
+      <summary>获取变量名。</summary>
+      <returns>变量名。</returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.StartOffset">
+      <summary>获取变量范围内的变量的起始偏移量。</summary>
+      <returns>变量的起始偏移量。</returns>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymWriter">
+      <summary>表示托管代码的符号编写器。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.#ctor">
+      <summary>初始化 <see cref="T:System.Diagnostics.SymbolStore.SymWriter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.#ctor(System.Boolean)">
+      <summary>初始化 <see cref="T:System.Diagnostics.SymbolStore.SymWriter" /> 类的新实例，指定是否创建基础符号编写器。</summary>
+      <param name="noUnderlyingWriter">
+                如果基础符号编写器将通过调用 <see cref="M:System.Diagnostics.SymbolStore.SymWriter.SetUnderlyingWriter(System.IntPtr)" /> 方法来提供，则为 true；相反，如果应创建一个默认基础符号编写器，则为 false。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.{dtor}">
+      <summary>释放 <see cref="T:System.Diagnostics.SymbolStore.SymWriter" /> 对象的当前实例所持有的资源。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.Close">
+      <summary>关闭 <see cref="T:System.Diagnostics.SymbolStore.SymWriter" />，并将符号提交到符号存储区。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.CloseMethod">
+      <summary>关闭当前方法。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.CloseNamespace">
+      <summary>关闭最近的命名空间。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.CloseScope(System.Int32)">
+      <summary>关闭当前词法范围。</summary>
+      <param name="endOffset">IL 偏移量仅越过范围中的最后一个指令。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.DefineDocument(System.String,System.Guid,System.Guid,System.Guid)">
+      <summary>定义源文档。</summary>
+      <returns>表示文档的 <see cref="T:System.Diagnostics.SymbolStore.ISymbolDocumentWriter" /> 对象。</returns>
+      <param name="url">标识文档的 URL。</param>
+      <param name="language">文档语言。此参数可以为 <see cref="F:System.Guid.Empty" />。</param>
+      <param name="languageVendor">文档语言的供应商标识。此参数可以为 <see cref="F:System.Guid.Empty" />。</param>
+      <param name="documentType">文档的类型。此参数可以为 <see cref="F:System.Guid.Empty" />。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.DefineField(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32)">
+      <summary>在所有情况下均引发 <see cref="T:System.NotSupportedException" />。</summary>
+      <param name="parent">未使用此参数。</param>
+      <param name="name">未使用此参数。</param>
+      <param name="attributes">未使用此参数。</param>
+      <param name="signature">未使用此参数。</param>
+      <param name="addrKind">未使用此参数。</param>
+      <param name="addr1">未使用此参数。</param>
+      <param name="addr2">未使用此参数。</param>
+      <param name="addr3">未使用此参数。</param>
+      <exception cref="T:System.NotSupportedException">在所有情况下。</exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.DefineGlobalVariable(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32)">
+      <summary>在所有情况下引发 <see cref="T:System.NotSupportedException" />。</summary>
+      <param name="name">未使用此参数。</param>
+      <param name="attributes">未使用此参数。</param>
+      <param name="signature">未使用此参数。</param>
+      <param name="addrKind">未使用此参数。</param>
+      <param name="addr1">未使用此参数。</param>
+      <param name="addr2">未使用此参数。</param>
+      <param name="addr3">未使用此参数。</param>
+      <exception cref="T:System.NotSupportedException">在所有情况下。</exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.DefineLocalVariable(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>在当前词法范围中定义单个变量。</summary>
+      <param name="name">局部变量名称。</param>
+      <param name="attributes">使用 <see cref="T:System.Reflection.FieldAttributes" /> 枚举数指定的局部变量属性。</param>
+      <param name="signature">局部变量签名。</param>
+      <param name="addrKind">使用 <see cref="T:System.Diagnostics.SymbolStore.SymAddressKind" /> 的 <paramref name="addr1" />、<paramref name="addr2" /> 和 <paramref name="addr3" /> 的地址类型。</param>
+      <param name="addr1">局部变量规格的第一个地址。</param>
+      <param name="addr2">局部变量规格的第二个地址。</param>
+      <param name="addr3">局部变量规格的第三个地址。</param>
+      <param name="startOffset">变量的起始偏移量。如果为零，则忽略此参数，并在整个范围内定义变量。如果不为零，则它处于当前范围的偏移量内。</param>
+      <param name="endOffset">变量的结束偏移量。如果为零，则忽略此参数，并在整个范围内定义变量。如果不为零，则它处于当前范围的偏移量内。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.DefineParameter(System.String,System.Reflection.ParameterAttributes,System.Int32,System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32)">
+      <summary>在所有情况下引发 <see cref="T:System.NotSupportedException" />。</summary>
+      <param name="name">未使用此参数。</param>
+      <param name="attributes">未使用此参数。</param>
+      <param name="sequence">未使用此参数。</param>
+      <param name="addrKind">未使用此参数。</param>
+      <param name="addr1">未使用此参数。</param>
+      <param name="addr2">未使用此参数。</param>
+      <param name="addr3">未使用此参数。</param>
+      <exception cref="T:System.NotSupportedException">在所有情况下。</exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.DefineSequencePoints(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32[],System.Int32[],System.Int32[],System.Int32[],System.Int32[])">
+      <summary>在当前方法内定义一组序列点。</summary>
+      <param name="document">正在为其定义序列点的文档对象。</param>
+      <param name="offsets">从该方法的开头测量的序列点的 IL 偏移量。</param>
+      <param name="lines">序列点的起始行号。</param>
+      <param name="columns">序列点的起始列号。</param>
+      <param name="endLines">序列点的结束行号。</param>
+      <param name="endColumns">序列点的结束列号。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.Finalize">
+      <summary>在通过垃圾回收将 <see cref="T:System.Diagnostics.SymbolStore.SymWriter" /> 回收之前，释放非托管资源并执行其他清理操作。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.GetWriter">
+      <summary>获取基础非托管符号编写器。</summary>
+      <returns>指向基础非托管符号编写器的原始指针。</returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.Initialize(System.IntPtr,System.String,System.Boolean)">
+      <summary>设置元数据发射器接口与此编写器相关联。</summary>
+      <param name="emitter">元数据发射器接口。</param>
+      <param name="filename">向其中写入调试符号的文件名。某些编写器要求文件名，有些却不要求。如果为不使用文件名的编写器指定文件名，则忽略此参数。</param>
+      <param name="fFullBuild">true 指示这是完全重新生成的；false 指示增量编译。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.InitWriter(System.Boolean)">
+      <summary>初始化符号编写器。不应直接调用此方法；它通过构造函数来调用。</summary>
+      <param name="noUnderlyingWriter">
+                如果基础符号编写器将通过调用 <see cref="M:System.Diagnostics.SymbolStore.SymWriter.SetUnderlyingWriter(System.IntPtr)" /> 方法来提供，则为 true；相反，如果应创建一个默认基础符号编写器，则为 false。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.OpenMethod(System.Diagnostics.SymbolStore.SymbolToken)">
+      <summary>打开一个在其中放置符号信息的方法。</summary>
+      <param name="method">要打开的方法的元数据标记。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.OpenNamespace(System.String)">
+      <summary>打开一个新命名空间。</summary>
+      <param name="name">新命名空间的名称。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.OpenScope(System.Int32)">
+      <summary>在当前方法中打开新词法范围。</summary>
+      <returns>一个不透明的范围标识符，它以后可以与 <see cref="M:System.Diagnostics.SymbolStore.SymWriter.SetScopeRange(System.Int32,System.Int32,System.Int32)" /> 一起使用，以定义范围的起始和结束偏移量。在这种情况下，忽略传递到 <see cref="M:System.Diagnostics.SymbolStore.SymWriter.OpenScope(System.Int32)" /> 和 <see cref="M:System.Diagnostics.SymbolStore.SymWriter.CloseScope(System.Int32)" /> 的偏移量。范围标识符只在当前方法中有效。</returns>
+      <param name="startOffset">从方法的开始到词法范围中第一个指令的 IL 偏移量，以字节数表示。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.SetMethodSourceRange(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32,System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32)">
+      <summary>在所有情况下引发 <see cref="T:System.NotSupportedException" />。</summary>
+      <param name="startDoc">未使用此参数。</param>
+      <param name="startLine">未使用此参数。</param>
+      <param name="startColumn">未使用此参数。</param>
+      <param name="endDoc">未使用此参数。</param>
+      <param name="endLine">未使用此参数。</param>
+      <param name="endColumn">未使用此参数。</param>
+      <exception cref="T:System.NotSupportedException">在所有情况下。</exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.SetScopeRange(System.Int32,System.Int32,System.Int32)">
+      <summary>为指定的词法范围定义偏移量范围。</summary>
+      <param name="scopeID">由 <see cref="M:System.Diagnostics.SymbolStore.SymWriter.OpenScope(System.Int32)" /> 方法返回的词法范围的标识符。</param>
+      <param name="startOffset">词法范围的起始点的 IL 偏移量。</param>
+      <param name="endOffset">词法范围的结束点的 IL 偏移量。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.SetSymAttribute(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Byte[])">
+      <summary>在给定属性名称和属性值的情况下，定义属性。</summary>
+      <param name="parent">正在为其定义属性的元数据标记。</param>
+      <param name="name">属性名称。</param>
+      <param name="data">属性值。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.SetUnderlyingWriter(System.IntPtr)">
+      <summary>设置基础 ISymUnmanagedWriter（对应的非托管 API），托管 <see cref="T:System.Diagnostics.SymbolStore.SymWriter" /> 使用它来发出符号。</summary>
+      <param name="underlyingWriter">指向代码的 <see cref="T:System.IntPtr" /> 类型指针，它是基础编写器。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.SetUserEntryPoint(System.Diagnostics.SymbolStore.SymbolToken)">
+      <summary>将用户定义的方法标识为当前模块的入口点。</summary>
+      <param name="entryMethod">方法的元数据标记，它是用户入口点。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.UsingNamespace(System.String)">
+      <summary>指定在打开的词法范围内使用给定的、完全限定的命名空间名称。</summary>
+      <param name="fullName">命名空间的完全限定名称。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymBinder.__dtor">
+      <summary>释放由当前实例控制的资源。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.#ctor(ISymUnmanagedDocument*)">
+      <summary>使用指向非托管 ISymUnmanagedDocument 对象的指定指针初始化 <see cref="T:System.Diagnostics.SymbolStore.SymDocument" /> 类的新实例。</summary>
+      <param name="pDocument">指向 ISymUnmanagedDocument 接口的指针。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.__dtor">
+      <summary>释放由当前实例控制的资源。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.#ctor(ISymUnmanagedDocumentWriter*)">
+      <summary>初始化 <see cref="T:System.Diagnostics.SymbolStore.SymDocumentWriter" /> 类的新实例。</summary>
+      <param name="pDocumentWriter">非托管文档编写器的指针。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.__dtor">
+      <summary>释放 <see cref="T:System.Diagnostics.SymbolStore.SymDocumentWriter" /> 对象的当前实例所持有的资源。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.#ctor(ISymUnmanagedMethod*)">
+      <summary>从指向非托管接口的原始指针初始化 <see cref="T:System.Diagnostics.SymbolStore.SymMethod" /> 类的新实例。</summary>
+      <param name="pMethod">指向非托管 COM ISymUnmanagedMethod 对象的原始指针。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.__dtor">
+      <summary>释放 <see cref="T:System.Diagnostics.SymbolStore.SymMethod" /> 对象的当前实例所持有的资源。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.#ctor(ISymUnmanagedReader*)">
+      <summary>使用指向非托管 ISymUnmanagedReader 对象的指定指针初始化 <see cref="T:System.Diagnostics.SymbolStore.SymReader" /> 类的新实例。</summary>
+      <param name="pReader">指向非托管 ISymUnmanagedReader 对象的指针。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.__dtor">
+      <summary>释放由当前实例控制的资源。此方法仅内部使用。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.#ctor(ISymUnmanagedScope*)">
+      <summary>使用指向非托管 ISymUnmanagedScope 对象的指定指针初始化 <see cref="T:System.Diagnostics.SymbolStore.SymScope" /> 类的新实例。</summary>
+      <param name="pScope">指向非托管 ISymUnmanagedScope 对象的指针。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.__dtor">
+      <summary>释放由当前实例控制的资源。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymVariable.#ctor(ISymUnmanagedVariable*)">
+      <summary>使用指向非托管 ISymUnmanagedVariable 对象的指定指针初始化 <see cref="T:System.Diagnostics.SymbolStore.SymVariable" /> 类的新实例。</summary>
+      <param name="pVariable">指向非托管 ISymUnmanagedVariable 对象的指针。</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymVariable.__dtor">
+      <summary> 释放由当前实例控制的资源。</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.__dtor">
+      <summary>释放 <see cref="T:System.Diagnostics.SymbolStore.SymWriter" /> 对象的当前实例所持有的资源。</summary>
+    </member>
+    <member name="T:_GUID">
+      <summary>此类支持 .NET Framework 基础结构，但不适合在代码中直接使用。</summary>
+    </member>
+    <member name="T:IStream">
+      <summary>此类支持 .NET Framework 基础结构，但不适合在代码中直接使用。</summary>
+    </member>
+    <member name="T:ISymUnmanagedBinder">
+      <summary>此类支持 .NET Framework 基础结构，但不适合在代码中直接使用。</summary>
+    </member>
+    <member name="T:ISymUnmanagedDocument">
+      <summary>此类支持 .NET Framework 基础结构，但不适合在代码中直接使用。</summary>
+    </member>
+    <member name="T:ISymUnmanagedDocumentWriter">
+      <summary>此类支持 .NET Framework 基础结构，但不适合在代码中直接使用。</summary>
+    </member>
+    <member name="T:ISymUnmanagedMethod">
+      <summary>此类支持 .NET Framework 基础结构，但不适合在代码中直接使用。</summary>
+    </member>
+    <member name="T:ISymUnmanagedReader">
+      <summary>此类支持 .NET Framework 基础结构，但不适合在代码中直接使用。</summary>
+    </member>
+    <member name="T:ISymUnmanagedScope">
+      <summary>此类支持 .NET Framework 基础结构，但不适合在代码中直接使用。</summary>
+    </member>
+    <member name="T:ISymUnmanagedVariable">
+      <summary>此类支持 .NET Framework 基础结构，但不适合在代码中直接使用。</summary>
+    </member>
+    <member name="T:ISymUnmanagedWriter">
+      <summary>此类支持 .NET Framework 基础结构，但不适合在代码中直接使用。</summary>
+    </member>
+    <member name="T:IUnknown">
+      <summary>此类支持 .NET Framework 基础结构，但不适合在代码中直接使用。</summary>
+    </member>
+    <member name="T:tagPROPVARIANT">
+      <summary>此类支持 .NET Framework 基础结构，但不适合在代码中直接使用。</summary>
+    </member>
+    <member name="T:tagVARIANT">
+      <summary>此类支持 .NET Framework 基础结构，但不适合在代码中直接使用。</summary>
+    </member>
+  </members>
+</doc>

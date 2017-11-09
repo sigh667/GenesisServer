@@ -1,0 +1,1 @@
+int energy;[minValue=1]//玩家体力值

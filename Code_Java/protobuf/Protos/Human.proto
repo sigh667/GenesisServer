@@ -1,0 +1,116 @@
+package com.mokylin;
+import "MessageType.proto";
+import "Common.proto";
+option java_package = "com.mokylin.bleach.protobuf";
+option java_outer_classname = "HumanMessage";
+
+/**
+ * 客户端请求，购买体力
+ */
+message CGBuyEnergy {
+	option (cg_message_type) = CG_HUMAN_BUY_ENERGY;
+	/**第几次购买体力 */
+	required int32 counts = 1;
+}
+
+///////////////////////////////////////////////////////////////////
+/**
+ * 服务器通知，队伍详细信息。此消息为登陆成功后，客户端收到的第一个消息
+ */
+message GCHumanDetailInfo {
+	option (gc_message_type) = GC_HUMAN_DETAIL_INFO;
+	/**角色ID */
+	required int64 id = 1;
+	/**角色名字 */
+	required string name = 2;
+	/**渠道*/
+	required string channel = 3;
+	/**所属的账号ID*/
+	required string accountId = 4;
+	/**除金钱外的Long属性 */
+	repeated int64 longProp = 5;
+	/**金钱属性 */
+	repeated int64 currencyProp = 6;
+}
+
+/**
+ * 服务器通知，客户端的数据错误。
+ * 收到此消息后，客户端会被踢下线
+ */
+message GCDataError {
+	option (gc_message_type) = GC_DATA_ERROR;
+}
+
+/**
+ *	扣体力失败，体力值不够
+ */
+message GCCostEnergyFailed {
+	option (gc_message_type) = GC_HUMAN_COST_ENERGY_FAILED;
+}
+
+/**
+ * 服务器通知，恢复体力数量
+ */
+message GCEnergyRecoverInfo {
+	option (gc_message_type) = GC_HUMAN_ENERGY_RECOVER_INFO;
+	required int32 value = 1;
+}
+
+/**
+ * 服务器通知，重置体力购买次数
+ */
+message GCBuyEnergyCountsReset {
+	option (gc_message_type) = GC_HUMAN_BUY_ENERGY_COUNTS_RESET;
+}
+
+/**
+ * 服务器通知，购买体力成功
+ */
+message GCBuyEnergyAck {
+	option (gc_message_type) = GC_HUMAN_BUY_ENERGY_ACK;
+	/** 增加的体力值 */
+	required int32 addedEnergy= 1;
+	/** 消耗的钻石数量 */
+	required CurrencyChangeInfo currencyChangeInfo= 2;
+}
+
+/**
+ * 服务器通知，购买体力失败
+ */
+message GCBuyEnergyNeg {
+	option (gc_message_type) = GC_HUMAN_BUY_ENERGY_NEG;
+	/** 体力购买结果 */
+	required BuyEnergyFail failType = 1;
+}
+
+/**
+ * 购买体力失败枚举
+ */
+enum BuyEnergyFail{
+	/**体力购买失败 - 钻石不够 */
+	FAIL_DIAMOND_NOT_ENOUGH = 1;
+	/**体力购买失败 - 达到每日购买次数上限 */
+	FAIL_OVER_MAX_TIMES = 2;
+	/**当前体力已达到体力上限，不能继续购买*/
+	FAIL_OVER_MAX_VALUES = 3;
+}
+
+/**
+ *VIP等级提升
+ */
+message GCVipLevelUp {
+	option (gc_message_type) = GC_VIP_LEVEL_UP;
+	/**升级后的vip等级 */
+	required int32 vipLevel = 1;
+	required int64 vipExp = 2;
+}
+
+/**
+ *玩家角色等级提升
+ */
+message GCHumanLevelUp {
+	option (gc_message_type) = GC_HUMAN_LEVEL_UP;
+	/**升级后的vip等级 */
+	required int32 level = 1;
+	required int64 exp = 2;
+}

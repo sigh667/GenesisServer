@@ -1,0 +1,30 @@
+;
+int icon;//Icon
+String name;//名称
+String desc;//描述
+int priority;//优先级
+int mpCost;[notNull=false]//MP消耗
+int cd;[notNull=false]//CD（单位：回合数）
+com.mokylin.bleach.common.combat.enumeration.TargetSelectorType targetSelector;//目标选择方式
+com.mokylin.bleach.common.combat.enumeration.RangeSelectorType rangeSelector;//技能范围
+com.mokylin.bleach.common.combat.enumeration.YuanSuLeiXing yuanSuLeiXing;//元素类型
+com.mokylin.bleach.common.combat.enumeration.SpellType spellType;//招式类型
+boolean isVisible;//是否显示
+com.mokylin.bleach.common.combat.enumeration.SpellDamageType spellDamageType;//招式伤害类型
+com.mokylin.bleach.common.combat.enumeration.SpellExpType spellExpType;//招式结算公式类型
+float levelRelatedParameter;[notNull=false]//技能等级相关系数
+int iSpellCorrectionParameter;//技能修正值(万分比)
+boolean IsBiZhong;//是否必中
+boolean IsBiBaoJi;//是否必暴击
+boolean IsNoBaoJi;//是否不判定暴击
+boolean IsWuFaGeDang;//是否无法格挡
+boolean IsBiPoJia;//是否必破甲
+;
+float AttackRange;//射程
+;
+String strActionID;[notNull=false]//伤害计算事件ID
+;
+;
+;
+;
+List<com.mokylin.bleach.common.core.excelmodel.TempAttrNode2Col> attributeList;[collection(5,2);notNull=true]//附带的属性

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="Title00" type="System.String">
+    <value>网站管理工具的选项卡</value>
+  </data>
+  <data name="WebSiteAdministrationToolOverview01" type="System.String">
+    <value>网站管理工具概述</value>
+  </data>
+  <data name="WebSiteAdministrationToolOverview02" type="System.String">
+    <value></value>
+  </data>
+  <data name="Introduction01" type="System.String">
+    <value>介绍</value>
+  </data>
+  <data name="Introduction02" type="System.String">
+    <value>使用网站管理工具，可以通过一个简单的 Web 界面来查看和管理网站配置。 </value>
+  </data>
+  <data name="TabsandAdditionalInformation01" type="System.String">
+    <value>选项卡和其他信息</value>
+  </data>
+  <data name="TabsandAdditionalInformation02" type="System.String">
+    <value>下面的链接提供了有关如何使用网站管理工具的更多信息:</value>
+  </data>
+  <data name="TabsandAdditionalInformation03" type="System.String">
+    <value>网站管理工具“安全”选项卡</value>
+  </data>
+  <data name="TabsandAdditionalInformation04" type="System.String">
+    <value>网站管理工具“应用程序”选项卡</value>
+  </data>
+  <data name="TabsandAdditionalInformation05" type="System.String">
+    <value>网站管理工具“提供程序”选项卡</value>
+  </data>
+  <data name="TabsandAdditionalInformation06" type="System.String">
+    <value>网站管理工具的内部机制</value>
+  </data>
+  <data name="WebSiteConfiguration01" type="System.String">
+    <value>网站配置</value>
+  </data>
+  <data name="WebSiteConfiguration02" type="System.String">
+    <value>网站配置设置存储在一个名为 Web.config 的 XML 文件中，该文件位于网站的根文件夹中。使用网站管理工具，不需要手动编辑 Web.config 文件就可以更改站点配置。首次使用网站管理工具来管理特定网站时，如果 Web.config 文件不存在，网站管理工具将创建该文件。默认情况下，网站管理工具还在网站的 App_Data 文件夹中创建一个数据库，用以存储应用程序服务数据，如成员资格和角色信息。对于大多数设置而言，在网站管理工具中进行的更改都将立即生效并反映在 Web.config 文件中。</value>
+  </data>
+  <data name="InheritedSettings01" type="System.String">
+    <value>继承的设置</value>
+  </data>
+  <data name="InheritedSettings02" type="System.String">
+    <value>网站的默认设置自动从计算机或 Web 服务器的任意配置文件中整体继承。例如，Web 服务器可能具有适用于该服务器上的所有站点的默认设置。使用网站管理工具，可以创建和修改特定网站的非继承设置，还可以在站点范围设置允许的情况下重写继承设置。如果设置是继承的并且无法重写，那么它在网站管理工具中将显示为灰色，表示已被禁用。</value>
+  </data>
+  <data name="Requirements01" type="System.String">
+    <value>要求</value>
+  </data>
+  <data name="Requirements02" type="System.String">
+    <value>网站管理工具包括在 Microsoft Visual Web Developer Web 开发工具中。要使用网站管理工具来管理网站，运行 Visual Web Developer 的用户帐户的用户凭据对所管理的应用程序的 Web.config 文件和 App_Data 文件夹必须具有读写权限。如果无法使用网站管理工具对网站的配置进行管理，请与系统管理员联系。</value>
+  </data>
+  <data name="Features01" type="System.String">
+    <value>功能</value>
+  </data>
+  <data name="Features02" type="System.String">
+    <value>网站管理工具以一个选项卡式的界面为特色，该界面将相关的配置设置组合在各个选项卡中。以下各节介绍分别这些选项卡及其管理的配置设置。</value>
+  </data>
+  <data name="SecurityTab01" type="System.String">
+    <value>“安全”选项卡</value>
+  </data>
+  <data name="SecurityTab02" type="System.String">
+    <value>使用“安全”&lt;span class=UI&gt;&lt;/span&gt;选项卡可以管理访问规则，还可以管理用户帐户和角色；访问规则有助于保证网站内特定资源的安全。 </value>
+  </data>
+  <data name="SecurityTab03" type="System.String">
+    <value>您可以指定如何使用网站: 是在 Internet (公开地)上使用还是在 Intranet (位于局域网上)上使用。这一指定也指出了网站将要使用的身份验证模式类型。Internet 网站使用 ASP.NET 成员资格系统，您可以在该系统中定义单个用户帐户。ASP.NET 使用安全系统来限制特定用户帐户或该帐户所属角色的访问权限。Intranet 网站使用 Windows 身份验证，即用户由其 Windows 登录信息来标识。 </value>
+  </data>
+  <data name="ApplicationTab01" type="System.String">
+    <value>“应用程序”选项卡</value>
+  </data>
+  <data name="ApplicationTab02" type="System.String">
+    <value>使用“应用程序”&lt;span class=UI&gt;&lt;/span&gt;选项卡可以管理与网站有关的各种设置，其中包括:</value>
+  </data>
+  <data name="ApplicationTab03" type="System.String">
+    <value>应用程序设置，这些设置是您要集中存储并通过代码从网站中的任意位置来访问的名称/值对。</value>
+  </data>
+  <data name="ApplicationTab04" type="System.String">
+    <value>SMTP 设置，这些设置决定了您的站点如何发送电子邮件。</value>
+  </data>
+  <data name="ApplicationTab05" type="System.String">
+    <value>调试和跟踪设置。</value>
+  </data>
+  <data name="ApplicationTab06" type="System.String">
+    <value>脱机和联机设置，这些设置使网站脱机(关闭)以执行维护，或使新的 Microsoft SQL Server Standard 版数据库联机。</value>
+  </data>
+  <data name="ProviderTab01" type="System.String">
+    <value>“提供程序”选项卡</value>
+  </data>
+  <data name="ProviderTab02" type="System.String">
+    <value>使用“提供程序”&lt;span class=UI&gt;&lt;/span&gt;选项卡可以测试或指定网站的成员资格和角色管理的提供程序。数据库提供程序是为特定功能存储应用程序数据时所调用的类。默认情况下，网站管理工具配置并使用网站的 App_Data 文件夹中的本地 SQL Server Express 数据库。您也可以选择使用其他提供程序(如远程 SQL Server 数据库)来存储成员资格和角色管理。</value>
+  </data>
+  <data name="HowtoUsetheWebSiteAdministrationTool01" type="System.String">
+    <value>如何使用网站管理工具</value>
+  </data>
+  <data name="HowtoUsetheWebSiteAdministrationTool02" type="System.String">
+    <value>网站管理工具的使用类似于其他基于窗体的网站的使用。常规步骤是打开网站管理工具，选择相应的选项卡，然后调整该选项卡上可用的设置。大多数更改都将立即生效。</value>
+  </data>
+  <data name="HowtoAccesstheWebSiteAdministrationTool01" type="System.String">
+    <value>如何访问网站管理工具</value>
+  </data>
+  <data name="HowtoAccesstheWebSiteAdministrationTool02" type="System.String">
+    <value>要访问网站管理工具，请在“网站”&lt;span class=UI&gt;&lt;/span&gt;菜单上，单击“ASP.Net 配置”&lt;span class=UI&gt;&lt;/span&gt;。</value>
+  </data>
+  <data name="Considerations01" type="System.String">
+    <value>注意事项</value>
+  </data>
+  <data name="Considerations02" type="System.String">
+    <value>以下各节提供了使用网站管理工具的一些注意事项。</value>
+  </data>
+  <data name="RestartingtheApplicationWhenSaving01" type="System.String">
+    <value>保存时重新启动应用程序</value>
+  </data>
+  <data name="RestartingtheApplicationWhenSaving02" type="System.String">
+    <value>在网站管理工具中对配置设置进行的大多数更改都将立即生效。这需要重新启动应用更改的网站。由于这将导致网站中当前的活动会话丢失，因此在将这些更改发布到成品服务器之前，应当先对网站的阶段版本或开发版本进行配置更改。</value>
+  </data>
+  <data name="SavingYourSettings01" type="System.String">
+    <value>保存设置</value>
+  </data>
+  <data name="SavingYourSettings02" type="System.String">
+    <value>在网站管理工具中对配置设置进行的大多数更改都将立即生效。对那些在网站管理工具界面中具有专用的“保存”&lt;span class=UI&gt;&lt;/span&gt;按钮的设置，如果在单击“保存”&lt;span class=UI&gt;&lt;/span&gt;之前保持网站管理工具的空闲状态或允许网站管理工具超时，则将导致配置设置更改丢失。</value>
+  </data>
+  <data name="TimeOut01" type="System.String">
+    <value>超时</value>
+  </data>
+  <data name="TimeOut02" type="System.String">
+    <value>作为一种安全措施，网站管理工具在一段非活动期后超时。所有不会立即生效和未保存的设置都将丢失。如果网站管理工具已经超时，请关闭浏览器，然后在新的窗口中重新打开网站管理工具。</value>
+  </data>
+  <data name="TimeOut03" type="System.String">
+    <value>网站管理工具仅对可用于网站的某些配置设置进行管理。其他多项设置需要直接修改配置文件，可以使用 ASP.NET 的 Microsoft 管理控制台(MMC)管理单元进行手动修改，也可以使用 ASP.NET 配置 API 以编程方式进行修改。</value>
+  </data>
+  <data name="SeeAlso01" type="System.String">
+    <value>请参见</value>
+  </data>
+  <data name="SeeAlso02" type="System.String">
+    <value>网站管理工具“安全”选项卡</value>
+  </data>
+  <data name="SeeAlso03" type="System.String">
+    <value>网站管理工具“应用程序”选项卡</value>
+  </data>
+  <data name="SeeAlso04" type="System.String">
+    <value>网站管理工具“提供程序”选项卡</value>
+  </data>
+  <data name="SeeAlso05" type="System.String">
+    <value>网站管理工具的内部机制</value>
+  </data>
+</root>

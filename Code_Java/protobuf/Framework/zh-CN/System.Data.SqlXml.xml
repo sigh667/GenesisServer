@@ -1,0 +1,1166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Data.SqlXml</name>
+  </assembly>
+  <members>
+    <member name="T:System.Xml.Xsl.Runtime.AncestorDocOrderIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.AncestorDocOrderIterator.Create(System.Xml.XPath.XPathNavigator,System.Xml.Xsl.Runtime.XmlNavigatorFilter,System.Boolean)">
+      <param name="context"></param>
+      <param name="filter"></param>
+      <param name="orSelf"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.AncestorDocOrderIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.AncestorDocOrderIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.AncestorIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.AncestorIterator.Create(System.Xml.XPath.XPathNavigator,System.Xml.Xsl.Runtime.XmlNavigatorFilter,System.Boolean)">
+      <param name="context"></param>
+      <param name="filter"></param>
+      <param name="orSelf"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.AncestorIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.AncestorIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.AttributeContentIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.AttributeContentIterator.Create(System.Xml.XPath.XPathNavigator)">
+      <param name="context"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.AttributeContentIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.AttributeContentIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.AttributeIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.AttributeIterator.Create(System.Xml.XPath.XPathNavigator)">
+      <param name="context"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.AttributeIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.AttributeIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.ContentIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.ContentIterator.Create(System.Xml.XPath.XPathNavigator)">
+      <param name="context"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.ContentIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.ContentIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.ContentMergeIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.ContentMergeIterator.Create(System.Xml.Xsl.Runtime.XmlNavigatorFilter)">
+      <param name="filter"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.ContentMergeIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.ContentMergeIterator.MoveNext(System.Xml.XPath.XPathNavigator)">
+      <param name="input"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.DecimalAggregator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DecimalAggregator.Average(System.Decimal)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.DecimalAggregator.AverageResult"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DecimalAggregator.Create"></member>
+    <member name="P:System.Xml.Xsl.Runtime.DecimalAggregator.IsEmpty"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DecimalAggregator.Maximum(System.Decimal)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.DecimalAggregator.MaximumResult"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DecimalAggregator.Minimum(System.Decimal)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.DecimalAggregator.MinimumResult"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DecimalAggregator.Sum(System.Decimal)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.DecimalAggregator.SumResult"></member>
+    <member name="T:System.Xml.Xsl.Runtime.DescendantIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DescendantIterator.Create(System.Xml.XPath.XPathNavigator,System.Xml.Xsl.Runtime.XmlNavigatorFilter,System.Boolean)">
+      <param name="input"></param>
+      <param name="filter"></param>
+      <param name="orSelf"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.DescendantIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DescendantIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.DescendantMergeIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DescendantMergeIterator.Create(System.Xml.Xsl.Runtime.XmlNavigatorFilter,System.Boolean)">
+      <param name="filter"></param>
+      <param name="orSelf"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.DescendantMergeIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DescendantMergeIterator.MoveNext(System.Xml.XPath.XPathNavigator)">
+      <param name="input"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.DifferenceIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DifferenceIterator.Create(System.Xml.Xsl.Runtime.XmlQueryRuntime)">
+      <param name="runtime"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.DifferenceIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DifferenceIterator.MoveNext(System.Xml.XPath.XPathNavigator)">
+      <param name="nestedNavigator"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.DodSequenceMerge"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DodSequenceMerge.AddSequence(System.Collections.Generic.IList{System.Xml.XPath.XPathNavigator})">
+      <param name="sequence"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.DodSequenceMerge.Create(System.Xml.Xsl.Runtime.XmlQueryRuntime)">
+      <param name="runtime"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.DodSequenceMerge.MergeSequences"></member>
+    <member name="T:System.Xml.Xsl.Runtime.DoubleAggregator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DoubleAggregator.Average(System.Double)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.DoubleAggregator.AverageResult"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DoubleAggregator.Create"></member>
+    <member name="P:System.Xml.Xsl.Runtime.DoubleAggregator.IsEmpty"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DoubleAggregator.Maximum(System.Double)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.DoubleAggregator.MaximumResult"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DoubleAggregator.Minimum(System.Double)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.DoubleAggregator.MinimumResult"></member>
+    <member name="M:System.Xml.Xsl.Runtime.DoubleAggregator.Sum(System.Double)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.DoubleAggregator.SumResult"></member>
+    <member name="T:System.Xml.Xsl.Runtime.ElementContentIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.ElementContentIterator.Create(System.Xml.XPath.XPathNavigator,System.String,System.String)">
+      <param name="context"></param>
+      <param name="localName"></param>
+      <param name="ns"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.ElementContentIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.ElementContentIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.FollowingSiblingIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.FollowingSiblingIterator.Create(System.Xml.XPath.XPathNavigator,System.Xml.Xsl.Runtime.XmlNavigatorFilter)">
+      <param name="context"></param>
+      <param name="filter"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.FollowingSiblingIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.FollowingSiblingIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator.Create(System.Xml.Xsl.Runtime.XmlNavigatorFilter)">
+      <param name="filter"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator.MoveNext(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.IdIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.IdIterator.Create(System.Xml.XPath.XPathNavigator,System.String)">
+      <param name="context"></param>
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.IdIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.IdIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.Int32Aggregator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.Int32Aggregator.Average(System.Int32)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.Int32Aggregator.AverageResult"></member>
+    <member name="M:System.Xml.Xsl.Runtime.Int32Aggregator.Create"></member>
+    <member name="P:System.Xml.Xsl.Runtime.Int32Aggregator.IsEmpty"></member>
+    <member name="M:System.Xml.Xsl.Runtime.Int32Aggregator.Maximum(System.Int32)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.Int32Aggregator.MaximumResult"></member>
+    <member name="M:System.Xml.Xsl.Runtime.Int32Aggregator.Minimum(System.Int32)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.Int32Aggregator.MinimumResult"></member>
+    <member name="M:System.Xml.Xsl.Runtime.Int32Aggregator.Sum(System.Int32)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.Int32Aggregator.SumResult"></member>
+    <member name="T:System.Xml.Xsl.Runtime.Int64Aggregator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.Int64Aggregator.Average(System.Int64)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.Int64Aggregator.AverageResult"></member>
+    <member name="M:System.Xml.Xsl.Runtime.Int64Aggregator.Create"></member>
+    <member name="P:System.Xml.Xsl.Runtime.Int64Aggregator.IsEmpty"></member>
+    <member name="M:System.Xml.Xsl.Runtime.Int64Aggregator.Maximum(System.Int64)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.Int64Aggregator.MaximumResult"></member>
+    <member name="M:System.Xml.Xsl.Runtime.Int64Aggregator.Minimum(System.Int64)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.Int64Aggregator.MinimumResult"></member>
+    <member name="M:System.Xml.Xsl.Runtime.Int64Aggregator.Sum(System.Int64)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.Int64Aggregator.SumResult"></member>
+    <member name="T:System.Xml.Xsl.Runtime.IntersectIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.IntersectIterator.Create(System.Xml.Xsl.Runtime.XmlQueryRuntime)">
+      <param name="runtime"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.IntersectIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.IntersectIterator.MoveNext(System.Xml.XPath.XPathNavigator)">
+      <param name="nestedNavigator"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.IteratorResult"></member>
+    <member name="F:System.Xml.Xsl.Runtime.IteratorResult.NoMoreNodes"></member>
+    <member name="F:System.Xml.Xsl.Runtime.IteratorResult.NeedInputNode"></member>
+    <member name="F:System.Xml.Xsl.Runtime.IteratorResult.HaveCurrentNode"></member>
+    <member name="T:System.Xml.Xsl.Runtime.NamespaceIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.NamespaceIterator.Create(System.Xml.XPath.XPathNavigator)">
+      <param name="context"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.NamespaceIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.NamespaceIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.NodeKindContentIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.NodeKindContentIterator.Create(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNodeType)">
+      <param name="context"></param>
+      <param name="nodeType"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.NodeKindContentIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.NodeKindContentIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.NodeRangeIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.NodeRangeIterator.Create(System.Xml.XPath.XPathNavigator,System.Xml.Xsl.Runtime.XmlNavigatorFilter,System.Xml.XPath.XPathNavigator)">
+      <param name="start"></param>
+      <param name="filter"></param>
+      <param name="end"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.NodeRangeIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.NodeRangeIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.ParentIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.ParentIterator.Create(System.Xml.XPath.XPathNavigator,System.Xml.Xsl.Runtime.XmlNavigatorFilter)">
+      <param name="context"></param>
+      <param name="filter"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.ParentIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.ParentIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.PrecedingIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.PrecedingIterator.Create(System.Xml.XPath.XPathNavigator,System.Xml.Xsl.Runtime.XmlNavigatorFilter)">
+      <param name="context"></param>
+      <param name="filter"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.PrecedingIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.PrecedingIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.PrecedingSiblingDocOrderIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.PrecedingSiblingDocOrderIterator.Create(System.Xml.XPath.XPathNavigator,System.Xml.Xsl.Runtime.XmlNavigatorFilter)">
+      <param name="context"></param>
+      <param name="filter"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.PrecedingSiblingDocOrderIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.PrecedingSiblingDocOrderIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.PrecedingSiblingIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.PrecedingSiblingIterator.Create(System.Xml.XPath.XPathNavigator,System.Xml.Xsl.Runtime.XmlNavigatorFilter)">
+      <param name="context"></param>
+      <param name="filter"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.PrecedingSiblingIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.PrecedingSiblingIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.SetIteratorResult"></member>
+    <member name="F:System.Xml.Xsl.Runtime.SetIteratorResult.NoMoreNodes"></member>
+    <member name="F:System.Xml.Xsl.Runtime.SetIteratorResult.InitRightIterator"></member>
+    <member name="F:System.Xml.Xsl.Runtime.SetIteratorResult.NeedLeftNode"></member>
+    <member name="F:System.Xml.Xsl.Runtime.SetIteratorResult.NeedRightNode"></member>
+    <member name="F:System.Xml.Xsl.Runtime.SetIteratorResult.HaveCurrentNode"></member>
+    <member name="T:System.Xml.Xsl.Runtime.StringConcat"></member>
+    <member name="M:System.Xml.Xsl.Runtime.StringConcat.Clear"></member>
+    <member name="M:System.Xml.Xsl.Runtime.StringConcat.Concat(System.String)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.StringConcat.Delimiter"></member>
+    <member name="M:System.Xml.Xsl.Runtime.StringConcat.GetResult"></member>
+    <member name="T:System.Xml.Xsl.Runtime.UnionIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.UnionIterator.Create(System.Xml.Xsl.Runtime.XmlQueryRuntime)">
+      <param name="runtime"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.UnionIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.UnionIterator.MoveNext(System.Xml.XPath.XPathNavigator)">
+      <param name="nestedNavigator"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.XmlCollation"></member>
+    <member name="T:System.Xml.Xsl.Runtime.XmlILIndex"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlILIndex.Add(System.String,System.Xml.XPath.XPathNavigator)">
+      <param name="key"></param>
+      <param name="navigator"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlILIndex.Lookup(System.String)">
+      <param name="key"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.XmlILStorageConverter"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.BooleanToAtomicValue(System.Boolean,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
+      <param name="value"></param>
+      <param name="index"></param>
+      <param name="runtime"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.BytesToAtomicValue(System.Byte[],System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
+      <param name="value"></param>
+      <param name="index"></param>
+      <param name="runtime"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.DateTimeToAtomicValue(System.DateTime,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
+      <param name="value"></param>
+      <param name="index"></param>
+      <param name="runtime"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.DecimalToAtomicValue(System.Decimal,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
+      <param name="value"></param>
+      <param name="index"></param>
+      <param name="runtime"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.DoubleToAtomicValue(System.Double,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
+      <param name="value"></param>
+      <param name="index"></param>
+      <param name="runtime"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.Int32ToAtomicValue(System.Int32,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
+      <param name="value"></param>
+      <param name="index"></param>
+      <param name="runtime"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.Int64ToAtomicValue(System.Int64,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
+      <param name="value"></param>
+      <param name="index"></param>
+      <param name="runtime"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.ItemsToNavigators(System.Collections.Generic.IList{System.Xml.XPath.XPathItem})">
+      <param name="listItems"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.NavigatorsToItems(System.Collections.Generic.IList{System.Xml.XPath.XPathNavigator})">
+      <param name="listNavigators"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.SingleToAtomicValue(System.Single,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
+      <param name="value"></param>
+      <param name="index"></param>
+      <param name="runtime"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.StringToAtomicValue(System.String,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
+      <param name="value"></param>
+      <param name="index"></param>
+      <param name="runtime"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.TimeSpanToAtomicValue(System.TimeSpan,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
+      <param name="value"></param>
+      <param name="index"></param>
+      <param name="runtime"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.XmlQualifiedNameToAtomicValue(System.Xml.XmlQualifiedName,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
+      <param name="value"></param>
+      <param name="index"></param>
+      <param name="runtime"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.XmlNavigatorFilter"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.#ctor"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.IsFiltered(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToContent(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToFollowing(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+      <param name="navigatorEnd"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToFollowingSibling(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToNextContent(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToPreviousSibling(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.XmlQueryContext"></member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQueryContext.DefaultDataSource"></member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQueryContext.DefaultNameTable"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryContext.GetDataSource(System.String,System.String)">
+      <param name="uriRelative"></param>
+      <param name="uriBase"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryContext.GetLateBoundObject(System.String)">
+      <param name="namespaceUri"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryContext.GetParameter(System.String,System.String)">
+      <param name="localName"></param>
+      <param name="namespaceUri"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryContext.InvokeXsltLateBoundFunction(System.String,System.String,System.Collections.Generic.IList{System.Xml.XPath.XPathItem}[])">
+      <param name="name"></param>
+      <param name="namespaceUri"></param>
+      <param name="args"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryContext.LateBoundFunctionExists(System.String,System.String)">
+      <param name="name"></param>
+      <param name="namespaceUri"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQueryContext.QueryNameTable"></member>
+    <member name="T:System.Xml.Xsl.Runtime.XmlQueryItemSequence"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryItemSequence.#ctor"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryItemSequence.#ctor(System.Int32)">
+      <param name="capacity"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryItemSequence.#ctor(System.Xml.XPath.XPathItem)">
+      <param name="item"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryItemSequence.AddClone(System.Xml.XPath.XPathItem)">
+      <param name="item"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryItemSequence.CreateOrReuse(System.Xml.Xsl.Runtime.XmlQueryItemSequence)">
+      <param name="seq"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryItemSequence.CreateOrReuse(System.Xml.Xsl.Runtime.XmlQueryItemSequence,System.Xml.XPath.XPathItem)">
+      <param name="seq"></param>
+      <param name="item"></param>
+    </member>
+    <member name="F:System.Xml.Xsl.Runtime.XmlQueryItemSequence.Empty"></member>
+    <member name="T:System.Xml.Xsl.Runtime.XmlQueryNodeSequence"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.#ctor"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.#ctor(System.Collections.Generic.IList{System.Xml.XPath.XPathNavigator})">
+      <param name="list"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.#ctor(System.Int32)">
+      <param name="capacity"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.#ctor(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.#ctor(System.Xml.XPath.XPathNavigator[],System.Int32)">
+      <param name="array"></param>
+      <param name="size"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.AddClone(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.CreateOrReuse(System.Xml.Xsl.Runtime.XmlQueryNodeSequence)">
+      <param name="seq"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.CreateOrReuse(System.Xml.Xsl.Runtime.XmlQueryNodeSequence,System.Xml.XPath.XPathNavigator)">
+      <param name="seq"></param>
+      <param name="navigator"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.DocOrderDistinct(System.Collections.Generic.IComparer{System.Xml.XPath.XPathNavigator})">
+      <param name="comparer"></param>
+    </member>
+    <member name="F:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.Empty"></member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.IsDocOrderDistinct"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.System#Collections#Generic#ICollection{T}#Add(System.Xml.XPath.XPathItem)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.System#Collections#Generic#ICollection{T}#Clear"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.System#Collections#Generic#ICollection{T}#Contains(System.Xml.XPath.XPathItem)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.System#Collections#Generic#ICollection{T}#CopyTo(System.Xml.XPath.XPathItem[],System.Int32)">
+      <param name="array"></param>
+      <param name="index"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.System#Collections#Generic#ICollection{T}#IsReadOnly"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.System#Collections#Generic#ICollection{T}#Remove(System.Xml.XPath.XPathItem)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.System#Collections#Generic#IEnumerable{T}#GetEnumerator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.System#Collections#Generic#IList{T}#IndexOf(System.Xml.XPath.XPathItem)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.System#Collections#Generic#IList{T}#Insert(System.Int32,System.Xml.XPath.XPathItem)">
+      <param name="index"></param>
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.System#Collections#Generic#IList{T}#Item(System.Int32)">
+      <param name="index"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.System#Collections#Generic#IList{T}#RemoveAt(System.Int32)">
+      <param name="index"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.XmlQueryOutput"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.Close"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.EndCopy(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.EndTree"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.Flush"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.LookupPrefix(System.String)">
+      <param name="ns"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.StartCopy(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.StartElementContentUnchecked"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.StartTree(System.Xml.XPath.XPathNodeType)">
+      <param name="rootType"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteBase64(System.Byte[],System.Int32,System.Int32)">
+      <param name="buffer"></param>
+      <param name="index"></param>
+      <param name="count"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteCData(System.String)">
+      <param name="text"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteCharEntity(System.Char)">
+      <param name="ch"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteChars(System.Char[],System.Int32,System.Int32)">
+      <param name="buffer"></param>
+      <param name="index"></param>
+      <param name="count"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteComment(System.String)">
+      <param name="text"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteCommentString(System.String)">
+      <param name="text"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteDocType(System.String,System.String,System.String,System.String)">
+      <param name="name"></param>
+      <param name="pubid"></param>
+      <param name="sysid"></param>
+      <param name="subset"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndAttribute"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndAttributeUnchecked"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndComment"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndDocument"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndElement"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndElementUnchecked(System.String)">
+      <param name="localName"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndElementUnchecked(System.String,System.String,System.String)">
+      <param name="prefix"></param>
+      <param name="localName"></param>
+      <param name="ns"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndNamespace"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndProcessingInstruction"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndRoot"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEntityRef(System.String)">
+      <param name="name"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteFullEndElement"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteItem(System.Xml.XPath.XPathItem)">
+      <param name="item"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteNamespaceDeclaration(System.String,System.String)">
+      <param name="prefix"></param>
+      <param name="ns"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteNamespaceDeclarationUnchecked(System.String,System.String)">
+      <param name="prefix"></param>
+      <param name="ns"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteNamespaceString(System.String)">
+      <param name="text"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteProcessingInstruction(System.String,System.String)">
+      <param name="target"></param>
+      <param name="text"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteProcessingInstructionString(System.String)">
+      <param name="text"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteRaw(System.Char[],System.Int32,System.Int32)">
+      <param name="buffer"></param>
+      <param name="index"></param>
+      <param name="count"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteRaw(System.String)">
+      <param name="data"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteRawUnchecked(System.String)">
+      <param name="text"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttribute(System.String,System.String,System.String)">
+      <param name="prefix"></param>
+      <param name="localName"></param>
+      <param name="ns"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttributeComputed(System.String,System.Int32)">
+      <param name="tagName"></param>
+      <param name="prefixMappingsIndex"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttributeComputed(System.String,System.String)">
+      <param name="tagName"></param>
+      <param name="ns"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttributeComputed(System.Xml.XmlQualifiedName)">
+      <param name="name"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttributeComputed(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttributeLocalName(System.String)">
+      <param name="localName"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttributeUnchecked(System.String)">
+      <param name="localName"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttributeUnchecked(System.String,System.String,System.String)">
+      <param name="prefix"></param>
+      <param name="localName"></param>
+      <param name="ns"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartComment"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartDocument"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartDocument(System.Boolean)">
+      <param name="standalone"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElement(System.String,System.String,System.String)">
+      <param name="prefix"></param>
+      <param name="localName"></param>
+      <param name="ns"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElementComputed(System.String,System.Int32)">
+      <param name="tagName"></param>
+      <param name="prefixMappingsIndex"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElementComputed(System.String,System.String)">
+      <param name="tagName"></param>
+      <param name="ns"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElementComputed(System.Xml.XmlQualifiedName)">
+      <param name="name"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElementComputed(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElementLocalName(System.String)">
+      <param name="localName"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElementUnchecked(System.String)">
+      <param name="localName"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElementUnchecked(System.String,System.String,System.String)">
+      <param name="prefix"></param>
+      <param name="localName"></param>
+      <param name="ns"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartNamespace(System.String)">
+      <param name="prefix"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartProcessingInstruction(System.String)">
+      <param name="target"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartRoot"></member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteState"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteString(System.String)">
+      <param name="text"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStringUnchecked(System.String)">
+      <param name="text"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteSurrogateCharEntity(System.Char,System.Char)">
+      <param name="lowChar"></param>
+      <param name="highChar"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteWhitespace(System.String)">
+      <param name="ws"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQueryOutput.XmlLang"></member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQueryOutput.XmlSpace"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryOutput.XsltCopyOf(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.XmlQueryRuntime">
+      <summary>
+                    提供用于支持 XSLT 处理器的方法和属性。
+                </summary>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.AddNewIndex(System.Xml.XPath.XPathNavigator,System.Int32,System.Xml.Xsl.Runtime.XmlILIndex)">
+      <param name="context"></param>
+      <param name="indexId"></param>
+      <param name="index"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.ChangeTypeXsltArgument(System.Int32,System.Object,System.Type)">
+      <param name="indexType"></param>
+      <param name="value"></param>
+      <param name="destinationType"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.ChangeTypeXsltResult(System.Int32,System.Object)">
+      <param name="indexType"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.ComparePosition(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)">
+      <param name="navigatorThis"></param>
+      <param name="navigatorThat"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.CreateCollation(System.String)">
+      <param name="collation"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.DebugGetGlobalNames"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.DebugGetGlobalValue(System.String)">
+      <param name="name"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.DebugGetXsltValue(System.Collections.IList)">
+      <param name="seq"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.DebugSetGlobalValue(System.String,System.Object)">
+      <param name="name"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.DocOrderDistinct(System.Collections.Generic.IList{System.Xml.XPath.XPathNavigator})">
+      <param name="seq"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.EarlyBoundFunctionExists(System.String,System.String)">
+      <param name="name"></param>
+      <param name="namespaceUri"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.EndRtfConstruction(System.Xml.Xsl.Runtime.XmlQueryOutput@)">
+      <param name="output"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.EndSequenceConstruction(System.Xml.Xsl.Runtime.XmlQueryOutput@)">
+      <param name="output"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQueryRuntime.ExternalContext"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.FindIndex(System.Xml.XPath.XPathNavigator,System.Int32,System.Xml.Xsl.Runtime.XmlILIndex@)">
+      <param name="context"></param>
+      <param name="indexId"></param>
+      <param name="index"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.GenerateId(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.GetAtomizedName(System.Int32)">
+      <param name="index"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.GetCollation(System.Int32)">
+      <param name="index"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.GetEarlyBoundObject(System.Int32)">
+      <param name="index"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.GetGlobalValue(System.Int32)">
+      <param name="index"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.GetNameFilter(System.Int32)">
+      <param name="index"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.GetTypeFilter(System.Xml.XPath.XPathNodeType)">
+      <param name="nodeType"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.IsGlobalComputed(System.Int32)">
+      <param name="index"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.IsQNameEqual(System.Xml.XPath.XPathNavigator,System.Int32,System.Int32)">
+      <param name="navigator"></param>
+      <param name="indexLocalName"></param>
+      <param name="indexNamespaceUri"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.IsQNameEqual(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)">
+      <param name="n1"></param>
+      <param name="n2"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType(System.Collections.Generic.IList{System.Xml.XPath.XPathItem},System.Int32)">
+      <param name="seq"></param>
+      <param name="indexType"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType(System.Collections.Generic.IList{System.Xml.XPath.XPathItem},System.Xml.Schema.XmlTypeCode)">
+      <param name="seq"></param>
+      <param name="code"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType(System.Xml.XPath.XPathItem,System.Int32)">
+      <param name="item"></param>
+      <param name="indexType"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType(System.Xml.XPath.XPathItem,System.Xml.Schema.XmlTypeCode)">
+      <param name="item"></param>
+      <param name="code"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQueryRuntime.NameTable"></member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQueryRuntime.Output"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.ParseTagName(System.String,System.Int32)">
+      <param name="tagName"></param>
+      <param name="indexPrefixMappings"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.ParseTagName(System.String,System.String)">
+      <param name="tagName"></param>
+      <param name="ns"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.SendMessage(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.SetGlobalValue(System.Int32,System.Object)">
+      <param name="index"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.StartRtfConstruction(System.String,System.Xml.Xsl.Runtime.XmlQueryOutput@)">
+      <param name="baseUri"></param>
+      <param name="output"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.StartSequenceConstruction(System.Xml.Xsl.Runtime.XmlQueryOutput@)">
+      <param name="output"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.TextRtfConstruction(System.String,System.String)">
+      <param name="text"></param>
+      <param name="baseUri"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.ThrowException(System.String)">
+      <param name="text"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQueryRuntime.XsltFunctions"></member>
+    <member name="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.#ctor"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.#ctor(System.Int32)">
+      <param name="capacity"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.#ctor(`0)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.#ctor(`0[],System.Int32)">
+      <param name="array"></param>
+      <param name="size"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.Add(`0)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.Clear"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.Contains(`0)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.CopyTo(`0[],System.Int32)">
+      <param name="array"></param>
+      <param name="index"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.Count"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.CreateOrReuse(System.Xml.Xsl.Runtime.XmlQuerySequence{`0})">
+      <param name="seq"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.CreateOrReuse(System.Xml.Xsl.Runtime.XmlQuerySequence{`0},`0)">
+      <param name="seq"></param>
+      <param name="item"></param>
+    </member>
+    <member name="F:System.Xml.Xsl.Runtime.XmlQuerySequence`1.Empty"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.GetEnumerator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.IndexOf(`0)">
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.Item(System.Int32)">
+      <param name="index"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.OnItemsChanged"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.SortByKeys(System.Array)">
+      <param name="keys"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#Generic#ICollection{T}#Add(`0)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#Generic#ICollection{T}#Clear"></member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#Generic#ICollection{T}#IsReadOnly"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#Generic#ICollection{T}#Remove(`0)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#Generic#IList{T}#Insert(System.Int32,`0)">
+      <param name="index"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#Generic#IList{T}#RemoveAt(System.Int32)">
+      <param name="index"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <param name="array"></param>
+      <param name="index"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#ICollection#IsSynchronized"></member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#ICollection#SyncRoot"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IEnumerable#GetEnumerator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#Add(System.Object)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#Clear"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#Contains(System.Object)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#IndexOf(System.Object)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#Insert(System.Int32,System.Object)">
+      <param name="index"></param>
+      <param name="value"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#IsFixedSize"></member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#IsReadOnly"></member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#Item(System.Int32)">
+      <param name="index"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#Remove(System.Object)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#RemoveAt(System.Int32)">
+      <param name="index"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.XmlSortKeyAccumulator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.AddDateTimeSortKey(System.Xml.Xsl.Runtime.XmlCollation,System.DateTime)">
+      <param name="collation"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.AddDecimalSortKey(System.Xml.Xsl.Runtime.XmlCollation,System.Decimal)">
+      <param name="collation"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.AddDoubleSortKey(System.Xml.Xsl.Runtime.XmlCollation,System.Double)">
+      <param name="collation"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.AddEmptySortKey(System.Xml.Xsl.Runtime.XmlCollation)">
+      <param name="collation"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.AddIntegerSortKey(System.Xml.Xsl.Runtime.XmlCollation,System.Int64)">
+      <param name="collation"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.AddIntSortKey(System.Xml.Xsl.Runtime.XmlCollation,System.Int32)">
+      <param name="collation"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.AddStringSortKey(System.Xml.Xsl.Runtime.XmlCollation,System.String)">
+      <param name="collation"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.Create"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.FinishSortKeys"></member>
+    <member name="P:System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.Keys"></member>
+    <member name="T:System.Xml.Xsl.Runtime.XPathFollowingIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XPathFollowingIterator.Create(System.Xml.XPath.XPathNavigator,System.Xml.Xsl.Runtime.XmlNavigatorFilter)">
+      <param name="input"></param>
+      <param name="filter"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XPathFollowingIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XPathFollowingIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.XPathFollowingMergeIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XPathFollowingMergeIterator.Create(System.Xml.Xsl.Runtime.XmlNavigatorFilter)">
+      <param name="filter"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XPathFollowingMergeIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XPathFollowingMergeIterator.MoveNext(System.Xml.XPath.XPathNavigator)">
+      <param name="input"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.XPathPrecedingDocOrderIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XPathPrecedingDocOrderIterator.Create(System.Xml.XPath.XPathNavigator,System.Xml.Xsl.Runtime.XmlNavigatorFilter)">
+      <param name="input"></param>
+      <param name="filter"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XPathPrecedingDocOrderIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XPathPrecedingDocOrderIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.XPathPrecedingIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XPathPrecedingIterator.Create(System.Xml.XPath.XPathNavigator,System.Xml.Xsl.Runtime.XmlNavigatorFilter)">
+      <param name="context"></param>
+      <param name="filter"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XPathPrecedingIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XPathPrecedingIterator.MoveNext"></member>
+    <member name="T:System.Xml.Xsl.Runtime.XPathPrecedingMergeIterator"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XPathPrecedingMergeIterator.Create(System.Xml.Xsl.Runtime.XmlNavigatorFilter)">
+      <param name="filter"></param>
+    </member>
+    <member name="P:System.Xml.Xsl.Runtime.XPathPrecedingMergeIterator.Current"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XPathPrecedingMergeIterator.MoveNext(System.Xml.XPath.XPathNavigator)">
+      <param name="input"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.XsltConvert"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.EnsureNodeSet(System.Collections.Generic.IList{System.Xml.XPath.XPathItem})">
+      <param name="listItems"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToBoolean(System.Collections.Generic.IList{System.Xml.XPath.XPathItem})">
+      <param name="listItems"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToBoolean(System.Xml.XPath.XPathItem)">
+      <param name="item"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToDateTime(System.String)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToDecimal(System.Double)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToDouble(System.Collections.Generic.IList{System.Xml.XPath.XPathItem})">
+      <param name="listItems"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToDouble(System.Decimal)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToDouble(System.Int32)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToDouble(System.Int64)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToDouble(System.String)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToDouble(System.Xml.XPath.XPathItem)">
+      <param name="item"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToInt(System.Double)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToLong(System.Double)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToNode(System.Collections.Generic.IList{System.Xml.XPath.XPathItem})">
+      <param name="listItems"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToNode(System.Xml.XPath.XPathItem)">
+      <param name="item"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToNodeSet(System.Collections.Generic.IList{System.Xml.XPath.XPathItem})">
+      <param name="listItems"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToNodeSet(System.Xml.XPath.XPathItem)">
+      <param name="item"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToString(System.Collections.Generic.IList{System.Xml.XPath.XPathItem})">
+      <param name="listItems"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToString(System.DateTime)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToString(System.Double)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToString(System.Xml.XPath.XPathItem)">
+      <param name="item"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.XsltFunctions"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.BaseUri(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.Contains(System.String,System.String)">
+      <param name="s1"></param>
+      <param name="s2"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.EXslObjectType(System.Collections.Generic.IList{System.Xml.XPath.XPathItem})">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.Lang(System.String,System.Xml.XPath.XPathNavigator)">
+      <param name="value"></param>
+      <param name="context"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.MSFormatDateTime(System.String,System.String,System.String,System.Boolean)">
+      <param name="dateTime"></param>
+      <param name="format"></param>
+      <param name="lang"></param>
+      <param name="isDate"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.MSLocalName(System.String)">
+      <param name="name"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.MSNamespaceUri(System.String,System.Xml.XPath.XPathNavigator)">
+      <param name="name"></param>
+      <param name="currentNode"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.MSNumber(System.Collections.Generic.IList{System.Xml.XPath.XPathItem})">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.MSStringCompare(System.String,System.String,System.String,System.String)">
+      <param name="s1"></param>
+      <param name="s2"></param>
+      <param name="lang"></param>
+      <param name="options"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.MSUtc(System.String)">
+      <param name="dateTime"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.NormalizeSpace(System.String)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.OuterXml(System.Xml.XPath.XPathNavigator)">
+      <param name="navigator"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.Round(System.Double)">
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.StartsWith(System.String,System.String)">
+      <param name="s1"></param>
+      <param name="s2"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.Substring(System.String,System.Double)">
+      <param name="value"></param>
+      <param name="startIndex"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.Substring(System.String,System.Double,System.Double)">
+      <param name="value"></param>
+      <param name="startIndex"></param>
+      <param name="length"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.SubstringAfter(System.String,System.String)">
+      <param name="s1"></param>
+      <param name="s2"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.SubstringBefore(System.String,System.String)">
+      <param name="s1"></param>
+      <param name="s2"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.SystemProperty(System.Xml.XmlQualifiedName)">
+      <param name="name"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltFunctions.Translate(System.String,System.String,System.String)">
+      <param name="arg"></param>
+      <param name="mapString"></param>
+      <param name="transString"></param>
+    </member>
+    <member name="T:System.Xml.Xsl.Runtime.XsltLibrary"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltLibrary.CheckScriptNamespace(System.String)">
+      <param name="nsUri"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltLibrary.ElementAvailable(System.Xml.XmlQualifiedName)">
+      <param name="name"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltLibrary.EqualityOperator(System.Double,System.Collections.Generic.IList{System.Xml.XPath.XPathItem},System.Collections.Generic.IList{System.Xml.XPath.XPathItem})">
+      <param name="opCode"></param>
+      <param name="left"></param>
+      <param name="right"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltLibrary.FormatMessage(System.String,System.Collections.Generic.IList{System.String})">
+      <param name="res"></param>
+      <param name="args"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltLibrary.FormatNumberDynamic(System.Double,System.String,System.Xml.XmlQualifiedName,System.String)">
+      <param name="value"></param>
+      <param name="formatPicture"></param>
+      <param name="decimalFormatName"></param>
+      <param name="errorMessageName"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltLibrary.FormatNumberStatic(System.Double,System.Double)">
+      <param name="value"></param>
+      <param name="decimalFormatterIndex"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltLibrary.FunctionAvailable(System.Xml.XmlQualifiedName)">
+      <param name="name"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltLibrary.IsSameNodeSort(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)">
+      <param name="nav1"></param>
+      <param name="nav2"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltLibrary.LangToLcid(System.String,System.Boolean)">
+      <param name="lang"></param>
+      <param name="forwardCompatibility"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltLibrary.NumberFormat(System.Collections.Generic.IList{System.Xml.XPath.XPathItem},System.String,System.Double,System.String,System.String,System.Double)">
+      <param name="value"></param>
+      <param name="formatString"></param>
+      <param name="lang"></param>
+      <param name="letterValue"></param>
+      <param name="groupingSeparator"></param>
+      <param name="groupingSize"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltLibrary.RegisterDecimalFormat(System.Xml.XmlQualifiedName,System.String,System.String,System.String)">
+      <param name="name"></param>
+      <param name="infinitySymbol"></param>
+      <param name="nanSymbol"></param>
+      <param name="characters"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltLibrary.RegisterDecimalFormatter(System.String,System.String,System.String,System.String)">
+      <param name="formatPicture"></param>
+      <param name="infinitySymbol"></param>
+      <param name="nanSymbol"></param>
+      <param name="characters"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XsltLibrary.RelationalOperator(System.Double,System.Collections.Generic.IList{System.Xml.XPath.XPathItem},System.Collections.Generic.IList{System.Xml.XPath.XPathItem})">
+      <param name="opCode"></param>
+      <param name="left"></param>
+      <param name="right"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlCollation.Equals(System.Object)">
+      <param name="obj">
+仅供内部使用。
+                </param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlCollation.GetHashCode"></member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryContext.OnXsltMessageEncountered(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.OnCurrentNodeChanged(System.Xml.XPath.XPathNavigator)">
+      <param name="currentNode"></param>
+    </member>
+  </members>
+</doc>

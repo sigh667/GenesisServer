@@ -1,0 +1,6 @@
+#set($nextId=105)
+
+#foreach($logType in ${map.entrySet()})
+<submenu id="3_$nextId" pid="3" name="${logType.key}" url="basicLog.do?action=init&amp;logType=${logType.value}" />
+#set($nextId=$nextId + 1)
+#end

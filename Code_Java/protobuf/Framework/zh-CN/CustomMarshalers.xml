@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>CustomMarshalers</name>
+  </assembly>
+  <members>
+    <member name="T:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler">
+      <summary>将 COM IDispatch 接口封送处理到 .NET Framework <see cref="T:System.Collections.IEnumerable" /> 接口，反之亦然。</summary>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.CleanUpManagedData(System.Object)">
+      <summary>对不再需要的托管数据进行必要的清理。</summary>
+      <param name="pManagedObj">要销毁的托管对象。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.CleanUpNativeData(System.IntPtr)">
+      <summary>对不再需要的非托管数据进行必要的清理。</summary>
+      <param name="pNativeData">指向要销毁的非托管数据的指针。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.GetInstance(System.String)">
+      <summary>返回自定义封送拆收器的实例。</summary>
+      <returns>自定义封送拆收器的实例。</returns>
+      <param name="pstrCookie">可以由自定义封送拆收器使用的字符串“cookie”参数。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.GetNativeDataSize">
+      <summary>返回要封送处理的非托管数据的大小（以字节为单位）。</summary>
+      <returns>-1 指示此封送拆收器处理的类型不是值类型。</returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.MarshalManagedToNative(System.Object)">
+      <summary>将一个对象从托管代码封送处理到非托管代码。</summary>
+      <returns>指向非托管对象的指针。</returns>
+      <param name="pManagedObj">要转换的托管对象。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.MarshalNativeToManaged(System.IntPtr)">
+      <summary>将一个对象从非托管代码封送处理到托管代码。</summary>
+      <returns>一个托管对象。</returns>
+      <param name="pNativeData">指向要转换的非托管对象的指针。</param>
+    </member>
+    <member name="T:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler">
+      <summary>将 COM IEnumVARIANT 接口封送处理到 .NET Framework <see cref="T:System.Collections.IEnumerator" /> 接口，反之亦然。</summary>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler.CleanUpManagedData(System.Object)">
+      <summary>对不再需要的托管数据进行必要的清理。</summary>
+      <param name="pManagedObj">要销毁的托管对象。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler.CleanUpNativeData(System.IntPtr)">
+      <summary>对不再需要的非托管数据进行必要的清理。</summary>
+      <param name="pNativeData">指向要销毁的非托管数据的指针。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler.GetInstance(System.String)">
+      <summary>返回自定义封送拆收器的实例。</summary>
+      <returns>自定义封送拆收器的实例。</returns>
+      <param name="pstrCookie">可以由自定义封送拆收器使用的字符串“cookie”参数。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler.GetNativeDataSize">
+      <summary>返回要封送处理的非托管数据的大小（以字节为单位）。</summary>
+      <returns>-1 指示此封送拆收器处理的类型不是值类型。</returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler.MarshalManagedToNative(System.Object)">
+      <summary>将一个对象从托管代码封送处理到非托管代码。</summary>
+      <returns>指向非托管对象的指针。</returns>
+      <param name="pManagedObj">要转换的托管对象。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler.MarshalNativeToManaged(System.IntPtr)">
+      <summary>将一个对象从非托管代码封送处理到托管代码。</summary>
+      <returns>一个托管对象。</returns>
+      <param name="pNativeData">指向要转换的非托管对象的指针。</param>
+    </member>
+    <member name="T:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler">
+      <summary>将 COM IDispatchEx 接口封送处理到 .NET Framework <see cref="T:System.Runtime.InteropServices.Expando.IExpando" /> 接口，或封送处理到 <see cref="T:System.Reflection.IReflect" /> 接口，反之亦然。</summary>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler.CleanUpManagedData(System.Object)">
+      <summary>对不再需要的托管数据进行必要的清理。</summary>
+      <param name="pManagedObj">要销毁的托管对象。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler.CleanUpNativeData(System.IntPtr)">
+      <summary>对不再需要的非托管数据进行必要的清理。</summary>
+      <param name="pNativeData">指向要销毁的非托管数据的指针。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler.GetInstance(System.String)">
+      <summary>返回自定义封送拆收器的实例。</summary>
+      <returns>自定义封送拆收器的实例。</returns>
+      <param name="pstrCookie">可以由自定义封送拆收器使用的字符串“cookie”参数。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler.GetNativeDataSize">
+      <summary>返回要封送处理的非托管数据的大小（以字节为单位）。</summary>
+      <returns>-1 指示此封送拆收器处理的类型不是值类型。</returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler.MarshalManagedToNative(System.Object)">
+      <summary>将一个对象从托管代码封送处理到非托管代码。</summary>
+      <returns>指向非托管对象的指针。</returns>
+      <param name="pManagedObj">要转换的托管对象。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler.MarshalNativeToManaged(System.IntPtr)">
+      <summary>将一个对象从非托管代码封送处理到托管代码。</summary>
+      <returns>一个托管对象。</returns>
+      <param name="pNativeData">指向要转换的非托管对象的指针。</param>
+    </member>
+    <member name="T:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler">
+      <summary>将非托管的 ITypeInfo 接口封送处理到托管的 <see cref="T:System.Type" /> 类，并将托管的 <see cref="T:System.Type" /> 类封送处理到非托管的 ITypeInfo 接口。</summary>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler.CleanUpManagedData(System.Object)">
+      <summary>对不再需要的托管数据进行必要的清理。</summary>
+      <param name="pManagedObj">要销毁的托管对象。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler.CleanUpNativeData(System.IntPtr)">
+      <summary>对不再需要的非托管数据进行必要的清理。</summary>
+      <param name="pNativeData">指向要销毁的非托管数据的指针。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler.GetInstance(System.String)">
+      <summary>返回自定义封送拆收器的实例。</summary>
+      <returns>自定义封送拆收器的实例。</returns>
+      <param name="pstrCookie">可以由自定义封送拆收器使用的字符串“cookie”参数。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler.GetNativeDataSize">
+      <summary>返回要封送处理的非托管数据的大小（以字节为单位）。</summary>
+      <returns>-1 指示此封送拆收器处理的类型不是值类型。</returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler.MarshalManagedToNative(System.Object)">
+      <summary>将一个对象从托管代码封送处理到非托管代码。</summary>
+      <returns>指向非托管对象的指针。</returns>
+      <param name="pManagedObj">要转换的托管对象。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler.MarshalNativeToManaged(System.IntPtr)">
+      <summary>将一个对象从非托管代码封送处理到托管代码。</summary>
+      <returns>一个托管对象。</returns>
+      <param name="pNativeData">指向要转换的非托管对象的指针。</param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.#cctor">
+      <summary>提供静态类构造函数。</summary>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler.#cctor">
+      <summary>提供静态类构造函数。</summary>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler.#cctor">
+      <summary>提供静态类构造函数。</summary>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler.#cctor">
+      <summary>提供静态类构造函数。</summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="config"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/junit-4.11.jar" sourcepath="lib-src/junit-4.11-sources.jar"/>
+	<classpathentry kind="lib" path="lib/hamcrest-all-1.3.jar" sourcepath="lib-src/hamcrest-all-1.3-sources.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/data_server"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/db_log"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/game_server"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/protobuf"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/server_msg"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/agent_server"/>
+	<classpathentry kind="lib" path="lib/h2-1.4.178.jar" sourcepath="lib-src/h2-1.4.178-sources.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/game_db"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/tools"/>
+	<classpathentry kind="lib" path="lib/mockito-all-1.9.5.jar"/>
+	<classpathentry kind="lib" path="lib/powermock-mockito-1.5.5-full.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/network2client"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/client_msg"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/robot"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

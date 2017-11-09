@@ -1,0 +1,3370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Build.Tasks</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Build.Tasks.AspNetCompiler">
+      <summary>
+                    实现 AspNetCompiler 任务。使用项目文件中的 AspNetCompiler 元素创建并执行此任务。有关用法和参数信息，请参见 AspNetCompiler 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.AspNetCompiler.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.AspNetCompiler" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.AspNetCompiler.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)">
+      <summary>
+                    生成 AspNetCompiler 工具的命令行参数。
+                </summary>
+      <param name="commandLine">
+                    参数所要添加到的命令行生成器。
+                </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AspNetCompiler.AllowPartiallyTrustedCallers">
+      <summary>
+                    获取或设置一个布尔值，该值指示 <see cref="T:System.Security.AllowPartiallyTrustedCallersAttribute" />（允许部分受信任的调用方访问程序集）是否应该应用于 Aspnet_compiler.exe 生成的具有强名称的程序集。
+                </summary>
+      <returns>
+                    如果 <see cref="T:System.Security.AllowPartiallyTrustedCallersAttribute" /> 应该应用于 Aspnet_compiler.exe 生成的具有强名称的程序集，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AspNetCompiler.Clean">
+      <summary>
+                    获取或设置一个布尔值，该值指示是否将以全新方式生成预编译的应用程序。
+                </summary>
+      <returns>
+                    如果将以全新方式生成预编译的应用程序，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AspNetCompiler.Debug">
+      <summary>
+                    获取或设置一个布尔值，该值指示在编译过程中是否发出调试信息（.PDB 文件）。
+                </summary>
+      <returns>
+                    如果在编译过程中发出调试信息（.PDB 文件），则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AspNetCompiler.DelaySign">
+      <summary>
+                    获取或设置一个布尔值，该值指示是否应该将 <see cref="T:System.Reflection.AssemblyDelaySignAttribute" />（指示应该只使用公钥标记对程序集进行签名，而不使用公钥/私钥对）应用于生成的程序集。
+                </summary>
+      <returns>
+                    如果 <see cref="T:System.Reflection.AssemblyDelaySignAttribute" /> 应该应用于生成的程序集；则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.AspNetCompiler.Execute">
+      <summary>
+                    执行 AspNetCompiler 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AspNetCompiler.FixedNames">
+      <summary>
+                    获取或设置一个布尔值，该值指示是否应该为应用程序中的每个页面生成一个程序集。
+                </summary>
+      <returns>
+                    如果应该为应用程序中的每个页面生成一个程序集，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AspNetCompiler.Force">
+      <summary>
+                    获取或设置一个布尔值，该值指定是否应该覆盖 <paramref name="targetDir" /> 目录及其子目录中的现有文件。
+                </summary>
+      <returns>
+                    如果应该覆盖 <paramref name="targetDir" /> 目录及其子目录中的现有文件，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.AspNetCompiler.GenerateFullPathToTool">
+      <summary>
+                    返回 AspNetCompiler 工具的完整文件路径。
+                </summary>
+      <returns>
+                    AspNetCompiler 工具的完整文件路径。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AspNetCompiler.KeyContainer">
+      <summary>
+                    获取或设置一个布尔值，该值指示是否应该将 <see cref="T:System.Reflection.AssemblyKeyNameAttribute" />（指示用于生成强名称的公钥/私钥对的容器名）应用于已编译的程序集。
+                </summary>
+      <returns>
+                    如果 <see cref="T:System.Reflection.AssemblyKeyNameAttribute" /> 应该应用于已编译的程序集；则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AspNetCompiler.KeyFile">
+      <summary>
+                    获取或设置一个布尔值，该值指示是否应该将 <see cref="T:System.Reflection.AssemblyKeyFileAttribute" />（指示用于生成强名称的包含公钥/私钥对的文件名）应用于已编译的程序集。
+                </summary>
+      <returns>
+                    如果 <see cref="T:System.Reflection.AssemblyKeyFileAttribute" /> 应该应用于已编译的程序集；则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AspNetCompiler.MetabasePath">
+      <summary>
+                    获取或设置应用程序的完整 IIS 元数据库路径。
+                </summary>
+      <returns>
+                    应用程序的完整 IIS 元数据库路径。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AspNetCompiler.PhysicalPath">
+      <summary>
+                    获取或设置要编译的应用程序的物理路径。
+                </summary>
+      <returns>
+                    要编译的应用程序的物理路径。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AspNetCompiler.TargetPath">
+      <summary>
+                    获取或设置应用程序将编译到的物理路径。
+                </summary>
+      <returns>
+                    应用程序将编译到的物理路径。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AspNetCompiler.ToolName">
+      <summary>
+                    获取 AspNetCompiler 工具的名称 (aspnet_compiler.exe)。
+                </summary>
+      <returns>
+                    AspNetCompiler 工具的名称。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AspNetCompiler.Updateable">
+      <summary>
+                    获取或设置一个布尔值，该值指示预编译的应用程序是否可以更新。
+                </summary>
+      <returns>
+                    如果预编译的应用程序可以更新，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.AspNetCompiler.ValidateParameters">
+      <summary>
+                    验证输入参数和日志错误或警告（如果有）。返回一个指示是否应该继续执行任务的布尔值。
+                </summary>
+      <returns>
+                    如果应该继续执行任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AspNetCompiler.VirtualPath">
+      <summary>
+                    获取或设置要编译的应用程序的虚拟路径。
+                </summary>
+      <returns>
+                    要编译的应用程序的虚拟路径。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.CreateCSharpManifestResourceName">
+      <summary>
+                    根据给定资源文件名创建 C# 样式的清单名称。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateCSharpManifestResourceName.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.CreateCSharpManifestResourceName" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateCSharpManifestResourceName.CreateManifestName(System.String,System.String,System.String,System.String,System.IO.Stream)">
+      <summary>
+                    返回 C# 样式的清单资源名称，此名称与指定的资源文件相对应。
+                </summary>
+      <returns>
+                    与指定的资源文件相对应的清单资源名称。
+                </returns>
+      <param name="fileName">
+                    创建 C# 清单名称所依据的资源文件的名称。
+                </param>
+      <param name="linkFileName">
+                    链接文件的名称。
+                </param>
+      <param name="rootNamespace">
+                    资源文件的根命名空间，通常从项目文件中获取。可以为 null。
+                </param>
+      <param name="dependentUponFileName">
+                    资源文件（通常为 .cs 文件）的父项的文件名。可以为 null。
+                </param>
+      <param name="binaryStream">
+                    文件内容二进制流。可以为 null。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateCSharpManifestResourceName.IsSourceFile(System.String)">
+      <summary>
+                    指示指定的文件是否为 C# 源文件。
+                </summary>
+      <returns>
+                    如果指定的文件为 C# 源文件，则为 true；否则为 false。
+                </returns>
+      <param name="fileName">
+                    要检查的文件的名称。
+                </param>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.CreateItem">
+      <summary>
+                    实现 CreateItem 任务。使用项目文件中的 CreateItem 元素创建并执行此任务。有关用法和参数信息，请参见 CreateItem 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateItem.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.CreateItem" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CreateItem.AdditionalMetadata">
+      <summary>
+                    获取或设置要附加到输出项的其他元数据。
+                </summary>
+      <returns>
+                    要附加到输出项的其他元数据。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CreateItem.Exclude">
+      <summary>
+                    获取或设置要从输出项集合中排除的项。
+                </summary>
+      <returns>
+                    要从输出项集合中排除的项。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateItem.Execute">
+      <summary>
+                    执行 CreateItem 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CreateItem.Include">
+      <summary>
+                    获取或设置要包含在输出项集合中的项。
+                </summary>
+      <returns>
+                    要包含在输出项集合中的项。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Csc">
+      <summary>
+                    实现 Csc 任务。使用项目文件中的 Csc 元素创建并执行此任务。有关用法和参数信息，请参见 Csc 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Csc.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.Csc" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Csc.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)">
+      <summary>
+                    使用可以进入响应文件的开关和其他信息填充指定的 <paramref name="commandLine" /> 参数。
+                </summary>
+      <param name="commandLine">
+                    参数所要添加到的命令行生成器。
+                </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.AllowUnsafeBlocks">
+      <summary>
+                    获取或设置一个布尔值，该值指示是否编译使用 unsafe 关键字的代码。
+                </summary>
+      <returns>
+                    如果将编译使用 unsafe 关键字的代码，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.BaseAddress">
+      <summary>
+                    获取或设置加载 DLL 的首选基址。
+                </summary>
+      <returns>
+加载 DLL 的首选基址。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Csc.CallHostObjectToExecute">
+      <summary>
+                    通过宿主对象编译项目。
+                </summary>
+      <returns>
+                    如果编译成功，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.CheckForOverflowUnderflow">
+      <summary>
+                    获取或设置一个布尔值，该值指示 Csc 任务是否应该在运行时针对溢出数据类型界限的整数算法引起异常。
+                </summary>
+      <returns>
+                    获取或设置一个布尔值，该值指示 Csc 任务是否应该在运行时针对溢出数据类型界限的整数算法引起异常。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.DisabledWarnings">
+      <summary>
+                    获取或设置要禁用的警告的列表。
+                </summary>
+      <returns>
+                    要禁用的警告的列表。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.DocumentationFile">
+      <summary>
+                    获取或设置要包含文档注释的 XML 文件。
+                </summary>
+      <returns>
+                    要包含文档注释的 XML 文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.ErrorReport">
+      <summary>
+                    获取或设置用于向 Microsoft 报告 C# 内部编译器错误的方法。
+                </summary>
+      <returns>
+                    用于向 Microsoft 报告 C# 内部编译器错误的方法。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.GenerateFullPaths">
+      <summary>
+                    获取或设置一个布尔值，该值指示是生成编译器输出中的文件的绝对路径 (true)，还是生成编译器输出中的文件的名称 (false)。
+                </summary>
+      <returns>
+                    如果 Csc 任务应该生成编译器输出中的文件的绝对路径，则为 true；如果 Csc 任务应该生成编译器输出中的文件的名称，则为 false。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Csc.GenerateFullPathToTool">
+      <summary>
+                    返回 Csc 工具的完整文件路径。
+                </summary>
+      <returns>
+                    Csc 工具的完整文件路径。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Csc.InitializeHostObject">
+      <summary>
+                    返回一个宿主对象初始化状态值，该值指示下一项操作应该是什么操作。
+                </summary>
+      <returns>
+                    一个宿主对象初始化状态值，该值指示下一项操作应该是什么操作。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.LangVersion">
+      <summary>
+                    获取或设置要使用的语言的版本。
+                </summary>
+      <returns>
+要使用的语言版本。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.ModuleAssemblyName">
+      <summary>
+                    获取或设置一个程序集，.netmodule 可以访问该程序集的非公共类型。
+                </summary>
+      <returns>
+一个程序集，.netmodule 可以访问该程序集的非公共类型。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.NoStandardLib">
+      <summary>
+                    获取或设置一个布尔值，该值指示 Csc 任务是否应该阻止导入用于定义整个 System 命名空间的 mscorlib.dll。
+                </summary>
+      <returns>
+                    如果 Csc 任务应该阻止导入 mscorlib.dll，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.PdbFile">
+      <summary>
+                    获取或设置 .pdb 文件的路径。
+                </summary>
+      <returns>
+                    .pdb 文件的路径。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.Platform">
+      <summary>
+                    获取或设置输出文件的目标处理器平台。
+                </summary>
+      <returns>
+输出文件的目标处理器平台。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.ToolName">
+      <summary>
+                    返回 Csc 工具的名称 (csc.exe)。
+                </summary>
+      <returns>
+                    Csc 工具的名称 (csc.exe)。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.UseHostCompilerIfAvailable">
+      <summary>
+                    获取或设置一个布尔值，该值指示 Csc 任务是否应该使用进程内编译器对象（如果可用）。
+                </summary>
+      <returns>
+                    如果 Csc 任务应该使用进程内编译器对象（如果可用），则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.WarningLevel">
+      <summary>
+                    获取或设置编译器要显示的警告等级。
+                </summary>
+      <returns>
+                    编译器要显示的警告等级。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.WarningsAsErrors">
+      <summary>
+                    获取或设置要被视为错误的警告的列表。
+                </summary>
+      <returns>
+                    要被视为错误的警告的列表。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.WarningsNotAsErrors">
+      <summary>
+                    获取或设置不被视为错误的警告的列表。
+                </summary>
+      <returns>
+                    不被视为错误的警告的列表。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Delete">
+      <summary>
+                    实现 Delete 任务。使用项目文件中的 Delete 元素创建并执行此任务。有关用法和参数信息，请参见Delete 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Delete.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.Delete" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Delete.DeletedFiles">
+      <summary>
+                    获取或设置已成功删除的文件。
+                </summary>
+      <returns>
+                    已成功删除的文件。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Delete.Execute">
+      <summary>
+                    执行 Delete 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Delete.Files">
+      <summary>
+                    获取或设置要删除的文件。
+                </summary>
+      <returns>
+                    要删除的文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Delete.TreatErrorsAsWarnings">
+      <summary>
+                    获取或设置一个布尔值，该值指示是否将错误记录为警告。
+                </summary>
+      <returns>
+                    如果将错误记录为警告，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Error">
+      <summary>
+                    实现 Error 任务。使用项目文件中的 Error 元素创建并执行此任务。有关用法和参数信息，请参见Delete 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Error.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.Error" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Error.Code">
+      <summary>
+                    获取或设置要与错误关联的错误代码。
+                </summary>
+      <returns>
+                    要与错误关联的错误代码。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Error.Execute">
+      <summary>
+                    执行 Error 任务 — 记录错误并停止生成。
+                </summary>
+      <returns>
+                    在所有情况下均为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Error.HelpKeyword">
+      <summary>
+                    获取或设置要与错误关联的“帮助”关键字。
+                </summary>
+      <returns>
+                    与错误关联的“帮助”关键字。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Error.Text">
+      <summary>
+                    获取或设置错误文本。
+                </summary>
+      <returns>
+                    错误文本。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.ExtractedClassName">
+      <summary>
+                    从语言源文件中提取类名。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ExtractedClassName.IsInsideConditionalBlock">
+      <summary>
+                    获取或设置一个值，该值指示提取的类名是否存在于条件编译代码块中。
+                </summary>
+      <returns>
+                    如果指示提取的类名存在于条件编译代码块中，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ExtractedClassName.Name">
+      <summary>
+                    获取或设置提取的类名。
+                </summary>
+      <returns>
+                    提取的类名。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.FindUnderPath">
+      <summary>
+                    实现 FindUnderPath 任务。使用项目文件中的 FindUnderPath 元素创建并执行此任务。有关用法和参数信息，请参见 FindUnderPath 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.FindUnderPath.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.FindUnderPath" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.FindUnderPath.Execute">
+      <summary>
+                    执行 FileUnderPath 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FindUnderPath.Files">
+      <summary>
+                    获取或设置其路径应当与 <see cref="P:Microsoft.Build.Tasks.FindUnderPath.Path" /> 属性指定的路径进行比较的文件。
+                </summary>
+      <returns>
+                    其路径应当与 <see cref="P:Microsoft.Build.Tasks.FindUnderPath.Path" /> 属性指定的路径进行比较的文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FindUnderPath.InPath">
+      <summary>
+                    获取或设置在指定路径下找到的项。
+                </summary>
+      <returns>
+                    在指定路径下找到的项。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FindUnderPath.OutOfPath">
+      <summary>
+                    获取或设置在指定路径下未找到的项。
+                </summary>
+      <returns>
+                    在指定路径下未找到的项。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FindUnderPath.Path">
+      <summary>
+                    获取或设置要用作参考的文件夹路径。
+                </summary>
+      <returns>
+                    要用作参考的文件夹路径。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.FormatUrl">
+      <summary>
+                    将 URL 转换为正确的 URL 格式。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.FormatUrl.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.FormatUrl" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.FormatUrl.Execute">
+      <summary>
+                    执行 FormatUrl 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FormatUrl.InputUrl">
+      <summary>
+                    获取或设置要进行格式设置的 URL。
+                </summary>
+      <returns>
+                    要进行格式设置的 URL。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FormatUrl.OutputUrl">
+      <summary>
+                    获取或设置带有格式的 URL。
+                </summary>
+      <returns>
+                    带有格式的 URL。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.GenerateApplicationManifest">
+      <summary>
+                    实现 GenerateApplicationManifest 任务。使用项目文件中的 GenerateApplicationManifest 元素创建并执行此任务。有关用法和参数信息，请参见 GenerateApplicationManifest 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateApplicationManifest.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.GenerateApplicationManifest" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.ClrVersion">
+      <summary>
+                    获取或设置应用程序所需的公共语言运行时 (CLR) 的最低版本。
+                </summary>
+      <returns>
+                    应用程序所需的 CLR 的最低版本。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.ConfigFile">
+      <summary>
+                    获取或设置包含应用程序配置文件的任务项。
+                </summary>
+      <returns>
+                    包含应用程序配置文件的任务项。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.Dependencies">
+      <summary>
+                    获取或设置为生成的清单定义一组依赖程序集的项列表。
+                </summary>
+      <returns>
+                    依赖程序集名称的项列表。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.Files">
+      <summary>
+                    获取或设置要包括在清单中的文件的完整路径。
+                </summary>
+      <returns>
+                    要包括在清单中的文件的路径。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.IconFile">
+      <summary>
+                    获取或设置应用程序的图标文件。
+                </summary>
+      <returns>
+                    要对应用程序使用的图标文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.IsolatedComReferences">
+      <summary>
+                    获取或设置要在生成的清单中隔离的 COM 组件。
+                </summary>
+      <returns>
+                    要在生成的清单中隔离的 COM 组件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.ManifestType">
+      <summary>
+                    获取或设置要生成的清单的类型。
+                </summary>
+      <returns>
+                    要生成的清单的类型。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.OSVersion">
+      <summary>
+                    获取或设置应用程序所需的最低操作系统 (OS) 版本。
+                </summary>
+      <returns>
+                    应用程序所需的最低 OS 版本。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.TrustInfoFile">
+      <summary>
+                    获取或设置用于指定应用程序安全性的 XML 文档。
+                </summary>
+      <returns>
+                    用于指定应用程序安全性的 XML 文档。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.GenerateDeploymentManifest">
+      <summary>
+                    实现 GenerateDeploymentManifest 任务。使用项目文件中的 GenerateDeploymentManifest 元素创建并执行此任务。有关用法和参数信息，请参见 GenerateDeploymentManifest 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateDeploymentManifest.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.GenerateDeploymentManifest" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.DeploymentUrl">
+      <summary>
+获取或设置应用程序的更新位置。
+                </summary>
+      <returns>
+                    应用程序的更新位置。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.DisallowUrlActivation">
+      <summary>
+                    获取或设置一个布尔值，该值指示在通过 URL 打开应用程序时是否应该自动运行该应用程序。
+                </summary>
+      <returns>
+                    如果只能从“开始”菜单启动该应用程序，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.Install">
+      <summary>
+                    获取或设置一个布尔值，该值指示应用程序是一个已安装的应用程序还是一个仅联机的应用程序。
+                </summary>
+      <returns>
+                    如果要在本地计算机上安装该应用程序，且可使用“添加/删除程序”对话框删除该应用程序，则为 true；如果该应用程序通过网页联机使用，则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.MapFileExtensions">
+      <summary>
+                    获取或设置一个布尔值，该值指示是否使用 .deploy 文件扩展名映射。
+                </summary>
+      <returns>
+                    如果使用 .deploy 文件扩展名发布每一个程序文件，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.MinimumRequiredVersion">
+      <summary>
+                    获取或设置一个布尔值，该值指示用户是否可以跳过更新。
+                </summary>
+      <returns>
+                    如果用户可以跳过更新，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.Product">
+      <summary>
+获取或设置应用程序的名称。
+                </summary>
+      <returns>
+应用程序的名称。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.Publisher">
+      <summary>
+获取或设置应用程序的发行者。
+                </summary>
+      <returns>
+                    应用程序的发行者。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.SupportUrl">
+      <summary>
+                    获取或设置应用程序的“卸载或更改程序”对话框中显示的链接。指定的值应该是完全限定的 URL 路径或 UNC 路径。
+                </summary>
+      <returns>
+                    应用程序的“卸载或更改程序”对话框中显示的链接。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.TrustUrlParameters">
+      <summary>
+                    获取或设置一个布尔值，该值指示应用程序是否应该可以使用 URL 查询字符串参数。
+                </summary>
+      <returns>
+                    如果应用程序应该可以使用 URL 查询字符串参数，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateEnabled">
+      <summary>
+                    获取或设置一个布尔值，该值指示是否为更新启用应用程序。
+                </summary>
+      <returns>
+                    如果为更新启用该应用程序，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateInterval">
+      <summary>
+获取或设置应用程序的更新间隔。
+                </summary>
+      <returns>
+                    应用程序的更新间隔。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateMode">
+      <summary>
+                    获取或设置一个布尔值，该值指示是否应检查更新。可以在启动应用程序之前（在前台）检查更新，或在运行应用程序时（在后台）检查更新。
+                </summary>
+      <returns>
+                    如果应检查更新，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateUnit">
+      <summary>
+                    获取或设置 <see cref="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateInterval" /> 属性的时间单位。
+                </summary>
+      <returns>
+        <see cref="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateInterval" /> 属性的时间单位。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.GenerateManifestBase">
+      <summary>
+                    表示所有清单生成任务的基类。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateManifestBase.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.GenerateManifestBase" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateManifestBase.AddAssemblyFromItem(Microsoft.Build.Framework.ITaskItem)">
+      <summary>
+                    基于指定项将程序集引用添加到清单中。
+                </summary>
+      <returns>
+                    已添加到清单中的程序集引用。
+                </returns>
+      <param name="item">
+                    创建要添加到清单中的程序集引用所依据的项。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateManifestBase.AddAssemblyNameFromItem(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType)">
+      <summary>
+                    基于指定的项以及程序集引用类型，将程序集引用添加到清单中。
+                </summary>
+      <returns>
+                    已添加到清单中的程序集引用。
+                </returns>
+      <param name="item">
+                    创建要添加到清单中的程序集引用所依据的项。
+                </param>
+      <param name="referenceType">
+                    程序集引用类型。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateManifestBase.AddEntryPointFromItem(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType)">
+      <summary>
+                    基于指定的项以及程序集引用类型，将入口点引用添加到清单中。
+                </summary>
+      <returns>
+                    已添加到清单中的入口点引用。
+                </returns>
+      <param name="item">
+                    创建要添加到清单中的入口点引用所依据的项。
+                </param>
+      <param name="referenceType">
+                    入口点程序集引用类型。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateManifestBase.AddFileFromItem(Microsoft.Build.Framework.ITaskItem)">
+      <summary>
+                    基于指定项将文件引用添加到清单中。
+                </summary>
+      <returns>
+                    已添加到清单中的文件引用。
+                </returns>
+      <param name="item">
+                    创建要添加到清单中的文件引用所依据的项。
+                </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateManifestBase.AssemblyName">
+      <summary>
+                    获取或设置程序集的名称。
+                </summary>
+      <returns>
+程序集的名称。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateManifestBase.AssemblyVersion">
+      <summary>
+                    获取或设置程序集版本。
+                </summary>
+      <returns>
+                    程序集版本。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateManifestBase.Description">
+      <summary>
+                    获取或设置清单说明文本。
+                </summary>
+      <returns>
+                    清单说明文本。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateManifestBase.EntryPoint">
+      <summary>
+                    获取或设置作为清单入口点的托管程序集或 ClickOnce 清单引用。
+                </summary>
+      <returns>
+                    作为应用程序入口点的托管程序集或 ClickOnce 清单引用。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateManifestBase.Execute">
+      <summary>
+                    执行 GenerateManifestBase 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateManifestBase.FindFileFromItem(Microsoft.Build.Framework.ITaskItem)">
+      <summary>
+                    返回与指定项匹配的清单文件引用。
+                </summary>
+      <returns>
+                    与指定项匹配的清单文件引用。
+                </returns>
+      <param name="item">
+                    要获得其文件引用的项。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateManifestBase.GetObjectType">
+      <summary>
+                    在派生类中实现时，返回清单的类型。
+                </summary>
+      <returns>
+                    清单类型。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateManifestBase.InputManifest">
+      <summary>
+                    获取或设置输入清单。
+                </summary>
+      <returns>
+                    输入清单。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateManifestBase.MaxTargetPath">
+      <summary>
+                    获取或设置清单文件名的最大长度。
+                </summary>
+      <returns>
+                    清单文件名的最大长度。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateManifestBase.OnManifestLoaded(Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest)">
+      <summary>
+                    在派生类中实现时，设置清单属性和任何依赖项。
+                </summary>
+      <returns>
+                    如果在设置清单属性时出错，则为 true；否则为 false。
+                </returns>
+      <param name="manifest">
+                    要设置其属性的清单。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateManifestBase.OnManifestResolved(Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest)">
+      <summary>
+                    在派生类中实现时，设置已解析的清单属性。
+                </summary>
+      <returns>
+                    如果在设置清单属性时出错，则为 true；否则为 false。
+                </returns>
+      <param name="manifest">
+                    要设置其属性的清单。
+                </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateManifestBase.OutputManifest">
+      <summary>
+                    获取或设置所生成的清单。
+                </summary>
+      <returns>
+                    所生成的清单。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateManifestBase.Platform">
+      <summary>
+                    获取或设置清单平台。
+                </summary>
+      <returns>
+                    清单平台。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateManifestBase.TargetCulture">
+      <summary>
+                    获取或设置清单目标区域性代码。
+                </summary>
+      <returns>
+                    清单目标区域性代码。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateManifestBase.ValidateInputs">
+      <summary>
+                    验证 GenerateManifestBase 任务的输入。
+                </summary>
+      <returns>
+                    如果输入验证成功，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateManifestBase.ValidateOutput">
+      <summary>
+                    验证所生成的清单。
+                </summary>
+      <returns>
+                    如果清单验证成功，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.GenerateTrustInfo">
+      <summary>
+                    根据基础清单以及 <see cref="P:Microsoft.Build.Tasks.GenerateTrustInfo.TargetZone" /> 和 <see cref="P:Microsoft.Build.Tasks.GenerateTrustInfo.ExcludedPermissions" /> 属性生成应用程序信任。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateTrustInfo.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.GenerateTrustInfo" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateTrustInfo.BaseManifest">
+      <summary>
+                    获取或设置生成应用程序信任所依据的基础清单。
+                </summary>
+      <returns>
+                    生成应用程序信任所依据的基础清单。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateTrustInfo.ExcludedPermissions">
+      <summary>
+                    获取或设置一个或多个要从区域默认权限集中排除的权限标识值（这些值由分号分隔）。
+                </summary>
+      <returns>
+                    要从区域默认权限集中排除的权限标识值。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateTrustInfo.Execute">
+      <summary>
+                    执行 GenerateTrustInfo 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateTrustInfo.TargetZone">
+      <summary>
+                    获取或设置区域默认权限集，该权限集是从计算机策略中获取的。
+                </summary>
+      <returns>
+                    区域默认权限集。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateTrustInfo.TrustInfoFile">
+      <summary>
+                    获取或设置包含应用程序安全信任信息的文件。
+                </summary>
+      <returns>
+                    包含应用程序安全信任信息的文件。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.GetFrameworkPath">
+      <summary>
+                    实现 GetFrameworkPath 任务。使用项目文件中的 GetFrameworkPath 元素创建并执行此任务。有关用法和参数信息，请参见 GetFrameworkPath 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GetFrameworkPath.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.GetFrameworkPath" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GetFrameworkPath.Execute">
+      <summary>
+                    在所有情况下均返回 true。
+                </summary>
+      <returns>
+                    在所有情况下均为 true。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GetFrameworkPath.Path">
+      <summary>
+                    获取或设置包含 .NET Framework 程序集最新版本的文件夹的路径。
+                </summary>
+      <returns>
+                    包含 .NET Framework 程序集最新版本的文件夹的路径。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.GetFrameworkSdkPath">
+      <summary>
+                    实现 GetFrameworkSdkPath 任务。使用项目文件中的 GetFrameworkSdkPath 元素创建并执行此任务。有关用法和参数信息，请参见 GetFrameworkSdkPath 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GetFrameworkSdkPath.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.GetFrameworkSdkPath" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GetFrameworkSdkPath.Execute">
+      <summary>
+                    在所有情况下均返回 true。
+                </summary>
+      <returns>
+                    在所有情况下均为 true。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.Path">
+      <summary>
+                    获取或设置 .NET Framework SDK 最新版本的路径。
+                </summary>
+      <returns>
+                    .NET Framework SDK 最新版本的路径。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.ManagedCompiler">
+      <summary>
+                    定义托管编译器任务常用的属性和方法。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.ManagedCompiler" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)">
+      <summary>
+                    生成命令行工具必须直接从命令行（而不是从响应文件）运行的命令行参数。
+                </summary>
+      <param name="commandLine">
+                    参数所要添加到的命令行生成器。
+                </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.AdditionalLibPaths">
+      <summary>
+                    获取或设置从中查找程序集的附加文件夹。
+                </summary>
+      <returns>
+                    从中查找程序集的附加文件夹。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.AddModules">
+      <summary>
+                    获取或设置编译器可为当前编译的项目提供的模块。
+                </summary>
+      <returns>
+                    编译器可为当前编译的项目提供的模块。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)">
+      <summary>
+                    使用可以进入响应文件的开关和其他信息填充指定的 <paramref name="commandLine" /> 参数。
+                </summary>
+      <param name="commandLine">
+                    参数所要添加到的命令行生成器。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.CheckAllReferencesExistOnDisk">
+      <summary>
+                    验证磁盘中是否存在所有指定的参考。
+                </summary>
+      <returns>
+                    如果磁盘中存在所有指定的参考，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.CheckHostObjectSupport(System.String,System.Boolean)">
+      <summary>
+                    如果宿主编译器不支持指定的参数，则记录一条消息。
+                </summary>
+      <param name="parameterName">
+                    要在宿主编译器上设置的参数名。
+                </param>
+      <param name="resultFromHostObjectSetOperation">
+                    如果宿主编译器支持 <paramref name="parameterName" />，则为 true；否则为 false</param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.CodePage">
+      <summary>
+                    获取或设置要用于编译中的所有源代码文件的代码页。
+                </summary>
+      <returns>
+                    要用于编译中的所有源代码文件的代码页。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.DebugType">
+      <summary>
+                    获取或设置调试类型。
+                </summary>
+      <returns>
+                    调试类型。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.DefineConstants">
+      <summary>
+                    获取或设置条件编译器常量。
+                </summary>
+      <returns>
+                    条件编译器常量。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.DelaySign">
+      <summary>
+                    获取或设置一个值，该值指示程序集中是否放置公钥。
+                </summary>
+      <returns>
+                    如果程序集中放置公钥，则为 true；如果程序集已完全签名，则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.EmitDebugInformation">
+      <summary>
+                    获取或设置一个值，该值指示编译器是否生成调试信息。
+                </summary>
+      <returns>
+                    如果生成调试信息，则为 true；否则为 false；
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.FileAlignment">
+      <summary>
+                    获取或设置一个值，该值指示输出文件中各节的对齐位置。
+                </summary>
+      <returns>
+                    指示输出文件中各节的对齐位置的值。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.HandleTaskExecutionErrors">
+      <summary>
+                    处理编译器的返回代码。
+                </summary>
+      <returns>
+                    如果已成功处理返回代码，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.HostCompilerSupportsAllParameters">
+      <summary>
+                    获取或设置一个值，该值指示宿主编译器是否支持所有任务参数。
+                </summary>
+      <returns>
+                    如果宿主编译器支持所有任务参数，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.KeyContainer">
+      <summary>
+                    获取或设置加密密钥容器的名称。
+                </summary>
+      <returns>
+                    加密密钥容器的名称。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.KeyFile">
+      <summary>
+                    获取或设置包含加密密钥的文件的名称。
+                </summary>
+      <returns>
+                    包含加密密钥的文件的名称。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.LinkResources">
+      <summary>
+                    获取或设置 .NET Framework 资源文件以链接到输出文件。
+                </summary>
+      <returns>
+                    要链接到输出文件的 .NET Framework 资源文件。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.ListHasNoDuplicateItems(Microsoft.Build.Framework.ITaskItem[],System.String)">
+      <summary>
+                    确定指定的任务参数中是否存在任何重复项。
+                </summary>
+      <returns>
+                    如果项列表不包含重复项，则为 true；否则为 false。
+                </returns>
+      <param name="itemList">
+                    要检查重复项的项列表。
+                </param>
+      <param name="parameterName">
+                    包含 <paramref name="itemList" /> 的参数的名称。
+                </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.MainEntryPoint">
+      <summary>
+                    获取或设置包含主入口点的类或模块。
+                </summary>
+      <returns>
+                    包含主入口点的类或模块。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.NoConfig">
+      <summary>
+                    获取或设置一个值，该值指示编译器是否应使用默认响应文件。
+                </summary>
+      <returns>
+                    如果编译器不使用默认响应文件，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.NoLogo">
+      <summary>
+                    获取或设置一个值，该值指示是否取消编译器版权标志信息。
+                </summary>
+      <returns>
+                    如果取消编译器版权标志信息，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.Optimize">
+      <summary>
+                    获取或设置一个值，该值指示是否启用编译器优化。
+                </summary>
+      <returns>
+                    如果要启用编译器优化，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.OutputAssembly">
+      <summary>
+                    获取或设置输出文件的名称。
+                </summary>
+      <returns>
+                    输出文件的名称。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.References">
+      <summary>
+                    获取或设置编译器将从中导入公共类型信息的项。
+                </summary>
+      <returns>
+                    编译器将从中导入公共类型信息的项。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.Resources">
+      <summary>
+                    获取或设置要嵌入到输出文件中的 .NET Framework 资源。
+                </summary>
+      <returns>
+                    要嵌入到输出文件中的 .NET Framework 资源。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.ResponseFiles">
+      <summary>
+                    获取或设置包含任务命令的响应文件。
+                </summary>
+      <returns>
+                    包含任务命令的响应文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.Sources">
+      <summary>
+                    获取或设置要编译的源文件。
+                </summary>
+      <returns>
+                    要编译的源文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.StandardOutputEncoding">
+      <summary>
+                    获取或设置捕获的任务标准输出流的编码。
+                </summary>
+      <returns>
+                    捕获的任务标准输出流的编码。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.TargetType">
+      <summary>
+                    获取或设置输出文件的文件格式。
+                </summary>
+      <returns>
+                    输出文件的文件格式。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.TreatWarningsAsErrors">
+      <summary>
+                    获取或设置一个值，该值指示是否将警告视为错误。
+                </summary>
+      <returns>
+                    如果将警告视为错误，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.Utf8Output">
+      <summary>
+                    获取或设置一个值，该值指示是否使用 UTF-8 编码记录编译器输出。
+                </summary>
+      <returns>
+                    如果使用 UTF-8 编码记录编译器输出，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.ValidateParameters">
+      <summary>
+                    验证任务参数。
+                </summary>
+      <returns>
+                    如果所有参数均有效，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.Win32Icon">
+      <summary>
+                    获取或设置图标文件名。
+                </summary>
+      <returns>
+                    图标文件名。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.Win32Resource">
+      <summary>
+                    获取或设置要插入到输出文件中的 Win32 资源 (.res) 文件。
+                </summary>
+      <returns>
+                    要插入到输出文件中的 Win32 资源 (.res) 文件。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.ReadLinesFromFile">
+      <summary>
+                    实现 ReadLinesFromFile 任务。使用项目文件中的 ReadLinesFromFile 元素创建并执行此任务。有关用法和参数信息，请参见 ReadLinesFromFile 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ReadLinesFromFile.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.ReadLinesFromFile" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ReadLinesFromFile.Execute">
+      <summary>
+                    执行 ReadLinesFromFile 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ReadLinesFromFile.File">
+      <summary>
+                    获取或设置要读取的文件。
+                </summary>
+      <returns>
+                    要读取的文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ReadLinesFromFile.Lines">
+      <summary>
+                    获取或设置从该文件读取的行。
+                </summary>
+      <returns>
+                    从该文件读取的行。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.RegisterAssembly">
+      <summary>
+                    实现 RegisterAssembly 任务。使用项目文件中的 RegisterAssembly 元素创建并执行此任务。有关用法和参数信息，请参见 RegisterAssembly 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.RegisterAssembly.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.RegisterAssembly" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.RegisterAssembly.Assemblies">
+      <summary>
+                    获取或设置要向 COM 注册的程序集。
+                </summary>
+      <returns>
+                    要向 COM 注册的程序集。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.RegisterAssembly.AssemblyListFile">
+      <summary>
+                    获取或设置关于 RegisterAssembly 任务与 UnregisterAssembly 任务之间的状态的信息。这样可防止 UnregisterAssembly 任务尝试注销未能在 RegisterAssembly 任务中注册的程序集。
+                </summary>
+      <returns>
+                    状态信息是 UnregisterAssembly 任务执行正确清除操作所必需的信息。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.RegisterAssembly.CreateCodeBase">
+      <summary>
+                    获取或设置一个布尔值，该值指定任务是否在注册表中创建一个基本代码项，该项将针对未安装在全局程序集缓存中的程序集指定文件路径。
+                </summary>
+      <returns>
+                    如果任务在注册表中创建基本代码项，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.RegisterAssembly.Execute">
+      <summary>
+                    执行 RegisterAssembly 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.RegisterAssembly.ReportEvent(System.Runtime.InteropServices.ExporterEventKind,System.Int32,System.String)">
+      <summary>
+                    用于报告类型库导出事件的回调方法。
+                </summary>
+      <param name="kind">
+描述类型库导出程序在导出类型库时生成的回调。
+                </param>
+      <param name="code">
+                    该导出事件的错误代码。
+                </param>
+      <param name="msg">
+                    该导出事件的消息。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.RegisterAssembly.ResolveRef(System.Reflection.Assembly)">
+      <summary>
+                    用于查找指定程序集的类型库的回调方法。
+                </summary>
+      <returns>
+                    在所有情况下均为 null。
+                </returns>
+      <param name="assemblyToResolve">
+                    要查找其类型库的程序集。
+                </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.RegisterAssembly.TypeLibFiles">
+      <summary>
+                    获取或设置要从指定程序集中生成的类型库。
+                </summary>
+      <returns>
+                    要从指定程序集中生成的类型库。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.RemoveDir">
+      <summary>
+                    实现 RemoveDir 任务。使用项目文件中的 RemoveDir 元素创建并执行此任务。有关用法和参数信息，请参见 RemoveDir 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.RemoveDir.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.RemoveDir" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.RemoveDir.Directories">
+      <summary>
+                    获取或设置要删除的目录。
+                </summary>
+      <returns>
+                    要删除的目录。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.RemoveDir.Execute">
+      <summary>
+                    执行 RemoveDir 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.RemoveDir.RemovedDirectories">
+      <summary>
+                    获取或设置已成功删除的目录。
+                </summary>
+      <returns>
+                    已成功删除的目录。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.ResolveComReference">
+      <summary>
+                    实现 ResolveComReference 任务。使用项目文件中的 ResolveComReference 元素创建并执行此任务。有关用法和参数信息，请参见 ResolveComReference 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveComReference.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.ResolveComReference" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.DelaySign">
+      <summary>
+                    获取或设置一个布尔值，该值指定 ResolveComReference 任务是在程序集中放置公钥 (true)，还是对程序集进行完全签名 (false)。
+                </summary>
+      <returns>
+                    如果 ResolveComReference 任务在程序集中放置公钥，则为 true；如果 ResolveComReference 任务对程序集进行完全签名，则为 false。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveComReference.Execute">
+      <summary>
+                    执行 ResolveComReference 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.KeyContainer">
+      <summary>
+                    获取或设置保存密钥对的容器。
+                </summary>
+      <returns>
+                    保存密钥对的容器。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.KeyFile">
+      <summary>
+                    获取或设置包含密钥对的项。
+                </summary>
+      <returns>
+                    包含密钥对的项。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.NoClassMembers">
+      <summary>
+                    获取或设置一个布尔值，该值指定是否将 <see cref="F:System.Runtime.InteropServices.TypeLibImporterFlags.PreventClassMembers" /> 标志传递给 .tlb 包装生成。
+                </summary>
+      <returns>
+                    如果任务应该将 <see cref="F:System.Runtime.InteropServices.TypeLibImporterFlags.PreventClassMembers" /> 标志传递给 .tlb 包装生成，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.ResolvedAssemblyReferences">
+      <summary>
+                    获取或设置已解析的程序集引用。
+                </summary>
+      <returns>
+                    已解析的程序集引用。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.ResolvedFiles">
+      <summary>
+                    获取或设置磁盘上与类型库（作为此任务的输入提供）的物理位置对应的完全限定文件。
+                </summary>
+      <returns>
+                    磁盘上与类型库（作为此任务的输入提供）的物理位置对应的完全限定文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.ResolvedModules">
+      <summary>
+                    获取或设置所找到的模块的路径。
+                </summary>
+      <returns>
+                    所找到的模块的路径。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.StateFile">
+      <summary>
+                    获取或设置 COM 组件时间戳的缓存文件。
+                </summary>
+      <returns>
+                    COM 组件时间戳的缓存文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.TypeLibFiles">
+      <summary>
+                    获取或设置指向 COM 引用的类型库文件路径。
+                </summary>
+      <returns>
+                    指向 COM 引用的类型库文件路径。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.TypeLibNames">
+      <summary>
+                    获取或设置要解析的类型库名称。
+                </summary>
+      <returns>
+                    要解析的类型库名称。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.WrapperOutputDirectory">
+      <summary>
+                    获取或设置生成的互操作程序集放置在磁盘上的位置。
+                </summary>
+      <returns>
+                    生成的互操作程序集放置在磁盘上的位置。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.ResolveKeySource">
+      <summary>
+                    实现 ResolveKeySource 任务。使用项目文件中的 ResolveKeySource 元素创建并执行此任务。有关用法和参数信息，请参见 ResolveKeySource 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveKeySource.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.ResolveKeySource" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveKeySource.AutoClosePasswordPromptShow">
+      <summary>
+                    获取或设置用于显示倒计时消息的时间量（以秒为单位）。
+                </summary>
+      <returns>
+                    用于显示倒计时消息的时间量（以秒为单位）。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveKeySource.AutoClosePasswordPromptTimeout">
+      <summary>
+                    获取或设置在关闭密码提示对话框之前要等待的时间量（以秒为单位）。
+                </summary>
+      <returns>
+                    在关闭密码提示对话框之前要等待的时间量（以秒为单位）。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveKeySource.CertificateFile">
+      <summary>
+                    获取或设置证书文件的路径。
+                </summary>
+      <returns>
+                    证书文件的路径。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveKeySource.CertificateThumbprint">
+      <summary>
+                    获取或设置证书指纹。
+                </summary>
+      <returns>
+                    证书指纹。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveKeySource.Execute">
+      <summary>
+                    执行 ResolveKeySource 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveKeySource.KeyFile">
+      <summary>
+                    获取或设置密钥文件的路径。
+                </summary>
+      <returns>
+                    密钥文件的路径。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveKeySource.ResolvedKeyContainer">
+      <summary>
+                    获取或设置解析的密钥容器。
+                </summary>
+      <returns>
+                    解析的密钥容器。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveKeySource.ResolvedKeyFile">
+      <summary>
+                    获取或设置解析的密钥文件。
+                </summary>
+      <returns>
+                    解析的密钥文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveKeySource.ResolvedThumbprint">
+      <summary>
+                    获取或设置解析的证书指纹。
+                </summary>
+      <returns>
+                    解析的证书指纹。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveKeySource.ShowImportDialogDespitePreviousFailures">
+      <summary>
+                    获取或设置一个布尔值，该值指定无论以前失败与否是否都要显示导入对话框。
+                </summary>
+      <returns>
+                    如果无论以前失败与否该任务都应该显示导入对话框，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveKeySource.SuppressAutoClosePasswordPrompt">
+      <summary>
+                    获取或设置一个布尔值，该值指定密码提示对话框是否不应该自动关闭。
+                </summary>
+      <returns>
+                    如果密码提示对话框不应该自动关闭，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.ResolveManifestFiles">
+      <summary>
+                    此任务将生成过程中的以下各项解析成文件以便生成清单：生成项、依赖项、附属项、内容、调试符号和文档。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveManifestFiles.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.ResolveManifestFiles" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveManifestFiles.EntryPoint">
+      <summary>
+                    获取或设置作为清单入口点的托管程序集或 ClickOnce 清单引用。
+                </summary>
+      <returns>
+                    入口点。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveManifestFiles.Execute">
+      <summary>
+                    执行 ResolveManifestFiles 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveManifestFiles.ExtraFiles">
+      <summary>
+                    获取或设置额外文件。
+                </summary>
+      <returns>
+                    额外文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveManifestFiles.Files">
+      <summary>
+                    获取或设置输入文件。
+                </summary>
+      <returns>
+                    输入文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveManifestFiles.ManagedAssemblies">
+      <summary>
+                    获取或设置托管程序集。
+                </summary>
+      <returns>
+                    托管程序集。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveManifestFiles.NativeAssemblies">
+      <summary>
+                    获取或设置本机程序集。
+                </summary>
+      <returns>
+                    本机程序集。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveManifestFiles.OutputAssemblies">
+      <summary>
+                    获取或设置生成的程序集。
+                </summary>
+      <returns>
+                    生成的程序集。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveManifestFiles.OutputFiles">
+      <summary>
+                    获取或设置输出文件。
+                </summary>
+      <returns>
+                    输出文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveManifestFiles.PublishFiles">
+      <summary>
+                    获取或设置要发布的文件。
+                </summary>
+      <returns>
+                    要发布的文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveManifestFiles.SatelliteAssemblies">
+      <summary>
+                    获取或设置附属程序集。
+                </summary>
+      <returns>
+                    附属程序集。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveManifestFiles.TargetCulture">
+      <summary>
+                    获取或设置附属程序集的目标区域性。
+                </summary>
+      <returns>
+                    附属程序集的目标区域性。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput">
+      <summary>
+                    确定非 MSBuild 项目引用的输出文件。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.Execute">
+      <summary>
+                    执行 ResolveNonMSBuildProjectOutput 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.PreresolvedProjectOutputs">
+      <summary>
+                    获取或设置一个包含解析的项目输出的 XML 字符串。
+                </summary>
+      <returns>
+                    一个包含解析的项目输出的 XML 字符串。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.ResolvedOutputPaths">
+      <summary>
+                    获取或设置保留原始项目引用属性的解析的引用路径。
+                </summary>
+      <returns>
+                    保留原始项目引用属性的解析的引用路径。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.UnresolvedProjectReferences">
+      <summary>
+                    获取或设置 MSBuild 格式的项目引用项。
+                </summary>
+      <returns>
+                    MSBuild 格式的项目引用项。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.ResolveProjectBase">
+      <summary>
+                    表示 <see cref="T:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput" /> 和 <see cref="T:Microsoft.Build.Tasks.AssignProjectConfiguration" /> 的基类。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveProjectBase.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.ResolveProjectBase" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveProjectBase.GetProjectItem(Microsoft.Build.Framework.ITaskItem)">
+      <summary>
+                    检索指定项目的项目元素的 XML 内容。
+                </summary>
+      <returns>
+                    指定项目的项目元素的 XML 内容。
+                </returns>
+      <param name="projectRef">
+                    一个包含项目 GUID 属性的项目引用。
+                </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveProjectBase.ProjectReferences">
+      <summary>
+                    获取或设置项目引用。
+                </summary>
+      <returns>
+                    项目引用。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.SignFile">
+      <summary>
+                    实现 SignFile 任务。使用项目文件中的 SignFile 元素创建并执行此任务。有关用法和参数信息，请参见 SignFile 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.SignFile.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.SignFile" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SignFile.CertificateThumbprint">
+      <summary>
+                    获取或设置要用于签名的证书。
+                </summary>
+      <returns>
+                    要用于签名的证书。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.SignFile.Execute">
+      <summary>
+                    执行 SignFile 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SignFile.SigningTarget">
+      <summary>
+                    获取或设置要用证书进行签名的文件。
+                </summary>
+      <returns>
+                    要用证书进行签名的文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SignFile.TimestampUrl">
+      <summary>
+                    获取或设置时间戳服务器的 URL。
+                </summary>
+      <returns>
+                    时间戳服务器的 URL。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.TaskExtension">
+      <summary>
+                    包含帮助扩展任务的属性。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.TaskExtension.Log">
+      <summary>
+                    获取包含任务记录方法的 <see cref="T:Microsoft.Build.Tasks.TaskLoggingHelperExtension" /> 的实例。
+                </summary>
+      <returns>
+                    包含任务记录方法的 <see cref="T:Microsoft.Build.Tasks.TaskLoggingHelperExtension" /> 的实例。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Touch">
+      <summary>
+                    实现 Touch 任务。使用项目文件中的 Touch 元素创建并执行此任务。有关用法和参数信息，请参见 Touch 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Touch.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.Touch" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Touch.AlwaysCreate">
+      <summary>
+                    获取或设置一个布尔值，该值指定是否创建尚未存在的任何文件。
+                </summary>
+      <returns>
+                    如果 Touch 任务创建任何尚未存在的文件，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Touch.Execute">
+      <summary>
+                    执行 Touch  任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Touch.Files">
+      <summary>
+                    获取或设置要使用的文件。
+                </summary>
+      <returns>
+                    要使用的文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Touch.ForceTouch">
+      <summary>
+                    获取或设置一个布尔值，该值指定是否强制使用文件（即使文件是只读文件也不例外）。
+                </summary>
+      <returns>
+                    如果 Touch 任务强制使用文件（即使文件是只读文件也不例外），则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Touch.Time">
+      <summary>
+                    获取或设置当前时间之外的时间。必须采用 <see cref="M:System.DateTime.Parse(System.String)" /> 方法可以接受的格式。
+                </summary>
+      <returns>
+                    当前时间之外的时间。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Touch.TouchedFiles">
+      <summary>
+                    获取或设置成功使用的项。
+                </summary>
+      <returns>
+                    成功使用的项。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.UpdateManifest">
+      <summary>
+                    更新清单中的所选属性并重新签名。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.UpdateManifest.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.UpdateManifest" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.UpdateManifest.ApplicationManifest">
+      <summary>
+                    获取或设置应用程序清单。
+                </summary>
+      <returns>
+                    应用程序清单。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.UpdateManifest.ApplicationPath">
+      <summary>
+                    获取或设置应用程序清单的路径。
+                </summary>
+      <returns>
+                    应用程序清单的路径。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.UpdateManifest.Execute">
+      <summary>
+                    执行任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；出错时为 <see cref="T:System.InvalidOperationException" />。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.UpdateManifest.InputManifest">
+      <summary>
+                    获取或设置要更新的清单。
+                </summary>
+      <returns>
+                    要更新的清单。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.UpdateManifest.OutputManifest">
+      <summary>
+                    获取或设置包含更新的属性的清单。
+                </summary>
+      <returns>
+                    包含更新的属性的清单。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Warning">
+      <summary>
+                    实现 Warning 任务。使用项目文件中的 Warning 元素创建并执行此任务。有关用法和参数信息，请参见Warning 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Warning.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.Warning" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Warning.Code">
+      <summary>
+                    获取或设置警告代码。
+                </summary>
+      <returns>
+警告代码。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Warning.Execute">
+      <summary>
+                    执行 Warning 任务。
+                </summary>
+      <returns>
+                    在所有情况下均为 true。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Warning.HelpKeyword">
+      <summary>
+                    获取或设置要与警告关联的“帮助”关键字。
+                </summary>
+      <returns>
+                    与警告关联的“帮助”关键字。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Warning.Text">
+      <summary>
+                    获取或设置 MSBuild 记录的警告文本。
+                </summary>
+      <returns>
+                    MSBuild 记录的警告文本。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.WriteLinesToFile">
+      <summary>
+                    实现 WriteLinesToFile 任务。使用项目文件中的 WriteLinesToFile 元素创建并执行此任务。有关用法和参数信息，请参见 WriteLinesToFileWriteLinesToFile 任务。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.WriteLinesToFile.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Tasks.WriteLinesToFile" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.WriteLinesToFile.Execute">
+      <summary>
+                    执行 WriteLinesToFile 任务。
+                </summary>
+      <returns>
+                    如果成功地执行了任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.WriteLinesToFile.File">
+      <summary>
+                    获取或设置要向其中写入项的文件。
+                </summary>
+      <returns>
+                    要向其中写入项的文件。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.WriteLinesToFile.Lines">
+      <summary>
+                    获取或设置要写入文件中的项。
+                </summary>
+      <returns>
+                    要写入文件中的项。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.WriteLinesToFile.Overwrite">
+      <summary>
+                    获取或设置一个布尔值，该值指定任务是否覆盖文件中的任何现有内容。
+                </summary>
+      <returns>
+                    如果任务覆盖文件中的任何现有内容，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings">
+      <summary>定义引导程序生成操作的设置。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings" /> 类的一个新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationFile">
+      <summary>获取或设置要在引导程序安装所需组件后安装的文件。</summary>
+      <returns>要在安装所需组件后安装的文件的名称。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationName">
+      <summary>获取或设置要在引导程序安装所有必需组件后安装的应用程序的名称。</summary>
+      <returns>要在安装必需组件后安装的应用程序的名称。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationUrl">
+      <summary>获取或设置将引导程序发布到网站时所需的源位置。</summary>
+      <returns>表示在将引导程序发布到网站时所需源位置的 URL。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation">
+      <summary>获取或设置引导程序组件的安装位置。</summary>
+      <returns>引导程序组件的安装位置 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation" />。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsUrl">
+      <summary>如果将 <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation" /> 设置为 <see cref="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation.Absolute" />，则获取或设置引导程序将复制组件的目标位置。</summary>
+      <returns>将 <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation" /> 设置为 <see cref="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation.Absolute" /> 时，引导程序将组件复制到的位置。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.CopyComponents">
+      <summary>获取或设置一个值，以指示是否将引导程序组件复制到生成输出目录。</summary>
+      <returns>
+            如果将引导程序组件复制到生成输出目录，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.FallbackLCID">
+      <summary>获取或设置 LCID 标识符不可用时要使用的区域性标识符。</summary>
+      <returns>一个整数值，表示 LCID 标识符不可用时要使用的区域性标识符。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.LCID">
+      <summary>获取或设置区域性标识符，该标识符指定为其生成引导程序的区域性。</summary>
+      <returns>表示区域性标识符的整数值，该标识符指定为其生成引导程序的区域性。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.OutputPath">
+      <summary>获取或设置要将输出文件复制到的文件位置。</summary>
+      <returns>一个字符串，表示要将输出文件复制到的文件位置。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ProductBuilders">
+      <summary>获取用于生成引导程序的产品生成器。</summary>
+      <returns>用于生成引导程序的产品生成器的集合 (<see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilderCollection" />)。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.SupportUrl">
+      <summary>获取或设置包含引导程序支持信息的网站的 URL。</summary>
+      <returns>包含引导程序支持信息的网站的 URL。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.Validate">
+      <summary>获取或设置一个值，以指示引导程序是否对组件清单执行 XML 验证。</summary>
+      <returns>
+            如果引导程序对组件清单执行 XML 验证，则为 true；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder">
+      <summary>公开创建引导程序必须具有的功能。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Build(Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings)">
+      <summary>基于指定设置生成一个引导程序。</summary>
+      <returns>一个 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults" /> 对象，该对象表示引导程序的生成结果。</returns>
+      <param name="settings">用于创建引导程序的属性。</param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path">
+      <summary>获取或设置所需的引导程序文件的位置。</summary>
+      <returns>一个字符串值，表示所需的引导程序文件的位置。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Products">
+      <summary>获取在当前的引导程序路径中可用的所有产品。</summary>
+      <returns>一个 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection" /> 对象，该对象表示当前引导程序 <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path" /> 中可用的所有产品。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildMessage">
+      <summary>表示在执行 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder" /> 生成操作期间出现的消息。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildMessage.HelpId">
+      <summary>获取宿主 IDE 的 MSBuild 帮助 ID。</summary>
+      <returns>一个表示宿主 IDE 的 MSBuild 帮助 ID 的整数。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildMessage.HelpKeyword">
+      <summary>获取宿主 IDE 的 MSBuild F1 帮助关键字。</summary>
+      <returns>宿主 IDE 的 MSBuild F1 帮助关键字。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildMessage.Message">
+      <summary>获取生成消息的详细信息的说明。</summary>
+      <returns>一个描述生成消息的详细信息的文本字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildMessage.Severity">
+      <summary>获取生成消息的严重级别。</summary>
+      <returns>一个表示生成消息严重性的 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessageSeverity" /> 对象。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults">
+      <summary>表示 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder" /> 生成操作的结果。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.ComponentFiles">
+      <summary>获取复制的组件安装程序文件的文件路径。</summary>
+      <returns>返回一个字符串数组，该数组包含复制的组件安装程序文件的文件路径。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.KeyFile">
+      <summary>获取生成的主引导程序文件的文件路径。</summary>
+      <returns>返回一个字符串，该字符串表示生成的主引导程序文件的文件路径。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.Messages">
+      <summary>获取从引导程序生成过程产生的生成消息。</summary>
+      <returns>返回一个 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessage" /> 对象的数组，该数组表示从引导程序生成过程产生的生成消息。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.Succeeded">
+      <summary>指示引导程序编译是否成功。</summary>
+      <returns>返回一个布尔值，该值指示引导程序生成是否成功。如果引导程序生成成功则返回 true，如果不成功则返回 false。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings">
+      <summary>定义引导程序生成操作的设置。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ApplicationFile">
+      <summary>获取或设置要在引导程序安装所需组件后安装的文件。</summary>
+      <returns>要在引导程序安装所需组件后安装的文件的名称。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ApplicationName">
+      <summary>获取或设置要在引导程序安装所有必需组件后安装的应用程序的名称。</summary>
+      <returns>要在引导程序安装所有必需组件后安装的应用程序的名称。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ApplicationUrl">
+      <summary>获取或设置将引导程序发布到网站时所需的源位置。</summary>
+      <returns>将引导程序发布到网站时所需的源位置。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ComponentsLocation">
+      <summary>获取或设置引导程序组件的安装位置。</summary>
+      <returns>引导程序组件的安装位置 (<see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation" />)。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ComponentsUrl">
+      <summary>如果将 <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation" /> 设置为 <see cref="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation.Absolute" />，则获取或设置引导程序将复制组件的目标位置。</summary>
+      <returns>将 <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation" /> 设置为 <see cref="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation.Absolute" /> 时，引导程序将组件复制到的位置。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.CopyComponents">
+      <summary>获取或设置一个值，以指示是否将引导程序组件复制到生成输出目录。</summary>
+      <returns>
+            如果将引导程序组件复制到生成输出目录，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.FallbackLCID">
+      <summary>获取或设置 LCID 标识符不可用时要使用的区域性标识符。</summary>
+      <returns>一个整数值，表示 LCID 标识符不可用时要使用的区域性标识符。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.LCID">
+      <summary>获取或设置区域性标识符，该标识符指定为其生成引导程序的区域性。</summary>
+      <returns>表示区域性标识符的整数值，该标识符指定为其生成引导程序的区域性。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.OutputPath">
+      <summary>获取或设置要将输出文件复制到的文件位置。</summary>
+      <returns>一个字符串，表示要将输出文件复制到的文件位置。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ProductBuilders">
+      <summary>获取用于生成引导程序的产品生成器。</summary>
+      <returns>用于生成引导程序的产品生成器。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.SupportUrl">
+      <summary>获取或设置包含引导程序支持信息的网站的 URL。</summary>
+      <returns>包含引导程序支持信息的网站的 URL。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.Validate">
+      <summary>获取或设置一个值，以指示引导程序是否对组件清单执行 XML 验证。</summary>
+      <returns>
+            如果引导程序对组件清单执行 XML 验证，则为 true；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product">
+      <summary>表示 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder" /> 可在 <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path" /> 属性中找到的产品。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product.#ctor">
+      <summary>初始化 Product 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product.Includes">
+      <summary>获取此产品安装的所有产品。</summary>
+      <returns>表示此产品安装的所有产品的 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection" /> 对象。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product.Name">
+      <summary>获取此产品的可读名称。</summary>
+      <returns>表示此产品的可读名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product.ProductBuilder">
+      <summary>获取产品的可生成版本。</summary>
+      <returns>表示产品的可生成版本的 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilder" /> 对象。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product.ProductCode">
+      <summary>获取指示此产品的唯一产品标识符的字符串。</summary>
+      <returns>一个指示此产品的唯一产品标识符的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilder">
+      <summary>表示 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product" /> 的可生成版本。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilder.Product">
+      <summary>获取 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product" /> 对象，该对象与此 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilder" /> 对象相对应。</summary>
+      <returns>返回 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product" /> 对象，该对象与此 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilder" /> 对象相对应。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection">
+      <summary>此接口表示 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product" /> 对象的集合。该集合是 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder" /> 基于 <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path" /> 属性生成的封闭集合。客户端无法在此集合中添加或移除项。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection.Count">
+      <summary>获取产品集合中包含的元素数。</summary>
+      <returns>指示产品集合中包含的元素数的整数。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection.GetEnumerator">
+      <summary>返回可循环访问产品集合的枚举数。</summary>
+      <returns>可循环访问产品集合的枚举数。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection.Item(System.Int32)">
+      <summary>检索指定索引处的产品。</summary>
+      <returns>一个 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product" /> 对象，该对象表示位于指定索引位置的产品。</returns>
+      <param name="index">要获取的元素的从零开始的索引。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection.Product(System.String)">
+      <summary>检索具有指定产品代码的产品。</summary>
+      <returns>具有指定产品代码的 <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product" /> 对象。如果找不到指定的产品代码，则返回 null。</returns>
+      <param name="productCode">要获取的产品的唯一标识符。</param>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationIdentity">
+      <summary>为 ClickOnce 应用程序提供唯一的标识符。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationIdentity.#ctor(System.String,Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity,Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity)">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationIdentity" /> 类的新实例。</summary>
+      <param name="url">ClickOnce 部署清单的部署提供程序 URL。</param>
+      <param name="deployManifestIdentity">ClickOnce 部署清单的程序集标识。</param>
+      <param name="applicationManifestIdentity">ClickOnce 应用程序清单的程序集标识。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationIdentity.#ctor(System.String,System.String,System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationIdentity" /> 类的新实例。</summary>
+      <param name="url">ClickOnce 部署清单的部署提供程序 URL。</param>
+      <param name="deployManifestPath">ClickOnce 部署清单的路径。程序集标识将从指定的文件获取。</param>
+      <param name="applicationManifestPath">ClickOnce 应用程序清单的路径。程序集标识将从指定的文件获取。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationIdentity.ToString">
+      <summary>返回完整的 ClickOnce 应用程序标识。</summary>
+      <returns>包含 ClickOnce 应用程序标识的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity">
+      <summary>指定程序集的标识。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.#ctor(Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity)">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" /> 类的新实例。</summary>
+      <param name="identity">指定要复制的另一个实例。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" /> 类的新实例。</summary>
+      <param name="name">指定程序集的简单名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.#ctor(System.String,System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" /> 类的新实例。</summary>
+      <param name="name">指定程序集的简单名称。</param>
+      <param name="version">指定程序集的版本。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.#ctor(System.String,System.String,System.String,System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" /> 类的新实例。</summary>
+      <param name="name">指定程序集的简单名称。</param>
+      <param name="version">指定程序集的版本。</param>
+      <param name="publicKeyToken">指定程序集的公钥标记，该标记为程序集签名时所用公钥的 SHA-1 哈希值的最后 8 个字节。</param>
+      <param name="culture">指定程序集的区域性。空白字符串指示固定区域性。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.#ctor(System.String,System.String,System.String,System.String,System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" /> 类的新实例。</summary>
+      <param name="name">指定程序集的简单名称。</param>
+      <param name="version">指定程序集的版本。</param>
+      <param name="publicKeyToken">指定程序集的公钥标记，该标记为程序集签名时所用公钥的 SHA-1 哈希值的最后 8 个字节。</param>
+      <param name="culture">指定程序集的区域性。空白字符串指示固定区域性。</param>
+      <param name="processorArchitecture">指定程序集的处理器结构。有效值为 msil、x86、ia64 和 amd64。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" /> 类的新实例。</summary>
+      <param name="name">指定程序集的简单名称。</param>
+      <param name="version">指定程序集的版本。</param>
+      <param name="publicKeyToken">指定程序集的公钥标记，该标记为程序集签名时所用公钥的 SHA-1 哈希值的最后 8 个字节。</param>
+      <param name="culture">指定程序集的区域性。空白字符串指示固定区域性。</param>
+      <param name="processorArchitecture">指定程序集的处理器结构。有效值为 msil、x86、ia64 和 amd64。</param>
+      <param name="type">指定程序集的类型属性。有效值为 win32 或空白字符串。</param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.Culture">
+      <summary>获取或设置程序集的区域性。</summary>
+      <returns>指示程序集区域性的字符串。空白字符串指示固定区域性。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FromAssemblyName(System.String)">
+      <summary>分析字符串以获取程序集标识。如果无法获取标识，则返回 null。</summary>
+      <returns>获得的程序集标识。</returns>
+      <param name="assemblyName">程序集的全名，也称为显示名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FromFile(System.String)">
+      <summary>获取指定程序集的标识。文件可以是具有嵌入 xml 清单的 PE、独立 xml 清单文件或 .NET 程序集。如果无法获取标识，则返回 null。</summary>
+      <returns>指定文件的程序集标识。</returns>
+      <param name="path">要从中获取标识的文件的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FromManagedAssembly(System.String)">
+      <summary>获取指定 .NET 程序集的标识。文件必须是 .NET 程序集。如果无法获取标识，则返回 null。</summary>
+      <returns>指定文件的程序集标识。</returns>
+      <param name="path">要从中获取标识的文件的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FromManifest(System.String)">
+      <summary>获取指定清单文件的标识。文件必须是独立 XML 清单文件。如果无法获取标识，则返回 null。</summary>
+      <returns>指定文件的程序集标识。</returns>
+      <param name="path">要从中获取标识的文件的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FromNativeAssembly(System.String)">
+      <summary>获取指定本机程序集的标识。文件必须是具有嵌入 XML 清单的 PE 或独立 XML 清单文件。如果无法获取标识，则返回 NULL。</summary>
+      <returns>指定文件的程序集标识。</returns>
+      <param name="path">要从中获取标识的文件的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.GetFullName(Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FullNameFlags)">
+      <summary>返回程序集的全名。</summary>
+      <returns>全名的字符串表示形式。</returns>
+      <param name="flags">指定要在全名中包含的属性。</param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.IsFrameworkAssembly">
+      <summary>如果此程序集是 .NET Framework 的组成部分，则返回 True。</summary>
+      <returns>一个 Boolean 值，指示此程序集是否是 .NET Framework 的组成部分。如果此程序集是 .NET Framework 的组成部分，则为 True；否则为 False。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.IsNeutralPlatform">
+      <summary>获取一个值，该值指示程序集标识是否表示平台中立的程序集。</summary>
+      <returns>一个 Boolean 值，指示程序集标识是否表示平台中立的程序集。如果程序集标识是平台中立的程序集，则为 True；否则为 False。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.IsStrongName">
+      <summary>获取一个值，该值指示程序集标识是否是强名称。</summary>
+      <returns>一个 Boolean 值，指示程序集标识是否是强名称。如果程序集标识是强名称，则为 True；否则为 False。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.Name">
+      <summary>获取或设置程序集的简单名称。</summary>
+      <returns>指示程序集的简单名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.ProcessorArchitecture">
+      <summary>获取或设置程序集的处理器结构。</summary>
+      <returns>表示程序集的处理器结构的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.PublicKeyToken">
+      <summary>获取或设置程序集的公钥标记，该标记为程序集签名时所用公钥的 SHA-1 哈希值的最后 8 个字节。</summary>
+      <returns>指示程序集的公钥标记的字符串。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.ToString">
+      <summary>返回完整的 ClickOnce 程序集标识。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.Type">
+      <summary>获取或设置程序集的类型属性。</summary>
+      <returns>指示程序集的类型属性的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.Version">
+      <summary>获取或设置程序集的版本。</summary>
+      <returns>指示程序集版本的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.XmlCulture">
+      <summary>获取或设置一个属性，该属性用于将 <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.Culture" /> 属性序列化为 XML 文件。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.XmlName">
+      <summary>获取或设置一个属性，该属性用于将 <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.Name" /> 属性序列化为 XML 文件。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.XmlProcessorArchitecture">
+      <summary>获取或设置一个属性，该属性用于将 <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.ProcessorArchitecture" /> 属性序列化为 XML 文件。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.XmlPublicKeyToken">
+      <summary>获取或设置一个属性，该属性用于将 <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.PublicKeyToken" /> 属性序列化为 XML 文件。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.XmlType">
+      <summary>获取或设置一个属性，该属性用于将 <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.Type" /> 属性序列化为 XML 文件。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.XmlVersion">
+      <summary>获取或设置一个属性，该属性用于将 <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.Version" /> 属性序列化为 XML 文件。</summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FullNameFlags">
+      <summary>此类表示 <see cref="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.GetFullName(Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FullNameFlags)" /> 函数返回的属性。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FullNameFlags.Default">
+      <summary>包括 Name、Version、Culture 和 PublicKeyToken 属性。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FullNameFlags.ProcessorArchitecture">
+      <summary>包括 Name、Version、Culture、PublicKeyToken 和 ProcessorArchitecture 属性。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FullNameFlags.Type">
+      <summary>包括 Name、Version、Culture、PublicKeyToken 和 Type 属性。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FullNameFlags.All">
+      <summary>包括所有属性。</summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference">
+      <summary>描述清单程序集引用。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference" /> 类的新实例。</summary>
+      <param name="path">文件的指定源路径。</param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.AssemblyIdentity">
+      <summary>指定程序集引用的标识。</summary>
+      <returns>一个 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" /> 对象，表示程序集引用的标识。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.IsPrerequisite">
+      <summary>指定程序集引用是否为系统必备。</summary>
+      <returns>一个布尔值，指示程序集引用是 (True) 否 (False) 为系统必备。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.ReferenceType">
+      <summary>指定程序集引用的类型。</summary>
+      <returns>一个 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType" /> 对象，表示程序集引用的类型。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.ToString">
+      <summary>返回完整的 ClickOnce 程序集引用。</summary>
+      <returns>包含 ClickOnce 程序集引用的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.XmlAssemblyIdentity">
+      <summary>获取或设置一个属性，该属性用于将 <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.AssemblyIdentity" /> 属性序列化为 XML 文件。</summary>
+      <returns>
+        <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.AssemblyIdentity" /> 属性的值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.XmlIsNative">
+      <summary>获取或设置一个值，该值指示引用是否为本机引用。</summary>
+      <returns>一个值，该值指示引用是否为本机引用。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.XmlIsPrerequisite">
+      <summary>获取或设置一个属性，该属性用于将 <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.IsPrerequisite" /> 属性序列化为 XML 文件。</summary>
+      <returns>
+        <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.IsPrerequisite" /> 属性的值。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection">
+      <summary>提供清单程序集引用的集合。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Add(Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference)">
+      <summary>将指定的程序集引用添加到集合中。</summary>
+      <returns>返回添加的程序集引用实例。</returns>
+      <param name="assembly">要添加的程序集引用。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Add(System.String)">
+      <summary>将指定的程序集引用添加到集合中。</summary>
+      <returns>返回添加的程序集引用实例。</returns>
+      <param name="path">要添加的程序集的路径。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Clear">
+      <summary>从集合中移除所有对象。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Count">
+      <summary>获取集合中包含的对象数。</summary>
+      <returns>一个整数，指示集合中包含的对象数。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Find(Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity)">
+      <summary>根据指定的程序集标识在集合中查找程序集引用。</summary>
+      <returns>返回找到的程序集引用。</returns>
+      <param name="identity">指定的程序集标识。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Find(System.String)">
+      <summary>按简单名称在集合中查找程序集引用。</summary>
+      <returns>返回找到的程序集引用。</returns>
+      <param name="name">指定的程序集简单名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.FindTargetPath(System.String)">
+      <summary>根据指定的目标路径在集合中查找程序集引用。</summary>
+      <returns>返回找到的程序集引用。</returns>
+      <param name="targetPath">指定的目标路径。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.GetEnumerator">
+      <summary>返回可循环访问集合的枚举数。</summary>
+      <returns>返回枚举数 (<see cref="T:System.Collections.IEnumerator" />)。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Item(System.Int32)">
+      <summary>获取指定索引处的元素。</summary>
+      <returns>返回程序集引用实例。</returns>
+      <param name="index">要获取的项的索引（从零开始）。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Remove(Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference)">
+      <summary>从集合中移除指定的程序集引用。</summary>
+      <param name="assemblyReference">要移除的指定程序集引用。</param>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection">
+      <summary>表示清单文件引用的集合。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.Add(Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference)">
+      <summary>将指定的文件引用添加到集合。</summary>
+      <returns>返回已添加的文件引用对象。</returns>
+      <param name="file">要添加的已指定文件引用。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.Add(System.String)">
+      <summary>将指定的文件引用添加到集合。</summary>
+      <returns>返回已添加的文件引用对象。</returns>
+      <param name="path">要添加的已指定文件引用的路径。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.Clear">
+      <summary>从集合中移除所有对象。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.Count">
+      <summary>返回集合中包含的对象数。</summary>
+      <returns>集合中包含的对象数。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.FindTargetPath(System.String)">
+      <summary>按指定的目标路径在集合中找到文件引用。</summary>
+      <returns>返回找到的文件引用。</returns>
+      <param name="targetPath">指定的目标路径。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.GetEnumerator">
+      <summary>返回可循环访问集合的枚举数。</summary>
+      <returns>一个 <see cref="T:System.Collections.IEnumerator" /> 接口，它表示可循环访问集合的枚举数。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.Item(System.Int32)">
+      <summary>返回指定索引处的元素。</summary>
+      <returns>返回文件引用对象。</returns>
+      <param name="index">要获取的项的从零开始的索引。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.Remove(Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference)">
+      <summary>从集合中移除指定的文件引用。</summary>
+      <param name="file">要移除的已指定文件引用。</param>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessage">
+      <summary>此类表示清单生成器的错误、警告或信息性输出消息。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessage.GetArguments">
+      <summary>返回消息参数的字符串数组。</summary>
+      <returns>返回消息参数的字符串数组。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessage.Name">
+      <summary>返回消息的标识符。</summary>
+      <returns>指示消息名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessage.Text">
+      <summary>返回消息的文本。</summary>
+      <returns>指示消息文本的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessage.Type">
+      <summary>返回消息是否为错误、警告或信息性消息。</summary>
+      <returns>一个 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageType" /> 对象，指示消息类型。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageType">
+      <summary>将输出消息的类型指定为错误、警告或信息性消息。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageType.Info">
+      <summary>指示一条信息性消息。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageType.Warning">
+      <summary>指示一条警告消息。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageType.Error">
+      <summary>指示一条错误信息。</summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub">
+      <summary>表示 ClickOnce 应用程序清单中的一个代理。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.BaseInterface">
+      <summary>获取接口的 IID，<see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.IID" /> 属性所描述的接口是从该接口派生的。</summary>
+      <returns>基接口的 IID。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.IID">
+      <summary>获取要为其声明代理的接口的 IID。</summary>
+      <returns>接口的 IID。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.Name">
+      <summary>获取组件的名称。</summary>
+      <returns>组件的名称。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.NumMethods">
+      <summary>获取组件中的方法数。</summary>
+      <returns>组件中的方法数。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.TlbId">
+      <summary>获取组件类型库的 GUID。</summary>
+      <returns>类型库的 GUID。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlBaseInterface">
+      <summary>获取或设置一个属性，该属性用于将 <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.BaseInterface" /> 属性序列化为 XML 文件。</summary>
+      <returns>
+        <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.BaseInterface" /> 属性的值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlIID">
+      <summary>获取或设置一个属性，该属性用于将 <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.IID" /> 属性序列化为 XML 文件。</summary>
+      <returns>
+        <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.IID" /> 属性的值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlName">
+      <summary>获取或设置一个属性，该属性用于将 <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.Name" /> 属性序列化为 XML 文件。</summary>
+      <returns>
+        <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.Name" /> 属性的值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlNumMethods">
+      <summary>获取或设置一个属性，该属性用于将 <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.NumMethods" /> 属性序列化为 XML 文件。</summary>
+      <returns>
+        <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.NumMethods" /> 属性的值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlTlbId">
+      <summary>获取或设置一个属性，该属性用于将 <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.TlbId" /> 属性序列化为 XML 文件。</summary>
+      <returns>
+        <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.TlbId" /> 属性的值。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo">
+      <summary>此类表示应用程序安全信任信息。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Clear">
+      <summary>将 <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo" /> 对象重置为其完全信任的默认状态。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.HasUnmanagedCodePermission">
+      <summary>确定应用程序是否具有调用非托管代码的权限。</summary>
+      <returns>一个布尔值，指示应用程序是否具有调用非托管代码的权限。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust">
+      <summary>确定应用程序是完全信任还是部分信任。</summary>
+      <returns>一个布尔值，指示应用程序是完全信任还是部分信任。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet">
+      <summary>获取或设置应用程序信任的权限集对象。</summary>
+      <returns>应用程序信任的 <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet" /> 对象。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PreserveFullTrustPermissionSet">
+      <summary>获取或设置在设置完全信任标志时是否保留部分信任权限。</summary>
+      <returns>一个布尔值，指示在设置完全信任标志时是否保留部分信任权限。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Read(System.IO.Stream)">
+      <summary>从 XML 文件中读取应用程序信任。</summary>
+      <param name="input">指定输入流。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Read(System.String)">
+      <summary>从 XML 文件中读取应用程序信任。</summary>
+      <param name="path">输入文件的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest(System.IO.Stream)">
+      <summary>从 ClickOnce 应用程序清单中读取应用程序信任。</summary>
+      <param name="input">指定输入流。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest(System.String)">
+      <summary>从 ClickOnce 应用程序清单中读取应用程序信任。</summary>
+      <param name="path">输入文件的名称。</param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.SameSiteAccess">
+      <summary>获取或设置允许的同一站点访问级别，该级别指定应用程序是否具有与其部署到的服务器进行通信的权限。</summary>
+      <returns>指示允许的同一站点访问级别的字符串。这些值可以为 site 或 none。site 指定应用程序可以在部署它的同一个 URL 上调用 Web 服务；如果应用程序是从共享部署的，则应用程序有权限从该共享读取文件。none 指定应用程序既不能从部署它的同一个 URL 访问 Web 服务，也不能从部署它的共享访问文件。“应用程序”指的是为其读取（使用 <see cref="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest(System.IO.Stream)" />）清单的应用程序。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ToString">
+      <summary>将应用程序安全信任对象中的所有信息作为字符串返回。</summary>
+      <returns>包含应用程序安全信任对象中的信息的字符串。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Write(System.IO.Stream)">
+      <summary>将应用程序信任写入 XML 文件。</summary>
+      <param name="output">指定输出流。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Write(System.String)">
+      <summary>将应用程序信任写入 XML 文件。</summary>
+      <param name="path">输出文件的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest(System.IO.Stream)">
+      <summary>将应用程序信任写入新的模板 ClickOnce 应用程序清单。</summary>
+      <param name="output">指定一个输出流（会将已更新的清单文件写到该输出流）。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest(System.IO.Stream,System.IO.Stream)">
+      <summary>使用指定的信任更新现有的 ClickOnce 应用程序清单。</summary>
+      <param name="input">指定一个包含要更新的清单的输入流。</param>
+      <param name="output">指定一个输出流（会将已更新的清单文件写到该输出流）。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest(System.String)">
+      <summary>将应用程序信任写入 ClickOnce 应用程序清单。</summary>
+      <param name="path">输出文件的名称。</param>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Hosting.ICscHostObject">
+      <summary>定义一个使 Csc 任务可以与宿主集成开发环境 (IDE) 进行通信的接口。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.BeginInitialization">
+      <summary>开始 <see cref="T:Microsoft.Build.Tasks.Hosting.ICscHostObject" /> 的初始化。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.Compile">
+      <summary>编译项目。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.EndInitialization(System.String@,System.Int32@)">
+      <summary>结束 <see cref="T:Microsoft.Build.Tasks.Hosting.ICscHostObject" /> 的初始化，并返回指定的错误信息和代码。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="errorMessage">错误信息。</param>
+      <param name="errorCode">错误代码。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.IsDesignTime">
+      <summary>返回一个值，该值指示集成开发环境 (IDE) 当前是否处于设计时模式下。</summary>
+      <returns>
+如果 IDE 当前处于设计时模式下，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.IsUpToDate">
+      <summary>返回一个值，该值指示已编译的项目是否是最新的。</summary>
+      <returns>
+如果已编译的项目是最新的，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetAdditionalLibPaths(System.String[])">
+      <summary>指定将在其中搜索引用的其他目录。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="additionalLibPaths">将在其中搜索引用的目录数组。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetAddModules(System.String[])">
+      <summary>指定一个或多个将成为程序集的一部分的模块。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="addModules">将成为程序集的一部分的模块的数组。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetAllowUnsafeBlocks(System.Boolean)">
+      <summary>指定一个值，该值指示是否允许使用 unsafe 关键字进行编译的代码存在。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="allowUnsafeBlocks">
+如果允许使用 unsafe 关键字进行编译的代码存在，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetBaseAddress(System.String)">
+      <summary>指定加载 DLL 的首选基址。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="baseAddress">加载 DLL 的首选基址。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetCheckForOverflowUnderflow(System.Boolean)">
+      <summary>指定一个值，该值指示溢出数据类型界限的整数算法是否会在运行时导致异常。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="checkForOverflowUnderflow">
+如果在整数算法溢出数据类型界限时导致异常，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetCodePage(System.Int32)">
+      <summary>指定要用于编译中的所有源代码文件的代码页。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="codePage">要用于编译中的所有源代码文件的代码页。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDebugType(System.String)">
+      <summary>指定调试类型。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="debugType">调试类型，可以是 full 或 pdbonly。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDefineConstants(System.String)">
+      <summary>指定要定义的预处理器符号。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="defineConstants">要定义的预处理器符号。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDelaySign(System.Boolean,System.Boolean)">
+      <summary>指定一个值，该值指示是否要创建完全签名的程序集。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="delaySignExplicitlySet">
+如果显式设置了 DelaySign 参数，则为 true；否则为 false。</param>
+      <param name="delaySign">
+如果要创建完全签名的程序集，则为 true；如果只希望将公钥放入程序集中，则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDisabledWarnings(System.String)">
+      <summary>指定要禁用的警告的列表。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="disabledWarnings">要禁用的警告的列表。多个警告之间用逗号分隔。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDocumentationFile(System.String)">
+      <summary>指定用于保存已处理的文档注释的 XML 文件。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="documentationFile">一个字符串，其中包含要用于保存已处理的文档注释的文件的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetEmitDebugInformation(System.Boolean)">
+      <summary>指定一个值，该值指示是否生成调试信息，并将这些信息放入一个程序数据库 (.pdb) 文件中。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="emitDebugInformation">
+如果要生成调试信息并将这些信息放入一个 .pdb 文件中，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetErrorReport(System.String)">
+      <summary>指定一个值，该值指示如何将内部编译器错误报告给 Microsoft。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="errorReport">指定如何将内部编译器错误报告给 Microsoft 的值。该值可以是 prompt、send 或 none。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetFileAlignment(System.Int32)">
+      <summary>指定输出文件中的节的大小。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="fileAlignment">输出文件中的节的大小。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetGenerateFullPaths(System.Boolean)">
+      <summary>指定一个值，该值指示是否指定编译器输出中的文件的绝对路径。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="generateFullPaths">
+如果指定编译器输出中的文件的绝对路径，则为 true；如果仅指定编译器输出中的文件的名称，则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetKeyContainer(System.String)">
+      <summary>指定加密密钥容器的名称。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="keyContainer">加密密钥容器的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetKeyFile(System.String)">
+      <summary>指定包含加密密钥的文件的名称。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="keyFile">包含加密密钥的文件的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetLangVersion(System.String)">
+      <summary>指定要使用的语言版本。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="langVersion">要使用的语言版本。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetLinkResources(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>创建指向输出文件中的指定 .NET Framework 资源的链接；资源文件不会放入输出文件中。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="linkResources">要链接到输出文件的 .NET Framework 资源。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetMainEntryPoint(System.String,System.String)">
+      <summary>指定 Main 方法的位置。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="targetType">输出文件的文件格式。该值可以是 library、exe、module 或 winexe。</param>
+      <param name="mainEntryPoint">Main 方法的位置。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetModuleAssemblyName(System.String)">
+      <summary>指定一个程序集，.netmodule 可以访问该程序集的非公共类型。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="moduleAssemblyName">一个程序集，.netmodule 可以访问该程序集的非公共类型。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetNoConfig(System.Boolean)">
+      <summary>指定一个值，该值指示是否阻止编译器使用 csc.rsp 文件进行编译。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="noConfig">
+如果要阻止编译器使用 csc.rsp 文件进行编译，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetNoStandardLib(System.Boolean)">
+      <summary>指定一个值，该值指示是否要阻止导入 mscorlib.dll。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="noStandardLib">
+如果要阻止导入 mscorlib.dll，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetOptimize(System.Boolean)">
+      <summary>指定一个值，该值指示是否启用优化。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="optimize">
+如果要启用优化，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetOutputAssembly(System.String)">
+      <summary>指定输出文件的名称。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="outputAssembly">输出文件的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetPdbFile(System.String)">
+      <summary>指定生成的调试信息将放入的程序数据库 (.pdb) 文件。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="pdbFile">生成的调试信息将放入的 .pdb 文件。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetPlatform(System.String)">
+      <summary>指定输出文件的目标处理器平台。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="platform">输出文件的目标处理器平台。该值可以是 x86、x64 或 anycpu。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetReferences(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>指定一些项，这些项中的公共类型信息将导入到当前项目中。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="references">一些项，这些项中的公共类型信息将导入到当前项目中。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetResources(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>指定要嵌入到输出文件中的 .NET Framework 资源。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="resources">要嵌入到输出文件中的 .NET Framework 资源。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetResponseFiles(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>指定包含编译器的命令的响应文件。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="responseFiles">包含编译器的命令的响应文件。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetSources(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>指定一个或多个 Visual C# 源文件。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="sources">一个或多个 Visual C# 源文件。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetTargetType(System.String)">
+      <summary>指定输出文件的文件格式。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="targetType">输出文件的文件格式。该值可以是 library、exe、module 或 winexe。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetTreatWarningsAsErrors(System.Boolean)">
+      <summary>指定一个值，该值指示是否将所有警告视为错误。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="treatWarningsAsErrors">
+如果要将所有警告视为错误，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWarningLevel(System.Int32)">
+      <summary>指定警告级别，值在 0 到 4 之间。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="warningLevel">警告级别，值在 0 到 4 之间。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWarningsAsErrors(System.String)">
+      <summary>指定要被视为错误的警告的列表。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="warningsAsErrors">要被视为错误的警告的列表。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWarningsNotAsErrors(System.String)">
+      <summary>指定不被视为错误的警告的列表。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="warningsNotAsErrors">不被视为错误的警告的列表。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWin32Icon(System.String)">
+      <summary>指定要插入到程序集中的 .ico 文件。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="win32Icon">要插入到程序集中的 .ico 文件。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWin32Resource(System.String)">
+      <summary>指定要插入到输出文件中的 Win32 资源 (.res) 文件。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="win32Resource">要插入到输出文件中的 Win32 资源 (.res) 文件。</param>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Hosting.IVbcHostObject">
+      <summary>定义一个使 Vbc 任务可以与宿主集成开发环境 (IDE) 进行通信的接口。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.BeginInitialization">
+      <summary>开始 <see cref="T:Microsoft.Build.Tasks.Hosting.IVbcHostObject" /> 的初始化。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.Compile">
+      <summary>编译项目。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.EndInitialization">
+      <summary>结束 <see cref="T:Microsoft.Build.Tasks.Hosting.IVbcHostObject" /> 的初始化。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.IsDesignTime">
+      <summary>返回一个值，该值指示集成开发环境 (IDE) 当前是否处于设计时模式下。</summary>
+      <returns>
+如果 IDE 当前处于设计时模式下，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.IsUpToDate">
+      <summary>返回一个值，该值指示已编译的项目是否是最新的。</summary>
+      <returns>
+如果已编译的项目是最新的，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetAdditionalLibPaths(System.String[])">
+      <summary>指定将在其中搜索引用的其他目录。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="additionalLibPaths">将在其中搜索引用的目录数组。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetAddModules(System.String[])">
+      <summary>指定一个或多个将成为程序集的一部分的模块。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="addModules">将成为程序集的一部分的模块的数组。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetBaseAddress(System.String,System.String)">
+      <summary>指定加载 DLL 的首选基址。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="targetType">输出文件的文件格式。该值可以是 library、exe、module 或 winexe。</param>
+      <param name="baseAddress">加载 DLL 的首选基址。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetCodePage(System.Int32)">
+      <summary>指定要用于编译中的所有源代码文件的代码页。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="codePage">要用于编译中的所有源代码文件的代码页。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetDebugType(System.Boolean,System.String)">
+      <summary>指定调试类型。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="emitDebugInformation">
+如果要生成调试信息并将这些信息放入一个程序数据库 (.pdb) 文件中，则为 true；否则为 false。</param>
+      <param name="debugType">调试类型，可以是 full 或 pdbonly。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetDefineConstants(System.String)">
+      <summary>指定要定义的预处理器符号。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="defineConstants">要定义的预处理器符号。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetDelaySign(System.Boolean)">
+      <summary>指定一个值，该值指示是否要创建完全签名的程序集。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="delaySign">
+如果要创建完全签名的程序集，则为 true；如果只希望将公钥放入程序集中，则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetDisabledWarnings(System.String)">
+      <summary>指定要禁用的警告的列表。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="disabledWarnings">要禁用的警告的列表。多个警告之间用逗号分隔。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetDocumentationFile(System.String)">
+      <summary>指定用于保存已处理的文档注释的 XML 文件。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="documentationFile">一个字符串，其中包含要用于保存已处理的文档注释的文件的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetErrorReport(System.String)">
+      <summary>指定一个值，该值指示如何将内部编译器错误报告给 Microsoft。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="errorReport">指定如何将内部编译器错误报告给 Microsoft 的值。该值可以是 prompt、send 或 none。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetFileAlignment(System.Int32)">
+      <summary>指定输出文件中的节的大小。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="fileAlignment">输出文件中的节的大小。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetGenerateDocumentation(System.Boolean)">
+      <summary>指定一个值，该值指示是否生成文档并将其放入到一个 XML 文件中，此 XML 文件使用编译器正在创建的可执行文件或库的名称来命名。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="generateDocumentation">
+如果要生成文档文件，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetImports(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>指定要导入的命名空间。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="importsList">要导入的命名空间。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetKeyContainer(System.String)">
+      <summary>指定加密密钥容器的名称。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="keyContainer">加密密钥容器的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetKeyFile(System.String)">
+      <summary>指定包含加密密钥的文件的名称。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="keyFile">包含加密密钥的文件的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetLinkResources(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>创建指向输出文件中的指定 .NET Framework 资源的链接；资源文件不会放入输出文件中。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="linkResources">要链接到输出文件的 .NET Framework 资源。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetMainEntryPoint(System.String)">
+      <summary>指定包含 Sub Main 过程的位置的类或模块。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="mainEntryPoint">包含 Sub Main 过程的位置的类或模块。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetNoConfig(System.Boolean)">
+      <summary>指定一个值，该值指示是否阻止编译器使用 vbc.rsp 文件进行编译。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="noConfig">
+如果要阻止编译器使用 vbc.rsp 文件进行编译，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetNoStandardLib(System.Boolean)">
+      <summary>指定一个值，该值指示是否要阻止导入 mscorlib.dll。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="noStandardLib">
+如果要阻止导入 mscorlib.dll，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetNoWarnings(System.Boolean)">
+      <summary>指定一个值，该值指示编译器是否禁止显示所有警告。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="noWarnings">
+如果要禁止显示所有警告，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOptimize(System.Boolean)">
+      <summary>指定一个值，该值指示是否启用优化。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="optimize">
+如果要启用优化，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOptionCompare(System.String)">
+      <summary>指定一个值，该值指示编译器如何进行字符串比较。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="optionCompare">指示编译器如何进行字符串比较的值。该值必须为 binary 或 text。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOptionExplicit(System.Boolean)">
+      <summary>指定一个值，该值指示是否需要显式声明变量。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="optionExplicit">
+如果需要显式声明变量，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOptionStrict(System.Boolean)">
+      <summary>指定一个值，该值指示编译器是否强制使用严格类型语义来限制隐式类型转换。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="optionStrict">
+如果要强制使用严格类型语义来限制隐式类型转换，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOptionStrictType(System.String)">
+      <summary>指定编译器应在未遵照严格的语言语义时发出警告。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="optionStrictType">传递给 OptionStrictType 参数的字符串。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOutputAssembly(System.String)">
+      <summary>指定输出文件的名称。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="outputAssembly">输出文件的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetPlatform(System.String)">
+      <summary>指定输出文件的目标处理器平台。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="platform">输出文件的目标处理器平台。该值可以是 x86、x64、Itanium 或 anycpu。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetReferences(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>指定一些项，这些项中的公共类型信息将导入到当前项目中。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="references">一些项，这些项中的公共类型信息将导入到当前项目中。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetRemoveIntegerChecks(System.Boolean)">
+      <summary>指定一个值，该值指示是否禁用整数溢出错误检查。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="removeIntegerChecks">
+如果要移除整数溢出错误检查，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetResources(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>指定要嵌入到输出文件中的 .NET Framework 资源。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="resources">要嵌入到输出文件中的 .NET Framework 资源。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetResponseFiles(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>指定包含编译器的命令的响应文件。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="responseFiles">包含编译器的命令的响应文件。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetRootNamespace(System.String)">
+      <summary>为所有类型声明指定根命名空间。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="rootNamespace">所有类型声明的根命名空间。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetSdkPath(System.String)">
+      <summary>指定 mscorlib.dll 和 microsoft.visualbasic.dll 的位置。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="sdkPath">mscorlib.dll 和 microsoft.visualbasic.dll 的位置。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetSources(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>指定一个或多个 Visual Basic 源文件。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="sources">一个或多个 Visual Basic 源文件。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetTargetCompactFramework(System.Boolean)">
+      <summary>指定一个值，该值指示是否针对 .NET Compact Framework。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="targetCompactFramework">
+如果要针对 .NET Compact Framework，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetTargetType(System.String)">
+      <summary>指定输出文件的文件格式。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="targetType">输出文件的文件格式。该值可以是 library、exe、module 或 winexe。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetTreatWarningsAsErrors(System.Boolean)">
+      <summary>指定一个值，该值指示是否将所有警告视为错误。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="treatWarningsAsErrors">
+如果要将所有警告视为错误，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetWarningsAsErrors(System.String)">
+      <summary>指定要被视为错误的警告的列表。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="warningsAsErrors">要被视为错误的警告的列表。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetWarningsNotAsErrors(System.String)">
+      <summary>指定不被视为错误的警告的列表。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="warningsNotAsErrors">不被视为错误的警告的列表。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetWin32Icon(System.String)">
+      <summary>指定要插入到程序集中的 .ico 文件。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="win32Icon">要插入到程序集中的 .ico 文件。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetWin32Resource(System.String)">
+      <summary>指定要插入到输出文件中的 Win32 资源 (.res) 文件。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+      <param name="win32Resource">要插入到输出文件中的 Win32 资源 (.res) 文件。</param>
+    </member>
+  </members>
+</doc>

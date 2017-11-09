@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="Title00" type="System.String">
+    <value>网站管理工具“应用程序”选项卡</value>
+  </data>
+  <data name="WebSiteAdministrationToolApplicationTab01" type="System.String">
+    <value>网站管理工具“应用程序”选项卡</value>
+  </data>
+  <data name="WebSiteAdministrationToolApplicationTab02" type="System.String">
+    <value>使用网站管理工具的“应用程序”&lt;span class=UI&gt;&lt;/span&gt;选项卡可以管理与 Web 应用程序和站点有关的常用设置。</value>
+  </data>
+  <data name="Introduction01" type="System.String">
+    <value>介绍</value>
+  </data>
+  <data name="Introduction02" type="System.String">
+    <value>使用“应用程序”&lt;span class=UI&gt;&lt;/span&gt;选项卡可以管理:</value>
+  </data>
+  <data name="Introduction03" type="System.String">
+    <value>应用程序设置名称/值对。 </value>
+  </data>
+  <data name="Introduction04" type="System.String">
+    <value>应用程序设置是表示 Web 应用程序中可配置值文本的名称/值对。使用应用程序设置可以存储自定义应用程序配置信息，如文件路径、XML Web 服务 URL、常用文本或者您希望在一个中心位置维护且便于更改的任何信息。</value>
+  </data>
+  <data name="Introduction05" type="System.String">
+    <value>重要事项   应用程序设置以纯文本的形式存储在配置文件中。因此，使用应用程序设置时必须采取适当的安全措施。不要在应用程序设置中存储敏感信息，如用户名、密码或数据库连接字符串。</value>
+  </data>
+  <data name="Introduction06" type="System.String">
+    <value>简单邮件传输协议(SMTP)设置。</value>
+  </data>
+  <data name="Introduction07" type="System.String">
+    <value>如果网站需要发送电子邮件的功能(例如，向用户发送密码)，则必须指定站点使用的 SMTP 服务器。</value>
+  </data>
+  <data name="Introduction08" type="System.String">
+    <value>应用程序状态。</value>
+  </data>
+  <data name="Introduction09" type="System.String">
+    <value>可以使应用程序脱机(关闭)以执行维护，也可以使新的 Microsoft SQL Server Express 版数据库联机。</value>
+  </data>
+  <data name="Introduction10" type="System.String">
+    <value>调试和跟踪。</value>
+  </data>
+  <data name="Introduction11" type="System.String">
+    <value>调试和跟踪功能用于诊断和解决 Web 应用程序的问题，主要用于开发过程。启用调试功能以使用以下信息对网站中的网页进行编译，.NET Framework 或 Microsoft Visual Studio 调试器使用该信息可以逐句通过代码。启用跟踪功能将使网页生成有关单个 Web 请求的信息、使用这些请求发送的 HTTP 标头、网页上控件的状态以及有关网页处理的其他详细信息。 </value>
+  </data>
+  <data name="ConfiguringApplicationSettings01" type="System.String">
+    <value>配置应用程序设置</value>
+  </data>
+  <data name="ConfiguringApplicationSettings02" type="System.String">
+    <value>创建应用程序设置时，应为要创建的设置指定名称和值。这样，就可以使用 &lt;span class=LanguageKeyword&gt;ConfigurationSettings&lt;/span&gt; 类的 &lt;span class=LanguageKeyword&gt;AppSettings&lt;/span&gt; 属性来访问应用程序中相应设置的值。例如，如果使用表示应用程序名称的值定义了一个名为 AppName 的应用程序设置，则有可能使用该设置作为某页的标题，如下面的代码示例所示。</value>
+  </data>
+  <data name="ConfiguringApplicationSettings03" type="System.String">
+    <value>[Visual Basic]</value>
+  </data>
+  <data name="ConfiguringApplicationSettings04" type="System.String">
+    <value></value>
+  </data>
+  <data name="ConfiguringApplicationSettings05" type="System.String">
+    <value>[C#]</value>
+  </data>
+  <data name="TakingApplicationsOfflineandOnline01" type="System.String">
+    <value>应用程序脱机和联机</value>
+  </data>
+  <data name="TakingApplicationsOfflineandOnline02" type="System.String">
+    <value>如果要对网站进行维护，可以使该网站脱机。这会关闭正在运行该网站的进程以使该网站不再提供网页。然后，您可以编辑网页或其他文件，不会出现所请求的网页正处于编辑过程中从而导致错误的情形。如果您使用的是 SQL Server Standard 版并希望交换 .mdf 数据库文件或向应用程序中添加该文件，则使应用程序脱机也很有用。如果应用程序正在运行，则无法连接到新的 .mdf 文件。</value>
+  </data>
+  <data name="TakingApplicationsOfflineandOnline03" type="System.String">
+    <value>文件编辑完毕或 .mdf 文件添加或更改完毕后，便可以使应用程序重新联机。</value>
+  </data>
+  <data name="ConfiguringSMTPSettings01" type="System.String">
+    <value>配置 SMTP 设置</value>
+  </data>
+  <data name="ConfiguringSMTPSettings02" type="System.String">
+    <value>网站的某些功能要求您的应用程序能够发送电子邮件。要发送电子邮件，应用程序必须能够访问简单邮件传输协议(SMTP)服务器，该服务器将电子邮件从您的应用程序转发给收件人。 </value>
+  </data>
+  <data name="ConfiguringSMTPSettings03" type="System.String">
+    <value>IIS)包括 SMTP 虚拟服务器，尽管默认情况下不安装。如果您希望能够从自己的计算机发送电子邮件，可以使用 Microsoft Windows 控制面板中的“添加或删除程序”&lt;span class=UI&gt;&lt;/span&gt;来安装 SMTP 服务器。作为 IIS 的组成部分，SMTP 服务器可以作为一个 Windows 组件使用。安装 IIS SMTP 服务器后，可以使用 Internet 信息服务管理控制台对该服务器进行配置。有关如何安装 IIS SMTP 虚拟服务器的详细信息，请参见知识库(KB)搜索页。</value>
+  </data>
+  <data name="ConfiguringSMTPSettings04" type="System.String">
+    <value>注意   如果在计算机上安装 SMTP 服务器，必须采取安全防范措施，以确保 SMTP 服务器难以作为垃圾邮件服务器使用。有关如何帮助保证 IIS SMTP 虚拟服务器安全的更多信息，请转到 Microsoft.com，然后搜索 SMTP 安全性。</value>
+  </data>
+  <data name="ConfiguringSMTPSettings05" type="System.String">
+    <value>如果不希望安装 IIS SMTP 服务器，或者应用程序要在另一台计算机上运行，请与网络管理员或 Web 服务器管理员联系，以了解有关 SMTP 服务器配置设置的信息。</value>
+  </data>
+  <data name="ConfiguringSMTPSettings06" type="System.String">
+    <value>下表描述 SMTP 设置。</value>
+  </data>
+  <data name="ConfiguringSMTPSettings07" type="System.String">
+    <value>设置
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings08" type="System.String">
+    <value>说明
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings09" type="System.String">
+    <value>
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings10" type="System.String">
+    <value>服务器名称
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings11" type="System.String">
+    <value>SMTP 服务器的名称。默认为 &lt;span class=code&gt;localhost&lt;/span&gt;，这意味着 ASP.NET 将使用本地计算机上的 SMTP 服务器。通常，这是默认的 SMTP 虚拟服务器。不然就是网络上可用的 SMTP 服务器的名称。
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings12" type="System.String">
+    <value>
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings13" type="System.String">
+    <value>服务器端口
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings14" type="System.String">
+    <value>SMTP 服务器上的端口。默认为 25。
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings15" type="System.String">
+    <value>
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings16" type="System.String">
+    <value>发件人
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings17" type="System.String">
+    <value>将出现在网站发送的电子邮件的&lt;span class=UI&gt;“发件人:”&lt;/span&gt;标题中的电子邮件地址。
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings18" type="System.String">
+    <value>
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings19" type="System.String">
+    <value>身份验证
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings20" type="System.String">
+    <value>SMTP 服务器使用的身份验证(如果有)的类型。如果 SMTP 服务器使用“基本身份验证”&lt;span class=UI&gt;&lt;/span&gt;，请提供有权通过该服务器转发电子邮件的用户帐户的帐户名和密码。</value>
+  </data>
+  <data name="ConfiguringSMTPSettings21" type="System.String">
+    <value>“基本身份验证”&lt;span class=UI&gt;&lt;/span&gt;的用户名和密码以明文形式存储在 Web.config 文件中。
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings22" type="System.String">
+    <value>
+</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing01" type="System.String">
+    <value>配置调试和跟踪</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing02" type="System.String">
+    <value>必须在 Web 应用程序运行的计算机上具有管理凭据，才能更改该计算机的调试和跟踪设置。</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing03" type="System.String">
+    <value>要管理调试和跟踪功能，请单击“配置调试和跟踪”&lt;span class=UI&gt;&lt;/span&gt;，然后设置下列选项:</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing04" type="System.String">
+    <value>启用调试</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing05" type="System.String">
+    <value>选择此选项将为网站中的所有网页启用调试。 </value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing06" type="System.String">
+    <value>捕获跟踪信息</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing07" type="System.String">
+    <value>选择此选项将为网站中的所有网页启用跟踪。如果选中此复选框，则该页上的其余选项也将启用。</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing08" type="System.String">
+    <value>如果已设置此选项以捕获跟踪信息，可以进行下列选择: </value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing09" type="System.String">
+    <value>在单个页上显示跟踪信息</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing10" type="System.String">
+    <value>选择此选项将在网页底部附加跟踪信息。即使不显示单个网页的跟踪信息，仍将捕获这些信息。要查看跟踪信息，可以请求网站的 Trace.axd 页，该页相当于一个跟踪信息查看器。</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing11" type="System.String">
+    <value>仅本地请求</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing12" type="System.String">
+    <value>选择此选项查看的跟踪信息仅限于来自主机 Web 服务器(localhost)的请求。</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing13" type="System.String">
+    <value>所有请求</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing14" type="System.String">
+    <value>选择此选项可以查看来自任何计算机的跟踪信息。</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing15" type="System.String">
+    <value>在“选择跟踪结果的排序顺序”&lt;span class=UI&gt;&lt;/span&gt;下，指定希望如何显示跟踪信息，如下所述:</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing16" type="System.String">
+    <value>按时间</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing17" type="System.String">
+    <value>选择此选项将按捕获顺序显示跟踪信息。</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing18" type="System.String">
+    <value>按类别</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing19" type="System.String">
+    <value>选择此选项将在用户定义的类别内按字母顺序显示跟踪信息。</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing20" type="System.String">
+    <value>要缓存的跟踪请求数</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing21" type="System.String">
+    <value>输入要在服务器上存储的跟踪请求的数目。可以使用跟踪查看器(http://server/application/trace.axd)来查看缓存的信息。默认值为 10。如果不选择“最新跟踪结果”&lt;span class=UI&gt;&lt;/span&gt;选项，则在达到该限制数目时自动禁用跟踪。</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing22" type="System.String">
+    <value>在“选择要缓存的跟踪结果”&lt;span class=UI&gt;&lt;/span&gt;下，指定希望如何显示跟踪输出，如下所述:</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing23" type="System.String">
+    <value>最新跟踪结果</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing24" type="System.String">
+    <value>选择此选项将显示最新跟踪输出，舍弃那些较早的跟踪数据，这些数据超出了“要缓存的跟踪请求数”&lt;span class=UI&gt;&lt;/span&gt;所指明的限制。</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing25" type="System.String">
+    <value>最早的跟踪结果</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing26" type="System.String">
+    <value>选择此选项将显示达到“要缓存的跟踪请求数”&lt;span class=UI&gt;&lt;/span&gt;之前请求的跟踪数据。</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing27" type="System.String">
+    <value>注意   网站故障排除完毕后，禁用调试和跟踪功能可以最大限度地提高 Web 应用程序的性能。</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing28" type="System.String">
+    <value>安全注意事项   对网页启用跟踪功能后，跟踪信息可能出现在从服务器发出网页请求的任何浏览器上。由于跟踪功能会显示敏感信息，如服务器变量的值，因此可能存在安全威胁。请确保在将 Web 应用程序发布到成品服务器之前，先对网页禁用跟踪功能。 </value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing29" type="System.String">
+    <value>要为网站配置自定义错误页，请单击“定义默认错误页”&lt;span class=UI&gt;&lt;/span&gt;，然后指定下列各项:</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing30" type="System.String">
+    <value>使用默认错误信息</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing31" type="System.String">
+    <value>选择此选项将使用默认错误页。</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing32" type="System.String">
+    <value>指定要用作默认错误页的 URL</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing33" type="System.String">
+    <value>选择此选项将使用自定义错误页，然后选择要使用的页。</value>
+  </data>
+  <data name="BehindtheScenes01" type="System.String">
+    <value>幕后</value>
+  </data>
+  <data name="BehindtheScenes02" type="System.String">
+    <value>“应用程序”&lt;span class=UI&gt;&lt;/span&gt;选项卡提供了一个简单 Web 界面，用于管理存储在应用程序的 Web.config 文件中的配置设置。 </value>
+  </data>
+  <data name="ApplicationSettings01" type="System.String">
+    <value>应用程序设置</value>
+  </data>
+  <data name="ApplicationSettings02" type="System.String">
+    <value>通过“应用程序”&lt;span class=UI&gt;&lt;/span&gt;选项卡的“应用程序设置”&lt;span class=UI&gt;&lt;/span&gt;功能管理的设置在 Web 应用程序的 Web.config 文件的 &amp;lt;appSettings&amp;gt; 节中。这是 .NET Framework 提供的预定义配置节。下面代码中突出显示的行是一个示例配置文件，使用网站管理工具创建名为 &lt;span class=code&gt;ApplicationName&lt;/span&gt; 的应用程序设置之后即生成该文件。</value>
+  </data>
+  <data name="TakingApplicationsOfflineandOnline01" type="System.String">
+    <value>应用程序脱机和联机</value>
+  </data>
+  <data name="TakingApplicationsOfflineandOnline02" type="System.String">
+    <value>脱机设置在网站的 Web.config 文件的 &amp;lt;httpRuntime&amp;gt; 节中。下面代码中突出显示的行是使用网站管理工具使应用程序脱机之后生成的。</value>
+  </data>
+  <data name="TakingApplicationsOfflineandOnline03" type="System.String">
+    <value>只要 &lt;span class=LanguageKeyword&gt;httpRuntime&lt;/span&gt; 设置被禁用，ASP.NET 就不会在收到请求时为应用程序创建 System.AppDomain 对象。实际上，Web 应用程序将无法启动。 </value>
+  </data>
+  <data name="SMTPSettings01" type="System.String">
+    <value>SMTP 设置</value>
+  </data>
+  <data name="SMTPSettings02" type="System.String">
+    <value>通过“应用程序”&lt;span class=UI&gt;&lt;/span&gt;选项卡的“SMTP 设置”&lt;span class=UI&gt;&lt;/span&gt;功能管理的设置在网站的 Web.config 文件的 &amp;lt;mailSettings&amp;gt; 节中，该文件是 &amp;lt;system.net&amp;gt; 元素(而不是 &amp;lt;system.web&amp;gt; 元素)的子元素。下面代码中突出显示的行是使用网站管理工具指定 SMTP 设置之后生成的。</value>
+  </data>
+  <data name="DebuggingandTracing01" type="System.String">
+    <value>调试和跟踪</value>
+  </data>
+  <data name="DebuggingandTracing02" type="System.String">
+    <value>通过“应用程序”&lt;span class=UI&gt;&lt;/span&gt;选项卡的“调试和跟踪”&lt;span class=UI&gt;&lt;/span&gt;功能管理的设置在 Web.config 文件的 &amp;lt;trace&amp;gt;、&amp;lt;compilation&amp;gt; 和 &amp;lt;customErrors&amp;gt; 节中。下面的代码是一个示例配置文件，使用网站管理工具启用调试和跟踪功能并建立默认自定义错误页之后，即生成该文件。</value>
+  </data>
+  <data name="DebuggingandTracing03" type="System.String">
+    <value>在此示例中，调试和跟踪功能均已启用，跟踪信息仅显示在从 Web 服务器请求的页上，跟踪结果按类别排序，缓存了 10 个最新的跟踪结果以便于显示。此外，默认错误页是 myErrorPage.aspx。</value>
+  </data>
+  <data name="MoreInformation01" type="System.String">
+    <value>详细信息</value>
+  </data>
+  <data name="MoreInformation02" type="System.String">
+    <value>有关更多信息，请参见 .NET Framework 类参考和“ASP.NET 设置架构”中的以下各节:</value>
+  </data>
+  <data name="MoreInformation03" type="System.String">
+    <value>System.Configuration.ConfigurationSettings</value>
+  </data>
+  <data name="MoreInformation04" type="System.String">
+    <value>compilation 元素(ASP.NET 设置架构)</value>
+  </data>
+  <data name="MoreInformation05" type="System.String">
+    <value>customErrors 元素(ASP.NET 设置架构)</value>
+  </data>
+  <data name="MoreInformation06" type="System.String">
+    <value>trace 元素(ASP.NET 设置架构)</value>
+  </data>
+  <data name="SeeAlso01" type="System.String">
+    <value>请参见</value>
+  </data>
+  <data name="SeeAlso02" type="System.String">
+    <value>网站管理工具概述</value>
+  </data>
+  <data name="SeeAlso03" type="System.String">
+    <value>网站管理工具“安全”选项卡</value>
+  </data>
+  <data name="SeeAlso04" type="System.String">
+    <value>网站管理工具“提供程序”选项卡</value>
+  </data>
+  <data name="SeeAlso05" type="System.String">
+    <value>网站管理工具的内部机制</value>
+  </data>
+</root>

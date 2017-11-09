@@ -1,0 +1,2 @@
+int heroId;[notNull=true] //奖励的英雄ID
+int[] rewardIds;[Collection(31,1)] //当月全部的每日奖励

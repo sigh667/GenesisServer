@@ -1,0 +1,65 @@
+package com.mokylin;
+import "MessageType.proto";
+option java_package = "com.mokylin.bleach.protobuf";
+option java_outer_classname = "ItemMessage";
+
+
+/**
+ * 使用道具
+ */
+message CGItemUse {
+	option (cg_message_type) = CG_ITEM_USE;
+	/**道具TemplateID*/
+	required int32 templateId = 1;
+	/**道具数量 */
+	required int32 amount = 2;
+}
+
+/**
+ * 卖出道具
+ */
+message CGItemSell{
+	option (cg_message_type) = CG_ITEM_SELL;
+	/** 卖出的物品TemplateID */
+	required int32 templateId = 1;
+	/** 卖出的数量 */
+	required int32 amount = 2;
+}
+
+/**
+ * 合成道具
+ */
+message CGItemCompound{
+	option (cg_message_type) = CG_ITEM_COMPOUND;
+	/** 被合成的物品TemplateID */
+	required int32 toTemplateId = 1;
+}
+
+///////////////////////////////////////////////////////////////////
+
+/**
+ * 背包详细信息
+ */
+message GCInventoryInfo {
+	option (gc_message_type) = GC_INVENTORY_INFO;
+	/**所有道具 */
+	repeated ItemData items = 1;
+}
+message ItemData {
+	/**道具模板ID*/
+	required int32 templateId = 1;
+	/**叠加数量*/
+	required int32 overlap = 2;
+}
+
+/**
+ * 物品更新消息。<p>
+ *
+ * 该消息暂时只能用于特定业务的物品更新，如GM命令等。<p>
+ *
+ * 在使用前请咨询尽可能多的人员，用错了弄死你丫的。
+ */
+message GCItemUpdate{
+	option (gc_message_type) = GC_ITEM_UPDATE;
+	repeated ItemData updatedItems = 1;
+}

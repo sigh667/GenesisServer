@@ -1,0 +1,1358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualBasic.Compatibility.Data</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC">
+      <summary>提供与 Visual Basic 6.0 ADO Data Control之间的兼容性，使您可以使用 Microsoft ActiveX 数据对象 (ADO) 创建到数据库的连接。 </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODC.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODC.addDataSourceListener(msdatasrc.DataSourceListener)">
+      <summary>添加一个接口以监视数据集中的更改。</summary>
+      <param name="dsl">Msdatasrc.DataSourceListener。</param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BackColor">
+      <summary>获取或设置 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 的背景色。</summary>
+      <returns>一个 <see cref="T:System.Drawing.Color" />，表示 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 的背景色。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOF">
+      <summary>获取一个值，该值指示当前行位置是否位于 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Recordset" /> 中的第一行之前。</summary>
+      <returns>
+            如果当前行位于第一行之前，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOFAction">
+      <summary>获取或设置一个值，该值指示当 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOF" /> 属性为 true 时 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 采取什么操作。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOFActionEnum" /> 枚举，用于指定要采取的操作。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.CacheSize">
+      <summary>获取或设置当前 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Recordset" /> 在本地内存中缓存的记录数。</summary>
+      <returns>一个 Integer，指定当前 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Recordset" /> 对象在本地内存中缓存的记录数。默认值为 50 个记录。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.CommandTimeout">
+      <summary>获取或设置 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 等待某一命令从服务器返回的持续时间（以秒为单位）。</summary>
+      <returns>一个 Integer，指定建立连接时等待的秒数。默认值为 15 秒。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.CommandType">
+      <summary>获取或设置一个值，该值通知 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 在打开 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Recordset" /> 时传递什么类型的命令。</summary>
+      <returns>一个 ADODB.CommandTypeEnum 枚举，用于指定命令类型。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.ConnectionString">
+      <summary>获取或设置用于建立到数据源的连接的信息。</summary>
+      <returns>一个包含连接信息的 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.ConnectionTimeout">
+      <summary>获取或设置持续时间（以秒为单位），提供程序将在此时段内尝试连接到在 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.ConnectionString" /> 属性中指定的服务器。</summary>
+      <returns>一个 Integer，指定建立连接时等待的秒数。默认值为 15 秒。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.CursorLocation">
+      <summary>获取或设置 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 对象的游标库的位置。</summary>
+      <returns>一个 ADODB.CursorLocationEnum 枚举，用于指定位置。默认值为 ADODB.CursorLocationEnum.adUseClient。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.CursorType">
+      <summary>获取或设置一个值，该值指定打开指定查询产生的结果集时要使用的默认游标类型。</summary>
+      <returns>一个 ADODB.CursorTypeEnum 枚举，用于指定要使用的游标类型。</returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Dispose(System.Boolean)">
+      <summary>释放由 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 占用的非托管资源，还可以另外再释放托管资源。</summary>
+      <param name="disposing">
+                如为 true，则释放托管资源和非托管资源；如为 false，则仅释放非托管资源。</param>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EndOfRecordset">
+      <summary>试图移到超出 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Recordset" /> 末尾的行时调用 EndOfRecordset 事件。</summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOF">
+      <summary>获取一个值，该值指示当前行位置是否位于 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Recordset" /> 中的最后一行之后。</summary>
+      <returns>
+            如果当前行位于最后一行之后，则为 true；否则，为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOFAction">
+      <summary>获取或设置一个值，该值指示当 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOF" /> 属性为 true 时 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 采取什么操作。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOFActionEnum" /> 枚举，用于指定要采取的操作。</returns>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Error">
+      <summary>当 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 中引发异常时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODC.FetchComplete">
+      <summary>当 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件完成从数据库中获取数据时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODC.FetchProgress">
+      <summary>当 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件正在从数据库中获取数据时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODC.FieldChangeComplete">
+      <summary>当 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Recordset" /> 中的 Field 更新完成时发生。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODC.getDataMember(System.String,System.Guid@)">
+      <summary>返回 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 的 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Recordset" />。</summary>
+      <returns>返回给定数据成员的数据访问对象（如行位置）。</returns>
+      <param name="dataMember">一个 <see cref="T:System.String" />，用于说明表示数据源支持的一组或多组数据的数据成员。</param>
+      <param name="riid">指定的数据访问对象的接口标识符。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODC.getDataMemberCount">
+      <summary>实现 OLE DB DataSource.getDataMemberCount 方法。</summary>
+      <returns>一个表示计数的 Integer。</returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODC.getDataMemberName(System.Int32)">
+      <summary>实现 OLE DB DataSource.getDataMemberName 方法。</summary>
+      <returns>一个说明数据成员名称的 <see cref="T:System.String" />。</returns>
+      <param name="index">数据成员名称列表中的一个索引。</param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.LockType">
+      <summary>获取或设置一个值，该值指示并发处理的类型。</summary>
+      <returns>一个 ADODB.LockTypeEnum 枚举，用于指定并发处理的类型。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.MaxRecords">
+      <summary>获取或设置可以从数据源中检索的最大记录数。</summary>
+      <returns>一个 Integer，指定可以从数据源中检索的记录数。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Mode">
+      <summary>获取或设置一个值，该值指定用于修改 Connection 中的数据或打开 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 中的 Record 的可用权限。</summary>
+      <returns>一个 ADO.ConnectModeEnum，用于指定模式。</returns>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODC.MoveComplete">
+      <summary>当 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 Recordset 中已发生 MoveFirst、MoveNext 或 MoveLast 方法时发生。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODC.OnResize(System.EventArgs)">
+      <summary>引发 <see cref="E:System.Windows.Forms.Control.Resize" /> 事件。</summary>
+      <param name="e">包含事件数据的 <see cref="T:System.EventArgs" />。</param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Orientation">
+      <summary>获取或设置一个值，该值指定 <see cref="T: Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 是水平方向（默认）还是垂直方向。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.OrientationEnum" /> 枚举，用于指定方向。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Password">
+      <summary>设置在创建 ADO Recordset 对象过程中使用的密码。</summary>
+      <returns>一个包含密码的 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODC.RecordChangeComplete">
+      <summary>在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 Recordset 中的当前记录更改之后发生。</summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Recordset">
+      <summary>获取或设置对基础 ADO Recordset 对象的引用。</summary>
+      <returns>一个 ADO Recordset 对象。</returns>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODC.RecordsetChangeComplete">
+      <summary>当 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 Recordset 更改时发生。</summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.RecordSource">
+      <summary>获取或设置返回 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Recordset" /> 的语句或查询。</summary>
+      <returns>一个包含语句或查询的 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Refresh">
+      <summary>强制控件使其工作区无效并立即重绘其自身和任何子控件。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODC.removeDataSourceListener(msdatasrc.DataSourceListener)">
+      <summary>移除一个 DataSourceListener。</summary>
+      <param name="dsl">Msdatasrc.DataSourceListener。</param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Text">
+      <summary>获取或设置包含在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 显示区域的文本。</summary>
+      <returns>一个 <see cref="T:System.String" />，用于指定文本。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.UserName">
+      <summary>获取或设置一个值，该值表示 ADO Recordset 对象的用户。</summary>
+      <returns>一个包含用户名的 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODC.WillChangeField">
+      <summary>在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 Recordset 中的当前字段更改之前发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODC.WillChangeRecord">
+      <summary>在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 Recordset 中的当前记录更改之前发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODC.WillChangeRecordset">
+      <summary>在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 Recordset 更改之前发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODC.WillMove">
+      <summary>在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 Recordset 的 MoveFirst、MoveNext 或 MoveLast 方法执行之前发生。</summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOFActionEnum">
+      <summary>提供常量以与 Visual Basic 6.0 BOFAction 属性保持兼容。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOFActionEnum.adDoMoveFirst">
+      <summary>将第一个记录保持为当前记录。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOFActionEnum.adStayBOF">
+      <summary>移过 Recordset 的开始处会在第一个记录上触发 Validate 事件，然后在无效 (BOF) 记录上触发 Reposition 事件。此时，将禁用 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 上的“移到上一条记录”按钮。</summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EndOfRecordsetDelegate">
+      <summary>表示将处理事件的方法。</summary>
+      <param name="fMoreData">一个 Boolean，确定是否已到达 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.Recordset" /> 的末尾。</param>
+      <param name="adStatus">一个 ADODB.EventStatusEnum。</param>
+      <param name="pRecordset">一个 ADODB.Recordset 对象。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOFActionEnum">
+      <summary>提供常量以与 Visual Basic 6.0 EOFAction 属性保持兼容。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOFActionEnum.adDoMoveLast">
+      <summary>将最后一个记录保持为当前记录。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOFActionEnum.adStayEOF">
+      <summary>移过 Recordset 的末尾会触发 ADODC 的 Validation 事件在最后一条记录上发生；然后在无效的 (EOF) 记录上发生 Reposition 事件。此时，将禁用 ADODC 上的“移到下一条记录”按钮。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOFActionEnum.adDoAddNew">
+      <summary>移过最后一条记录会触发 ADODC 的 Validation 事件在当前记录上发生，然后发生自动 AddNew 事件，然后在新记录上发生 Reposition 事件。</summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.ErrorDelegate">
+      <summary>表示将处理 Error 事件的方法。</summary>
+      <param name="errorNumber">一个表示错误号的 Integer。</param>
+      <param name="description">包含错误信息的 String。</param>
+      <param name="scode">一个表示错误源的 Integer。</param>
+      <param name="source">一个表示源名称的 String。</param>
+      <param name="helpFile">一个表示错误帮助文件的 String。</param>
+      <param name="helpContext">一个 Integer，表示帮助主题的上下文 ID。</param>
+      <param name="cancelDisplay">一个 Boolean，用于确定用户是否可以取消错误对话框。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.FetchCompleteDelegate">
+      <summary>表示将处理 FetchComplete 事件的方法。</summary>
+      <param name="pError">一个 ADODB.Error 对象。</param>
+      <param name="adStatus">ADODB.EventStatusEnum 枚举。</param>
+      <param name="pRecordset">一个 ADODB.Recordset 对象。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.FetchProgressDelegate">
+      <summary>表示将处理 FetchProgress 事件的方法。</summary>
+      <param name="progress">一个表示获取操作进度的 Integer。</param>
+      <param name="maxProgress">一个表示获取操作大小的 Integer。</param>
+      <param name="adStatus">一个 ADODB.EventStatusEnum。</param>
+      <param name="pRecordset">一个 ADODB.Recordset 对象。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.FieldChangeCompleteDelegate">
+      <summary>表示将处理 FieldChange 事件的方法。</summary>
+      <param name="cFields">一个指定字段数的 Integer。</param>
+      <param name="fields">一个 ADODB.Field 对象。</param>
+      <param name="pError">一个 ADODB.Error 对象。</param>
+      <param name="adStatus">一个 ADODB.EventStatusEnum。</param>
+      <param name="pRecordset">一个 ADODB.Recordset 对象。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.MoveCompleteDelegate">
+      <summary>表示将处理 MoveComplete 事件的方法。</summary>
+      <param name="adReason">一个 ADODB.EventReasonEnum。</param>
+      <param name="pError">一个 ADODB.Error 对象。</param>
+      <param name="adStatus">一个 ADODB.EventStatusEnum。</param>
+      <param name="pRecordset">一个 ADODB.Recordset 对象。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.OrientationEnum">
+      <summary>提供常量以与 Visual Basic 6.0 Orientation 属性保持兼容。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.OrientationEnum.adHorizontal">
+      <summary>将水平显示 ADODC。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.OrientationEnum.adVertical">
+      <summary>将垂直显示 ADODC。</summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.RecordChangeCompleteDelegate">
+      <summary>表示将处理 RecordChangeComplete 事件的方法。</summary>
+      <param name="adReason">一个 ADODB.EventReasonEnum。</param>
+      <param name="cRecords">一个表示记录数的 Integer。</param>
+      <param name="pError">一个 ADODB.Error 对象。</param>
+      <param name="adStatus">一个 ADODB.EventStatusEnum。</param>
+      <param name="pRecordset">一个 ADODB.Recordset 对象。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.RecordsetChangeCompleteDelegate">
+      <summary>表示将处理 RecordsetChangeComplete 事件的方法。</summary>
+      <param name="adReason">一个 ADODB.EventReasonEnum。</param>
+      <param name="pError">一个 ADODB.Field 对象。</param>
+      <param name="adStatus">一个 ADODB.Error 对象。</param>
+      <param name="pRecordset">一个 ADODB.EventStatusEnum。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.WillChangeFieldDelegate">
+      <summary>表示将处理 WillChangeField 事件的方法。</summary>
+      <param name="cFields">一个表示字段数的 Integer。</param>
+      <param name="fields">一个包含字段的 Object。</param>
+      <param name="adStatus">一个 ADODB.EventStatusEnum。</param>
+      <param name="pRecordset">一个 ADODB.Recordset 对象。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.WillChangeRecordDelegate">
+      <summary>表示将处理 WillChangeRecord 事件的方法。</summary>
+      <param name="adReason">一个 ADODB.EventReasonEnum。</param>
+      <param name="cRecords">一个表示记录数的 Integer。</param>
+      <param name="adStatus">一个 ADODB.EventStatusEnum。</param>
+      <param name="pRecordset">一个 ADODB.Recordset 对象。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.WillChangeRecordsetDelegate">
+      <summary>表示将处理 WillChangeRecordset 事件的方法。</summary>
+      <param name="adReason">一个 ADODB.EventReasonEnum。</param>
+      <param name="adStatus">一个 ADODB.EventStatusEnum。</param>
+      <param name="pRecordset">一个 ADODB.Recordset 对象。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.WillMoveDelegate">
+      <summary>表示将处理 WillMove 事件的方法。</summary>
+      <param name="adReason">一个 ADODB.EventReasonEnum。</param>
+      <param name="adStatus">一个 ADODB.EventStatusEnum。</param>
+      <param name="pRecordset">一个 ADODB.Recordset 对象。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray">
+      <summary>提供 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的控件数组。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.#ctor(System.ComponentModel.IContainer)">
+      <summary>初始化 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray" /> 类的新实例，并指定其容器。</summary>
+      <param name="Container">将在其中承载控件数组的 <see cref="T:System.ComponentModel.IContainer" />。</param>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.BackColorChanged">
+      <summary>当 <see cref="P:System.Windows.Forms.Control.BackColor" /> 属性的值更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.BackgroundImageChanged">
+      <summary>当 <see cref="P:System.Windows.Forms.Control.BackgroundImage" /> 属性的值更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.BindingContextChanged">
+      <summary>当 <see cref="P:System.Windows.Forms.Control.BackgroundImageLayout" /> 属性的值更改时发生。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.CanExtend(System.Object)">
+      <summary>获取一个值，该值确定控件是否为 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray" /> 的成员。</summary>
+      <returns>
+            如果 <paramref name="target" /> 是控件数组的一个成员，则为 true；否则为 false。</returns>
+      <param name="target">一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件。</param>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.CausesValidationChanged">
+      <summary>当 <see cref="P:System.Windows.Forms.Control.CausesValidation" /> 属性的值更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.ChangeUICues">
+      <summary>在焦点或键盘用户界面 (UI) 提示更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.Click">
+      <summary>在单击 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray" /> 中的 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.ContextMenuChanged">
+      <summary>当 <see cref="P:System.Windows.Forms.Control.ContextMenu" /> 属性的值更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.CtlLoad">
+      <summary>在加载 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.CursorChanged">
+      <summary>当 <see cref="P:System.Windows.Forms.Control.Cursor" /> 属性的值更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.DockChanged">
+      <summary>当 <see cref="P:System.Windows.Forms.Control.Dock" /> 属性的值更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.DoubleClick">
+      <summary>在双击 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray" /> 中的 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.DragDrop">
+      <summary>在完成拖放操作时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.DragEnter">
+      <summary>在将对象拖入控件的边界时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.DragLeave">
+      <summary>在将对象拖出控件的边界时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.DragOver">
+      <summary>在将对象拖到控件的边界上发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.EnabledChanged">
+      <summary>当 <see cref="P:System.Windows.Forms.Control.Enabled" /> 属性的值更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.EndOfRecordset">
+      <summary>在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOF" /> 属性更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.Enter">
+      <summary>进入控件时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.Error">
+      <summary>在引发 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的异常时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.FetchComplete">
+      <summary>在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件完成从数据库提取数据的操作时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.FetchProgress">
+      <summary>在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件从数据库中提取数据时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.FieldChangeComplete">
+      <summary>在完成对 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 Recordset 中的 Field 的更新时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.FontChanged">
+      <summary>当 <see cref="P:System.Windows.Forms.Control.Font" /> 属性的值更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.ForeColorChanged">
+      <summary>当 <see cref="P:System.Windows.Forms.Control.ForeColor" /> 属性的值更改时发生。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.GetControlInstanceType">
+      <summary>重写 <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />。</summary>
+      <returns>
+        <see cref="T:System.Type" />。</returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.GetIndex(Microsoft.VisualBasic.Compatibility.VB6.ADODC)">
+      <summary>获取 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray" /> 中的索引。</summary>
+      <returns>一个 Short，表示指定的 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 的索引。</returns>
+      <param name="o">控件数组中的一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" />。</param>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.GiveFeedback">
+      <summary>在执行拖动操作期间发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.HelpRequested">
+      <summary>当用户请求控件的帮助时发生。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.HookUpControlEvents(System.Object)">
+      <summary>重写 <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.HookUpControlEvents(System.Object)" />。</summary>
+      <param name="o">一个 <see cref="T:System.Object" />。</param>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.ImeModeChanged">
+      <summary>当 <see cref="P:System.Windows.Forms.Control.ImeMode" /> 属性的值更改时发生。</summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.Item(System.Int16)">
+      <summary>通过索引获取 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray" /> 的特定元素。只读。</summary>
+      <returns>位于控件数组中指定 <paramref name="Index" /> 处的 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" />。</returns>
+      <param name="Index">一个指定控件数组元素位置的 Short。</param>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.KeyDown">
+      <summary>当焦点在控件上按下键时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.KeyPress">
+      <summary>当焦点在控件上按下键时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.KeyUp">
+      <summary>当焦点在控件上释放键时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.Layout">
+      <summary>在控件应重新定位其子控件时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.Leave">
+      <summary>在输入焦点离开控件时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.LocationChanged">
+      <summary>当 <see cref="P:System.Windows.Forms.Control.Location" /> 属性的值更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.MouseDown">
+      <summary>当鼠标指针位于控件上并按下鼠标键时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.MouseEnter">
+      <summary>在鼠标指针进入控件时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.MouseHover">
+      <summary>在鼠标指针停放在控件上时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.MouseLeave">
+      <summary>在鼠标指针离开控件时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.MouseMove">
+      <summary>在鼠标指针移到控件上时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.MouseUp">
+      <summary>在鼠标指针在控件上并释放鼠标键时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.Move">
+      <summary>在移动控件时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.MoveComplete">
+      <summary>当 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 Recordset 中已发生 MoveFirst、MoveNext 或 MoveLast 方法时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.Paint">
+      <summary>在重绘控件时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.ParentChanged">
+      <summary>当控件的 <see cref="P:System.Windows.Forms.Control.Parent" /> 属性更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.QueryAccessibilityHelp">
+      <summary>在 <see cref="T:System.Windows.Forms.AccessibleObject" /> 为辅助功能应用程序提供帮助时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.QueryContinueDrag">
+      <summary>在拖放操作期间发生，并且允许拖动源确定是否应取消拖放操作。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.RecordChangeComplete">
+      <summary>在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 Recordset 中的当前记录更改之后发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.RecordsetChangeComplete">
+      <summary>在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 Recordset 更改时发生。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.ResetIndex(Microsoft.VisualBasic.Compatibility.VB6.ADODC)">
+      <summary>
+        <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray" /> 类不支持 ResetIndex 方法</summary>
+      <param name="o">
+        <see cref="T:System.Windows.Forms.Control" />。</param>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.Resize">
+      <summary>在调整控件大小时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.RightToLeftChanged">
+      <summary>在 <see cref="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.RightToLeftChanged" /> 属性值更改时发生。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.SetIndex(Microsoft.VisualBasic.Compatibility.VB6.ADODC,System.Int16)">
+      <summary>设置 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray" /> 中的初始 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 的索引。</summary>
+      <param name="o">控件数组中的一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" />。</param>
+      <param name="Index">一个 Short，表示指定的 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 的索引。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.ShouldSerializeIndex(Microsoft.VisualBasic.Compatibility.VB6.ADODC)">
+      <summary>返回一个值，该值指示 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件是否为此 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray" /> 的成员。</summary>
+      <returns>如果指定的 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 是另一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray" /> 的成员，则 ShouldSerializeIndex 将返回 false。说明：<see cref="N:Microsoft.VisualBasic.Compatibility.VB6" /> 命名空间中的函数和对象是提供给用于将 Visual Basic 6.0 升级到 Visual Basic 2008 的工具使用的。大多数情况下，这些函数和对象可再现 .NET Framework 中其他命名空间的功能。只有 Visual Basic 6.0 代码模型与 .NET Framework 实现有显著区别时才需要这些函数和对象。</returns>
+      <param name="o">一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件。</param>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.SizeChanged">
+      <summary>在 <see cref="P:System.Windows.Forms.Control.Size" /> 属性值更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.StyleChanged">
+      <summary>在控件样式更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.SystemColorsChanged">
+      <summary>系统颜色更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.TabIndexChanged">
+      <summary>在 <see cref="P:System.Windows.Forms.Control.TabIndex" /> 属性值更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.TabStopChanged">
+      <summary>在 <see cref="P:System.Windows.Forms.Control.TabStop" /> 属性值更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.Validated">
+      <summary>在控件完成验证时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.Validating">
+      <summary>在控件正在验证时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.VisibleChanged">
+      <summary>在 <see cref="P:System.Windows.Forms.Control.Visible" /> 属性值更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.WillChangeField">
+      <summary>在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 Recordset 中的 Field 更改之前发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.WillChangeRecord">
+      <summary>在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 Recordset 中的当前记录更改之前发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.WillChangeRecordset">
+      <summary>在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 Recordset 更改之前发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.WillMove">
+      <summary>在 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> 控件的 Recordset 的 MoveFirst、MoveNext 或 MoveLast 方法执行之前发生。</summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment">
+      <summary>在已从 Visual Basic 6.0 升级的应用程序中模拟 Visual Basic 6.0 Data Environment。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.addDataSourceListener(msdatasrc.DataSourceListener)">
+      <summary>
+        <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" /> 类中未实现此方法。</summary>
+      <param name="ds">无。</param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Commands">
+      <summary>获取 ADODB.Command 对象的集合以便在从 Visual Basic 6.0 升级的应用程序中使用。</summary>
+      <returns>ADODB.Command 对象的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Commands(System.Object)">
+      <summary>获取 ADODB.Command 对象的集合以便在从 Visual Basic 6.0 升级的应用程序中使用。</summary>
+      <returns>ADODB.Command 对象的集合。</returns>
+      <param name="lpVar">一个 Visual Basic 6.0 Variant，其中包含 ADODB.Command 对象。</param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Connections">
+      <summary>获取 ADODB.Connection 对象的集合以便在从 Visual Basic 6.0 升级的应用程序中使用。</summary>
+      <returns>ADODB.Connection 对象的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Connections(System.Object)">
+      <summary>获取 ADODB.Connection 对象的集合以便在从 Visual Basic 6.0 升级的应用程序中使用。</summary>
+      <returns>ADODB.Connection 对象的集合。</returns>
+      <param name="lpVar">一个 Visual Basic 6.0 Variant，其中包含 ADODB.Connection 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Dispose">
+      <summary>释放由 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" /> 占用的非托管资源。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Dispose(System.Boolean)">
+      <summary>释放由 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" /> 使用的非托管资源，也可以释放托管资源。</summary>
+      <param name="disposing">
+                如为 true，则释放托管资源和非托管资源；如为 false，则仅释放非托管资源。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Finalize">
+      <summary>重写 <see cref="M:System.Object.Finalize" /> 方法。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.getDataMember(System.String,System.Guid@)">
+      <summary>基于 ADODB.Command 对象调用方法。</summary>
+      <returns>一个 <see cref="T:System.Object" />，其中包含 ADODB.Command 对象。</returns>
+      <param name="strDataMember">一个 String，其中包含一个 ADODB.Command 对象。</param>
+      <param name="Id">一个表示 ADODB.Recordset 对象的 GUID。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.GetDataMemberCount">
+      <summary>获取 ADODB.Command 对象的计数。</summary>
+      <returns>一个包含计数的 Integer。</returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.GetDataMemberName(System.Int32)">
+      <summary>
+        <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" /> 类中未实现此方法。</summary>
+      <returns>Nothing.</returns>
+      <param name="Index">不适用。</param>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.m_Commands">
+      <summary>包含 <see cref="Overload:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Commands" /> 集合。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.m_Connections">
+      <summary>包含 <see cref="Overload:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Connections" /> 集合。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.m_NonRSReturningCommands">
+      <summary>包含一个集合。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.m_Recordsets">
+      <summary>包含 <see cref="Overload:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Recordsets" /> 集合。</summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Object">
+      <summary>获取 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" /> 对象。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" /> 对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Recordsets">
+      <summary>获取 ADODB.Recordset 对象的集合以便在从 Visual Basic 6.0 升级的应用程序中使用。</summary>
+      <returns>ADODB.Recordset 对象的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Recordsets(System.Object)">
+      <summary>获取 ADODB.Recordset 对象的集合以便在从 Visual Basic 6.0 升级的应用程序中使用。</summary>
+      <returns>ADODB.Recordset 对象的集合。</returns>
+      <param name="lpVar">一个 Visual Basic 6.0 Variant，其中包含 ADODB.Recordset 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.removeDataSourceListener(msdatasrc.DataSourceListener)">
+      <summary>
+        <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" /> 类中未实现此方法。</summary>
+      <param name="ds">不适用。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.BindingCollectionEnumerator">
+      <summary>支持在从 Visual Basic 6.0 升级的应用程序中对绑定集合进行简单迭代。</summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.BindingCollectionEnumerator.Current">
+      <summary>获取绑定集合中的当前元素。</summary>
+      <returns>集合中的当前元素。</returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.BindingCollectionEnumerator.MoveNext">
+      <summary>将枚举数推进到集合的下一个元素。</summary>
+      <returns>
+如果枚举数成功地推进到下一个元素，则为 true；如果枚举数越过集合的结尾，则为 false。</returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.BindingCollectionEnumerator.Reset">
+      <summary>将枚举数设置为其初始位置，该位置位于集合中第一个元素之前。</summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.CONNECTDATA">
+      <summary>一个 Structure，其中包含由已从 Visual Basic 6.0 升级的应用程序使用的数据。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.CONNECTDATA.cookie">
+      <summary>由 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.CONNECTDATA" />Structure 使用的 Integer。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.CONNECTDATA.pUnk">
+      <summary>一个由 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.CONNECTDATA" />Structure 使用的 <see cref="T:System.IntPtr" />。</summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING">
+      <summary>提供一个 Structure，它表示从 Visual Basic 6.0 升级的应用程序中的 ADO 绑定。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING.bPrecision">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING.bScale">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING.cbMaxLen">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING.dwFlags">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING.eParamIO">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING.iOrdinal">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING.memOwner">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING.obLength">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING.obStatus">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING.obValue">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING.part">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING.pBindExt">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING.pObject">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING.typeInfo">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING.wType">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" />Structure 的一个字段。</summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO">
+      <summary>一个 Structure，其中包含由已从 Visual Basic 6.0 升级的应用程序使用的数据。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO.columnFlags">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO.columnId">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO.columnOrdinal">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO.columnSize">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO.columnType">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO.name">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO.precision">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO.scale">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO.typeInfo">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO" />Structure 的一个字段。</summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.DBID">
+      <summary>提供一个 Structure，供已从 Visual Basic 6.0 升级的应用程序内部使用。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBID.dbkind">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBID" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBID.uGuid">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBID" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBID.uName">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBID" />Structure 的一个字段。</summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.DBinding">
+      <summary>提供 Microsoft 数据绑定集合库 (msbind) 中 DBinding 接口的托管等效项，以便在从 Visual Basic 6.0 升级的应用程序中使用。</summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.DBinding.DataChanged">
+      <summary>获取或设置一个值，指示数据已更改。</summary>
+      <returns>
+            如果数据已更改，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.DBinding.DataField">
+      <summary>获取一个数据字段。</summary>
+      <returns>String，包含该数据。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.DBinding.DataFormat">
+      <summary>获取或设置数据字段的数据格式。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormatDisp" /> 接口。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.DBinding.Key">
+      <summary>获取数据字段的键值。</summary>
+      <returns>一个包含键值的 String。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.DBinding.Object">
+      <summary>获取一个数据对象。</summary>
+      <returns>一个包含数据的 <see cref="T:System.Object" />。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.DBinding.PropertyName">
+      <summary>获取数据对象中属性的名称。</summary>
+      <returns>一个包含属性名称的 String。</returns>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection">
+      <summary>提供一个接口，以在从 Visual Basic 6.0 升级的应用程序中替换基于 COM 的数据绑定。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.Add(System.Object,System.String,System.String,Microsoft.VisualBasic.Compatibility.VB6.IDataFormatDisp,System.String)">
+      <summary>将 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBinding" /> 添加到 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection" /> 中。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBinding" /> 接口。</returns>
+      <param name="obj">一个包含数据的 <see cref="T:System.Object" />。</param>
+      <param name="propertyName">一个包含属性名称的 String。</param>
+      <param name="dataField">一个包含数据字段名称的 String。</param>
+      <param name="dataFormat">可选。一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormatDisp" /> 接口。</param>
+      <param name="key">可选。一个包含键值的 String。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.Clear">
+      <summary>清除绑定对象的集合。</summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.Count">
+      <summary>获取 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection" /> 中绑定的总数。</summary>
+      <returns>一个包含计数的 Integer。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.DataMember">
+      <summary>获取或设置 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection" /> 的数据成员。</summary>
+      <returns>一个字符串，其中包含该数据成员的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.DataSource">
+      <summary>获取或设置 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection" /> 的数据源。</summary>
+      <returns>一个基于 COM 的 msdatasrc.DataSource 对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.Item(System.Object)">
+      <summary>获取指定索引处的 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBinding" />。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBinding" /> 接口。</returns>
+      <param name="index">一个表示索引的 <see cref="T:System.Object" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.Remove(System.Object)">
+      <summary>从 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection" /> 中移除 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBinding" /> 接口。</summary>
+      <param name="index">一个表示索引的 <see cref="T:System.Object" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.UpdateControls">
+      <summary>从 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection" /> 对象的数据源获取当前行并重置通过该对象绑定的控件的内容。</summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.UpdateMode">
+      <summary>获取或设置 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection" /> 的 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.UpdateMode" />。</summary>
+      <returns>一个 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.UpdateMode" /> 枚举。</returns>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.DBKINDENUM">
+      <summary>提供一个枚举，供工具用于将 Visual Basic 6.0 应用程序升级到 Visual Basic 2008。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBKINDENUM.DBKIND_GUID_NAME">
+      <summary>0</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBKINDENUM.DBKIND_GUID_PROPID">
+      <summary>1</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBKINDENUM.DBKIND_NAME">
+      <summary>2</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBKINDENUM.DBKIND_PGUID_NAME">
+      <summary>3</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBKINDENUM.DBKIND_PGUID_PROPID">
+      <summary>4</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBKINDENUM.DBKIND_PROPID">
+      <summary>5</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBKINDENUM.DBKIND_GUID">
+      <summary>6</summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.DBPROPIDSET">
+      <summary>提供一个 Structure，以便在已从 Visual Basic 6.0 升级的应用程序中使用。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBPROPIDSET.cPropertyIDs">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBPROPIDSET" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBPROPIDSET.guidPropertySet">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBPROPIDSET" />Structure 的一个字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBPROPIDSET.rgPropertyIDs">
+      <summary>内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBPROPIDSET" />Structure 的一个字段。</summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IAccessor">
+      <summary>提供 OLE DB IAccessor 接口的实现，以供从 Visual Basic 6.0 升级的应用程序使用。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IAccessor.AddRefAccessor(System.Int32,System.Int32@)">
+      <summary>向现有的访问器添加引用数。</summary>
+      <param name="hAccessor">要递增其引用数的访问器句柄。</param>
+      <param name="cRefCount">一个指向内存的指针，该内存用于返回访问器句柄的引用数。如果 <paramref name="cRefCount" /> 为 null 指针，则不返回引用数。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IAccessor.CreateAccessor(System.Int32,System.Int32,Microsoft.VisualBasic.Compatibility.VB6.DBBINDING[],System.Int32,System.Int32@,System.IntPtr)">
+      <summary>从一组绑定创建访问器。</summary>
+      <param name="accessorFlags">一个位掩码，说明访问器的属性及其使用方式。</param>
+      <param name="cBindings">访问器中的绑定数。</param>
+      <param name="bindings">
+        <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" /> 结构的数组。</param>
+      <param name="cbRowSize">在使用方的缓冲区中为一组参数或条件值分配的字节数。</param>
+      <param name="hAccessor">一个指向内存的指针，该内存用于返回已创建的访问器的句柄。</param>
+      <param name="pBindStatus">一个指向 DBBINDSTATUS 值的数组的指针。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IAccessor.GetBindings(System.Int32,System.Int32@,System.Int32@,System.IntPtr@)">
+      <summary>返回访问器中的绑定。</summary>
+      <param name="hAccessor">要返回其绑定的访问器的句柄。</param>
+      <param name="accessorFlags">一个指向内存的指针，该内存用于返回一个说明访问器的属性和及其使用方式的位掩码。</param>
+      <param name="cBindings">一个指向内存的指针，该内存用于返回访问器中的绑定数。</param>
+      <param name="rgBindings">一个指向内存的指针，该内存用于返回 DBBINDSTATUS 结构的数组。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IAccessor.ReleaseAccessor(System.Int32,System.Int32@)">
+      <summary>释放访问器。</summary>
+      <param name="hAccessor">要释放的访问器的句柄。</param>
+      <param name="cRefCount">一个指向内存的指针，该内存用于返回访问器句柄的剩余引用数。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IChapteredRowset">
+      <summary>提供 OLE DB IAccessor 接口的实现，以供从 Visual Basic 6.0 升级的应用程序使用。 </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IChapteredRowset.AddRefChapter(System.Int32,System.Int32@)">
+      <summary>向现有的章节添加引用数。</summary>
+      <param name="hChapter">要递增其引用数的章节句柄。</param>
+      <param name="cRefCount">一个指向内存的指针，该内存用于返回章节句柄的引用数。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IChapteredRowset.ReleaseChapter(System.Int32,System.Int32@)">
+      <summary>释放一个章节。</summary>
+      <param name="hChapter">章节句柄。</param>
+      <param name="cRefCount">一个指向内存的指针，该内存用于返回章节句柄的引用数。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IColumnsInfo">
+      <summary>提供 OLE DB IColumnInfo 接口的实现，以供从 Visual Basic 6.0 升级的应用程序使用。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IColumnsInfo.GetColumnInfo(System.Int32@,System.IntPtr@,System.IntPtr@)">
+      <summary>返回大多数使用方需要的列元数据。</summary>
+      <param name="cColumns">一个指向内存的指针，该内存用于返回行集合中的列数；此数字包括书签列（如果有书签列）。</param>
+      <param name="pColumnInfo">一个指向内存的指针，该内存用于返回 DBCOLUMNINFO 结构的数组。</param>
+      <param name="pStringsBuffer">一个指向内存的指针，该内存用于返回指向单个分配块内所有字符串值（在 columnid 内使用的名称或用作 pwszName 的名称）的存储区的指针。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IColumnsInfo.MapColumnIDs(System.Int32,Microsoft.VisualBasic.Compatibility.VB6.DBID[],System.Int32[])">
+      <summary>返回行集合中列序号的数组，这些列序号由指定的列 ID 标识。</summary>
+      <param name="cColumnIDs">要映射的列 ID 数。</param>
+      <param name="columnIDs">一个数组，其中包含要确定其列序号的列的 ID。</param>
+      <param name="rgColumns">由 <paramref name="columnIDs" /> 的元素标识的列的 <paramref name="cColumnIDs" /> 序号的数组。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IConnectionPoint">
+      <summary>提供 OLE DB IConnectionPoint 接口的实现，以供从 Visual Basic 6.0 升级的应用程序使用。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IConnectionPoint.Advise(System.IntPtr,System.Int32@)">
+      <summary>在连接点和调用方的接收器对象之间建立一个通知连接。</summary>
+      <param name="sink">对接收器的引用，该接收器为此连接点所管理的输出接口接收调用。</param>
+      <param name="cookie">此方法返回时，包含连接 Cookie。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IConnectionPoint.EnumConnections(Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections@)">
+      <summary>创建枚举数对象，以便循环访问到此连接点的现有连接。</summary>
+      <param name="enumC">此方法返回时，包含新创建的枚举数。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IConnectionPoint.GetConnectionInterface(System.Guid@)">
+      <summary>返回由此连接点管理的输出接口的 IID。</summary>
+      <param name="piid">此参数返回时，包含由此连接点管理的输出接口的 IID。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IConnectionPoint.GetConnectionPointContainer(Microsoft.VisualBasic.Compatibility.VB6.IConnectionPointContainer@)">
+      <summary>检索指向在概念上拥有此连接点的可连接对象的 IConnectionPointContainer 接口指针。</summary>
+      <param name="cpc">此参数返回时，包含可连接对象的 IConnectionPointContainer 接口。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IConnectionPoint.Unadvise(System.Int32)">
+      <summary>关闭先前通过 <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.IConnectionPoint.Advise(System.IntPtr,System.Int32@)" /> 方法建立的通知连接。</summary>
+      <param name="cookie">先前从 <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.IConnectionPoint.Advise(System.IntPtr,System.Int32@)" /> 方法返回的连接 Cookie。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IConnectionPointContainer">
+      <summary>提供 OLE DB IConnectionPointContainer 接口的实现，以供从 Visual Basic 6.0 升级的应用程序使用。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IConnectionPointContainer.EnumConnectionPoints(Microsoft.VisualBasic.Compatibility.VB6.IEnumConnectionPoints@)">
+      <summary>创建在可连接对象中支持的所有连接点的枚举数，每个 IID 一个连接点。</summary>
+      <param name="enumC">当方法返回时，此参数将包含枚举数的接口指针。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IConnectionPointContainer.FindConnectionPoint(System.Guid@,Microsoft.VisualBasic.Compatibility.VB6.IConnectionPoint@)">
+      <summary>询问可连接对象是否具有特定 IID 的连接点，如果有，则返回指向该连接点的 IConnectionPoint 接口指针。</summary>
+      <param name="riid">对输出接口 IID 的引用，此输出接口 IID 的连接点正在被请求。</param>
+      <param name="cp">当方法返回时，此参数将包含管理输出接口 <paramref name="riid" /> 的连接点。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat">
+      <summary>为 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBinding" /> 接口的 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.DBinding.DataFormat" /> 属性提供支持。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat.Clone(Microsoft.VisualBasic.Compatibility.VB6.IDataFormat@)">
+      <summary>创建 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" /> 的浅表副本。</summary>
+      <param name="newObject">一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat.Convert(System.Int32,System.Object,System.Object@)">
+      <summary>将 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" /> 转换为 Visual Basic 6.0 Variant。</summary>
+      <param name="cookie">一个 Integer。</param>
+      <param name="from">一个 <see cref="T:System.Object" />。</param>
+      <param name="varTo">
+        <see cref="T:Microsoft.VisualBasic.VariantType" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat.Default(System.Boolean@)">
+      <summary>确定 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" /> 是否为默认的 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" />。</summary>
+      <param name="fDefault">
+        <see cref="T:System.Boolean" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat.GetBinding(System.Runtime.InteropServices.VarEnum,System.Int32,Microsoft.VisualBasic.Compatibility.VB6.IRowset,Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO@,Microsoft.VisualBasic.Compatibility.VB6.DBBINDING@,System.Int32@,System.Int32@)">
+      <summary>获取 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" /> 的绑定。</summary>
+      <param name="vtPropHint">
+        <see cref="T:System.Runtime.InteropServices.VarEnum" />。</param>
+      <param name="rgfDataFormat">一个 Integer。</param>
+      <param name="rowset">一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IRowset" />。</param>
+      <param name="columnInfo">一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBCOLUMNINFO" /> 结构。</param>
+      <param name="binding">一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" /> 结构。</param>
+      <param name="size">一个 Integer。</param>
+      <param name="cookie">一个 Integer。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat.GetData(System.Int32,System.IntPtr,System.Object@,System.Int32@,System.Object)">
+      <summary>获取 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" /> 接口的数据。</summary>
+      <param name="cookie">一个 Integer。</param>
+      <param name="from">一个 <see cref="T:System.IntPtr" />。</param>
+      <param name="varTo">
+        <see cref="T:Microsoft.VisualBasic.VariantType" />。</param>
+      <param name="dbStatus">一个 Integer。</param>
+      <param name="pObject">一个 <see cref="T:System.Object" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat.GetLcid(System.Int32@)">
+      <summary>获取 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" /> 接口的区域设置 ID。</summary>
+      <param name="lcid">一个 Integer。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat.GetRawData(System.Int32,System.IntPtr,System.Object@,System.Int32@)">
+      <summary>获取 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" /> 接口的原始数据。</summary>
+      <param name="cookie">一个 Integer。</param>
+      <param name="from">一个 <see cref="T:System.IntPtr" />。</param>
+      <param name="varTo">
+        <see cref="T:Microsoft.VisualBasic.VariantType" />。</param>
+      <param name="dbStatus">一个 Integer。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat.GetSubFormatType(System.Int32@)">
+      <summary>获取 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" /> 接口的子格式类型。</summary>
+      <param name="subFormatType">一个 Integer。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat.ReleaseBinding(System.Int32)">
+      <summary>释放 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" /> 接口的绑定。</summary>
+      <param name="cookie">一个 Integer。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat.ReleaseData(System.Int32,System.IntPtr)">
+      <summary>释放 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" /> 接口的数据。</summary>
+      <param name="cookie">一个整数。</param>
+      <param name="pv">一个 <see cref="T:System.IntPtr" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat.SetData(System.Int32,System.Object@,System.IntPtr,System.Object)">
+      <summary>设置 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" /> 接口的数据。</summary>
+      <param name="cookie">一个 Integer。</param>
+      <param name="from">一个 <see cref="T:System.IntPtr" />。</param>
+      <param name="pVarTo">
+        <see cref="T:Microsoft.VisualBasic.VariantType" />。</param>
+      <param name="pObject">一个 <see cref="T:System.Object" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat.SetLcid(System.Int32)">
+      <summary>设置 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" /> 的区域设置 ID。</summary>
+      <param name="lcid">一个 Integer。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat.SetRawData(System.Int32,System.Object,System.IntPtr)">
+      <summary>设置 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" /> 的原始数据。</summary>
+      <param name="cookie">一个 Integer。</param>
+      <param name="from">一个 <see cref="T:System.IntPtr" />。</param>
+      <param name="pVarTo">
+        <see cref="T:Microsoft.VisualBasic.VariantType" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat.SetSubFormatType(System.Int32)">
+      <summary>设置 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormat" /> 接口的子格式类型。</summary>
+      <param name="subFormatType">一个 Integer。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormatDisp">
+      <summary>为 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBinding" /> 接口的 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.DBinding.DataFormat" /> 属性提供支持。</summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IEnumConnectionPoints">
+      <summary>管理 IEnumConnectionPoints 接口的定义。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IEnumConnectionPoints.Clone(Microsoft.VisualBasic.Compatibility.VB6.IEnumConnectionPoints@)">
+      <summary>创建与当前枚举数包含相同枚举状态的一个新枚举数。</summary>
+      <param name="ecp">此方法返回时，包含对该新创建的枚举数的引用。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IEnumConnectionPoints.Next(System.Int32,Microsoft.VisualBasic.Compatibility.VB6.IConnectionPoint[]@,System.Int32@)">
+      <summary>检索枚举序列中指定数目的项。 </summary>
+      <param name="cConnections">要在 <paramref name="cp" /> 中返回的 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IConnectionPoint" /> 引用的数目。</param>
+      <param name="cp">此方法返回时，包含对枚举连接的引用。该参数未经初始化即被传递。</param>
+      <param name="cFetched">此方法返回时，包含对 <paramref name="cp" /> 中枚举的连接的实际数目的引用。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IEnumConnectionPoints.Reset">
+      <summary>将枚举序列重置到开始处。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IEnumConnectionPoints.Skip(System.Int32)">
+      <summary>跳过枚举序列中指定数目的项。</summary>
+      <param name="cConnections">枚举中要跳过的元素数目。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections">
+      <summary>管理 IEnumConnections 接口的定义。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections.Clone(Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections@)">
+      <summary>创建与当前枚举数包含相同枚举状态的一个新枚举数。</summary>
+      <param name="ec">此方法返回时，包含对该新创建的枚举数的引用。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections.Next(System.Int32,Microsoft.VisualBasic.Compatibility.VB6.CONNECTDATA[]@,System.Int32@)">
+      <summary>检索枚举序列中指定数目的项。</summary>
+      <param name="cConnections">要在 <paramref name="cd" /> 中返回的 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.CONNECTDATA" /> 结构的数目。</param>
+      <param name="cd">此方法返回时，包含对枚举连接的引用。该参数未经初始化即被传递。</param>
+      <param name="cFetched">此方法返回时，包含对 <paramref name="cd" /> 中枚举的连接的实际数目的引用。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections.Reset">
+      <summary>将枚举序列重置到开始处。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections.Skip(System.Int32)">
+      <summary>跳过枚举序列中指定数目的项。</summary>
+      <param name="cConnections">枚举中要跳过的元素数目。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IRowPosition">
+      <summary>提供 OLE DB IRowPosition 接口的实现，以供从 Visual Basic 6.0 升级的应用程序使用。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowPosition.ClearRowPosition">
+      <summary>清除行位置。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowPosition.GetRowPosition(System.Int32@,System.Int32@,System.Int32@)">
+      <summary>检索当前行位置。</summary>
+      <param name="hChapter">一个指向内存的指针，该内存用于返回与当前行关联的章节。如果未将行集分成章节，<paramref name="hChapter" /> 将设置为 DB_NULL_HCHAPTER。如果 <paramref name="hChapter" /> 在输入时为空指针，则将不返回章节值。</param>
+      <param name="hRow">一个指向内存的指针，该内存用于返回当前行位置的 hRow；如果没有当前行位置，则返回 DB_NULL_HROW。</param>
+      <param name="dbPositionFlags">一个指向内存的指针，该内存用于返回有关行位置的附加信息。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowPosition.GetRowset(System.Guid@,System.Object@)">
+      <summary>返回当前的基础 Rowset。</summary>
+      <param name="iid">为 <paramref name="rowset" /> 中返回的行集合请求的 IID。</param>
+      <param name="rowset">一个指向内存的指针，该内存用于返回基础行集合的接口指针。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowPosition.Initialize(System.Object)">
+      <summary>通过设置源行集合初始化行位置对象。</summary>
+      <param name="rowset">指向源行集合上的接口的指针。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowPosition.SetRowPosition(System.Int32,System.Int32,System.Int32)">
+      <summary>设置当前行位置。</summary>
+      <param name="hChapter">与当前行关联的章节；如果行集合不分章节，则为与 DB_NULL_HCHAPTER 关联的章节。</param>
+      <param name="hRow">新的当前行。</param>
+      <param name="dbPositionFlags">一个标志，指示有关新行位置的附加信息。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IRowPositionChange">
+      <summary>提供 OLE DB IRowPositionChange 接口的实现，以供从 Visual Basic 6.0 升级的应用程序使用。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowPositionChange.OnRowPositionChange(System.Int32,System.Int32,System.Int32)">
+      <summary>将对当前行位置的更改通知给行位置对象的使用方。</summary>
+      <returns>一个表示结果的 Integer。 </returns>
+      <param name="dbReason">导致此更改的事件的原因。</param>
+      <param name="eventPhase">此通知的阶段。</param>
+      <param name="fCantDeny">将此标志设置为 true 时，使用方将无法通过返回 S_FALSE 来禁止该事件，因为提供程序无法撤消该事件。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IRowset">
+      <summary>提供 OLE DB IRowset 接口的实现，以供从 Visual Basic 6.0 升级的应用程序使用。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowset.AddRefRows(System.Int32,System.Int32[],System.Int32[]@,System.Int32[]@)">
+      <summary>向现有的行句柄添加引用数。</summary>
+      <param name="cRows">要为其递增引用数的行数。</param>
+      <param name="hRows">要为其递增引用数的行句柄数组。数组中每出现一次行句柄，行句柄的引用数即递增 1。</param>
+      <param name="refCounts">包含 <paramref name="cRows" /> 元素的数组，用于返回每个行句柄的新引用数。使用方为此数组分配内存。如果 <paramref name="refCounts" /> 为 null 指针，则不返回引用数。</param>
+      <param name="rowStatus">包含 <paramref name="cRows" /> 元素的数组，用于返回指示 <paramref name="hRows" /> 中指定的每行状态的值。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowset.GetData(System.Int32,System.Int32,System.IntPtr)">
+      <summary>从行的行集合副本中检索数据。</summary>
+      <param name="hRow">要从中获取数据的行的句柄。</param>
+      <param name="hAccessor">要使用的访问器的句柄。</param>
+      <param name="pData">一个指针，指向用于返回数据的缓冲区。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowset.GetNextRows(System.Int32,System.Int32,System.Int32,System.Int32@,System.Int32[]@)">
+      <summary>按顺序获取行，同时记住以前的位置。</summary>
+      <param name="hChapter">章节句柄，用于指定要获取的行。</param>
+      <param name="lRowsOffset">获取行之前要跳过的行的有符号计数。提供程序已从行集合中移除的已删除的行不计算在要跳过的行中。</param>
+      <param name="cRows">要获取的行数。负数意味着向后获取。</param>
+      <param name="cRowsObtained">一个指向内存的指针，该内存用于返回已获取的实际行数。</param>
+      <param name="hRows">一个指向内存的指针，该内存用于返回已获取行的句柄数组。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowset.ReleaseRows(System.Int32,System.Int32[],System.IntPtr,System.IntPtr,System.IntPtr)">
+      <summary>释放行。</summary>
+      <returns>一个表示结果的 Integer。</returns>
+      <param name="cRows">要释放的行数。</param>
+      <param name="hRows">要释放的行的句柄数组。行句柄不需要形成逻辑群集；它们可能是在不同时间获取的，因此不必针对连续的基础行。数据组中每出现一次行句柄，其引用数即递减 1。</param>
+      <param name="rowOptions">一个由 <paramref name="cRows" /> 元素构成的数组，这些元素包含位掩码，用于指示在释放行时要指定的附加选项。</param>
+      <param name="rowRefCounts">一个包含 <paramref name="cRows" /> 元素的数组，用于返回每行的新引用数。</param>
+      <param name="rgRowStatus">包含 <paramref name="cRows" /> 元素的数组，用于返回指示 <paramref name="hRows" /> 中指定的每行状态的值。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowset.RestartPosition(System.Int32)">
+      <summary>将下一个获取位置重新定位到其初始位置。</summary>
+      <returns>一个表示结果的 Integer。</returns>
+      <param name="hChapter">章节句柄，用于指定要重新定位到的行。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IRowsetChange">
+      <summary>提供 OLE DB IRowsetChange 接口的实现，以供从 Visual Basic 6.0 升级的应用程序使用。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowsetChange.DeleteRows(System.Int32,System.Int32,System.Int32[],System.Int32[]@)">
+      <summary>删除行。</summary>
+      <param name="hChapterReserved">章节句柄。</param>
+      <param name="cRows">要删除的行数。</param>
+      <param name="rghRows">要删除的行的句柄数组。</param>
+      <param name="rgRowStatus">包含 <paramref name="cRows" /> 元素的数组，用于返回指示 <paramref name="rghRows" /> 中指定的每行状态的值。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowsetChange.InsertRow(System.Int32,System.Int32,System.IntPtr,System.Int32@)">
+      <summary>创建并初始化一个新行。</summary>
+      <param name="hChapterReserved">章节句柄。</param>
+      <param name="hAccessor">要使用的访问器的句柄。</param>
+      <param name="pData">一个指向包含新数据值的内存的指针，偏移量对应于访问器中的绑定。</param>
+      <param name="hRow">一个指向内存的指针，该内存用于返回新行的句柄。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowsetChange.SetData(System.Int32,System.Int32,System.IntPtr)">
+      <summary>设置一行中的一列或多列中的数据值。</summary>
+      <param name="hRow">要设置其中数据的行的句柄。</param>
+      <param name="hAccessor">要使用的访问器的句柄。</param>
+      <param name="pData">一个指向包含新数据值的内存的指针，偏移量对应于访问器中的绑定。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IRowsetIdentity">
+      <summary>提供 OLE DB IRowsetIdentity 接口的实现，以供从 Visual Basic 6.0 升级的应用程序使用。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowsetIdentity.IsSameRow(System.Int32,System.Int32)">
+      <summary>比较两个行句柄，以了解它们是否引用了同一个行实例。</summary>
+      <returns>一个表示结果的 Integer。</returns>
+      <param name="hThisRow">活动行的句柄。</param>
+      <param name="hThatRow">活动行的句柄。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IRowsetInfo">
+      <summary>提供 OLE DB IRowsetInfo 接口的实现，以供从 Visual Basic 6.0 升级的应用程序使用。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowsetInfo.GetProperties(System.Int32,Microsoft.VisualBasic.Compatibility.VB6.DBPROPIDSET[],System.Int32@,System.IntPtr@)">
+      <summary>返回行集合支持的所有属性的当前设置。</summary>
+      <param name="cPropertyIDSets">
+        <paramref name="rgPropertyIDSets" /> 中的 DBPROPIDSET 结构数。</param>
+      <param name="rgPropertyIDSets">DBPROPIDSET 结构的数组。</param>
+      <param name="cPropertySets">一个指向内存的指针，该内存用于返回在 <paramref name="prgPropertySets" /> 中返回的 DBPROPSET 结构数。</param>
+      <param name="prgPropertySets">一个指向内存的指针，该内存用于返回 DBPROPSET 结构的数组。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowsetInfo.GetReferencedRowset(System.Int32,System.Guid,System.Object@)">
+      <summary>返回指向对其应用书签或章节的行集合的接口指针。</summary>
+      <param name="iOrdinal">为其获取相关行集合的书签或章节列。</param>
+      <param name="riid">
+        <paramref name="referencedRowset" /> 中要返回的接口指针的 IID。</param>
+      <param name="referencedRowset">一个指向内存的指针，该内存用于返回行集合上解释此列中值的 IUnknown 接口指针。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowsetInfo.GetSpecification(System.Guid,System.Object@)">
+      <summary>返回对象（命令或会话）上用于创建此行集合的接口指针。</summary>
+      <param name="riid">要在其上返回指针的接口的 IID。</param>
+      <param name="specification">一个指向内存的指针，该内存用于返回接口指针。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.IRowsetNotify">
+      <summary>提供 OLE DB IRowsetNotify 接口的实现，以供从 Visual Basic 6.0 升级的应用程序使用。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowsetNotify.OnFieldChange(Microsoft.VisualBasic.Compatibility.VB6.IRowset,System.Int32,System.Int32,System.Int32[],System.Int32,System.Int32,System.Int32)">
+      <summary>将对列值所做的任何更改通知给使用方。</summary>
+      <returns>一个表示结果的 Integer。</returns>
+      <param name="rowset">指向行集合的指针，由于使用方可能从多个行集合接收通知，所以此指针标识正在调用的行集合。</param>
+      <param name="hRow">其中的列值已更改的行的句柄。</param>
+      <param name="cColumns">
+        <paramref name="rgColumns" /> 中列的计数。</param>
+      <param name="rgColumns">值已更改的行中的列的数组。</param>
+      <param name="dbReason">由 DBREASON 的值指示的更改原因。</param>
+      <param name="eventPhase">此通知的阶段。</param>
+      <param name="fCantDeny">将此标志设置为 true 时，使用方将无法通过返回 S_FALSE 来禁止该事件，因为提供程序无法撤消该事件。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowsetNotify.OnRowChange(Microsoft.VisualBasic.Compatibility.VB6.IRowset,System.Int32,System.Int32[],System.Int32,System.Int32,System.Int32)">
+      <summary>将对行的第一个更改或影响整个行的任何更改通知给使用方。</summary>
+      <returns>一个表示结果的 Integer。</returns>
+      <param name="rowset">指向行集合的指针，由于使用方可能从多个行集合接收通知，所以此指针标识正在调用的行集合。</param>
+      <param name="cRows">
+        <paramref name="rghRows" /> 中行句柄的计数。</param>
+      <param name="rghRows">正在更改的行的句柄的数组。</param>
+      <param name="dbReason">由 DBREASON 的值指示的更改原因。</param>
+      <param name="eventPhase">此通知的阶段。</param>
+      <param name="fCantDeny">将此标志设置为 true 时，使用方将无法通过返回 S_FALSE 来禁止该事件，因为提供程序无法撤消该事件。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.IRowsetNotify.OnRowsetChange(Microsoft.VisualBasic.Compatibility.VB6.IRowset,System.Int32,System.Int32,System.Int32)">
+      <summary>将影响整个行集合的任何更改通知给使用方。</summary>
+      <returns>一个表示结果的 Integer。</returns>
+      <param name="rowset">指向行集合的指针，由于使用方可能从多个行集合接收通知，所以此指针标识正在调用的行集合。</param>
+      <param name="dbReason">由 DBREASON 的值指示的更改原因。</param>
+      <param name="eventPhase">此通知的阶段。</param>
+      <param name="fCantDeny">将此标志设置为 true 时，使用方将无法通过返回 S_FALSE 来禁止该事件，因为提供程序无法撤消该事件。</param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.MBinding">
+      <summary>可使 Windows 窗体控件绑定到 ADO 记录集。此类型是 Visual Basic 6.0 msbind 库的托管等效项。</summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.MBinding.DataChanged">
+      <summary>获取或设置一个值，该值指示数据是否已更改。</summary>
+      <returns>
+            如果数据已更改，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.MBinding.DataField">
+      <summary>获取一个数据字段。</summary>
+      <returns>String，包含该数据。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.MBinding.DataFormat">
+      <summary>获取或设置数据字段的数据格式。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormatDisp" /> 接口。</returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MBinding.Dispose">
+      <summary>释放由 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBinding" /> 使用的非托管资源。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MBinding.Dispose(System.Boolean)">
+      <summary>释放由 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBinding" /> 使用的非托管资源，也可以释放托管资源。</summary>
+      <param name="disposing">
+                如为 true，则释放托管资源和非托管资源；如为 false，则仅释放非托管资源。</param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.MBinding.Key">
+      <summary>获取数据字段的键值。</summary>
+      <returns>一个包含键值的 String。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.MBinding.Object">
+      <summary>获取一个数据对象。</summary>
+      <returns>一个包含数据的 <see cref="T:System.Object" />。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.MBinding.PropertyName">
+      <summary>获取数据对象中属性的名称。</summary>
+      <returns>一个包含属性名称的 String。</returns>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection">
+      <summary>提供一个接口，以在从 Visual Basic 6.0 升级的应用程序中替换基于 COM 的数据绑定。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection" /> 的实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.Add(System.Object,System.String,System.String,Microsoft.VisualBasic.Compatibility.VB6.IDataFormatDisp,System.String)">
+      <summary>将 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBinding" /> 添加到 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection" /> 中。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBinding" /> 接口。</returns>
+      <param name="obj">一个包含数据的 <see cref="T:System.Object" />。</param>
+      <param name="propertyName">一个包含属性名称的 String。</param>
+      <param name="dataField">一个包含数据字段名称的 String。</param>
+      <param name="dataFormat">可选。一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormatDisp" /> 接口。</param>
+      <param name="key">可选。一个包含键值的 String。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.Add(System.Object,System.String,System.String,Microsoft.VisualBasic.Compatibility.VB6.IDataFormatDisp,System.String,System.Boolean)">
+      <summary>将 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBinding" /> 添加到 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection" /> 中。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBinding" /> 接口。</returns>
+      <param name="obj">一个包含数据的 <see cref="T:System.Object" />。</param>
+      <param name="propertyName">一个包含属性名称的 String。</param>
+      <param name="dataField">一个包含数据字段名称的 String。</param>
+      <param name="dataFormat">一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.IDataFormatDisp" /> 接口。</param>
+      <param name="key">一个包含键值的 String。</param>
+      <param name="immediateBind">
+                如为 true，则立即绑定；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.Clear">
+      <summary>清除绑定对象的集合。</summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.Count">
+      <summary>获取 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection" /> 中绑定的总数。</summary>
+      <returns>一个包含计数的 Integer。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.DataMember">
+      <summary>获取或设置 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection" /> 的数据成员。</summary>
+      <returns>一个包含数据成员名称的 String。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.DataSource">
+      <summary>获取或设置 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection" /> 的数据源。</summary>
+      <returns>一个基于 COM 的 msdatasrc.DataSource 对象。</returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.Dispose">
+      <summary>释放由 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection" /> 占用的非托管资源。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.Dispose(System.Boolean)">
+      <summary>释放由 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection" /> 占用的非托管资源，还可以另外再释放托管资源。</summary>
+      <param name="disposing">
+                如为 true，则释放托管资源和非托管资源；如为 false，则仅释放非托管资源。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.GetEnumerator">
+      <summary>获取 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection" /> 的枚举数。</summary>
+      <returns>集合的 <see cref="T:System.Collections.IEnumerator" />。</returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.Item(System.Object)">
+      <summary>获取指定索引处的 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBinding" />。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBinding" /> 接口。</returns>
+      <param name="index">一个表示索引的 <see cref="T:System.Object" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.Remove(System.Object)">
+      <summary>从 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection" /> 中移除 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBinding" /> 接口。</summary>
+      <param name="index">一个表示索引的 <see cref="T:System.Object" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.SavePendingChanges">
+      <summary>确定是否保存 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection" /> 中的更改。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.UpdateControls">
+      <summary>从 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection" /> 对象的数据源获取当前行并重置通过该对象绑定的控件的内容。</summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.UpdateMode">
+      <summary>获取或设置 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection" /> 的 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.MBindingCollection.UpdateMode" />。</summary>
+      <returns>一个 <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.DBindingCollection.UpdateMode" /> 枚举。</returns>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.SRDescriptionAttribute">
+      <summary>提供一个属性，供工具用于将 Visual Basic 6.0 应用程序升级到 Visual Basic 2008。</summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Compatibility.VB6.SRDescriptionAttribute.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.SRDescriptionAttribute" /> 的实例。</summary>
+      <param name="description">一个包含说明的 <see cref="T:System.String" />。</param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Compatibility.VB6.SRDescriptionAttribute.Description">
+      <summary>获取一个字符串，其中包含 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.SRDescriptionAttribute" /> 的说明。</summary>
+      <returns>一个包含说明的 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.UGUID">
+      <summary>提供一个 Structure，表示已从 Visual Basic 6.0 升级的应用程序中的 <see cref="T:System.Guid" />。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.UGUID.guid">
+      <summary>一个字段，其中包含内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.UGUID" />Structure 的 <see cref="T:System.Guid" />。</summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.UNAME">
+      <summary>提供一个 Structure，表示指向已从 Visual Basic 6.0 升级的应用程序中的 Name 属性的指针。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.UNAME.name">
+      <summary>包含内部 <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.UNAME" />Structure 的 <see cref="T:System.IntPtr" />。</summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Compatibility.VB6.UpdateMode">
+      <summary>提供常量以与 Visual Basic 6.0 UpdateMode 方法保持兼容。</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.UpdateMode.vbUsePropertyAttributes">
+      <summary>0</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.UpdateMode.vbUpdateWhenPropertyChanges">
+      <summary>1</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.UpdateMode.vbUpdateWhenRowChanges">
+      <summary>2</summary>
+    </member>
+  </members>
+</doc>

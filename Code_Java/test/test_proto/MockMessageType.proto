@@ -1,0 +1,21 @@
+package com.mokylin.test;
+import "google/protobuf/descriptor.proto";
+option java_package = "com.mokylin.bleach.test.protobuf";
+option java_outer_classname = "MockMessageType";
+
+extend google.protobuf.MessageOptions{
+	optional CGMessageType cg_message_type = 50001;
+	optional GCMessageType gc_message_type = 50002;
+}
+
+enum CGMessageType{
+	CG_TEST = 501;
+	CG_FUCK_OFF = 601;
+	CG_MAKE_LOVE = 777;
+	CG_LOGIN = 888;
+}
+
+enum GCMessageType{
+	GC_TEST = 500;
+	GC_LOGIN = 501;
+}

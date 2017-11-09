@@ -1,0 +1,2 @@
+;
+List<com.mokylin.bleach.common.core.excelmodel.TempAttrNode3Col> attributeList;[collection(140,3);notNull=true]	//0级时的属性

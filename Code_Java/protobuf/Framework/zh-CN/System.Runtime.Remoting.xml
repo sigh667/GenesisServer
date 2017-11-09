@@ -1,0 +1,1610 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Runtime.Remoting</name>
+  </assembly>
+  <members>
+    <member name="T:System.Runtime.Remoting.Channels.BinaryClientFormatterSink">
+      <summary>为使用 <see cref="T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter" /> 的客户端格式化程序接收器提供实现。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.#ctor(System.Runtime.Remoting.Channels.IClientChannelSink)">
+      <summary>初始化 <see cref="T:System.Runtime.Remoting.Channels.BinaryClientFormatterSink" /> 类的新实例。</summary>
+      <param name="nextSink">接收器链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSink" />。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.AsyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Messaging.IMessageSink)">
+      <summary>异步处理提供的消息。</summary>
+      <returns>
+        <see cref="T:System.Runtime.Remoting.Messaging.IMessageCtrl" />，提供一种在调度异步消息之后控制该消息的方法。</returns>
+      <param name="msg">要处理的消息。</param>
+      <param name="replySink">接收器，将接收对所提供消息的答复。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.AsyncProcessRequest(System.Runtime.Remoting.Channels.IClientChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)">
+      <summary>请求异步处理对当前接收器的方法调用。</summary>
+      <param name="sinkStack">调用了当前接收器的信道接收器的堆栈。</param>
+      <param name="msg">要处理的消息。</param>
+      <param name="headers">要添加到发往服务器的传出消息的标头。</param>
+      <param name="stream">将发往传输接收器的流。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.AsyncProcessResponse(System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)">
+      <summary>请求异步处理对当前接收器上的方法调用的响应。</summary>
+      <param name="sinkStack">调用了当前接收器的接收器堆栈。</param>
+      <param name="state">与当前接收器关联的、在请求端生成而在响应端需要的信息。</param>
+      <param name="headers">从服务器响应流中检索到的标头。</param>
+      <param name="stream">从传输接收器返回的流。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.GetRequestStream(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders)">
+      <summary>返回所提供的消息将要序列化到的 <see cref="T:System.IO.Stream" />。</summary>
+      <returns>所提供的消息将要序列化到的 <see cref="T:System.IO.Stream" />。</returns>
+      <param name="msg">
+        <see cref="T:System.Runtime.Remoting.Messaging.IMethodCallMessage" />，包含有关方法调用的详细信息。</param>
+      <param name="headers">要添加到发往服务器的传出消息的标头。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.NextChannelSink">
+      <summary>获取接收器链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSink" />。</summary>
+      <returns>接收器链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSink" />。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.NextSink">
+      <summary>获取接收器链中的下一个 <see cref="T:System.Runtime.Remoting.Messaging.IMessageSink" />。</summary>
+      <returns>接收器链中的下一个 <see cref="T:System.Runtime.Remoting.Messaging.IMessageSink" />。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.ProcessMessage(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream,System.Runtime.Remoting.Channels.ITransportHeaders@,System.IO.Stream@)">
+      <summary>请求从当前接收器处理消息。</summary>
+      <param name="msg">要处理的消息。</param>
+      <param name="requestHeaders">要添加到发往服务器的传出消息的标头。</param>
+      <param name="requestStream">将发往传输接收器的流。</param>
+      <param name="responseHeaders">当此方法返回时，包含 <see cref="T:System.Runtime.Remoting.Channels.ITransportHeaders" /> 接口，其中含有服务器返回的标头。该参数未经初始化即被传递。</param>
+      <param name="responseStream">当此方法返回时，包含从传输接收器返回的 <see cref="T:System.IO.Stream" />。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.Properties">
+      <summary>获取当前信道接收器属性的 <see cref="T:System.Collections.IDictionary" />。</summary>
+      <returns>当前信道接收器属性的 <see cref="T:System.Collections.IDictionary" />。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage)">
+      <summary>同步处理所提供的消息。</summary>
+      <returns>对已处理消息的响应。</returns>
+      <param name="msg">要处理的消息。</param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider">
+      <summary>为二进制客户端格式化程序接收器提供程序提供实现。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider.#ctor">
+      <summary>使用默认值初始化 <see cref="T:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider.#ctor(System.Collections.IDictionary,System.Collections.ICollection)">
+      <summary>用给定属性和提供程序数据初始化 <see cref="T:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider" /> 类的新实例。</summary>
+      <param name="properties">要用于 <see cref="T:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider" /> 的新实例的配置属性的 <see cref="T:System.Collections.IDictionary" />。</param>
+      <param name="providerData">包含用于 <see cref="T:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider" /> 的新实例的提供程序数据的 <see cref="T:System.Runtime.Remoting.Channels.SinkProviderData" /> 对象的 <see cref="T:System.Collections.ICollection" />。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider.CreateSink(System.Runtime.Remoting.Channels.IChannelSender,System.String,System.Object)">
+      <summary>创建接收器链。</summary>
+      <returns>新生成的信道接收器链中的第一个接收器，或 null（指示此提供程序将不会或不能为此终结点提供连接）。</returns>
+      <param name="channel">信道，为其构造此接收器链。</param>
+      <param name="url">要连接到的对象的 URL 或目标对象的信道 URI。</param>
+      <param name="remoteChannelData">描述远程服务器上的信道的信道数据对象。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider.Next">
+      <summary>获取或设置接收器提供程序链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" />。</summary>
+      <returns>接收器提供程序链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" />。</returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSink">
+      <summary>为使用 <see cref="T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter" /> 的服务器格式化程序接收器提供实现。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.#ctor(System.Runtime.Remoting.Channels.BinaryServerFormatterSink.Protocol,System.Runtime.Remoting.Channels.IServerChannelSink,System.Runtime.Remoting.Channels.IChannelReceiver)">
+      <summary>初始化 <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSink" /> 类的新实例。</summary>
+      <param name="protocol">将和 <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSink" /> 的当前实例一起使用的 <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.Protocol" />。</param>
+      <param name="nextSink">信道接收器链中的下一个接收器。</param>
+      <param name="receiver">指示将接收由 <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSink" /> 的新实例序列化的消息的信道。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.AsyncProcessResponse(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)">
+      <summary>请求处理来自方法调用的异步发送的响应。</summary>
+      <param name="sinkStack">将发回服务器传输接收器的接收器堆栈。</param>
+      <param name="state">与当前接收器关联的、在请求端生成而在响应端需要的信息。</param>
+      <param name="msg">响应消息。</param>
+      <param name="headers">要添加到将发往客户端的返回消息的标头。</param>
+      <param name="stream">将发回传输接收器的流。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.GetResponseStream(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders)">
+      <summary>返回提供的响应消息将序列化到其上的 <see cref="T:System.IO.Stream" />。</summary>
+      <returns>提供的响应消息将序列化到其上的 <see cref="T:System.IO.Stream" />。</returns>
+      <param name="sinkStack">将发回服务器传输接收器的接收器堆栈。</param>
+      <param name="state">与当前接收器关联的、在请求端生成而在响应端需要的信息。</param>
+      <param name="msg">要序列化的响应消息。</param>
+      <param name="headers">要放置在将发送到客户端的响应流中的标头。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.NextChannelSink">
+      <summary>获取接收器链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" />。</summary>
+      <returns>接收器链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" />。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.ProcessMessage(System.Runtime.Remoting.Channels.IServerChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream,System.Runtime.Remoting.Messaging.IMessage@,System.Runtime.Remoting.Channels.ITransportHeaders@,System.IO.Stream@)">
+      <summary>请求从当前接收器处理消息。</summary>
+      <returns>
+        <see cref="T:System.Runtime.Remoting.Channels.ServerProcessing" /> 状态值，提供有关如何处理消息的信息。</returns>
+      <param name="sinkStack">调用了当前接收器的信道接收器的堆栈。</param>
+      <param name="requestMsg">包含请求的消息。</param>
+      <param name="requestHeaders">从来自客户端的传入消息中检索到的标头。</param>
+      <param name="requestStream">需要被处理并传递到反序列化接收器的流。</param>
+      <param name="responseMsg">此方法返回时，包含持有响应消息的 <see cref="T:System.Runtime.Remoting.Messaging.IMessage" />。该参数未经初始化即被传递。</param>
+      <param name="responseHeaders">此方法返回时，包含一个 <see cref="T:System.Runtime.Remoting.Channels.ITransportHeaders" />，它持有要添加到将发往客户端的返回消息的标头。该参数未经初始化即被传递。</param>
+      <param name="responseStream">当此方法返回时，包含传向传输接收器的 <see cref="T:System.IO.Stream" />。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.Properties">
+      <summary>获取当前信道接收器属性的 <see cref="T:System.Collections.IDictionary" />。</summary>
+      <returns>当前信道接收器属性的 <see cref="T:System.Collections.IDictionary" />。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.TypeFilterLevel">
+      <summary>获取或设置 BinaryServerFormatterSink 执行的自动反序列化的 TypeFilterLevel 值。</summary>
+      <returns>表示当前自动反序列化级别的 TypeFilterLevel。</returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.Protocol">
+      <summary>指定与 <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSink" /> 类一起使用的协议。</summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.Protocol.Http">
+      <summary>指示当前格式化程序接收器使用的是 HTTP 协议，因此需要特殊处理。</summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.Protocol.Other">
+      <summary>指示用于当前格式化程序接收器的协议不是 HTTP。</summary>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider">
+      <summary>为使用 <see cref="T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter" /> 的服务器格式化程序信道接收器提供程序提供实现。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider.#ctor">
+      <summary>使用默认值初始化 <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider.#ctor(System.Collections.IDictionary,System.Collections.ICollection)">
+      <summary>使用提供的属性和提供程序数据初始化 <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider" /> 类的新实例。</summary>
+      <param name="properties">要用于 <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider" /> 的新实例的配置属性的 <see cref="T:System.Collections.IDictionary" />。</param>
+      <param name="providerData">要用于 <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider" /> 的新实例的 <see cref="T:System.Runtime.Remoting.Channels.SinkProviderData" /> 的 <see cref="T:System.Collections.ICollection" />。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider.CreateSink(System.Runtime.Remoting.Channels.IChannelReceiver)">
+      <summary>创建接收器链。</summary>
+      <returns>新生成的信道接收器链的第一个接收器。</returns>
+      <param name="channel">要为其创建信道接收器链的信道。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider.GetChannelData(System.Runtime.Remoting.Channels.IChannelDataStore)">
+      <summary>返回与当前接收器关联的信道的信道数据。</summary>
+      <param name="channelData">将在其中返回信道数据的 <see cref="T:System.Runtime.Remoting.Channels.IChannelDataStore" /> 对象。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider.Next">
+      <summary>获取或设置接收器提供程序链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" />。</summary>
+      <returns>接收器提供程序链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" />。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider.TypeFilterLevel">
+      <summary>获取或设置 BinaryServerFormatterSink 执行的自动反序列化的 TypeFilterLevel 值。</summary>
+      <returns>表示当前自动反序列化级别的 TypeFilterLevel。</returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.CommonTransportKeys">
+      <summary>
+                    与信道使用的公共值关联的传输键。
+                </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.CommonTransportKeys.#ctor">
+      <summary>
+                    创建 <see cref="T:System.Runtime.Remoting.Channels.CommonTransportKeys" /> 的实例。
+                </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.CommonTransportKeys.ConnectionId">
+      <summary>
+                    与给予每个传入套接字连接的唯一 ID 关联的传输键。
+                </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.CommonTransportKeys.IPAddress">
+      <summary>
+                    与到达的传入请求来自的 IP 地址关联的传输键。
+                </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.CommonTransportKeys.RequestUri">
+      <summary>
+                    与进行请求的 URI 关联的传输键。
+                </summary>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection">
+      <summary>
+        <see cref="T:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection" /> 接口提供了一些方法，可根据客户端的网络地址和用户标识来指示客户端是否被授权连接至当前信道。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection.IsConnectingEndPointAuthorized(System.Net.EndPoint)">
+      <summary>获取一个布尔值，该值指示客户端的网络地址是否已被授权连接至当前信道。</summary>
+      <returns>
+            如果客户端的网络地址已经过授权，则为 true；否则为 false。</returns>
+      <param name="endPoint">标识客户端的网络地址的 <see cref="T:System.Net.EndPoint" />。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection.IsConnectingIdentityAuthorized(System.Security.Principal.IIdentity)">
+      <summary>获取一个布尔值，该值指示客户端的用户标识是否已被授权连接至当前信道。</summary>
+      <returns>
+            如果客户端的用户标识已经过授权，则为 true；否则为 false。</returns>
+      <param name="identity">表示客户端的用户标识的 <see cref="T:System.Security.Principal.IIdentity" />。</param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.SoapClientFormatterSink">
+      <summary>为使用 <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> 的客户端格式化程序接收器提供实现。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSink.#ctor(System.Runtime.Remoting.Channels.IClientChannelSink)">
+      <summary>初始化 <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSink" /> 类的新实例。</summary>
+      <param name="nextSink">信道接收器链中的下一个接收器。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSink.AsyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Messaging.IMessageSink)">
+      <summary>异步处理提供的消息。</summary>
+      <returns>
+        <see cref="T:System.Runtime.Remoting.Messaging.IMessageCtrl" />，提供一种在调度异步消息之后控制该消息的方法。</returns>
+      <param name="msg">要处理的消息。</param>
+      <param name="replySink">接收器，将接收对所提供消息的答复。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSink.AsyncProcessRequest(System.Runtime.Remoting.Channels.IClientChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)">
+      <summary>请求异步处理对当前接收器的方法调用。</summary>
+      <param name="sinkStack">调用了当前接收器的信道接收器的堆栈。</param>
+      <param name="msg">要处理的消息。</param>
+      <param name="headers">要添加到发往服务器的传出消息的标头。</param>
+      <param name="stream">发往传输接收器的流。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSink.AsyncProcessResponse(System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)">
+      <summary>请求异步处理对当前接收器上的方法调用的响应。</summary>
+      <param name="sinkStack">调用了当前接收器的接收器堆栈。</param>
+      <param name="state">与当前接收器关联的状态。</param>
+      <param name="headers">从服务器响应流中检索到的标头。</param>
+      <param name="stream">从传输接收器返回的流。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSink.GetRequestStream(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders)">
+      <summary>返回所提供的消息将要序列化到的 <see cref="T:System.IO.Stream" />。</summary>
+      <returns>所提供的消息将要序列化到的 <see cref="T:System.IO.Stream" />。</returns>
+      <param name="msg">
+        <see cref="T:System.Runtime.Remoting.Messaging.IMethodCallMessage" />，包含有关方法调用的详细信息。</param>
+      <param name="headers">要添加到发往服务器的传出消息的标头。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapClientFormatterSink.NextChannelSink">
+      <summary>获取接收器链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSink" />。</summary>
+      <returns>接收器链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSink" />。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapClientFormatterSink.NextSink">
+      <summary>获取接收器链中的下一个 <see cref="T:System.Runtime.Remoting.Messaging.IMessageSink" />。</summary>
+      <returns>接收器链中的下一个 <see cref="T:System.Runtime.Remoting.Messaging.IMessageSink" />。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSink.ProcessMessage(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream,System.Runtime.Remoting.Channels.ITransportHeaders@,System.IO.Stream@)">
+      <summary>请求从当前接收器处理消息。</summary>
+      <param name="msg">要处理的消息。</param>
+      <param name="requestHeaders">要添加到发往服务器的传出消息的标头。</param>
+      <param name="requestStream">传向传输接收器的流。</param>
+      <param name="responseHeaders">当此方法返回时，包含 <see cref="T:System.Runtime.Remoting.Channels.ITransportHeaders" /> 接口，其中含有服务器返回的标头。该参数未经初始化即被传递。</param>
+      <param name="responseStream">当此方法返回时，包含从传输接收器返回的 <see cref="T:System.IO.Stream" />。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapClientFormatterSink.Properties">
+      <summary>获取当前信道接收器属性的 <see cref="T:System.Collections.IDictionary" />。</summary>
+      <returns>当前信道接收器属性的 <see cref="T:System.Collections.IDictionary" />。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSink.SyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage)">
+      <summary>同步处理所提供的消息。</summary>
+      <returns>对已处理消息的响应。</returns>
+      <param name="msg">要处理的消息。</param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider">
+      <summary>为客户端格式化程序接收器提供程序提供实现。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider.#ctor">
+      <summary>使用默认值初始化 <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider.#ctor(System.Collections.IDictionary,System.Collections.ICollection)">
+      <summary>用给定属性和提供程序数据初始化 <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" /> 类的新实例。</summary>
+      <param name="properties">要用于 <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" /> 的新实例的配置属性的 <see cref="T:System.Collections.IDictionary" />。</param>
+      <param name="providerData">要用于 <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" /> 的新实例的提供程序数据的 <see cref="T:System.Collections.ICollection" />。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider.CreateSink(System.Runtime.Remoting.Channels.IChannelSender,System.String,System.Object)">
+      <summary>创建接收器链。</summary>
+      <returns>新生成的信道接收器链中的第一个接收器，或 null（指示此提供程序将不会或不能为此终结点提供连接）。</returns>
+      <param name="channel">信道，为其构造此接收器链。</param>
+      <param name="url">要连接到的对象的 URL 或目标对象的信道 URI。</param>
+      <param name="remoteChannelData">描述远程服务器上的信道的信道数据对象。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider.Next">
+      <summary>获取或设置接收器提供程序链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" />。</summary>
+      <returns>接收器提供程序链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" />。</returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink">
+      <summary>为使用 <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> 的服务器格式化程序接收器提供实现。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSink.#ctor(System.Runtime.Remoting.Channels.SoapServerFormatterSink.Protocol,System.Runtime.Remoting.Channels.IServerChannelSink,System.Runtime.Remoting.Channels.IChannelReceiver)">
+      <summary>初始化 <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink" /> 类的新实例。</summary>
+      <param name="protocol">将和 <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink" /> 的当前实例一起使用的 <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink.Protocol" />。</param>
+      <param name="nextSink">信道接收器链中的下一个接收器。</param>
+      <param name="receiver">指示将接收由 <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink" /> 的新实例序列化的消息的信道。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSink.AsyncProcessResponse(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)">
+      <summary>请求从当前接收器对异步发送的方法调用的响应进行处理。</summary>
+      <param name="sinkStack">将发回服务器传输接收器的接收器堆栈。</param>
+      <param name="state">与当前接收器关联的、在请求端生成而在响应端需要的信息。</param>
+      <param name="msg">响应消息。</param>
+      <param name="headers">要添加到将发往客户端的返回消息的标头。</param>
+      <param name="stream">将发回传输接收器的流。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSink.GetResponseStream(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders)">
+      <summary>返回提供的响应消息将序列化到其上的 <see cref="T:System.IO.Stream" />。</summary>
+      <returns>提供的响应消息将序列化到其上的 <see cref="T:System.IO.Stream" />。</returns>
+      <param name="sinkStack">将发回服务器传输接收器的接收器堆栈。</param>
+      <param name="state">与当前接收器关联的、在请求端生成而在响应端需要的信息。</param>
+      <param name="msg">要进行序列化的响应消息。</param>
+      <param name="headers">要放置在将发送到客户端的响应流中的标头。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapServerFormatterSink.NextChannelSink">
+      <summary>获取接收器链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" />。</summary>
+      <returns>接收器链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" />。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSink.ProcessMessage(System.Runtime.Remoting.Channels.IServerChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream,System.Runtime.Remoting.Messaging.IMessage@,System.Runtime.Remoting.Channels.ITransportHeaders@,System.IO.Stream@)">
+      <summary>请求从当前接收器处理消息。</summary>
+      <returns>
+        <see cref="T:System.Runtime.Remoting.Channels.ServerProcessing" /> 状态值，提供有关如何处理消息的信息。</returns>
+      <param name="sinkStack">传输消息的接收器的堆栈。</param>
+      <param name="requestMsg">包含请求的消息。</param>
+      <param name="requestHeaders">从来自客户端的传入消息中检索到的标头。</param>
+      <param name="requestStream">需要被处理并传递到反序列化接收器的流。</param>
+      <param name="responseMsg">此方法返回时，包含持有响应消息的 <see cref="T:System.Runtime.Remoting.Messaging.IMessage" />。该参数未经初始化即被传递。</param>
+      <param name="responseHeaders">此方法返回时，包含一个 <see cref="T:System.Runtime.Remoting.Channels.ITransportHeaders" />，它持有要添加到将发往客户端的返回消息的标头。该参数未经初始化即被传递。</param>
+      <param name="responseStream">当该方法返回时，包含将发回到传输接收器的 <see cref="T:System.IO.Stream" />。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapServerFormatterSink.Properties">
+      <summary>获取当前信道接收器属性的 <see cref="T:System.Collections.IDictionary" />。</summary>
+      <returns>当前信道接收器属性的 <see cref="T:System.Collections.IDictionary" />。有关更多信息，请参见信道和格式化程序配置属性。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapServerFormatterSink.TypeFilterLevel">
+      <summary>获取或设置 SoapServerFormatterSink 执行的自动反序列化的 TypeFilterLevel 值。</summary>
+      <returns>表示当前自动反序列化级别的 TypeFilterLevel。</returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink.Protocol">
+      <summary>指定与 <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink" /> 类一起使用的协议。</summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.SoapServerFormatterSink.Protocol.Http">
+      <summary>指示当前格式化程序接收器使用的是 HTTP 协议，因此需要特殊处理。</summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.SoapServerFormatterSink.Protocol.Other">
+      <summary>指示用于当前格式化程序接收器的协议不是 HTTP。</summary>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider">
+      <summary>为使用 <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> 的服务器格式化程序信道接收器提供程序提供实现。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.#ctor">
+      <summary>使用默认值初始化 <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.#ctor(System.Collections.IDictionary,System.Collections.ICollection)">
+      <summary>使用提供的属性和提供程序数据初始化 <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider" /> 类的新实例。</summary>
+      <param name="properties">要用于 <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" /> 的新实例的配置属性的 <see cref="T:System.Collections.IDictionary" />。</param>
+      <param name="providerData">要用于 <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" /> 的新实例的提供程序数据的 <see cref="T:System.Collections.ICollection" />。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.CreateSink(System.Runtime.Remoting.Channels.IChannelReceiver)">
+      <summary>创建接收器链。</summary>
+      <returns>新生成的信道接收器链的第一个接收器。</returns>
+      <param name="channel">要为其创建信道接收器链的信道。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.GetChannelData(System.Runtime.Remoting.Channels.IChannelDataStore)">
+      <summary>返回与当前接收器关联的信道的信道数据。</summary>
+      <param name="channelData">将在其中返回信道数据的 <see cref="T:System.Runtime.Remoting.Channels.IChannelDataStore" /> 对象。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.Next">
+      <summary>获取或设置接收器提供程序链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" />。</summary>
+      <returns>接收器提供程序链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" />。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.TypeFilterLevel">
+      <summary>获取或设置 SoapServerFormatterSink 执行的自动反序列化的 TypeFilterLevel 值。</summary>
+      <returns>表示当前自动反序列化级别的 TypeFilterLevel。</returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.SocketCachePolicy">
+      <summary>指定从远程处理客户端所维护的缓存中移除客户端的策略。</summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.SocketCachePolicy.Default">
+      <summary>在创建套接字后的某个固定时间从缓存中移除套接字。</summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.SocketCachePolicy.AbsoluteTimeout">
+      <summary>在创建套接字后的某个固定时间从缓存中移除套接字。</summary>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Http.HttpChannel">
+      <summary>
+                    为远程调用实现使用 HTTP 协议传输消息的客户端信道。
+                </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.#ctor">
+      <summary>
+                    初始化 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>
+                    使用指定的配置属性和接收器初始化 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" /> 类的新实例。
+                </summary>
+      <param name="properties">
+                    一个 <see cref="T:System.Collections.IDictionary" /> 集合，它为客户端和服务器信道要使用的配置属性指定值。
+                </param>
+      <param name="clientSinkProvider">
+                    客户端信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> 实现。
+                </param>
+      <param name="serverSinkProvider">
+                    服务器信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> 实现。
+                </param>
+      <exception cref="T:System.ArgumentException">
+                    配置属性的格式设置不正确。
+                </exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.#ctor(System.Int32)">
+      <summary>
+                    使用侦听指定端口的服务器信道初始化 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" /> 类的新实例。
+                </summary>
+      <param name="port">
+                    服务器信道侦听的端口。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.AddHookChannelUri(System.String)">
+      <summary>
+                    添加信道挂钩应在其上进行侦听的 URI。
+                </summary>
+      <param name="channelUri">
+                    对于 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" />，应始终为 null 引用（在 Visual Basic 中为 Nothing）
+                </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.ChannelData">
+      <summary>
+                    获取信道特定数据。
+                </summary>
+      <returns>
+                    信道数据。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.ChannelName">
+      <summary>
+                    获取当前信道的名称。
+                </summary>
+      <returns>
+                    一个包含信道名称的 <see cref="T:System.String" />。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.ChannelPriority">
+      <summary>
+                    获取当前信道的优先级。
+                </summary>
+      <returns>
+                    一个整数，表示分配给该信道的优先级。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.ChannelScheme">
+      <summary>
+                    获取要挂钩到的侦听器的类型（例如“http”）。
+                </summary>
+      <returns>
+                    要挂钩到的侦听器类型。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.ChannelSinkChain">
+      <summary>
+                    获取当前信道正在使用的信道接收器链。
+                </summary>
+      <returns>
+                    当前信道正在使用的信道接收器链。
+                </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.CreateMessageSink(System.String,System.Object,System.String@)">
+      <summary>
+                    返回将消息传送到指定 URL 或信道数据对象的信道消息接收器。
+                </summary>
+      <returns>
+                    将消息传递给指定 URL 或信道数据对象的信道消息接收器。
+                </returns>
+      <param name="url">
+                    新接收器将把消息传送到的 URL。可以为 null。
+                </param>
+      <param name="remoteChannelData">
+                    新接收器将把消息传送到的远程主机的信道数据对象。可以为 null。
+                </param>
+      <param name="objectURI">
+                    此方法返回时，包含新信道消息接收器的 URI，该信道消息接收器将消息传送到指定 URL 或信道数据对象。该参数未经初始化即被传递。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.GetUrlsForUri(System.String)">
+      <summary>
+                    返回具有指定 URI 的对象的所有 URL 的数组，该对象承载在当前的 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" /> 上。
+                </summary>
+      <returns>
+                    具有指定 URI 的对象的所有 URL 的数组，该对象承载在当前的 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" /> 上。
+                </returns>
+      <param name="objectURI">
+                    需要其 URL 的对象的 URI。
+                </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.IsSecured">
+      <summary>
+                    获取或设置一个布尔值，该值指示当前信道是否安全。
+                </summary>
+      <returns>
+                    一个布尔值，指示当前实例是否安全。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.Item(System.Object)">
+      <summary>
+                    返回指定的信道属性。
+                </summary>
+      <returns>
+                    一个 <see cref="T:System.Object" />，表示由 <paramref name="key" /> 指定的信道属性。
+                </returns>
+      <param name="key">
+                    要检索的信道属性的键。
+                </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.Keys">
+      <summary>
+                    获取与信道属性关联的键的 <see cref="T:System.Collections.ICollection" />。
+                </summary>
+      <returns>
+                    与信道属性关联的键的 <see cref="T:System.Collections.ICollection" />。
+                </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.Parse(System.String,System.String@)">
+      <summary>
+                    从指定 URL 提取信道 URI 和远程已知对象 URI。
+                </summary>
+      <returns>
+                    当前信道的 URI；如果指定的 URL 不是 HTTP URL，则为 null。
+                </returns>
+      <param name="url">
+                    从中提取远程已知对象的 URI 的 URL。
+                </param>
+      <param name="objectURI">
+                    当此方法返回时，包含含有远程已知对象的 URI 的 <see cref="T:System.String" />。该参数未经初始化即被传递。
+                </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.Properties">
+      <summary>
+                    获取与当前信道关联的信道属性的 <see cref="T:System.Collections.IDictionary" />。
+                </summary>
+      <returns>
+                    与当前信道关联的信道属性的 <see cref="T:System.Collections.IDictionary" />。
+                </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.StartListening(System.Object)">
+      <summary>
+                    指示当前信道开始侦听请求。
+                </summary>
+      <param name="data">
+                    对于 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" />，应始终为 null 引用（在 Visual Basic 中为 Nothing）。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.StopListening(System.Object)">
+      <summary>
+                    指示当前信道停止侦听请求。
+                </summary>
+      <param name="data">
+                    信道挂钩正在其上侦听的信道 URI。
+                </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.WantsToListen">
+      <summary>
+                    获取一个布尔值，该值指示是否需要将当前实例挂钩到外部侦听器服务。
+                </summary>
+      <returns>
+                    指示 <see cref="T:System.Runtime.Remoting.Channels.IChannelReceiverHook" /> 是否要挂钩到外部侦听器服务的布尔值。
+                </returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Http.HttpClientChannel">
+      <summary>为远程调用实现使用 HTTP 协议传输消息的客户端信道。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpClientChannel.#ctor">
+      <summary>初始化 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpClientChannel" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpClientChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider)">
+      <summary>使用指定的配置属性和接收器初始化 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpClientChannel" /> 类的新实例。</summary>
+      <param name="properties">一个 <see cref="T:System.Collections.IDictionary" /> 集合，它为信道要使用的配置属性指定值。</param>
+      <param name="sinkProvider">信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> 实现。</param>
+      <exception cref="T:System.ArgumentException">配置属性的格式设置不正确。</exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpClientChannel.#ctor(System.String,System.Runtime.Remoting.Channels.IClientChannelSinkProvider)">
+      <summary>使用指定的名称和接收器初始化 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpClientChannel" /> 类的新实例。</summary>
+      <param name="name">
+        <see cref="T:System.Runtime.Remoting.Channels.Http.HttpClientChannel" /> 的新实例的名称。</param>
+      <param name="sinkProvider">要由信道使用的 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" />。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpClientChannel.ChannelName">
+      <summary>获取当前信道的名称。</summary>
+      <returns>一个包含信道名称的 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpClientChannel.ChannelPriority">
+      <summary>获取当前信道的优先级。</summary>
+      <returns>一个整数，表示分配给该信道的优先级。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpClientChannel.CreateMessageSink(System.String,System.Object,System.String@)">
+      <summary>返回将消息传送到指定 URL 或信道数据对象的信道消息接收器。</summary>
+      <returns>将消息传递给指定 URL 或信道数据对象的信道消息接收器。</returns>
+      <param name="url">新接收器将把消息传送到的 URL。可以为 null。</param>
+      <param name="remoteChannelData">新接收器将把消息传送到的远程主机的信道数据对象。可以为 null。</param>
+      <param name="objectURI">此方法返回时，包含新信道消息接收器的 URI，该信道消息接收器将消息传送到指定 URL 或信道数据对象。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpClientChannel.IsSecured">
+      <summary>获取或设置客户端信道是否受保护。</summary>
+      <returns>
+            如果客户端信道受保护，则为 true，否则为 false。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpClientChannel.Item(System.Object)">
+      <summary>返回指定的信道属性。</summary>
+      <returns>一个 <see cref="T:System.Object" />，表示由 <paramref name="key" /> 指定的信道属性。</returns>
+      <param name="key">要检索的信道属性的键。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpClientChannel.Keys">
+      <summary>获取与信道属性关联的键的 <see cref="T:System.Collections.ICollection" />。</summary>
+      <returns>与信道属性关联的键的 <see cref="T:System.Collections.ICollection" />。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpClientChannel.Parse(System.String,System.String@)">
+      <summary>从指定 URL 提取信道 URI 和远程已知对象 URI。</summary>
+      <returns>当前信道的 URI；如果指定的 URL 不是 HTTP URL，则为 null。</returns>
+      <param name="url">从中提取远程已知对象的 URI 的 URL。</param>
+      <param name="objectURI">当此方法返回时，包含含有远程已知对象的 URI 的 <see cref="T:System.String" />。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler">
+      <summary>实现将请求转发到远程处理 HTTP 信道的 ASP.NET 处理程序。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler.#ctor">
+      <summary>使用默认值初始化 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler.#ctor(System.Type,System.Object)">
+      <summary>使用默认值初始化 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" /> 类的新实例。</summary>
+      <param name="type">此构造函数忽略 <paramref name="type" /> 参数。</param>
+      <param name="srvID">此构造函数忽略 <paramref name="srvID" /> 参数。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler.IsReusable">
+      <summary>获取一个布尔值，它指示其他请求是否可以使用 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" />。</summary>
+      <returns>true，指示用于 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" /> 的所有实例。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler.ProcessRequest(System.Web.HttpContext)">
+      <summary>通过当前实例启用对 HTTP Web 请求的处理。</summary>
+      <param name="context">一个 <see cref="T:System.Web.HttpContext" />，提供对用于为 HTTP 请求提供服务的内部服务器对象（如 Request、Response、Session 和 Server）的引用。</param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory">
+      <summary>
+                    初始化 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory.#ctor">
+      <summary>
+                    创建 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory" /> 的实例。
+                </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory.GetHandler(System.Web.HttpContext,System.String,System.String,System.String)">
+      <summary>
+                    返回 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" /> 类的实例。
+                </summary>
+      <returns>
+                    处理该请求的新 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" />。
+                </returns>
+      <param name="context">
+        <see cref="T:System.Web.HttpContext" /> 类的实例，它提供对用于为 HTTP 请求提供服务的内部服务器对象（如 Request、Response、Session 和 Server）的引用。
+                </param>
+      <param name="verb">
+                    客户端使用的 HTTP 数据传输方法（GET 或 POST）。
+                </param>
+      <param name="url">
+                    所请求资源的 <see cref="P:System.Web.HttpRequest.RawUrl" />。
+                </param>
+      <param name="filePath">
+                    所请求资源的 <see cref="P:System.Web.HttpRequest.PhysicalApplicationPath" />。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory.ReleaseHandler(System.Web.IHttpHandler)">
+      <summary>
+                    使工厂可以重复使用指定的 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" />。
+                </summary>
+      <param name="handler">
+                    要释放的 <see cref="T:System.Web.IHttpHandler" />。
+                </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel">
+      <summary>为远程调用实现使用 HTTP 协议传输消息的服务器信道。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.#ctor">
+      <summary>初始化 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>使用指定的信道属性和接收器初始化 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" /> 类的新实例。</summary>
+      <param name="properties">包含当前信道配置信息的信道属性的 <see cref="T:System.Collections.IDictionary" />。</param>
+      <param name="sinkProvider">与 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" /> 的新实例一起使用的 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" />。</param>
+      <exception cref="T:System.ArgumentException">配置属性的格式设置不正确。</exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.#ctor(System.Int32)">
+      <summary>初始化在指定端口上侦听的 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" /> 类的新实例。</summary>
+      <param name="port">信道侦听的端口。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.#ctor(System.String,System.Int32)">
+      <summary>使用指定的名称初始化 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" /> 类的新实例，该实例侦听指定的端口。</summary>
+      <param name="name">信道的名称。</param>
+      <param name="port">信道侦听的端口。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.#ctor(System.String,System.Int32,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>在指定的端口以给定的名称初始化 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" /> 类的新实例，该实例侦听指定的端口并使用指定的接收器。</summary>
+      <param name="name">信道的名称。</param>
+      <param name="port">信道侦听的端口。</param>
+      <param name="sinkProvider">要由信道使用的 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" />。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.AddHookChannelUri(System.String)">
+      <summary>添加信道挂钩必须对其进行侦听的 URI。</summary>
+      <param name="channelUri">信道挂钩必须对其进行侦听的 URI。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelData">
+      <summary>获取信道特定的数据。</summary>
+      <returns>包含特定于信道的数据的 <see cref="T:System.Runtime.Remoting.Channels.ChannelDataStore" /> 实例。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelName">
+      <summary>获取当前信道的名称。</summary>
+      <returns>一个包含信道名称的 <see cref="T:System.String" /> 对象。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelPriority">
+      <summary>获取当前信道的优先级。</summary>
+      <returns>一个整数，表示分配给该信道的优先级。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelScheme">
+      <summary>获取要挂钩到的侦听器的类型（例如“http”）。</summary>
+      <returns>要挂钩到的侦听器类型。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelSinkChain">
+      <summary>获取当前信道正在使用的信道接收器链。</summary>
+      <returns>当前信道正在使用的信道接收器链。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.GetChannelUri">
+      <summary>返回当前信道的 URI。</summary>
+      <returns>当前信道的 URI。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.GetUrlsForUri(System.String)">
+      <summary>返回具有指定 URI 的对象的所有 URL 的数组，该对象承载在当前的 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" /> 上。</summary>
+      <returns>具有指定 URI 的对象的所有 URL 的数组，该对象承载在当前的 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" /> 上。</returns>
+      <param name="objectUri">需要其 URL 的对象的 URI。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.Item(System.Object)">
+      <summary>返回指定的信道属性。</summary>
+      <returns>一个 <see cref="T:System.Object" />，表示由 <paramref name="key" /> 指定的信道属性。</returns>
+      <param name="key">要检索的信道属性的键。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.Keys">
+      <summary>获取与信道属性关联的键的 <see cref="T:System.Collections.ICollection" />。</summary>
+      <returns>与信道属性关联的键的 <see cref="T:System.Collections.ICollection" />。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.Parse(System.String,System.String@)">
+      <summary>从指定 URL 提取信道 URI 和远程已知对象 URI。</summary>
+      <returns>信道 URI。</returns>
+      <param name="url">从中提取 URI 的 URL。</param>
+      <param name="objectURI">当此方法返回时，包含含有远程已知对象的 URI 的 <see cref="T:System.String" />。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.StartListening(System.Object)">
+      <summary>指示当前信道开始侦听请求。</summary>
+      <param name="data">对于 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" />，应始终为 null。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.StopListening(System.Object)">
+      <summary>指示当前信道停止侦听请求。</summary>
+      <param name="data">对于 <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" />，应始终为 null。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.WantsToListen">
+      <summary>获取一个布尔值，该值指示 <see cref="T:System.Runtime.Remoting.Channels.IChannelReceiverHook" /> 是否要挂钩到外部侦听器服务。</summary>
+      <returns>指示 <see cref="T:System.Runtime.Remoting.Channels.IChannelReceiverHook" /> 是否要挂钩到外部侦听器服务的布尔值。</returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel">
+      <summary>提供使用 IPC 协议传输消息的信道实现。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.#ctor">
+      <summary>初始化 <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> 类的新实例，仅激活客户端信道，不激活服务器信道。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>使用指定的配置属性和接收器初始化 <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> 类的新实例。</summary>
+      <param name="properties">一个 <see cref="T:System.Collections.IDictionary" /> 集合，为客户端和服务器信道要使用的配置属性指定值。</param>
+      <param name="clientSinkProvider">客户端信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> 实现。</param>
+      <param name="serverSinkProvider">服务器信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> 实现。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.#ctor(System.String)">
+      <summary>使用侦听指定 IPC 端口的服务器信道初始化 <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> 类的新实例。</summary>
+      <param name="portName">IPC 端口的名称。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcChannel.ChannelData">
+      <summary>获取信道特定数据。</summary>
+      <returns>包含特定于信道的数据的 <see cref="T:System.Runtime.Remoting.Channels.ChannelDataStore" /> 实例。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcChannel.ChannelName">
+      <summary>获取当前信道的名称。</summary>
+      <returns>一个包含信道名称的 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcChannel.ChannelPriority">
+      <summary>获取当前信道的优先级。</summary>
+      <returns>一个整数，表示分配给该信道的优先级。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.CreateMessageSink(System.String,System.Object,System.String@)">
+      <summary>返回将消息传送到指定 URL 或信道数据对象的信道消息接收器。</summary>
+      <returns>将消息传递给指定 URL 或信道数据对象的信道消息接收器。</returns>
+      <param name="url">新接收器应将消息传递到的 URL。可以为 null。</param>
+      <param name="remoteChannelData">新接收器应将消息传递到的远程主机的信道数据对象。可以为 null。</param>
+      <param name="objectURI">此方法返回时，包含新信道消息接收器的 URI，该信道消息接收器将消息传送到指定 URL 或信道数据对象。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.GetUrlsForUri(System.String)">
+      <summary>返回具有指定 URI 的对象的所有 URL 的数组，该对象承载在当前的 <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> 上。</summary>
+      <returns>具有指定 URI 的对象的所有 URL 的数组，该对象承载在当前的 <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> 上。</returns>
+      <param name="objectURI">需要其 URL 的对象的 URI。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcChannel.IsSecured">
+      <summary>获取或设置一个布尔值，该值指示当前信道是否安全。</summary>
+      <returns>一个布尔值，指示当前实例是否安全。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.Parse(System.String,System.String@)">
+      <summary>从指定 URL 提取信道 URI 和远程已知对象 URI。</summary>
+      <returns>当前信道的 URI。</returns>
+      <param name="url">从中提取远程已知对象的 URI 的 URL。</param>
+      <param name="objectURI">当此方法返回时，包含含有远程已知对象的 URI 的 <see cref="T:System.String" />。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.StartListening(System.Object)">
+      <summary>指示当前信道开始侦听请求。</summary>
+      <param name="data">可选的初始化信息。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.StopListening(System.Object)">
+      <summary>指示当前信道停止侦听请求。</summary>
+      <param name="data">该信道的可选状态信息。</param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel">
+      <summary>为远程调用实现使用 IPC 协议传输消息的客户端信道。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.#ctor">
+      <summary>初始化 <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider)">
+      <summary>使用指定的配置属性和接收器初始化 <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel" /> 类的新实例。</summary>
+      <param name="properties">一个 <see cref="T:System.Collections.IDictionary" /> 集合，它为信道要使用的配置属性指定值。</param>
+      <param name="sinkProvider">信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> 实现。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.#ctor(System.String,System.Runtime.Remoting.Channels.IClientChannelSinkProvider)">
+      <summary>使用指定的名称和接收器初始化 <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel" /> 类的新实例。</summary>
+      <param name="name">信道的名称。</param>
+      <param name="sinkProvider">信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> 实现。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.ChannelName">
+      <summary>获取当前信道的名称。</summary>
+      <returns>包含信道名称的 <see cref="T:System.String" /> 实例。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.ChannelPriority">
+      <summary>获取当前信道的优先级。</summary>
+      <returns>一个整数，指示分配给此信道的优先级。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.CreateMessageSink(System.String,System.Object,System.String@)">
+      <summary>返回将消息传送到指定 URL 或信道数据对象的信道消息接收器。</summary>
+      <returns>将消息传递给指定 URL 或信道数据对象的信道消息接收器。</returns>
+      <param name="url">新接收器应将消息传递到的 URL。此参数可以为 null。</param>
+      <param name="remoteChannelData">新接收器将把消息传送到的远程主机的信道数据对象。此参数可以为 null。</param>
+      <param name="objectURI">此方法返回时，包含新信道消息接收器的 URI，该信道消息接收器将消息传送到指定 URL 或信道数据对象。该参数未经初始化即被传递。</param>
+      <exception cref="T:System.Runtime.Remoting.RemotingException">提供的接收器不实现 <see cref="T:System.Runtime.Remoting.Messaging.IMessageSink" />。</exception>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.IsSecured">
+      <summary>获取或设置一个布尔值，该值指示当前信道是否安全。</summary>
+      <returns>一个布尔值，指示当前实例是否安全。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.Parse(System.String,System.String@)">
+      <summary>从指定 URL 提取信道 URI 和远程已知对象 URI。</summary>
+      <returns>包含信道 URI 的 <see cref="T:System.String" />。</returns>
+      <param name="url">从中提取对象 URI 的 URL。</param>
+      <param name="objectURI">当此方法返回时，包含具有远程已知对象的 URI 的 <see cref="T:System.String" /> 实例。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel">
+      <summary>为远程调用实现使用 IPC 系统传输消息的服务器信道。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>使用指定的信道属性和接收器初始化 <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel" /> 类的新实例。</summary>
+      <param name="properties">一个 <see cref="T:System.Collections.IDictionary" /> 集合，它为信道要使用的配置属性指定值。</param>
+      <param name="sinkProvider">信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> 实现。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IServerChannelSinkProvider,System.Security.AccessControl.CommonSecurityDescriptor)">
+      <summary>使用指定的信道属性、接收器和安全说明符初始化 <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel" /> 类的新实例。</summary>
+      <param name="properties">一个 <see cref="T:System.Collections.IDictionary" /> 集合，它为信道要使用的配置属性指定值。</param>
+      <param name="sinkProvider">信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> 实现。</param>
+      <param name="securityDescriptor">信道要使用的 <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" />。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.#ctor(System.String)">
+      <summary>用指定的 IPC 端口名初始化 <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel" /> 类的新实例。</summary>
+      <param name="portName">信道要使用的 IPC 端口的名称。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.#ctor(System.String,System.String)">
+      <summary>用指定的信道名称和 IPC 端口名称初始化 <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel" /> 类的新实例。</summary>
+      <param name="name">信道的名称。</param>
+      <param name="portName">信道要使用的 IPC 端口的名称。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.#ctor(System.String,System.String,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>使用指定的信道名称、IPC 端口名称和接收器初始化 <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel" /> 类的新实例。</summary>
+      <param name="name">信道的名称。</param>
+      <param name="portName">信道要使用的 IPC 端口的名称。</param>
+      <param name="sinkProvider">信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> 实现。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelData">
+      <summary>获取信道特定的数据。</summary>
+      <returns>包含特定于信道的数据的 <see cref="T:System.Runtime.Remoting.Channels.ChannelDataStore" /> 实例。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelName">
+      <summary>获取当前信道的名称。</summary>
+      <returns>包含信道名称的 <see cref="T:System.String" /> 实例。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelPriority">
+      <summary>获取当前信道的优先级。</summary>
+      <returns>一个整数，指示分配给此信道的优先级。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.GetChannelUri">
+      <summary>返回当前信道的 URI。</summary>
+      <returns>一个包含信道的 URI 的 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.GetUrlsForUri(System.String)">
+      <summary>返回具有指定 URI 的对象的所有 URL 的数组，该对象承载在当前的 <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> 实例上。</summary>
+      <returns>具有指定 URI 的对象的 URL 的数组，该对象承载在当前的 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> 实例上。</returns>
+      <param name="objectUri">需要其 URL 的对象的 URI。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.IsSecured">
+      <summary>获取或设置一个布尔值，该值指示当前信道是否安全。</summary>
+      <returns>一个布尔值，指示当前实例是否安全。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.Parse(System.String,System.String@)">
+      <summary>从指定 URL 提取信道 URI 和远程已知对象 URI。</summary>
+      <returns>当前信道的 URI。</returns>
+      <param name="url">从中提取远程已知对象的 URI 的 URL。</param>
+      <param name="objectURI">当此方法返回时，包含含有远程已知对象的 URI 的 <see cref="T:System.String" /> 实例。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.StartListening(System.Object)">
+      <summary>指示当前信道开始侦听请求。</summary>
+      <param name="data">指定初始化状态的对象，如果不想将特定状态传递到信道，则为 null。</param>
+      <exception cref="T:System.Exception">指定的侦听端口不可用。</exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.StopListening(System.Object)">
+      <summary>指示当前信道停止侦听请求。</summary>
+      <param name="data">指定初始化状态的对象，如果不想将特定状态传递到信道，则为 null。</param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel">
+      <summary>提供使用 TCP 协议传输消息的信道实现。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.#ctor">
+      <summary>初始化 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> 类的新实例，仅激活客户端信道，不激活服务器信道。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>使用指定的配置属性和接收器初始化 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> 类的新实例。</summary>
+      <param name="properties">一个 <see cref="T:System.Collections.IDictionary" /> 集合，它为客户端和服务器信道要使用的配置属性指定值。</param>
+      <param name="clientSinkProvider">客户端信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> 实现。</param>
+      <param name="serverSinkProvider">服务器信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> 实现。</param>
+      <exception cref="T:System.ArgumentException">所提供的信道属性的格式不正确。</exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.#ctor(System.Int32)">
+      <summary>使用侦听指定端口的服务器信道初始化 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> 类的新实例。</summary>
+      <param name="port">服务器信道侦听的端口。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpChannel.ChannelData">
+      <summary>获取信道特定数据。</summary>
+      <returns>包含特定于信道的数据的 <see cref="T:System.Runtime.Remoting.Channels.ChannelDataStore" /> 实例。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpChannel.ChannelName">
+      <summary>获取当前信道的名称。</summary>
+      <returns>一个包含信道名称的 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpChannel.ChannelPriority">
+      <summary>获取当前信道的优先级。</summary>
+      <returns>一个整数，表示分配给该信道的优先级。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.CreateMessageSink(System.String,System.Object,System.String@)">
+      <summary>返回将消息传送到指定 URL 或信道数据对象的信道消息接收器。</summary>
+      <returns>将消息传递给指定 URL 或信道数据对象的信道消息接收器。</returns>
+      <param name="url">新接收器应将消息传递到的 URL。可以为 null。</param>
+      <param name="remoteChannelData">新接收器应将消息传递到的远程主机的信道数据对象。可以为 null。</param>
+      <param name="objectURI">此方法返回时，包含新信道消息接收器的 URI，该信道消息接收器将消息传送到指定 URL 或信道数据对象。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.GetUrlsForUri(System.String)">
+      <summary>返回具有指定 URI 的对象的所有 URL 的数组，该对象承载在当前的 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> 上。</summary>
+      <returns>具有指定 URI 的对象的所有 URL 的数组，该对象承载在当前的 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> 上。</returns>
+      <param name="objectURI">需要其 URL 的对象的 URI。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpChannel.IsSecured">
+      <summary>获取或设置一个布尔值，该值指示当前信道是否安全。</summary>
+      <returns>一个布尔值，指示当前实例是否安全。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.Parse(System.String,System.String@)">
+      <summary>从指定 URL 提取信道 URI 和远程已知对象 URI。</summary>
+      <returns>当前信道的 URI。</returns>
+      <param name="url">从中提取远程已知对象的 URI 的 URL。</param>
+      <param name="objectURI">当此方法返回时，包含含有远程已知对象的 URI 的 <see cref="T:System.String" />。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.StartListening(System.Object)">
+      <summary>指示当前信道开始侦听请求。</summary>
+      <param name="data">可选的初始化信息。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.StopListening(System.Object)">
+      <summary>指示当前信道停止侦听请求。</summary>
+      <param name="data">该信道的可选状态信息。</param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel">
+      <summary>为远程调用实现使用 TCP 协议传输消息的客户端信道。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.#ctor">
+      <summary>初始化 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider)">
+      <summary>使用指定的配置属性和接收器初始化 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel" /> 类的新实例。</summary>
+      <param name="properties">一个 <see cref="T:System.Collections.IDictionary" /> 集合，它为信道要使用的配置属性指定值。</param>
+      <param name="sinkProvider">信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> 实现。</param>
+      <exception cref="T:System.ArgumentException">配置属性的格式设置不正确。</exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.#ctor(System.String,System.Runtime.Remoting.Channels.IClientChannelSinkProvider)">
+      <summary>使用指定的名称和接收器初始化 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel" /> 类的新实例。</summary>
+      <param name="name">信道的名称。</param>
+      <param name="sinkProvider">信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> 实现。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.ChannelName">
+      <summary>获取当前信道的名称。</summary>
+      <returns>包含信道名称的 <see cref="T:System.String" /> 实例。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.ChannelPriority">
+      <summary>获取当前信道的优先级。</summary>
+      <returns>一个整数，表示分配给该信道的优先级。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.CreateMessageSink(System.String,System.Object,System.String@)">
+      <summary>返回将消息传送到指定 URL 或信道数据对象的信道消息接收器。</summary>
+      <returns>将消息传递给指定 URL 或信道数据对象的信道消息接收器。</returns>
+      <param name="url">新接收器应将消息传递到的 URL。可以为 null。</param>
+      <param name="remoteChannelData">新接收器将把消息传送到的远程主机的信道数据对象。可以为 null。</param>
+      <param name="objectURI">此方法返回时，包含新信道消息接收器的 URI，该信道消息接收器将消息传送到指定 URL 或信道数据对象。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.IsSecured">
+      <summary>获取或设置一个布尔值，该值指示当前信道是否安全</summary>
+      <returns>一个布尔值，指示当前实例是否安全。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.Parse(System.String,System.String@)">
+      <summary>从指定 URL 提取信道 URI 和远程已知对象 URI。</summary>
+      <returns>信道 URI。</returns>
+      <param name="url">从中提取 URI 的 URL。</param>
+      <param name="objectURI">当此方法返回时，包含含有远程已知对象的 URI 的 <see cref="T:System.String" /> 实例。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel">
+      <summary>为远程调用实现使用 TCP 协议传输消息的服务器信道。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>使用指定的信道属性和接收器初始化 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel" /> 类的新实例。</summary>
+      <param name="properties">一个 <see cref="T:System.Collections.IDictionary" /> 集合，它为信道要使用的配置属性指定值。</param>
+      <param name="sinkProvider">信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> 实现。</param>
+      <exception cref="T:System.ArgumentException">提供的信道属性有格式错误。</exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IServerChannelSinkProvider,System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection)">
+      <summary>使用指定的信道属性、接收器和授权提供程序初始化 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel" /> 类的新实例。</summary>
+      <param name="properties">一个 <see cref="T:System.Collections.IDictionary" /> 集合，它为信道要使用的配置属性指定值。</param>
+      <param name="sinkProvider">信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> 实现。</param>
+      <param name="authorizeCallback">信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection" /> 实现。</param>
+      <exception cref="T:System.ArgumentException">提供的信道属性有格式错误。</exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.#ctor(System.Int32)">
+      <summary>初始化在指定端口上侦听的 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel" /> 类的新实例。</summary>
+      <param name="port">信道侦听的端口。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.#ctor(System.String,System.Int32)">
+      <summary>使用给定名称初始化 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel" /> 类的新实例，该实例侦听指定的端口。</summary>
+      <param name="name">信道的名称。</param>
+      <param name="port">信道侦听的端口。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.#ctor(System.String,System.Int32,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>以给定的名称初始化 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel" /> 类的新实例，该实例侦听指定的端口并使用指定的接收器。</summary>
+      <param name="name">信道的名称。</param>
+      <param name="port">信道侦听的端口。</param>
+      <param name="sinkProvider">信道要使用的 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> 实现。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.ChannelData">
+      <summary>获取信道特定的数据。</summary>
+      <returns>包含信道特定数据的 <see cref="T:System.Runtime.Remoting.Channels.ChannelDataStore" /> 实例。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.ChannelName">
+      <summary>获取当前信道的名称。</summary>
+      <returns>包含信道名称的 <see cref="T:System.String" /> 实例。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.ChannelPriority">
+      <summary>获取当前信道的优先级。</summary>
+      <returns>一个整数，表示分配给该信道的优先级。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.GetChannelUri">
+      <summary>返回当前信道的 URI。</summary>
+      <returns>当前信道的 URI。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.GetUrlsForUri(System.String)">
+      <summary>返回具有指定 URI 的对象的所有 URL 的数组，该对象承载在当前的 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> 实例上。</summary>
+      <returns>具有指定 URI 的对象的 URL 的数组，该对象承载在当前的 <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> 实例上。</returns>
+      <param name="objectUri">需要其 URL 的对象的 URI。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.IsSecured">
+      <summary>获取或设置一个布尔值，该值指示当前信道是否安全。</summary>
+      <returns>一个布尔值，指示当前实例是否安全。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.Parse(System.String,System.String@)">
+      <summary>从指定 URL 提取信道 URI 和远程已知对象 URI。</summary>
+      <returns>当前信道的 URI。</returns>
+      <param name="url">从中提取远程已知对象的 URI 的 URL。</param>
+      <param name="objectURI">当此方法返回时，包含含有远程已知对象的 URI 的 <see cref="T:System.String" /> 实例。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.StartListening(System.Object)">
+      <summary>指示当前信道开始侦听请求。</summary>
+      <param name="data">可选的初始化信息。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.StopListening(System.Object)">
+      <summary>指示当前信道停止侦听请求。</summary>
+      <param name="data">该信道的可选状态信息。</param>
+    </member>
+    <member name="T:System.Runtime.Remoting.MetadataServices.MetaData">
+      <summary>
+                    提供使您可以使用 XML 架构的方法。
+                </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.#ctor">
+      <summary>
+                    创建 <see cref="T:System.Runtime.Remoting.MetadataServices.MetaData" /> 的实例。
+                </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertCodeSourceFileToAssemblyFile(System.String,System.String,System.String)">
+      <summary>
+                    将指定的代码源文件编译为运行时程序集文件。
+                </summary>
+      <param name="codePath">
+                    包含源代码的文件的路径。
+                </param>
+      <param name="assemblyPath">
+生成新运行时程序集的位置。
+                </param>
+      <param name="strongNameFilename">
+                    要编译到新程序集中的强名称。可以为 <see cref="F:System.String.Empty" />。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertCodeSourceStreamToAssemblyFile(System.Collections.ArrayList,System.String,System.String)">
+      <summary>
+                    将指定的代码源流编译为运行时程序集文件。
+                </summary>
+      <param name="outCodeStreamList">
+                    含有源代码的流的 <see cref="T:System.Collections.ArrayList" />。
+                </param>
+      <param name="assemblyPath">
+生成新运行时程序集的位置。
+                </param>
+      <param name="strongNameFilename">
+                    要编译到新的运行时程序集中的强名称。可以为 <see cref="F:System.String.Empty" />。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList)">
+      <summary>
+                    将指定的架构定义转换为 C# 代理源代码。
+                </summary>
+      <param name="clientProxy">
+指示要生成的代理的类型。如果为 true，则生成简单代理（也称为绕线代理），该代理自动加载信道、公开远程对象的所有方法并提供对信道属性的访问。如果为 false，则生成透明代理，该代理公开远程对象的所有方法。
+                </param>
+      <param name="outputDirectory">
+目录，在其中创建具有代理的新 C# 源代码文件。
+                </param>
+      <param name="inputStream">
+输入流，包含 Web 服务描述语言 (WSDL) 格式的架构定义。
+                </param>
+      <param name="outCodeStreamList">
+生成的代码流的文件名列表。请注意，<see cref="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList,System.String,System.String)" /> 方法可以创建多个源代码流。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList,System.String)">
+      <summary>
+                    将指定的架构定义转换为位于指定 URL 的远程对象的 C# 代理源代码。
+                </summary>
+      <param name="clientProxy">
+指示要生成的代理的类型。如果为 true，则生成简单代理（也称为绕线代理），该代理自动加载信道、公开远程对象的所有方法并提供对信道属性的访问。如果为 false，则生成透明代理，该代理公开远程对象的所有方法。
+                </param>
+      <param name="outputDirectory">
+目录，在其中创建具有代理的新 C# 源代码文件。
+                </param>
+      <param name="inputStream">
+输入流，包含 Web 服务描述语言 (WSDL) 格式的架构定义。
+                </param>
+      <param name="outCodeStreamList">
+生成的代码流的文件名列表。请注意，<see cref="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList,System.String,System.String)" /> 方法可以创建多个源代码流。
+                </param>
+      <param name="proxyUrl">
+由新代理表示的目标远程对象所在的 URL。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList,System.String,System.String)">
+      <summary>
+                    将指定的架构定义转换为位于指定 URL 并处于所提供的类命名空间中的远程对象的 C# 代理源代码。
+                </summary>
+      <param name="clientProxy">
+指示要生成的代理的类型。如果为 true，则生成简单代理（也称为绕线代理），该代理自动加载信道、公开远程对象的所有方法并提供对信道属性的访问。如果为 false，则生成透明代理，该代理公开远程对象的所有方法。
+                </param>
+      <param name="outputDirectory">
+目录，在其中创建具有代理的新 C# 源代码文件。
+                </param>
+      <param name="inputStream">
+                    输入流，包含 Web 服务描述语言 (WSDL) 格式的架构定义。
+                </param>
+      <param name="outCodeStreamList">
+生成的代码流的文件名列表。请注意，<see cref="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList,System.String,System.String)" /> 方法可以创建多个源代码流。
+                </param>
+      <param name="proxyUrl">
+由新代理表示的目标远程对象所在的 URL。
+                </param>
+      <param name="proxyNamespace">
+                    新创建的代理的命名空间。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertTypesToSchemaToFile(System.Runtime.Remoting.MetadataServices.ServiceType[],System.Runtime.Remoting.MetadataServices.SdlType,System.String)">
+      <summary>
+                    将指定的服务类型转换为 XML 架构，并将其写入由名称指定的文件。
+                </summary>
+      <param name="types">
+                    要转换为 XML 架构的 <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> 实例。
+                </param>
+      <param name="sdlType">
+用于 XML 架构的服务描述语言的类型。
+                </param>
+      <param name="path">
+XML 文件的路径。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertTypesToSchemaToFile(System.Type[],System.Runtime.Remoting.MetadataServices.SdlType,System.String)">
+      <summary>
+                    将指定的对象类型转换为 XML 架构，并将其写入由名称指定的文件。
+                </summary>
+      <param name="types">
+要转换为 XML 架构的对象类型。
+                </param>
+      <param name="sdlType">
+用于 XML 架构的服务描述语言的类型。
+                </param>
+      <param name="path">
+XML 文件的路径。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertTypesToSchemaToStream(System.Runtime.Remoting.MetadataServices.ServiceType[],System.Runtime.Remoting.MetadataServices.SdlType,System.IO.Stream)">
+      <summary>
+                    将指定的服务类型转换为 XML 架构，并将其写入指定流。
+                </summary>
+      <param name="serviceTypes">
+                    要转换为 XML 架构的 <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> 实例。
+                </param>
+      <param name="sdlType">
+用于 XML 架构的服务描述语言的类型。
+                </param>
+      <param name="outputStream">
+                    架构写入的 <see cref="T:System.IO.Stream" />。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertTypesToSchemaToStream(System.Type[],System.Runtime.Remoting.MetadataServices.SdlType,System.IO.Stream)">
+      <summary>
+                    将指定的对象类型转换为 XML 架构，并将其写入指定流。
+                </summary>
+      <param name="types">
+要转换为 XML 架构的对象类型。
+                </param>
+      <param name="sdlType">
+用于 XML 架构的服务描述语言的类型。
+                </param>
+      <param name="outputStream">
+                    架构写入的 <see cref="T:System.IO.Stream" />。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.RetrieveSchemaFromUrlToFile(System.String,System.String)">
+      <summary>
+                    从某个 URL 下载 XML 架构，并将其写入指定文件。
+                </summary>
+      <param name="url">
+XML 架构所在的 URL。
+                </param>
+      <param name="path">
+                    架构写入的文件的路径。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.RetrieveSchemaFromUrlToStream(System.String,System.IO.Stream)">
+      <summary>
+                    从某个 URL 下载 XML 架构，并将其写入指定流。
+                </summary>
+      <param name="url">
+XML 架构所在的 URL。
+                </param>
+      <param name="outputStream">
+                    架构写入的 <see cref="T:System.IO.Stream" />。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.SaveStreamToFile(System.IO.Stream,System.String)">
+      <summary>
+                    将输入流保存到具有指定名称的文件。
+                </summary>
+      <param name="inputStream">
+                    要写入指定文件的流。
+                </param>
+      <param name="path">
+                    输入流写入的文件。
+                </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.MetadataServices.SdlChannelSink">
+      <summary>提供在服务器上动态生成 Web 服务描述语言 (WSDL) 的服务器信道接收器的实现。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSink.#ctor(System.Runtime.Remoting.Channels.IChannelReceiver,System.Runtime.Remoting.Channels.IServerChannelSink)">
+      <summary>初始化 <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSink" /> 类的新实例。</summary>
+      <param name="receiver">指示将接收由 <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSink" /> 的新实例序列化的消息的信道。</param>
+      <param name="nextSink">接收器链中的下一个接收器。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSink.AsyncProcessResponse(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)">
+      <summary>请求从当前接收器对异步发送的方法调用的响应进行处理。</summary>
+      <param name="sinkStack">将发回服务器传输接收器的接收器堆栈。</param>
+      <param name="state">与当前接收器关联的、在请求端生成而在响应端需要的信息。</param>
+      <param name="msg">响应消息。</param>
+      <param name="headers">要添加到将发往客户端的返回消息的标头。</param>
+      <param name="stream">将发回传输接收器的流。</param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSink.GetResponseStream(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders)">
+      <summary>返回提供的响应消息将序列化到其上的 <see cref="T:System.IO.Stream" />。</summary>
+      <returns>提供的响应消息将序列化到其上的 <see cref="T:System.IO.Stream" />。</returns>
+      <param name="sinkStack">将发回服务器传输接收器的接收器堆栈。</param>
+      <param name="state">与当前接收器关联的、在请求端生成而在响应端需要的信息。</param>
+      <param name="msg">要序列化的响应消息。</param>
+      <param name="headers">要放置在将发送到客户端的响应流中的标头。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.MetadataServices.SdlChannelSink.NextChannelSink">
+      <summary>获取接收器链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" />。</summary>
+      <returns>接收器链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" />。</returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSink.ProcessMessage(System.Runtime.Remoting.Channels.IServerChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream,System.Runtime.Remoting.Messaging.IMessage@,System.Runtime.Remoting.Channels.ITransportHeaders@,System.IO.Stream@)">
+      <summary>请求从当前接收器处理消息。</summary>
+      <returns>
+        <see cref="T:System.Runtime.Remoting.Channels.ServerProcessing" /> 状态值，提供有关如何处理消息的信息。</returns>
+      <param name="sinkStack">调用了当前接收器的信道接收器的堆栈。</param>
+      <param name="requestMsg">包含请求的消息。</param>
+      <param name="requestHeaders">从来自客户端的传入消息中检索到的标头。</param>
+      <param name="requestStream">需要被处理并传递到反序列化接收器的流。</param>
+      <param name="responseMsg">此方法返回时，包含持有响应消息的 <see cref="T:System.Runtime.Remoting.Messaging.IMessage" />。该参数未经初始化即被传递。</param>
+      <param name="responseHeaders">当此方法返回时，包含一个 <see cref="T:System.Runtime.Remoting.Channels.ITransportHeaders" />，它持有要添加到发往客户端的返回信息的标头。该参数未经初始化即被传递。</param>
+      <param name="responseStream">当此方法返回时，包含传向传输接收器的 <see cref="T:System.IO.Stream" />。该参数未经初始化即被传递。</param>
+    </member>
+    <member name="P:System.Runtime.Remoting.MetadataServices.SdlChannelSink.Properties">
+      <summary>获取当前信道接收器属性的 <see cref="T:System.Collections.IDictionary" />。</summary>
+      <returns>当前信道接收器属性的 <see cref="T:System.Collections.IDictionary" />。</returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider">
+      <summary>提供创建 <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSink" /> 实例的服务器信道接收器提供程序的实现。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider.#ctor">
+      <summary>使用默认值初始化 <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider.#ctor(System.Collections.IDictionary,System.Collections.ICollection)">
+      <summary>用指定属性和提供程序数据初始化 <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider" /> 类的新实例。</summary>
+      <param name="properties">用于 <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider" /> 新实例的配置属性的 <see cref="T:System.Collections.IDictionary" />。 </param>
+      <param name="providerData">用于 <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider" /> 的新实例的 <see cref="T:System.Runtime.Remoting.Channels.SinkProviderData" /> 实例的 <see cref="T:System.Collections.ICollection" />。 </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider.CreateSink(System.Runtime.Remoting.Channels.IChannelReceiver)">
+      <summary>创建接收器链。</summary>
+      <returns>新生成的信道接收器链的第一个接收器。</returns>
+      <param name="channel">要为其创建信道接收器链的信道。 </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider.GetChannelData(System.Runtime.Remoting.Channels.IChannelDataStore)">
+      <summary>返回与当前接收器关联的信道的信道数据。</summary>
+      <param name="localChannelData">将在其中返回信道数据的 <see cref="T:System.Runtime.Remoting.Channels.IChannelDataStore" /> 对象。 </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider.Next">
+      <summary>获取或设置接收器提供程序链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" />。</summary>
+      <returns>接收器提供程序链中的下一个 <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" />。</returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.MetadataServices.SdlType">
+      <summary>指定用于描述应用程序所提供的服务的架构类型。</summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.MetadataServices.SdlType.Sdl">
+      <summary>指示使用基本的服务描述语言 (SDL) 来描述应用程序所提供的服务。该值已过时。</summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.MetadataServices.SdlType.Wsdl">
+      <summary>指示使用 Web 服务描述语言 (WSDL) 来描述应用程序所提供的服务。</summary>
+    </member>
+    <member name="T:System.Runtime.Remoting.MetadataServices.ServiceType">
+      <summary>将传递到 Web 服务描述语言 (WSDL) 生成器的已知对象类型与可以处理发送给该类型上方法的消息的远程终结点相关联。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.ServiceType.#ctor(System.Type)">
+      <summary>使用传递到 Web 服务描述语言 (WSDL) 生成器的对象 <see cref="T:System.Type" /> 初始化 <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> 类的新实例。</summary>
+      <param name="type">传递到 WSDL 生成器的对象 <see cref="T:System.Type" />。 </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.ServiceType.#ctor(System.Type,System.String)">
+      <summary>使用该 URL 和传递到 Web 服务描述语言 (WSDL) 生成器的对象 <see cref="T:System.Type" /> 初始化 <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> 类的新实例。</summary>
+      <param name="type">传递到 WSDL 生成器的对象 <see cref="T:System.Type" />。 </param>
+      <param name="url">可以处理发送给在 <paramref name="type" /> 参数中指定的对象类型上的方法的消息的已知终结点。 </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.MetadataServices.ServiceType.ObjectType">
+      <summary>获取传递到 Web 服务描述语言 (WSDL) 生成器的对象 <see cref="T:System.Type" />。</summary>
+      <returns>为其创建当前 <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> 的对象 <see cref="T:System.Type" />。</returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.MetadataServices.ServiceType.Url">
+      <summary>获取传递到 Web 服务描述语言 (WSDL) 生成器的对象 <see cref="T:System.Type" /> 的 URL。</summary>
+      <returns>为其创建当前 <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> 的对象 <see cref="T:System.Type" /> 的 URL。</returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.MetadataServices.SUDSGeneratorException">
+      <summary>在生成 Web 服务描述语言 (WSDL) 的过程中发生错误时将引发的异常。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SUDSGeneratorException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>初始化 <see cref="T:System.Runtime.Remoting.MetadataServices.SUDSGeneratorException" /> 类的新实例。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它存有有关所引发异常的序列化的对象数据。</param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含有关源或目标的上下文信息。</param>
+    </member>
+    <member name="T:System.Runtime.Remoting.MetadataServices.SUDSParserException">
+      <summary>在分析 Web 服务描述语言 (WSDL) 的过程中发生错误时将引发的异常。</summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SUDSParserException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>初始化 <see cref="T:System.Runtime.Remoting.MetadataServices.SUDSParserException" /> 类的新实例。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它存有有关所引发异常的序列化的对象数据。</param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含有关源或目标的上下文信息。</param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Services.RemotingClientProxy">
+      <summary>
+                    由 Soapsuds 工具 (Soapsuds.exe) 生成的已知对象的代理的抽象基类。
+                </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Services.RemotingClientProxy.#ctor"></member>
+    <member name="F:System.Runtime.Remoting.Services.RemotingClientProxy._tp">
+      <summary>
+                    位于远程处理客户端代理对象中的透明代理。
+                </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Services.RemotingClientProxy._type">
+      <summary>
+                    指示当前代理表示的对象的类型。
+                </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Services.RemotingClientProxy._url">
+      <summary>
+                    指示当前代理表示的对象的 URL。
+                </summary>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.AllowAutoRedirect">
+      <summary>
+                    获取或设置一个值，该值指示是否启用服务器重定向的自动处理。
+                </summary>
+      <returns>
+                    一个布尔值，指示是否启用服务器重定向的自动处理。
+                </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Services.RemotingClientProxy.ConfigureProxy(System.Type,System.String)">
+      <summary>
+                    内部。通过加载信道来自动配置代理（如果还未加载它们并创建代理）。
+                </summary>
+      <param name="type">
+                    当前代理表示的对象的 <see cref="T:System.Type" /> 类类型。
+                </param>
+      <param name="url">
+当前代理表示的对象的 URL。
+                </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Services.RemotingClientProxy.ConnectProxy">
+      <summary>
+                    内部。将代理连接到 <see cref="P:System.Runtime.Remoting.Services.RemotingClientProxy.Url" /> 属性所指定的远程处理信道。
+                </summary>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.Cookies">
+      <summary>
+                    目前未实现此属性。该属性返回 null（在 Visual Basic 中则为 Nothing）。
+                </summary>
+      <returns>
+                    当前代理的 Cookie。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.Domain">
+      <summary>
+                    获取或设置要用于基本身份验证和简要身份验证的域名。
+                </summary>
+      <returns>
+                    要用于基本身份验证和简要身份验证的域名。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.EnableCookies">
+      <summary>
+                    目前未实现此属性。该属性引发 <see cref="T:System.NotSupportedException" />。
+                </summary>
+      <returns>
+                    一个布尔值，它指示是否启用对从服务器接收到的 Cookie 的处理。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.Password">
+      <summary>
+                    获取或设置要用于基本身份验证和简要身份验证的密码。
+                </summary>
+      <returns>
+                    要用于基本身份验证和简要身份验证的密码。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.Path">
+      <summary>
+获取或设置要用于请求的服务器的基 URL。
+                </summary>
+      <returns>
+要用于请求的服务器的基 URL。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.PreAuthenticate">
+      <summary>
+                    获取或设置一个值，该值指示是否启用请求的预身份验证。
+                </summary>
+      <returns>
+                    一个布尔值，指示是否启用请求的预身份验证。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.ProxyName">
+      <summary>
+                    获取或设置要用于请求的代理服务器的名称。
+                </summary>
+      <returns>
+                    要用于请求的代理服务器的名称。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.ProxyPort">
+      <summary>
+                    获取或设置要用于请求的代理服务器的端口号。
+                </summary>
+      <returns>
+                    要用于请求的代理服务器的端口号。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.Timeout">
+      <summary>
+                    获取或设置要用于同步调用的超时设定（以毫秒为单位）。
+                </summary>
+      <returns>
+                    要用于同步调用的超时设定（以毫秒为单位）。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.Url">
+      <summary>
+获取或设置要用于请求的服务器的基 URL。
+                </summary>
+      <returns>
+要用于请求的服务器的基 URL。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.UserAgent">
+      <summary>
+                    获取或设置请求的用户代理 HTTP 标头。
+                </summary>
+      <returns>
+                    请求的用户代理 HTTP 标头。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.Username">
+      <summary>
+                    获取或设置要为基本身份验证和简要身份验证发送的用户名。
+                </summary>
+      <returns>
+                    要为基本身份验证和简要身份验证发送的用户名。
+                </returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Services.RemotingService">
+      <summary>
+                    提供远程处理 XML Web services 的基实现。
+                </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Services.RemotingService.#ctor">
+      <summary>
+                    创建 <see cref="T:System.Runtime.Remoting.Services.RemotingService" /> 的实例。
+                </summary>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingService.Application">
+      <summary>
+                    获取对当前 HTTP 请求的应用程序对象的引用。
+                </summary>
+      <returns>
+                    对当前 HTTP 请求的应用程序对象的引用。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingService.Context">
+      <summary>
+                    获取 HTTP 服务器用来处理 Web 请求的当前 HTTP 特定的上下文。
+                </summary>
+      <returns>
+                    HTTP 服务器用来处理 Web 请求的当前 HTTP 特定的上下文。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingService.Server">
+      <summary>
+                    获取当前请求的 <see cref="T:System.Web.HttpServerUtility" />。
+                </summary>
+      <returns>
+                    当前请求的 <see cref="T:System.Web.HttpServerUtility" />。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingService.Session">
+      <summary>
+                    获取当前请求的 <see cref="T:System.Web.SessionState.HttpSessionState" />。
+                </summary>
+      <returns>
+                    当前请求的 <see cref="T:System.Web.SessionState.HttpSessionState" />。
+                </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingService.User">
+      <summary>
+                    获取为其运行该代码的用户的安全上下文，包括该用户的标识及其所属的任何角色。
+                </summary>
+      <returns>
+                    用户的安全上下文。
+                </returns>
+    </member>
+  </members>
+</doc>

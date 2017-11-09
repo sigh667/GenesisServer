@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Accessibility</name>
+  </assembly>
+  <members>
+    <member name="T:Accessibility.__MIDL_IWinTypes_0009">
+      <summary>
+        <see cref="T:Accessibility.__MIDL_IWinTypes_0009" /> 及其公开的所有成员都属于组件对象模型 (COM) 辅助功能接口的托管包装的一部分。</summary>
+    </member>
+    <member name="F:Accessibility.__MIDL_IWinTypes_0009.hInproc">
+      <summary>
+        <see cref="T:Accessibility.__MIDL_IWinTypes_0009" /> 及其公开的所有成员都属于组件对象模型 (COM) 辅助功能接口的托管包装的一部分。</summary>
+    </member>
+    <member name="F:Accessibility.__MIDL_IWinTypes_0009.hRemote">
+      <summary>
+        <see cref="T:Accessibility.__MIDL_IWinTypes_0009" /> 及其公开的所有成员都属于组件对象模型 (COM) 辅助功能接口的托管包装的一部分。</summary>
+    </member>
+    <member name="T:Accessibility._RemotableHandle">
+      <summary>
+        <see cref="T:Accessibility.IAccessibleHandler" /> 及其公开的所有成员都属于组件对象模型 (COM) 辅助功能接口的托管包装的一部分。</summary>
+    </member>
+    <member name="F:Accessibility._RemotableHandle.fContext">
+      <summary>
+        <see cref="T:Accessibility.IAccessibleHandler" /> 及其公开的所有成员都属于组件对象模型 (COM) 辅助功能接口的托管包装的一部分。</summary>
+    </member>
+    <member name="F:Accessibility._RemotableHandle.u">
+      <summary>
+        <see cref="T:Accessibility.IAccessibleHandler" /> 及其公开的所有成员都属于组件对象模型 (COM) 辅助功能接口的托管包装的一部分。</summary>
+    </member>
+    <member name="T:Accessibility.AnnoScope">
+      <summary>
+        <see cref="T:Accessibility.AnnoScope" /> 及其公开的所有成员都属于组件对象模型 (COM) 辅助功能接口的托管包装的一部分。</summary>
+    </member>
+    <member name="F:Accessibility.AnnoScope.ANNO_THIS">
+      <summary>批注范围限定于直接对象。</summary>
+    </member>
+    <member name="F:Accessibility.AnnoScope.ANNO_CONTAINER">
+      <summary>批注范围限定于容器对象。</summary>
+    </member>
+    <member name="T:Accessibility.CAccPropServices">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServices" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+    </member>
+    <member name="T:Accessibility.CAccPropServicesClass">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.#ctor">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ClearHmenuProps(Accessibility._RemotableHandle@,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hmenu"></param>
+      <param name="idChild"></param>
+      <param name="paProps"></param>
+      <param name="cProps"></param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ClearHwndProps(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hwnd"></param>
+      <param name="idObject"></param>
+      <param name="idChild"></param>
+      <param name="paProps"></param>
+      <param name="cProps"></param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ClearProps(System.Byte@,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="pIDString"></param>
+      <param name="dwIDStringLen"></param>
+      <param name="paProps"></param>
+      <param name="cProps"></param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ComposeHmenuIdentityString(Accessibility._RemotableHandle@,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hmenu"></param>
+      <param name="idChild"></param>
+      <param name="ppIDString"></param>
+      <param name="pdwIDStringLen"></param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ComposeHwndIdentityString(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hwnd"></param>
+      <param name="idObject"></param>
+      <param name="idChild"></param>
+      <param name="ppIDString"></param>
+      <param name="pdwIDStringLen"></param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.DecomposeHmenuIdentityString(System.Byte@,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="pIDString"></param>
+      <param name="dwIDStringLen"></param>
+      <param name="phmenu"></param>
+      <param name="pidChild"></param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.DecomposeHwndIdentityString(System.Byte@,System.UInt32,System.IntPtr,System.UInt32@,System.UInt32@)">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="pIDString"></param>
+      <param name="dwIDStringLen"></param>
+      <param name="phwnd"></param>
+      <param name="pidObject"></param>
+      <param name="pidChild"></param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHmenuProp(Accessibility._RemotableHandle@,System.UInt32,System.Guid,System.Object)">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hmenu"></param>
+      <param name="idChild"></param>
+      <param name="idProp"></param>
+      <param name="var"></param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHmenuPropServer(Accessibility._RemotableHandle@,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hmenu"></param>
+      <param name="idChild"></param>
+      <param name="paProps"></param>
+      <param name="cProps"></param>
+      <param name="pServer"></param>
+      <param name="AnnoScope"></param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHmenuPropStr(Accessibility._RemotableHandle@,System.UInt32,System.Guid,System.String)">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hmenu"></param>
+      <param name="idChild"></param>
+      <param name="idProp"></param>
+      <param name="str"></param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHwndProp(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid,System.Object)">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hwnd"></param>
+      <param name="idObject"></param>
+      <param name="idChild"></param>
+      <param name="idProp"></param>
+      <param name="var"></param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHwndPropServer(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hwnd"></param>
+      <param name="idObject"></param>
+      <param name="idChild"></param>
+      <param name="paProps"></param>
+      <param name="cProps"></param>
+      <param name="pServer"></param>
+      <param name="AnnoScope"></param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHwndPropStr(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid,System.String)">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hwnd"></param>
+      <param name="idObject"></param>
+      <param name="idChild"></param>
+      <param name="idProp"></param>
+      <param name="str"></param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetPropServer(System.Byte@,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="pIDString"></param>
+      <param name="dwIDStringLen"></param>
+      <param name="paProps"></param>
+      <param name="cProps"></param>
+      <param name="pServer"></param>
+      <param name="AnnoScope"></param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetPropValue(System.Byte@,System.UInt32,System.Guid,System.Object)">
+      <summary>
+        <see cref="T:Accessibility.CAccPropServicesClass" /> 及其所有公开的成员都是组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="pIDString"></param>
+      <param name="dwIDStringLen"></param>
+      <param name="idProp"></param>
+      <param name="var"></param>
+    </member>
+    <member name="T:Accessibility.IAccessible">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+    </member>
+    <member name="P:Accessibility.IAccessible.accChild(System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <returns>一个对象。</returns>
+      <param name="varChild">此参数仅供内部使用。</param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accChildCount">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <returns>表示计数的整数。</returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accDefaultAction(System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <returns>表示操作的字符串。</returns>
+      <param name="varChild">此参数仅供内部使用。</param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accDescription(System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <returns>表示说明的字符串。</returns>
+      <param name="varChild">此参数仅供内部使用。</param>
+    </member>
+    <member name="M:Accessibility.IAccessible.accDoDefaultAction(System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <param name="varChild">此参数仅供内部使用。</param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accFocus">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+    </member>
+    <member name="P:Accessibility.IAccessible.accHelp(System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <returns>一个字符串。</returns>
+      <param name="varChild">此参数仅供内部使用。</param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accHelpTopic(System.String@,System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <returns>整数。</returns>
+      <param name="pszHelpFile">此参数仅供内部使用。</param>
+      <param name="varChild">此参数仅供内部使用。</param>
+    </member>
+    <member name="M:Accessibility.IAccessible.accHitTest(System.Int32,System.Int32)">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <returns>一个对象。</returns>
+      <param name="xLeft">此参数仅供内部使用。</param>
+      <param name="yTop">此参数仅供内部使用。</param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accKeyboardShortcut(System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <returns>一个字符串。</returns>
+      <param name="varChild">此参数仅供内部使用。</param>
+    </member>
+    <member name="M:Accessibility.IAccessible.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <param name="pxLeft">此参数仅供内部使用。</param>
+      <param name="pyTop">此参数仅供内部使用。</param>
+      <param name="pcxWidth">此参数仅供内部使用。</param>
+      <param name="pcyHeight">此参数仅供内部使用。</param>
+      <param name="varChild">此参数仅供内部使用。</param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accName(System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <returns>一个字符串。</returns>
+      <param name="varChild">此参数仅供内部使用。</param>
+    </member>
+    <member name="M:Accessibility.IAccessible.accNavigate(System.Int32,System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <param name="navDir">此参数仅供内部使用。</param>
+      <param name="varStart">此参数仅供内部使用。</param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accParent">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <returns>一个对象。</returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accRole(System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <returns>一个对象。</returns>
+      <param name="varChild">此参数仅供内部使用。</param>
+    </member>
+    <member name="M:Accessibility.IAccessible.accSelect(System.Int32,System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <param name="flagsSelect">此参数仅供内部使用。</param>
+      <param name="varChild">此参数仅供内部使用。</param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accSelection">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <returns>一个对象。</returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accState(System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <returns>一个对象。</returns>
+      <param name="varChild">此参数仅供内部使用。</param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accValue(System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccessible" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccessible 接口的托管包装的一部分。</summary>
+      <returns>一个字符串。</returns>
+      <param name="varChild">此参数仅供内部使用。</param>
+    </member>
+    <member name="T:Accessibility.IAccessibleHandler">
+      <summary>
+        <see cref="T:Accessibility.IAccessibleHandler" /> 及其公开的所有成员都属于组件对象模型 (COM) IAccessibleHandler 接口的托管包装的一部分。</summary>
+    </member>
+    <member name="M:Accessibility.IAccessibleHandler.AccessibleObjectFromID(System.Int32,System.Int32,Accessibility.IAccessible@)">
+      <summary>
+        <see cref="T:Accessibility.IAccessibleHandler" /> 及其公开的所有成员都属于组件对象模型 (COM) IAccessibleHandler 接口的托管包装的一部分。</summary>
+      <param name="hwnd"></param>
+      <param name="lObjectID"></param>
+      <param name="pIAccessible"></param>
+    </member>
+    <member name="T:Accessibility.IAccIdentity">
+      <summary>
+        <see cref="T:Accessibility.IAccIdentity" /> 及其公开的所有成员都属于组件对象模型 (COM) IAccIdentity 接口的托管包装的一部分。</summary>
+    </member>
+    <member name="M:Accessibility.IAccIdentity.GetIdentityString(System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+        <see cref="T:Accessibility.IAccIdentity" /> 及其公开的所有成员都属于组件对象模型 (COM) IAccIndentity 接口的托管包装的一部分。</summary>
+      <param name="dwIDChild"></param>
+      <param name="ppIDString"></param>
+      <param name="pdwIDStringLen"></param>
+    </member>
+    <member name="T:Accessibility.IAccPropServer">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServer" /> 及其公开的所有成员都属于组件对象模型 (COM) IAccPropServer 接口的托管包装的一部分。</summary>
+    </member>
+    <member name="M:Accessibility.IAccPropServer.GetPropValue(System.Byte@,System.UInt32,System.Guid,System.Object@,System.Int32@)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServer" /> 及其公开的所有成员都属于组件对象模型 (COM) IAccPropServer 接口的托管包装的一部分。</summary>
+      <param name="pIDString"></param>
+      <param name="dwIDStringLen"></param>
+      <param name="idProp"></param>
+      <param name="pvarValue"></param>
+      <param name="pfHasProp"></param>
+    </member>
+    <member name="T:Accessibility.IAccPropServices">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.ClearHmenuProps(Accessibility._RemotableHandle@,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hmenu"></param>
+      <param name="idChild"></param>
+      <param name="paProps"></param>
+      <param name="cProps"></param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.ClearHwndProps(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hwnd"></param>
+      <param name="idObject"></param>
+      <param name="idChild"></param>
+      <param name="paProps"></param>
+      <param name="cProps"></param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.ClearProps(System.Byte@,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="pIDString"></param>
+      <param name="dwIDStringLen"></param>
+      <param name="paProps"></param>
+      <param name="cProps"></param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.ComposeHmenuIdentityString(Accessibility._RemotableHandle@,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hmenu"></param>
+      <param name="idChild"></param>
+      <param name="ppIDString"></param>
+      <param name="pdwIDStringLen"></param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.ComposeHwndIdentityString(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hwnd"></param>
+      <param name="idObject"></param>
+      <param name="idChild"></param>
+      <param name="ppIDString"></param>
+      <param name="pdwIDStringLen"></param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.DecomposeHmenuIdentityString(System.Byte@,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="pIDString"></param>
+      <param name="dwIDStringLen"></param>
+      <param name="phmenu"></param>
+      <param name="pidChild"></param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.DecomposeHwndIdentityString(System.Byte@,System.UInt32,System.IntPtr,System.UInt32@,System.UInt32@)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="pIDString"></param>
+      <param name="dwIDStringLen"></param>
+      <param name="phwnd"></param>
+      <param name="pidObject"></param>
+      <param name="pidChild"></param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHmenuProp(Accessibility._RemotableHandle@,System.UInt32,System.Guid,System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hmenu"></param>
+      <param name="idChild"></param>
+      <param name="idProp"></param>
+      <param name="var"></param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHmenuPropServer(Accessibility._RemotableHandle@,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hmenu"></param>
+      <param name="idChild"></param>
+      <param name="paProps"></param>
+      <param name="cProps"></param>
+      <param name="pServer"></param>
+      <param name="AnnoScope"></param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHmenuPropStr(Accessibility._RemotableHandle@,System.UInt32,System.Guid,System.String)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hmenu"></param>
+      <param name="idChild"></param>
+      <param name="idProp"></param>
+      <param name="str"></param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHwndProp(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid,System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hwnd"></param>
+      <param name="idObject"></param>
+      <param name="idChild"></param>
+      <param name="idProp"></param>
+      <param name="var"></param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHwndPropServer(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hwnd"></param>
+      <param name="idObject"></param>
+      <param name="idChild"></param>
+      <param name="paProps"></param>
+      <param name="cProps"></param>
+      <param name="pServer"></param>
+      <param name="AnnoScope"></param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHwndPropStr(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid,System.String)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="hwnd"></param>
+      <param name="idObject"></param>
+      <param name="idChild"></param>
+      <param name="idProp"></param>
+      <param name="str"></param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetPropServer(System.Byte@,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="pIDString"></param>
+      <param name="dwIDStringLen"></param>
+      <param name="paProps"></param>
+      <param name="cProps"></param>
+      <param name="pServer"></param>
+      <param name="AnnoScope"></param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetPropValue(System.Byte@,System.UInt32,System.Guid,System.Object)">
+      <summary>
+        <see cref="T:Accessibility.IAccPropServices" /> 接口及其公开的所有成员都属于组件对象模型 (COM) IAccPropServices 接口的托管包装的一部分。</summary>
+      <param name="pIDString"></param>
+      <param name="dwIDStringLen"></param>
+      <param name="idProp"></param>
+      <param name="var"></param>
+    </member>
+  </members>
+</doc>

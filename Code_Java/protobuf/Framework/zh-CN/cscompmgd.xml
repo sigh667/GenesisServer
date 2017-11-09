@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>cscompmgd</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.CSharp.Compiler">
+      <summary>
+                    C# 编译器的托管包装。
+                </summary>
+    </member>
+    <member name="M:Microsoft.CSharp.Compiler.Compile(System.String[],System.String[],System.String,System.String[],System.Collections.IDictionary)">
+      <summary>
+                    将给定的 C# 源编译到指定的目标文件中。
+                </summary>
+      <returns>
+                    以 <see cref="T:Microsoft.CSharp.CompilerError" /> 类型数组的形式返回诊断消息。如果该数组为空或所有元素都是警告，则说明编译成功。
+                </returns>
+      <param name="sourceTexts">
+                    类型字符串的数组，每个类型字符串带有一个 C# 代码。
+                </param>
+      <param name="sourceTextNames">
+                    一个类型字符串数组，其中包含每个 <paramref name="sourceTexts" /> 的文件名。
+                </param>
+      <param name="target">
+                    输出文件名。此参数是必需的。
+                </param>
+      <param name="imports">
+                    类型字符串的数组，带有要引用的文件。
+                </param>
+      <param name="options">
+                    编译器选项的 <see cref="T:System.Collections.IDictionary" />。
+                </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="sourceTexts" /> 为 null。
+                
+                    - 或 -
+                <paramref name="sourceTextNames" /> 为 null。
+                
+                    - 或 -
+                <paramref name="target" /> 为 null。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="sourceTexts" /> 为空数组。
+                
+                    - 或 -
+                <paramref name="sourceTextNames" /> 与 <paramref name="sourceTexts" /> 的大小不同。
+                </exception>
+    </member>
+    <member name="T:Microsoft.CSharp.CompilerError">
+      <summary>表示一个由编译器报告的错误或诊断消息。</summary>
+    </member>
+    <member name="M:Microsoft.CSharp.CompilerError.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.CSharp.CompilerError" /> 类的新实例。</summary>
+    </member>
+    <member name="F:Microsoft.CSharp.CompilerError.ErrorLevel">
+      <summary>指定此诊断的严重性。</summary>
+    </member>
+    <member name="F:Microsoft.CSharp.CompilerError.ErrorMessage">
+      <summary>指定诊断消息文本。</summary>
+    </member>
+    <member name="F:Microsoft.CSharp.CompilerError.ErrorNumber">
+      <summary>指定诊断编号。</summary>
+    </member>
+    <member name="F:Microsoft.CSharp.CompilerError.SourceColumn">
+      <summary>指定由诊断导致的源文本的列（从 1 开始）；如果没有列信息，则为 0。</summary>
+    </member>
+    <member name="F:Microsoft.CSharp.CompilerError.SourceFile">
+      <summary>指定由诊断导致的源文本的文件名；也可以是空字符串 ("")。</summary>
+    </member>
+    <member name="F:Microsoft.CSharp.CompilerError.SourceLine">
+      <summary>指定由诊断导致的源文本的行（从 1 开始）；如果没有行信息，则为 0。</summary>
+    </member>
+    <member name="M:Microsoft.CSharp.CompilerError.ToString">
+      <summary>返回表示当前 <see cref="T:Microsoft.CSharp.CompilerError" /> 的 <see cref="M:System.Object.ToString" />。</summary>
+      <returns>表示当前 <see cref="T:Microsoft.CSharp.CompilerError" /> 的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.CSharp.ErrorLevel">
+      <summary>指定编译器诊断的严重性。</summary>
+    </member>
+    <member name="F:Microsoft.CSharp.ErrorLevel.None">
+      <summary>未知的严重性。</summary>
+    </member>
+    <member name="F:Microsoft.CSharp.ErrorLevel.Warning">
+      <summary>一个警告或建议性诊断。</summary>
+    </member>
+    <member name="F:Microsoft.CSharp.ErrorLevel.Error">
+      <summary>一个错误诊断。</summary>
+    </member>
+    <member name="F:Microsoft.CSharp.ErrorLevel.FatalError">
+      <summary>一个不可继续的错误诊断。</summary>
+    </member>
+    <member name="M:Microsoft.CSharp.Compiler.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.CSharp.Compiler" /> 类的新实例。
+                </summary>
+    </member>
+  </members>
+</doc>

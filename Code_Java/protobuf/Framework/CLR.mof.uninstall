@@ -1,0 +1,21 @@
+//**************************************************
+// *** CLR Trace Data Layout
+//**************************************************
+#pragma autorecover
+#pragma classflags("forceupdate")
+#pragma namespace ("\\\\.\\Root\\WMI")
+
+#pragma deleteclass("CLRTrace",NOFAIL)
+#pragma deleteclass("GarbageCollection",NOFAIL)
+#pragma deleteclass("WorkerThreadCreation",NOFAIL)
+#pragma deleteclass("IOThreadCreation",NOFAIL)
+#pragma deleteclass("WorkerThreadRetirement",NOFAIL)
+#pragma deleteclass("IOThreadRetirement",NOFAIL)
+#pragma deleteclass("ThreadpoolSuspend",NOFAIL)
+#pragma deleteclass("Exceptions",NOFAIL)
+#pragma deleteclass("Monitor",NOFAIL)
+#pragma deleteclass("CLRMethod",NOFAIL)
+#pragma deleteclass("CLRLoader",NOFAIL)
+#pragma deleteclass("FusionNGENBinder",NOFAIL)
+#pragma deleteclass("CLRStrongNameVerification", NOFAIL)
+#pragma deleteclass("CLRAuthenticodeVerification", NOFAIL)

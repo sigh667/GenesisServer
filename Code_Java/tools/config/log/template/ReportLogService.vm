@@ -1,0 +1,50 @@
+package com.mokylin.bleach.gameserver.core.log;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.mokylin.bleach.core.time.TimeService;
+import com.mokylin.bleach.gameserver.core.global.Globals;
+import com.mokylin.bleach.gameserver.core.log.disruptor.sendlog.ISendLog;
+#foreach($className in $importClasses)
+import $className;
+#end
+
+/**
+ * This is an auto generated source,please don't modify it.
+ */
+public class LogService {
+	
+	private static final Logger logger = LoggerFactory.getLogger(LogService.class);
+	private final TimeService timeService = Globals.getTimeService();
+	private final ServerGlobals serverGlobals;
+	private final ISendLog sendLog;
+	private final String logStrPrefix;
+	
+	public LogService(ServerGlobals serverGlobals, ISendLog sendLog) {
+		this.serverGlobals = serverGlobals;
+		this.sendLog = sendLog;
+		this.logStrPrefix = "_" + serverGlobals.getServerId() + "-";
+	}
+
+#foreach($logMethod in $list)
+	/**
+	 * $logMethod.description
+	 * $logMethod.remark
+$logMethod.fieldDescription
+	 */
+	public void log${logMethod.logName}(
+			$logMethod.args
+		) {
+		try {
+			StringBuilder sb = new StringBuilder();
+			${logMethod.prefix}.append(this.logStrPrefix);
+$logMethod.setter
+			this.sendLog.sendLog(sb.toString());
+		} catch (Exception e) {
+			logger.error("日志log${logMethod.logName}记录错误：", e);
+		}
+	}
+	
+#end
+}

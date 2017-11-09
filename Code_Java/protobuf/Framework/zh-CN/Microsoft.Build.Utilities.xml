@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Build.Utilities</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Build.Utilities.AppDomainIsolatedTask">
+      <summary>提供与 <see cref="T:Microsoft.Build.Utilities.Task" /> 相同的功能，但由于还派生于 <see cref="T:System.MarshalByRefObject" />，因此可以在其自己的应用程序域中进行实例化。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.AppDomainIsolatedTask.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Utilities.AppDomainIsolatedTask" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.AppDomainIsolatedTask.#ctor(System.Resources.ResourceManager)">
+      <summary>初始化 <see cref="T:Microsoft.Build.Utilities.AppDomainIsolatedTask" /> 类的新实例，并允许派生的 <see cref="T:Microsoft.Build.Utilities.Task" /> 类注册它们的资源。</summary>
+      <param name="taskResources">任务资源。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.AppDomainIsolatedTask.#ctor(System.Resources.ResourceManager,System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Build.Utilities.AppDomainIsolatedTask" /> 类的新实例，并允许派生的 <see cref="T:Microsoft.Build.Utilities.Task" /> 类注册它们的资源，同时提供一个前缀，用于通过字符串资源名称组成“帮助”关键字。</summary>
+      <param name="taskResources">任务资源。</param>
+      <param name="helpKeywordPrefix">“帮助”关键字前缀。</param>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.AppDomainIsolatedTask.BuildEngine">
+      <summary>获取或设置任务可用的生成引擎接口。</summary>
+      <returns>任务可用的 <see cref="T:Microsoft.Build.Framework.IBuildEngine" />。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.AppDomainIsolatedTask.Execute">
+      <summary>运行此任务。</summary>
+      <returns>
+如果成功，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.AppDomainIsolatedTask.HelpKeywordPrefix">
+      <summary>获取或设置前缀，此前缀用于通过字符串资源名称组成“帮助”关键字。</summary>
+      <returns>用于组成“帮助”关键字的 <see cref="T:System.String" />。此值可为 null。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.AppDomainIsolatedTask.HostObject">
+      <summary>获取或设置一个宿主对象实例，该实例与派生的 <see cref="T:Microsoft.Build.Utilities.Task" /> 关联。</summary>
+      <returns>与派生的 <see cref="T:Microsoft.Build.Utilities.Task" /> 关联的 <see cref="T:Microsoft.Build.Framework.ITaskHost" /> 宿主对象实例。此值可为 null。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.AppDomainIsolatedTask.InitializeLifetimeService">
+      <summary>当在派生类中被重写时，赋予任务无限期的租约时间。</summary>
+      <returns>
+如果要指定无限期的生存期，则为 null。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.AppDomainIsolatedTask.Log">
+      <summary>获取包含任务记录方法的任务记录帮助器对象的实例。</summary>
+      <returns>一个包含任务记录方法的 <see cref="T:Microsoft.Build.Utilities.TaskLoggingHelper" />。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.AppDomainIsolatedTask.TaskResources">
+      <summary>获取或设置派生的 <see cref="T:Microsoft.Build.Utilities.Task" /> 的区域性特定资源。</summary>
+      <returns>一个 <see cref="T:System.Resources.ResourceManager" />，它是派生的 <see cref="T:Microsoft.Build.Utilities.Task" /> 的区域性特定资源。此值可为 null。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Utilities.HostObjectInitializationStatus">
+      <summary>在尝试初始化宿主对象之后，为 <see cref="T:Microsoft.Build.Utilities.ToolTask" /> 定义下一个操作。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.UseHostObjectToExecute">
+      <summary>指示存在适用于此任务的宿主对象，此宿主对象可以支持传入的所有参数，应当调用该宿主对象来执行任务的实际工作。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.UseAlternateToolToExecute">
+      <summary>指示某个宿主对象不可用，或者该宿主对象无法支持此生成所需的全部功能。因此，<see cref="T:Microsoft.Build.Utilities.ToolTask" /> 应退而使用执行生成的替代方法，如调用命令行工具。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.NoActionReturnSuccess">
+      <summary>指示该宿主对象是最新的，没有必要执行进一步的操作。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.NoActionReturnFailure">
+      <summary>指示传递到该任务的某些参数无效，该任务即将失败。</summary>
+    </member>
+    <member name="T:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion">
+      <summary>
+                    指定与 <see cref="T:Microsoft.Build.Utilities.ToolLocationHelper" /> 中的方法一起使用的 .NET Framework 的版本。
+                </summary>
+    </member>
+    <member name="F:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion.Version11">
+      <summary>
+                    指定 .NET Framework 版本 1.1。
+                </summary>
+    </member>
+    <member name="F:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion.Version20">
+      <summary>
+                    指定 .NET Framework 版本 2.0。
+                </summary>
+    </member>
+    <member name="F:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion.Version30">
+      <summary>
+                    指定 .NET Framework 版本 3.0。
+                </summary>
+    </member>
+    <member name="F:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion.Version35">
+      <summary>
+                    指定 .NET Framework 版本 3.5。
+                </summary>
+    </member>
+    <member name="F:Microsoft.Build.Utilities.TargetDotNetFrameworkVersion.VersionLatest">
+      <summary>
+                    指定 .NET Framework 的最新发行版本。
+                </summary>
+    </member>
+    <member name="T:Microsoft.Build.Utilities.Task">
+      <summary>
+                    当在派生窗体中被重写时，为任务提供功能。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.Task.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.Utilities.Task" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.Task.#ctor(System.Resources.ResourceManager)">
+      <summary>
+                    用指定的 <see cref="P:Microsoft.Build.Utilities.Task.TaskResources" /> 初始化 <see cref="T:Microsoft.Build.Utilities.Task" /> 类的新实例。
+                </summary>
+      <param name="taskResources">
+任务资源。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.Task.#ctor(System.Resources.ResourceManager,System.String)">
+      <summary>
+                    使用指定的 <see cref="P:Microsoft.Build.Utilities.Task.TaskResources" /> 和 <see cref="P:Microsoft.Build.Utilities.Task.HelpKeywordPrefix" /> 初始化 <see cref="T:Microsoft.Build.Utilities.Task" /> 类的新实例。
+                </summary>
+      <param name="taskResources">
+任务资源。
+                </param>
+      <param name="helpKeywordPrefix">
+                    为创建“帮助”关键字而附加到字符串资源的前缀。
+                </param>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.Task.BuildEngine">
+      <summary>
+                    获取或设置任务使用的 <see cref="T:Microsoft.Build.Framework.IBuildEngine" /> 对象的实例。
+                </summary>
+      <returns>
+                    任务可用的 <see cref="T:Microsoft.Build.Framework.IBuildEngine" />。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.Task.Execute">
+      <summary>
+                    当在派生类中被重写时，执行此任务。
+                </summary>
+      <returns>
+                    如果已成功执行任务，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.Task.HelpKeywordPrefix">
+      <summary>
+                    获取或设置前缀，此前缀用于通过资源名称组成“帮助”关键字。
+                </summary>
+      <returns>
+                    用于通过资源名称组成“帮助”关键字的前缀。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.Task.HostObject">
+      <summary>
+                    获取或设置与该任务关联的宿主对象。
+                </summary>
+      <returns>
+                    与该任务关联的宿主对象。此值可为 null。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.Task.Log">
+      <summary>
+                    获取包含任务记录方法的 <see cref="T:Microsoft.Build.Utilities.TaskLoggingHelper" /> 类的实例。
+                </summary>
+      <returns>
+                    记录帮助器对象。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.Task.TaskResources">
+      <summary>
+                    获取或设置与此任务关联的区域性特定资源。
+                </summary>
+      <returns>
+                    与此任务关联的区域性特定资源。此值可为 null。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.Utilities.TaskItem">
+      <summary>定义项目中传递到任务的单个项。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.TaskItem.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Utilities.TaskItem" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.TaskItem.#ctor(Microsoft.Build.Framework.ITaskItem)">
+      <summary>使用指定的源 <see cref="T:Microsoft.Build.Framework.ITaskItem" /> 初始化 <see cref="T:Microsoft.Build.Utilities.TaskItem" /> 类的新实例。</summary>
+      <param name="sourceItem">要复制的项。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.TaskItem.#ctor(System.String)">
+      <summary>使用指定的项规范字符串初始化 <see cref="T:Microsoft.Build.Utilities.TaskItem" /> 类的新实例。</summary>
+      <param name="itemSpec">项规范。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.TaskItem.#ctor(System.String,System.Collections.IDictionary)">
+      <summary>使用指定的项规范字符串及其元数据初始化 <see cref="T:Microsoft.Build.Utilities.TaskItem" /> 类的新实例。</summary>
+      <param name="itemSpec">项规范。</param>
+      <param name="itemMetadata">项规范的自定义元数据。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.TaskItem.CloneCustomMetadata">
+      <summary>克隆项规范的自定义元数据的集合。</summary>
+      <returns>一个 <see cref="T:System.Collections.IDictionary" />，表示自定义元数据的复本。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.TaskItem.CopyMetadataTo(Microsoft.Build.Framework.ITaskItem)">
+      <summary>将项规范的元数据复制到指定的目标任务项。</summary>
+      <param name="destinationItem">此方法要将元数据复制到的项。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.TaskItem.GetMetadata(System.String)">
+      <summary>检索该项的指定元数据。</summary>
+      <returns>一个 <see cref="T:System.String" />，表示元数据的值。</returns>
+      <param name="metadataName">要检索的元数据的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.TaskItem.InitializeLifetimeService">
+      <summary>当在派生类中被重写时，赋予任务项无限期的租约时间。</summary>
+      <returns>
+如果要指定无限期的生存期，则为 null。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.TaskItem.ItemSpec">
+      <summary>获取或设置项规范。</summary>
+      <returns>一个 <see cref="T:System.String" />，表示项规范。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.TaskItem.MetadataCount">
+      <summary>获取在该项上设置的元数据的数目。</summary>
+      <returns>一个 <see cref="T:System.Int32" />，表示在该项上设置的元数据的计数。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.TaskItem.MetadataNames">
+      <summary>获取该项的所有元数据的名称。</summary>
+      <returns>元数据名称的 <see cref="T:System.Collections.ICollection" />。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.TaskItem.op_Explicit(Microsoft.Build.Utilities.TaskItem)~System.String">
+      <summary>允许将显式类型从 <see cref="T:Microsoft.Build.Utilities.TaskItem" /> 强制转换为 <see cref="T:System.String" />，并返回该项的 <see cref="P:Microsoft.Build.Utilities.TaskItem.ItemSpec" />。</summary>
+      <returns>该项的 <see cref="P:Microsoft.Build.Utilities.TaskItem.ItemSpec" />。</returns>
+      <param name="taskItemToCast">要操作的项。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.TaskItem.RemoveMetadata(System.String)">
+      <summary>移除该项的指定元数据。</summary>
+      <param name="metadataName">要移除的元数据的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.TaskItem.SetMetadata(System.String,System.String)">
+      <summary>设置或修改该项的指定元数据的值。</summary>
+      <param name="metadataName">要设置或修改的元数据的名称。</param>
+      <param name="metadataValue">元数据的新值。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.TaskItem.ToString">
+      <summary>获取项规范。</summary>
+      <returns>一个 <see cref="T:System.String" />，表示项规范。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Utilities.ToolLocationHelper">
+      <summary>提供用于查找 .NET Framework 和 .NET Framework SDK 文件及目录的实用工具方法。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkRootRegistryKey(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)">
+      <summary>获取 .NET Framework 根注册表项的全名。</summary>
+      <returns>包含 .NET Framework 根注册表项的全名的字符串。</returns>
+      <param name="version">目标 .NET Framework 版本。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkSdkInstallKeyValue(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)">
+      <summary>获取包含 .NET Framework SDK 安装路径的 <see cref="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkRootRegistryKey(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" /> 的值。</summary>
+      <returns>一个字符串，其中包含 .NET Framework SDK 安装路径的值，如果未安装目标 .NET Framework 版本，则包含空引用（在 Visual Basic 中为 Nothing）。</returns>
+      <param name="version">目标 .NET Framework 版本。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkVersionFolderPrefix(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)">
+      <summary>获取 .NET Framework 文件夹的前缀。</summary>
+      <returns>一个字符串，其中包含 .NET Framework 文件夹的前缀，如果未安装目标 .NET Framework 版本，则包含空引用（在 Visual Basic 中为 Nothing）。</returns>
+      <param name="version">目标 .NET Framework 版本。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFramework(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)">
+      <summary>获取 .NET Framework 根目录的完全限定路径。</summary>
+      <returns>一个字符串，其中包含 .NET Framework 根目录的完全限定路径，如果未安装目标 .NET Framework 版本，则包含空引用（在 Visual Basic 中为 Nothing）。</returns>
+      <param name="version">目标 .NET Framework 版本。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkFile(System.String,Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)">
+      <summary>获取 .NET Framework 目录中的文件的完全限定路径。</summary>
+      <returns>一个字符串，其中包含指定文件的完全限定路径，如果未安装目标 .NET Framework 版本，则包含空引用（在 Visual Basic 中为 Nothing）。</returns>
+      <param name="fileName">要在 .NET Framework 目录中查找的文件。</param>
+      <param name="version">目标 .NET Framework 版本。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdk(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)">
+      <summary>获取 .NET Framework SDK 的 \bin 目录的完全限定路径。</summary>
+      <returns>一个字符串，其中包含 .NET Framework SDK 的 \bin 目录的完全限定路径，如果未安装目标 .NET Framework SDK 版本，则包含空引用（在 Visual Basic 中为 Nothing）。</returns>
+      <param name="version">目标 .NET Framework 版本。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdkFile(System.String,Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)">
+      <summary>获取 .NET Framework SDK 中的文件的完全限定路径。</summary>
+      <returns>一个字符串，其中包含 .NET Framework SDK 的 \bin 目录的完全限定路径，如果未安装目标 .NET Framework SDK 版本，则包含空引用（在 Visual Basic 中为 Nothing）。</returns>
+      <param name="fileName">要在 .NET Framework SDK 中查找的文件。</param>
+      <param name="version">目标 .NET Framework 版本。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToSystemFile(System.String)">
+      <summary>获取系统目录中的文件的完全限定路径。</summary>
+      <returns>一个字符串，其中包含系统目录中的文件的完全限定路径。</returns>
+      <param name="fileName">要在 .NET Framework SDK 中查找的文件。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.ToolLocationHelper.PathToSystem">
+      <summary>获取系统目录的完全限定路径。</summary>
+      <returns>一个包含系统目录的目录路径的字符串。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:Microsoft.Build.Utilities.ToolTask">
+      <summary>当在派生窗体中被重写时，为包装命令行工具的任务提供功能。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Utilities.ToolTask" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.#ctor(System.Resources.ResourceManager)">
+      <summary>用指定的 <see cref="T:System.Resources.ResourceManager" /> 初始化 <see cref="T:Microsoft.Build.Utilities.ToolTask" /> 类的新实例。</summary>
+      <param name="taskResources">任务资源的 <see cref="T:System.Resources.ResourceManager" />。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.#ctor(System.Resources.ResourceManager,System.String)">
+      <summary>使用指定的 <see cref="T:System.Resources.ResourceManager" /> 和“帮助”关键字前缀初始化 <see cref="T:Microsoft.Build.Utilities.ToolTask" /> 类的新实例。</summary>
+      <param name="taskResources">任务资源的 <see cref="T:System.Resources.ResourceManager" />。</param>
+      <param name="helpKeywordPrefix">要用于该任务引发的消息的“帮助”关键字。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.CallHostObjectToExecute">
+      <summary>调用宿主对象以执行该任务的工作。</summary>
+      <returns>
+            如果此方法已成功，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride">
+      <summary>获取 PATH 环境变量的重写值。</summary>
+      <returns>PATH 环境变量的重写值。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.Execute">
+      <summary>用指定的任务参数运行可执行文件。</summary>
+      <returns>
+            如果任务成功运行，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.ExecuteTool(System.String,System.String,System.String)">
+      <summary>创建一个临时的响应 (.rsp) 文件并运行可执行文件。</summary>
+      <returns>可执行文件返回的退出代码。如果该任务记录了错误，但是可执行文件返回的退出代码为 0，则此方法将返回 -1。</returns>
+      <param name="pathToTool">可执行文件的路径。</param>
+      <param name="responseFileCommands">要放入 .rsp 文件中的命令行参数。</param>
+      <param name="commandLineCommands">要直接传递到可执行文件的命令行参数。</param>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.ToolTask.ExitCode">
+      <summary>获取可执行文件返回的退出代码。</summary>
+      <returns>可执行文件返回的退出代码。如果该任务记录了错误，但是可执行文件返回的退出代码为 0，则此方法将返回 -1。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.GenerateCommandLineCommands">
+      <summary>返回一个字符串值，该值包含要直接传递到可执行文件的命令行参数。</summary>
+      <returns>一个字符串值，其中包含要直接传递到可执行文件的命令行参数。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.GenerateFullPathToTool">
+      <summary>返回可执行文件的完全限定路径。</summary>
+      <returns>可执行文件的完全限定路径。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.GenerateResponseFileCommands">
+      <summary>返回一个字符串值，该值包含在运行可执行文件之前要添加到响应 (.rsp) 文件中的命令行参数。</summary>
+      <returns>一个字符串值，其中包含在运行可执行文件之前要添加到响应 (.rsp) 文件中的命令行参数。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.GetResponseFileSwitch(System.String)">
+      <summary>返回可执行文件用来指定响应 (.rsp) 文件的命令行开关。</summary>
+      <returns>可执行文件用来指定响应 (.rsp) 文件的命令行开关。</returns>
+      <param name="responseFilePath">临时 .rsp 文件的完整路径。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.GetWorkingDirectory">
+      <summary>返回要在其中运行可执行文件的目录。</summary>
+      <returns>要在其中运行可执行文件的目录；如果应在当前目录中运行可执行文件，则为空引用（在 Visual Basic 中为 Nothing）。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.HandleTaskExecutionErrors">
+      <summary>处理由可执行文件引发的执行错误。</summary>
+      <returns>
+            如果该方法成功运行，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.InitializeHostObject">
+      <summary>初始化该任务的宿主对象。</summary>
+      <returns>宿主对象的 <see cref="T:Microsoft.Build.Utilities.HostObjectInitializationStatus" />。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.LogEventsFromTextOutput(System.String,Microsoft.Build.Framework.MessageImportance)">
+      <summary>分析一行文本以识别任何规范格式的错误或警告。</summary>
+      <param name="singleLine">要分析的方法的一行文本。</param>
+      <param name="messageImportance">指示用于记录消息的重要性级别的 <see cref="T:Microsoft.Build.Framework.MessageImportance" /> 值。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.LogPathToTool(System.String,System.String)">
+      <summary>记录所有已注册的记录器的工具名和路径。</summary>
+      <param name="toolName">可执行文件的名称。</param>
+      <param name="pathToTool">可执行文件的路径。</param>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.LogToolCommand(System.String)">
+      <summary>将运行的起始点记录到所有已注册的记录器。</summary>
+      <param name="message">用来提供记录器（通常为命令行和开关）的描述性消息。</param>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.ToolTask.ResponseFileEncoding">
+      <summary>获取响应文件的 <see cref="T:System.Text.Encoding" />。</summary>
+      <returns>响应文件的 <see cref="T:System.Text.Encoding" />。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.SkipTaskExecution">
+      <summary>指示是否应当跳过任务执行。</summary>
+      <returns>
+            如果要跳过任务执行，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.ToolTask.StandardErrorEncoding">
+      <summary>获取该任务的标准错误流的 <see cref="T:System.Text.Encoding" />。</summary>
+      <returns>响应文件的 <see cref="T:System.Text.Encoding" />。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.ToolTask.StandardErrorLoggingImportance">
+      <summary>获取记录错误时要使用的 <see cref="T:Microsoft.Build.Framework.MessageImportance" />。</summary>
+      <returns>记录错误时要使用的 <see cref="T:Microsoft.Build.Framework.MessageImportance" />。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.ToolTask.StandardOutputEncoding">
+      <summary>获取该任务的标准输出流的 <see cref="T:System.Text.Encoding" />。</summary>
+      <returns>响应文件的 <see cref="T:System.Text.Encoding" />。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.ToolTask.StandardOutputLoggingImportance">
+      <summary>获取记录错误时要使用的 <see cref="T:Microsoft.Build.Framework.MessageImportance" />。</summary>
+      <returns>记录错误时要使用的 <see cref="T:Microsoft.Build.Framework.MessageImportance" />。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.ToolTask.Timeout">
+      <summary>获取或设置在经过多长时间后终止任务可执行文件。</summary>
+      <returns>超时长度，以毫秒为单位。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.ToolTask.ToolName">
+      <summary>获取要运行的可执行文件的名称。</summary>
+      <returns>要运行的可执行文件的名称。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Utilities.ToolTask.ToolPath">
+      <summary>获取或设置要运行的可执行文件的路径。</summary>
+      <returns>要运行的文件的路径。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Utilities.ToolTask.ValidateParameters">
+      <summary>指示所有任务参数是否均有效。</summary>
+      <returns>
+            如果所有任务参数均有效，则为 true；否则为 false。</returns>
+    </member>
+  </members>
+</doc>

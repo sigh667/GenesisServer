@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<scripts>
+	<file name="items.xlsx">
+		<sheet class="com.mokylin.bleach.common.item.template.ItemTemplate" />
+	</file>
+	<file name="item_compound.xlsx">
+		<sheet class="com.mokylin.bleach.common.item.template.ItemCompoundTemplate" />
+	</file>
+	<file name="hero_attr.xlsx">
+		<sheet class="com.mokylin.bleach.common.hero.template.HeroAttrTemplate" />
+	</file>
+	<file name="role_attr.xlsx">
+		<sheet class="com.mokylin.bleach.common.hero.template.RoleAttrTemplate" />
+	</file>
+	<file name="hero_grow.xlsx">
+		<sheet class="com.mokylin.bleach.common.hero.template.HeroGrowTemplate" />
+	</file>
+	<file name="hero_grow_star.xlsx">
+		<sheet class="com.mokylin.bleach.common.hero.template.HeroGrowStarTemplate" />
+	</file>
+	
+	<file name="hero_group.xlsx">
+		<sheet class="com.mokylin.bleach.common.hero.template.HeroGroupTemplate" />
+	</file>
+	
+	<file name="hero_skill_level_up.xlsx">
+		<sheet class="com.mokylin.bleach.common.hero.template.HeroSkillLevelUpTemplate" />
+	</file>
+	<file name="hero_skill_level_max.xlsx">
+		<sheet class="com.mokylin.bleach.common.hero.template.HeroSkillLevelMaxTemplate" />
+	</file>
+	
+	<file name="name_1.xlsx">
+		<sheet class="com.mokylin.bleach.common.human.template.Name1Template" />
+	</file>
+	<file name="name_2.xlsx">
+		<sheet class="com.mokylin.bleach.common.human.template.Name2Template" />
+	</file>
+	<file name="name_3.xlsx">
+		<sheet class="com.mokylin.bleach.common.human.template.Name3Template" />
+	</file>
+	 
+	<file name="exp.xlsx">
+		<sheet class="com.mokylin.bleach.common.human.template.ExpTemplate" />
+	</file>
+	<file name="energy.xlsx">
+		<sheet class="com.mokylin.bleach.common.human.template.EnergyTemplate" />
+	</file>
+	<file name="cost_by_counts.xlsx">
+		<sheet class="com.mokylin.bleach.common.human.template.CostByCountsTemplate" />
+	</file>
+	
+	<file name="daily_rewards.xlsx">
+		<sheet class="com.mokylin.bleach.common.dailyreward.template.DailyRewardsTemplate" />
+	</file>
+	<file name="daily_reward_elem.xlsx">
+		<sheet class="com.mokylin.bleach.common.dailyreward.template.DailyRewardElemTemplate" />
+	</file>
+	
+	<file name="shop.xlsx">
+		<sheet class="com.mokylin.bleach.common.shop.template.ShopTemplate" />
+	</file>
+	<file name="shop_good.xlsx">
+		<sheet class="com.mokylin.bleach.common.shop.template.ShopGoodTemplate" />
+	</file>
+	<file name="shop_refresh_price.xlsx">
+		<sheet class="com.mokylin.bleach.common.shop.template.ShopRefreshPriceTemplate" />
+	</file>
+	<file name="shop_item_price.xlsx">
+		<sheet class="com.mokylin.bleach.common.shop.template.ShopItemPriceTemplate" />
+	</file>
+	<file name="shop_item_store_room.xlsx">
+		<sheet class="com.mokylin.bleach.common.shop.template.ShopItemStoreRoomTemplate" />
+	</file>
+	<file name="shop_item_discount.xlsx">
+		<sheet class="com.mokylin.bleach.common.shop.template.ShopDiscountTemplate" />
+	</file>
+	
+	<file name="function.xlsx">
+		<sheet class="com.mokylin.bleach.common.function.template.FunctionTemplate" />
+	</file>
+	<file name="vip.xlsx">
+		<sheet class="com.mokylin.bleach.common.human.template.VipTemplate" />
+	</file>
+	<file name="daily_refresh_time.xlsx">
+		<sheet class="com.mokylin.bleach.common.dailyrefresh.template.DailyRefreshTimeTemplate" />
+	</file>
+	
+</scripts>

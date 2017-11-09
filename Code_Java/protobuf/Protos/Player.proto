@@ -1,0 +1,118 @@
+package com.mokylin;
+import "MessageType.proto";
+option java_package = "com.mokylin.bleach.protobuf";
+option java_outer_classname = "PlayerMessage";
+
+/**
+ * 客户端请求，登录
+ */
+message CGLogin{
+	option (cg_message_type) = CG_LOGIN;
+	/**账号ID */
+	required string accountId = 1;
+	/**渠道ID */
+	required string channel = 2;
+	/**登录秘钥 */
+	required string key = 3;
+}
+
+/**
+ * 客户端请求，创建角色
+ */
+message CGCreateRole{
+	option (cg_message_type) = CG_CREATE_ROLE;
+	/**角色名字 */
+	required string name = 1;
+}
+
+/**
+ * 客户端请求，选择角色
+ */
+message CGSelectRole{
+	option (cg_message_type) = CG_SELECT_ROLE;
+	/**角色ID */
+	required int64 id = 1;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+/**
+ * 服务器通知，登录失败
+ */
+message GCLoginFail{
+	option (gc_message_type) = GC_LOGIN_FAIL;
+	/**账号ID */
+	required string accountId = 1;
+	/**渠道ID */
+	required string channel = 2;
+	/**登录秘钥 */
+	required string key = 3;
+	/**失败原因 */
+	required LoginFailReason failReason = 4;
+}
+/**
+ * 登录失败的原因
+ */
+enum LoginFailReason{
+	/**渠道不存在 */
+	CHANNEL_NOT_EXIST = 0;
+	/**账号不存在 */
+	ACCOUNT_NOT_EXIST = 1;
+	/**秘钥错误 */
+	KEY_WRONG = 2;
+	/**加载角色失败 */
+	LOAD_ROLE_FAIL = 3;
+	/**你所登录的账号当前已经在线（你顶号） */
+	YOUR_ACCOUNT_IS_ONLINE = 4;
+	/**你的账号在另外的机器上登录了（别人顶你号） */
+	YOUR_ACCOUNT_LOGIN_AGAIN = 5;
+	/**你的角色信息正在保存，请稍候 */
+	YOUR_DATA_IS_SAVING = 6;
+}
+
+/**
+ * 服务器通知，你当前没有角色，请创建角色，这是随机到的角色名
+ */
+message GCCreateRole{
+	option (gc_message_type) = GC_CREATE_ROLE;
+	/**角色名字 */
+	required string name = 1;
+}
+
+/**
+ * 服务器通知，创建角色失败
+ */
+message GCCreateRoleFail{
+	option (gc_message_type) = GC_CREATE_ROLE_FAIL;
+	/**失败原因 */
+	required CreateRoleFailReason failReason = 1;
+}
+/**
+ * 创建角色失败的原因
+ */
+enum CreateRoleFailReason{
+	/**已经有角色了，不能再创建角色 */
+	ALREADY_HAVE_ROLE = 0;
+	/**该名字已经存在 */
+	NAME_EXISTS = 1;
+	/**该名字含有非法字符 */
+	NAME_HAVE_ILLEGAL_CHAR = 2;
+}
+
+/**
+ * 服务器通知，角色列表
+ */
+message GCRoleList{
+	option (gc_message_type) = GC_ROLE_LIST;
+	repeated Role roles = 1;
+}
+
+/**
+ * 角色信息
+ */
+message Role{
+	/**角色ID */
+	required int64 id = 1;
+	/**角色名字 */
+	required string name = 2;
+}

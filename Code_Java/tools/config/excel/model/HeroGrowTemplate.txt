@@ -1,0 +1,2 @@
+String name;//名称
+List<com.mokylin.bleach.common.core.excelmodel.TempAttrNode2Col> attributeList;[collection(5,2);notNull=true]	//每级成长的属性

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  
+  <data name="AddAnotherButtonLabel" type="System.String">
+    <value>另添一个</value>
+  </data>
+  <data name="Alphabet" type="System.String">
+    <value/>
+  </data>
+  <data name="All" type="System.String">
+    <value>全部</value>
+  </data>
+  <data name="BackButtonLabel" type="System.String">
+    <value>上一步</value>
+  </data>
+  <data name="ErrorHeader" type="System.String">
+    <value>请更正下面的错误:</value>
+  </data>
+  <data name="GenericSuccess" type="System.String">
+    <value>已成功建立到数据库的连接。</value>
+  </data>
+  <data name="GenericFailure" type="System.String">
+    <value>未能建立到数据库的连接。</value>
+  </data>
+  <data name="NoButtonLabel" type="System.String">
+    <value>否</value>
+  </data>
+  <data name="NonemptyRole" type="System.String">
+    <value>必须选择角色。</value>
+  </data>
+  <data name="NonemptyUser" type="System.String">
+    <value>用户名不能是空的。</value>
+  </data>
+  <data name="InvalidRuleName" type="System.String">
+    <value>授权规则名称不能包含“*”字符</value>
+  </data>
+  <data name="OKButtonLabel" type="System.String">
+    <value>确定</value>
+  </data>
+  <data name="SaveButtonLabel" type="System.String">
+    <value>保存</value>
+  </data>
+  <data name="SpecificFailureCreateDB" type="System.String">
+    <value>未能建立数据库连接。&lt;br&gt; 如果尚未创建 SQL Server 数据库，请退出网站管理工具，使用 aspnet_regsql 命令行实用工具创建和配置数据库，然后返回到此工具以设置提供程序。</value>
+  </data>
+  <data name="YesButtonLabel" type="System.String">
+    <value>是</value>
+  </data>
+  <data name="Home" type="System.String">
+    <value>主页</value>
+  </data>
+  <data name="Security" type="System.String">
+    <value>安全</value>
+  </data>
+  <data name="Application" type="System.String">
+    <value>应用程序</value>
+  </data>
+  <data name="Provider" type="System.String">
+    <value>提供程序</value>
+  </data>
+  <data name="AlphabetInfo" type="System.String">
+    <value>允许使用通配符 * 和 ?。</value>
+  </data>
+  <data name="HtmlDirectionality" type="System.String">
+    <value>ltr</value>
+  </data>
+  <data name="ASPXFileIcon" type="System.String">
+    <value>ASPX 文件图标</value>
+  </data>
+  <data name="FolderIcon" type="System.String">
+    <value>文件夹图标</value>
+  </data>
+  <data name="BrandingFull2Gif" type="System.String">
+    <value>ASP.NET 徽标</value>
+  </data>
+  <data name="HelpIconSolidGif" type="System.String">
+    <value>问号图像</value>
+  </data>
+  <data name="YellowCornerGif" type="System.String">
+    <value>黄色背景图像</value>
+  </data>
+  <data name="UserGif" type="System.String">
+    <value>用户</value>
+  </data>
+  <data name="RoleGif" type="System.String">
+    <value>角色</value>
+  </data>
+  <data name="FullTrustRequired" type="System.String">
+    <value>网站管理工具需要以“完全信任”的状态运行。请将网站管理工具应用程序配置为以“完全信任”的状态运行。</value>
+  </data>
+  <data name="ToolTipFormat" type="System.String">
+    <value>{0} [{1}]</value>
+  </data>
+  <data name="PageTitle" type="System.String">
+    <value>ASP.Net Web 应用程序管理</value>
+  </data>
+  <data name="WebAdmin_ConfigurationIsLocalOnly" type="System.String">
+    <value>网站管理工具被配置为仅从本地计算机上使用。</value>
+  </data>
+
+</root>

@@ -1,0 +1,37 @@
+package com.mokylin;
+option java_package = "com.mokylin.bleach.protobuf.db";
+option java_outer_classname = "Combat";
+
+/**
+ * 战斗镜像
+ */
+message CombatMirrorImage {
+	repeated HeroData heroData = 1;
+}
+
+/**
+ * 角色数据
+ */
+message HeroData {
+	required int32 position = 1;
+	required int32 tempateId = 2;
+	repeated HeroProp props = 6;
+	repeated int32 buffId = 7;
+}
+
+/**
+ * 属性影响镜像数据结构
+ */
+message CombatPropEffectMirrorData {
+	required int32 id = 1;
+	required int32 effectType = 2;
+	required int32 value = 3;
+}
+
+/**
+ * 英雄属性
+ */
+message HeroProp {
+	required int32 id = 1;
+	required float value = 2;
+}

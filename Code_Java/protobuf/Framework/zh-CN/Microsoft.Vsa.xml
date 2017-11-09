@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Vsa</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Vsa.IVsaCodeItem">
+      <summary>表示要通过脚本引擎编译的代码项。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaCodeItem.AddEventSource(System.String,System.String)">
+      <summary>将事件源添加到代码项中。代码项通过调用 IVsaSite.GetEventSourceInstance 方法（由宿主实现），使用事件源将事件挂钩到命名事件源。</summary>
+      <param name="eventSourceName">事件源的编程名称。</param>
+      <param name="eventSourceType">事件源的类型名称。</param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaCodeItem.AppendSourceText(System.String)">
+      <summary>将指定的文本追加到代码项尾部。</summary>
+      <param name="text">要追加到代码项的文本。</param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaCodeItem.CodeDOM">
+      <summary>获取在代码项中表示的代码文档对象模型 (CodeDOM)。</summary>
+      <returns>返回代码项的 CodeDOM。</returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaCodeItem.RemoveEventSource(System.String)">
+      <summary>从代码项中移除指定的事件源。</summary>
+      <param name="eventSourceName">要移除的事件源的编程名称。</param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaCodeItem.SourceText">
+      <summary>设置或获取指定的代码项的文本，包括自动生成的代码（如果有）。</summary>
+      <returns>返回代码项的源文本。</returns>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaDTCodeItem">
+      <summary>此类型支持 .NET Framework 基础结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaDTCodeItem.CanDelete">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaDTCodeItem.CanMove">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaDTCodeItem.CanRename">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaDTCodeItem.Hidden">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaDTCodeItem.ReadOnly">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaDTEngine">
+      <summary>此类型支持 .NET Framework 基础结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaDTEngine.AttachDebugger(System.Boolean)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaDTEngine.GetIDE">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaDTEngine.InitCompleted">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaDTEngine.TargetURL">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaEngine">
+      <summary>定义脚本引擎必须支持的方法和属性，并提供对脚本引擎的编程访问。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.Assembly">
+      <summary>获取对正在运行的由 <see cref="M:Microsoft.Vsa.IVsaEngine.Run" /> 方法生成的程序集的引用。</summary>
+      <returns>对当前正在运行的程序集的引用。</returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.Close">
+      <summary>关闭脚本引擎并释放所有资源。如果脚本引擎当前正在运行，则首先调用 <see cref="M:Microsoft.Vsa.IVsaEngine.Reset" /> 方法。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.Compile">
+      <summary>使脚本引擎编译现有的源状态。</summary>
+      <returns>如果成功编译，则返回 TRUE，指示可在新编译的程序集上调用 <see cref="M:Microsoft.Vsa.IVsaEngine.Run" /> 方法。如果编译失败，则返回 FALSE。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.Evidence">
+      <summary>提供用于验证当前对象的标识的证据。</summary>
+      <returns>返回对 Evidence 对象的引用。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.GenerateDebugInfo">
+      <summary>设置或获取一个布尔值，该值指示在调用 <see cref="M:Microsoft.Vsa.IVsaEngine.Compile" /> 方法时脚本引擎是否会产生调试信息。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.GetOption(System.String)">
+      <summary>获取脚本引擎特定于实现的选项。</summary>
+      <returns>返回选项的值。</returns>
+      <param name="name">要获取的选项的名称。</param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.InitNew">
+      <summary>提供一个通知，指示初始化阶段已完成，而且已为添加的 <see cref="T:Microsoft.Vsa.IVsaItem" /> 对象准备好了脚本引擎。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.IsCompiled">
+      <returns>如果脚本引擎被设置为在调用 <see cref="M:Microsoft.Vsa.IVsaEngine.Compile" /> 方法时产生调试信息，则返回 TRUE。如果脚本引擎将不返回调试信息，则返回 FALSE。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.IsDirty">
+      <summary>获取一个布尔值，该值报告自上次保存操作或自最初加载脚本引擎后，脚本引擎的源状态是否发生了变化。</summary>
+      <returns>如果脚本引擎被标记为已修改（即“已更新”），则返回 true。如果脚本引擎未更新，则返回 false。此属性的默认值为 false。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.IsRunning">
+      <summary>获取一个布尔值，该值报告脚本引擎当前是否处于运行模式。</summary>
+      <returns>如果脚本引擎正在运行，则返回 true。如果脚本引擎没有运行，则返回 false。此属性的默认值为 false</returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.IsValidIdentifier(System.String)">
+      <summary>检查对于脚本引擎而言提供的标识符是否有效。</summary>
+      <returns>如果标识符有效，则返回 true；否则返回 false。</returns>
+      <param name="identifier">作为标识符提供的字符串值。</param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.Items">
+      <summary>获取 <see cref="T:Microsoft.Vsa.IVsaItem" /> 对象的 <see cref="T:Microsoft.Vsa.IVsaItems" /> 集合，这些对象表示使用 <see cref="M:Microsoft.Vsa.IVsaItems.CreateItem" /> 方法添加到脚本引擎中的所有项，其中包括代码项、引用项和全局项。</summary>
+      <returns>返回一个 <see cref="T:Microsoft.Vsa.IVsaItems" /> 集合。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.Language">
+      <summary>获取脚本引擎支持的编程语言的非本地化名称。</summary>
+      <returns>返回脚本引擎支持的编程语言的英文名称。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.LCID">
+      <summary>获取或设置在报告异常消息时所使用的地理区域设置和语言。</summary>
+      <returns>返回一个整数值，该值表示在报告异常消息时所使用的区域设置。</returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.LoadSourceState(Microsoft.Vsa.IVsaPersistSite)">
+      <summary>按照实现 <see cref="T:Microsoft.Vsa.IVsaPersistSite" /> 接口的宿主提供的对象的指定，指示脚本引擎从其保留点加载源项。</summary>
+      <param name="site">从中加载指定源项的站点。</param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.Name">
+      <summary>设置或获取脚本引擎的显示名称，其主要作用是为宿主环境中的用户标识单个脚本引擎。</summary>
+      <returns>返回脚本引擎的 Name 属性的值，该值可能为空字符串。</returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.Reset">
+      <summary>从运行状态中移除脚本引擎，并自动断开与绑定事件处理程序的连接。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.RevokeCache">
+      <summary>按照根名字对象的指定，使脚本引擎的缓存程序集无效。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.RootMoniker">
+      <summary>设置或获取脚本引擎的根名字对象。</summary>
+      <returns>返回 RootMoniker 属性的当前值。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.RootNamespace">
+      <summary>设置或获取脚本引擎使用的根命名空间。</summary>
+      <returns>返回根命名空间的字符串值。</returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.Run">
+      <summary>启动脚本引擎中已编译代码的执行，并绑定所有事件处理程序。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.SaveCompiledState(System.Byte[]@,System.Byte[]@)">
+      <summary>保存脚本引擎的编译状态；它还可选择保存调试信息。</summary>
+      <param name="pe">脚本引擎的编译状态。</param>
+      <param name="pdb">指定与 PE（可移植可执行文件）对应的 .PDB 文件中包含的调试信息。</param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.SaveSourceState(Microsoft.Vsa.IVsaPersistSite)">
+      <summary>指示脚本引擎将其源状态保存到指定的 <see cref="T:Microsoft.Vsa.IVsaPersistSite" /> 对象。</summary>
+      <param name="site">保存源状态的 <see cref="T:Microsoft.Vsa.IVsaPersistSite" /> 接口所建立的站点。</param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.SetOption(System.String,System.Object)">
+      <summary>设置脚本引擎特定于实现的选项。</summary>
+      <param name="name">要设置的选项的名称。</param>
+      <param name="value">被设置的选项的值。</param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.Site">
+      <summary>设置或获取由宿主实现的 <see cref="T:Microsoft.Vsa.IVsaSite" /> 对象，脚本引擎使用此对象与宿主通信。</summary>
+      <returns>返回对当前 <see cref="T:Microsoft.Vsa.IVsaSite" /> 对象的引用。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.Version">
+      <summary>获取脚本引擎支持的语言编译器的当前版本，以 Major.Minor.Revision.Build 形式表示。</summary>
+      <returns>以 Major.Minor.Revision.Build 形式表示的当前版本的字符串值。</returns>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaError">
+      <summary>提供对执行 IVsaEngine.Compile Method 方法的过程中所遇到的编译错误的访问。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.Description">
+      <summary>获取对错误的简短说明，在某些情况下会返回对源代码中引起错误的标记的引用。</summary>
+      <returns>返回错误的字符串说明。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.EndColumn">
+      <summary>获取引发错误的源文本的结束列号（如果有的话）。</summary>
+      <returns>返回引发错误的源文本的结束列号（如果有的话）。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.Line">
+      <summary>获取发生错误时所在的行号。</summary>
+      <returns>返回发生错误时所在的行号。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.LineText">
+      <summary>从引起错误的行中获取源代码的文本。</summary>
+      <returns>从引起错误的行返回字符串源代码。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.Number">
+      <summary>获取唯一标识错误的编号。</summary>
+      <returns>返回唯一标识错误的编号。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.Severity">
+      <summary>设置错误的严重级别。</summary>
+      <returns>返回表示错误严重级别的整数 (0-4)。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.SourceItem">
+      <summary>获取对生成错误的 <see cref="T:Microsoft.Vsa.IVsaItem" /> 对象的引用。</summary>
+      <returns>返回对生成错误的 <see cref="T:Microsoft.Vsa.IVsaItem" /> 对象的引用。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.SourceMoniker">
+      <summary>获取包含错误的源项的完全限定名，采用脚本引擎可以识别的格式。</summary>
+      <returns>返回包含错误的源项的完全限定名。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.StartColumn">
+      <summary>获取引发错误的源文本的起始列号（如果有的话）。</summary>
+      <returns>返回引发错误的源文本的起始列号（如果有的话）。</returns>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaGlobalItem">
+      <summary>介绍添加到脚本引擎中的全局对象。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaGlobalItem.ExposeMembers">
+      <summary>设置一个值，该值指示是否应当使全局对象的成员对脚本引擎可用。[目前尚不支持。]</summary>
+      <returns>如果全局对象的公共成员无需限定即可供脚本引擎使用，就如同它们是全局命名空间的一部分，则返回 TRUE。如果必须用对象名称限定全局对象的成员，则返回 FALSE。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaGlobalItem.TypeString">
+      <summary>获取或设置全局项的类型。</summary>
+      <returns>返回全局项的项类型。</returns>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaIDE">
+      <summary>此类型支持 .NET Framework 基础结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaIDE.DefaultSearchPath">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaIDE.EnableMainWindow(System.Boolean)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaIDE.ExtensibilityObject">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaIDE.IDEMode">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaIDE.ShowIDE(System.Boolean)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaIDE.Site">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaIDESite">
+      <summary>此类型支持 .NET Framework 基础结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaIDESite.Notify(System.String,System.Object)">
+      <summary>此类型支持 .NET Framework 基础结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaItem">
+      <summary>为所有添加到 .NET 脚本引擎的项定义一个接口，包括代码项、引用项和全局项。它定义应用于该引擎识别的所有项类型的泛型属性和方法。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaItem.GetOption(System.String)">
+      <summary>获取脚本引擎特定于实现的选项。</summary>
+      <returns>返回指定选项的值。</returns>
+      <param name="name">要检索的选项的名称。</param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaItem.IsDirty">
+      <summary>返回一个值，它指示该项的当前内存中表示形式是否与保留的表示形式不同。</summary>
+      <returns>如果该项已更新并因而需要保存，则返回 true；如果该项未更新，则返回 false。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaItem.ItemType">
+      <summary>获取指定对象的类型（如 IVsaItems.CreateItem Method 方法所确定的那样）。</summary>
+      <returns>
+        <see cref="T:Microsoft.Vsa.VsaItemType" /> 枚举所枚举的类型。</returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaItem.Name">
+      <summary>设置或获取项的名称。</summary>
+      <returns>返回项的字符串名称。</returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaItem.SetOption(System.String,System.Object)">
+      <summary>设置脚本引擎特定于实现的选项。</summary>
+      <param name="name">要设置的选项的名称。</param>
+      <param name="value">选项的新值。</param>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaItems">
+      <summary>定义 <see cref="T:Microsoft.Vsa.IVsaItem" /> 对象集合的接口，可通过名称或索引对其进行定位。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaItems.Count">
+      <summary>获取指定集合的项数。</summary>
+      <returns>返回表示集合中的项数的整数值。</returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaItems.CreateItem(System.String,Microsoft.Vsa.VsaItemType,Microsoft.Vsa.VsaItemFlag)">
+      <summary>按照 <see cref="T:Microsoft.Vsa.VsaItemType" /> 枚举中的定义，创建其中一个 <see cref="T:Microsoft.Vsa.IVsaItem" /> 类型的新实例。</summary>
+      <returns>返回对创建的 <see cref="T:Microsoft.Vsa.IVsaItem" /> 对象的引用。</returns>
+      <param name="name">要与新项关联的名称。 项是引用项类型时，名称参数必须与被引用程序集的名称（使用 <see cref="P:Microsoft.Vsa.IVsaReferenceItem.AssemblyName" /> 属性设置）完全相同。但是，在 JScript 中，如果不指定 AssemblyName，则 JScript 会将 ItemName 用作程序集的名称。</param>
+      <param name="itemType">
+        <see cref="T:Microsoft.Vsa.VsaItemType" /> 枚举中定义的所创建的项类型。</param>
+      <param name="itemFlag">用于指定代码项初始内容的可选标志。 </param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaItems.Item(System.Int32)">
+      <summary>通过项的索引值从集合中获取项。</summary>
+      <returns>返回位于指定索引处的项。</returns>
+      <param name="index">可检索项的索引（从 0 开始）。</param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaItems.Item(System.String)">
+      <summary>通过项的名称从集合中获取项。</summary>
+      <returns>返回通过名称指定的项。</returns>
+      <param name="name">要从集合中检索的项的名称。 </param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaItems.Remove(System.Int32)">
+      <summary>从集合中移除按照项的索引值指定的项。</summary>
+      <param name="index">要移除的项的索引值。 </param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaItems.Remove(System.String)">
+      <summary>从集合中移除按照项的名称指定的项。</summary>
+      <param name="name">要从集合中移除的项的名称。</param>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaPersistSite">
+      <summary>对项目持久性进行管理，并对使用由宿主实现的保存和加载操作的代码和其他项进行存储和检索。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaPersistSite.LoadElement(System.String)">
+      <summary>获取以前使用 <see cref="M:Microsoft.Vsa.IVsaPersistSite.SaveElement" /> 方法保存的源字符串。</summary>
+      <returns>返回与名称参数关联的源代码元素的内容。</returns>
+      <param name="name">要加载的代码项的名称。加载项目文件时，此名称可以是空引用。</param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaPersistSite.SaveElement(System.String,System.String)">
+      <summary>使用给定名称参数保存任意源字符串，然后可在调用 <see cref="M:Microsoft.Vsa.IVsaPersistSite.LoadElement" /> 方法时使用以便重载该字符串。</summary>
+      <param name="name">要与指定的源项关联的名称。保存项目文件时，此名称可以是空引用。</param>
+      <param name="source">项的源字符串。</param>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaReferenceItem">
+      <summary>描述一个添加到脚本引擎的引用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaReferenceItem.AssemblyName">
+      <summary>获取或设置被引用程序集的名称。</summary>
+      <returns>返回被引用程序集的字符串名称。</returns>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaSite">
+      <summary>启用主机与脚本引擎之间的通信。该接口由主机实现。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaSite.GetCompiledState(System.Byte[]@,System.Byte[]@)">
+      <summary>获取脚本引擎的已编译状态和关联的调试信息（可选）。</summary>
+      <param name="pe">引擎的已编译状态；字节格式的程序集。</param>
+      <param name="debugInfo">程序集的调试信息；如果此类信息不存在或不可用，则为空引用。 </param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaSite.GetEventSourceInstance(System.String,System.String)">
+      <summary>获取对先前使用 <see cref="M:Microsoft.Vsa.IVsaCodeItem.AddEventSource" /> 方法添加到脚本引擎中的事件源的引用。</summary>
+      <returns>将事件源返回到引擎。</returns>
+      <param name="itemName">指定的项名称。</param>
+      <param name="eventSourceName">指定的事件源名称。</param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaSite.GetGlobalInstance(System.String)">
+      <summary>获取对全局项的引用，例如主机提供的应用程序对象。</summary>
+      <returns>返回对全局对象的引用。</returns>
+      <param name="name">获取对全局项的引用，例如主机提供的应用程序对象。</param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaSite.Notify(System.String,System.Object)">
+      <summary>通知主机有关由 .NET 脚本引擎生成的事件。</summary>
+      <param name="notify">通知主机有关由 .NET 脚本引擎生成的事件。</param>
+      <param name="info">通知主机有关由 .NET 脚本引擎生成的事件。</param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaSite.OnCompilerError(Microsoft.Vsa.IVsaError)">
+      <summary>通知主机如何对脚本引擎遇到的编译器错误作出响应。</summary>
+      <returns>如果指示编译器继续向 <see cref="T:Microsoft.Vsa.IVsaSite" /> 对象报告进一步的错误，则返回 TRUE。如果指示编译器停止向 IVsaSite 对象报告进一步的错误，则返回 FALSE。</returns>
+      <param name="error">表示有害错误的 <see cref="T:Microsoft.Vsa.IVsaError" /> 对象。 </param>
+    </member>
+    <member name="T:Microsoft.Vsa.VsaError">
+      <summary>定义可由 .NET 脚本引擎引发的异常集。</summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.AppDomainCannotBeSet">
+      <summary>值：0x80133000 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.AppDomainInvalid">
+      <summary>值：0x80133001 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ApplicationBaseCannotBeSet">
+      <summary>值：0x80133002 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ApplicationBaseInvalid">
+      <summary>值：0x80133003 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.AssemblyExpected">
+      <summary>值：0x80133004 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.AssemblyNameInvalid">
+      <summary>值：0x80133005 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.BadAssembly">
+      <summary>值：0x80133006 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.CachedAssemblyInvalid">
+      <summary>值：0x80133007 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.CallbackUnexpected">
+      <summary>值：0x80133008 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.CodeDOMNotAvailable">
+      <summary>值：0x80133009 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.CompiledStateNotFound">
+      <summary>值：0x8013300A </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.DebugInfoNotSupported">
+      <summary>值：0x8013300B </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ElementNameInvalid">
+      <summary>值：0x8013300C </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ElementNotFound">
+      <summary>值：0x8013300D </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineBusy">
+      <summary>值：0x8013300E </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineCannotClose">
+      <summary>值：0x8013300F </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineCannotReset">
+      <summary>值：0x80133010 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineClosed">
+      <summary>值：0x80133011 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineEmpty">
+      <summary>值：0x80133012 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineInitialized">
+      <summary>值：0x80133013 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineNameInUse">
+      <summary>值：0x80133014 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineNotCompiled">
+      <summary>值：0x80133015 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineNotInitialized">
+      <summary>值：0x80133016 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineNotRunning">
+      <summary>值：0x80133017 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineRunning">
+      <summary>值：0x80133018 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EventSourceInvalid">
+      <summary>值：0x80133019 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EventSourceNameInUse">
+      <summary>值：0x8013301A </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EventSourceNameInvalid">
+      <summary>值：0x8013301B </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EventSourceNotFound">
+      <summary>值：0x8013301C </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EventSourceTypeInvalid">
+      <summary>值：0x8013301D </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.GetCompiledStateFailed">
+      <summary>值：0x8013301E </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.GlobalInstanceInvalid">
+      <summary>值：0x8013301F </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.GlobalInstanceTypeInvalid">
+      <summary>值：0x80133020 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.InternalCompilerError">
+      <summary>值：0x80133021 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ItemCannotBeRemoved">
+      <summary>值：0x80133022 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ItemFlagNotSupported">
+      <summary>值：0x80133023 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ItemNameInUse">
+      <summary>值：0x80133024 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ItemNameInvalid">
+      <summary>值：0x80133025 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ItemNotFound">
+      <summary>值：0x80133026 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ItemTypeNotSupported">
+      <summary>值：0x80133027 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.LCIDNotSupported">
+      <summary>值：0x80133028 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.LoadElementFailed">
+      <summary>值：0x80133029 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.NotificationInvalid">
+      <summary>值：0x8013302A </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.OptionInvalid">
+      <summary>值：0x8013302B </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.OptionNotSupported">
+      <summary>值：0x8013302C </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RevokeFailed">
+      <summary>值：0x8013302D </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RootMonikerAlreadySet">
+      <summary>值：0x8013302E </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RootMonikerInUse">
+      <summary>值：0x8013302F </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RootMonikerInvalid">
+      <summary>值：0x80133030 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RootMonikerNotSet">
+      <summary>值：0x80133031 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RootMonikerProtocolInvalid">
+      <summary>值：0x80133032 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RootNamespaceInvalid">
+      <summary>值：0x80133033 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RootNamespaceNotSet">
+      <summary>值：0x80133034 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.SaveCompiledStateFailed">
+      <summary>值：0x80133035 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.SaveElementFailed">
+      <summary>值：0x80133036 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.SiteAlreadySet">
+      <summary>值：0x80133037 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.SiteInvalid">
+      <summary>值：0x80133038 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.SiteNotSet">
+      <summary>值：0x80133039 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.SourceItemNotAvailable">
+      <summary>值：0x8013303A </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.SourceMonikerNotAvailable">
+      <summary>值：0x8013303B </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.URLInvalid">
+      <summary>值：0x8013303C </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.BrowserNotExist">
+      <summary>值：0x8013303D </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.DebuggeeNotStarted">
+      <summary>值：0x8013303E </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineNameInvalid">
+      <summary>值：0x8013303F </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineNotExist">
+      <summary>值：0x80133040 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.FileFormatUnsupported">
+      <summary>值：0x80133041 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.FileTypeUnknown">
+      <summary>值：0x80133042 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ItemCannotBeRenamed">
+      <summary>值：0x80133043 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.MissingSource">
+      <summary>值：0x80133044 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.NotInitCompleted">
+      <summary>值：0x80133045 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.NameTooLong">
+      <summary>值：0x80133046 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ProcNameInUse">
+      <summary>值：0x80133047 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ProcNameInvalid">
+      <summary>值：0x80133048 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.VsaServerDown">
+      <summary>值：0x80133049 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.MissingPdb">
+      <summary>值：0x8013304A </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.NotClientSideAndNoUrl">
+      <summary>值：0x8013304B </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.CannotAttachToWebServer">
+      <summary>值：0x8013304C </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineNameNotSet">
+      <summary>值：0x8013303F </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.UnknownError">
+      <summary>值：0x801330FF </summary>
+    </member>
+    <member name="T:Microsoft.Vsa.VsaException">
+      <summary>此类型支持 .NET Framework 基础结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.#ctor">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.#ctor(Microsoft.Vsa.VsaError)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.#ctor(Microsoft.Vsa.VsaError,System.String)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.#ctor(Microsoft.Vsa.VsaError,System.String,System.Exception)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.#ctor(System.String)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.#ctor(System.String,System.Exception)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaException.ErrorCode">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.ToString">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="T:Microsoft.Vsa.VsaIDEMode">
+      <summary>此类型支持 .NET Framework 基础结构，但不适合通过代码直接使用。</summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaIDEMode.Break">
+      <summary>中断模式 - 调试器已连接，但处于中断模式。</summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaIDEMode.Design">
+      <summary>设计模式 - 未连接调试器。</summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaIDEMode.Run">
+      <summary>运行模式 - 已连接调试器。</summary>
+    </member>
+    <member name="T:Microsoft.Vsa.VsaItemFlag">
+      <summary>将代码项的类型标识为“类”、“模块”或“无”。</summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaItemFlag.None">
+      <summary>值：0 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaItemFlag.Module">
+      <summary>值：1 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaItemFlag.Class">
+      <summary>值：2 </summary>
+    </member>
+    <member name="T:Microsoft.Vsa.VsaItemType">
+      <summary>将项类型标记为 Code、Reference 或 AppGlobal。</summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaItemType.Reference">
+      <summary>值：0 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaItemType.AppGlobal">
+      <summary>值：1 </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaItemType.Code">
+      <summary>值：2 </summary>
+    </member>
+    <member name="T:Microsoft.Vsa.VsaLoader">
+      <summary>此类型支持 .NET Framework 基础结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.#ctor">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.Assembly">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.Close">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.Compile">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.Evidence">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.GenerateDebugInfo">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.GetOption(System.String)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.InitNew">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.IsCompiled">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.IsDirty">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.IsRunning">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.IsValidIdentifier(System.String)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.Items">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.Language">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.LCID">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.LoadSourceState(Microsoft.Vsa.IVsaPersistSite)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.Name">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.Reset">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.RevokeCache">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.RootMoniker">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.RootNamespace">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.Run">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.SaveCompiledState(System.Byte[]@,System.Byte[]@)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.SaveSourceState(Microsoft.Vsa.IVsaPersistSite)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.SetOption(System.String,System.Object)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.Site">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.Version">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="T:Microsoft.Vsa.VsaModule">
+      <summary>此类型支持 .NET Framework 基础结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaModule.#ctor(System.Boolean)">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaModule.IsVsaModule">
+      <summary>该成员支持 .NET Framework 结构，不应从代码直接使用。</summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,142 @@
+apply plugin: 'java'
+apply from: 'predefined.gradle'
+
+sourceCompatibility = 1.7
+
+def srcDir = getBuildDir('src'), libDir = getBuildDir('libs'), resourceDir = getBuildDir('resources'), 
+    binDir = getBuildDir('bin'), configDir = getBuildDir('config'), outputDir = getBuildDir('build/libs')
+
+sourceSets{
+    main{
+        java{
+            srcDirs = [srcDir]
+            output.classesDir = binDir
+        }
+    }
+}
+
+dependencies{
+    compile fileTree(dir:libDir, include: '*.jar')
+}
+
+
+def tempForZipDir = getBuildDir('tmp')
+
+def agentServer='../agent_server', core='../core', common='../common', dataServer='../data_server', 
+    dbLog='../db_log', gameDb='../game_db', gameServer='../game_server', protobuf='../protobuf',
+     serverMsg='../server_msg', launcher='../launcher' 
+ 
+def coreConfigDir = core + File.separator + 'config'
+def commonConfigDir = common + File.separator + 'config'
+def agentServerConfigDir = agentServer + File.separator + 'config'
+def dataServerConfigDir = dataServer + File.separator + 'config'
+def gameServerConfigDir = gameServer + File.separator + 'config'
+def gameDbSqlDir = gameDb + File.separator + 'sql'
+
+def projectResourceDir='../../Data/Excels', projectI18nDir='../../Data/i18n'
+
+def runScriptDir = 'runScript'
+
+def generatedJarDir = 'build/libs'
+
+task init<<{
+	deleteIfExists buildWorkspace
+    create buildWorkspace
+}
+
+task copySrcFiles(dependsOn:init)<<{
+    copy{
+        from(allProjectSrcDirs(agentServer, core, common, dataServer, dbLog, gameDb, gameServer, protobuf, serverMsg, launcher))
+        into srcDir
+        include '**/*.java'
+    }
+}
+
+task copyConfigFiles(dependsOn:copySrcFiles)<<{
+    copy{
+		from coreConfigDir
+		from commonConfigDir
+        from agentServerConfigDir
+        from dataServerConfigDir
+        from gameServerConfigDir
+		from gameDbSqlDir
+        into configDir
+        include '**/*.*'
+    }
+}
+
+task copyResourceFiles(dependsOn:copyConfigFiles)<<{
+    copy{
+        from projectResourceDir
+        into resourceDir+File.separator+'scripts'
+        include '**/*.*'
+    }
+    copy{
+        from projectI18nDir
+        into resourceDir+File.separator+'i18n'
+        include '**/*.*'
+    }
+}
+
+task copyLibFiles(dependsOn:copyResourceFiles)<<{
+    copy{
+        from(allProjectLibDirs(core))
+        into libDir
+        include '**/*.jar' 
+    }
+}
+
+compileJava{
+    options.encoding = 'utf-8'
+}.dependsOn copyLibFiles
+
+jar{
+    baseName = "server_all"
+    manifest{
+        attributes 'Main-Class':'com.mokylin.bleach.launcher.Launcher'
+    }
+}.dependsOn compileJava
+
+task prepareForZip(dependsOn:jar)<<{
+    deleteFileIfExists tempForZipDir
+    create tempForZipDir
+	
+	copy {
+		from generatedJarDir
+		into tempForZipDir + File.separator + "bin"
+		include '**/*.jar'
+	}
+	
+    copy{
+        from libDir
+        from outputDir
+        into tempForZipDir + File.separator + "bin"
+        include '**/*.jar'
+    }
+
+    copy{
+        from resourceDir
+        into tempForZipDir + File.separator + "resources"
+    }
+
+    copy{
+        from configDir
+        into tempForZipDir + File.separator + "config"
+    }
+
+    copy{
+        from runScriptDir
+        into tempForZipDir
+    }
+}
+
+task zipAll(type:Zip, dependsOn:prepareForZip){
+    baseName = "server_all"
+    version = getDate()
+    from tempForZipDir
+    include '**/*.*'
+}
+
+task localBuild(dependsOn:zipAll) << {
+    deleteFileIfExists buildWorkspace
+}

@@ -1,0 +1,6 @@
+package com.mokylin;
+
+message MissionData {
+	required int32 stageId = 1;
+	repeated int32 formationHeroIds = 2;
+}

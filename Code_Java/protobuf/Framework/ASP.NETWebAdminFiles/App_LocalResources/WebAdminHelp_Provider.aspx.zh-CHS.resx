@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="Title00" type="System.String">
+    <value>网站管理工具“提供程序”选项卡</value>
+  </data>
+  <data name="WebSiteAdministrationToolProviderTab01" type="System.String">
+    <value>网站管理工具“提供程序”选项卡</value>
+  </data>
+  <data name="WebSiteAdministrationToolProviderTab02" type="System.String">
+    <value>使用网站管理工具的“提供程序”&lt;span class=UI&gt;&lt;/span&gt;选项卡，可以管理 ASP.NET 为应用程序功能存储数据的方式，如用户帐户、角色和其他设置。</value>
+  </data>
+  <data name="Introduction01" type="System.String">
+    <value>介绍</value>
+  </data>
+  <data name="Introduction02" type="System.String">
+    <value>ASP.NET 使用提供程序类来管理各种功能(如成员资格和角色管理)的数据存储。提供程序类是一个公开特定 ASP.NET 功能(如管理成员资格中的用户帐户)的组件。以上每个应用程序功能都需要数据存储。尽管每个提供程序类都执行相同的应用程序功能，但每个类都可以按不同的方式来存储数据。例如，ASP.NET 成员资格的不同提供程序类可能按以下的不同方式来存储用户帐户信息:</value>
+  </data>
+  <data name="Introduction03" type="System.String">
+    <value>使用 Microsoft SQL Server 数据库。 </value>
+  </data>
+  <data name="Introduction04" type="System.String">
+    <value>使用 Microsoft Windows Active Directory 目录服务。</value>
+  </data>
+  <data name="Introduction05" type="System.String">
+    <value>使用自定义用户数据库。</value>
+  </data>
+  <data name="Introduction06" type="System.String">
+    <value>以上每个提供程序类仍然执行同一个核心任务组以管理用户帐户，您以相同方式与应用程序中的提供程序类进行交互。</value>
+  </data>
+  <data name="ConfiguringProvidersintheWebSiteAdministrationTool01" type="System.String">
+    <value>在网站管理工具中配置提供程序</value>
+  </data>
+  <data name="ConfiguringProvidersintheWebSiteAdministrationTool02" type="System.String">
+    <value>网站管理工具允许您对各项应用程序功能(如成员资格和角色)使用不同的提供程序类。安装的 ASP.NET 中带有几个提供程序类，分别对应于一种类型的应用程序功能。例如，ASP.NET 有一个成员资格的提供程序类，用于在 SQL Server 数据库(&lt;span class=LanguageKeyword&gt;AspNetSqlMembershipProvider&lt;/span&gt;)中存储信息。此外，它还有一个提供程序类，用于在 Active Directory 中存储成员资格信息。</value>
+  </data>
+  <data name="ManagingProviderSettings01" type="System.String">
+    <value>管理提供程序设置</value>
+  </data>
+  <data name="ManagingProviderSettings02" type="System.String">
+    <value>使用网站管理工具可以更改和测试网站的提供程序。您的应用程序可以将一个提供程序用于多个应用程序功能，也可以使用几个不同的提供程序。 </value>
+  </data>
+  <data name="ManagingProviderSettings03" type="System.String">
+    <value>默认情况下，网站管理工具将 &lt;span class=LanguageKeyword&gt;AspNetSqlProvider&lt;/span&gt; 提供程序用于所有应用程序功能。 </value>
+  </data>
+  <data name="ManagingProviderSettings04" type="System.String">
+    <value>使用网站管理工具可以按以下方式管理网站的提供程序:</value>
+  </data>
+  <data name="ManagingProviderSettings05" type="System.String">
+    <value>如果您希望将本地 Windows 组用于角色授权，则从默认 &lt;span class=LanguageKeyword&gt;AspNetSqlRoleProvider&lt;/span&gt; 提供程序改为备用 &lt;span class=LanguageKeyword&gt;AspNetWindowsTokenRoleProvider&lt;/span&gt; 提供程序。</value>
+  </data>
+  <data name="ManagingProviderSettings06" type="System.String">
+    <value>指定是对所有应用程序功能使用同一个提供程序，还是对每个应用程序功能使用一个不同的提供程序。通常，只有当您希望对信息的存储位置进行精确控制或者必须只对一个功能(如角色)使用一个提供程序时，才选择不同的提供程序。</value>
+  </data>
+  <data name="SelectingaSingleProvidervs.DifferentProviders01" type="System.String">
+    <value>选择一个提供程序与选择不同的提供程序</value>
+  </data>
+  <data name="SelectingaSingleProvidervs.DifferentProviders02" type="System.String">
+    <value>可以将网站配置为对所有应用程序功能使用同一个提供程序。在这种情况下，成员资格和角色等功能的所有数据都存储在一个数据存储区(通常是一个数据库)中。此外，也可以为每个应用程序功能选择一个不同的提供程序。 </value>
+  </data>
+  <data name="SelectingaSingleProvidervs.DifferentProviders03" type="System.String">
+    <value>在网站管理工具中的“提供程序”&lt;span class=UI&gt;&lt;/span&gt;选项卡上，首先选择是将同一个提供程序用于所有功能，还是分别为每个应用程序功能选择一个提供程序。可以选择下列选项:</value>
+  </data>
+  <data name="SelectingaSingleProvidervs.DifferentProviders04" type="System.String">
+    <value>要将一个提供程序用于所有应用程序功能，请单击“为所有站点管理数据选择同一提供程序”&lt;span class=UI&gt;&lt;/span&gt;。</value>
+  </data>
+  <data name="SelectingaSingleProvidervs.DifferentProviders05" type="System.String">
+    <value>要为特定的应用程序功能指定提供程序，请单击“为每项功能选择不同的提供程序(高级)”&lt;span class=UI&gt;&lt;/span&gt;，然后为每个应用程序功能选择一个提供程序。</value>
+  </data>
+  <data name="ConfiguringtheSQLServerProvider01" type="System.String">
+    <value>配置 SQL Server 提供程序</value>
+  </data>
+  <data name="ConfiguringtheSQLServerProvider02" type="System.String">
+    <value>如果要使用 SQL Server 提供程序在 SQL Server 数据库中存储应用程序功能数据，必须首先创建相应的数据库以配置 SQL Server。ASP.NET 包括一个名为 aspnet_regsql.exe 的命令行实用工具，可为您执行此任务。</value>
+  </data>
+  <data name="ConfiguringtheSQLServerProvider03" type="System.String">
+    <value>可执行文件 aspnet_regsql.exe 位于 Web 服务器上的 WINDOWS\Microsoft.NET\Framework\versionNumber 文件夹中。aspnet_regsql.exe 实用工具既可用于创建 SQL Server 数据库，又可用于在现有的数据库中添加或移除选项。</value>
+  </data>
+  <data name="ConfiguringtheSQLServerProvider04" type="System.String">
+    <value>可以不带任何命令行参数来运行可执行文件 aspnet_regsql.exe 以便运行一个向导，该向导将帮助您为 SQL Server 指定连接信息，并为支持的所有功能安装或移除数据库元素。还可以将可执行文件 aspnet_regsql.exe 作为一个命令行实用工具来运行，以便为单个功能配置数据库元素。</value>
+  </data>
+  <data name="ConfiguringtheSQLServerProvider05" type="System.String">
+    <value>要运行 aspnet_regsql.exe 向导，可以在不带任何命令行参数的情况下运行 aspnet_regsql.exe 可执行文件，如下面的示例所示。</value>
+  </data>
+  <data name="ConfiguringtheSQLServerProvider06" type="System.String">
+    <value>要查看 aspnet_regsql.exe 实用工具其他可用选项的联机帮助，请使用 /? 选项。</value>
+  </data>
+  <data name="BehindtheScenes01" type="System.String">
+    <value>幕后</value>
+  </data>
+  <data name="BehindtheScenes02" type="System.String">
+    <value>“提供程序”&lt;span class=UI&gt;&lt;/span&gt;选项卡用于管理存储在应用程序的 Web.config 文件中的配置设置。具体地说，通过“提供程序”&lt;span class=UI&gt;&lt;/span&gt;选项卡管理的设置在配置文件的 &amp;lt;membership&amp;gt; 和 &amp;lt;roleManager&amp;gt; 节中。 </value>
+  </data>
+  <data name="BehindtheScenes03" type="System.String">
+    <value>下面的代码是在指定对角色管理使用 &lt;span class=LanguageKeyword&gt;AspNetWindowsTokenRoleProvider&lt;/span&gt; 提供程序后由网站管理工具生成的 Web.config 文件。</value>
+  </data>
+  <data name="MoreInformation01" type="System.String">
+    <value>详细信息</value>
+  </data>
+  <data name="MoreInformation02" type="System.String">
+    <value>有关更多信息，请参见 .NET Framework 类参考和“ASP.NET 设置架构”中的以下各节:</value>
+  </data>
+  <data name="MoreInformation03" type="System.String">
+    <value>membership 元素(ASP.NET 设置架构)</value>
+  </data>
+  <data name="MoreInformation04" type="System.String">
+    <value>profile 元素(ASP.NET 设置架构)</value>
+  </data>
+  <data name="MoreInformation05" type="System.String">
+    <value>roleManager 元素(ASP.NET 设置架构)</value>
+  </data>
+  <data name="SeeAlso01" type="System.String">
+    <value>请参见</value>
+  </data>
+  <data name="SeeAlso02" type="System.String">
+    <value>网站管理工具概述</value>
+  </data>
+  <data name="SeeAlso03" type="System.String">
+    <value>网站管理工具“安全”选项卡</value>
+  </data>
+  <data name="SeeAlso04" type="System.String">
+    <value>网站管理工具“应用程序”选项卡</value>
+  </data>
+  <data name="SeeAlso05" type="System.String">
+    <value>网站管理工具的内部机制</value>
+  </data>
+</root>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualC</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualC.DebugInfoInPDBAttribute">
+      <summary>一个应用到本机类的属性，该属性通知调试器在 pdb 而不是元数据中查找字段信息。</summary>
+    </member>
+    <member name="M:Microsoft.VisualC.DebugInfoInPDBAttribute.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualC.DebugInfoInPDBAttribute" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.VisualC.DecoratedNameAttribute">
+      <summary>编译器用来将方法的修饰名传递到链接器的属性。</summary>
+    </member>
+    <member name="M:Microsoft.VisualC.DecoratedNameAttribute.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualC.DecoratedNameAttribute" /> 类的一个新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualC.DecoratedNameAttribute.#ctor(System.String)">
+      <summary>使用指定的修饰名初始化 <see cref="T:Microsoft.VisualC.DecoratedNameAttribute" /> 类的新实例。</summary>
+      <param name="decoratedName">方法的修饰名。</param>
+    </member>
+    <member name="T:Microsoft.VisualC.IsConstModifier"></member>
+    <member name="M:Microsoft.VisualC.IsConstModifier.#ctor"></member>
+    <member name="T:Microsoft.VisualC.IsCXXReferenceModifier"></member>
+    <member name="M:Microsoft.VisualC.IsCXXReferenceModifier.#ctor"></member>
+    <member name="T:Microsoft.VisualC.IsLongModifier"></member>
+    <member name="M:Microsoft.VisualC.IsLongModifier.#ctor"></member>
+    <member name="T:Microsoft.VisualC.IsSignedModifier"></member>
+    <member name="M:Microsoft.VisualC.IsSignedModifier.#ctor"></member>
+    <member name="T:Microsoft.VisualC.IsVolatileModifier"></member>
+    <member name="M:Microsoft.VisualC.IsVolatileModifier.#ctor"></member>
+    <member name="T:Microsoft.VisualC.MiscellaneousBitsAttribute">
+      <summary>存储有关元数据中的类型的杂项信息的属性。</summary>
+    </member>
+    <member name="M:Microsoft.VisualC.MiscellaneousBitsAttribute.#ctor(System.Int32)">
+      <summary>使用指定的位掩码初始化 <see cref="T:Microsoft.VisualC.MiscellaneousBitsAttribute" /> 类的新实例。</summary>
+      <param name="miscellaneousBits">包含有关类型的信息的位掩码。</param>
+    </member>
+    <member name="F:Microsoft.VisualC.MiscellaneousBitsAttribute.m_dwAttrs">
+      <summary>包含有关类型的信息的位掩码。</summary>
+    </member>
+    <member name="T:Microsoft.VisualC.NeedsCopyConstructorModifier">
+      <summary>一个自定义修饰符，它应用于在封送处理参数时通知 CLR 封送拆收器调用参数的复制构造函数的参数。</summary>
+    </member>
+    <member name="M:Microsoft.VisualC.NeedsCopyConstructorModifier.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualC.NeedsCopyConstructorModifier" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.VisualC.NoSignSpecifiedModifier"></member>
+    <member name="M:Microsoft.VisualC.NoSignSpecifiedModifier.#ctor"></member>
+  </members>
+</doc>

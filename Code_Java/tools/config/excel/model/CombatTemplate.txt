@@ -1,0 +1,2 @@
+String name;//名称
+int maxRound;//最大回合数

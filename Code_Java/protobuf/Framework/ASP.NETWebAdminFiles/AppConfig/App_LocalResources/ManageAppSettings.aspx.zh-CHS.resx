@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+
+    <data name="ConfirmationText" type="System.String">
+        <value>确实要删除应用程序设置“&lt;b&gt;{0}&lt;/b&gt;”吗?</value>
+    </data>
+    <data name="CreateAppSettingLinkText" type="System.String">
+        <value>创建新应用程序设置</value>
+    </data>
+    <data name="DeleteAppSettingTitle" type="System.String">
+        <value>删除应用程序设置</value>
+    </data>
+    <data name="DeleteLinkText" type="System.String">
+        <value>删除</value>
+    </data>
+    <data name="DeleteLinkToolTip" type="System.String">
+        <value>删除应用程序设置</value>
+    </data>
+    <data name="EditLinkText" type="System.String">
+        <value>编辑</value>
+    </data>
+    <data name="EditLinkToolTip" type="System.String">
+        <value>编辑应用程序设置</value>
+    </data>
+    <data name="Inherited" type="System.String">
+        <value>继承的</value>
+    </data>
+    <data name="Instructions" type="System.String">
+        <value>在此页中可以编辑、重写或删除不想硬编码到页中的应用程序设置。设置可以是应用程序范围的局部设置，也可以是继承自默认站点范围或计算机范围的配置。如果是继承设置，则可以将其重写，为应用程序指定一个新值。</value>
+    </data>
+    <data name="Local" type="System.String">
+        <value>本地</value>
+    </data>
+    <data name="NameHeader" type="System.String">
+        <value>名称</value>
+    </data>
+    <data name="NumOfAppSettingsText" type="System.String">
+        <value>现有应用程序设置: {0}</value>
+    </data>
+    <data name="Overridden" type="System.String">
+        <value>重写</value>
+    </data>
+    <data name="OverrideLinkText" type="System.String">
+        <value>重写</value>
+    </data>
+    <data name="OverrideLinkToolTip" type="System.String">
+        <value>重写应用程序设置</value>
+    </data>
+    <data name="SourceHeader" type="System.String">
+        <value>源</value>
+    </data>
+    <data name="Title" type="System.String">
+        <value>管理应用程序设置</value>
+    </data>
+    <data name="TitleForSite" type="System.String">
+        <value>管理站点的应用程序设置: {0}</value>
+    </data>
+    <data name="ValueHeader" type="System.String">
+        <value>值</value>
+    </data>
+</root>

@@ -1,0 +1,12 @@
+String name;//名称
+;
+;
+;
+com.mokylin.bleach.common.combat.enumeration.BuffWorkingTime workingTime;//WorkingTime(作用时间)
+int remainTime;//持续回合数
+com.mokylin.bleach.common.combat.enumeration.BuffType buffType;//正负级别
+boolean isCanStop;//可否被驱散
+com.mokylin.bleach.common.combat.enumeration.SpellBuffHitType spellBuffHitType;//Buff命中规则
+com.mokylin.bleach.common.combat.model.EffectBase effectMain;[EmbedObject(6)]//效果器
+com.mokylin.bleach.common.combat.model.EffectBase effectEnd;[EmbedObject(6)]//Buff结束时的效果器
+List<com.mokylin.bleach.common.core.excelmodel.TempAttrNode3Col> attributeList;[collection(3,3);notNull=true]//附加的属性

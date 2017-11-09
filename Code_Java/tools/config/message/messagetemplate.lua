@@ -1,0 +1,6 @@
+--[[
+$comment
+--]]
+require "protobuf"
+
+$messages

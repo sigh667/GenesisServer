@@ -1,0 +1,848 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Transactions</name>
+  </assembly>
+  <members>
+    <member name="T:System.Transactions.CommittableTransaction">
+      <summary>描述可提交的事务。</summary>
+    </member>
+    <member name="M:System.Transactions.CommittableTransaction.#ctor">
+      <summary>初始化 <see cref="T:System.Transactions.CommittableTransaction" /> 类的新实例。</summary>
+      <exception cref="T:System.PlatformNotSupportedException">尝试在 Windows 98、Windows 98 Second Edition 或 Windows Millennium Edition 下创建事务。</exception>
+    </member>
+    <member name="M:System.Transactions.CommittableTransaction.#ctor(System.TimeSpan)">
+      <summary>使用指定的 <paramref name="timeout" /> 值初始化 <see cref="T:System.Transactions.CommittableTransaction" /> 类的新实例。</summary>
+      <param name="timeout">事务在中止之前能够存在的最长时间。</param>
+      <exception cref="T:System.PlatformNotSupportedException">尝试在 Windows 98、Windows 98 Second Edition 或 Windows Millennium Edition 下创建事务。</exception>
+    </member>
+    <member name="M:System.Transactions.CommittableTransaction.#ctor(System.Transactions.TransactionOptions)">
+      <summary>使用指定的事务选项初始化 <see cref="T:System.Transactions.CommittableTransaction" /> 类的新实例。</summary>
+      <param name="options">一个 <see cref="T:System.Transactions.TransactionOptions" /> 结构，描述用于新事务的事务选项。</param>
+      <exception cref="T:System.PlatformNotSupportedException">尝试在 Windows 98、Windows 98 Second Edition 或 Windows Millennium Edition 下创建事务。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="options" /> 无效。</exception>
+    </member>
+    <member name="M:System.Transactions.CommittableTransaction.BeginCommit(System.AsyncCallback,System.Object)">
+      <summary>开始异步提交事务的尝试。</summary>
+      <returns>一个 <see cref="T:System.IAsyncResult" /> 接口，该接口可由调用方用于检查异步操作的状态，或用于等待操作完成。</returns>
+      <param name="asyncCallback">在事务完成时调用的 <see cref="T:System.AsyncCallback" /> 委托。此参数可以为 null，在这种情况下，应用程序不会得到事务完成的通知。相反，应用程序必须使用 <see cref="T:System.IAsyncResult" /> 接口来检查完成状态并根据情况等待，或调用 <see cref="M:System.Transactions.CommittableTransaction.EndCommit(System.IAsyncResult)" /> 以等待完成。</param>
+      <param name="asyncState">一个与异步提交关联的对象，其中可能包含任意状态信息。此对象被传递给回调，并且不会被 <see cref="N:System.Transactions" /> 解释。null 引用是允许的。</param>
+    </member>
+    <member name="M:System.Transactions.CommittableTransaction.Commit">
+      <summary>尝试提交事务。</summary>
+      <exception cref="T:System.Transactions.TransactionInDoubtException">
+                在事务上调用了 <see cref="M:System.Transactions.CommittableTransaction.Commit" />，并且该事务变为 <see cref="F:System.Transactions.TransactionStatus.InDoubt" />。</exception>
+      <exception cref="T:System.Transactions.TransactionAbortedException">
+                调用了 <see cref="M:System.Transactions.CommittableTransaction.Commit" />，并且该事务第一次回滚。</exception>
+    </member>
+    <member name="M:System.Transactions.CommittableTransaction.EndCommit(System.IAsyncResult)">
+      <summary>结束异步提交事务的尝试。</summary>
+      <param name="asyncResult">与异步提交关联的 <see cref="T:System.IAsyncResult" /> 对象。</param>
+      <exception cref="T:System.Transactions.TransactionAbortedException">
+                调用了 <see cref="M:System.Transactions.CommittableTransaction.BeginCommit(System.AsyncCallback,System.Object)" />，并且该事务第一次回滚。</exception>
+    </member>
+    <member name="P:System.Transactions.CommittableTransaction.System#IAsyncResult#AsyncState">
+      <summary>获取作为 <see cref="M:System.Transactions.CommittableTransaction.BeginCommit(System.AsyncCallback,System.Object)" /> 方法调用的最后一个参数而提供的对象。</summary>
+      <returns>作为 <see cref="M:System.Transactions.CommittableTransaction.BeginCommit(System.AsyncCallback,System.Object)" /> 方法调用的最后一个参数而提供的对象。</returns>
+    </member>
+    <member name="P:System.Transactions.CommittableTransaction.System#IAsyncResult#AsyncWaitHandle">
+      <summary>获取用于等待异步操作完成的 <see cref="T:System.Threading.WaitHandle" />。</summary>
+      <returns>用于等待异步操作完成的 <see cref="T:System.Threading.WaitHandle" />。</returns>
+    </member>
+    <member name="P:System.Transactions.CommittableTransaction.System#IAsyncResult#CompletedSynchronously">
+      <summary>获取异步提交操作是否同步完成的指示。</summary>
+      <returns>
+            如果异步提交操作同步完成，则为 true；否则为 false。即使该操作同步完成，此属性也始终返回 false。</returns>
+    </member>
+    <member name="P:System.Transactions.CommittableTransaction.System#IAsyncResult#IsCompleted">
+      <summary>获取异步提交操作是否已完成的指示。</summary>
+      <returns>
+            如果操作完成则为 true，否则为 false。</returns>
+    </member>
+    <member name="T:System.Transactions.DependentCloneOption">
+      <summary>控制要创建的依赖事务的种类。</summary>
+    </member>
+    <member name="F:System.Transactions.DependentCloneOption.BlockCommitUntilComplete">
+      <summary>依赖事务阻塞事务的提交过程，直至父事务超时或 <see cref="M:System.Transactions.DependentTransaction.Complete" /> 被调用。在此情况下，可以在该事务上完成附加工作，并且可以创建新的登记。</summary>
+    </member>
+    <member name="F:System.Transactions.DependentCloneOption.RollbackIfNotComplete">
+      <summary>如果在调用 <see cref="M:System.Transactions.DependentTransaction.Complete" /> 之前在父事务上调用了“提交”，则依赖事务将自动中止该事务。</summary>
+    </member>
+    <member name="T:System.Transactions.DependentTransaction">
+      <summary>描述事务的克隆，该克隆保证在应用程序停止事务上的工作之后才能提交事务。无法继承此类。</summary>
+    </member>
+    <member name="M:System.Transactions.DependentTransaction.Complete">
+      <summary>尝试完成依赖事务。</summary>
+      <exception cref="T:System.Transactions.TransactionException">在调用此方法之后在事务上进行附加工作的任何尝试。这包括调用一些方法（如 <see cref="M:System.Transactions.Transaction.EnlistVolatile" />、<see cref="M:System.Transactions.Transaction.EnlistDurable" />、<see cref="M:System.Transactions.Transaction.Clone" /> 和 <see cref="M:System.Transactions.Transaction.DependentClone(System.Transactions.DependentCloneOption)" />），或者对事务的任何序列化操作。</exception>
+    </member>
+    <member name="T:System.Transactions.DistributedTransactionPermission">
+      <summary>在事务的管理已升级到 MSDTC 时 <see cref="N:System.Transactions" /> 所要求的权限。无法继承此类。</summary>
+    </member>
+    <member name="M:System.Transactions.DistributedTransactionPermission.#ctor(System.Security.Permissions.PermissionState)">
+      <summary>初始化 <see cref="T:System.Transactions.DistributedTransactionPermission" /> 类的新实例。</summary>
+      <param name="state">
+        <see cref="T:System.Security.Permissions.PermissionState" /> 值之一。</param>
+    </member>
+    <member name="M:System.Transactions.DistributedTransactionPermission.Copy">
+      <summary>创建并返回当前权限的相同副本。</summary>
+      <returns>当前权限的副本。</returns>
+    </member>
+    <member name="M:System.Transactions.DistributedTransactionPermission.FromXml(System.Security.SecurityElement)">
+      <summary>从 XML 编码重新构造具有指定状态的权限。</summary>
+      <param name="securityElement">用于重新构造权限的 XML 编码。</param>
+    </member>
+    <member name="M:System.Transactions.DistributedTransactionPermission.Intersect(System.Security.IPermission)">
+      <summary>创建并返回一个权限，该权限是当前权限和指定权限的交集。</summary>
+      <returns>一个新权限，它表示当前权限与指定权限的交集。如果交集为空，则此新权限为 null。</returns>
+      <param name="target">要与当前权限相交的权限。它必须与当前权限属于同一类型。</param>
+    </member>
+    <member name="M:System.Transactions.DistributedTransactionPermission.IsSubsetOf(System.Security.IPermission)">
+      <summary>返回一个值，该值指示当前权限是否为指定权限的一个子集。</summary>
+      <returns>
+            如果当前 <see cref="T:System.Security.IPermission" /> 是指定 <see cref="T:System.Security.IPermission" /> 的子集，则为 true；否则为 false。</returns>
+      <param name="target">要测试子集关系的权限。此权限必须与当前权限属于同一类型。</param>
+    </member>
+    <member name="M:System.Transactions.DistributedTransactionPermission.IsUnrestricted">
+      <summary>返回一个值，该值指示是否允许对受当前权限保护的资源进行不受限制地访问。</summary>
+      <returns>
+            如果允许不受限制地使用受此权限所保护的资源，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:System.Transactions.DistributedTransactionPermission.ToXml">
+      <summary>创建安全对象及其当前状态的 XML 编码。</summary>
+      <returns>包含安全对象的 XML 编码（包括所有状态信息）的 <see cref="T:System.Security.SecurityElement" />。</returns>
+    </member>
+    <member name="M:System.Transactions.DistributedTransactionPermission.Union(System.Security.IPermission)">
+      <summary>创建一个权限，该权限是当前权限与指定权限的并集。</summary>
+      <returns>代表当前权限和指定权限并集的 <see cref="T:System.Security.IPermission" />。</returns>
+      <param name="target">将与当前权限合并的权限。它必须与当前权限属于同一类型。</param>
+    </member>
+    <member name="T:System.Transactions.DistributedTransactionPermissionAttribute">
+      <summary>允许对使用声明安全性应用到代码中的 <see cref="T:System.Transactions.DistributedTransactionPermission" /> 进行安全操作。无法继承此类。</summary>
+    </member>
+    <member name="M:System.Transactions.DistributedTransactionPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)">
+      <summary>用指定的 <see cref="T:System.Security.Permissions.SecurityAction" /> 初始化 <see cref="T:System.Transactions.DistributedTransactionPermissionAttribute" /> 类的新实例。</summary>
+      <param name="action">
+        <see cref="T:System.Security.Permissions.SecurityAction" /> 值之一。</param>
+    </member>
+    <member name="M:System.Transactions.DistributedTransactionPermissionAttribute.CreatePermission">
+      <summary>创建一个权限对象，该对象随后可序列化为二进制格式，并与 <see cref="T:System.Security.Permissions.SecurityAction" /> 一起持久地存储在程序集的元数据中。</summary>
+      <returns>可序列化的权限对象。</returns>
+    </member>
+    <member name="P:System.Transactions.DistributedTransactionPermissionAttribute.Unrestricted">
+      <summary>获取或设置一个值，该值指示是否声明了对受该属性 (Attribute) 保护的资源有完全（无限制的）权限。</summary>
+      <returns>
+            如果声明了对受保护资源的完全权限，则为 true；否则为 false。</returns>
+    </member>
+    <member name="T:System.Transactions.Enlistment">
+      <summary>促进登记的事务参与者和事务管理器之间在事务的最后阶段中的通信。</summary>
+    </member>
+    <member name="M:System.Transactions.Enlistment.Done">
+      <summary>指示事务参与者已完成其工作。</summary>
+    </member>
+    <member name="T:System.Transactions.EnlistmentOptions">
+      <summary>确定是否应该在准备阶段登记该对象。</summary>
+    </member>
+    <member name="F:System.Transactions.EnlistmentOptions.None">
+      <summary>该对象在提交过程的初始阶段中不需要登记。</summary>
+    </member>
+    <member name="F:System.Transactions.EnlistmentOptions.EnlistDuringPrepareRequired">
+      <summary>该对象必须在提交过程的初始阶段中进行登记。</summary>
+    </member>
+    <member name="T:System.Transactions.EnterpriseServicesInteropOption">
+      <summary>指定分布式事务如何与 COM+ 事务交互。</summary>
+    </member>
+    <member name="F:System.Transactions.EnterpriseServicesInteropOption.None">
+      <summary>
+        <see cref="P:System.EnterpriseServices.ContextUtil.Transaction" /> 和 <see cref="P:System.Transactions.Transaction.Current" /> 之间不同步。 </summary>
+    </member>
+    <member name="F:System.Transactions.EnterpriseServicesInteropOption.Automatic">
+      <summary>搜索现有的 COM+ 上下文并与之同步（如该上下文存在）。</summary>
+    </member>
+    <member name="F:System.Transactions.EnterpriseServicesInteropOption.Full">
+      <summary>
+        <see cref="N:System.EnterpriseServices" /> 上下文（可通过调用 <see cref="T:System.EnterpriseServices.ContextUtil" /> 类的静态方法 <see cref="P:System.EnterpriseServices.ContextUtil.Transaction" /> 来检索）和 <see cref="N:System.Transactions" /> 环境事务（可通过调用 <see cref="T:System.Transactions.Transaction" /> 类的静态方法 <see cref="P:System.Transactions.Transaction.Current" /> 来检索）始终保持同步。这将引入性能损失，因为可能需要创建新的 <see cref="N:System.EnterpriseServices" /> 上下文。</summary>
+    </member>
+    <member name="T:System.Transactions.HostCurrentTransactionCallback">
+      <summary>为宿主环境提供一种机制，以使其提供自己的默认 <see cref="P:System.Transactions.Transaction.Current" /> 概念。</summary>
+      <returns>一个 <see cref="T:System.Transactions.Transaction" /> 对象。</returns>
+    </member>
+    <member name="T:System.Transactions.IDtcTransaction">
+      <summary>描述 DTC 事务。</summary>
+    </member>
+    <member name="M:System.Transactions.IDtcTransaction.Abort(System.IntPtr,System.Int32,System.Int32)">
+      <summary>中止事务。</summary>
+      <param name="reason">一个可选的 <see cref="T:System.EnterpriseServices.BOID" />，指示事务被中止的原因。该参数可以是 null，指示不提供任何有关中止的原因。</param>
+      <param name="retaining">此值必须为 false。</param>
+      <param name="async">当 <paramref name="async" /> 为 true 时，异步中止执行并且调用方必须使用 ITransactionOutcomeEvents 了解事务的结果。</param>
+    </member>
+    <member name="M:System.Transactions.IDtcTransaction.Commit(System.Int32,System.Int32,System.Int32)">
+      <summary>提交事务。</summary>
+      <param name="retaining">此值必须为 false。</param>
+      <param name="commitType">从 OLE DB 枚举 XACTTC 中获取的值。</param>
+      <param name="reserved">此值必须为零。</param>
+    </member>
+    <member name="M:System.Transactions.IDtcTransaction.GetTransactionInfo(System.IntPtr)">
+      <summary>检索关于事务的信息。</summary>
+      <param name="transactionInformation">指向将接收有关事务信息的调用方分配的 <see cref="T:System.EnterpriseServices.XACTTRANSINFO" /> 结构。此值不得为 null。</param>
+    </member>
+    <member name="T:System.Transactions.IEnlistmentNotification">
+      <summary>描述资源管理器为了在登记参与时为事务管理器提供两阶段提交通知回调而应该实现的接口。</summary>
+    </member>
+    <member name="M:System.Transactions.IEnlistmentNotification.Commit(System.Transactions.Enlistment)">
+      <summary>通知登记的对象事务正在提交。</summary>
+      <param name="enlistment">用于将响应发送到事务管理器的 <see cref="T:System.Transactions.Enlistment" /> 对象。</param>
+    </member>
+    <member name="M:System.Transactions.IEnlistmentNotification.InDoubt(System.Transactions.Enlistment)">
+      <summary>通知登记的对象事务的状态不确定。</summary>
+      <param name="enlistment">用于将响应发送到事务管理器的 <see cref="T:System.Transactions.Enlistment" /> 对象。</param>
+    </member>
+    <member name="M:System.Transactions.IEnlistmentNotification.Prepare(System.Transactions.PreparingEnlistment)">
+      <summary>通知登记的对象事务正在为提交做准备。</summary>
+      <param name="preparingEnlistment">用于将响应发送到事务管理器的 <see cref="T:System.Transactions.PreparingEnlistment" /> 对象。</param>
+    </member>
+    <member name="M:System.Transactions.IEnlistmentNotification.Rollback(System.Transactions.Enlistment)">
+      <summary>通知登记的对象事务正在回滚（中止）。</summary>
+      <param name="enlistment">用于将响应发送到事务管理器的 <see cref="T:System.Transactions.Enlistment" /> 对象。</param>
+    </member>
+    <member name="T:System.Transactions.IPromotableSinglePhaseNotification">
+      <summary>描述作为资源管理器内部非分布式事务的提交委托的对象。</summary>
+    </member>
+    <member name="M:System.Transactions.IPromotableSinglePhaseNotification.Initialize">
+      <summary>通知事务参与者登记已成功完成。</summary>
+      <exception cref="T:System.Transactions.TransactionException">登记或序列化事务的尝试。</exception>
+    </member>
+    <member name="M:System.Transactions.IPromotableSinglePhaseNotification.Rollback(System.Transactions.SinglePhaseEnlistment)">
+      <summary>通知登记的对象事务正在进行回滚。</summary>
+      <param name="singlePhaseEnlistment">用于将响应发送到事务管理器的 <see cref="T:System.Transactions.SinglePhaseEnlistment" /> 对象。</param>
+    </member>
+    <member name="M:System.Transactions.IPromotableSinglePhaseNotification.SinglePhaseCommit(System.Transactions.SinglePhaseEnlistment)">
+      <summary>通知登记的对象事务正在提交。</summary>
+      <param name="singlePhaseEnlistment">用于将响应发送到事务管理器的 <see cref="T:System.Transactions.SinglePhaseEnlistment" /> 接口。</param>
+    </member>
+    <member name="T:System.Transactions.ISimpleTransactionSuperior">
+      <summary>表示非根事务但是能够升级为由 MSDTC 管理的事务。</summary>
+    </member>
+    <member name="M:System.Transactions.ISimpleTransactionSuperior.Rollback">
+      <summary>通知登记的对象事务正在进行回滚。</summary>
+    </member>
+    <member name="T:System.Transactions.ISinglePhaseNotification">
+      <summary>描述支持单阶段提交优化以参与事务的资源对象。</summary>
+    </member>
+    <member name="M:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit(System.Transactions.SinglePhaseEnlistment)">
+      <summary>表示资源管理器的用于单阶段提交优化的回调实现。 </summary>
+      <param name="singlePhaseEnlistment">用于将响应发送到事务管理器的 <see cref="T:System.Transactions.SinglePhaseEnlistment" />。</param>
+    </member>
+    <member name="T:System.Transactions.IsolationLevel">
+      <summary>指定事务的隔离级别。</summary>
+    </member>
+    <member name="F:System.Transactions.IsolationLevel.Serializable">
+      <summary>可以在事务期间读取可变数据，但是不可以修改，也不可以添加任何新数据。</summary>
+    </member>
+    <member name="F:System.Transactions.IsolationLevel.RepeatableRead">
+      <summary>可以在事务期间读取可变数据，但是不可以修改。可以在事务期间添加新数据。</summary>
+    </member>
+    <member name="F:System.Transactions.IsolationLevel.ReadCommitted">
+      <summary>不可以在事务期间读取可变数据，但是可以修改它。</summary>
+    </member>
+    <member name="F:System.Transactions.IsolationLevel.ReadUncommitted">
+      <summary>可以在事务期间读取和修改可变数据。</summary>
+    </member>
+    <member name="F:System.Transactions.IsolationLevel.Snapshot">
+      <summary>可以读取可变数据。在事务修改数据之前，它验证在它最初读取数据之后另一个事务是否更改过这些数据。如果数据已被更新，则会引发错误。这样使事务可获取先前提交的数据值。</summary>
+    </member>
+    <member name="F:System.Transactions.IsolationLevel.Chaos">
+      <summary>无法覆盖隔离级别更高的事务中的挂起的更改。</summary>
+    </member>
+    <member name="F:System.Transactions.IsolationLevel.Unspecified">
+      <summary>正在使用与指定隔离级别不同的隔离级别，但是无法确定该级别。如果设置了此值，则会引发异常。</summary>
+    </member>
+    <member name="T:System.Transactions.ITransactionPromoter">
+      <summary>描述可在需要时升级为由 MSDTC 管理的现有事务的委托事务。</summary>
+    </member>
+    <member name="M:System.Transactions.ITransactionPromoter.Promote">
+      <summary>通知登记的对象已经请求升级委托的事务。</summary>
+      <returns>封送分布式事务的传输器/接收器传播标记。有关更多信息，请参见 <see cref="M:System.Transactions.TransactionInterop.GetTransactionFromTransmitterPropagationToken(System.Byte[])" />。</returns>
+    </member>
+    <member name="T:System.Transactions.PreparingEnlistment">
+      <summary>促进登记的事务参与者与事务管理器之间在事务的准备阶段中的通信。</summary>
+    </member>
+    <member name="M:System.Transactions.PreparingEnlistment.ForceRollback">
+      <summary>指示应该回滚事务。</summary>
+    </member>
+    <member name="M:System.Transactions.PreparingEnlistment.ForceRollback(System.Exception)">
+      <summary>指示应该回滚事务。</summary>
+      <param name="e">关于为何触发回滚的说明。</param>
+    </member>
+    <member name="M:System.Transactions.PreparingEnlistment.Prepared">
+      <summary>指示可以提交事务。</summary>
+    </member>
+    <member name="M:System.Transactions.PreparingEnlistment.RecoveryInformation">
+      <summary>获取登记的恢复信息。</summary>
+      <returns>登记的恢复信息。</returns>
+      <exception cref="T:System.InvalidOperationException">尝试获取可变登记中的恢复信息，但是可变登记未生成任何恢复信息。</exception>
+    </member>
+    <member name="T:System.Transactions.SinglePhaseEnlistment">
+      <summary>提供一组回调，这组促进为“单阶段提交”而登记的参与者与事务管理器之间在收到 <see cref="M:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit(System.Transactions.SinglePhaseEnlistment)" /> 通知时的通信。</summary>
+    </member>
+    <member name="M:System.Transactions.SinglePhaseEnlistment.Aborted">
+      <summary>表示一个回调，该回调用于向事务管理器指示应该回滚事务。</summary>
+    </member>
+    <member name="M:System.Transactions.SinglePhaseEnlistment.Aborted(System.Exception)">
+      <summary>表示一个回调，该回调用于向事务管理器指示应该回滚事务，并提供说明。</summary>
+      <param name="e">关于为何启动回滚的说明。</param>
+    </member>
+    <member name="M:System.Transactions.SinglePhaseEnlistment.Committed">
+      <summary>表示一个回调，该回调用于向事务管理器指示 SinglePhaseCommit（单阶段提交）已成功。</summary>
+    </member>
+    <member name="M:System.Transactions.SinglePhaseEnlistment.InDoubt">
+      <summary>表示一个回调，该回调用于向事务管理器指示事务的状态不确定。</summary>
+    </member>
+    <member name="M:System.Transactions.SinglePhaseEnlistment.InDoubt(System.Exception)">
+      <summary>表示一个回调，该回调用于向事务管理器指示事务的状态不确定，并提供说明。</summary>
+      <param name="e">关于事务为何不确定的说明。</param>
+    </member>
+    <member name="T:System.Transactions.SubordinateTransaction">
+      <summary>表示可以委托的一个非根事务。无法继承此类。</summary>
+    </member>
+    <member name="M:System.Transactions.SubordinateTransaction.#ctor(System.Transactions.IsolationLevel,System.Transactions.ISimpleTransactionSuperior)">
+      <summary>初始化 <see cref="T:System.Transactions.SubordinateTransaction" /> 类的新实例。</summary>
+      <param name="isoLevel">事务的隔离级别</param>
+      <param name="superior">
+        <see cref="T:System.Transactions.ISimpleTransactionSuperior" />
+      </param>
+    </member>
+    <member name="T:System.Transactions.Transaction">
+      <summary>表示事务。</summary>
+    </member>
+    <member name="M:System.Transactions.Transaction.Clone">
+      <summary>创建事务的克隆。</summary>
+      <returns>作为当前事务对象的副本的 <see cref="T:System.Transactions.Transaction" />。</returns>
+    </member>
+    <member name="P:System.Transactions.Transaction.Current">
+      <summary>获取或设置环境事务。</summary>
+      <returns>描述当前事务的 <see cref="T:System.Transactions.Transaction" />。</returns>
+    </member>
+    <member name="M:System.Transactions.Transaction.DependentClone(System.Transactions.DependentCloneOption)">
+      <summary>创建事务的依赖克隆。</summary>
+      <returns>表示依赖克隆的 <see cref="T:System.Transactions.DependentTransaction" />。</returns>
+      <param name="cloneOption">控制要创建的依赖事务种类的 <see cref="T:System.Transactions.DependentCloneOption" />。</param>
+    </member>
+    <member name="M:System.Transactions.Transaction.Dispose">
+      <summary>释放由该对象占用的资源。</summary>
+    </member>
+    <member name="M:System.Transactions.Transaction.EnlistDurable(System.Guid,System.Transactions.IEnlistmentNotification,System.Transactions.EnlistmentOptions)">
+      <summary>登记支持两阶段提交的持久资源管理器以参与事务。</summary>
+      <returns>描述登记的 <see cref="T:System.Transactions.Enlistment" /> 对象。</returns>
+      <param name="resourceManagerIdentifier">资源管理器的唯一标识符，它应该在资源管理器失败或重新启动的过程中持久保留。</param>
+      <param name="enlistmentNotification">实现 <see cref="T:System.Transactions.IEnlistmentNotification" /> 接口以接收两阶段提交通知的对象。</param>
+      <param name="enlistmentOptions">
+                如果资源管理器希望在准备阶段中执行附加工作，则为 <see cref="F:System.Transactions.EnlistmentOptions.EnlistDuringPrepareRequired" />。</param>
+    </member>
+    <member name="M:System.Transactions.Transaction.EnlistDurable(System.Guid,System.Transactions.ISinglePhaseNotification,System.Transactions.EnlistmentOptions)">
+      <summary>登记支持单阶段提交优化的持久资源管理器以参与事务。</summary>
+      <returns>描述登记的 <see cref="T:System.Transactions.Enlistment" /> 对象。</returns>
+      <param name="resourceManagerIdentifier">资源管理器的唯一标识符，它应该在资源管理器失败或重新启动的过程中持久保留。</param>
+      <param name="singlePhaseNotification">实现 <see cref="T:System.Transactions.ISinglePhaseNotification" /> 接口的对象，该对象必须能够接收单阶段提交和两阶段提交通知。</param>
+      <param name="enlistmentOptions">
+                如果资源管理器希望在准备阶段中执行附加工作，则为 <see cref="F:System.Transactions.EnlistmentOptions.EnlistDuringPrepareRequired" />。</param>
+    </member>
+    <member name="M:System.Transactions.Transaction.EnlistPromotableSinglePhase(System.Transactions.IPromotableSinglePhaseNotification)">
+      <summary>使用可提升的单阶段登记 (PSPE) 登记具有内部事务的资源管理器。</summary>
+      <returns>描述登记的 <see cref="T:System.Transactions.SinglePhaseEnlistment" /> 接口实现。</returns>
+      <param name="promotableSinglePhaseNotification">由参与者实现的 <see cref="T:System.Transactions.IPromotableSinglePhaseNotification" /> 接口。</param>
+    </member>
+    <member name="M:System.Transactions.Transaction.EnlistVolatile(System.Transactions.IEnlistmentNotification,System.Transactions.EnlistmentOptions)">
+      <summary>登记支持两阶段提交的可变资源管理器以参与事务。</summary>
+      <returns>描述登记的 <see cref="T:System.Transactions.Enlistment" /> 对象。</returns>
+      <param name="enlistmentNotification">实现 <see cref="T:System.Transactions.IEnlistmentNotification" /> 接口以接收两阶段提交通知的对象。</param>
+      <param name="enlistmentOptions">
+                如果资源管理器希望在准备阶段中执行附加工作，则为 <see cref="F:System.Transactions.EnlistmentOptions.EnlistDuringPrepareRequired" />。</param>
+    </member>
+    <member name="M:System.Transactions.Transaction.EnlistVolatile(System.Transactions.ISinglePhaseNotification,System.Transactions.EnlistmentOptions)">
+      <summary>登记支持单阶段提交优化的可变资源管理器以参与事务。</summary>
+      <returns>描述登记的 <see cref="T:System.Transactions.Enlistment" /> 对象。</returns>
+      <param name="singlePhaseNotification">实现 <see cref="T:System.Transactions.ISinglePhaseNotification" /> 接口的对象，该对象必须能够接收单阶段提交和两阶段提交通知。</param>
+      <param name="enlistmentOptions">
+                如果资源管理器希望在准备阶段中执行附加工作，则为 <see cref="F:System.Transactions.EnlistmentOptions.EnlistDuringPrepareRequired" />。</param>
+    </member>
+    <member name="M:System.Transactions.Transaction.Equals(System.Object)">
+      <summary>确定此事务和指定的对象是否相等。</summary>
+      <returns>
+            如果 <paramref name="obj" /> 与此事务完全相同，则为 true；否则为 false。</returns>
+      <param name="obj">与该实例进行比较的对象。</param>
+    </member>
+    <member name="M:System.Transactions.Transaction.GetHashCode">
+      <summary>返回此实例的哈希代码。</summary>
+      <returns>32 位有符号整数哈希代码。</returns>
+    </member>
+    <member name="P:System.Transactions.Transaction.IsolationLevel">
+      <summary>获取事务的隔离级别。</summary>
+      <returns>
+        <see cref="T:System.Transactions.IsolationLevel" /> 值之一，该值指示事务的隔离级别。</returns>
+    </member>
+    <member name="M:System.Transactions.Transaction.op_Equality(System.Transactions.Transaction,System.Transactions.Transaction)">
+      <summary>测试两个指定的 <see cref="T:System.Transactions.Transaction" /> 实例是否等效。</summary>
+      <returns>
+            如果 <paramref name="x" /> 和 <paramref name="y" /> 相等，则为 true；否则为 false。</returns>
+      <param name="x">相等运算符左侧的 <see cref="T:System.Transactions.Transaction" /> 实例。</param>
+      <param name="y">相等运算符右侧的 <see cref="T:System.Transactions.Transaction" /> 实例。</param>
+    </member>
+    <member name="M:System.Transactions.Transaction.op_Inequality(System.Transactions.Transaction,System.Transactions.Transaction)">
+      <summary>返回一个值，该值指示 <see cref="T:System.Transactions.Transaction" /> 的两个实例是否相等。</summary>
+      <returns>
+            如果 <paramref name="x" /> 和 <paramref name="y" /> 不相等，则为 true；否则为 false。</returns>
+      <param name="x">不等运算符左侧的 <see cref="T:System.Transactions.Transaction" /> 实例。</param>
+      <param name="y">不等运算符右侧的 <see cref="T:System.Transactions.Transaction" /> 实例。</param>
+    </member>
+    <member name="M:System.Transactions.Transaction.Rollback">
+      <summary>回滚（中止）事务。</summary>
+    </member>
+    <member name="M:System.Transactions.Transaction.Rollback(System.Exception)">
+      <summary>回滚（中止）事务。</summary>
+      <param name="e">有关发生回滚的原因的说明。</param>
+    </member>
+    <member name="M:System.Transactions.Transaction.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>获取含有序列化此事务所需要的数据的 <see cref="T:System.Runtime.Serialization.SerializationInfo" />。</summary>
+      <param name="serializationInfo">要填充数据的 <see cref="T:System.Runtime.Serialization.SerializationInfo" />。</param>
+      <param name="context">此序列化的目标（请参见 <see cref="T:System.Runtime.Serialization.StreamingContext" />）。</param>
+    </member>
+    <member name="E:System.Transactions.Transaction.TransactionCompleted">
+      <summary>指示事务已完成。</summary>
+      <exception cref="T:System.ObjectDisposedException">尝试在已处置的事务上订阅此事件。</exception>
+    </member>
+    <member name="P:System.Transactions.Transaction.TransactionInformation">
+      <summary>检索有关某个事务的附加信息。</summary>
+      <returns>包含有关某个事务的附加信息的 <see cref="T:System.Transactions.TransactionInformation" />。</returns>
+    </member>
+    <member name="T:System.Transactions.TransactionAbortedException">
+      <summary>在已经回滚的事务上尝试某个操作，或尝试提交事务而事务中止时引发的异常。</summary>
+    </member>
+    <member name="M:System.Transactions.TransactionAbortedException.#ctor">
+      <summary>初始化 <see cref="T:System.Transactions.TransactionAbortedException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Transactions.TransactionAbortedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>用指定的序列化和流上下文信息初始化 <see cref="T:System.Transactions.TransactionAbortedException" /> 类的新实例。</summary>
+      <param name="info">描述失败的序列化的 <see cref="T:System.Runtime.Serialization.SerializationInfo" /> 对象。</param>
+      <param name="context">描述失败的序列化上下文的 <see cref="T:System.Runtime.Serialization.SerializationInfo" /> 对象。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionAbortedException.#ctor(System.String)">
+      <summary>用指定的消息初始化 <see cref="T:System.Transactions.TransactionAbortedException" /> 类的新实例。</summary>
+      <param name="message">一个 <see cref="T:System.String" />，包含说明异常发生原因的消息。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionAbortedException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的消息和内部异常初始化 <see cref="T:System.Transactions.TransactionAbortedException" /> 类的新实例。</summary>
+      <param name="message">一个 <see cref="T:System.String" />，包含说明异常发生原因的消息。</param>
+      <param name="innerException">获取引发当前异常的异常实例。有关更多信息，请参见 <see cref="P:System.Exception.InnerException" /> 属性。</param>
+    </member>
+    <member name="T:System.Transactions.TransactionCompletedEventHandler">
+      <summary>表示处理 <see cref="T:System.Transactions.Transaction" /> 类的 <see cref="E:System.Transactions.Transaction.TransactionCompleted" /> 事件的方法。</summary>
+      <param name="sender">事件源。</param>
+      <param name="e">包含事件数据的 <see cref="T:System.Transactions.TransactionEventArgs" />。</param>
+    </member>
+    <member name="T:System.Transactions.TransactionEventArgs">
+      <summary>为下面的事务事件提供数据：<see cref="E:System.Transactions.TransactionManager.DistributedTransactionStarted" />、<see cref="E:System.Transactions.Transaction.TransactionCompleted" />。</summary>
+    </member>
+    <member name="M:System.Transactions.TransactionEventArgs.#ctor">
+      <summary>初始化 <see cref="T:System.Transactions.TransactionEventArgs" /> 类的新实例。 </summary>
+    </member>
+    <member name="P:System.Transactions.TransactionEventArgs.Transaction">
+      <summary>获取为其提供事件状态的事务。</summary>
+      <returns>为其提供事件状态的 <see cref="T:System.Transactions.Transaction" />。</returns>
+    </member>
+    <member name="T:System.Transactions.TransactionException">
+      <summary>在不能接受新工作的事务上尝试执行工作时引发的异常。 </summary>
+    </member>
+    <member name="M:System.Transactions.TransactionException.#ctor">
+      <summary>初始化 <see cref="T:System.Transactions.TransactionException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Transactions.TransactionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>用指定的序列化和流上下文信息初始化 <see cref="T:System.Transactions.TransactionException" /> 类的新实例。</summary>
+      <param name="info">描述失败的序列化的 <see cref="T:System.Runtime.Serialization.SerializationInfo" /> 对象。</param>
+      <param name="context">描述失败的序列化上下文的 <see cref="T:System.Runtime.Serialization.SerializationInfo" /> 对象。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionException.#ctor(System.String)">
+      <summary>用指定的消息初始化 <see cref="T:System.Transactions.TransactionException" /> 类的新实例。</summary>
+      <param name="message">一个 <see cref="T:System.String" />，包含说明异常发生原因的消息。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的消息和内部异常初始化 <see cref="T:System.Transactions.TransactionException" /> 类的新实例。</summary>
+      <param name="message">一个 <see cref="T:System.String" />，包含说明异常发生原因的消息。</param>
+      <param name="innerException">获取引发当前异常的异常实例。有关更多信息，请参见 <see cref="P:System.Exception.InnerException" /> 属性。</param>
+    </member>
+    <member name="T:System.Transactions.TransactionInDoubtException">
+      <summary>在不确定的事务上尝试某个操作，或尝试提交事务而事务变为 InDoubt 时引发的异常。</summary>
+    </member>
+    <member name="M:System.Transactions.TransactionInDoubtException.#ctor">
+      <summary>初始化 <see cref="T:System.Transactions.TransactionInDoubtException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Transactions.TransactionInDoubtException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>用指定的序列化和流上下文信息初始化 <see cref="T:System.Transactions.TransactionInDoubtException" /> 类的新实例。</summary>
+      <param name="info">描述失败的序列化的 <see cref="T:System.Runtime.Serialization.SerializationInfo" /> 对象。</param>
+      <param name="context">描述失败的序列化上下文的 <see cref="T:System.Runtime.Serialization.SerializationInfo" /> 对象。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionInDoubtException.#ctor(System.String)">
+      <summary>用指定的消息初始化 <see cref="T:System.Transactions.TransactionInDoubtException" /> 类的新实例。</summary>
+      <param name="message">一个 <see cref="T:System.String" />，包含说明异常发生原因的消息。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionInDoubtException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的消息和内部异常初始化 <see cref="T:System.Transactions.TransactionInDoubtException" /> 类的新实例。</summary>
+      <param name="message">一个 <see cref="T:System.String" />，包含说明异常发生原因的消息。</param>
+      <param name="innerException">获取引发当前异常的异常实例。有关更多信息，请参见 <see cref="P:System.Exception.InnerException" /> 属性。</param>
+    </member>
+    <member name="T:System.Transactions.TransactionInformation">
+      <summary>提供关于事务的附加信息。</summary>
+    </member>
+    <member name="P:System.Transactions.TransactionInformation.CreationTime">
+      <summary>获取事务的创建时间。</summary>
+      <returns>包含事务创建时间的 <see cref="T:System.DateTime" />。</returns>
+    </member>
+    <member name="P:System.Transactions.TransactionInformation.DistributedIdentifier">
+      <summary>获取升级的事务的唯一标识符。</summary>
+      <returns>包含升级的事务的唯一标识符的 <see cref="T:System.Guid" />。</returns>
+    </member>
+    <member name="P:System.Transactions.TransactionInformation.LocalIdentifier">
+      <summary>获取事务的唯一标识符。</summary>
+      <returns>事务的唯一标识符。</returns>
+    </member>
+    <member name="P:System.Transactions.TransactionInformation.Status">
+      <summary>获取事务的状态。</summary>
+      <returns>包含事务状态的 <see cref="T:System.Transactions.TransactionStatus" />。</returns>
+    </member>
+    <member name="T:System.Transactions.TransactionInterop">
+      <summary>
+                    促进 <see cref="N:System.Transactions" /> 和以前编写的用于与 MSDTC、COM+ 或 <see cref="N:System.EnterpriseServices" /> 进行交互的组件之间的交互。无法继承此类。
+                </summary>
+    </member>
+    <member name="M:System.Transactions.TransactionInterop.GetDtcTransaction(System.Transactions.Transaction)">
+      <summary>
+                    获取表示 <see cref="T:System.Transactions.Transaction" /> 的 <see cref="T:System.Transactions.IDtcTransaction" /> 实例。 
+                </summary>
+      <returns>
+                    表示 <see cref="T:System.Transactions.Transaction" /> 的 <see cref="T:System.Transactions.IDtcTransaction" /> 实例。<see cref="T:System.Transactions.IDtcTransaction" /> 实例与 MSDTC 使用的非托管形式的 ITransaction 和 <see cref="T:System.EnterpriseServices.ITransaction" /> 使用的托管形式的 <see cref="N:System.EnterpriseServices" /> 兼容。
+                </returns>
+      <param name="transaction">
+                    要封送处理的 <see cref="T:System.Transactions.Transaction" /> 实例。
+                </param>
+    </member>
+    <member name="M:System.Transactions.TransactionInterop.GetExportCookie(System.Transactions.Transaction,System.Byte[])">
+      <summary>
+                    将事务对象转换为导出事务 Cookie。
+                </summary>
+      <returns>
+                    表示指定的 <see cref="T:System.Transactions.Transaction" /> 对象的导出事务 Cookie。
+                </returns>
+      <param name="transaction">
+                    要被封送处理的 <see cref="T:System.Transactions.Transaction" /> 对象。
+                </param>
+      <param name="whereabouts">
+                    描述目标事务管理器位置的地址。这允许两个事务管理器相互通信，从而将事务从一个系统传播到另一个系统。
+                </param>
+    </member>
+    <member name="M:System.Transactions.TransactionInterop.GetTransactionFromDtcTransaction(System.Transactions.IDtcTransaction)">
+      <summary>
+                    从指定的 <see cref="T:System.Transactions.IDtcTransaction" /> 生成 <see cref="T:System.Transactions.Transaction" />。
+                </summary>
+      <returns>
+                    表示给定的 <see cref="T:System.Transactions.IDtcTransaction" /> 的 <see cref="T:System.Transactions.Transaction" /> 实例。
+                </returns>
+      <param name="transactionNative">
+                    要封送处理的 <see cref="T:System.Transactions.IDtcTransaction" /> 对象。
+                </param>
+    </member>
+    <member name="M:System.Transactions.TransactionInterop.GetTransactionFromExportCookie(System.Byte[])">
+      <summary>
+                    从指定的导出 Cookie 生成 <see cref="T:System.Transactions.Transaction" />。 
+                </summary>
+      <returns>
+                    指定的导出 Cookie 中的 <see cref="T:System.Transactions.Transaction" />。
+                </returns>
+      <param name="cookie">
+                    事务对象的封送处理形式。
+                </param>
+    </member>
+    <member name="M:System.Transactions.TransactionInterop.GetTransactionFromTransmitterPropagationToken(System.Byte[])">
+      <summary>
+                    从指定的传输器传播标记生成 <see cref="T:System.Transactions.Transaction" /> 实例。
+                </summary>
+      <returns>
+                    指定的传输程序传播标记中的 <see cref="T:System.Transactions.Transaction" />。
+                </returns>
+      <param name="propagationToken">
+                    表示事务的传播标记。
+                </param>
+      <exception cref="T:System.Transactions.TransactionManagerCommunicationException">
+                    事务的反序列化因无法联系事务管理器而失败。这可能是由网络防火墙或安全设置导致的。
+                </exception>
+    </member>
+    <member name="M:System.Transactions.TransactionInterop.GetTransmitterPropagationToken(System.Transactions.Transaction)">
+      <summary>
+                    为指定的 <see cref="T:System.Transactions.Transaction" /> 的生成传播标记。
+                </summary>
+      <returns>
+                    此方法与 <see cref="M:System.Transactions.TransactionInterop.GetTransactionFromTransmitterPropagationToken(System.Byte[])" /> 方法一起提供了用于“传输器/接收器”传播的功能，在该传播中，如果后者取消对事务的封送，事务将被从远程计算机“拉”回来。
+                
+                    有关不同传播模型的更多信息，请参阅 <see cref="T:System.Transactions.TransactionInterop" /> 类的“备注”部分。
+                </returns>
+      <param name="transaction">
+                    要封送处理到传播标记中的事务。
+                </param>
+    </member>
+    <member name="M:System.Transactions.TransactionInterop.GetWhereabouts">
+      <summary>
+                    获取 <see cref="N:System.Transactions" /> 使用的分布式事务管理器的“行踪”。 
+                </summary>
+      <returns>
+        <see cref="N:System.Transactions" /> 使用的分布式事务管理器的“行踪”。 
+                </returns>
+    </member>
+    <member name="T:System.Transactions.TransactionManager">
+      <summary>包含用于事务管理的方法。无法继承此类。</summary>
+    </member>
+    <member name="P:System.Transactions.TransactionManager.DefaultTimeout">
+      <summary>获取新事务的默认超时间隔。</summary>
+      <returns>指定新事务的超时间隔的 <see cref="T:System.TimeSpan" /> 值。</returns>
+    </member>
+    <member name="E:System.Transactions.TransactionManager.DistributedTransactionStarted">
+      <summary>指示某个分布式事务已启动。</summary>
+    </member>
+    <member name="P:System.Transactions.TransactionManager.HostCurrentCallback">
+      <summary>获取或设置自定义事务工厂。</summary>
+      <returns>包含自定义的事务工厂的 <see cref="T:System.Transactions.HostCurrentTransactionCallback" />。</returns>
+    </member>
+    <member name="P:System.Transactions.TransactionManager.MaximumTimeout">
+      <summary>获取新事务的默认最大超时间隔。</summary>
+      <returns>一个 <see cref="T:System.TimeSpan" /> 值，该值指定在创建新事务时允许的最大超时间隔。</returns>
+    </member>
+    <member name="M:System.Transactions.TransactionManager.RecoveryComplete(System.Guid)">
+      <summary>通知事务管理器：从失败中恢复的资源管理器已在所有未解决的事务中完成了重新登记。</summary>
+      <param name="resourceManagerIdentifier">唯一地标识要恢复的资源的 <see cref="T:System.Guid" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="resourceManagerIdentifier" /> 参数为 null。</exception>
+    </member>
+    <member name="M:System.Transactions.TransactionManager.Reenlist(System.Guid,System.Byte[],System.Transactions.IEnlistmentNotification)">
+      <summary>在事务中重新登记持久参与者。</summary>
+      <returns>描述登记的 <see cref="T:System.Transactions.Enlistment" />。</returns>
+      <param name="resourceManagerIdentifier">唯一地标识资源管理器的 <see cref="T:System.Guid" />。</param>
+      <param name="recoveryInformation">包含恢复信息的附加信息。</param>
+      <param name="enlistmentNotification">实现 <see cref="T:System.Transactions.IEnlistmentNotification" /> 以接收通知的资源对象。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="recoveryInformation" /> 无效。- 或 -<paramref name="recoveryInformation" /> 中的“事务管理器”信息与已配置的事务管理器不匹配。- 或 -<see cref="N:System.Transactions" /> 未能识别 <paramref name="RecoveryInformation" />。</exception>
+      <exception cref="T:System.InvalidOperationException">
+                已经为指定的 <paramref name="resourceManagerIdentifier" /> 调用 <see cref="M:System.Transactions.TransactionManager.RecoveryComplete(System.Guid)" />。重新登记被拒绝。</exception>
+      <exception cref="T:System.Transactions.TransactionException">
+        <paramref name="resourceManagerIdentifier" /> 与 <paramref name="recoveryInformation" /> 中的指定恢复信息的内容不匹配。</exception>
+    </member>
+    <member name="T:System.Transactions.TransactionManagerCommunicationException">
+      <summary>在资源管理器无法与事务管理器通信时引发的异常。</summary>
+    </member>
+    <member name="M:System.Transactions.TransactionManagerCommunicationException.#ctor">
+      <summary>初始化 <see cref="T:System.Transactions.TransactionManagerCommunicationException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Transactions.TransactionManagerCommunicationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>用指定的序列化和流上下文信息初始化 <see cref="T:System.Transactions.TransactionManagerCommunicationException" /> 类的新实例。</summary>
+      <param name="info">描述失败的序列化的 <see cref="T:System.Runtime.Serialization.SerializationInfo" /> 对象。</param>
+      <param name="context">描述失败的序列化上下文的 <see cref="T:System.Runtime.Serialization.SerializationInfo" /> 对象。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionManagerCommunicationException.#ctor(System.String)">
+      <summary>用指定的消息初始化 <see cref="T:System.Transactions.TransactionManagerCommunicationException" /> 类的新实例。</summary>
+      <param name="message">一个 <see cref="T:System.String" />，包含说明异常发生原因的消息。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionManagerCommunicationException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的消息和内部异常初始化 <see cref="T:System.Transactions.TransactionManagerCommunicationException" /> 类的新实例。</summary>
+      <param name="message">一个 <see cref="T:System.String" />，包含说明异常发生原因的消息。</param>
+      <param name="innerException">获取引发当前异常的异常实例。有关更多信息，请参见 <see cref="P:System.Exception.InnerException" /> 属性。</param>
+    </member>
+    <member name="T:System.Transactions.TransactionOptions">
+      <summary>包含指定事务行为的附加信息。</summary>
+    </member>
+    <member name="M:System.Transactions.TransactionOptions.Equals(System.Object)">
+      <summary>确定此 <see cref="T:System.Transactions.TransactionOptions" /> 实例和指定的对象是否相等。</summary>
+      <returns>
+            如果 <paramref name="obj" /> 和此 <see cref="T:System.Transactions.TransactionOptions" /> 实例相同，则为 true；否则为 false。</returns>
+      <param name="obj">与该实例进行比较的对象。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionOptions.GetHashCode">
+      <summary>返回此实例的哈希代码。</summary>
+      <returns>32 位有符号整数哈希代码。</returns>
+    </member>
+    <member name="P:System.Transactions.TransactionOptions.IsolationLevel">
+      <summary>获取或设置事务的隔离级别。</summary>
+      <returns>指定事务的隔离级别的 <see cref="T:System.Transactions.IsolationLevel" /> 枚举。</returns>
+    </member>
+    <member name="M:System.Transactions.TransactionOptions.op_Equality(System.Transactions.TransactionOptions,System.Transactions.TransactionOptions)">
+      <summary>测试两个指定的 <see cref="T:System.Transactions.TransactionOptions" /> 实例是否等效。</summary>
+      <returns>
+            如果 <paramref name="x" /> 和 <paramref name="y" /> 相等，则为 true；否则为 false。</returns>
+      <param name="x">相等运算符左侧的 <see cref="T:System.Transactions.TransactionOptions" /> 实例。</param>
+      <param name="y">相等运算符右侧的 <see cref="T:System.Transactions.TransactionOptions" /> 实例。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionOptions.op_Inequality(System.Transactions.TransactionOptions,System.Transactions.TransactionOptions)">
+      <summary>返回一个值，该值指示两个 <see cref="T:System.Transactions.TransactionOptions" /> 实例是否不相等。</summary>
+      <returns>
+            如果 <paramref name="x" /> 和 <paramref name="y" /> 不相等，则为 true；否则为 false。</returns>
+      <param name="x">相等运算符左侧的 <see cref="T:System.Transactions.TransactionOptions" /> 实例。</param>
+      <param name="y">相等运算符右侧的 <see cref="T:System.Transactions.TransactionOptions" /> 实例。</param>
+    </member>
+    <member name="P:System.Transactions.TransactionOptions.Timeout">
+      <summary>获取或设置该事务的超时时间。</summary>
+      <returns>指定事务的超时时间的 <see cref="T:System.TimeSpan" /> 值。</returns>
+    </member>
+    <member name="T:System.Transactions.TransactionPromotionException">
+      <summary>在提升失败时引发的异常。</summary>
+    </member>
+    <member name="M:System.Transactions.TransactionPromotionException.#ctor">
+      <summary>初始化 <see cref="T:System.Transactions.TransactionPromotionException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Transactions.TransactionPromotionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>用指定的序列化和流上下文信息初始化 <see cref="T:System.Transactions.TransactionPromotionException" /> 类的新实例。</summary>
+      <param name="info">描述失败的序列化的 <see cref="T:System.Runtime.Serialization.SerializationInfo" /> 对象。</param>
+      <param name="context">描述失败的序列化上下文的 <see cref="T:System.Runtime.Serialization.SerializationInfo" /> 对象。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionPromotionException.#ctor(System.String)">
+      <summary>用指定的消息初始化 <see cref="T:System.Transactions.TransactionPromotionException" /> 类的新实例。</summary>
+      <param name="message">一个 <see cref="T:System.String" />，包含说明异常发生原因的消息。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionPromotionException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的消息和内部异常初始化 <see cref="T:System.Transactions.TransactionPromotionException" /> 类的新实例。</summary>
+      <param name="message">一个 <see cref="T:System.String" />，包含说明异常发生原因的消息。</param>
+      <param name="innerException">获取引发当前异常的异常实例。有关更多信息，请参见 <see cref="P:System.Exception.InnerException" /> 属性。</param>
+    </member>
+    <member name="T:System.Transactions.TransactionScope">
+      <summary>使代码块成为事务性代码。无法继承此类。</summary>
+    </member>
+    <member name="M:System.Transactions.TransactionScope.#ctor">
+      <summary>初始化 <see cref="T:System.Transactions.TransactionScope" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Transactions.TransactionScope.#ctor(System.Transactions.Transaction)">
+      <summary>初始化 <see cref="T:System.Transactions.TransactionScope" /> 类的新实例，并将指定的事务设置为环境事务，以便该范围中进行的事务性工作使用此事务。</summary>
+      <param name="transactionToUse">要设置为环境事务（以便该范围中进行的事务性工作使用此事务）的事务。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionScope.#ctor(System.Transactions.Transaction,System.TimeSpan)">
+      <summary>使用指定的超时时间值初始化 <see cref="T:System.Transactions.TransactionScope" /> 类的新实例，并将指定的事务设置为环境事务，以便该范围中进行的事务性工作使用此事务。</summary>
+      <param name="transactionToUse">要设置为环境事务（以便该范围中进行的事务性工作使用此事务）的事务。</param>
+      <param name="scopeTimeout">
+        <see cref="T:System.TimeSpan" />，在它之后，事务范围将超时并中止此事务。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionScope.#ctor(System.Transactions.Transaction,System.TimeSpan,System.Transactions.EnterpriseServicesInteropOption)">
+      <summary>使用指定的超时时间值和 COM+ 互操作性要求初始化 <see cref="T:System.Transactions.TransactionScope" /> 类的新实例，并将指定的事务设置为环境事务，以便该范围中进行的事务性工作使用此事务。</summary>
+      <param name="transactionToUse">要设置为环境事务（以便该范围中进行的事务性工作使用此事务）的事务。</param>
+      <param name="scopeTimeout">
+        <see cref="T:System.TimeSpan" />，在它之后，事务范围将超时并中止此事务。</param>
+      <param name="interopOption">
+        <see cref="T:System.Transactions.EnterpriseServicesInteropOption" /> 枚举的一个实例，用于说明关联的事务如何与 COM+ 事务进行交互。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionScope.#ctor(System.Transactions.TransactionScopeOption)">
+      <summary>以指定的要求初始化 <see cref="T:System.Transactions.TransactionScope" /> 类的新实例。</summary>
+      <param name="scopeOption">
+        <see cref="T:System.Transactions.TransactionScopeOption" /> 枚举的一个实例，描述与此事务范围关联的事务要求。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionScope.#ctor(System.Transactions.TransactionScopeOption,System.TimeSpan)">
+      <summary>以指定的超时时间值和要求初始化 <see cref="T:System.Transactions.TransactionScope" /> 类的新实例。</summary>
+      <param name="scopeOption">
+        <see cref="T:System.Transactions.TransactionScopeOption" /> 枚举的一个实例，描述与此事务范围关联的事务要求。</param>
+      <param name="scopeTimeout">
+        <see cref="T:System.TimeSpan" />，在它之后，事务范围将超时并中止此事务。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionScope.#ctor(System.Transactions.TransactionScopeOption,System.Transactions.TransactionOptions)">
+      <summary>以指定的要求初始化 <see cref="T:System.Transactions.TransactionScope" /> 类的新实例。</summary>
+      <param name="scopeOption">
+        <see cref="T:System.Transactions.TransactionScopeOption" /> 枚举的一个实例，描述与此事务范围关联的事务要求。</param>
+      <param name="transactionOptions">一个 <see cref="T:System.Transactions.TransactionOptions" /> 结构，描述要在创建新事务时使用的事务选项。如果使用现有的事务，则此参数中的超时值将应用于该事务范围。如果该时间在范围被释放之前到期，则事务将中止。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionScope.#ctor(System.Transactions.TransactionScopeOption,System.Transactions.TransactionOptions,System.Transactions.EnterpriseServicesInteropOption)">
+      <summary>使用指定的范围和 COM+ 互操作性要求以及事务选项初始化 <see cref="T:System.Transactions.TransactionScope" /> 类的新实例。</summary>
+      <param name="scopeOption">
+        <see cref="T:System.Transactions.TransactionScopeOption" /> 枚举的一个实例，描述与此事务范围关联的事务要求。</param>
+      <param name="transactionOptions">一个 <see cref="T:System.Transactions.TransactionOptions" /> 结构，描述要在创建新事务时使用的事务选项。如果使用现有的事务，则此参数中的超时值将应用于该事务范围。如果该时间在范围被释放之前到期，则事务将中止。</param>
+      <param name="interopOption">
+        <see cref="T:System.Transactions.EnterpriseServicesInteropOption" /> 枚举的一个实例，用于说明关联的事务如何与 COM+ 事务进行交互。</param>
+    </member>
+    <member name="M:System.Transactions.TransactionScope.Complete">
+      <summary>指示范围中的所有操作都已成功完成。</summary>
+      <exception cref="T:System.InvalidOperationException">此方法已被调用过一次。</exception>
+    </member>
+    <member name="M:System.Transactions.TransactionScope.Dispose">
+      <summary>结束事务范围。</summary>
+    </member>
+    <member name="T:System.Transactions.TransactionScopeOption">
+      <summary>提供用于创建事务范围的附加选项。</summary>
+    </member>
+    <member name="F:System.Transactions.TransactionScopeOption.Required">
+      <summary>该范围需要一个事务。如果已经存在环境事务，则使用该环境事务。否则，在进入范围之前创建新的事务。这是默认值。</summary>
+    </member>
+    <member name="F:System.Transactions.TransactionScopeOption.RequiresNew">
+      <summary>总是为该范围创建新事务。</summary>
+    </member>
+    <member name="F:System.Transactions.TransactionScopeOption.Suppress">
+      <summary>环境事务上下文在创建范围时被取消。范围中的所有操作都在无环境事务上下文的情况下完成。</summary>
+    </member>
+    <member name="T:System.Transactions.TransactionStartedEventHandler">
+      <summary>表示将处理 <see cref="T:System.Transactions.TransactionManager" /> 类的 <see cref="E:System.Transactions.TransactionManager.DistributedTransactionStarted" /> 事件的方法。</summary>
+      <param name="sender">事件源。</param>
+      <param name="e">包含事务的 <see cref="T:System.Transactions.TransactionEventArgs" />，可以从该事务中检索事务信息。</param>
+    </member>
+    <member name="T:System.Transactions.TransactionStatus">
+      <summary>描述分布式事务的当前状态。</summary>
+    </member>
+    <member name="F:System.Transactions.TransactionStatus.Active">
+      <summary>事务的状态未知，因为仍必须轮询一些参与者。</summary>
+    </member>
+    <member name="F:System.Transactions.TransactionStatus.Committed">
+      <summary>事务已提交。</summary>
+    </member>
+    <member name="F:System.Transactions.TransactionStatus.Aborted">
+      <summary>事务已回滚。</summary>
+    </member>
+    <member name="F:System.Transactions.TransactionStatus.InDoubt">
+      <summary>事务的状态未知。</summary>
+    </member>
+    <member name="T:System.Transactions.Configuration.DefaultSettingsSection">
+      <summary>表示配置文件中的 XML 节，其中包含事务的默认值。无法继承此类。</summary>
+    </member>
+    <member name="M:System.Transactions.Configuration.DefaultSettingsSection.#ctor">
+      <summary>初始化 <see cref="T:System.Transactions.Configuration.DefaultSettingsSection" /> 类的新实例。</summary>
+    </member>
+    <member name="P:System.Transactions.Configuration.DefaultSettingsSection.DistributedTransactionManagerName">
+      <summary>获取事务管理器的名称。</summary>
+      <returns>事务管理器的名称。默认值为空字符串。</returns>
+      <exception cref="T:System.NotSupportedException">尝试将此属性设置为完全限定域名或 IP 地址。</exception>
+      <exception cref="T:System.Transactions.TransactionAbortedException">尝试将此属性设置为本地主机。</exception>
+    </member>
+    <member name="P:System.Transactions.Configuration.DefaultSettingsSection.Timeout">
+      <summary>获取或设置事务的默认超时时间。</summary>
+      <returns>一个 <see cref="T:System.TimeSpan" /> 对象。默认属性为 00:01:00。</returns>
+      <exception cref="T:System.ArgumentOutOfRangeException">尝试将此属性设置为负值。</exception>
+    </member>
+    <member name="T:System.Transactions.Configuration.MachineSettingsSection">
+      <summary>表示配置文件中的 XML 节，该节封装可在计算机级修改的所有设置。无法继承此类。</summary>
+    </member>
+    <member name="M:System.Transactions.Configuration.MachineSettingsSection.#ctor">
+      <summary>初始化 <see cref="T:System.Transactions.Configuration.MachineSettingsSection" /> 类的新实例。</summary>
+    </member>
+    <member name="P:System.Transactions.Configuration.MachineSettingsSection.MaxTimeout">
+      <summary>获取事务超时之前所允许的最大时间量。</summary>
+      <returns>包含最长可允许时间的 <see cref="T:System.TimeSpan" /> 对象。默认值为 00:10:00。</returns>
+      <exception cref="T:System.ArgumentOutOfRangeException">尝试将此属性设置为负值。</exception>
+    </member>
+    <member name="T:System.Transactions.Configuration.TransactionsSectionGroup">
+      <summary>表示一个配置节，该配置节封装并允许遍历此配置节中的所有事务配置 XML 元素和属性。无法继承此类。</summary>
+    </member>
+    <member name="M:System.Transactions.Configuration.TransactionsSectionGroup.#ctor">
+      <summary>初始化 <see cref="T:System.Transactions.Configuration.TransactionsSectionGroup" /> 类的新实例。</summary>
+    </member>
+    <member name="P:System.Transactions.Configuration.TransactionsSectionGroup.DefaultSettings">
+      <summary>获取用于初始化事务节中的元素和属性的默认设置。</summary>
+      <returns>一个 <see cref="T:System.Transactions.Configuration.DefaultSettingsSection" />，表示默认设置。默认为使用默认值填充的 <see cref="T:System.Transactions.Configuration.DefaultSettingsSection" />。</returns>
+    </member>
+    <member name="M:System.Transactions.Configuration.TransactionsSectionGroup.GetSectionGroup(System.Configuration.Configuration)">
+      <summary>提供对 <see cref="T:System.Transactions.Configuration.TransactionsSectionGroup" /> 的静态访问。</summary>
+      <returns>一个 <see cref="T:System.Transactions.Configuration.TransactionsSectionGroup" /> 对象。</returns>
+      <param name="config">一个 <see cref="T:System.Configuration.Configuration" />，表示应用于特定计算机、应用程序或资源的配置设置。</param>
+    </member>
+    <member name="P:System.Transactions.Configuration.TransactionsSectionGroup.MachineSettings">
+      <summary>获取在计算机级设置的配置设置。</summary>
+      <returns>表示计算机级配置设置的 <see cref="T:System.Transactions.Configuration.MachineSettingsSection" />。默认为使用默认值填充的 <see cref="T:System.Transactions.Configuration.MachineSettingsSection" />。</returns>
+    </member>
+  </members>
+</doc>

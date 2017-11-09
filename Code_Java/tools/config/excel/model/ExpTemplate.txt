@@ -1,0 +1,2 @@
+long humanExp;[minValue=1]//战队升级所需经验
+long heroExp;[minValue=1]//英雄升级所需经验

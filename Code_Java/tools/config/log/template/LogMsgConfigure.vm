@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+          "http://www.ibatis.com/dtd/sql-map-2.dtd" >
+<sqlMap>
+    <typeAlias alias="$logName" type="$msgName" />
+    <insert id="insert_$logName" parameterClass="$logName">
+		$insert
+	</insert>
+    <statement id="createTable_$logName" parameterClass="java.lang.String">
+	create table if not exists $tableName$
+	(
+		id int(11) not null AUTO_INCREMENT primary key,
+$fields,
+$keyFields
+	)ENGINE = MyISAM DEFAULT CHARSET UTF8
+    </statement>
+</sqlMap>

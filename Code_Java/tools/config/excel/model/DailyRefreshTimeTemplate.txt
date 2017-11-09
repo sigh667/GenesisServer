@@ -1,0 +1,2 @@
+;//配置项描述，仅策划使用
+String[] timeArray;[collection(24,1);notNull=true] //刷新的时间点，每日最多24个

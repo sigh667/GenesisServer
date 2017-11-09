@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active" type="System.String">
+    <value>活动</value>
+  </data>
+  <data name="AddToRoles" type="System.String">
+    <value>将用户添加到角色:</value>
+  </data>
+  <data name="AddToRoles2" type="System.String">
+    <value>将“&lt;b&gt;{0}&lt;/b&gt;”添加到角色:</value>
+  </data>
+  <data name="AreYouSure" type="System.String">
+    <value>确实要删除用户“&lt;b&gt;{0}&lt;/b&gt;”吗?&lt;br&gt;&lt;br&gt;这将删除此用户的所有信息，包括用户名、用户在角色中的成员资格以及与此用户关联的所有配置文件属性值。</value>
+  </data>
+  <data name="Back" type="System.String">
+    <value>上一步</value>
+  </data>
+  <data name="DeleteUser" type="System.String">
+    <value>删除用户</value>
+  </data>
+  <data name="EditRoles" type="System.String">
+    <value>编辑角色</value>
+  </data>
+  <data name="EditUser" type="System.String">
+    <value>编辑用户</value>
+  </data>
+  <data name="Email" type="System.String">
+    <value>电子邮件</value>
+  </data>
+  <data name="For" type="System.String">
+    <value>搜索内容:</value>
+  </data>
+  <data name="Instructions" type="System.String">
+    <value>单击一行选择一个用户，然后单击“编辑用户”查看或更改该用户的密码或其他属性。若要为选定的用户分配角色，可选择右侧相应的复选框。&lt;br&gt;&lt;br&gt;若要禁止该用户登录到您的应用程序，但在数据库中保留其信息，可通过清除相应的复选框将其状态设置为非活动的。</value>
+  </data>
+  <data name="ManageUsers" type="System.String">
+    <value>管理用户</value>
+  </data>
+  <data name="No" type="System.String">
+    <value>否</value>
+  </data>
+  <data name="NoRolesDefined" type="System.String">
+    <value>未定义任何角色。</value>
+  </data>  
+  <data name="NoUsersCreated" type="System.String">
+    <value>未创建任何用户。</value>
+  </data>
+  <data name="NotFoundUsers" type="System.String">
+    <value>本次搜索未找到任何用户。</value>
+  </data>
+  <data name="SearchBy" type="System.String">
+    <value>搜索依据:</value>
+  </data>
+  <data name="SearchFor" type="System.String">
+    <value>查找用户</value>
+  </data>
+  <data name="RolesNotEnabled" type="System.String">
+    <value>未启用角色。</value>
+  </data>
+  <data name="UserID" type="System.String">
+    <value>用户 ID</value>
+  </data>
+  <data name="Username" type="System.String">
+    <value>用户名</value>
+  </data>
+  <data name="Yes" type="System.String">
+    <value>是</value>
+  </data>
+  <data name="SearchForUsers" type="System.String">
+    <value>搜索用户</value>
+  </data>
+  <data name="CreateNewUser" type="System.String">
+    <value>创建新用户</value>
+  </data>
+  <data name="Roles" type="System.String">
+    <value>角色</value>
+  </data>
+</root>

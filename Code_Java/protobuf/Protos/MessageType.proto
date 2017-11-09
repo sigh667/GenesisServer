@@ -1,0 +1,138 @@
+package com.mokylin;
+import "google/protobuf/descriptor.proto";
+option java_package = "com.mokylin.bleach.protobuf";
+option java_outer_classname = "MessageType";
+
+extend google.protobuf.MessageOptions{
+	optional CGMessageType cg_message_type = 50001;
+	optional GCMessageType gc_message_type = 50002;
+	optional MGMessageType mg_message_type = 50003;
+}
+
+extend google.protobuf.EnumValueOptions{
+	optional MessageTarget TARGET = 50001 [default = ERROR];
+}
+
+/**
+ * 这里的消息类型的定义有一些限制
+ * 每种类型的服务器只能处理消息号在特定范围内的消息
+ * 详情请看com.mokylin.bleach.agentserver.core.msgtarget.MessageTargetManager类
+ * 以下是各类型服务器可以处理的消息号范围
+ * 由GameServer处理的消息号的消息范围：1-20000
+ */
+enum MessageTarget{
+	ERROR = 0;
+	ISC_ACTOR = 1;
+	SERVER_MANAGER = 2;
+	SERVER = 3;
+	PLAYER_MANAGER = 10;
+	PLAYER = 11;
+	SCENE = 12;
+	GUILD = 13;
+	ARENA = 14;
+}
+
+enum CGMessageType{
+	//网关专用消息、测试消息，1-10
+	CG_GAME_SERVER_INFO = 1;
+	CG_TEST_MSG = 2;
+
+	//新版登陆消息，11-50
+	CG_LOGIN_NEW = 11;
+
+	//登录消息，50-100
+	CG_LOGIN_MSG_BEGIN = 50;
+	CG_LOGIN = 51 [(TARGET) = PLAYER_MANAGER];
+	CG_CREATE_ROLE = 52 [(TARGET) = PLAYER_MANAGER];
+	CG_SELECT_ROLE = 53 [(TARGET) = PLAYER_MANAGER];
+	CG_LOGIN_MSG_END = 100;
+
+	//道具消息，101-200
+	CG_ITEM_USE = 101 [(TARGET) = PLAYER];
+	CG_ITEM_SELL = 102 [(TARGET) = PLAYER];
+	CG_ITEM_COMPOUND = 103 [(TARGET) = PLAYER];
+
+	//英雄消息，201-300
+	CG_HIRE_HERO = 201 [(TARGET) = PLAYER];
+	CG_HERO_STAR_UP = 202 [(TARGET) = PLAYER];
+	CG_HERO_QUALITY_UP = 203 [(TARGET) = PLAYER];
+	CG_HERO_SKILL_LEVEL_UP = 204 [(TARGET) = PLAYER];
+	CG_HERO_WEAR_EQUIP = 205 [(TARGET) = PLAYER];
+	CG_BUY_SKILL_POINT = 206 [(TARGET) = PLAYER];
+
+	//聊天消息，301-350
+	CG_GM_CMD = 301 [(TARGET) = PLAYER];
+
+	//日常签到奖励领取，351-400
+	CG_GET_DAILY_REWARD = 351 [(TARGET) = PLAYER];
+
+	//商店消息401-450
+	CG_OPEN_SHOP = 401 [(TARGET) = PLAYER];	//打开商店//
+	CG_REFRESH_GOODS = 402 [(TARGET) = PLAYER];	//刷新//
+	CG_BUY_GOOD = 403 [(TARGET) = PLAYER];	//购买货物//
+
+	//窗口消息，451-500
+	CG_OPEN_WINDOW = 451 [(TARGET) = PLAYER];	//打开窗口//
+	CG_CLOSE_WINDOW = 452 [(TARGET) = PLAYER];	//关闭窗口//
+
+	//Human消息，501-600
+	CG_HUMAN_BUY_ENERGY = 501 [(TARGET) = PLAYER];	//购买体力//
+}
+
+enum GCMessageType{
+
+	//登录消息，51-100
+	GC_LOGIN_FAIL = 51;
+	GC_ROLE_LIST = 52;
+	GC_CREATE_ROLE = 53;
+	GC_CREATE_ROLE_FAIL = 54;
+
+	//Human消息，101-200
+	GC_HUMAN_DETAIL_INFO = 101;
+	GC_DATA_ERROR = 102;
+	GC_HUMAN_BUY_ENERGY_ACK = 103;	//购买体力成功//
+	GC_HUMAN_BUY_ENERGY_NEG = 104;	//购买体力失败//
+	GC_HUMAN_ENERGY_RECOVER_INFO = 105;	//体力恢复信息//
+	GC_HUMAN_COST_ENERGY_FAILED = 106;	//扣体力失败，体力值不够//
+	GC_HUMAN_BUY_ENERGY_COUNTS_RESET = 107;	//重置体力购买次数//
+	GC_VIP_LEVEL_UP = 108; //VIP等级提升//
+	GC_HUMAN_LEVEL_UP = 109; //玩家角色等级提升//
+
+	//英雄消息，201-300
+	GC_HERO_CHANGED_PROPS = 201;	//属性改变消息//
+	GC_ALL_HERO_INFO = 202;	//所有英雄信息//
+	GC_HERO_ADD = 203;	//添加一个英雄//
+	GC_HERO_UPDATE = 204;	//英雄信息更新//
+
+	//道具，301-400
+	GC_INVENTORY_INFO = 301;	//背包整体信息//
+	GC_ITEM_UPDATE = 302;  //物品更新消息，注意该消息只能用在特定情况下，请咨询尽可能多的人//
+
+	//日常奖励，401-450
+	GC_DAILY_REWARD_INFO = 401;
+	//日常奖励领取失败，已经过了月刷新//
+	GC_GET_DAILY_REWARD_FAILED = 402;
+	
+	//商店，451-500
+	GC_SHOP_INFO = 451;		//商店信息//
+	GC_SHOP_MANUALLY_REFRESH_INFO = 452;	//商店刷新信息//
+	GC_GOOD_BUY_SUCCESS = 453;	//商品购买成功
+	GC_SHOP_MANUALLY_REFRESH_COUNT_RESET = 454;		//商店手动刷新次数重置消息//
+	GC_SHOP_AUTO_REFRESH_INFO = 455;	//商店自动刷新信息//
+	GC_SHOP_CLOSE = 456;	//商店关闭信息//
+	GC_SHOP_PROMPT = 457;	//商店提示//
+	GC_OPENED_TEMP_SHOP = 458;	//已经打开的商店//
+	GC_OPEN_SHOP = 459;		//打开商店//
+
+	//功能开放，501-550
+	GC_FUNCTION_OPEN_LIST = 501;	//功能开放列表//
+	GC_FUNCTION_OPEN = 502;	//功能开放//
+
+	//GM命令，551-600
+	GC_GM_CMD = 551;	//GM命令的回复，一些文本信息而已//
+}
+
+/**MapServer发给Gate的消息号定义 */
+enum MGMessageType{
+	MG_BROAD_CAST = 1;	//广播
+}

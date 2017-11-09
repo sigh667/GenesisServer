@@ -1,0 +1,6 @@
+com.mokylin.bleach.common.shop.ShopType shopType;//商店类型
+int sellPosition;[notNull=false;minValue=0]//出售位置
+int storeRoomId;[notNull=true]//库Id
+int baseNum;[notNull=true]//基础数量
+int critRate;[notNull=true]//暴击倍率
+int critChance;[notNull=true]//暴击概率

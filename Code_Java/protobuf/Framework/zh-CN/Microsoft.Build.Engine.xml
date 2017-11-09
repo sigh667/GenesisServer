@@ -1,0 +1,2486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Build.Engine</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Build.BuildEngine.BuildItem">
+      <summary>表示 MSBuild 项目中的单个项。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItem.#ctor(System.String,Microsoft.Build.Framework.ITaskItem)">
+      <summary>基于 <see cref="T:Microsoft.Build.Framework.ITaskItem" /> 对象初始化 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 类的新实例。</summary>
+      <param name="itemName">
+        <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> 属性。</param>
+      <param name="taskItem">
+        <see cref="T:Microsoft.Build.Framework.ITaskItem" />，将基于它创建 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> 属性。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItem.#ctor(System.String,System.String)">
+      <summary>用指定的 <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> 和 <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> 属性值初始化 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 类的新实例。</summary>
+      <param name="itemName">
+        <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> 属性。</param>
+      <param name="itemInclude">
+        <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> 属性。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItem.Clone">
+      <summary>创建 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 的浅表副本。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 的副本。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItem.Condition">
+      <summary>获取或设置该项的 Condition 属性值。</summary>
+      <returns>该项的 Condition 属性值。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItem.CopyCustomMetadataTo(Microsoft.Build.BuildEngine.BuildItem)">
+      <summary>将此 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 的所有项元数据复制到指定的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />。</summary>
+      <param name="destinationItem">项元数据要复制到的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItem.CustomMetadataCount">
+      <summary>获取在该项上设置的自定义属性数。</summary>
+      <returns>一个整数，它表示在该项上设置多少个自定义属性。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItem.CustomMetadataNames">
+      <summary>获取所有用户定义的或自定义的属性名称。</summary>
+      <returns>一个 <see cref="T:System.Collections.ICollection" />，它包含所有用户定义的或自定义的属性的字符串名称。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItem.Exclude">
+      <summary>获取或设置该项的 Exclude 属性值。</summary>
+      <returns>获取或设置该项的 Exclude 属性值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItem.FinalItemSpec">
+      <summary>获取在计算所有通配符和属性后该项的最终规范。</summary>
+      <returns>在计算所有通配符和属性后该项的最终规范。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItem.GetEvaluatedMetadata(System.String)">
+      <summary>返回在计算所有项和属性引用后指定项元数据的值。</summary>
+      <returns>在计算所有项和属性引用后指定项元数据的值。</returns>
+      <param name="metadataName">项元数据名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItem.GetMetadata(System.String)">
+      <summary>返回指定的项元数据的值。</summary>
+      <returns>指定的项元数据的值。</returns>
+      <param name="metadataName">项元数据名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItem.HasMetadata(System.String)">
+      <summary>指示该项是否具有指定的项元数据。</summary>
+      <returns>
+            如果该项具有指定的项元数据，则为 true；否则为 false。</returns>
+      <param name="metadataName">项元数据名称。</param>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItem.Include">
+      <summary>获取或设置创建 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 的 Include 属性。</summary>
+      <returns>创建 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 的 Include 属性。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItem.IsImported">
+      <summary>获取一个值，该值指示该项是否已导入项目。</summary>
+      <returns>
+            如果该项已导入项目中，则为 true；否则为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItem.MetadataCount">
+      <summary>获取在该项上设置的元数据的数目</summary>
+      <returns>一个表示元数据项数的整数。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItem.MetadataNames">
+      <summary>获取项上的元数据的名称，包括预定义的或保留的项目特定修饰符。</summary>
+      <returns>一个 <see cref="T:System.Collections.ICollection" />，它包含项上的所有元数据的名称字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItem.Name">
+      <summary>获取或设置该项所属的项集合的名称。</summary>
+      <returns>该项所属的项集合的名称。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItem.RemoveMetadata(System.String)">
+      <summary>移除指定的项元数据。</summary>
+      <param name="metadataName">项元数据名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItem.SetMetadata(System.String,System.String)">
+      <summary>将指定值分配给指定的项元数据。</summary>
+      <param name="metadataName">项元数据名称。</param>
+      <param name="metadataValue">项元数据值。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItem.SetMetadata(System.String,System.String,System.Boolean)">
+      <summary>将指定值分配给指定的项元数据，并可以选择将元数据作为文本值处理。</summary>
+      <param name="metadataName">项元数据名称。</param>
+      <param name="metadataValue">项元数据值。</param>
+      <param name="treatMetadataValueAsLiteral">
+                若要通过对所有 MSBuild 特殊字符进行转义将元数据视为文本值，则为 true；否则为 false。</param>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.BuildItemGroup">
+      <summary>表示 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 对象的集合。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItemGroup.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItemGroup.AddNewItem(System.String,System.String)">
+      <summary>将具有指定的 <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> 和 <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> 属性值的新 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 添加到 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />。</summary>
+      <returns>新的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />。</returns>
+      <param name="itemName">分配给新 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> 属性值。</param>
+      <param name="itemInclude">要分配给新 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> 属性值。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItemGroup.AddNewItem(System.String,System.String,System.Boolean)">
+      <summary>将具有指定 <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> 和 <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> 属性值的新 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 添加到 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />，这允许您指定 <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> 属性值是否按文本处理。</summary>
+      <returns>新的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />。</returns>
+      <param name="itemName">分配给新 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> 属性值。</param>
+      <param name="itemInclude">要分配给新 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> 属性值。</param>
+      <param name="treatItemIncludeAsLiteral">
+如果将 <paramref name="itemInclude" /> 参数作为文本值处理，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItemGroup.Clear">
+      <summary>从 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 中移除 <see cref="P:Microsoft.Build.BuildEngine.BuildItemGroup.Condition" /> 属性值和所有 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 对象。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItemGroup.Clone(System.Boolean)">
+      <summary>创建 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 的深层副本或浅表副本。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 的副本。</returns>
+      <param name="deepClone">
+如果要创建 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 的深层副本，则为 true；否则为 false。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItemGroup.Condition">
+      <summary>获取或设置项组的 Condition 属性值。</summary>
+      <returns>项组的 Condition 属性值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItemGroup.Count">
+      <summary>获取一个值，该值指示 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 中 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 对象的数目。</summary>
+      <returns>表示 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 中的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 对象数目的整数值。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItemGroup.GetEnumerator">
+      <summary>获取循环访问 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 的枚举数。</summary>
+      <returns>用于整个 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 的 <see cref="T:System.Collections.IEnumerator" />。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItemGroup.IsImported">
+      <summary>获取或设置一个值，该值指示项组是否已导入项目中。</summary>
+      <returns>
+如果项组已导入项目中，则为 true；否则为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItemGroup.Item(System.Int32)">
+      <summary>获取或设置此 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 中的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 对象。</summary>
+      <returns>此 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 中的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 对象。</returns>
+      <param name="index">要获取或设置的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 对象的从零开始的索引。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItemGroup.RemoveItem(Microsoft.Build.BuildEngine.BuildItem)">
+      <summary>从 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 中移除指定的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />。</summary>
+      <param name="itemToRemove">要移除的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItemGroup.RemoveItemAt(System.Int32)">
+      <summary>从 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 中移除指定索引处的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />。 </summary>
+      <param name="index">要移除的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 对象的从零开始的索引。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItemGroup.ToArray">
+      <summary>将 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 中的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 对象复制到新数组中。</summary>
+      <returns>包含从 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 复制的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> 对象的新数组。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.BuildItemGroupCollection">
+      <summary>表示 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 对象的集合。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItemGroupCollection.CopyTo(System.Array,System.Int32)">
+      <summary>从目标数组的指定索引处开始，将集合复制到兼容的一维 <see cref="T:System.Array" />。</summary>
+      <param name="array">作为从 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroupCollection" /> 复制的元素的目标位置的一维 <see cref="T:System.Array" />。<see cref="T:System.Array" /> 必须具有从零开始的索引。</param>
+      <param name="index">
+        <paramref name="array" /> 中从零开始的索引，从此处开始复制。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItemGroupCollection.Count">
+      <summary>获取一个值，该值指示集合中 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 对象的数目。</summary>
+      <returns>表示集合中的 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> 对象数目的整数值。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildItemGroupCollection.GetEnumerator">
+      <summary>获取一个能够循环访问集合的枚举数。</summary>
+      <returns>用于整个 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroupCollection" /> 的 <see cref="T:System.Collections.IEnumerator" />。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItemGroupCollection.IsSynchronized">
+      <summary>获取一个值，该值指示是否同步对 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroupCollection" /> 的访问（线程安全）。</summary>
+      <returns>
+如果对 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroupCollection" /> 的访问是同步的（线程安全），则为 true；否则为 false。默认为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildItemGroupCollection.SyncRoot">
+      <summary>获取可用于同步 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroupCollection" /> 访问的对象。</summary>
+      <returns>可用于同步对 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroupCollection" /> 的访问的对象。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.BuildProperty">
+      <summary>表示 MSBuild 项目中的单个属性。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildProperty.#ctor(System.String,System.String)">
+      <summary>用指定的名称和值初始化 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 类的新实例。</summary>
+      <param name="propertyName">属性名称。</param>
+      <param name="propertyValue">属性值。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildProperty.Clone(System.Boolean)">
+      <summary>创建 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 的深层副本或浅表副本。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 的副本。</returns>
+      <param name="deepClone">
+如果要创建 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 的深层副本，则为 true；否则为 false。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildProperty.Condition">
+      <summary>获取或设置属性 (Property) 的 Condition 属性 (Attribute) 值。</summary>
+      <returns>获取或设置属性 (Property) 的 Condition 属性 (Attribute) 值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildProperty.FinalValue">
+      <summary>获取执行所有属性计算后的最终属性值。</summary>
+      <returns>执行所有属性计算后的最终属性值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildProperty.IsImported">
+      <summary>获取或设置一个值，该值指示属性是否已导入项目中。</summary>
+      <returns>
+如果属性已导入项目中，则为 true；否则为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildProperty.Name">
+      <summary>获取属性名称。</summary>
+      <returns>属性名称。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildProperty.op_Explicit(Microsoft.Build.BuildEngine.BuildProperty)~System.String">
+      <summary>将 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 转换为 String。</summary>
+      <returns>String，它的内容与 <paramref name="propertyToCast" /> 参数的 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" /> 属性相同。</returns>
+      <param name="propertyToCast">要转换为字符串的 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" />。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildProperty.ToString">
+      <summary>返回表示 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" /> 属性的字符串。</summary>
+      <returns>表示 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" /> 属性的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildProperty.Value">
+      <summary>获取或设置属性值。</summary>
+      <returns>属性值。</returns>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.BuildPropertyGroup">
+      <summary>表示 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 对象的集合。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.#ctor(Microsoft.Build.BuildEngine.Project)">
+      <summary>初始化指定项目中的新 PropertyGroup 元素。</summary>
+      <param name="parentProject">要向其中添加新 PropertyGroup 的项目的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.AddNewProperty(System.String,System.String)">
+      <summary>向 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 添加具有指定 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Name" /> 和 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" /> 的新 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" />。</summary>
+      <returns>新的 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" />。</returns>
+      <param name="propertyName">要分配给新 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Name" /> 属性值。</param>
+      <param name="propertyValue">要分配给新 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" /> 属性值。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.AddNewProperty(System.String,System.String,System.Boolean)">
+      <summary>向 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 添加具有指定 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Name" /> 和 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" /> 的新 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" />。</summary>
+      <returns>新的 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" />。</returns>
+      <param name="propertyName">要分配给新 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Name" /> 属性值。</param>
+      <param name="propertyValue">要分配给新 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" /> 属性值。</param>
+      <param name="treatPropertyValueAsLiteral">
+                如果将 <paramref name="propertyValue" /> 参数作为文本值处理，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.Clear">
+      <summary>从 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 中移除 <see cref="P:Microsoft.Build.BuildEngine.BuildPropertyGroup.Condition" /> 属性值和所有 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 对象。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.Clone(System.Boolean)">
+      <summary>创建 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 的深层副本或浅表副本。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 的副本。</returns>
+      <param name="deepClone">
+                如果要创建 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 的深层副本，则为 true；否则为 false。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildPropertyGroup.Condition">
+      <summary>获取或设置属性 (Property) 组的 Condition 属性 (Attribute) 值。</summary>
+      <returns>属性 (Property) 组的 Condition 属性 (Attribute) 值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildPropertyGroup.Count">
+      <summary>获取一个值，该值指示 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 中 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 对象的数目。</summary>
+      <returns>表示集合中的 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 对象数目的整数值。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.GetEnumerator">
+      <summary>获取循环访问 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 的枚举数。</summary>
+      <returns>用于整个 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 的 <see cref="T:System.Collections.IEnumerator" />。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildPropertyGroup.IsImported">
+      <summary>获取或设置一个值，该值指示属性组是否已导入项目中。</summary>
+      <returns>
+            如果属性组已导入项目中，则为 true；否则为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildPropertyGroup.Item(System.String)">
+      <summary>获取或设置此 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 中的 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 对象。</summary>
+      <returns>此 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 中的 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 对象。</returns>
+      <param name="propertyName">要获取或设置的 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Name" /> 值。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.RemoveProperty(Microsoft.Build.BuildEngine.BuildProperty)">
+      <summary>从 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 中移除指定的 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" />。</summary>
+      <param name="property">要移除的 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" />。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.RemoveProperty(System.String)">
+      <summary>从 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 中移除具有指定 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Name" /> 的 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" />。</summary>
+      <param name="propertyName">要移除的 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Name" /> 值。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.SetImportedPropertyGroupCondition(System.String)">
+      <summary>设置导入的属性组的条件。不保存更改。</summary>
+      <param name="condition"></param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.SetProperty(System.String,System.String)">
+      <summary>设置具有指定 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Name" /> 的 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" />。</summary>
+      <param name="propertyName">要设置的 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Name" /> 属性值。</param>
+      <param name="propertyValue">要分配给 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" /> 属性值。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildPropertyGroup.SetProperty(System.String,System.String,System.Boolean)">
+      <summary>设置具有指定 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Name" /> 的 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" />。</summary>
+      <param name="propertyName">要设置的 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Name" /> 属性值。</param>
+      <param name="propertyValue">要分配给 <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" /> 的 <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" /> 属性值。</param>
+      <param name="treatPropertyValueAsLiteral">
+                如果将 <paramref name="propertyValue" /> 参数作为文本值处理，则为 true；否则为 false。</param>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection">
+      <summary>表示 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 对象的集合。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection.CopyTo(System.Array,System.Int32)">
+      <summary>从目标数组的指定索引处开始，将整个集合复制到兼容的一维 <see cref="T:System.Array" />。</summary>
+      <param name="array">作为从 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection" /> 复制的元素的目标位置的一维 <see cref="T:System.Array" />。<see cref="T:System.Array" /> 必须具有从零开始的索引。</param>
+      <param name="index">
+        <paramref name="array" /> 中从零开始的索引，从此处开始复制。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection.Count">
+      <summary>获取一个值，该值指示集合中 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 对象的数量。</summary>
+      <returns>表示集合中的 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 对象数目的整数值。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection.GetEnumerator">
+      <summary>获取循环访问 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection" /> 的枚举数。</summary>
+      <returns>用于整个 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection" /> 的 <see cref="T:System.Collections.IEnumerator" />。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection.IsSynchronized">
+      <summary>获取一个值，该值指示是否同步对 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection" /> 的访问（线程安全）。</summary>
+      <returns>
+如果对 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection" /> 的访问是同步的（线程安全），则为 true；否则为 false。默认为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection.SyncRoot">
+      <summary>获取可用于同步 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection" /> 访问的对象。</summary>
+      <returns>可用于同步对 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection" /> 的访问的对象。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.BuildSettings">
+      <summary>指定用于生成的设置。</summary>
+    </member>
+    <member name="F:Microsoft.Build.BuildEngine.BuildSettings.None">
+      <summary>指定生成应该正常运行。</summary>
+    </member>
+    <member name="F:Microsoft.Build.BuildEngine.BuildSettings.DoNotResetPreviouslyBuiltTargets">
+      <summary>指定没有更改任何重要的外部状态且不应重新生成以前已生成的目标。</summary>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.BuildTask">
+      <summary>表示项目中的 Task 元素。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildTask.AddOutputItem(System.String,System.String)">
+      <summary>向 Task 元素添加具有指定 TaskParameter 和 ItemName 属性的 Output 元素。</summary>
+      <param name="taskParameter">Output 元素的 TaskParameter 属性值。</param>
+      <param name="itemName">Output 元素的 ItemName 属性值。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildTask.AddOutputProperty(System.String,System.String)">
+      <summary>向 Task 元素添加具有指定 TaskParameter 和 PropertyName 属性的 Output 元素。</summary>
+      <param name="taskParameter">Output 元素的 TaskParameter 属性值。</param>
+      <param name="propertyName">Output 元素的 PropertyName 属性值。</param>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildTask.Condition">
+      <summary>获取或设置 Task 元素的 Condition 属性值。</summary>
+      <returns>Task 元素的 Condition 属性值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildTask.ContinueOnError">
+      <summary>获取或设置 Task 元素的 ContinueOnError 属性值。</summary>
+      <returns>Task 元素的 ContinueOnError 属性值。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildTask.Execute">
+      <summary>运行此 <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> 对象表示的任务。</summary>
+      <returns>
+如果此方法已成功，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildTask.GetParameterNames">
+      <summary>获取包含传递给任务的参数名的数组。</summary>
+      <returns>包含传递给任务的参数名的数组。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildTask.GetParameterValue(System.String)">
+      <summary>获取指定的任务参数的值。</summary>
+      <returns>指定的任务参数的值。</returns>
+      <param name="attributeName">参数名。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildTask.HostObject">
+      <summary>获取或设置与该任务关联的宿主对象。</summary>
+      <returns>与该任务关联的宿主对象。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildTask.Name">
+      <summary>获取任务名。</summary>
+      <returns>任务名。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildTask.SetParameterValue(System.String,System.String)">
+      <summary>设置指定的任务参数的值。</summary>
+      <param name="parameterName">要设置的参数名。</param>
+      <param name="parameterValue">要赋予 <paramref name="parameterName" /> 的值。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.BuildTask.SetParameterValue(System.String,System.String,System.Boolean)">
+      <summary>设置指定的任务参数的值。</summary>
+      <param name="parameterName">要设置的参数名。</param>
+      <param name="parameterValue">要赋予 <paramref name="parameterName" /> 的值。</param>
+      <param name="treatParameterValueAsLiteral">
+如果将 <paramref name="parameterValue" /> 作为文本值处理，则为 true；否则为 false。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.BuildTask.Type">
+      <summary>获取实现该任务的类的 <see cref="T:System.Type" />。</summary>
+      <returns>实现该任务的类的 <see cref="T:System.Type" />。</returns>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.ColorResetter">
+      <summary>定义用于重置控制台颜色的委托的类型。</summary>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.ColorSetter">
+      <summary>定义用于设置控制台颜色的委托的类型。</summary>
+      <param name="color">文本颜色。</param>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger">
+      <summary>
+                    表示 ConfigurableForwardingLogger，即在多处理器或多内核系统上生成项目时将使用的一个预制转发记录器。有关更多信息，请参见编写多处理器可识别的记录器。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger" /> 类的一个新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.BuildEventRedirector">
+      <summary>
+                    获取或设置生成引擎是否允许节点记录器将消息转发到中央记录器。
+                </summary>
+      <returns>
+                    用于转发事件的 <see cref="T:Microsoft.Build.Framework.IEventRedirector" /> 对象。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.ForwardToCentralLogger(Microsoft.Build.Framework.BuildEventArgs)">
+      <summary>
+                    将指定的事件转发到中央记录器。
+                </summary>
+      <param name="e">
+事件参数。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.Initialize(Microsoft.Build.Framework.IEventSource)">
+      <summary>
+在控制台记录器中登记所有生成事件。
+                </summary>
+      <param name="eventSource">
+用于提供生成事件的 <see cref="T:Microsoft.Build.Framework.IEventSource" /> 对象。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)">
+      <summary>
+在控制台记录器中登记所有生成事件。
+                </summary>
+      <param name="eventSource">
+用于提供生成事件的 <see cref="T:Microsoft.Build.Framework.IEventSource" /> 对象。
+                </param>
+      <param name="nodeCount">
+                    事件源的节点 ID。
+                </param>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.NodeId">
+      <summary>
+                    获取或设置记录器所附加到的唯一标识符（节点 ID）。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.Parameters">
+      <summary>
+                    获取或设置 ConfigurableForwardingLogger 的参数。
+                </summary>
+      <returns>
+                    一个字符串，表示记录器参数。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.Shutdown">
+      <summary>
+                    关闭可配置的转发记录器。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.Verbosity">
+      <summary>
+                    获取或设置要显示在事件日志中的详细信息的级别。
+                </summary>
+      <returns>
+                    一个 <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> 枚举值。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.ConsoleLogger">
+      <summary>
+                    实现在生成过程中将事件数据输出到控制台窗口的标准控制台记录器。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.#ctor(Microsoft.Build.Framework.LoggerVerbosity)">
+      <summary>
+                    用指定的 <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> 初始化 <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" /> 类的新实例。
+                </summary>
+      <param name="verbosity">
+要应用于记录器的 <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" />。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.#ctor(Microsoft.Build.Framework.LoggerVerbosity,Microsoft.Build.BuildEngine.WriteHandler,Microsoft.Build.BuildEngine.ColorSetter,Microsoft.Build.BuildEngine.ColorResetter)">
+      <summary>
+                    用指定的 <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" />、<see cref="T:Microsoft.Build.BuildEngine.ColorSetter" /> 和 <see cref="T:Microsoft.Build.BuildEngine.ColorResetter" /> 值初始化 <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" /> 类的新实例。
+                </summary>
+      <param name="verbosity">
+要应用于记录器的 <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" />。
+                </param>
+      <param name="write">
+                    记录器要使用的 <see cref="T:Microsoft.Build.BuildEngine.WriteHandler" />。
+                </param>
+      <param name="colorSet">
+                    记录器要使用的 <see cref="T:Microsoft.Build.BuildEngine.ColorSetter" />。
+                </param>
+      <param name="colorReset">
+                    记录器要使用的 <see cref="T:Microsoft.Build.BuildEngine.ColorResetter" />。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.ApplyParameter(System.String,System.String)">
+      <summary>
+                    将指定的参数名和值添加到记录器。
+                </summary>
+      <param name="parameterName">
+                    要添加到记录器的参数名。
+                </param>
+      <param name="parameterValue">
+                    要分配给 <paramref name="parameterName" /> 的参数值。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.BuildFinishedHandler(System.Object,Microsoft.Build.Framework.BuildFinishedEventArgs)">
+      <summary>
+                    处理 <see cref="E:Microsoft.Build.Framework.IEventSource.BuildFinished" /> 事件。
+                </summary>
+      <param name="sender">
+                    事件源。
+                </param>
+      <param name="e">
+                    包含事件数据的 <see cref="T:Microsoft.Build.Framework.BuildFinishedEventArgs" />。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.BuildStartedHandler(System.Object,Microsoft.Build.Framework.BuildStartedEventArgs)">
+      <summary>
+                    处理 <see cref="E:Microsoft.Build.Framework.IEventSource.BuildStarted" /> 事件。
+                </summary>
+      <param name="sender">
+                    事件源。
+                </param>
+      <param name="e">
+                    包含事件数据的 <see cref="T:Microsoft.Build.Framework.BuildStartedEventArgs" />。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.CustomEventHandler(System.Object,Microsoft.Build.Framework.CustomBuildEventArgs)">
+      <summary>
+                    处理 <see cref="E:Microsoft.Build.Framework.IEventSource.CustomEventRaised" /> 事件。
+                </summary>
+      <param name="sender">
+                    事件源。
+                </param>
+      <param name="e">
+                    包含事件数据的 <see cref="T:Microsoft.Build.Framework.CustomBuildEventArgs" />。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.ErrorHandler(System.Object,Microsoft.Build.Framework.BuildErrorEventArgs)">
+      <summary>
+                    处理 <see cref="E:Microsoft.Build.Framework.IEventSource.ErrorRaised" /> 事件。
+                </summary>
+      <param name="sender">
+                    事件源。
+                </param>
+      <param name="e">
+                    包含事件数据的 <see cref="T:Microsoft.Build.Framework.BuildErrorEventArgs" />。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.Initialize(Microsoft.Build.Framework.IEventSource)">
+      <summary>
+为记录器注册指定事件。
+                </summary>
+      <param name="eventSource">
+                    要注册到记录器的 <see cref="T:Microsoft.Build.Framework.IEventSource" />。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)">
+      <summary>
+为记录器注册指定事件。
+                </summary>
+      <param name="eventSource">
+                    要注册到记录器的 <see cref="T:Microsoft.Build.Framework.IEventSource" />。
+                </param>
+      <param name="nodeCount">
+                    要初始化的节点数。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.MessageHandler(System.Object,Microsoft.Build.Framework.BuildMessageEventArgs)">
+      <summary>
+                    处理 <see cref="E:Microsoft.Build.Framework.IEventSource.MessageRaised" /> 事件。
+                </summary>
+      <param name="sender">
+                    事件源。
+                </param>
+      <param name="e">
+                    包含事件数据的 <see cref="T:Microsoft.Build.Framework.BuildMessageEventArgs" />。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.ConsoleLogger.Parameters">
+      <summary>
+                    获取或设置传递给 <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" /> 的参数。
+                </summary>
+      <returns>
+                    传递给 <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" /> 的参数。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.ProjectFinishedHandler(System.Object,Microsoft.Build.Framework.ProjectFinishedEventArgs)">
+      <summary>
+                    处理 <see cref="E:Microsoft.Build.Framework.IEventSource.ProjectFinished" /> 事件。
+                </summary>
+      <param name="sender">
+                    事件源。
+                </param>
+      <param name="e">
+                    包含事件数据的 <see cref="T:Microsoft.Build.Framework.ProjectFinishedEventArgs" />。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.ProjectStartedHandler(System.Object,Microsoft.Build.Framework.ProjectStartedEventArgs)">
+      <summary>
+                    处理 <see cref="E:Microsoft.Build.Framework.IEventSource.ProjectStarted" /> 事件。
+                </summary>
+      <param name="sender">
+                    事件源。
+                </param>
+      <param name="e">
+                    包含事件数据的 <see cref="T:Microsoft.Build.Framework.ProjectStartedEventArgs" />。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.ConsoleLogger.ShowSummary">
+      <summary>
+                    获取或设置一个值，该值指示记录器是否显示错误和警告的摘要。
+                </summary>
+      <returns>
+                    如果记录器将显示错误和警告的摘要，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.Shutdown">
+      <summary>
+                    停止记录器并释放所有资源。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.ConsoleLogger.SkipProjectStartedText">
+      <summary>
+                    获取或设置一个值，该值指示当在生成过程中有新项目启动时记录器是否显示消息。
+                </summary>
+      <returns>
+                    如果当在生成过程中有新项目启动时会显示消息，则为 true；否则为 false。默认值为 true。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.TargetFinishedHandler(System.Object,Microsoft.Build.Framework.TargetFinishedEventArgs)">
+      <summary>
+                    处理 <see cref="E:Microsoft.Build.Framework.IEventSource.TargetFinished" /> 事件。
+                </summary>
+      <param name="sender">
+                    事件源。
+                </param>
+      <param name="e">
+                    包含事件数据的 <see cref="T:Microsoft.Build.Framework.TargetFinishedEventArgs" />。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.TargetStartedHandler(System.Object,Microsoft.Build.Framework.TargetStartedEventArgs)">
+      <summary>
+                    处理 <see cref="E:Microsoft.Build.Framework.IEventSource.TargetStarted" /> 事件。
+                </summary>
+      <param name="sender">
+                    事件源。
+                </param>
+      <param name="e">
+                    包含事件数据的 <see cref="T:Microsoft.Build.Framework.TargetStartedEventArgs" />。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.TaskFinishedHandler(System.Object,Microsoft.Build.Framework.TaskFinishedEventArgs)">
+      <summary>
+                    处理 <see cref="E:Microsoft.Build.Framework.IEventSource.TaskFinished" /> 事件。
+                </summary>
+      <param name="sender">
+                    事件源。
+                </param>
+      <param name="e">
+                    包含事件数据的 <see cref="T:Microsoft.Build.Framework.TaskFinishedEventArgs" />。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.TaskStartedHandler(System.Object,Microsoft.Build.Framework.TaskStartedEventArgs)">
+      <summary>
+                    处理 <see cref="E:Microsoft.Build.Framework.IEventSource.TaskStarted" /> 事件。
+                </summary>
+      <param name="sender">
+                    事件源。
+                </param>
+      <param name="e">
+                    包含事件数据的 <see cref="T:Microsoft.Build.Framework.TaskStartedEventArgs" />。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.ConsoleLogger.Verbosity">
+      <summary>
+                    获取或设置记录器的 <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> 级别。
+                </summary>
+      <returns>
+                    记录器的 <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> 级别。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ConsoleLogger.WarningHandler(System.Object,Microsoft.Build.Framework.BuildWarningEventArgs)">
+      <summary>
+                    处理 <see cref="E:Microsoft.Build.Framework.IEventSource.WarningRaised" /> 事件。
+                </summary>
+      <param name="sender">
+                    事件源。
+                </param>
+      <param name="e">
+                    包含事件数据的 <see cref="T:Microsoft.Build.Framework.BuildWarningEventArgs" />。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.ConsoleLogger.WriteHandler">
+      <summary>
+                    获取或设置 <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" /> 的 <see cref="T:Microsoft.Build.BuildEngine.WriteHandler" /> 委托。
+                </summary>
+      <returns>
+        <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" /> 的 <see cref="T:Microsoft.Build.BuildEngine.WriteHandler" /> 委托。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.DistributedFileLogger">
+      <summary>
+                    表示一个文本文件，其中包含某个生成节点的生成日志。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.DistributedFileLogger.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.BuildEngine.DistributedFileLogger" /> 类的一个新实例。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.DistributedFileLogger.BuildEventRedirector">
+      <summary>
+                    由生成引擎设置，以允许节点记录器将消息转发到中央记录器。
+                </summary>
+      <returns>
+                    用于转发事件的 <see cref="T:Microsoft.Build.Framework.IEventRedirector" /> 对象。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.DistributedFileLogger.Initialize(Microsoft.Build.Framework.IEventSource)">
+      <summary>
+在控制台记录器中登记所有生成事件。
+                </summary>
+      <param name="eventSource">
+                    用于提供生成事件的 <see cref="T:Microsoft.Build.Framework.IEventSource" /> 对象。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.DistributedFileLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)">
+      <summary>
+在控制台记录器中登记所有生成事件。
+                </summary>
+      <param name="eventSource">
+                    用于提供生成事件的 <see cref="T:Microsoft.Build.Framework.IEventSource" /> 对象。
+                </param>
+      <param name="nodeCount">
+                    事件源的节点 ID。
+                </param>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.DistributedFileLogger.NodeId">
+      <summary>
+                    获取或设置转发记录器所附加到的节点的唯一标识符（节点 ID）。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.DistributedFileLogger.Parameters">
+      <summary>
+                    获取或设置 DistributedFileLogger 的参数。
+                </summary>
+      <returns>
+                    一个字符串，表示记录器参数。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.DistributedFileLogger.Shutdown">
+      <summary>
+                    关闭节点文件记录器。
+                </summary>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.DistributedFileLogger.Verbosity">
+      <summary>
+                    获取或设置要显示在生成事件日志中的详细等级（一个 <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> 值）。
+                </summary>
+      <returns>
+                    一个 <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> 枚举值。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.Engine">
+      <summary>表示 MSBuild 引擎。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.#ctor(Microsoft.Build.BuildEngine.BuildPropertyGroup)">
+      <summary>初始化 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 类的新实例。</summary>
+      <param name="globalProperties">一个 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" />，表示要传递给子引擎的属性。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.#ctor(Microsoft.Build.BuildEngine.BuildPropertyGroup,Microsoft.Build.BuildEngine.ToolsetDefinitionLocations)">
+      <summary>初始化 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 类的新实例。</summary>
+      <param name="globalProperties">一个 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" />，表示要传递给子引擎的属性。</param>
+      <param name="locations"></param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.#ctor(Microsoft.Build.BuildEngine.BuildPropertyGroup,Microsoft.Build.BuildEngine.ToolsetDefinitionLocations,System.Int32,System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 类的新实例。</summary>
+      <param name="globalProperties">一个 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" />，表示要传递给子引擎的属性。</param>
+      <param name="locations">一个 <see cref="T:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" /> 枚举，指定工具集定义的位置。</param>
+      <param name="numberOfCpus">一个整数，指定系统中的 CPU 或核心数。</param>
+      <param name="localNodeProviderParameters">一个参数字符串，这些参数用于配置 MSBuild 引擎。您必须将这些参数设置为“参数名称=参数值”格式。下面是有效的可选参数（以分号分隔）：MSBUILDLOCATION 指示生成进程在哪里可以找到 MSBuild.exe。此路径允许 MSBuild 引擎定位 MSBuild.exe 并将其作为本地节点启动。MSBUILDLOCATION 是宿主的唯一一个重要参数。默认值为 C:\Windows\Microsoft.Net\Framework\v3.5\。NODEREUSE 指示生成完成后是否应保留子节点，以便后面的其他生成也可以使用它们。这些节点在未使用时间超过一分钟后，将被自动丢弃。默认值为 true。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.#ctor(Microsoft.Build.BuildEngine.ToolsetDefinitionLocations)">
+      <summary>初始化 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 类的新实例。</summary>
+      <param name="locations">一个 <see cref="T:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations" /> 枚举，指定工具集定义的位置。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.#ctor(System.String)">
+      <summary>初始化具有指定 <see cref="P:Microsoft.Build.BuildEngine.Engine.BinPath" /> 的 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 类的新实例。</summary>
+      <param name="binPath">MSBuild.exe 的路径。</param>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Engine.BinPath">
+      <summary>获取或设置 MSBuild.exe 的路径。</summary>
+      <returns>MSBuild.exe 的路径。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Engine.BuildEnabled">
+      <summary>获取或设置一个值，该值指示是否允许在项目中生成目标。</summary>
+      <returns>
+            如果允许在项目中生成目标，则为 true；否则为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.BuildProject(Microsoft.Build.BuildEngine.Project)">
+      <summary>生成指定的 <see cref="T:Microsoft.Build.BuildEngine.Project" />。</summary>
+      <returns>
+            如果生成成功，则为 true；否则为 false。</returns>
+      <param name="project">要生成的 <see cref="T:Microsoft.Build.BuildEngine.Project" />。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.BuildProject(Microsoft.Build.BuildEngine.Project,System.String)">
+      <summary>生成指定 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 的指定目标。</summary>
+      <returns>
+            如果生成成功，则为 true；否则为 false。</returns>
+      <param name="project">要生成的 <see cref="T:Microsoft.Build.BuildEngine.Project" />。</param>
+      <param name="targetName">要生成的 Target 元素的 Name 属性。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.BuildProject(Microsoft.Build.BuildEngine.Project,System.String[])">
+      <summary>生成指定 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 的指定目标。</summary>
+      <returns>
+            如果生成成功，则为 true；否则为 false。</returns>
+      <param name="project">要生成的 <see cref="T:Microsoft.Build.BuildEngine.Project" />。</param>
+      <param name="targetNames">一个数组，其中包含要生成的 Target 元素的 Name 属性。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.BuildProject(Microsoft.Build.BuildEngine.Project,System.String[],System.Collections.IDictionary)">
+      <summary>生成指定 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 的指定目标，并返回目标的输出。</summary>
+      <returns>
+            如果生成成功，则为 true；否则为 false。</returns>
+      <param name="project">要生成的 <see cref="T:Microsoft.Build.BuildEngine.Project" />。</param>
+      <param name="targetNames">一个数组，其中包含要生成的 Target 元素的 Name 属性。</param>
+      <param name="targetOutputs">生成的目标的输出。如果不需要输出，则此参数可以是空引用（在 Visual Basic 中为 Nothing）。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.BuildProject(Microsoft.Build.BuildEngine.Project,System.String[],System.Collections.IDictionary,Microsoft.Build.BuildEngine.BuildSettings)">
+      <summary>使用指定的 <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> 生成指定 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 的指定目标，并返回目标的输出。</summary>
+      <returns>
+            如果生成成功，则为 true；否则为 false。</returns>
+      <param name="project">要生成的 <see cref="T:Microsoft.Build.BuildEngine.Project" />。</param>
+      <param name="targetNames">一个数组，其中包含要生成的 Target 元素的 Name 属性。</param>
+      <param name="targetOutputs">生成的目标的输出。如果不需要输出，则此参数可以是空引用（在 Visual Basic 中为 Nothing）。</param>
+      <param name="buildFlags">要应用于生成的 <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" />。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String)">
+      <summary>加载指定的项目文件并生成项目。</summary>
+      <returns>
+            如果生成成功，则为 true；否则为 false。</returns>
+      <param name="projectFile">要加载和生成的项目文件。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String)">
+      <summary>加载指定的项目文件并生成项目的指定目标。</summary>
+      <returns>
+            如果生成成功，则为 true；否则为 false。</returns>
+      <param name="projectFile">要加载和生成的项目文件。</param>
+      <param name="targetName">要生成的 Target 元素的 Name 属性。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String[])">
+      <summary>加载指定的项目文件并生成项目的指定目标。</summary>
+      <returns>
+            如果生成成功，则为 true；否则为 false。</returns>
+      <param name="projectFile">要加载和生成的项目文件。</param>
+      <param name="targetNames">一个数组，其中包含要生成的 Target 元素的 Name 属性。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String[],Microsoft.Build.BuildEngine.BuildPropertyGroup)">
+      <summary>加载指定的项目文件，使用指定的 <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" /> 生成项目的指定目标，并返回目标的输出。</summary>
+      <returns>
+            如果生成成功，则为 true；否则为 false。</returns>
+      <param name="projectFile">要加载和生成的项目文件。</param>
+      <param name="targetNames">一个数组，其中包含要生成的 Target 元素的 Name 属性。</param>
+      <param name="globalProperties">要应用于生成的 <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" />。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String[],Microsoft.Build.BuildEngine.BuildPropertyGroup,System.Collections.IDictionary)">
+      <summary>加载指定的项目文件，使用指定的 <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" /> 生成项目的指定目标，并返回目标的输出。</summary>
+      <returns>
+            如果生成成功，则为 true；否则为 false。</returns>
+      <param name="projectFile">要加载和生成的项目文件。</param>
+      <param name="targetNames">一个数组，其中包含要生成的 Target 元素的 Name 属性。</param>
+      <param name="globalProperties">要应用于生成的 <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" />。</param>
+      <param name="targetOutputs">生成的目标的输出。如果不需要输出，则此参数可以是空引用（在 Visual Basic 中为 Nothing）。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String[],Microsoft.Build.BuildEngine.BuildPropertyGroup,System.Collections.IDictionary,Microsoft.Build.BuildEngine.BuildSettings)">
+      <summary>加载指定的项目文件，使用指定的 <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> 和 <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" /> 生成项目的指定目标，并返回目标的输出。</summary>
+      <returns>
+            如果生成成功，则为 true；否则为 false。</returns>
+      <param name="projectFile">要加载和生成的项目文件。</param>
+      <param name="targetNames">一个数组，其中包含要生成的 Target 元素的 Name 属性。</param>
+      <param name="globalProperties">要应用于生成的 <see cref="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties" />。</param>
+      <param name="targetOutputs">生成的目标的输出。如果不需要输出，则此参数可以是空引用（在 Visual Basic 中为 Nothing）。</param>
+      <param name="buildFlags">要应用于生成的 <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" />。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFile(System.String,System.String[],Microsoft.Build.BuildEngine.BuildPropertyGroup,System.Collections.IDictionary,Microsoft.Build.BuildEngine.BuildSettings,System.String)">
+      <summary>从磁盘加载项目文件并生成默认目标。</summary>
+      <returns>
+            如果生成成功，则为 true；否则为 false。</returns>
+      <param name="projectFile">要生成的项目的名称。</param>
+      <param name="targetNames">每个项目的目标的 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 数组。如果要生成项目的默认目标，可为 null。</param>
+      <param name="globalProperties">每个项目的属性的 <see cref="T:System.Collections.IDictionary" /> 数组。如果不需要任何全局属性，它可以为 null。</param>
+      <param name="targetOutputs">目标输出的表的 <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> 数组。如果不需要输出，它可以为 null。</param>
+      <param name="buildFlags">附加生成标志的字符串数组。</param>
+      <param name="toolsVersion">要强加给此生成中的项目的 ToolsVersion。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.BuildProjectFiles(System.String[],System.String[][],Microsoft.Build.BuildEngine.BuildPropertyGroup[],System.Collections.IDictionary[],Microsoft.Build.BuildEngine.BuildSettings,System.String[])">
+      <summary>从磁盘加载一组项目文件，然后生成每个项目的给定目标列表。</summary>
+      <returns>
+            如果项目成功生成，则为 true；否则为 false。</returns>
+      <param name="projectFiles">要生成的项目文件的字符串列表。此值不能为 null。</param>
+      <param name="targetNamesPerProject">每个项目的目标的 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 数组。</param>
+      <param name="globalPropertiesPerProject">每个项目的属性的 <see cref="T:System.Collections.IDictionary" /> 数组。此值不能为 null。</param>
+      <param name="targetOutputsPerProject">目标输出的表的 <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> 数组。此值不能为 null。</param>
+      <param name="buildFlags">附加生成标志的字符串数组。</param>
+      <param name="toolsVersions">要强加给此生成中的项目的 ToolsVersion。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.CreateNewProject">
+      <summary>创建一个与此 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 关联的空 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 对象。</summary>
+      <returns>创建的 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 对象。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Engine.DefaultToolsVersion">
+      <summary>此生成引擎的默认 ToolsVersion。</summary>
+      <returns>一个表示默认 ToolsVersion 的字符串。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.GetLoadedProject(System.String)">
+      <summary>返回与指定的项目文件关联的 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 对象。</summary>
+      <returns>与指定的项目文件关联的 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 对象。如果没有与指定的项目文件关联的 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 对象，则此方法将返回空引用（Visual Basic 中为 Nothing）。</returns>
+      <param name="projectFullFileName">
+        <see cref="T:Microsoft.Build.BuildEngine.Project" /> 对象的项目文件的完全限定文件路径。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Engine.GlobalEngine">
+      <summary>获取此 <see cref="T:System.AppDomain" /> 的全局（共享）<see cref="T:Microsoft.Build.BuildEngine.Engine" />。</summary>
+      <returns>此 <see cref="T:System.AppDomain" /> 的全局（共享）<see cref="T:Microsoft.Build.BuildEngine.Engine" />。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Engine.GlobalProperties">
+      <summary>获取或设置项目的全局属性的集合。</summary>
+      <returns>一个 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" />，其中包含项目的全局属性。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Engine.IsBuilding">
+      <summary>获取一个值，该值指示当前是否正在生成项目。</summary>
+      <returns>
+            如果生成正在进行中，则为 true；否则为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Engine.OnlyLogCriticalEvents">
+      <summary>获取或设置一个值，该值指示在生成过程中是否只记录关键事件，例如警告和错误。</summary>
+      <returns>
+            如果应仅仅记录关键事件，则为 true；否则为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.RegisterDistributedLogger(Microsoft.Build.Framework.ILogger,Microsoft.Build.BuildEngine.LoggerDescription)">
+      <summary>向生成引擎注册分布式记录器。</summary>
+      <param name="centralLogger">一个表示中央记录器的 <see cref="T:Microsoft.Build.Framework.ILogger" />。</param>
+      <param name="forwardingLogger">一个表示转发记录器的 <see cref="T:Microsoft.Build.BuildEngine.LoggerDescription" />。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.RegisterLogger(Microsoft.Build.Framework.ILogger)">
+      <summary>向 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 中注册指定的记录器。</summary>
+      <param name="logger">要与此 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 关联的记录器。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.Shutdown">
+      <summary>当主机完成此生成引擎时调用。它将注销记录器并关闭节点。</summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Engine.Toolsets">
+      <summary>返回此生成引擎实例识别的工具集的集合。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" />。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.UnloadAllProjects">
+      <summary>从 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 中移除对 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 对象的所有引用。</summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.UnloadProject(Microsoft.Build.BuildEngine.Project)">
+      <summary>从 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 中移除对指定 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 的引用。</summary>
+      <param name="project"></param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Engine.UnregisterAllLoggers">
+      <summary>将所有记录器从 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 中注销。</summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Engine.Version">
+      <summary>获取 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 的版本。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 的版本。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.FileLogger">
+      <summary>
+                    扩展 <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" /> 以便将消息记录到文件中，而不是记录到控制台窗口中。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.FileLogger.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.BuildEngine.FileLogger" /> 类的新实例。
+                </summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.FileLogger.Initialize(Microsoft.Build.Framework.IEventSource)">
+      <summary>
+为记录器注册指定事件。
+                </summary>
+      <param name="eventSource">
+                    要注册到记录器的 <see cref="T:Microsoft.Build.Framework.IEventSource" />。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.FileLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)">
+      <summary>
+为记录器注册指定事件。
+                </summary>
+      <param name="eventSource">
+                    要注册到记录器的 <see cref="T:Microsoft.Build.Framework.IEventSource" />。
+                </param>
+      <param name="nodeCount">
+                    一个整数，表示事件源的节点 ID。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.FileLogger.Shutdown">
+      <summary>
+                    停止记录器，释放所有资源，并关闭记录器向其中写入消息的文件。
+                </summary>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.Import">
+      <summary>表示 MSBuild 项目中的单个 Import 元素。</summary>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Import.Condition">
+      <summary>获取 Import 元素的 Condition 属性值。</summary>
+      <returns>Import 元素的 Condition 属性值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Import.EvaluatedProjectPath">
+      <summary>获取 Import 元素的 Name 属性中指定的文件的完全限定路径。</summary>
+      <returns>Import 元素的 Name 属性中指定的文件的完全限定路径。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Import.IsImported">
+      <summary>获取一个值，该值指示 Import 元素是否已导入项目中。</summary>
+      <returns>
+            如果 Import 元素已导入项目中，则为 true；否则为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Import.ProjectPath">
+      <summary>获取或设置 Import 元素的 Project 属性值。</summary>
+      <returns>Import 元素的 Project 属性值。</returns>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.ImportCollection">
+      <summary>表示项目中的所有 Import 元素的集合。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ImportCollection.AddNewImport(System.String,System.String)">
+      <summary>允许宿主以编程方式将新的 &lt;Import&gt; 标记添加到由宿主操作的项目文件。</summary>
+      <param name="projectFile">一个必需的字符串，表示用于要添加的 &lt;Import&gt; 语句的项目文件的名称。例如，“myproject.csproj”。</param>
+      <param name="condition">一个可选字符串，指示是否处理相应元素。如果 <paramref name="condition" /> 为 true，则添加指定的 &lt;Import&gt; 标记，如果为 false，则不添加。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ImportCollection.CopyTo(Microsoft.Build.BuildEngine.Import[],System.Int32)">
+      <summary>从目标数组的指定索引处开始，将整个 <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> 复制到 <see cref="T:Microsoft.Build.BuildEngine.Import" /> 对象的一维兼容 <see cref="T:System.Array" />。</summary>
+      <param name="array">
+        <see cref="T:Microsoft.Build.BuildEngine.Import" /> 对象的一维 <see cref="T:System.Array" />，该数组是从 <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> 复制的元素的目标位置。<see cref="T:System.Array" /> 必须具有从零开始的索引。</param>
+      <param name="index">
+        <paramref name="array" /> 中从零开始的索引，在此处开始复制。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ImportCollection.CopyTo(System.Array,System.Int32)">
+      <summary>从目标数组的指定索引处开始将整个 <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> 复制到兼容的一维 <see cref="T:System.Array" />。</summary>
+      <param name="array">作为从 <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> 复制的元素的目标位置的一维 <see cref="T:System.Array" />。<see cref="T:System.Array" /> 必须具有从零开始的索引。</param>
+      <param name="index">
+        <paramref name="array" /> 中从零开始的索引，在此处开始复制。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.ImportCollection.Count">
+      <summary>获取一个值，该值指示 <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> 中 <see cref="T:Microsoft.Build.BuildEngine.Import" /> 对象的数目。</summary>
+      <returns>表示集合中的 <see cref="T:Microsoft.Build.BuildEngine.Import" /> 对象数目的整数值。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ImportCollection.GetEnumerator">
+      <summary>获取循环访问 <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> 的枚举数。</summary>
+      <returns>用于整个 <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> 的 <see cref="T:System.Collections.IEnumerator" />。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.ImportCollection.IsSynchronized">
+      <summary>获取一个值，该值指示是否同步对 <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> 的访问（线程安全）。</summary>
+      <returns>
+            如果对 <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> 的访问是同步的（线程安全），则为 true；否则为 false。默认值为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ImportCollection.RemoveImport(Microsoft.Build.BuildEngine.Import)">
+      <summary>允许宿主以编程方式移除作为由宿主操作的项目文件的一部分的 &lt;Import&gt; 标记。</summary>
+      <param name="importToRemove">一个字符串，表示要从项目文件中移除的 &lt;Import&gt; 标记的名称。</param>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.ImportCollection.SyncRoot">
+      <summary>获取可用于同步 <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> 访问的对象。</summary>
+      <returns>可用于同步对 <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> 的访问的对象。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.InternalLoggerException">
+      <summary>此异常用于包装来自记录器的未处理异常。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InternalLoggerException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.BuildEngine.InternalLoggerException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InternalLoggerException.#ctor(System.String)">
+      <summary>使用指定的值初始化 <see cref="T:Microsoft.Build.BuildEngine.InternalLoggerException" /> 类的新实例。</summary>
+      <param name="message">解释异常原因的错误消息。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InternalLoggerException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的值初始化 <see cref="T:Microsoft.Build.BuildEngine.InternalLoggerException" /> 类的新实例。</summary>
+      <param name="message">解释异常原因的错误消息。</param>
+      <param name="innerException">导致当前异常的异常。如果 <paramref name="innerException" /> 参数不是 null 引用（Visual Basic 中为 Nothing），则在处理内部异常的 catch 块中将引发当前异常。</param>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.InternalLoggerException.BuildEventArgs">
+      <summary>获取正在记录的生成事件的详细信息（如果有的话）。</summary>
+      <returns>正在记录的生成事件的详细信息。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.InternalLoggerException.ErrorCode">
+      <summary>获取与此异常的消息关联的错误代码。</summary>
+      <returns>错误代码的文本。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InternalLoggerException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>使用有关异常的信息设置 <see cref="T:System.Runtime.Serialization.SerializationInfo" />。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它包含有关所引发异常的序列化对象数据。</param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含有关源或目标的上下文信息。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.InternalLoggerException.HelpKeyword">
+      <summary>获取与此错误关联的 F1 帮助关键字。</summary>
+      <returns>与此错误关联的 F1 帮助关键字。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.InternalLoggerException.InitializationException">
+      <summary>获取在记录器初始化过程中是否发生异常。</summary>
+      <returns>
+            如果在记录器初始化过程中发生异常，则为 true；否则为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.InvalidProjectFileException">
+      <summary>当用户的 XML 项目文件出现问题时，会引发此异常。该问题可能是语义问题也可能是语法问题。如果该问题是语法问题，则通常是由 XSD 验证导致的。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" /> 类的新实例。 </summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor(System.String)">
+      <summary>使用指定的消息初始化 <see cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" /> 类的新实例。</summary>
+      <param name="message">解释异常原因的错误信息。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的错误信息和内部异常初始化 <see cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" /> 类的新实例。</summary>
+      <param name="message">解释异常原因的错误信息。</param>
+      <param name="innerException">导致当前异常的异常。如果 <paramref name="innerException" /> 参数不是空引用（在 Visual Basic 中为 Nothing），则当前异常是在处理内部异常的 catch 块中引发的。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+      <summary>使用丰富的错误信息初始化 <see cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" /> 类的新实例。</summary>
+      <param name="projectFile">无效的项目文件。可以为空字符串。</param>
+      <param name="lineNumber">项目中的无效行号。如果没有，则设置为零。</param>
+      <param name="columnNumber">项目中的无效列号。如果没有，则设置为零。</param>
+      <param name="endLineNumber">项目中的无效行范围的结尾。如果没有，则设置为零。</param>
+      <param name="endColumnNumber">项目中的无效列范围的结尾。如果没有，则设置为零。</param>
+      <param name="message">异常的错误信息文本。</param>
+      <param name="errorSubcategory">关于错误的说明。此参数可以是空引用（在 Visual Basic 中为 Nothing）。</param>
+      <param name="errorCode">错误代码。此参数可以是空引用 (Nothing)。</param>
+      <param name="helpKeyword">宿主 IDE 的 F1 帮助关键字。此参数可以是空引用 (Nothing)。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor(System.Xml.XmlNode,System.String,System.String,System.String,System.String)">
+      <summary>使用丰富的错误信息初始化 <see cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" /> 类的新实例。</summary>
+      <param name="xmlNode">错误所在的 XML 节点。可以为空。</param>
+      <param name="message">异常的错误信息文本。</param>
+      <param name="errorSubcategory">关于错误的说明。此参数可以是空引用（在 Visual Basic 中为 Nothing）。</param>
+      <param name="errorCode">错误代码。此参数可以是空引用 (Nothing)。</param>
+      <param name="helpKeyword">宿主 IDE 的 F1 帮助关键字。可以为空。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.BaseMessage">
+      <summary>获取异常消息，不包括项目文件。</summary>
+      <returns>仅错误信息字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.ColumnNumber">
+      <summary>获取项目中的无效列号（如果有的话）。</summary>
+      <returns>无效列号，或者零。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.EndColumnNumber">
+      <summary>获取项目中的无效列范围的最后一个列号（如果有的话）。</summary>
+      <returns>最后一个无效列号，或者零。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.EndLineNumber">
+      <summary>获取项目中的无效行范围的最后一个行号（如果有的话）。</summary>
+      <returns>最后一个无效行号，或者零。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.ErrorCode">
+      <summary>获取与异常消息关联的错误代码（如果有的话）。</summary>
+      <returns>错误代码字符串，或者空引用（在 Visual Basic 中为 Nothing）。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.ErrorSubcategory">
+      <summary>获取描述此错误的类型的错误子类别（如果有的话）。</summary>
+      <returns>子类别字符串，或者为空。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>使用有关异常的信息设置 <see cref="T:System.Runtime.Serialization.SerializationInfo" />。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它存有有关所引发异常的序列化的对象数据。</param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含有关源或目标的上下文信息。</param>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.HelpKeyword">
+      <summary>获取宿主 IDE 的与此错误关联的 F1 帮助关键字（如果有的话）。</summary>
+      <returns>关键字字符串，或者空引用（在 Visual Basic 中为 Nothing）。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.LineNumber">
+      <summary>获取项目中的无效行号（如果有的话）。</summary>
+      <returns>无效行号，或者零。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.Message">
+      <summary>获取异常消息，包括受影响的项目文件（如果有的话）。</summary>
+      <returns>完整的消息字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.ProjectFile">
+      <summary>获取与此异常关联的项目文件（如果有的话）。</summary>
+      <returns>项目文件名和路径字符串，或者空引用（在 Visual Basic 中为 Nothing）。</returns>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException">
+      <summary>只要用户的自定义工具集定义文件存在问题，就会引发此异常。该问题可能是语义问题也可能是语法问题。如果该问题是语法问题，则通常是由 XSD 验证导致的。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException" /> 类的一个新实例。</summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>初始化 <see cref="T:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException" /> 类的一个新实例。</summary>
+      <param name="info"></param>
+      <param name="context"></param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException" /> 类的一个新实例。</summary>
+      <param name="message"></param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor(System.String,System.Exception)">
+      <summary>初始化 <see cref="T:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException" /> 类的一个新实例。</summary>
+      <param name="message">解释异常原因的错误消息。</param>
+      <param name="innerException">错误代码。此参数可以是 null 引用 (Nothing)。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor(System.String,System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException" /> 类的一个新实例。</summary>
+      <param name="message">解释异常原因的错误消息。</param>
+      <param name="errorCode">错误代码。此参数可以是 null 引用 (Nothing)。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor(System.String,System.String,System.Exception)">
+      <summary>初始化 <see cref="T:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException" /> 类的一个新实例。</summary>
+      <param name="message">解释异常原因的错误消息。</param>
+      <param name="errorCode">错误代码。此参数可以是 null 引用 (Nothing)。</param>
+      <param name="innerException">导致当前异常的异常。如果 <paramref name="innerException" /> 参数不是 null 引用（Visual Basic 中为 Nothing），则在处理内部异常的 catch 块中将引发当前异常。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.ErrorCode">
+      <summary>获取引发的异常错误代码。</summary>
+      <returns>一个表示错误代码的字符串。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>使用有关异常的信息设置 <see cref="T:System.Runtime.Serialization.SerializationInfo" />。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它包含有关所引发异常的序列化对象数据。</param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含有关源或目标的上下文信息。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.LoggerDescription">
+      <summary>以值集合的形式包含有关记录器的信息，这些信息可用于实例化记录器，还可经序列化以在不同进程之间传递。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.LoggerDescription.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.LoggerVerbosity)">
+      <summary>基于给定的参数创建记录器说明。</summary>
+      <param name="loggerClassName">记录器的类名称。</param>
+      <param name="loggerAssemblyName">记录器的程序集名称。</param>
+      <param name="loggerAssemblyFile">记录器的程序集文件名。</param>
+      <param name="loggerSwitchParameters">记录器参数字符串，如果不存在，则为 null。</param>
+      <param name="verbosity">记录器的详细信息开关。说明：在命令行上，所有记录器获取相同的详细级别。</param>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.LoggerDescription.LoggerSwitchParameters">
+      <summary>获取记录器参数字符串。</summary>
+      <returns>返回日志参数的字符串列表；如果不存在，则为 null。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.LoggerDescription.Verbosity">
+      <summary>获取记录器的详细级别。</summary>
+      <returns>一个字符串值，表示记录器的详细级别。</returns>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.Project">
+      <summary>
+                    表示可以使用 MSBuild 生成的项目。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 类的一个新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.#ctor(Microsoft.Build.BuildEngine.Engine)">
+      <summary>
+                    使用提供的 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 初始化 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 类的新实例。
+                </summary>
+      <param name="engine">
+                    要用于在内存中创建项目的 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 实例。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.#ctor(Microsoft.Build.BuildEngine.Engine,System.String)">
+      <summary>
+                    使用提供的 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 和 <see cref="P:Microsoft.Build.BuildEngine.Project.ToolsVersion" /> 初始化 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 类的新实例。
+                </summary>
+      <param name="engine">
+                    要用于在内存中创建项目的 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 实例。
+                </param>
+      <param name="toolsVersion">
+                    要用于在内存中创建项目的 <see cref="P:Microsoft.Build.BuildEngine.Project.ToolsVersion" />。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.AddNewImport(System.String,System.String)">
+      <summary>
+                    在项目的末尾添加一个 Import 元素。
+                </summary>
+      <param name="projectFile">
+                    要导入的项目文件的名称。对应于 Project 元素的 Import 属性 (Attribute)。
+                </param>
+      <param name="condition">
+                    要在导入项目之前计算的条件。对应于 Condition 元素的 Import 属性 (Attribute)。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.AddNewItem(System.String,System.String)">
+      <summary>
+                    将指定的 Item 元素添加到项目中。
+                </summary>
+      <returns>
+                    包含创建的项的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />。
+                </returns>
+      <param name="itemName">
+该项要添加到的项集合的名称。与 Item 元素的用户定义名称对应。
+                </param>
+      <param name="itemInclude">
+                    该项的 Include 属性的值。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.AddNewItem(System.String,System.String,System.Boolean)">
+      <summary>
+                    将指定的 Item 元素添加到项目中。
+                </summary>
+      <returns>
+                    包含创建的项的 <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />。
+                </returns>
+      <param name="itemName">
+该项要添加到的项集合的名称。与 Item 元素的用户定义名称对应。
+                </param>
+      <param name="itemInclude">
+                    该项的 Include 属性的值。
+                </param>
+      <param name="treatItemIncludeAsLiteral">
+                    如果将 <paramref name="itemInclude" /> 参数作为文本值处理，则为 true；否则为 false。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.AddNewItemGroup">
+      <summary>
+                    将新的 ItemGroup 元素添加到项目中。
+                </summary>
+      <returns>
+                    包含创建的项组的 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.AddNewPropertyGroup(System.Boolean)">
+      <summary>
+                    将新的 PropertyGroup 元素添加到项目中。
+                </summary>
+      <returns>
+                    包含创建的属性组的 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" />。
+                </returns>
+      <param name="insertAtEndOfProject">
+                    如果将 PropertyGroup 插入到项目的末尾，则为 true；否则为 false。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.AddNewUsingTaskFromAssemblyFile(System.String,System.String)">
+      <summary>
+                    使用指定的程序集文件添加一个新的 UsingTask 元素。
+                </summary>
+      <param name="taskName">
+要从程序集中引用的任务的名称。对应于 TaskName 元素的 UsingTask 属性 (Attribute)。
+                </param>
+      <param name="assemblyFile">
+                    程序集的文件路径。对应于 AssemblyFile 元素的 UsingTask 属性 (Attribute)。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.AddNewUsingTaskFromAssemblyName(System.String,System.String)">
+      <summary>
+                    使用指定的程序集名称添加一个新的 UsingTask 元素。
+                </summary>
+      <param name="taskName">
+要从程序集中引用的任务的名称。对应于 TaskName 元素的 UsingTask 属性 (Attribute)。
+                </param>
+      <param name="assemblyName">
+                    要加载的程序集的名称。对应于 AssemblyName 元素的 UsingTask 属性 (Attribute)。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.Build">
+      <summary>
+                    生成项目的默认目标。
+                </summary>
+      <returns>
+                    如果生成成功，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.Build(System.String)">
+      <summary>
+                    在项目中生成指定的目标。
+                </summary>
+      <returns>
+                    如果生成成功，则为 true；否则为 false。
+                </returns>
+      <param name="targetName">
+                    要生成的目标。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.Build(System.String[])">
+      <summary>
+                    在项目中生成指定的目标列表。
+                </summary>
+      <returns>
+                    如果生成成功，则为 true；否则为 false。
+                </returns>
+      <param name="targetNames">
+要生成的目标的列表。此参数可以为 null 引用（Visual Basic 中为 Nothing）以生成默认目标。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.Build(System.String[],System.Collections.IDictionary)">
+      <summary>
+                    在项目中生成指定的目标列表，并返回目标的输出。
+                </summary>
+      <returns>
+                    如果生成成功，则为 true；否则为 false。
+                </returns>
+      <param name="targetNames">
+要生成的目标的列表。此参数可以为 null 引用（Visual Basic 中为 Nothing）以生成默认目标。
+                </param>
+      <param name="targetOutputs">
+生成的目标的输出。如果不需要输出，则此参数可以是 null 引用 (Nothing)。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.Build(System.String[],System.Collections.IDictionary,Microsoft.Build.BuildEngine.BuildSettings)">
+      <summary>
+                    使用指定的设置在项目中生成指定的目标列表，并返回目标的输出。
+                </summary>
+      <returns>
+                    如果生成成功，则为 true；否则为 false。
+                </returns>
+      <param name="targetNames">
+要生成的目标的列表。此参数可以为 null 引用（Visual Basic 中为 Nothing）以生成默认目标。
+                </param>
+      <param name="targetOutputs">
+生成的目标的输出。如果不需要输出，则此参数可以是 null 引用 (Nothing)。
+                </param>
+      <param name="buildFlags">
+                    要应用于生成的 <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" />。
+                </param>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.BuildEnabled">
+      <summary>
+                    获取或设置一个值，该值指示是否允许为项目生成任务和目标。
+                </summary>
+      <returns>
+                    如果允许为项目生成任务和目标，则为 true；否则为 false。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.DefaultTargets">
+      <summary>
+                    获取或设置 MSBuild 项目中 Project 元素的 DefaultTargets 属性。
+                </summary>
+      <returns>DefaultTargets 属性中指定的分号 (;) 分隔的目标列表。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.DefaultToolsVersion">
+      <summary>
+                    设置或获取在项目文件中的 <see cref="Project" />Project 元素 (MSBuild) 元素上找到的 ToolsVersion XML 属性。
+                </summary>
+      <returns>
+                    一个字符串，表示工具的版本。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.Encoding">
+      <summary>
+                    获取项目文件的编码。
+                </summary>
+      <returns>
+                    项目文件的 <see cref="T:System.Text.Encoding" /> 值。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.EvaluatedItems">
+      <summary>
+                    获取在生成过程中计算的项的集合。
+                </summary>
+      <returns>
+                    包含在生成过程中计算的项的 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.EvaluatedItemsIgnoringCondition">
+      <summary>
+                    获取项目中的所有项的集合，甚至包括那些由于 Condition 属性的计算结果为 false 而在生成过程中不使用的项。
+                </summary>
+      <returns>
+                    包含项目中的所有项的 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.EvaluatedProperties">
+      <summary>
+                    获取在生成过程中计算的属性的集合。
+                </summary>
+      <returns>
+                    包含在生成过程中计算的属性的 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" />。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.FullFileName">
+      <summary>
+                    获取或设置项目文件的完全限定路径和文件名。
+                </summary>
+      <returns>
+                    项目文件的完整路径。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.GetConditionedPropertyValues(System.String)">
+      <summary>
+                    返回指定属性的可能值的列表。
+                </summary>
+      <returns>
+                    属性的可能值的列表。
+                </returns>
+      <param name="propertyName">
+                    生成可能值的列表时使用的属性。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.GetEvaluatedItemsByName(System.String)">
+      <summary>
+                    返回属于指定项集合的所有计算项。
+                </summary>
+      <returns>
+                    包含属于指定项集合的所有计算项的 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />。
+                </returns>
+      <param name="itemName">
+                    项集合的名称。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.GetEvaluatedItemsByNameIgnoringCondition(System.String)">
+      <summary>
+                    返回属于指定项集合的所有项。
+                </summary>
+      <returns>
+                    一个 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />，其中包含属于指定项集合的所有项，甚至包括那些由于 Condition 属性的计算结果为 false 而在生成过程中不使用的项。
+                </returns>
+      <param name="itemName">
+                    指定的项集合的名称。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.GetEvaluatedProperty(System.String)">
+      <summary>
+                    返回指定的属性的值。
+                </summary>
+      <returns>
+                    指定的属性的值。
+                </returns>
+      <param name="propertyName">
+                    属性的名称。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.GetProjectExtensions(System.String)">
+      <summary>
+                    从 ProjectExtensions 元素中的指定元素返回 XML 的字符串值。
+                </summary>
+      <returns>
+                    指定的元素在项目的 ProjectExtensions 元素中的字符串值。
+                </returns>
+      <param name="id">
+                    元素在要返回的 ProjectExtensions 元素中的名称。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.GlobalProperties">
+      <summary>
+                    获取或设置项目的全局属性的集合。
+                </summary>
+      <returns>
+                    包含项目的全局属性的 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" />。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.HasToolsVersionAttribute">
+      <summary>
+                    获取项目文件是否具有 ToolsVersion XML 属性。
+                </summary>
+      <returns>
+                    如果项目具有 ToolsVersion 属性，则为 true；否则为 false。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.Imports">
+      <summary>
+                    获取导入该项目中的项目。
+                </summary>
+      <returns>
+                    导入该项目中的项目的 <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" />。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.InitialTargets">
+      <summary>
+                    获取或设置 MSBuild 项目中 Project 元素的 InitialTargets 属性。
+                </summary>
+      <returns>InitialTargets 属性中指定的目标的分号 (;) 分隔列表。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.IsDirty">
+      <summary>
+                    获取一个值，该值指示项目是否已更改并需要保存到一个文件中。
+                </summary>
+      <returns>
+                    如果项目已更改并需要保存，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.IsValidated">
+      <summary>
+                    获取一个值，该值指示是否对照架构对项目进行验证。
+                </summary>
+      <returns>
+                    如果要对照架构对项目进行验证，则为 true；否则为 false。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.ItemGroups">
+      <summary>
+                    获取使用项目中的 ItemGroup 元素指定的项组的集合。
+                </summary>
+      <returns>
+                    包含项目中指定的项组的 <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroupCollection" />。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.Load(System.IO.TextReader)">
+      <summary>
+                    将指定 <see cref="T:System.IO.TextReader" /> 的内容加载到 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 对象中。
+                </summary>
+      <param name="textReader">
+                    要加载的 <see cref="T:System.IO.TextReader" />。
+                </param>
+      <exception cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException">
+        <paramref name="textReader" />
+        <see cref="T:System.IO.TextReader" /> 使用的文件不是有效的项目文件。
+                </exception>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.Load(System.IO.TextReader,Microsoft.Build.BuildEngine.ProjectLoadSettings)">
+      <summary>
+从一个包含 XML 内容的字符串读取此项目的内容。
+                </summary>
+      <param name="textReader">
+                    一个 <see cref="T:System.IO.TextReader" /> 对象，其中包含项目内容。
+                </param>
+      <param name="projectLoadSettings">
+一个 <see cref="T:Microsoft.Build.BuildEngine.ProjectLoadSettings" /> 值，指定正在加载的项目的设置。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.Load(System.String)">
+      <summary>
+                    将指定项目文件的内容加载到 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 对象中。
+                </summary>
+      <param name="projectFileName">
+                    要加载的项目文件。
+                </param>
+      <exception cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException">
+        <paramref name="projectFileName" /> 指定的文件不是有效的项目文件。
+                </exception>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.Load(System.String,Microsoft.Build.BuildEngine.ProjectLoadSettings)">
+      <summary>
+                    从磁盘上的项目 XML 文件读取此项目的内容。
+                </summary>
+      <param name="projectFileName">
+                    一个字符串，表示要加载的文件的名称。
+                </param>
+      <param name="projectLoadSettings">
+一个 <see cref="T:Microsoft.Build.BuildEngine.ProjectLoadSettings" /> 值，指定正在加载的项目的设置。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.LoadXml(System.String)">
+      <summary>
+                    将指定字符串的内容加载到 <see cref="T:Microsoft.Build.BuildEngine.Project" /> 对象中。
+                </summary>
+      <param name="projectXml">
+                    要加载的 XML 的字符串。
+                </param>
+      <exception cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException">
+        <paramref name="projectXML" /> 中包含的 XML 不是有效的项目文件。
+                </exception>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.LoadXml(System.String,Microsoft.Build.BuildEngine.ProjectLoadSettings)">
+      <summary>
+从一个包含 XML 内容的字符串读取此项目的内容。
+                </summary>
+      <param name="projectXml">
+                    一个字符串，其中包含项目内容。
+                </param>
+      <param name="projectLoadSettings">
+一个 <see cref="T:Microsoft.Build.BuildEngine.ProjectLoadSettings" /> 值，指定正在加载的项目的设置。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.MarkProjectAsDirty">
+      <summary>
+                    将项目的 <see cref="P:Microsoft.Build.BuildEngine.Project.IsDirty" /> 属性设置为 true。
+                </summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.ParentEngine">
+      <summary>
+                    获取生成项目的 <see cref="T:Microsoft.Build.BuildEngine.Engine" />。
+                </summary>
+      <returns>
+                    父 <see cref="T:Microsoft.Build.BuildEngine.Engine" /> 对象。
+                </returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.PropertyGroups">
+      <summary>
+                    获取使用项目中的 PropertyGroup 元素指定的属性组的集合。
+                </summary>
+      <returns>
+                    包含项目中指定的属性组的 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection" />。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.RemoveAllItemGroups">
+      <summary>
+                    移除项目中的所有项组，但不修改导入的项目。
+                </summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.RemoveAllPropertyGroups">
+      <summary>
+                    移除项目中的所有属性组，但不修改导入的项目。
+                </summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.RemoveImportedPropertyGroup(Microsoft.Build.BuildEngine.BuildPropertyGroup)">
+      <summary>
+                    从主项目文件中移除指定的属性组。
+                </summary>
+      <param name="propertyGroupToRemove">
+                    一个 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 对象，表示要移除的组。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.RemoveItem(Microsoft.Build.BuildEngine.BuildItem)">
+      <summary>
+                    从项目中移除指定的项。
+                </summary>
+      <param name="itemToRemove">
+                    要从项目中移除的项。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.RemoveItemGroup(Microsoft.Build.BuildEngine.BuildItemGroup)">
+      <summary>
+                    从项目中移除指定的项组。
+                </summary>
+      <param name="itemGroupToRemove">
+                    要从项目中移除的项组。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.RemoveItemGroupsWithMatchingCondition(System.String)">
+      <summary>
+                    从项目中移除所有具有指定的 condition 的项组，但不修改导入的项目。
+                </summary>
+      <param name="matchCondition">
+                    移除项组时要匹配的条件。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.RemoveItemsByName(System.String)">
+      <summary>
+                    从项目中移除指定项集合中的所有项，但不修改导入的项目。
+                </summary>
+      <param name="itemName">
+                    要移除的项集合。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.RemovePropertyGroup(Microsoft.Build.BuildEngine.BuildPropertyGroup)">
+      <summary>
+                    从项目中移除指定的属性组。
+                </summary>
+      <param name="propertyGroupToRemove">
+                    要从项目中移除的属性组。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.RemovePropertyGroupsWithMatchingCondition(System.String)">
+      <summary>
+                    从项目中移除所有具有指定的 condition 的属性组，但不修改导入的项目。
+                </summary>
+      <param name="matchCondition">
+                    移除属性组时要匹配的条件。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.RemovePropertyGroupsWithMatchingCondition(System.String,System.Boolean)">
+      <summary>
+从具有特定“条件”的主项目文件中移除所有 &lt;PropertyGroup&gt;。
+                </summary>
+      <param name="matchCondition">
+                    一个字符串，表示要移除的 PropertyGroups 的条件。
+                </param>
+      <param name="includeImportedPropertyGroups">
+                    一个布尔值，指示在搜索中是否包括导入的属性组。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.ResetBuildStatus">
+      <summary>
+                    重置项目中每个目标的状态，以便下一次生成将再次生成所有目标。
+                </summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.Save(System.IO.TextWriter)">
+      <summary>
+                    将项目保存在指定的 <see cref="T:System.IO.TextWriter" /> 对象中。
+                </summary>
+      <param name="textWriter">
+                    项目要保存到的 <see cref="T:System.IO.TextWriter" /> 对象。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.Save(System.String)">
+      <summary>
+                    将项目保存到指定的文件。
+                </summary>
+      <param name="projectFileName">
+项目要保存到的文件的名称。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.Save(System.String,System.Text.Encoding)">
+      <summary>
+                    使用指定的编码将项目保存到指定的文件中。
+                </summary>
+      <param name="projectFileName">
+项目要保存到的文件的名称。
+                </param>
+      <param name="encoding">
+                    用来保存文件的 <see cref="T:System.Text.Encoding" /> 值。
+                </param>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.SchemaFile">
+      <summary>
+                    获取或设置验证项目时使用的 XML 架构文件。
+                </summary>
+      <returns>
+                    验证项目时使用的 XML 架构文件。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.SetImportedProperty(System.String,System.String,System.String,Microsoft.Build.BuildEngine.Project)">
+      <summary>
+设置某个属性在指定的导入项目中的值。
+                </summary>
+      <param name="propertyName">
+要更改的属性的名称。
+                </param>
+      <param name="propertyValue">
+要分配给属性的值。
+                </param>
+      <param name="condition">
+                    要在属性上使用的条件。对应于 Property 元素的 Condition 属性 (Attribute)。
+                </param>
+      <param name="importProject">
+                    包含指定属性的 <see cref="T:Microsoft.Build.BuildEngine.Project" />。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.SetImportedProperty(System.String,System.String,System.String,Microsoft.Build.BuildEngine.Project,Microsoft.Build.BuildEngine.PropertyPosition)">
+      <summary>
+设置某个属性在指定的导入项目中的值。
+                </summary>
+      <param name="propertyName">
+要更改的属性的名称。
+                </param>
+      <param name="propertyValue">
+要分配给属性的值。
+                </param>
+      <param name="condition">
+                    要在属性上使用的条件。对应于 Property 元素的 Condition 属性 (Attribute)。
+                </param>
+      <param name="importedProject">
+                    包含指定属性的 <see cref="T:Microsoft.Build.BuildEngine.Project" />。
+                </param>
+      <param name="position">
+                    一个 <see cref="T:Microsoft.Build.BuildEngine.PropertyPosition" /> 值，该值指示属性的插入位置。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.SetImportedProperty(System.String,System.String,System.String,Microsoft.Build.BuildEngine.Project,Microsoft.Build.BuildEngine.PropertyPosition,System.Boolean)">
+      <summary>
+设置某个属性在指定的导入项目中的值。
+                </summary>
+      <param name="propertyName">
+要更改的属性的名称。
+                </param>
+      <param name="propertyValue">
+要分配给属性的值。
+                </param>
+      <param name="condition">
+                    要在属性上使用的条件。对应于 Property 元素的 Condition 属性 (Attribute)。
+                </param>
+      <param name="importedProject">
+                    包含指定属性的 <see cref="T:Microsoft.Build.BuildEngine.Project" />。
+                </param>
+      <param name="position">
+                    一个 <see cref="T:Microsoft.Build.BuildEngine.PropertyPosition" /> 值，该值指示属性的插入位置。
+                </param>
+      <param name="treatPropertyValueAsLiteral">
+                    如果将 <paramref name="propertyValue" /> 参数作为文本值处理，则为 true；否则为 false。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.SetProjectExtensions(System.String,System.String)">
+      <summary>
+                    使用指定的元素名称和内容设置项目的 ProjectExtensions 元素。
+                </summary>
+      <param name="id">
+                    要作为 ProjectExtensions 元素的子元素创建的 XML 元素的名称。
+                </param>
+      <param name="content">
+                    创建的 XML 元素的文本值。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.SetProperty(System.String,System.String)">
+      <summary>
+设置指定属性的值。
+                </summary>
+      <param name="propertyName">
+要更改的属性的名称。
+                </param>
+      <param name="propertyValue">
+要分配给属性的值。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.SetProperty(System.String,System.String,System.String)">
+      <summary>
+设置指定属性的值。
+                </summary>
+      <param name="propertyName">
+要更改的属性的名称。
+                </param>
+      <param name="propertyValue">
+要分配给属性的值。
+                </param>
+      <param name="condition">
+                    要在属性上使用的条件。对应于 Property 元素的 Condition 属性 (Attribute)。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.SetProperty(System.String,System.String,System.String,Microsoft.Build.BuildEngine.PropertyPosition)">
+      <summary>
+设置指定属性的值。
+                </summary>
+      <param name="propertyName">
+要更改的属性的名称。
+                </param>
+      <param name="propertyValue">
+要分配给属性的值。
+                </param>
+      <param name="condition">
+                    要在属性上使用的条件。对应于 Property 元素的 Condition 属性 (Attribute)。
+                </param>
+      <param name="position">
+                    一个 <see cref="T:Microsoft.Build.BuildEngine.PropertyPosition" /> 值，该值指示属性的插入位置。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Project.SetProperty(System.String,System.String,System.String,Microsoft.Build.BuildEngine.PropertyPosition,System.Boolean)">
+      <summary>
+设置指定属性的值。
+                </summary>
+      <param name="propertyName">
+要更改的属性的名称。
+                </param>
+      <param name="propertyValue">
+要分配给属性的值。
+                </param>
+      <param name="condition">
+                    要在属性上使用的条件。对应于 Property 元素的 Condition 属性 (Attribute)。
+                </param>
+      <param name="position">
+                    一个 <see cref="T:Microsoft.Build.BuildEngine.PropertyPosition" /> 值，该值指示属性的插入位置。
+                </param>
+      <param name="treatPropertyValueAsLiteral">
+                    如果将 <paramref name="propertyValue" /> 参数作为文本值处理，则为 true；否则为 false。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.Targets">
+      <summary>
+                    获取项目中的目标。
+                </summary>
+      <returns>
+                    项目中的目标的 <see cref="T:Microsoft.Build.BuildEngine.TargetCollection" />。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.TimeOfLastDirty">
+      <summary>
+                    获取一个 <see cref="T:System.DateTime" /> 对象，该对象指示上一次更改项目以至于需要将项目保存到文件的时间。
+                </summary>
+      <returns>
+                    一个 <see cref="T:System.DateTime" /> 对象，该对象指示上一次更改项目以至于需要将项目保存到文件的时间。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.ToolsVersion">
+      <summary>
+                    设置或获取项目正在使用的工具集的当前版本。
+                </summary>
+      <returns>
+                    一个字符串，表示工具集的版本号。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.UsingTasks">
+      <summary>
+                    获取项目中 UsingTask 元素的集合。
+                </summary>
+      <returns>
+                    项目中的 UsingTask 元素的 <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" />。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Project.Xml">
+      <summary>
+                    获取表示项目的 XML。
+                </summary>
+      <returns>
+                    表示项目的完整 XML。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.ProjectLoadSettings">
+      <summary>定义 MSBuild 加载项目的方式。</summary>
+    </member>
+    <member name="F:Microsoft.Build.BuildEngine.ProjectLoadSettings.None">
+      <summary>以正常方式加载项目。</summary>
+    </member>
+    <member name="F:Microsoft.Build.BuildEngine.ProjectLoadSettings.IgnoreMissingImports">
+      <summary>加载项目时忽略不存在的 .targets 文件。</summary>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.PropertyPosition">
+      <summary>指定定义项目中的属性插入位置的常数。</summary>
+    </member>
+    <member name="F:Microsoft.Build.BuildEngine.PropertyPosition.UseExistingOrCreateAfterLastPropertyGroup">
+      <summary>如果 Property 元素存在，则替换现有的该元素。否则，在可能的情况下创建一个新的 Property 元素作为现有兼容 PropertyGroup 元素的子元素。如有必要，请紧跟在项目中最后一个 PropertyGroup 的后面创建一个新的兼容 PropertyGroup 元素。</summary>
+    </member>
+    <member name="F:Microsoft.Build.BuildEngine.PropertyPosition.UseExistingOrCreateAfterLastImport">
+      <summary>如果 Property 元素存在，则替换现有的该元素。否则，在项目中最后一个 Import 元素的后面创建 Property。</summary>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.RemoteErrorException">
+      <summary>包装在不同节点上发生的异常。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.RemoteErrorException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>ISerializable 方法，由于 Exception 实现此接口，因此必须重写此方法。</summary>
+      <param name="info">一个 <see cref="T:System.Runtime.Serialization.SerializationInfo" /> 对象，表示有关远程错误异常的信息。</param>
+      <param name="context">一个 <see cref="T:System.Runtime.Serialization.StreamingContext" /> 对象，表示发生远程错误异常的上下文。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.Target">
+      <summary>表示在 MSBuild 项目中的单个 Target 元素。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Target.AddNewTask(System.String)">
+      <summary>将指定的 Task 元素添加到 Target 元素。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> 对象表示 Target 元素的子 Task 元素。</returns>
+      <param name="taskName">表示要添加到 Target 元素的 Task 元素的 <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> 对象。</param>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Target.Condition">
+      <summary>获取 Target 元素的 Condition 属性值。</summary>
+      <returns>Target 元素的 Condition 属性值。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Target.DependsOnTargets">
+      <summary>获取 Target 元素的 DependsOnTargets 属性值。</summary>
+      <returns>Target 元素的 DependsOnTargets 属性值。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Target.GetEnumerator">
+      <summary>获取循环访问 <see cref="T:Microsoft.Build.BuildEngine.Target" /> 中的 <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> 对象的枚举数。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.BuildEngine.Target" /> 中的 <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> 对象的 <see cref="T:System.Collections.IEnumerator" />。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Target.Inputs">
+      <summary>获取或设置要输入到此目标中的项。</summary>
+      <returns>一个表示多个项的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Target.IsImported">
+      <summary>获取一个值，该值指示 Target 元素是否已导入项目中。</summary>
+      <returns>
+            如果 Target 元素已导入项目中，则为 true；否则为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Target.Name">
+      <summary>获取 Target 元素的 Name 属性值。</summary>
+      <returns>Target 元素的 Name 属性值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Target.Outputs">
+      <summary>获取或设置此目标的期望输出。</summary>
+      <returns>一个表示输出的字符串。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Target.RemoveTask(Microsoft.Build.BuildEngine.BuildTask)">
+      <summary>从 Target 元素移除指定的 Task 元素。</summary>
+      <param name="taskElement">表示要从 Target 元素移除的 Task 元素的 <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> 对象。</param>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.TargetCollection">
+      <summary>表示项目中的所有 Target 元素的集合。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.TargetCollection.AddNewTarget(System.String)">
+      <summary>在项目的末尾添加一个新的 Target 元素。</summary>
+      <returns>表示创建的 Target 元素的 <see cref="T:Microsoft.Build.BuildEngine.Target" /> 对象。</returns>
+      <param name="targetName">新的 Target 元素的 Name 属性。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.TargetCollection.CopyTo(System.Array,System.Int32)">
+      <summary>从目标数组的指定索引处开始将整个 <see cref="T:Microsoft.Build.BuildEngine.TargetCollection" /> 复制到兼容的一维 <see cref="T:System.Array" />。</summary>
+      <param name="array">作为从 <see cref="T:Microsoft.Build.BuildEngine.TargetCollection" /> 复制的元素的目标位置的一维 <see cref="T:System.Array" />。<see cref="T:System.Array" /> 必须具有从零开始的索引。</param>
+      <param name="index">
+        <paramref name="array" /> 中从零开始的索引，从此处开始复制。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.TargetCollection.Count">
+      <summary>获取一个值，该值指示 <see cref="T:Microsoft.Build.BuildEngine.TargetCollection" /> 中 <see cref="T:Microsoft.Build.BuildEngine.Target" /> 对象的数目。</summary>
+      <returns>表示集合中的 <see cref="T:Microsoft.Build.BuildEngine.Target" /> 对象数目的整数值。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.TargetCollection.Exists(System.String)">
+      <summary>确定指定的 <see cref="T:Microsoft.Build.BuildEngine.Target" /> 是否存在于 <see cref="T:Microsoft.Build.BuildEngine.TargetCollection" /> 中。</summary>
+      <returns>
+如果 Target 元素存在，则为 true；否则为 false。</returns>
+      <param name="targetName">要搜索的 Target 元素的 Name 属性。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.TargetCollection.GetEnumerator">
+      <summary>获取循环访问 <see cref="T:Microsoft.Build.BuildEngine.TargetCollection" /> 的枚举数。</summary>
+      <returns>用于整个 <see cref="T:Microsoft.Build.BuildEngine.TargetCollection" /> 的 <see cref="T:System.Collections.IEnumerator" />。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.TargetCollection.IsSynchronized">
+      <summary>获取一个值，该值指示是否同步对 <see cref="T:Microsoft.Build.BuildEngine.TargetCollection" /> 的访问（线程安全）。</summary>
+      <returns>
+如果对 <see cref="T:Microsoft.Build.BuildEngine.TargetCollection" /> 的访问是同步的（线程安全），则为 true；否则为 false。默认为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.TargetCollection.Item(System.String)">
+      <summary>获取 <see cref="T:Microsoft.Build.BuildEngine.TargetCollection" /> 中的指定 <see cref="T:Microsoft.Build.BuildEngine.Target" /> 对象。</summary>
+      <returns>包含 <paramref name="index" /> 指定的 <see cref="P:Microsoft.Build.BuildEngine.Target.Name" /> 属性值的 <see cref="T:Microsoft.Build.BuildEngine.Target" /> 对象。</returns>
+      <param name="index">集合中的 Target 元素的 Name 属性。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.TargetCollection.RemoveTarget(Microsoft.Build.BuildEngine.Target)">
+      <summary>从项目中移除指定的 Target 元素。</summary>
+      <param name="targetToRemove">要移除的 Target 元素的 Name 属性。</param>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.TargetCollection.SyncRoot">
+      <summary>获取可用于同步 <see cref="T:Microsoft.Build.BuildEngine.TargetCollection" /> 访问的对象。</summary>
+      <returns>可用于同步对 <see cref="T:Microsoft.Build.BuildEngine.TargetCollection" /> 的访问的对象。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.Toolset">
+      <summary>表示 MSBuild 中的一个工具集。有关工具集的更多信息，请参见标准和自定义工具集配置。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Toolset.#ctor(System.String,System.String)">
+      <summary>创建一个 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 对象。</summary>
+      <param name="toolsVersion">一个字符串，表示当前使用的 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 版本。</param>
+      <param name="toolsPath">一个字符串，表示当前使用的 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 的路径。</param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Toolset.#ctor(System.String,System.String,Microsoft.Build.BuildEngine.BuildPropertyGroup)">
+      <summary>创建一个 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 对象。</summary>
+      <param name="toolsVersion">一个字符串，表示当前使用的 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 版本。</param>
+      <param name="toolsPath">一个字符串，表示当前使用的 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 的路径。</param>
+      <param name="buildProperties">一个字符串，表示特定于 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 的自定义属性。</param>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Toolset.BuildProperties">
+      <summary>获取用于设置特定于 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 的自定义属性的 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" />。</summary>
+      <returns>一个 <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> 对象。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Toolset.Clone">
+      <summary>创建指定 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 的副本。</summary>
+      <returns>一个 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 对象。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Toolset.ToolsPath">
+      <summary>获取到指定 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 的路径。</summary>
+      <returns>一个字符串，表示到 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 的路径。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.Toolset.ToolsVersion">
+      <summary>获取指定 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 的版本。</summary>
+      <returns>一个字符串，表示 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 的版本。</returns>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.ToolsetCollection">
+      <summary>
+                    表示一个或多个 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 对象。工具集是工具集版本（例如“2.0”）、工具路径和一组可选的关联属性的组合。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ToolsetCollection.Add(Microsoft.Build.BuildEngine.Toolset)">
+      <summary>
+                    将指定的 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 添加到此集合。
+                </summary>
+      <param name="item">
+                    一个 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 对象，表示要添加到集合的工具集。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ToolsetCollection.Clear">
+      <summary>
+不支持此方法。
+                </summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ToolsetCollection.Contains(Microsoft.Build.BuildEngine.Toolset)">
+      <summary>
+                    获取集合是否包含具有指定 <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" /> 名称的 <see cref="T:Microsoft.Build.BuildEngine.Toolset" />。
+                </summary>
+      <returns>
+                    如果集合中包含 <see cref="T:Microsoft.Build.BuildEngine.Toolset" />，则为 true；否则为 false。默认值为 false。
+                </returns>
+      <param name="item">
+                    必需。一个字符串值，表示 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 的名称。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ToolsetCollection.Contains(System.String)">
+      <summary>
+                    获取集合是否包含具有指定工具版本的 <see cref="T:Microsoft.Build.BuildEngine.Toolset" />。
+                </summary>
+      <returns>
+                    如果集合中包含 <see cref="T:Microsoft.Build.BuildEngine.Toolset" />，则为 true；否则为 false。默认值为 false。
+                </returns>
+      <param name="toolsVersion">
+                    必需。一个字符串值，表示与 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 关联的工具版本。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ToolsetCollection.CopyTo(Microsoft.Build.BuildEngine.Toolset[],System.Int32)">
+      <summary>
+                    将 <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" /> 的内容复制到兼容的一维 <see cref="T:System.Array" />，从目标数组的指定索引处开始复制。
+                </summary>
+      <param name="array">
+                    作为从 <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" /> 复制的元素的目标的一维 <see cref="T:System.Array" />。<see cref="T:System.Array" /> 必须具有从零开始的索引。
+                </param>
+      <param name="arrayIndex">
+        <paramref name="Array" /> 中从零开始的索引，在此处开始复制。
+                </param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.ToolsetCollection.Count">
+      <summary>
+                    获取一个值，该值指示 <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" /> 中 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 对象的数目。
+                </summary>
+      <returns>
+                    表示集合中的 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 对象数目的整数值。
+                </returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ToolsetCollection.GetEnumerator">
+      <summary>
+                    获取循环访问 <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" /> 的枚举数。
+                </summary>
+      <returns>
+                    用于整个 <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" /> 的 <see cref="T:System.Collections.IEnumerator" />。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.ToolsetCollection.IsReadOnly">
+      <summary>
+                    获取 <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" /> 是否为只读。<see cref="P:Microsoft.Build.BuildEngine.ToolsetCollection.IsReadOnly" /> 始终返回 false，原因是工具集总是可写的。
+                </summary>
+      <returns>
+                    一个布尔值，指示 <see cref="T:Microsoft.Build.BuildEngine.ToolsetCollection" /> 是否为只读。
+                </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.ToolsetCollection.Item(System.String)">
+      <summary>
+                    获取与指定的工具版本关联的 <see cref="T:Microsoft.Build.BuildEngine.Toolset" />。
+                </summary>
+      <returns>
+                    一个 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 对象，表示与指定的 <paramref name="toolsVersion" /> 匹配的工具集。
+                </returns>
+      <param name="toolsVersion">
+                    必需。一个字符串值，表示与所需 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 关联的工具版本。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ToolsetCollection.Remove(Microsoft.Build.BuildEngine.Toolset)">
+      <summary>
+不支持此方法。
+                </summary>
+      <param name="item">
+                    不受支持。
+                </param>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.ToolsetCollection.System#Collections#IEnumerable#GetEnumerator"></member>
+    <member name="P:Microsoft.Build.BuildEngine.ToolsetCollection.ToolsVersions">
+      <summary>
+                    获取存储在此集合中的 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 的名称。
+                </summary>
+      <returns>
+                    一个枚举，其元素表示在此集合中的各个 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 对象。
+                </returns>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations">
+      <summary>一个枚举，其值控制 <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> 初始化。</summary>
+    </member>
+    <member name="F:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations.None">
+      <summary>不从任何外部位置读取工具集信息。</summary>
+    </member>
+    <member name="F:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations.ConfigurationFile">
+      <summary>从 .exe 配置文件读取工具集信息。</summary>
+    </member>
+    <member name="F:Microsoft.Build.BuildEngine.ToolsetDefinitionLocations.Registry">
+      <summary>从注册表 (HKLM\Software\Microsoft\MSBuild\ToolsVersions) 读取工具集信息。</summary>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.UsingTask">
+      <summary>表示 MSBuild 项目中的单个 UsingTask 元素。</summary>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.UsingTask.AssemblyFile">
+      <summary>获取 UsingTask 元素的 AssemblyFile 属性值。</summary>
+      <returns>UsingTask 元素的 AssemblyFile 属性值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.UsingTask.AssemblyName">
+      <summary>获取 UsingTask 元素的 AssemblyName 属性值。</summary>
+      <returns>UsingTask 元素的 AssemblyName 属性值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.UsingTask.Condition">
+      <summary>获取 UsingTask 元素的 Condition 属性值。</summary>
+      <returns>UsingTask 元素的 Condition 属性值。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.UsingTask.IsImported">
+      <summary>获取一个值，该值指示 UsingTask 元素是否已导入项目中。</summary>
+      <returns>
+如果 UsingTask 元素已导入项目中，则为 true；否则为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.UsingTask.TaskName">
+      <summary>获取 UsingTask 元素的 TaskName 属性值。</summary>
+      <returns>UsingTask 元素的 TaskName 属性值。</returns>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.UsingTaskCollection">
+      <summary>表示项目中的所有 UsingTask 元素的集合。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.UsingTaskCollection.CopyTo(Microsoft.Build.BuildEngine.UsingTask[],System.Int32)">
+      <summary>从目标数组的指定索引处开始，将整个 <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" /> 复制到 <see cref="T:Microsoft.Build.BuildEngine.UsingTask" /> 对象的一维兼容 <see cref="T:System.Array" />。</summary>
+      <param name="array">
+        <see cref="T:Microsoft.Build.BuildEngine.UsingTask" /> 对象的一维 <see cref="T:System.Array" />，该数组是从 <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" /> 复制的元素的目标位置。<see cref="T:System.Array" /> 必须具有从零开始的索引。</param>
+      <param name="index">
+        <paramref name="array" /> 中从零开始的索引，从此处开始复制。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.UsingTaskCollection.CopyTo(System.Array,System.Int32)">
+      <summary>从目标数组的指定索引处开始将整个 <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" /> 复制到兼容的一维 <see cref="T:System.Array" />。</summary>
+      <param name="array">作为从 <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" /> 复制的元素的目标位置的一维 <see cref="T:System.Array" />。<see cref="T:System.Array" /> 必须具有从零开始的索引。</param>
+      <param name="index">
+        <paramref name="array" /> 中从零开始的索引，从此处开始复制。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.UsingTaskCollection.Count">
+      <summary>获取一个值，该值指示 <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" /> 中 <see cref="T:Microsoft.Build.BuildEngine.UsingTask" /> 对象的数目。</summary>
+      <returns>表示集合中的 <see cref="T:Microsoft.Build.BuildEngine.UsingTask" /> 对象数目的整数值。</returns>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.UsingTaskCollection.GetEnumerator">
+      <summary>获取循环访问 <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" /> 的枚举数。</summary>
+      <returns>用于整个 <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" /> 的 <see cref="T:System.Collections.IEnumerator" />。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.UsingTaskCollection.IsSynchronized">
+      <summary>获取一个值，该值指示是否同步对 <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" /> 的访问（线程安全）。</summary>
+      <returns>
+如果对 <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" /> 的访问是同步的（线程安全），则为 true；否则为 false。默认为 false。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:Microsoft.Build.BuildEngine.UsingTaskCollection.SyncRoot">
+      <summary>获取可用于同步 <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" /> 访问的对象。</summary>
+      <returns>可用于同步对 <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" /> 的访问的对象。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.Utilities">
+      <summary>包含 MSBuild 使用的实用工具方法。无法继承此类。</summary>
+    </member>
+    <member name="M:Microsoft.Build.BuildEngine.Utilities.Escape(System.String)">
+      <summary>将指定的字符串转换为使 MSBuild 引擎可以按原义解释字符的语法。</summary>
+      <returns>指定字符串的已转换值。</returns>
+      <param name="unescapedExpression">要转换的字符串。</param>
+    </member>
+    <member name="T:Microsoft.Build.BuildEngine.WriteHandler">
+      <summary>表示将字符串写入某个位置（例如，控制台窗口或集成开发环境中的窗口）的方法。</summary>
+      <param name="message">要写入的字符串。</param>
+    </member>
+  </members>
+</doc>

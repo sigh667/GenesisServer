@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>new_resources</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>data_configs</name>
+			<type>2</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Data/Configs</locationURI>
+		</link>
+		<link>
+			<name>data_i18n</name>
+			<type>2</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Data/i18n</locationURI>
+		</link>
+		<link>
+			<name>data_resources</name>
+			<type>2</type>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Data/Excels</locationURI>
+		</link>
+		<link>
+			<name>report_log_template</name>
+			<type>2</type>
+			<locationURI>PROJECT_LOC/scripts/report_log_template</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>

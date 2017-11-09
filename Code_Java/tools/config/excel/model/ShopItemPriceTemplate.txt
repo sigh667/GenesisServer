@@ -1,0 +1,2 @@
+com.mokylin.bleach.common.currency.Currency generalShopCurrencyType;[notNull=true]//普通商店货币类型
+long generalShopPrice;[notNull=false]// 普通商店价格

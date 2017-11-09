@@ -1,0 +1,22 @@
+local localText = _G.Lang
+local mt = _G.imutableTableMetatable
+
+local function tablecheck(row)
+end
+
+local $className = {
+	check = function(table)
+		for k, v in ipairs(table)do
+			tablecheck(v)
+		end
+	end,
+
+$data
+}
+_G.globalTable.$className = $className
+
+setmetatable($className, mt)
+for i, v in ipairs($className) do
+	setmetatable(v, mt)
+end
+

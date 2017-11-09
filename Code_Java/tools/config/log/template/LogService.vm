@@ -1,0 +1,51 @@
+package com.mokylin.bleach.test.logserver.common.log;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.mokylin.bleach.core.common.LogReasons;
+import com.mokylin.bleach.dblog.logs.*;
+import com.mokylin.bleach.test.logserver.human.Human;
+
+/**
+ * This is an auto generated source,please don't modify it.
+ */
+public class LogService {
+	private static final Logger logger = LoggerFactory.getLogger(LogService.class);
+
+	/**
+	 * @param logServerIp 日志服务器IP
+	 * @param logServerPort  日志服务器端口
+	 * @param regionID 游戏区ID
+	 * @param serverID 游戏服务器ID
+	 */
+	public static void init(String logServerIp, int logServerPort) {
+		LoggerClient.Instance.setLogServerAddr(logServerIp, logServerPort);
+		
+		logger.info("Connnect to Log server : " + logServerIp + " : " + logServerPort);
+	}
+
+#foreach($sendMethod in $list)
+	public static void log${sendMethod.className}(
+#if(${sendMethod.humanLog})
+			Human human, 
+#end	
+			LogReasons.${sendMethod.className}LogReason reason
+			$sendMethod.args
+		) {
+		try {
+			${sendMethod.className}Log log = new ${sendMethod.className}Log();
+#if($sendMethod.humanLog)
+			DbLogSetter.set(log, reason.getReason(), human);
+#else
+			DbLogSetter.set(log, reason.getReason());
+#end
+$sendMethod.setter
+			LoggerClient.Instance.sendMessage(log);
+		} catch (Exception e) {
+			logger.error("日志log${sendMethod.className}记录错误：", e);
+		}
+	}
+	
+#end
+}

@@ -1,0 +1,17 @@
+package com.mokylin;
+option java_package = "com.mokylin.bleach.protobuf.db";
+option java_outer_classname = "DBInventoryBlob";
+
+/**
+ * 数据库中的背包
+ */
+message DBInventory {
+	repeated ItemData dBItemDatas = 1;
+}
+
+message ItemData {
+	/**道具模板ID*/
+	required int32 templateId = 1;
+	/**叠加数量*/
+	required int32 overlap = 2;
+}

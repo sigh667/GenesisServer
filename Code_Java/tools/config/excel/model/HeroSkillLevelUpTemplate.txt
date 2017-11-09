@@ -1,0 +1,2 @@
+long specialSkillCost;//大招技能升级费用
+long[] skillCost;[Collection(5,1)]//辅助技费用

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="lib/velocity-1.6.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="config"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/core"/>
+	<classpathentry kind="lib" path="lib/commons-collections-3.2.1.jar" sourcepath="lib-src/commons-collections-3.2.1-sources.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/db_log"/>
+	<classpathentry kind="lib" path="lib/commons-lang-2.6.jar" sourcepath="lib-src/commons-lang-2.6-sources.jar"/>
+	<classpathentry kind="lib" path="lib/protostuff-compiler-1.0.9-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/protostuff-parser-1.0.9-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/antlr-3.5.2.jar"/>
+	<classpathentry kind="lib" path="lib/antlr-runtime-3.5.2.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/game_server"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/common"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

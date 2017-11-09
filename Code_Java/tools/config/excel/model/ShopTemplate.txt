@@ -1,0 +1,3 @@
+String shopName;//商店名称
+com.mokylin.bleach.common.currency.Currency mainShopCurrency;//主消耗货币类型
+int tempOpenDuration;//临时开启时长（分钟）

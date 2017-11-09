@@ -1,0 +1,5 @@
+与GameServer交互的Redis中存储的所有数据结构，都位于“game_db”工程下；
+目前除了“账号表”、“账号角色映射表”、“脏数据表”以外，在Redis中存储的全是Entity；
+命名：比如逻辑类是XX，对应的Entity最好叫XXEntity，对应的RedisKey最好叫XXKey，这样便于查找；
+SpecialRedisKeyBuilder只用于非Entity的对象在Redis中的存储；
+更多详情，请参阅“documents\Server\缓存&持久化&数据服务器”目录下的设计文档，并于代码修改后保持文档实时更新；

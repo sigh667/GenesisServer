@@ -1,0 +1,14 @@
+package com.mokylin;
+import "MessageType.proto";
+option java_package = "com.mokylin.bleach.protobuf";
+option java_outer_classname = "CommonMessage";
+
+/**
+ * 货币改变信息
+ */
+message CurrencyChangeInfo {
+	/** 货币类型Id */
+	required int32 currencyTypeId = 1;
+	/** 改变的值 */
+	required int64 changeValue = 2;
+}

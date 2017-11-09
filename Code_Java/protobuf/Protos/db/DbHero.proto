@@ -1,0 +1,26 @@
+package com.mokylin;
+option java_package = "com.mokylin.bleach.protobuf.db";
+option java_outer_classname = "DbHero";
+
+
+/**
+ * Hero的灵压信息
+ */
+message DbHeroLingYaInfo {
+	/**灵压模板ID组 */
+	repeated int32 templateIds = 1;
+	/**灵压暴击等级*/
+	repeated CritLevel critLevels = 2;
+	/**选填*/
+	optional int32 heroGroupId = 3;
+}
+
+/**
+ * 每阶段的暴击等级
+ */
+message CritLevel{
+	/**灵压阶段 */
+	required int32 phase = 1;
+	/**暴击等级 */
+	repeated int32 levels = 2;
+}

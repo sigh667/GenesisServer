@@ -1,0 +1,7 @@
+package com.mokylin;
+option java_package = "com.mokylin.bleach.protobuf.db";
+option java_outer_classname = "DBFunctionsBlob";
+
+message DBFunctions {
+	repeated int32 openedFunctions = 1;
+}

@@ -1,0 +1,3 @@
+int itemType;[notNull=true]//物品类型掩码
+int itemLevelScope;[notNull=false]//物品等级区间
+int numberMultiple;[notNull=false]//组数量倍数

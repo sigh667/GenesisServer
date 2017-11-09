@@ -1,0 +1,2 @@
+long compoundPrice;[minValue=1]//合成价格
+com.mokylin.bleach.common.item.template.ItemCompoundMaterial[] compoundMaterials;[Collection(4,2)]//合成需要的物品模板ID

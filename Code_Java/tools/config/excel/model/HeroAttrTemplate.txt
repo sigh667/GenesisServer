@@ -1,0 +1,13 @@
+int heroGroupId;//英雄组ID
+String name;//名称
+String desc;//描述
+String icon;//Icon
+int nextHeroId;[notNull=false]//升品后英雄ID
+int qualityId;[minValue=1;maxValue=20]//品质
+long qualityUpCost;[notNull=false;minValue=0]//升品消耗金币
+int raceId;[minValue=1;maxValue=7]//种族ID
+int normalSkillId;//普攻技能ID
+int specialSkillId;//斩魄刀技ID
+int[] secondarySkillIds;[Collection(5,1)]//辅助技ID
+int[] equipIds;[Collection(6,1)]//装备ID
+int roleAttrId;//对应的role_attr文件中的ID

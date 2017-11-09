@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>IEHost</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.IE.Manager">
+      <summary>
+                    提供使托管代码可作为 ActiveX 控件执行的方法。
+                </summary>
+    </member>
+    <member name="M:Microsoft.IE.Manager.#ctor">
+      <summary>
+                    初始化 <see cref="T:Microsoft.IE.Manager" /> 类的新实例。
+                </summary>
+    </member>
+    <member name="M:Microsoft.IE.Manager.AreOnTheSameSite(System.String,System.String)">
+      <summary>
+                    获取一个值，该值指示两个 URL 的网站部分是否有相同的规范化值。
+                </summary>
+      <returns>
+                    如果两个 URL 位于同一个网站，则为 true；否则为 false。
+                </returns>
+      <param name="pURL1">
+                    要比较的第一个 URL。
+                </param>
+      <param name="pURL2">
+                    要比较的第二个 URL。
+                </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.AreTheSame(System.String,System.String)">
+      <summary>
+                    获取一个值，该值指示两个 URL 的规范化形式是否相同。
+                </summary>
+      <returns>
+                    如果两个 URL 相同，则为 true；否则为 false。
+                </returns>
+      <param name="pURL1">
+                    要比较的第一个 URL。
+                </param>
+      <param name="pURL2">
+                    要比较的第二个 URL。
+                </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.CanonizeURL(System.String,Microsoft.IE.Manager.URL_CANONFLAGS)">
+      <summary>
+                    将 URL 字符串转换为规范形式。
+                </summary>
+      <returns>
+                    规范化 URL。
+                </returns>
+      <param name="pURL">
+                    以 NULL 结尾的字符串，最大长度为 (<see cref="F:Microsoft.IE.Manager.INTERNET_MAX_URL_LENGTH" />)，包含一个 URL 字符串。如果该字符串不引用文件，则必须包含一个有效方案，例如“http://”。
+                </param>
+      <param name="flags">
+                    指定 URL 将如何转换为规范形式的标志。以下标志可进行组合：
+                <see cref="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_DONT_SIMPLIFY" />
+                    将 URL 字符串中的“/./”和“/../”视为原义字符，而不是用于导航的简略形式。
+                <see cref="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_ESCAPE_PERCENT" />
+                    将出现的任何“%”都转换为它的转义序列。
+                <see cref="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_ESCAPE_SPACES_ONLY" />
+                    只将空格替换为转义序列。此标志的优先级高于 <see cref="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_ESCAPE_UNSAFE" />，但不适用于不透明的 URL。
+                <see cref="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_ESCAPE_UNSAFE" />
+                    将不安全的字符替换为它们的转义序列。不安全的字符是在 Internet 传输过程中可能发生更改的字符。它们包括 &lt;、&gt;、"、#、{、}、|、\、^、[、] 和 ' 字符。此标志适用于所有 URL，包括不透明的 URL。
+                <see cref="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_NO_META" />
+                    其定义与 <see cref="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_DONT_SIMPLIFY" /> 相同。
+                <see cref="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_PLUGGABLE_PROTOCOL" />
+                    根据万维网联合会 (W3C) 规范组合 URL 与客户端定义的可插入协议。此标志不适用于 FTP、HTTP 和 Gopher 等标准协议。如果设置了此标志，则不需要再设置 <see cref="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_DONT_SIMPLIFY" />。
+                <see cref="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_UNESCAPE" />
+                    取消转义 URL 包含的所有转义序列，但有两个例外。“?”和“#”的转义序列不会取消转义。如果还设置了 URL_ESCAPE 标志之一，则先取消转义两个 URL，然后将两者合并后再转义。
+                </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.DecodeDomainId(System.String)">
+      <summary>
+                    获取一个字节数组，其中包含传入的十六进制字符串的整数表示形式。
+                </summary>
+      <returns>
+                    一个数组，其中包含 <paramref name="hexString" /> 的整数表示形式。
+                </returns>
+      <param name="hexString">
+                    表示域标识的十六进制字符串。
+                </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.GetClassFactory(System.String,System.String)">
+      <summary>
+                    未实现。
+                </summary>
+      <returns>
+                    总是为 null。
+                </returns>
+      <param name="assemblyName">
+                    程序集的名称。
+                </param>
+      <param name="className">
+                    类的名称。
+                </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.GetCodeBase(System.String,System.String@,System.String@)">
+      <summary>
+                    从传入的 URL 字符串中获取基本代码和应用程序名称。
+                </summary>
+      <returns>
+                    如果找到了基本代码，则为 true；否则为 false。
+                </returns>
+      <param name="pURL">
+                    基本代码的 URL。
+                </param>
+      <param name="codeBase">
+                    当此方法返回时，包含基本代码的路径。
+                </param>
+      <param name="application">
+                    当此方法返回时，包含应用程序名称。
+                </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.GetConfigurationFile(System.String,System.String@,System.String@)">
+      <summary>
+                    从传入的 URL 字符串中获取配置文件的路径和文件名。
+                </summary>
+      <returns>
+                    如果找到了配置文件，则为 true；否则为 false。
+                </returns>
+      <param name="pURL">
+                    配置文件的 URL。
+                </param>
+      <param name="path">
+                    当此方法返回时，包含配置文件的路径。
+                </param>
+      <param name="file">
+                    当此方法返回时，包含配置文件的名称。
+                </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.GetSecuredClassFactory(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+      <summary>
+                    创建一个提供程序集安全信息的类工厂。
+                </summary>
+      <returns>
+                    表示安全类工厂的对象。
+                </returns>
+      <param name="flags">
+                    以下 CORIESECURITY 值之一：
+                CORIESECURITY_ZONE: 0x01
+                CORIESECURITY_SITE: 0x02
+                </param>
+      <param name="zone">
+                    以下 URLZONE 值之一：
+                URLZONE_LOCAL_MACHINE: 0x00
+                URLZONE_INTRANET: 0x01
+                URLZONE_TRUSTED: 0x02
+                URLZONE_INTERNET: 0x03
+                URLZONE_UNTRUSTED: 0x04
+                </param>
+      <param name="site">
+                    网站地址。
+                </param>
+      <param name="uniqueIdString">
+                    网站的唯一 ID。
+                </param>
+      <param name="fileHashString">
+                    要加载的程序集的十六进制编码哈希值。
+                </param>
+      <param name="assemblyName">
+                    程序集的名称。
+                </param>
+      <param name="typeName">
+                    类型名称。
+                </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.GetSiteName(System.String)">
+      <summary>
+                    获取指定的 URL 的网站名称。
+                </summary>
+      <returns>
+                    指定的 URL 的网站名称。
+                </returns>
+      <param name="pURL">
+                    目标 URL。
+                </param>
+    </member>
+    <member name="F:Microsoft.IE.Manager.INTERNET_MAX_PATH_LENGTH">
+      <summary>
+                    获取表示 Internet 路径的字符串的最大长度。
+                </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.INTERNET_MAX_SCHEME_LENGTH">
+      <summary>
+                    获取表示 Internet 方案的字符串的最大长度。
+                </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.INTERNET_MAX_URL_LENGTH">
+      <summary>
+                    获取表示 URL 的字符串的最大长度。
+                </summary>
+    </member>
+    <member name="M:Microsoft.IE.Manager.IsValidURL(System.String)">
+      <summary>
+                    确定指定的 URL 是否有效。
+                </summary>
+      <returns>
+                    如果 URL 有效，则为 true；否则为 false。
+                </returns>
+      <param name="pURL">
+                    要检查的 URL。
+                </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.MakeFullLink(System.String,System.String,System.String)">
+      <summary>
+                    根据传入的链接、基本代码和应用程序返回完整的 URL。
+                </summary>
+      <returns>
+                    指定的应用程序的完整链接。
+                </returns>
+      <param name="link">
+                    地址的链接部分，可以是相对的。
+                </param>
+      <param name="CodeBase">
+                    地址的基本代码部分。
+                </param>
+      <param name="Application">
+                    地址的应用程序部分。
+                </param>
+    </member>
+    <member name="T:Microsoft.IE.Manager.URL_CANONFLAGS">
+      <summary>指定如何将 URL 转换为规范格式。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_UNESCAPE">
+      <summary>取消转义 URL 包含的所有转义序列，但有两个例外。? 和 # 字符的转义序列将不会被取消转义。如果同时还设置了 URL_ESCAPE 标志之一，则会先取消两个 URL 的转义，并在合并后再进行转义。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_ESCAPE_UNSAFE">
+      <summary>将不安全的字符替换为它们的转义序列。不安全的字符是指在 Internet 传输过程中可能受到更改的字符，其中包括 &lt;、&gt;、"、#、{、}、|、\、^、[、] 和 ' 字符。此标志适用于所有 URL，包括不透明的 URL。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_PLUGGABLE_PROTOCOL">
+      <summary>根据万维网联合会 (W3C) 规范组合 URL 与客户端定义的可插入协议。此标志不适用于 ftp、http 和 gopher 等标准协议。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_WININET_COMPATIBILITY">
+      <summary>合并所有参数以创建完整的 URL。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_DONT_ESCAPE_EXTRA_INFO">
+      <summary>只与 URL_ESCAPE_SPACES_ONLY 结合使用，以防止转换查询中的字符（在 URL 字符串中遇到的第一个 # 或 ? 字符后的部分）。此标志不应单独使用，也不能与 URL_ESCAPE_SEGMENT_ONLY 结合使用。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_DONT_UNESCAPE_EXTRA_INFO">
+      <summary>只与 URL_ESCAPE_SPACES_ONLY 结合使用，以防止转换查询中的字符（在 URL 字符串中遇到的第一个 # 或 ? 字符后的部分）。此标志不应单独使用，也不能与 URL_ESCAPE_SEGMENT_ONLY 结合使用。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_BROWSER_MODE">
+      <summary>其定义与 URL_DONT_ESCAPE_EXTRA_INFO 相同。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_ESCAPE_SPACES_ONLY">
+      <summary>只将空格替换为转义序列。此标志的优先级高于 URL_ESCAPE_UNSAFE，但不适用于不透明的 URL。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_DONT_SIMPLIFY">
+      <summary>将 URL 字符串中的 /./ 和 /../ 视为原义字符而不是导航的速记形式。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_NO_META">
+      <summary>其定义与 URL_DONT_SIMPLIFY 相同。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_UNESCAPE_INPLACE">
+      <summary>将转义序列转换回普通字符并覆盖原始字符串。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_CONVERT_IF_DOSPATH">
+      <summary>如果为 dospath 格式，则转换为 URL。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_UNESCAPE_HIGH_ANSI_ONLY">
+      <summary>只取消高端 ANSI 转义字符的转义。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_INTERNAL_PATH">
+      <summary>转义在路径中发现的 # 字符。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_FILE_USE_PATHURL">
+      <summary>使用 DOS 路径兼容模式创建“file”统一资源标识符 (URI)。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_ESCAPE_PERCENT">
+      <summary>将出现的任何“%”都转换为它的转义序列。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_ESCAPE_SEGMENT_ONLY">
+      <summary>指示 URL 只包含服务器组件之后但位于查询之前的部分。将转换字符串中所有不安全的字符。设置此标志时，如果提供了完整的 URL，将转换整个字符串中所有不安全的字符，包括 # 和 ? 字符。</summary>
+    </member>
+    <member name="T:Microsoft.IE.Manager.URL_IS">
+      <summary>标识非托管 UrlIs 函数将测试的 URL 的类型。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_IS.URLIS_URL">
+      <summary>URL 有效。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_IS.URLIS_OPAQUE">
+      <summary>URL 不透明，这意味着它的方案后面缺少两个正斜杠 (//)。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_IS.URLIS_NOHISTORY">
+      <summary>URL 是无历史记录 URL，浏览器通常不将这类 URL 包含在其导航历史记录中。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_IS.URLIS_FILEURL">
+      <summary>URL 是 file URL，其形式为 file://主机/路径。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_IS.URLIS_APPLIABLE">
+      <summary>UrlIs 函数将尝试确定 URL 的有效方案。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_IS.URLIS_DIRECTORY">
+      <summary>URL 字符串以目录名结尾。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_IS.URLIS_HASQUERY">
+      <summary>URL 有一个追加的查询字符串。</summary>
+    </member>
+    <member name="T:Microsoft.IE.Manager.URL_PART">
+      <summary>标识 URL 的各部分。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_PART.NONE">
+      <summary>URL 的空白部分。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_PART.SCHEME">
+      <summary>URL 方案。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_PART.HOSTNAME">
+      <summary>URL 的主机名部分。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_PART.USERNAME">
+      <summary>URL 的用户名部分。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_PART.PASSWORD">
+      <summary>URL 的密码部分。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_PART.PORT">
+      <summary>URL 的端口号部分。</summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_PART.QUERY">
+      <summary>URL 的查询字符串部分。</summary>
+    </member>
+    <member name="T:Microsoft.IE.SecureFactory">
+      <summary>提供用于创建安全类工厂的方法。</summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.CORIESECURITY_SITE">
+      <summary>指定值 0x02。</summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.CORIESECURITY_ZONE">
+      <summary>指定值 0x01。</summary>
+    </member>
+    <member name="M:Microsoft.IE.SecureFactory.CreateInstanceWithSecurity(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+      <summary>创建表示安全类工厂的 COM 类型的新实例。</summary>
+      <returns>作为新实例包装的对象。返回值需要打开包装才能访问真实对象。</returns>
+      <param name="dwFlag">以下 CORIESECURITY 值之一：CORIESECURITY_ZONE: 0x01CORIESECURITY_SITE: 0x02</param>
+      <param name="dwZone">以下 URLZONE 值之一：URLZONE_LOCAL_MACHINE: 0x00URLZONE_INTRANET: 0x01URLZONE_TRUSTED: 0x02URLZONE_INTERNET: 0x03URLZONE_UNTRUSTED: 0x04</param>
+      <param name="pURL">网站的 URL，将创建的安全类工厂是为该网站中包含的应用程序创建的。</param>
+      <param name="uniqueIdString">网站的唯一标识。</param>
+      <param name="link">URL 的链接部分，可以是相对的。</param>
+      <param name="licenses">与域关联的许可证文件的位置。</param>
+    </member>
+    <member name="M:Microsoft.IE.SecureFactory.RemoteCreateInstance(System.Guid,System.Object@)">
+      <summary>未实现。</summary>
+      <param name="riid">未使用。</param>
+      <param name="ppvObject">当此方法返回时总是为 null。</param>
+    </member>
+    <member name="M:Microsoft.IE.SecureFactory.RemoteLockServer(System.Int32)">
+      <summary>未实现。</summary>
+      <param name="fLock">未使用。</param>
+    </member>
+    <member name="T:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY">
+      <summary>包含有关 Internet 缓存中的某个条目的信息。</summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY.NORMAL_CACHE_ENTRY">
+      <summary>普通缓存条目；可以删除以便为新条目腾出空间。</summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY.COOKIE_CACHE_ENTRY">
+      <summary>Cookie 缓存条目。</summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY.URLHISTORY_CACHE_ENTRY">
+      <summary>已访问链接的缓存条目。</summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY.TRACK_OFFLINE_CACHE_ENTRY">
+      <summary>目前尚未实现。</summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY.TRACK_ONLINE_CACHE_ENTRY">
+      <summary>目前尚未实现。</summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY.STICKY_CACHE_ENTRY">
+      <summary>可免受清理的粘滞缓存条目。CommitUrlCacheEntry 设置的默认值为一天。</summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY.SPARSE_CACHE_ENTRY">
+      <summary>局部响应缓存条目。</summary>
+    </member>
+    <member name="M:Microsoft.IE.SecureFactory.CreateInstanceWithSecurity2(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+      <summary>使用部署清单中的信息创建表示安全类工厂的 COM 类型的新实例。</summary>
+      <returns>作为新实例包装的对象。返回值需要打开包装才能访问真实对象。</returns>
+      <param name="dwFlags">以下 CORIESECURITY 值之一：CORIESECURITY_ZONE: 0x01CORIESECURITY_SITE: 0x02</param>
+      <param name="dwZone">以下 URLZONE 值之一：URLZONE_LOCAL_MACHINE: 0x00URLZONE_INTRANET: 0x01URLZONE_TRUSTED: 0x02URLZONE_INTERNET: 0x03URLZONE_UNTRUSTED: 0x04</param>
+      <param name="wszSite">网站的 URL，将创建的安全类工厂是为该网站中包含的应用程序创建的。</param>
+      <param name="wszId">网站的唯一标识。</param>
+      <param name="wszConfig">URL 的链接部分，可以是相对的。</param>
+      <param name="wszLicenses">与域关联的许可证文件的位置。</param>
+      <param name="wszDeploymentManifest">部署清单的位置。</param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.GetSecuredClassFactory(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+      <summary>
+                    创建一个提供有关程序集的安全信息以及类型名称的类工厂。
+                </summary>
+      <returns>
+                    表示安全类工厂的对象。
+                </returns>
+      <param name="flags">
+                    以下 CORIESECURITY 值之一：
+                CORIESECURITY_ZONE: 0x01
+                CORIESECURITY_SITE: 0x02
+                </param>
+      <param name="zone">
+                    以下 URLZONE 值之一：
+                URLZONE_LOCAL_MACHINE: 0x00
+                URLZONE_INTRANET: 0x01
+                URLZONE_TRUSTED: 0x02
+                URLZONE_INTERNET: 0x03
+                URLZONE_UNTRUSTED: 0x04
+                </param>
+      <param name="site">
+                    网站地址。
+                </param>
+      <param name="uniqueIdString">
+                    网站的唯一 ID。
+                </param>
+      <param name="assemblyName">
+                    程序集的名称。
+                </param>
+      <param name="typeName">
+                    类型名称。
+                </param>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/agent_server"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/data_server"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/game_server"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/db_log"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/game_db"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/protobuf"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/server_msg"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

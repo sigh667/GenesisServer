@@ -1,0 +1,5 @@
+;
+float attackRate;//伤害百分比
+String strTargetBuffIds;[notNull=false]//给被击方的Buff
+String strCasterBuffIds;[notNull=false]//给攻击方的Buff
+List<com.mokylin.bleach.common.combat.model.EffectBase> attributeList;[collection(3,6);notNull=true]//效果器

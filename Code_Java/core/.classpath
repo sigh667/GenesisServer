@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="config"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-lang3-3.3.jar" sourcepath="lib-src/commons-lang3-3.3-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/poi-3.10-FINAL-20140208.jar" sourcepath="lib-src/poi-3.10-FINAL-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/guava-16.0.1.jar" sourcepath="lib-src/guava-16.0.1-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/velocity-1.7-dep.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/velocity-1.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/protobuf-java-2.5.0.jar" sourcepath="lib-src/protobuf-java-2.5.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/netty-3.8.0.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/hibernate-commons-annotations-4.0.4.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" sourcepath="lib-src/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/ibatis-2.3.4.726.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/slf4j-api-1.7.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/dom4j-1.6.1.jar" sourcepath="lib-src/dom4j-1.6.1-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jta-1.3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jdom-2.0.5.jar" sourcepath="lib-src/jdom-2.0.5-sources.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/protobuf"/>
+	<classpathentry exported="true" kind="lib" path="lib/netty-all-4.0.17.Final.jar" sourcepath="lib-src/netty-all-4.0.17.Final-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/fastjson-1.1.26.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/hibernate-core-4.3.5.Final.jar" sourcepath="lib-src/hibernate-core-4.3.5.Final-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/javassist-3.18.1-GA.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jboss-logging-3.1.3.GA.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mchange-commons-java-0.2.3.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/HikariCP-1.3.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-pool2-2.2.jar" sourcepath="lib-src/commons-pool2-2.2-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/kryo-2.23.0.jar" sourcepath="lib-src/kryo-2.23.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/objenesis-2.1.jar" sourcepath="lib-src/objenesis-2.1-sources.jar"/>
+	<classpathentry kind="lib" path="lib/reflectasm-1.09.jar" sourcepath="lib-src/reflectasm-1.09-sources.jar"/>
+	<classpathentry kind="lib" path="lib/asm-5.0.2.jar" sourcepath="lib-src/asm-5.0.2-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/poi-ooxml-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="lib/antlr-2.7.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/poi-ooxml-schemas-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="lib/xbean.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/akka-actor_2.11-2.3.4.jar" sourcepath="lib-src/akka-actor_2.11-2.3.4-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/akka-remote_2.11-2.3.4.jar" sourcepath="lib-src/akka-remote_2.11-2.3.4-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/config-1.2.1.jar" sourcepath="lib-src/config-1.2.1-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/scala-library-2.11.1.jar" sourcepath="lib-src/scala-library-2.11.1-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/core/lib-src/scala-library-2.11.1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/akka-slf4j_2.11-2.3.4.jar" sourcepath="lib-src/akka-slf4j_2.11-2.3.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.31-bin.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/scribe.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/libthrift-0.9.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/disruptor-3.3.0.jar" sourcepath="lib-src/disruptor-3.3.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/libfb303-0.9.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/joda-time-2.5.jar" sourcepath="lib-src/joda-time-2.5-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-api-2.1.jar" sourcepath="lib-src/log4j-api-2.1-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-core-2.1.jar" sourcepath="lib-src/log4j-core-2.1-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-slf4j-impl-2.1.jar" sourcepath="lib-src/log4j-slf4j-impl-2.1-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.restlet-2.3.1.jar" sourcepath="lib-src/org.restlet-2.3.1-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jedis-2.6.2.jar" sourcepath="lib-src/jedis-2.6.2-resource.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,3 @@
+int giftId;[notNull=true] //奖励的礼包ID
+int multiRewardVipLevel;[notNull=false;minValue=0] //多倍奖励所需VIP等级
+int multiRewardVipRatio;[notNull=false;minValue=1] //VIP触发的奖励的倍数

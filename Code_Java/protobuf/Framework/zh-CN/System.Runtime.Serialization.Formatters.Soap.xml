@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Runtime.Serialization.Formatters.Soap</name>
+  </assembly>
+  <members>
+    <member name="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter">
+      <summary>以 SOAP 格式将对象或整个连接对象的图形序列化和反序列化。</summary>
+    </member>
+    <member name="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.#ctor">
+      <summary>使用默认属性值初始化 <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.#ctor(System.Runtime.Serialization.ISurrogateSelector,System.Runtime.Serialization.StreamingContext)">
+      <summary>使用指定的 <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> 和 <see cref="T:System.Runtime.Serialization.StreamingContext" /> 初始化 <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> 类的新实例。</summary>
+      <param name="selector">与 <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> 的新实例一起使用的 <see cref="T:System.Runtime.Serialization.ISurrogateSelector" />。可以为 null。</param>
+      <param name="context">包含序列化源和目标的 <see cref="T:System.Runtime.Serialization.StreamingContext" />。如果 <paramref name="context" /> 参数为 null，则 <see cref="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Context" /> 默认为 <see cref="F:System.Runtime.Serialization.StreamingContextStates.CrossMachine" />。</param>
+    </member>
+    <member name="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.AssemblyFormat">
+      <summary>获取或设置与查找或加载程序集有关的反序列化器行为。</summary>
+      <returns>
+        <see cref="T:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle" /> 值之一，它指定反序列化器行为。</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Binder">
+      <summary>获取或设置 <see cref="T:System.Runtime.Serialization.SerializationBinder" />，它控制将序列化对象绑定到类型的过程。</summary>
+      <returns>与此 <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> 一起使用的 <see cref="T:System.Runtime.Serialization.SerializationBinder" />。</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Context">
+      <summary>获取或设置与此 <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> 一起使用的 <see cref="T:System.Runtime.Serialization.StreamingContext" />。</summary>
+      <returns>与此 <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> 一起使用的 <see cref="T:System.Runtime.Serialization.StreamingContext" />。</returns>
+    </member>
+    <member name="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Deserialize(System.IO.Stream)">
+      <summary>反序列化所提供流中的数据并重新组成对象图形。</summary>
+      <returns>反序列化的图形的顶级对象（根）。</returns>
+      <param name="serializationStream">包含要反序列化的数据的流。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="serializationStream" /> 为 null。</exception>
+    </member>
+    <member name="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Deserialize(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler)">
+      <summary>将流反序列化为对象图形，该流中的任何标题都由给定的 <see cref="T:System.Runtime.Remoting.Messaging.HeaderHandler" /> 进行处理。</summary>
+      <returns>反序列化的图形的顶级对象（根）。</returns>
+      <param name="serializationStream">包含要反序列化的数据的流。</param>
+      <param name="handler">对在流中发现的任何标题进行处理的委托。可以为 null。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="serializationStream" /> 为 null。</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">
+        <paramref name="serializationStream" /> 支持查找，其长度为 0。</exception>
+    </member>
+    <member name="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.FilterLevel">
+      <summary>获取或设置用于 .NET Framework 远程处理的自动反序列化的 <see cref="T:System.Runtime.Serialization.Formatters.TypeFilterLevel" />。</summary>
+      <returns>表示当前自动反序列化级别的 <see cref="T:System.Runtime.Serialization.Formatters.TypeFilterLevel" />。</returns>
+    </member>
+    <member name="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Serialize(System.IO.Stream,System.Object)">
+      <summary>将对象或具有指定根的对象图形序列化为给定的 <see cref="T:System.IO.Stream" />。</summary>
+      <param name="serializationStream">流，格式化程序将要序列化的数据置于其中。</param>
+      <param name="graph">要序列化的对象或对象图形的根。将自动序列化此根对象的所有子对象。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="serializationStream" /> 为 null。</exception>
+    </member>
+    <member name="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Serialize(System.IO.Stream,System.Object,System.Runtime.Remoting.Messaging.Header[])">
+      <summary>以 SOAP 远程过程调用 (RPC) 格式，将对象或具有指定根的对象图形序列化为给定的 <see cref="T:System.IO.Stream" />。</summary>
+      <param name="serializationStream">流，格式化程序将要序列化的数据置于其中。</param>
+      <param name="graph">要序列化的对象或对象图形的根。将自动序列化此根对象的所有子对象。</param>
+      <param name="headers">将包括在序列化中的远程处理标题。可以为 null。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="serializationStream" /> 为 null。</exception>
+    </member>
+    <member name="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.SurrogateSelector">
+      <summary>获取或设置 <see cref="T:System.Runtime.Serialization.SurrogateSelector" />，它控制序列化和反序列化过程中的类型替换。</summary>
+      <returns>与此 <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> 一起使用的 <see cref="T:System.Runtime.Serialization.SurrogateSelector" />。</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.TopObject">
+      <summary>获取或设置将 SOAP 顶级对象反序列化为的 <see cref="T:System.Runtime.Serialization.Formatters.ISoapMessage" />。</summary>
+      <returns>将 SOAP 顶级对象反序列化为的 <see cref="T:System.Runtime.Serialization.Formatters.ISoapMessage" />。</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.TypeFormat">
+      <summary>获取或设置类型说明在序列化流中的布局格式。</summary>
+      <returns>类型说明在序列化流中的布局格式。</returns>
+    </member>
+  </members>
+</doc>

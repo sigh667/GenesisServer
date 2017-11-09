@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>sysglobl</name>
+  </assembly>
+  <members>
+    <member name="T:System.Globalization.CultureAndRegionInfoBuilder">
+      <summary>
+                    定义一个新型或基于其他区域性和国家/地区的自定义区域性。自定义区域性可以安装在计算机上，然后由运行在该计算机上的任何应用程序使用。无法继承此类。
+                </summary>
+    </member>
+    <member name="M:System.Globalization.CultureAndRegionInfoBuilder.#ctor(System.String,System.Globalization.CultureAndRegionModifiers)">
+      <summary>
+                    初始化 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 类的新实例。
+                </summary>
+      <param name="cultureName">
+                    区域性的名称。
+                </param>
+      <param name="flags">
+                    一个 <see cref="T:System.Globalization.CultureAndRegionModifiers" /> 值，指定新的 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象是非特定区域性、新区域性，还是要替换现有的区域性和国家/地区。
+                </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="cultureName" /> 为 null。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="cultureName" /> 是空字符串 ("")。
+                
+                    - 或 -
+                <paramref name="cultureName" /> 包含除“0”到“9”、“a”到“z”、“A”到“Z”、连字符 (-) 或下划线 (_) 以外的字符。
+                
+                    - 或 -
+                <paramref name="cultureName" /> 包含用于分隔各个部分的连字符 (-)，但是缺少 <paramref name="prefix" />、<paramref name="language" />、<paramref name="region" /> 或 <paramref name="suffix" /> 这些部分中的一个或多个。即，两个或更多的连字符是相邻的。
+                
+                    - 或 -
+                <paramref name="cultureName" /> 的长度超过 84 个字符。
+                
+                    - 或 -
+                <paramref name="cultureName" /> 包含用于分隔各个部分的连字符，但是有一个或多个部分的长度超过 8 个字符。
+                
+                    - 或 -
+                <paramref name="cultureName" /> 包含前导或末尾连字符 (-) 或下划线 (_)。
+                
+                    - 或 -
+                <paramref name="cultureName" /> 指定其他排序替换区域性而不是 .NET Framework 区域性。例如，<paramref name="culturenName" /> 是“de-de_phoneb”（按照德语电话簿中的显示顺序对字符串排序的区域性）而不是德语（德国）区域性“de-DE”。
+                
+                    - 或 -
+                <paramref name="flags" /> 包含无效的 <see cref="T:System.Globalization.CultureAndRegionModifiers" /> 值组合。
+                
+                    - 或 -
+                <paramref name="flags" /> 包含 <see cref="F:System.Globalization.CultureAndRegionModifiers.Replacement" /> 或 <see cref="F:System.Globalization.CultureAndRegionModifiers.Neutral" />，而且没有找到 <paramref name="cultureName" /> 指定的区域性。
+                
+                    - 或 -
+                <paramref name="flags" /> 包含 <see cref="F:System.Globalization.CultureAndRegionModifiers.Replacement" />，而 <paramref name="cultureName" /> 指定的由用户创建的自定义区域性没有替换 .NET Framework 附带的区域性。
+                
+                    - 或 -
+                <paramref name="flags" /> 包含 <see cref="F:System.Globalization.CultureAndRegionModifiers.Neutral" />，而 <paramref name="cultureName" /> 指定的区域性不是非特定区域性。
+                
+                    - 或 -
+                <paramref name="flags" /> 包含 <see cref="F:System.Globalization.CultureAndRegionModifiers.Neutral" />，而 <paramref name="cultureName" /> 指定的由用户创建的自定义区域性替换了 .NET Framework 附带的特定区域性。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.AvailableCalendars">
+      <summary>
+                    获取或设置此 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象支持的日历数组。
+                </summary>
+      <returns>
+                    一个日历数组。
+                </returns>
+      <exception cref="T:System.ArgumentNullException">
+                    在设置操作中，指定的数组为 null，或已指定数组的某个元素为 null。
+                </exception>
+      <exception cref="T:System.NotSupportedException">
+                    非特定区域性不支持此属性。
+                
+                    - 或 -
+                
+                    在设置操作中，指定的数组包含 <see cref="T:System.Globalization.PersianCalendar" />、<see cref="T:System.Globalization.TaiwanLunisolarCalendar" />、<see cref="T:System.Globalization.KoreanLunisolarCalendar" />、<see cref="T:System.Globalization.JapaneseLunisolarCalendar" />、<see cref="T:System.Globalization.ChineseLunisolarCalendar" /> 或 <see cref="T:System.Globalization.JulianCalendar" />。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.CompareInfo">
+      <summary>
+                    获取或设置用来定义如何根据区域性比较字符串的 <see cref="T:System.Globalization.CompareInfo" /> 对象。
+                </summary>
+      <returns>
+                    用来定义如何根据区域性比较字符串的 <see cref="T:System.Globalization.CompareInfo" /> 对象。
+                </returns>
+      <exception cref="T:System.ArgumentNullException">
+                    在设置操作中，指定的值为 null。
+                </exception>
+      <exception cref="T:System.NotSupportedException">
+                    此自定义区域性是对内置区域性的重写。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.ConsoleFallbackUICulture">
+      <summary>
+                    当默认图形用户界面区域性不合适时，获取或设置一个适合控制台应用程序的替换用户界面区域性。
+                </summary>
+      <returns>
+                    用于在控制台上读取和显示文本的备用非特定区域性。
+                </returns>
+      <exception cref="T:System.ArgumentException">
+                    在指定区域性不为 null 的 Set 操作中，指定区域性的 <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ConsoleFallbackUICulture" /> 属性与指定区域性不同。
+                </exception>
+    </member>
+    <member name="M:System.Globalization.CultureAndRegionInfoBuilder.CreateFromLdml(System.String)">
+      <summary>
+                    用一个包含对象表示形式的指定 XML 文件重构 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象。
+                </summary>
+      <returns>
+                    一个新的 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象，等效于 <paramref name="xmlFileName" /> 参数中存储的信息。
+                </returns>
+      <param name="xmlFileName">
+                    一个包含 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象的 XML 表示形式的文件名。
+                </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="xmlFileName" /> 为 null。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="xmlFileName" /> 是一个空字符串 ("") 或者是无效的文件或路径名。
+                </exception>
+      <exception cref="T:System.Xml.XmlException">
+        <paramref name="xmlFileName" /> 中的数据不是有效的 XML 格式。
+                
+                    - 或 -
+                
+                    在访问 <paramref name="xmlFileName" /> 时发生 I/O 错误。
+                </exception>
+      <exception cref="T:System.Xml.Schema.XmlSchemaValidationException">
+        <paramref name="xmlFileName" /> 中的数据不是有效的 LDML 格式。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.CultureEnglishName">
+      <summary>
+                    获取或设置英文的区域性名称。
+                </summary>
+      <returns>
+                    英文的区域性名称。
+                </returns>
+      <exception cref="T:System.ArgumentNullException">
+                    设置操作中的值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    在设置操作中，该值的长度超出 0 至 79 个字符的范围。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.CultureName">
+      <summary>
+                    获取所创建区域性的名称。
+                </summary>
+      <returns>
+                    当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象的区域性名称。
+                </returns>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.CultureNativeName">
+      <summary>
+                    按照区域性设置显示的格式和语言获取或设置区域性名称。
+                </summary>
+      <returns>
+                    使用区域性设置显示的格式和语言的区域性名称。
+                </returns>
+      <exception cref="T:System.ArgumentNullException">
+                    设置操作中的值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    在设置操作中，该值的长度超出 0 至 79 个字符的范围。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.CultureTypes">
+      <summary>
+                    获取 <see cref="T:System.Globalization.CultureTypes" /> 值，该值描述了由当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象表示的区域性。
+                </summary>
+      <returns>
+        <see cref="T:System.Globalization.CultureTypes" /> 值之一。
+                </returns>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName">
+      <summary>
+                    获取或设置由当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象表示的国家/地区中所用货币的英文名称。
+                </summary>
+      <returns>
+                    区域中使用的货币的英文名称。
+                </returns>
+      <exception cref="T:System.ArgumentNullException">
+                    设置操作中的值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+设置操作中的值为空字符串 ("")。
+                </exception>
+      <exception cref="T:System.NotSupportedException">
+                    当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象为非特定区域性。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.CurrencyNativeName">
+      <summary>
+                    获取或设置由当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象表示的国家/地区中所用货币的本地名称。
+                </summary>
+      <returns>
+                    由当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象表示的国家/地区中所用货币的名称，其格式由与该地区的 ISO 3166 国家/地区代码关联的语言进行设置。
+                </returns>
+      <exception cref="T:System.ArgumentNullException">
+                    设置操作中的值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+设置操作中的值为空字符串 ("")。
+                </exception>
+      <exception cref="T:System.NotSupportedException">
+                    当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象为非特定区域性。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.GeoId">
+      <summary>
+                    获取或设置地理区域、国家/地区、城市或位置的唯一标识号。
+                </summary>
+      <returns>
+                    一个唯一标识地理位置的 32 位有符号数字。
+                </returns>
+      <exception cref="T:System.NotSupportedException">
+                    当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象定义了一个非特定区域性。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.GregorianDateTimeFormat">
+      <summary>
+                    获取或设置根据公历定义日期和时间格式的 <see cref="T:System.Globalization.DateTimeFormatInfo" /> 对象。
+                </summary>
+      <returns>
+                    一个 <see cref="T:System.Globalization.DateTimeFormatInfo" /> 对象。
+                </returns>
+      <exception cref="T:System.ArgumentNullException">
+                    设置操作中的值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    在设置操作中，值的属性返回了无效的属性值。
+                </exception>
+      <exception cref="T:System.NotSupportedException">
+                    当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象为非特定区域性。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.IetfLanguageTag">
+      <summary>
+                    获取或设置根据 RFC 4646 标准“Tags for the Identification of Languages”（语言标识标记）进行格式化的区域性名称。
+                </summary>
+      <returns>
+                    根据 RFC 4646 格式化的区域性名称。
+                </returns>
+      <exception cref="T:System.ArgumentNullException">
+                    在设置操作中，值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    在设置操作中，值的长度不在 1 到 84 个字符的范围内。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+                    在设置操作中，值中所指定名称的某个部分为空或长度超过 8 个字符，或者不是字母、数字或连字符 (-)，亦或名称中包含一个前导或尾部连字符。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.IsMetric">
+      <summary>
+                    获取或设置一个值，该值指示国家/地区是否使用公制度量单位。
+                </summary>
+      <returns>
+                    如果该国家/地区使用公制进行度量，则为 true；否则为 false。
+                </returns>
+      <exception cref="T:System.NotSupportedException">
+此操作对非特定区域性无效。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.ISOCurrencySymbol">
+      <summary>
+                    获取或设置与国家/地区关联的由三个字符组成的 ISO 4217 货币符号。
+                </summary>
+      <returns>
+                    与国家/地区关联的由三个字符组成的 ISO 4217 货币符号。
+                </returns>
+      <exception cref="T:System.NotSupportedException">
+                    这是一个非特定区域性。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+                    在设置操作中，值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    在设置操作中，值的长度不在 0 到 8 个字符的范围内。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.IsRightToLeft">
+      <summary>
+                    获取或设置与当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象关联的书写体系中文本行的主导方向。
+                </summary>
+      <returns>
+                    如果当前书写体系中文本行的主导方向是从右到左，则为 true，否则为 false。
+                </returns>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.KeyboardLayoutId">
+      <summary>
+                    获取或设置活动的输入区域设置标识符。
+                </summary>
+      <returns>
+                    一个指定输入区域设置标识符的 32 位有符号数字。
+                </returns>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    在设置操作中，值为零。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.LCID">
+      <summary>
+                    获取当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象的区域性标识符。
+                </summary>
+      <returns>
+                    当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象的区域性标识符。
+                </returns>
+    </member>
+    <member name="M:System.Globalization.CultureAndRegionInfoBuilder.LoadDataFromCultureInfo(System.Globalization.CultureInfo)">
+      <summary>
+                    用指定 <see cref="T:System.Globalization.CultureInfo" /> 对象的相应属性设置当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象的属性。
+                </summary>
+      <param name="culture">
+                    要读取的 <see cref="T:System.Globalization.CultureInfo" /> 对象。
+                </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="culture" /> 为 null。
+                </exception>
+    </member>
+    <member name="M:System.Globalization.CultureAndRegionInfoBuilder.LoadDataFromRegionInfo(System.Globalization.RegionInfo)">
+      <summary>
+                    用指定 <see cref="T:System.Globalization.RegionInfo" /> 对象的相应属性设置当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象的属性。
+                </summary>
+      <param name="region">
+                    要读取的 <see cref="T:System.Globalization.RegionInfo" /> 对象。
+                </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="region" /> 为 null。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+                    无法设置国家/地区信息，原因是当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象指定了一个非特定区域性。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.NumberFormat">
+      <summary>
+                    获取或设置一个 <see cref="T:System.Globalization.NumberFormatInfo" /> 对象，它定义相应于区域性的数字、货币和百分比显示格式。
+                </summary>
+      <returns>
+                    一个 <see cref="T:System.Globalization.NumberFormatInfo" />，它定义相应于区域性的数字、货币和百分比显示格式。
+                </returns>
+      <exception cref="T:System.ArgumentNullException">
+                    设置操作中的值为 null。
+                </exception>
+      <exception cref="T:System.NotSupportedException">
+此操作对非特定区域性无效。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    此区域性针对数字、货币或百分比属性的规范包含太多的数字或超出范围。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.Parent">
+      <summary>
+                    获取或设置表示当前自定义区域性的父区域性的 <see cref="T:System.Globalization.CultureInfo" /> 对象。
+                </summary>
+      <returns>
+                    表示当前自定义区域性的父区域性的 <see cref="T:System.Globalization.CultureInfo" /> 对象。
+                </returns>
+      <exception cref="T:System.InvalidOperationException">
+                    在设置操作中，无法找到区域性值。指定的值可能是已注销的自定义区域性。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+                    在设置操作中，值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+                    在遍历当前区域性的上级区域性的设置操作中，无法在 10 代之内的上级区域性中找到固定区域性。
+                
+                    - 或 -
+                
+                    在设置操作中发现一个循环引用：指定的值是当前自定义区域性的父辈。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.RegionEnglishName">
+      <summary>
+                    获取或设置以英文表示的国家/地区的全名。
+                </summary>
+      <returns>
+                    以英文表示的国家/地区的全名。
+                </returns>
+      <exception cref="T:System.NotSupportedException">
+此操作对非特定区域性无效。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+                    设置操作中的值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    在设置操作中，该值的长度超出 0 至 79 个字符的范围。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.RegionName">
+      <summary>
+                    获取当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象的国家/地区的名称。
+                </summary>
+      <returns>
+                    当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象的国家/地区的名称。
+                </returns>
+      <exception cref="T:System.NotSupportedException">
+此操作对非特定区域性无效。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.RegionNativeName">
+      <summary>
+                    获取或设置此自定义区域性的人们所知道的国家/地区的全名。
+                </summary>
+      <returns>
+                    国家/地区的本地名称。
+                </returns>
+      <exception cref="T:System.NotSupportedException">
+此操作对非特定区域性无效。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+                    设置操作中的值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    在设置操作中，值的长度不在 1 至 79 个字符的范围内。
+                </exception>
+    </member>
+    <member name="M:System.Globalization.CultureAndRegionInfoBuilder.Register">
+      <summary>
+                    将当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象保持为本地计算机上的一个自定义区域性，并使该区域性可供应用程序使用。需要管理特权。
+                </summary>
+      <exception cref="T:System.InvalidOperationException">
+                    此自定义区域性已经注册。
+                
+                    - 或 -
+                
+                    在能够注册区域性之前，必须首先设置当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象的一个属性。所有区域性（非特定或特定）都必须设置 <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.TextInfo" /> 和 <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.CompareInfo" />。特定区域性还必须设置 <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.NumberFormat" />、<see cref="P:System.Globalization.CultureAndRegionInfoBuilder.GregorianDateTimeFormat" /> 和 <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.AvailableCalendars" />。
+                
+                    如果未定义下列属性，则此方法还会引发 <see cref="T:System.InvalidOperationException" />：
+                <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.CultureEnglishName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.CultureNativeName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.CurrencyNativeName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ISOCurrencySymbol" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.Parent" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.RegionEnglishName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.RegionNativeName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISOLanguageName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISORegionName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterWindowsLanguageName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterWindowsRegionName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISOLanguageName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISORegionName" /></exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    某个 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象属性值超过它的最大长度或最大值。
+                </exception>
+      <exception cref="T:System.UnauthorizedAccessException">
+                    用户没有管理特权。
+                </exception>
+    </member>
+    <member name="M:System.Globalization.CultureAndRegionInfoBuilder.Save(System.String)">
+      <summary>
+                    将当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象的 XML 表示形式写入指定的文件。
+                </summary>
+      <param name="filename">
+                    包含此自定义区域性的 XML 表示形式的文件的名称。
+                </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="filename" /> 为 null。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="filename" /> 为空字符串 ("")。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    当前 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象中包含的 <see cref="T:System.Globalization.DateTimeFormatInfo" />、<see cref="T:System.Globalization.TextInfo" /> 或 <see cref="T:System.Globalization.NumberFormatInfo" /> 对象的某个属性值无效。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.TextInfo">
+      <summary>
+                    获取或设置定义与此自定义区域性关联的书写体系的 <see cref="T:System.Globalization.TextInfo" /> 对象。
+                </summary>
+      <returns>
+                    定义与此自定义区域性关联的书写体系的 <see cref="T:System.Globalization.TextInfo" /> 对象。
+                </returns>
+      <exception cref="T:System.NotSupportedException">
+                    此操作不支持替换区域性。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+                    设置操作中的值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    列表分隔符中的字符数超出 0 至 3 个字符的范围。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISOLanguageName">
+      <summary>
+                    获取或设置此自定义区域性的语言的由三个字母组成的 ISO 639-2 代码。
+                </summary>
+      <returns>
+                    当前 <see cref="T:System.Globalization.CultureInfo" /> 对象的语言的由三个字母组成的 ISO 639-2 代码。
+                </returns>
+      <exception cref="T:System.ArgumentNullException">
+                    设置操作中的值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    在设置操作中，该值的长度超出 1 至 8 个字符的范围。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+在设置操作中，该值包含一个不在“a”至“z”、“A”至“Z”或“0”至“9”范围内的字符。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISORegionName">
+      <summary>
+                    获取或设置在 ISO 3166 中定义的由三个字母组成的国家/地区代码。
+                </summary>
+      <returns>
+                    在 ISO 3166 中定义的由三个字母组成的国家/地区代码。
+                </returns>
+      <exception cref="T:System.ArgumentNullException">
+                    设置操作中的值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    在设置操作中，该值的长度超出 1 至 8 个字符的范围。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+在设置操作中，该值包含一个不在“a”至“z”、“A”至“Z”或“0”至“9”范围内的字符。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterWindowsLanguageName">
+      <summary>
+                    获取或设置 Windows API 中定义的由三个字母构成的语言代码。
+                </summary>
+      <returns>
+                    Windows API 中定义的由三个字母构成的语言代码。
+                </returns>
+      <exception cref="T:System.ArgumentNullException">
+                    设置操作中的值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    在设置操作中，该值的长度超出 1 至 8 个字符的范围。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+在设置操作中，该值包含一个不在“a”至“z”、“A”至“Z”或“0”至“9”范围内的字符。
+                </exception>
+      <exception cref="T:System.NotSupportedException">
+                    在设置操作中，当前自定义区域性是一个替换区域性。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterWindowsRegionName">
+      <summary>
+                    获取或设置 Windows 为当前自定义区域性表示的国家/地区分配的由三个字母组成的代码。
+                </summary>
+      <returns>
+                    Windows 为 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象表示的国家/地区分配的由三个字母组成的代码。
+                </returns>
+      <exception cref="T:System.ArgumentNullException">
+                    设置操作中的值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    在设置操作中，该值的长度超出 1 至 8 个字符的范围。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+在设置操作中，该值包含一个不在“a”至“z”、“A”至“Z”或“0”至“9”范围内的字符。
+                </exception>
+      <exception cref="T:System.NotSupportedException">
+                    在设置操作中，当前自定义区域性是一个替换区域性或非特定区域性。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISOLanguageName">
+      <summary>
+                    获取或设置当前 <see cref="T:System.Globalization.CultureInfo" /> 对象的语言的由两个字母组成的 ISO 639-1 代码。
+                </summary>
+      <returns>
+                    当前 <see cref="T:System.Globalization.CultureInfo" /> 对象的语言的由两个字母组成的 ISO 639-1 代码。
+                </returns>
+      <exception cref="T:System.ArgumentNullException">
+                    设置操作中的值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    在设置操作中，该值的长度超出 1 至 8 个字符的范围。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+在设置操作中，该值包含一个不在“a”至“z”、“A”至“Z”或“0”至“9”范围内的字符。
+                </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISORegionName">
+      <summary>
+                    获取或设置在 ISO 3166 中定义的由两个字母组成的国家/地区代码。
+                </summary>
+      <returns>
+                    在 ISO 3166 中定义的由两个字母组成的国家/地区代码。
+                </returns>
+      <exception cref="T:System.ArgumentNullException">
+                    设置操作中的值为 null。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                    在设置操作中，该值的长度超出 1 至 8 个字符的范围。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+在设置操作中，该值包含一个不在“a”至“z”、“A”至“Z”或“0”至“9”范围内的字符。
+                </exception>
+      <exception cref="T:System.NotSupportedException">
+                    在设置操作中，当前自定义区域性是一个非特定区域性。
+                </exception>
+    </member>
+    <member name="M:System.Globalization.CultureAndRegionInfoBuilder.Unregister(System.String)">
+      <summary>
+                    从本地计算机中删除自定义区域性。
+                </summary>
+      <param name="cultureName">
+                    自定义区域性的名称。
+                </param>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="cultureName" /> 是依赖区域性的父区域性或控制台回退用户界面区域性。
+                </exception>
+      <exception cref="T:System.UnauthorizedAccessException">
+                    应用程序没有管理特权。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+                    没有找到 <paramref name="cultureName" /> 指定的区域性。
+                </exception>
+    </member>
+    <member name="T:System.Globalization.CultureAndRegionModifiers">
+      <summary>
+                    指定定义 <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> 对象的常数。
+                </summary>
+    </member>
+    <member name="F:System.Globalization.CultureAndRegionModifiers.None">
+      <summary>
+                    一个特定的附加自定义区域性。
+                </summary>
+    </member>
+    <member name="F:System.Globalization.CultureAndRegionModifiers.Neutral">
+      <summary>
+                    一个非特定的自定义区域性。
+                </summary>
+    </member>
+    <member name="F:System.Globalization.CultureAndRegionModifiers.Replacement">
+      <summary>
+                    一个替换现有 .NET Framework 区域性或 Windows 区域设置的自定义区域性。
+                </summary>
+    </member>
+  </members>
+</doc>

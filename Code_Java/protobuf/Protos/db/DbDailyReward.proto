@@ -1,0 +1,13 @@
+package com.mokylin;
+option java_package = "com.mokylin.bleach.protobuf.db";
+option java_outer_classname = "DbDailyReward";
+
+/** 每日签到奖励存储 */
+message DailyReward{
+	//当前将要领取的奖励的index，从0开始//
+	required int32 rewardIndex = 1;
+	//最后一次领奖时间//
+	required int64 lastRewardTime = 2;
+	//是否可以领取了VIP奖励//
+	required bool canGetVipReward = 3;
+}

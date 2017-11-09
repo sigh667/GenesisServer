@@ -1,0 +1,2 @@
+;
+long belowHumanLevel;[notNull=false;minValue=0]//最高能升到Human等级减多少

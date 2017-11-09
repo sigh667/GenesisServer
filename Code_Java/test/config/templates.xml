@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<scripts>
+	<file name="items.xlsx">
+		<sheet class="com.mokylin.bleach.common.item.template.ItemTemplate" />
+	</file>
+	<file name="item_compound.xlsx">
+		<sheet class="com.mokylin.bleach.common.item.template.ItemCompoundTemplate" />
+	</file>
+	<file name="hero_attr.xlsx">
+		<sheet class="com.mokylin.bleach.common.hero.template.HeroAttrTemplate" />
+	</file>
+	<file name="hero_grow.xlsx">
+		<sheet class="com.mokylin.bleach.common.hero.template.HeroGrowTemplate" />
+	</file>
+	<file name="hero_grow_star.xlsx">
+		<sheet class="com.mokylin.bleach.common.hero.template.HeroGrowStarTemplate" />
+	</file>
+	
+	<file name="hero_group.xlsx">
+		<sheet class="com.mokylin.bleach.common.hero.template.HeroGroupTemplate" />
+	</file>
+	
+	<file name="hero_skill_level_up.xlsx">
+		<sheet class="com.mokylin.bleach.common.hero.template.HeroSkillLevelUpTemplate" />
+	</file>
+	<file name="hero_skill_level_max.xlsx">
+		<sheet class="com.mokylin.bleach.common.hero.template.HeroSkillLevelMaxTemplate" />
+	</file>
+	
+	<file name="daily_rewards.xlsx">
+		<sheet class="com.mokylin.bleach.common.dailyreward.template.DailyRewardsTemplate" />
+	</file>
+	<file name="daily_reward_elem.xlsx">
+		<sheet class="com.mokylin.bleach.common.dailyreward.template.DailyRewardElemTemplate" />
+	</file>
+	<file name="time_event.xlsx">
+		<sheet class="com.mokylin.bleach.common.timeevent.template.TimeEventTemplate" />
+	</file>
+	
+	<file name="shop.xlsx">
+		<sheet class="com.mokylin.bleach.common.shop.template.ShopTemplate" />
+		<sheet class="com.mokylin.bleach.common.shop.template.ShopGoodTemplate" />
+		<sheet class="com.mokylin.bleach.common.shop.template.ShopRefreshPriceTemplate" />
+		<sheet class="com.mokylin.bleach.common.shop.template.ShopAutoRefreshTemplate" />
+		<sheet class="com.mokylin.bleach.common.item.template.ItemPriceTemplate" />
+		<sheet class="com.mokylin.bleach.common.item.template.ItemStoreRoomTemplate" />
+		<sheet class="com.mokylin.bleach.common.item.template.ItemDiscountTemplate" />
+	</file>
+	
+</scripts>

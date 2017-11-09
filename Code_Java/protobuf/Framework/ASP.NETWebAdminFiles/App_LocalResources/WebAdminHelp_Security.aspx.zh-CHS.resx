@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="Title00" type="System.String">
+    <value>网站管理工具“安全”选项卡</value>
+  </data>
+  <data name="WebSiteAdministrationToolSecurityTab01" type="System.String">
+    <value>网站管理工具“安全”选项卡</value>
+  </data>
+  <data name="WebSiteAdministrationToolSecurityTab02" type="System.String">
+    <value>使用网站管理工具的“安全”&lt;span class=UI&gt;&lt;/span&gt;选项卡可以管理某些规则，这些规则用于保证 Web 应用程序中特定资源的安全。ASP.NET 采用了一个安全系统，您可以通过该系统来限制特定用户帐户或该帐户所属角色的访问权限。使用“安全”&lt;span class=UI&gt;&lt;/span&gt;选项卡，可以管理网站的用户帐户、角色和访问规则。首次使用“安全”&lt;span class=UI&gt;&lt;/span&gt;选项卡之前，应使用“安全设置向导”&lt;span class=UI&gt;&lt;/span&gt;来配置网站的基本安全设置。</value>
+  </data>
+  <data name="Introduction01" type="System.String">
+    <value>介绍</value>
+  </data>
+  <data name="Introduction02" type="System.String">
+    <value>ASP.NET 安全性建立在用户帐户、角色和访问规则等概念的基础上，它使您可以仅允许指定的用户帐户访问 Web 应用程序资源。安全设置是使用配置设置与存储在数据库(或其他数据存储区)中的数据的组合建立的。您创建的用户帐户和角色存储在数据库中，访问规则存储在 Web.config 文件中。</value>
+  </data>
+  <data name="Introduction03" type="System.String">
+    <value>可以对应用程序进行配置，以使用下列类型的安全性，这些类型取决于网站的使用方式:</value>
+  </data>
+  <data name="Introduction04" type="System.String">
+    <value>基于窗体的身份验证(“通过 Internet”&lt;span class=UI&gt;&lt;/span&gt;)</value>
+  </data>
+  <data name="Introduction05" type="System.String">
+    <value>基于窗体的身份验证用于可通过 Internet 访问的网站，并使用 ASP.NET 成员资格系统来管理单个用户帐户和组(角色)。用户帐户信息存储在本地数据库或 Microsoft SQL Server 数据库中。您可以使用 ASP.NET 登录控件来创建一个登录页，用户可以在该登录页上输入自己的凭据。 </value>
+  </data>
+  <data name="Introduction06" type="System.String">
+    <value>集成 Microsoft Windows 身份验证(“通过本地网络”&lt;span class=UI&gt;&lt;/span&gt;)</value>
+  </data>
+  <data name="Introduction07" type="System.String">
+    <value>Windows 身份验证使用用户在登录到 Windows 时提供的登录凭据与 Windows 安全性进行交互。因此，Windows 身份验证适用于 Intranet 方案，即用户已登录到基于 Windows 的网络。在此情况下，您不需要创建登录页，因为用户将自动使用其 Windows 凭据登录到您的应用程序。</value>
+  </data>
+  <data name="Introduction08" type="System.String">
+    <value>使用“安全”&lt;span class=UI&gt;&lt;/span&gt;选项卡的“用户”&lt;span class=UI&gt;&lt;/span&gt;部分可以完成下列任务:</value>
+  </data>
+  <data name="Introduction09" type="System.String">
+    <value>创建、编辑和删除网站的已注册用户帐户。</value>
+  </data>
+  <data name="Introduction10" type="System.String">
+    <value>查看网站的所有已注册用户帐户的列表。</value>
+  </data>
+  <data name="Introduction11" type="System.String">
+    <value>更改网站使用的身份验证方法。 </value>
+  </data>
+  <data name="Introduction12" type="System.String">
+    <value>注意   如果选择“通过 Internet”&lt;span class=UI&gt;&lt;/span&gt;选项作为身份验证类型(假定使用基于窗体的身份验证)，则可以创建和管理用户帐户。如果选择“通过本地网络”&lt;span class=UI&gt;&lt;/span&gt;选项作为身份验证类型(假定使用集成 Windows 身份验证)，则不能管理单个用户帐户。如果更改身份验证类型，则已创建的所有用户信息都会丢失。此外，访问规则可能不再按您配置的方式工作。通常只应在首次配置网站时选择身份验证类型。</value>
+  </data>
+  <data name="Introduction13" type="System.String">
+    <value>使用“安全”&lt;span class=UI&gt;&lt;/span&gt;选项卡的“角色”&lt;span class=UI&gt;&lt;/span&gt;部分可以对用户帐户进行分组，这会使权限的分配(授权)更加容易。</value>
+  </data>
+  <data name="Introduction14" type="System.String">
+    <value>使用“安全”&lt;span class=UI&gt;&lt;/span&gt;选项卡的“访问规则”&lt;span class=UI&gt;&lt;/span&gt;部分，可以允许或拒绝特定用户帐户或属于指定角色的所有用户帐户访问指定的页。通常，使用访问规则来限制某些用户帐户对某些页的访问。 </value>
+  </data>
+  <data name="CreatingUsers01" type="System.String">
+    <value>创建用户</value>
+  </data>
+  <data name="CreatingUsers02" type="System.String">
+    <value>如果已经将身份验证类型设置为“通过 Internet”&lt;span class=UI&gt;&lt;/span&gt;(窗体身份验证)，则可以创建和管理用户帐户。要更改身份验证类型，请单击“选择身份验证类型”&lt;span class=UI&gt;&lt;/span&gt;。</value>
+  </data>
+  <data name="CreatingUsers03" type="System.String">
+    <value>创建用户帐户</value>
+  </data>
+  <data name="CreatingUsers04" type="System.String">
+    <value>单击“创建用户”&lt;span class=UI&gt;&lt;/span&gt;，然后指定以下信息。</value>
+  </data>
+  <data name="CreatingUsers05" type="System.String">
+    <value>用户名</value>
+  </data>
+  <data name="CreatingUsers06" type="System.String">
+    <value>输入要创建的用户帐户的名称。</value>
+  </data>
+  <data name="CreatingUsers07" type="System.String">
+    <value>密码</value>
+  </data>
+  <data name="CreatingUsers08" type="System.String">
+    <value>输入“用户名”&lt;span class=UI&gt;&lt;/span&gt;的密码。密码区分大小写。</value>
+  </data>
+  <data name="CreatingUsers09" type="System.String">
+    <value>确认密码</value>
+  </data>
+  <data name="CreatingUsers10" type="System.String">
+    <value>再次输入“密码”&lt;span class=UI&gt;&lt;/span&gt;。 </value>
+  </data>
+  <data name="CreatingUsers11" type="System.String">
+    <value>电子邮件</value>
+  </data>
+  <data name="CreatingUsers12" type="System.String">
+    <value>输入“用户名”&lt;span class=UI&gt;&lt;/span&gt;的电子邮件地址。 </value>
+  </data>
+  <data name="CreatingUsers13" type="System.String">
+    <value>网站管理工具不对您输入的地址是否是有效的电子邮件地址进行确认，但要对电子邮件地址的格式是否正确进行确认。</value>
+  </data>
+  <data name="CreatingUsers14" type="System.String">
+    <value>安全提示问题</value>
+  </data>
+  <data name="CreatingUsers15" type="System.String">
+    <value>输入一个问题，当用户需要重置或恢复其密码时向这些用户提出该问题。</value>
+  </data>
+  <data name="CreatingUsers16" type="System.String">
+    <value>安全提示问题的答案</value>
+  </data>
+  <data name="CreatingUsers17" type="System.String">
+    <value>输入“安全提示问题”&lt;span class=UI&gt;&lt;/span&gt;的答案。</value>
+  </data>
+  <data name="CreatingUsers18" type="System.String">
+    <value>活动用户</value>
+  </data>
+  <data name="CreatingUsers19" type="System.String">
+    <value>如果选择此选项，则将此用户帐户作为站点的一个活动(当前)用户启用；如果不选择此选项，则用户信息将存储在数据库中，但用户无法登录到网站。</value>
+  </data>
+  <data name="CreatingUsers20" type="System.String">
+    <value>角色</value>
+  </data>
+  <data name="CreatingUsers21" type="System.String">
+    <value>为“用户名”&lt;span class=UI&gt;&lt;/span&gt;选择角色。可以分别创建角色。有关更多信息，请参见下一节。 </value>
+  </data>
+  <data name="CreatingRoles01" type="System.String">
+    <value>创建角色</value>
+  </data>
+  <data name="CreatingRoles02" type="System.String">
+    <value>创建角色</value>
+  </data>
+  <data name="CreatingRoles03" type="System.String">
+    <value>在“安全”&lt;span class=UI&gt;&lt;/span&gt;选项卡上，单击“启用角色”&lt;span class=UI&gt;&lt;/span&gt;。 </value>
+  </data>
+  <data name="CreatingRoles04" type="System.String">
+    <value>单击“创建或管理角色”&lt;span class=UI&gt;&lt;/span&gt;。</value>
+  </data>
+  <data name="CreatingRoles05" type="System.String">
+    <value>在“新角色名称”&lt;span class=UI&gt;&lt;/span&gt;框中，输入要创建的角色的名称，如 Administrator、Member 或 Guest，然后单击“添加角色”&lt;span class=UI&gt;&lt;/span&gt;。</value>
+  </data>
+  <data name="CreatingRoles06" type="System.String">
+    <value>向角色添加用户帐户</value>
+  </data>
+  <data name="CreatingRoles07" type="System.String">
+    <value>在“安全”&lt;span class=UI&gt;&lt;/span&gt;选项卡上，单击“管理用户”&lt;span class=UI&gt;&lt;/span&gt;，然后单击“编辑用户”&lt;span class=UI&gt;&lt;/span&gt;。 </value>
+  </data>
+  <data name="CreatingRoles08" type="System.String">
+    <value>在“角色”&lt;span class=UI&gt;&lt;/span&gt;下，为用户帐户选择角色。</value>
+  </data>
+  <data name="CreatingAccessRules01" type="System.String">
+    <value>创建访问规则</value>
+  </data>
+  <data name="CreatingAccessRules02" type="System.String">
+    <value>创建访问规则</value>
+  </data>
+  <data name="CreatingAccessRules03" type="System.String">
+    <value>在“安全”&lt;span class=UI&gt;&lt;/span&gt;选项卡上，单击“创建访问规则”&lt;span class=UI&gt;&lt;/span&gt;。</value>
+  </data>
+  <data name="CreatingAccessRules04" type="System.String">
+    <value>指定下列选项:</value>
+  </data>
+  <data name="CreatingAccessRules05" type="System.String">
+    <value>为此规则选择一个目录</value>
+  </data>
+  <data name="CreatingAccessRules06" type="System.String">
+    <value>您可以选择创建应用于整个站点的规则，也可以选择创建仅应用于特定子目录的规则。在网站的目录结构显示中，选择要应用该规则的目录。 </value>
+  </data>
+  <data name="CreatingAccessRules07" type="System.String">
+    <value>在“规则应用于”&lt;span class=UI&gt;&lt;/span&gt;下，指定如何应用规则。</value>
+  </data>
+  <data name="CreatingAccessRules08" type="System.String">
+    <value>角色</value>
+  </data>
+  <data name="CreatingAccessRules09" type="System.String">
+    <value>选择“角色”&lt;span class=UI&gt;&lt;/span&gt;，然后，在列表中选择要应用该访问规则的角色的名称。</value>
+  </data>
+  <data name="CreatingAccessRules10" type="System.String">
+    <value>用户</value>
+  </data>
+  <data name="CreatingAccessRules11" type="System.String">
+    <value>选择“用户”&lt;span class=UI&gt;&lt;/span&gt;，然后输入要应用该访问规则的用户帐户的名称。如果您使用的是 ASP.NET 成员资格(网站安全设置为“通过 Internet”&lt;span class=UI&gt;&lt;/span&gt;)，则还可以使用“搜索用户”功能。</value>
+  </data>
+  <data name="CreatingAccessRules12" type="System.String">
+    <value>所有用户</value>
+  </data>
+  <data name="CreatingAccessRules13" type="System.String">
+    <value>如果选择此选项，则将此规则应用于网站的所有访问者。</value>
+  </data>
+  <data name="CreatingAccessRules14" type="System.String">
+    <value>注意   使用“所有用户”&lt;span class=UI&gt;&lt;/span&gt;选项创建规则时一定要小心。由于规则是按顺序应用的，因此，您可能无意中创建了禁止所有用户访问某个文件夹的规则。</value>
+  </data>
+  <data name="CreatingAccessRules15" type="System.String">
+    <value>匿名用户</value>
+  </data>
+  <data name="CreatingAccessRules16" type="System.String">
+    <value>如果选择此选项，则只将此规则应用于匿名(非注册)用户帐户。 </value>
+  </data>
+  <data name="CreatingAccessRules17" type="System.String">
+    <value>通常选择“匿名用户”&lt;span class=UI&gt;&lt;/span&gt;选项来限制(拒绝)未登录用户的访问。</value>
+  </data>
+  <data name="CreatingAccessRules18" type="System.String">
+    <value>权限</value>
+  </data>
+  <data name="CreatingAccessRules19" type="System.String">
+    <value>选择“允许”&lt;span class=UI&gt;&lt;/span&gt;为指定的用户帐户或角色授予访问指定目录的权限。</value>
+  </data>
+  <data name="CreatingAccessRules20" type="System.String">
+    <value>选择“拒绝”&lt;span class=UI&gt;&lt;/span&gt;将不允许指定的用户帐户或角色访问指定目录。</value>
+  </data>
+  <data name="CreatingAccessRules21" type="System.String">
+    <value>例如，要禁止未登录的用户(匿名用户)查看某个文件夹中的页，请单击该文件夹，选择“匿名用户”&lt;span class=UI&gt;&lt;/span&gt;，然后选择“拒绝”&lt;span class=UI&gt;&lt;/span&gt;。 </value>
+  </data>
+  <data name="CreatingAccessRules22" type="System.String">
+    <value>有时为了建立正确的权限，可能不得不为同一个文件夹创建多个规则。例如，您可能创建了一个拒绝访问匿名用户帐户的规则，创建了另一个拒绝访问 Guest 角色中的用户帐户的规则。这样，只有已登录并在另一个组中的用户才能访问该文件夹。</value>
+  </data>
+  <data name="BehindtheScenes01" type="System.String">
+    <value>幕后</value>
+  </data>
+  <data name="BehindtheScenes02" type="System.String">
+    <value>网站管理工具对以下两处的安全信息进行管理:</value>
+  </data>
+  <data name="BehindtheScenes03" type="System.String">
+    <value>位于网站根目录的 Web.config 文件。</value>
+  </data>
+  <data name="BehindtheScenes04" type="System.String">
+    <value>用于存储用户和组信息的站点提供程序数据库。</value>
+  </data>
+  <data name="Web.configSettings01" type="System.String">
+    <value>Web.config 设置</value>
+  </data>
+  <data name="Web.configSettings02" type="System.String">
+    <value>通过“安全”&lt;span class=UI&gt;&lt;/span&gt;选项卡管理的 Web.config 设置为 &amp;lt;authorization&amp;gt;、&amp;lt;roleManager&amp;gt; 和 &amp;lt;authentication&amp;gt; 节。</value>
+  </data>
+  <data name="Web.configSettings03" type="System.String">
+    <value>下面的代码示例是由网站管理工具在网站的一个受限子目录内创建的 Web.config 文件。该受限子目录允许管理员访问，拒绝匿名用户访问。</value>
+  </data>
+  <data name="Database01" type="System.String">
+    <value>数据库</value>
+  </data>
+  <data name="Database02" type="System.String">
+    <value>使用默认的数据提供程序时，网站管理工具在默认 ASP.NET 数据库中创建项。默认情况下，网站管理工具在网站的 App_Data 文件夹中创建一个数据库。但是，使用“提供程序”&lt;span class=UI&gt;&lt;/span&gt;选项卡可以指定将用户帐户和角色的应用程序信息保留在另一个数据库中(例如，从 Windows 用户数据库检索角色信息)。有关详细信息，请参见网站管理工具“提供程序”选项卡。</value>
+  </data>
+  <data name="MoreInformation01" type="System.String">
+    <value>详细信息</value>
+  </data>
+  <data name="MoreInformation02" type="System.String">
+    <value>有关在“安全”&lt;span class=UI&gt;&lt;/span&gt;选项卡中管理的设置的更多信息，请参见 .NET Framework 文档中的下列主题:</value>
+  </data>
+  <data name="MoreInformation03" type="System.String">
+    <value>使用 ASP.NET 成员资格管理用户</value>
+  </data>
+  <data name="MoreInformation04" type="System.String">
+    <value>限制对 ASP.NET 网站的访问</value>
+  </data>
+  <data name="MoreInformation05" type="System.String">
+    <value>ASP.NET 配置概述</value>
+  </data>
+  <data name="SeeAlso01" type="System.String">
+    <value>请参见</value>
+  </data>
+  <data name="SeeAlso02" type="System.String">
+    <value>网站管理工具概述</value>
+  </data>
+  <data name="SeeAlso03" type="System.String">
+    <value>网站管理工具“应用程序”选项卡</value>
+  </data>
+  <data name="SeeAlso04" type="System.String">
+    <value>网站管理工具“提供程序”选项卡</value>
+  </data>
+  <data name="SeeAlso05" type="System.String">
+    <value>网站管理工具的内部机制</value>
+  </data>
+</root>

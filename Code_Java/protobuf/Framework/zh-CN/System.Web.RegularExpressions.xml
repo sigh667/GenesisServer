@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Web.RegularExpressions</name>
+  </assembly>
+  <members>
+    <member name="T:System.Web.RegularExpressions.AspCodeRegex">
+      <summary>提供正则表达式以分析 ASP.NET 代码块。</summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.AspCodeRegex.#ctor">
+      <summary>初始化 <see cref="T:System.Web.RegularExpressions.AspCodeRegex" /> 类的新实例。</summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.AspExprRegex">
+      <summary>提供正则表达式以分析 ASP.NET 表达式块。</summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.AspExprRegex.#ctor">
+      <summary>初始化 <see cref="T:System.Web.RegularExpressions.AspExprRegex" /> 类的新实例。</summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.CommentRegex">
+      <summary>提供用于分析 ASP.NET 注释块的正则表达式。</summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.CommentRegex.#ctor">
+      <summary>初始化 <see cref="T:System.Web.RegularExpressions.CommentRegex" /> 类的新实例。</summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.DatabindExprRegex">
+      <summary>提供正则表达式以分析 ASP.NET 数据绑定表达式。</summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.DatabindExprRegex.#ctor">
+      <summary>初始化 <see cref="T:System.Web.RegularExpressions.DatabindExprRegex" /> 类的新实例。</summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.DataBindRegex">
+      <summary>提供正则表达式以分析 ASP.NET 数据绑定。</summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.DataBindRegex.#ctor">
+      <summary>初始化 <see cref="T:System.Web.RegularExpressions.DataBindRegex" /> 类的新实例。 </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.DirectiveRegex">
+      <summary>提供用于分析 ASP.NET 指令的正则表达式。</summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.DirectiveRegex.#ctor">
+      <summary>初始化 <see cref="T:System.Web.RegularExpressions.DirectiveRegex" /> 类的新实例。</summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.EndTagRegex">
+      <summary>提供用于分析结束标记的正则表达式。</summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.EndTagRegex.#ctor">
+      <summary>初始化 <see cref="T:System.Web.RegularExpressions.EndTagRegex" /> 类的新实例。 </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.GTRegex">
+      <summary>提供用于匹配大于号 (&gt;) 的正则表达式。</summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.GTRegex.#ctor">
+      <summary>初始化 <see cref="T:System.Web.RegularExpressions.GTRegex" /> 类的新实例。 </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.IncludeRegex">
+      <summary>提供正则表达式以分析 ASP.NET #include 指令。</summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.IncludeRegex.#ctor">
+      <summary>初始化 <see cref="T:System.Web.RegularExpressions.IncludeRegex" /> 类的新实例。 </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.LTRegex">
+      <summary>提供一个用于查找小于号 (&lt;) 的正则表达式。</summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.LTRegex.#ctor">
+      <summary>初始化 <see cref="T:System.Web.RegularExpressions.LTRegex" /> 类的新实例。 </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.RunatServerRegex">
+      <summary>提供正则表达式以分析 ASP.NET runat 属性。</summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.RunatServerRegex.#ctor">
+      <summary>初始化 <see cref="T:System.Web.RegularExpressions.RunatServerRegex" /> 类的新实例。 </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.ServerTagsRegex">
+      <summary>提供正则表达式以分析 ASP.NET 服务器标记。</summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.ServerTagsRegex.#ctor">
+      <summary>初始化 <see cref="T:System.Web.RegularExpressions.ServerTagsRegex" /> 类的新实例。 </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.SimpleDirectiveRegex">
+      <summary>提供用于分析 ASP.NET 数据指令的正则表达式。</summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.SimpleDirectiveRegex.#ctor">
+      <summary>初始化 <see cref="T:System.Web.RegularExpressions.SimpleDirectiveRegex" /> 类的新实例。 </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.TagRegex">
+      <summary>提供用于分析 ASP.NET Web 服务器控件标记的正则表达式。</summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.TagRegex.#ctor">
+      <summary>初始化 <see cref="T:System.Web.RegularExpressions.TagRegex" /> 类的新实例。 </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.TextRegex">
+      <summary>提供正则表达式以匹配所有字符，直到出现下一个小于 (&lt;) 字符。</summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.TextRegex.#ctor">
+      <summary>初始化 <see cref="T:System.Web.RegularExpressions.TextRegex" /> 类的新实例。 </summary>
+    </member>
+  </members>
+</doc>

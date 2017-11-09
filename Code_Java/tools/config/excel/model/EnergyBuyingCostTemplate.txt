@@ -1,0 +1,1 @@
+long cost;[minValue=1]//玩家购买体力需要消耗的货币数量

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+
+    <data name="AppSettingTitle" type="System.String">
+        <value>应用程序设置</value>
+    </data>
+    <data name="NameLabel" type="System.String">
+        <value>名称: </value>
+    </data>
+    <data name="NameRequiredError" type="System.String">
+        <value>名称不能为空</value>
+    </data>
+    <data name="ValueLabel" type="System.String">
+        <value>值: </value>
+    </data>
+    <data name="NameTooLongError" type="System.String">
+        <value>应用程序设置名称最长不能超过 256 个字符 </value>
+    </data>    
+    <data name="ValueTooLongError" type="System.String">
+        <value>应用程序设置值最长不能超过 256 个字符 </value>
+    </data>
+</root>

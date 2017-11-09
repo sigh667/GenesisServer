@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>IIEHost</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.IE.IHostEx">
+      <summary>提供用于创建类工厂的方法。</summary>
+    </member>
+    <member name="M:Microsoft.IE.IHostEx.GetClassFactory(System.String,System.String)">
+      <summary>为指定程序集中的某个类型创建类工厂。</summary>
+      <returns>表示类工厂的对象。</returns>
+      <param name="className">类型名称。</param>
+      <param name="fileName">程序集的名称。</param>
+    </member>
+    <member name="M:Microsoft.IE.IHostEx.GetSecuredClassFactory(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+      <summary>为指定程序集中的某个类型创建安全类工厂。</summary>
+      <returns>表示安全类工厂的对象。</returns>
+      <param name="dwIdentityFlags">以下 CORIESECURITY 值之一：CORIESECURITY_ZONE: 0x01CORIESECURITY_SITE: 0x02</param>
+      <param name="dwZone">以下 URLZONE 值之一：URLZONE_LOCAL_MACHINE: 0x00URLZONE_INTRANET: 0x01URLZONE_TRUSTED: 0x02URLZONE_INTERNET: 0x03URLZONE_UNTRUSTED: 0x04</param>
+      <param name="lpSite">网站地址。</param>
+      <param name="pbSecurityId">网站的唯一 ID。</param>
+      <param name="lpHash">要加载的程序集的十六进制编码哈希值。</param>
+      <param name="className">类型名称。</param>
+      <param name="fileName">程序集的名称。</param>
+    </member>
+    <member name="T:Microsoft.IE.IHostStub">
+      <summary>表示用来创建类工厂的存根类。此存根类从不实现。</summary>
+    </member>
+    <member name="T:Microsoft.IE.IHostStubClass">
+      <summary>提供用于创建类工厂的方法。</summary>
+    </member>
+    <member name="M:Microsoft.IE.IHostStubClass.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.IE.IHostStubClass" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.IE.IHostStubClass.GetClassFactory(System.String,System.String)">
+      <summary>为指定程序集中的某个类型创建类工厂。</summary>
+      <returns>表示类工厂的对象。</returns>
+      <param name="className">类型名称。</param>
+      <param name="fileName">程序集的名称。</param>
+    </member>
+    <member name="M:Microsoft.IE.IHostStubClass.GetSecuredClassFactory(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+      <summary>为指定程序集中的某个类型创建安全类工厂。</summary>
+      <returns>表示安全类工厂的对象。</returns>
+      <param name="dwIdentityFlags">以下 CORIESECURITY 值之一：CORIESECURITY_ZONE: 0x01CORIESECURITY_SITE: 0x02</param>
+      <param name="dwZone">以下 URLZONE 值之一：URLZONE_LOCAL_MACHINE: 0x00URLZONE_INTRANET: 0x01URLZONE_TRUSTED: 0x02URLZONE_INTERNET: 0x03URLZONE_UNTRUSTED: 0x04</param>
+      <param name="lpSite">网站地址。</param>
+      <param name="pbSecurityId">网站的唯一 ID。</param>
+      <param name="lpHash">要加载的程序集的十六进制编码哈希值。</param>
+      <param name="className">类型名称。</param>
+      <param name="fileName">程序集的名称。</param>
+    </member>
+    <member name="T:Microsoft.IE.ISecureFactory">
+      <summary>提供用于创建安全类工厂的方法。</summary>
+    </member>
+    <member name="M:Microsoft.IE.ISecureFactory.CreateInstanceWithSecurity(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+      <summary>创建表示安全类工厂的 COM 类型的新实例。</summary>
+      <returns>作为新实例包装的对象。返回值需要打开包装才能访问真实对象。</returns>
+      <param name="dwIdentityFlag">以下 CORIESECURITY 值之一：CORIESECURITY_ZONE: 0x01CORIESECURITY_SITE: 0x02</param>
+      <param name="dwZone">以下 URLZONE 值之一：URLZONE_LOCAL_MACHINE: 0x00URLZONE_INTRANET: 0x01URLZONE_TRUSTED: 0x02URLZONE_INTERNET: 0x03URLZONE_UNTRUSTED: 0x04</param>
+      <param name="lpSite">网站的 URL。</param>
+      <param name="lpId">网站的唯一标识。</param>
+      <param name="lpLink">URL 的链接部分，可以是相对的。</param>
+      <param name="lpLicenses">与域关联的许可证文件的位置。</param>
+    </member>
+    <member name="T:Microsoft.IE.ISecureFactory2">
+      <summary>提供用于创建安全类工厂的方法。</summary>
+    </member>
+    <member name="M:Microsoft.IE.ISecureFactory2.CreateInstanceWithSecurity(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+      <summary>创建表示安全类工厂的 COM 类型的新实例。</summary>
+      <returns>作为新实例包装的对象。返回值需要打开包装才能访问真实对象。</returns>
+      <param name="dwIdentityFlag">以下 CORIESECURITY 值之一：CORIESECURITY_ZONE: 0x01CORIESECURITY_SITE: 0x02</param>
+      <param name="dwZone">以下 URLZONE 值之一：URLZONE_LOCAL_MACHINE: 0x00URLZONE_INTRANET: 0x01URLZONE_TRUSTED: 0x02URLZONE_INTERNET: 0x03URLZONE_UNTRUSTED: 0x04</param>
+      <param name="lpSite">网站的 URL，将创建的安全类工厂是为该网站中包含的应用程序创建的。</param>
+      <param name="lpId">网站的唯一标识。</param>
+      <param name="lpLink">URL 的链接部分，可以是相对的。</param>
+      <param name="lpLicenses">与域关联的许可证文件的位置。</param>
+    </member>
+    <member name="M:Microsoft.IE.ISecureFactory2.CreateInstanceWithSecurity2(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+      <summary>使用部署清单中的信息创建表示安全类工厂的 COM 类型的新实例。</summary>
+      <returns>作为新实例包装的对象。返回值需要打开包装才能访问真实对象。</returns>
+      <param name="dwFlags">以下 CORIESECURITY 值之一：CORIESECURITY_ZONE: 0x01CORIESECURITY_SITE: 0x02</param>
+      <param name="dwZone">以下 URLZONE 值之一：URLZONE_LOCAL_MACHINE: 0x00URLZONE_INTRANET: 0x01URLZONE_TRUSTED: 0x02URLZONE_INTERNET: 0x03URLZONE_UNTRUSTED: 0x04</param>
+      <param name="wszSite">网站的 URL，将创建的安全类工厂是为该网站中包含的应用程序创建的。</param>
+      <param name="wszId">网站的唯一标识。</param>
+      <param name="wszConfig">URL 的链接部分，可以是相对的。</param>
+      <param name="wszLicenses">与域关联的许可证文件的位置。</param>
+      <param name="wszDeploymentManifest">部署清单的位置。</param>
+    </member>
+    <member name="T:Microsoft.IE.IHost">
+      <summary>提供用于创建类工厂的方法。</summary>
+    </member>
+    <member name="M:Microsoft.IE.IHost.GetClassFactory(System.String,System.String)">
+      <summary>为指定程序集中的某个类型创建类工厂。</summary>
+      <returns>表示类工厂的对象。</returns>
+      <param name="className">类型名称。</param>
+      <param name="fileName">程序集的名称。</param>
+    </member>
+    <member name="M:Microsoft.IE.IHost.GetSecuredClassFactory(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+      <summary>为指定程序集中的某个类型创建安全类工厂。</summary>
+      <returns>表示安全类工厂的对象。</returns>
+      <param name="dwIdentityFlags">以下 CORIESECURITY 值之一：CORIESECURITY_ZONE: 0x01CORIESECURITY_SITE: 0x02</param>
+      <param name="dwZone">以下 URLZONE 值之一：URLZONE_LOCAL_MACHINE: 0x00URLZONE_INTRANET: 0x01URLZONE_TRUSTED: 0x02URLZONE_INTERNET: 0x03URLZONE_UNTRUSTED: 0x04</param>
+      <param name="lpSite">网站地址。</param>
+      <param name="pbSecurityId">网站的唯一 ID。</param>
+      <param name="className">类型名称。</param>
+      <param name="fileName">程序集的名称。</param>
+    </member>
+    <member name="M:Microsoft.IE.IHostStubClass.GetSecuredClassFactory(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+      <summary>为指定程序集中的某个类型创建安全类工厂。</summary>
+      <returns>表示安全类工厂的对象。</returns>
+      <param name="dwIdentityFlags">以下 CORIESECURITY 值之一：CORIESECURITY_ZONE: 0x01CORIESECURITY_SITE: 0x02</param>
+      <param name="dwZone">以下 URLZONE 值之一：URLZONE_LOCAL_MACHINE: 0x00URLZONE_INTRANET: 0x01URLZONE_TRUSTED: 0x02URLZONE_INTERNET: 0x03URLZONE_UNTRUSTED: 0x04</param>
+      <param name="lpSite">网站地址。</param>
+      <param name="pbSecurityId">网站的唯一 ID。</param>
+      <param name="className">类型名称。</param>
+      <param name="fileName">程序集的名称。</param>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,175 @@
+package com.mokylin;
+import "MessageType.proto";
+import "Common.proto";
+option java_package = "com.mokylin.bleach.protobuf";
+option java_outer_classname = "ShopMessage";
+
+
+/**
+ * 打开商店
+ */
+message CGOpenShop {
+	option (cg_message_type) = CG_OPEN_SHOP;
+	/**商店类型Id*/
+	required int32 shopTypeId = 1;
+}
+
+/**
+ * 刷新商店货物
+ */
+message CGRefreshGoods {
+	option (cg_message_type) = CG_REFRESH_GOODS;
+	/**商店类型Id*/
+	required int32 shopTypeId = 1;
+}
+
+/**
+ * 购买货物
+ */
+message CGBuyGood{
+	option (cg_message_type) = CG_BUY_GOOD;
+	/**商店类型Id*/
+	required int32 shopTypeId = 1;
+	/** 货物位置 */
+	required int32 goodPosition = 2;
+	/** 要购买的货物出现的时间 */
+	required int64 curGoodBornTime = 3;
+}
+
+///////////////////////////////////////////////////////////////////
+
+/**
+ * 商店信息
+ */
+message GCShopInfo {
+	option (gc_message_type) = GC_SHOP_INFO;
+	/** 商店类型Id */
+	required int32 shopTypeId = 1;
+	/** 商店货币信息列表 */
+	repeated int32 currencyList = 2;
+	/** 商店是否是永久开放 */
+	required bool isOpenForever = 3;
+	/** 距离下次自动刷新的时间 */
+	required int32 secondsBeforeNextAutoRefreshTime = 4;
+	/** 剩余开放时间 */
+	required int32 leftOpenTime = 5;
+	/** 货物信息列表 */
+	repeated GoodInfo goodInfoList = 6;
+	/** 货物出现的时间 */
+	required int64 goodBornTime = 7;
+	/** 手动刷新次数(打开界面的时候下发)*/
+	required int32 manuallyRefreshCount = 8;
+}
+
+/**
+ * 货物信息
+ */
+message GoodInfo {
+	/** 物品模板Id */
+	required int32 itemTemplateId = 1;
+	/** 货物数量 */
+	required int32 num = 2;
+	/** 折扣 */
+	required int32 discount = 3;
+	/** 是否还在卖 */
+	required bool isSelling = 4;
+}
+
+/**
+ * 商店手动刷新信息
+ */
+message GCShopManuallyRefreshInfo {
+	option (gc_message_type) = GC_SHOP_MANUALLY_REFRESH_INFO;
+	/** 货币改变信息 */
+	required CurrencyChangeInfo currencyChange = 1;
+	/** 货物信息列表 */
+	repeated GoodInfo goodInfoList = 2;
+	/** 物品产生时间 */
+	required int64 goodBornTime = 3;
+}
+
+/**
+ *	商店自动刷新信息
+ */
+message GCShopAutoRefreshInfo {
+	option (gc_message_type) = GC_SHOP_AUTO_REFRESH_INFO;
+	/** 货物信息列表 */
+	repeated GoodInfo goodInfoList = 1;
+	/** 物品产生时间 */
+	required int64 goodBornTime = 2;
+	/** 距离下次自动刷新的时间 */
+	required int32 secondsBeforeNextAutoRefreshTime = 3;
+}
+
+/**
+ * 物品购买成功
+ */
+message GCGoodBuySuccess {
+	option (gc_message_type) = GC_GOOD_BUY_SUCCESS;
+	/** 货币改变信息 */
+	required CurrencyChangeInfo currencyChange = 1;
+	/** 已经购买的物品的位置 */
+	required int32 position = 2;
+}
+
+/**
+ * 商店手动刷新次数重置消息
+ */
+message GCShopManuallyRefreshCountReset {
+	option (gc_message_type) = GC_SHOP_MANUALLY_REFRESH_COUNT_RESET;
+	/** 商店类型Id列表 */
+	required int32 shopTypeId = 1;
+}
+
+/**
+ * 已经开放的商店
+ */
+message GCOpenedTempShop {
+	option (gc_message_type) = GC_OPENED_TEMP_SHOP;
+	/** 商店类型Id列表 */
+	repeated int32 shopTypeList = 1;	// 商店类型//
+}
+
+/**
+ * 开放商店
+ */
+message GCOpenShop {
+	option (gc_message_type) = GC_OPEN_SHOP;
+	/** 商店类型Id */
+	required int32 shopTypeId = 1;
+}
+
+/**
+ * 商店关闭
+ */
+message GCShopClose {
+	option (gc_message_type) = GC_SHOP_CLOSE;
+	/** 商店类型Id */
+	required int32 shopTypeId = 1;
+}
+
+/**
+ * 商店提示
+ */
+message GCShopPrompt {
+	option (gc_message_type) = GC_SHOP_PROMPT;
+	/** 语言常量Id */
+	required ShopPrompt prompt = 1;
+}
+
+/**
+ * 商店的提示
+ */
+enum ShopPrompt {
+	/** 商店已关闭 */
+	SHOP_CLOSED = 0;
+	/** 已达到刷新上限 */
+	ALREADY_REACH_REFRESH_UPPER_LIMIT = 1;
+	/** 金钱不足 */
+	MONEY_NOT_ENOUGH = 2;
+	/** 货物已经刷新 */
+	GOODS_ALREADY_REFRESHED = 3;
+	/** 货物已经卖完 */
+	GOODS_ALREADY_SELL_UP = 4;
+}
+

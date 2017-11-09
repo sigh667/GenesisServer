@@ -1,0 +1,31 @@
+package com.mokylin;
+import "MessageType.proto";
+option java_package = "com.mokylin.bleach.protobuf";
+option java_outer_classname = "ReportMessage";
+
+/**
+ * 战报
+ */
+message Report {
+	// 战斗初始双方信息
+	required ReportInfo info = 1;
+	// 战斗流程记录
+	required ReportRecord record = 2;
+	// 战斗结果
+	required ReportResult result = 3;
+}
+
+/**初始信息 */
+message ReportInfo {
+
+}
+
+/**战斗记录 */
+message ReportRecord {
+
+}
+
+/**战斗结果 */
+message ReportResult {
+
+}

@@ -1,0 +1,22 @@
+package com.mokylin;
+import "MessageType.proto";
+option java_package = "com.mokylin.bleach.protobuf";
+option java_outer_classname = "FunctionMessage";
+
+////////////////////////////////////////////////////////////////////////
+
+/**
+ * 功能开放消息
+ */
+message GCFunctionOpenList {
+	option (gc_message_type) = GC_FUNCTION_OPEN_LIST;
+	repeated int32 funcTypes = 1;// 开放的功能列表
+}
+
+/**
+ * 新开放功能消息
+ */
+message GCFunctionOpen {
+	option (gc_message_type) = GC_FUNCTION_OPEN;
+	required int32 funcType = 1;// 新开放的功能
+}

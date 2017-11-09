@@ -1,0 +1,742 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Deployment</name>
+  </assembly>
+  <members>
+    <member name="T:System.Deployment.Application.ApplicationDeployment">
+      <summary>
+                    支持以编程方式更新当前部署，以及处理文件的按需下载。无法继承此类。
+                </summary>
+    </member>
+    <member name="P:System.Deployment.Application.ApplicationDeployment.ActivationUri">
+      <summary>
+                    获取用于启动应用程序的部署清单的 URL。
+                </summary>
+      <returns>
+                    如果部署清单中的 TrustUrlParameters 属性为 false，或是用户提供了一个 UNC 以打开部署或在本地打开它，则为一个零长度字符串。否则，返回值为用于启动应用程序的完整 URL（包含所有参数）。
+                </returns>
+    </member>
+    <member name="M:System.Deployment.Application.ApplicationDeployment.CheckForDetailedUpdate">
+      <summary>
+                    执行与 <see cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdate" /> 相同的操作，但返回有关可用更新的扩展信息。
+                </summary>
+      <returns>
+                    可用更新的 <see cref="T:System.Deployment.Application.UpdateCheckInfo" />。
+                </returns>
+      <exception cref="T:System.InvalidOperationException">
+                    当前应用程序未被配置为支持更新，或是已存在另一个已在进行中的更新检查操作。
+                </exception>
+      <exception cref="T:System.Deployment.Application.DeploymentDownloadException">
+                    无法下载部署清单。此异常将显示在 <see cref="E:System.Deployment.Application.ApplicationDeployment.CheckForUpdateCompleted" /> 事件的 <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Error" /> 属性中。
+                </exception>
+      <exception cref="T:System.Deployment.Application.InvalidDeploymentException">
+                    部署清单已损坏。在尝试为用户部署此应用程序前，请重新生成应用程序的清单。此异常将显示在 <see cref="E:System.Deployment.Application.ApplicationDeployment.CheckForUpdateCompleted" /> 事件的 <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Error" /> 属性中。
+                </exception>
+    </member>
+    <member name="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdate">
+      <summary>
+                    检查 <see cref="P:System.Deployment.Application.ApplicationDeployment.UpdateLocation" /> 以确定是否有新的更新可用。
+                </summary>
+      <returns>
+                    如果有新的更新可用，则为 true；否则为 false。
+                </returns>
+      <exception cref="T:System.InvalidOperationException">
+如果更新已在进行中，而这时您又调用 <see cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdate" /> 方法，ClickOnce 便会立即引发此异常。
+                </exception>
+      <exception cref="T:System.Deployment.Application.DeploymentDownloadException">
+                    无法下载部署清单。
+                </exception>
+      <exception cref="T:System.Deployment.Application.InvalidDeploymentException">
+                    部署清单已损坏。您可能需要重新部署应用程序才能修复此问题。
+                </exception>
+    </member>
+    <member name="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync">
+      <summary>
+                    异步检查 <see cref="P:System.Deployment.Application.ApplicationDeployment.UpdateLocation" /> 以确定是否有新的更新可用。
+                </summary>
+      <exception cref="T:System.InvalidOperationException">
+如果更新已在进行中，而这时您又调用 <see cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync" /> 方法，ClickOnce 便会立即引发此异常。
+                </exception>
+      <exception cref="T:System.Deployment.Application.DeploymentDownloadException">
+                    无法下载部署清单。此异常出现在 <see cref="E:System.Deployment.Application.ApplicationDeployment.CheckForUpdateCompleted" /> 事件的 <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Error" /> 属性中。
+                </exception>
+      <exception cref="T:System.Deployment.Application.InvalidDeploymentException">
+                    部署清单已损坏。您可能需要重新部署应用程序才能修复此问题。此异常出现在 <see cref="E:System.Deployment.Application.ApplicationDeployment.CheckForUpdateCompleted" /> 事件的 <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Error" /> 属性中。
+                </exception>
+    </member>
+    <member name="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsyncCancel">
+      <summary>
+                    取消异步更新检查。
+                </summary>
+    </member>
+    <member name="E:System.Deployment.Application.ApplicationDeployment.CheckForUpdateCompleted">
+      <summary>
+                    在 <see cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync" /> 完成时发生。
+                </summary>
+    </member>
+    <member name="E:System.Deployment.Application.ApplicationDeployment.CheckForUpdateProgressChanged">
+      <summary>
+                    在调用 <see cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync" /> 时存在可用的进度更新的情况下发生。
+                </summary>
+    </member>
+    <member name="P:System.Deployment.Application.ApplicationDeployment.CurrentDeployment">
+      <summary>
+                    返回此部署的当前 <see cref="T:System.Deployment.Application.ApplicationDeployment" />。
+                </summary>
+      <returns>
+                    当前部署。
+                </returns>
+      <exception cref="T:System.Deployment.Application.InvalidDeploymentException">
+                    尝试从非 ClickOnce 应用程序调用此静态属性。
+                </exception>
+    </member>
+    <member name="P:System.Deployment.Application.ApplicationDeployment.CurrentVersion">
+      <summary>
+                    获取当前正在运行的应用程序实例的部署版本。
+                </summary>
+      <returns>
+                    当前的部署版本。
+                </returns>
+    </member>
+    <member name="P:System.Deployment.Application.ApplicationDeployment.DataDirectory">
+      <summary>
+                    获取 ClickOnce 数据目录的路径。
+                </summary>
+      <returns>
+                    一个字符串，它包含应用程序的数据目录在本地磁盘上的路径。
+                </returns>
+    </member>
+    <member name="M:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup(System.String)">
+      <summary>
+                    根据需要下载一组可选文件。
+                </summary>
+      <param name="groupName">
+要下载的已命名文件组。在 ClickOnce 应用程序中，标记为“可选”的所有文件均需具备组名称。
+                </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="groupName" /> 参数为 null 或零长度。
+                </exception>
+    </member>
+    <member name="M:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync(System.String)">
+      <summary>
+根据需要在后台下载一组可选文件。
+                </summary>
+      <param name="groupName">
+要下载的已命名文件组。在 ClickOnce 应用程序中，标记为“可选”的所有文件均需具备组名称。
+                </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="groupName" /> 参数为 null 或零长度。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                    一次不能启动多个 <paramref name="groupName" /> 下载。
+                </exception>
+    </member>
+    <member name="M:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync(System.String,System.Object)">
+      <summary>
+                    根据需要在后台下载一组可选文件，并向事件回调传递一种应用程序状态。
+                </summary>
+      <param name="groupName">
+要下载的已命名文件组。在 ClickOnce 应用程序中，标记为“可选”的所有文件均需具备组名称。
+                </param>
+      <param name="userState">
+                    包含异步操作状态信息的任意对象。
+                </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="groupName" /> 参数为 null 或零长度。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                    一次不能启动多个 <paramref name="groupName" /> 下载。
+                </exception>
+    </member>
+    <member name="M:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsyncCancel(System.String)">
+      <summary>
+                    取消异步文件下载。
+                </summary>
+      <param name="groupName">
+要下载的已命名文件组。在 ClickOnce 应用程序中，标记为“可选”的所有文件均需具备组名称。
+                </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="groupName" /> 不能为 null。
+                </exception>
+    </member>
+    <member name="E:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupCompleted">
+      <summary>
+                    完成一个文件下载时在主应用程序线程中发生。
+                </summary>
+    </member>
+    <member name="E:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupProgressChanged">
+      <summary>
+                    当由 <see cref="Overload:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync" /> 调用启动的文件下载操作存在可用的状态信息时发生。
+                </summary>
+    </member>
+    <member name="M:System.Deployment.Application.ApplicationDeployment.IsFileGroupDownloaded(System.String)">
+      <summary>
+                    检查已命名的文件组是否已下载到客户端计算机中。
+                </summary>
+      <returns>
+                    如果已为此应用程序的当前版本下载了该文件组，则为 true；否则为 false。如果已安装了新版本的应用程序，而且新版本的应用程序未对文件组中的文件做任何添加、移除或更改，则 <see cref="M:System.Deployment.Application.ApplicationDeployment.IsFileGroupDownloaded(System.String)" /> 返回 true。
+                </returns>
+      <param name="groupName">
+要下载的已命名文件组。在 ClickOnce 应用程序中，标记为“可选”的所有文件均需具备组名称。
+                </param>
+      <exception cref="T:System.Deployment.Application.InvalidDeploymentException">
+        <paramref name="groupName" /> 不是应用程序清单中定义的文件组。
+                </exception>
+    </member>
+    <member name="P:System.Deployment.Application.ApplicationDeployment.IsFirstRun">
+      <summary>
+                    获取一个值，该值指示此应用程序是否是第一次在客户端计算机上运行。
+                </summary>
+      <returns>
+                    如果此版本的应用程序此前未在客户端计算机上运行过，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed">
+      <summary>
+                    获取一个值，该值指示当前应用程序是否为 ClickOnce 应用程序。
+                </summary>
+      <returns>
+                    如果该应用程序是 ClickOnce 应用程序，则为 true；否则为 false。
+                </returns>
+    </member>
+    <member name="P:System.Deployment.Application.ApplicationDeployment.TimeOfLastUpdateCheck">
+      <summary>
+                    获取 ClickOnce 上次检查应用程序更新时的日期和时间。
+                </summary>
+      <returns>
+                    上次更新检查的 <see cref="T:System.DateTime" />。
+                </returns>
+    </member>
+    <member name="M:System.Deployment.Application.ApplicationDeployment.Update">
+      <summary>
+                    开始同步下载和安装此应用程序的最新版本。
+                </summary>
+      <returns>
+                    如果应用程序已更新，则为 true；否则为 false。
+                </returns>
+      <exception cref="T:System.Deployment.Application.TrustNotGrantedException">
+                    本地计算机未授予该应用程序执行其请求的操作所需的权限级别。
+                </exception>
+      <exception cref="T:System.Deployment.Application.InvalidDeploymentException">
+ClickOnce 部署已损坏。有关如何诊断和更正问题的提示，请参见 ClickOnce 部署疑难解答。
+                </exception>
+      <exception cref="T:System.Deployment.Application.DeploymentDownloadException">
+无法从其网络位置下载新部署。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                    当前应用程序正在更新。
+                </exception>
+    </member>
+    <member name="M:System.Deployment.Application.ApplicationDeployment.UpdateAsync">
+      <summary>
+                    开始异步下载和安装此应用程序的最新版本。
+                </summary>
+      <exception cref="T:System.Deployment.Application.TrustNotGrantedException">
+                    本地计算机未授予此应用程序执行其请求的操作所需的权限级别。
+                </exception>
+      <exception cref="T:System.Deployment.Application.InvalidDeploymentException">
+ClickOnce 部署已损坏。有关如何诊断和更正问题的提示，请参见 ClickOnce 部署疑难解答。
+                </exception>
+      <exception cref="T:System.Deployment.Application.DeploymentDownloadException">
+无法从其网络位置下载新部署。
+                </exception>
+    </member>
+    <member name="M:System.Deployment.Application.ApplicationDeployment.UpdateAsyncCancel">
+      <summary>
+                    取消由 <see cref="M:System.Deployment.Application.ApplicationDeployment.UpdateAsync" /> 启动的异步更新。
+                </summary>
+    </member>
+    <member name="E:System.Deployment.Application.ApplicationDeployment.UpdateCompleted">
+      <summary>
+                    当 ClickOnce 通过调用 <see cref="M:System.Deployment.Application.ApplicationDeployment.UpdateAsync" /> 完成了应用程序升级时发生。
+                </summary>
+    </member>
+    <member name="P:System.Deployment.Application.ApplicationDeployment.UpdatedApplicationFullName">
+      <summary>
+                    获取应用程序更新后的全名。
+                </summary>
+      <returns>
+                    一个包含应用程序的全名的 <see cref="T:System.String" />。
+                </returns>
+    </member>
+    <member name="P:System.Deployment.Application.ApplicationDeployment.UpdatedVersion">
+      <summary>
+                    获取最近下载的更新版本。
+                </summary>
+      <returns>
+                    描述更新版本的 <see cref="T:System.Version" />。
+                </returns>
+    </member>
+    <member name="P:System.Deployment.Application.ApplicationDeployment.UpdateLocation">
+      <summary>
+                    获取此应用程序从中更新自身的网站或文件共享。
+                </summary>
+      <returns>
+                    以 HTTP、HTTPS 或文件 URL 表示的更新路径；或以 Windows 网络文件路径 (UNC) 表示的更新路径。
+                </returns>
+    </member>
+    <member name="E:System.Deployment.Application.ApplicationDeployment.UpdateProgressChanged">
+      <summary>
+                    对于通过调用 <see cref="M:System.Deployment.Application.ApplicationDeployment.UpdateAsync" /> 方法启动的更新操作，当 ClickOnce 存在关于此更新操作的新的状态信息时发生。
+                </summary>
+    </member>
+    <member name="T:System.Deployment.Application.CheckForUpdateCompletedEventArgs">
+      <summary>表示通过调用 <see cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync" /> 获得的详细更新信息。</summary>
+    </member>
+    <member name="P:System.Deployment.Application.CheckForUpdateCompletedEventArgs.AvailableVersion">
+      <summary>获取尚未安装的最新版本的版本号。</summary>
+      <returns>
+        <see cref="T:System.Version" /> 表示最新版本的主版本号、次版本号、内部版本号和修订号。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.CheckForUpdateCompletedEventArgs.IsUpdateRequired">
+      <summary>获取一个指示是否必须安装更新的值。 </summary>
+      <returns>
+如果更新是必需的，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.CheckForUpdateCompletedEventArgs.MinimumRequiredVersion">
+      <summary>获取用户必须在计算机上安装的最低版本。 </summary>
+      <returns>一个 <see cref="T:System.Version" /> 对象，表示所有用户必须安装的最早版本。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.CheckForUpdateCompletedEventArgs.UpdateAvailable">
+      <summary>获取表示是否有未安装更新的值。</summary>
+      <returns>
+如果提供有应用程序的新版本，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.CheckForUpdateCompletedEventArgs.UpdateSizeBytes">
+      <summary>获取可用更新的大小。</summary>
+      <returns>一个 <see cref="T:System.Int64" />，描述可用更新的大小（以字节为单位）。如果没有可用更新，则返回 0。 </returns>
+    </member>
+    <member name="T:System.Deployment.Application.CheckForUpdateCompletedEventHandler">
+      <summary>表示将要处理 <see cref="T:System.Deployment.Application.ApplicationDeployment" /> 的 <see cref="E:System.Deployment.Application.ApplicationDeployment.CheckForUpdateCompleted" /> 事件的方法。 </summary>
+      <param name="sender">事件源。</param>
+      <param name="e">包含事件数据的 <see cref="T:System.Deployment.Application.CheckForUpdateCompletedEventArgs" />。 </param>
+    </member>
+    <member name="T:System.Deployment.Application.DependentPlatformMissingException">
+      <summary>指示在激活 ClickOnce 部署期间未找到平台依赖项，将不会运行该部署。</summary>
+    </member>
+    <member name="M:System.Deployment.Application.DependentPlatformMissingException.#ctor"></member>
+    <member name="M:System.Deployment.Application.DependentPlatformMissingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <param name="serializationInfo"></param>
+      <param name="streamingContext"></param>
+    </member>
+    <member name="M:System.Deployment.Application.DependentPlatformMissingException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:System.Deployment.Application.DependentPlatformMissingException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:System.Deployment.Application.DependentPlatformMissingException.#ctor(System.String,System.Uri)">
+      <summary>创建异常的新实例。 </summary>
+      <param name="message">异常消息。</param>
+      <param name="supportUrl">用于访问产品支持信息的 URL。</param>
+    </member>
+    <member name="M:System.Deployment.Application.DependentPlatformMissingException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <param name="info"></param>
+      <param name="context"></param>
+    </member>
+    <member name="T:System.Deployment.Application.DeploymentDownloadException">
+      <summary>指示在向客户端计算机下载 ClickOnce 清单或部署文件时发生错误。 </summary>
+    </member>
+    <member name="M:System.Deployment.Application.DeploymentDownloadException.#ctor"></member>
+    <member name="M:System.Deployment.Application.DeploymentDownloadException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"></member>
+    <member name="M:System.Deployment.Application.DeploymentDownloadException.#ctor(System.String)"></member>
+    <member name="M:System.Deployment.Application.DeploymentDownloadException.#ctor(System.String,System.Exception)"></member>
+    <member name="T:System.Deployment.Application.DeploymentException">
+      <summary>为所有部署相关异常定义基类。</summary>
+    </member>
+    <member name="M:System.Deployment.Application.DeploymentException.#ctor">
+      <summary>初始化 <see cref="T:System.Deployment.Application.DeploymentException" /> 类的新实例。 </summary>
+    </member>
+    <member name="M:System.Deployment.Application.DeploymentException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>初始化 <see cref="T:System.Deployment.Application.DeploymentException" /> 类的新实例。 </summary>
+    </member>
+    <member name="M:System.Deployment.Application.DeploymentException.#ctor(System.String)">
+      <summary>初始化 <see cref="T:System.Deployment.Application.DeploymentException" /> 类的新实例。 </summary>
+    </member>
+    <member name="M:System.Deployment.Application.DeploymentException.#ctor(System.String,System.Exception)">
+      <summary>初始化 <see cref="T:System.Deployment.Application.DeploymentException" /> 类的新实例。 </summary>
+    </member>
+    <member name="M:System.Deployment.Application.DeploymentException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <param name="info"></param>
+      <param name="context"></param>
+    </member>
+    <member name="T:System.Deployment.Application.DeploymentProgressChangedEventArgs">
+      <summary>表示异步操作中报告的进度数据。</summary>
+    </member>
+    <member name="P:System.Deployment.Application.DeploymentProgressChangedEventArgs.BytesCompleted">
+      <summary>获取此操作已下载的字节数。</summary>
+      <returns>表示已转输数据（以字节为单位）的 <see cref="T:System.Int64" />。 </returns>
+    </member>
+    <member name="P:System.Deployment.Application.DeploymentProgressChangedEventArgs.BytesTotal">
+      <summary>获取下载操作中的总字节数。</summary>
+      <returns>表示下载总大小（以字节为单位）的 <see cref="T:System.Int64" />。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.DeploymentProgressChangedEventArgs.Group">
+      <summary>获取正在下载的文件组的名称。</summary>
+      <returns>如果调用 <see cref="Overload:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync" /> 导致发生该事件，则为包含该文件组名称的 <see cref="T:System.String" />；否则为零长度字符串。 </returns>
+    </member>
+    <member name="P:System.Deployment.Application.DeploymentProgressChangedEventArgs.State">
+      <summary>获取进程当前正在执行的操作。</summary>
+      <returns>一个 <see cref="T:System.Deployment.Application.DeploymentProgressState" /> 值，该值表示操作当前正在下载的一个或多个元素。 </returns>
+    </member>
+    <member name="T:System.Deployment.Application.DeploymentProgressChangedEventHandler">
+      <summary>表示将对 <see cref="T:System.Deployment.Application.ApplicationDeployment" /> 的以下事件进行处理的方法：<see cref="E:System.Deployment.Application.ApplicationDeployment.CheckForUpdateProgressChanged" />、<see cref="E:System.Deployment.Application.ApplicationDeployment.UpdateProgressChanged" /> 或 <see cref="E:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupProgressChanged" /> 事件。 </summary>
+      <param name="sender"></param>
+      <param name="e">包含事件数据的 <see cref="T:System.Deployment.Application.DeploymentProgressChangedEventArgs" />。</param>
+    </member>
+    <member name="T:System.Deployment.Application.DeploymentProgressState">
+      <summary>指定 ClickOnce 下载操作的当前阶段。</summary>
+    </member>
+    <member name="F:System.Deployment.Application.DeploymentProgressState.DownloadingDeploymentInformation">
+      <summary>ClickOnce 正在下载部署清单。</summary>
+    </member>
+    <member name="F:System.Deployment.Application.DeploymentProgressState.DownloadingApplicationInformation">
+      <summary>ClickOnce 正在下载应用程序清单。</summary>
+    </member>
+    <member name="F:System.Deployment.Application.DeploymentProgressState.DownloadingApplicationFiles">
+      <summary>ClickOnce 正在下载组成应用程序的 DLL 和数据文件。</summary>
+    </member>
+    <member name="T:System.Deployment.Application.DeploymentServiceCom">
+      <summary>
+                    为 ClickOnce 部署 API 提供内部服务。
+                </summary>
+    </member>
+    <member name="M:System.Deployment.Application.DeploymentServiceCom.#ctor">
+      <summary>
+                    创建 <see cref="T:System.Deployment.Application.DeploymentServiceCom" /> 的一个新实例。
+                </summary>
+    </member>
+    <member name="M:System.Deployment.Application.DeploymentServiceCom.ActivateDeployment(System.String,System.Boolean)">
+      <summary>
+在客户端计算机上启动部署。
+                </summary>
+      <param name="deploymentLocation">
+                    部署清单在磁盘上的位置。
+                </param>
+      <param name="isShortcut">
+        <paramref name="deploymentLocation" /> 是快捷方式还是实际文件。
+                </param>
+    </member>
+    <member name="M:System.Deployment.Application.DeploymentServiceCom.CheckForDeploymentUpdate(System.String)">
+      <summary>
+                    检查更新位置以确定是否存在此部署的更新版本。
+                </summary>
+      <param name="textualSubId">
+                    部署的内部标识符。
+                </param>
+    </member>
+    <member name="M:System.Deployment.Application.DeploymentServiceCom.CleanOnlineAppCache">
+      <summary>
+删除计算机上安装的所有只能联机使用的 ClickOnce 应用程序。
+                </summary>
+    </member>
+    <member name="M:System.Deployment.Application.DeploymentServiceCom.EndServiceRightNow">
+      <summary>
+                    立即停止部署更新。
+                </summary>
+    </member>
+    <member name="M:System.Deployment.Application.DeploymentServiceCom.MaintainSubscription(System.String)">
+      <summary>
+                    维护更新订阅。
+                </summary>
+      <param name="textualSubId">
+部署的内部 ID。
+                </param>
+    </member>
+    <member name="T:System.Deployment.Application.DownloadApplicationCompletedEventArgs">
+      <summary>为 <see cref="E:System.Deployment.Application.InPlaceHostingManager.DownloadApplicationCompleted" /> 事件提供数据。</summary>
+    </member>
+    <member name="P:System.Deployment.Application.DownloadApplicationCompletedEventArgs.LogFilePath">
+      <summary>获取 ClickOnce 日志文件的路径。 </summary>
+      <returns>包含该日志路径的 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:System.Deployment.Application.DownloadFileGroupCompletedEventArgs">
+      <summary>描述最近完成的文件下载。 </summary>
+    </member>
+    <member name="P:System.Deployment.Application.DownloadFileGroupCompletedEventArgs.Group">
+      <summary>获取正在下载的文件组的名称。</summary>
+      <returns>一个表示文件组名称的 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:System.Deployment.Application.DownloadFileGroupCompletedEventHandler">
+      <summary>表示将要处理 <see cref="T:System.Deployment.Application.ApplicationDeployment" /> 的 <see cref="E:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupCompleted" /> 事件的方法。 </summary>
+      <param name="sender">事件源。 </param>
+      <param name="e">包含事件数据的 <see cref="T:System.Deployment.Application.DownloadFileGroupCompletedEventArgs" />。</param>
+    </member>
+    <member name="T:System.Deployment.Application.DownloadProgressChangedEventArgs">
+      <summary>为 <see cref="E:System.Deployment.Application.InPlaceHostingManager.DownloadProgressChanged" /> 事件提供数据。 </summary>
+    </member>
+    <member name="P:System.Deployment.Application.DownloadProgressChangedEventArgs.BytesDownloaded">
+      <summary>获取下载到本地计算机的字节数。</summary>
+      <returns>表示下载的字节数的 <see cref="T:System.Int64" />。 </returns>
+    </member>
+    <member name="P:System.Deployment.Application.DownloadProgressChangedEventArgs.State">
+      <summary>获取下载的进度状态。</summary>
+      <returns>描述正在下载 ClickOnce 应用程序的哪一部分的 <see cref="T:System.Deployment.Application.DeploymentProgressState" /> 值。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.DownloadProgressChangedEventArgs.TotalBytesToDownload">
+      <summary>获取下载操作的总字节数。 </summary>
+      <returns>表示下载总大小（以字节为单位）的 <see cref="T:System.Int64" />。</returns>
+    </member>
+    <member name="T:System.Deployment.Application.GetManifestCompletedEventArgs">
+      <summary>为 <see cref="T:System.Deployment.Application.InPlaceHostingManager" /> 的 <see cref="E:System.Deployment.Application.InPlaceHostingManager.GetManifestCompleted" /> 事件提供数据。</summary>
+    </member>
+    <member name="P:System.Deployment.Application.GetManifestCompletedEventArgs.ApplicationIdentity">
+      <summary>获取 ClickOnce 应用程序的说明。</summary>
+      <returns>一个 <see cref="T:System.ApplicationIdentity" /> 对象。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.GetManifestCompletedEventArgs.ApplicationManifest">
+      <summary>获取用于此部署的 ClickOnce 应用程序清单。</summary>
+      <returns>表示应用程序清单的 <see cref="T:System.Xml.XmlReader" />。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.GetManifestCompletedEventArgs.DeploymentManifest">
+      <summary>获取用于此部署的 ClickOnce 部署清单。</summary>
+      <returns>表示部署清单的 <see cref="T:System.Xml.XmlReader" />。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.GetManifestCompletedEventArgs.IsCached">
+      <summary>获取一个指示是否缓存此 ClickOnce 应用程序的值。</summary>
+      <returns>
+            如果缓存应用程序，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.GetManifestCompletedEventArgs.LogFilePath">
+      <summary>获取 ClickOnce 错误日志的位置。</summary>
+      <returns>一个包含 ClickOnce 错误日志位置的 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.GetManifestCompletedEventArgs.ProductName">
+      <summary>获取 ClickOnce 应用程序的名称。</summary>
+      <returns>一个表示 ClickOnce 应用程序的产品名称的 <see cref="T:System.String" />，此名称存储在该应用程序的主可执行文件的程序集元数据中。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.GetManifestCompletedEventArgs.SupportUri">
+      <summary>获取用户可以访问并从中获得 ClickOnce 应用程序的产品支持的网页位置。</summary>
+      <returns>一个包含在部署清单 &lt;description&gt; 标记的 supportUrl 属性中找到的值的 <see cref="T:System.Uri" />。有关更多信息，请参见 ClickOnce 部署清单。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.GetManifestCompletedEventArgs.Version">
+      <summary>获取 ClickOnce 应用程序的更新版本。</summary>
+      <returns>一个表示下载的清单中包含的版本号的 <see cref="T:System.Version" />。</returns>
+    </member>
+    <member name="T:System.Deployment.Application.InPlaceHostingManager">
+      <summary>
+                    在计算机上安装 ClickOnce 部署。
+                </summary>
+    </member>
+    <member name="M:System.Deployment.Application.InPlaceHostingManager.#ctor(System.Uri)">
+      <summary>
+                    创建 <see cref="T:System.Deployment.Application.InPlaceHostingManager" /> 的一个新实例以下载和安装浏览器承载的指定应用程序。
+                </summary>
+      <param name="deploymentManifest">
+                    指向 ClickOnce 应用程序的部署清单的统一资源标识符 (<see cref="T:System.Uri" />)。
+                </param>
+      <exception cref="T:System.PlatformNotSupportedException">
+        <see cref="T:System.Deployment.Application.InPlaceHostingManager" /> 只能用于 Windows XP 或更高版本的 Windows 操作系统中。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+                    无法为 <paramref name="deploymentManifest" /> 参数传递 null。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="deploymentManifest" /> 使用不受 ClickOnce 支持的 URI 方案。
+                </exception>
+    </member>
+    <member name="M:System.Deployment.Application.InPlaceHostingManager.#ctor(System.Uri,System.Boolean)">
+      <summary>
+                    创建 <see cref="T:System.Deployment.Application.InPlaceHostingManager" /> 的一个新实例以下载和安装指定的应用程序，该应用程序可以是基于 Windows 窗体的独立应用程序，也可以是承载在 Web 浏览器中的应用程序。
+                </summary>
+      <param name="deploymentManifest">
+                    指向将安装的应用程序的部署清单的统一资源标识符 (URI)。
+                </param>
+      <param name="launchInHostProcess">
+                    此应用程序是将在宿主（如 Web 浏览器）中运行，还是独立的应用程序。
+                </param>
+      <exception cref="T:System.PlatformNotSupportedException">
+        <see cref="T:System.Deployment.Application.InPlaceHostingManager" /> 只能用于 Windows XP 或更高版本的 Windows 操作系统中。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+                    无法为 <paramref name="deploymentManifest" /> 参数传递 null。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="deploymentManifest" /> 使用不受 ClickOnce 支持的 URI 方案。
+                </exception>
+    </member>
+    <member name="M:System.Deployment.Application.InPlaceHostingManager.AssertApplicationRequirements">
+      <summary>
+                    确定 ClickOnce 应用程序是否具有合适的权限和平台依赖项，以便在本地计算机上运行。
+                </summary>
+      <exception cref="T:System.InvalidOperationException">
+                    在 <see cref="M:System.Deployment.Application.InPlaceHostingManager.GetManifestAsync" /> 方法之前调用此方法时引发。
+                </exception>
+    </member>
+    <member name="M:System.Deployment.Application.InPlaceHostingManager.CancelAsync">
+      <summary>
+                    取消异步下载操作。
+                </summary>
+    </member>
+    <member name="M:System.Deployment.Application.InPlaceHostingManager.Dispose">
+      <summary>
+                    释放由 <see cref="T:System.Deployment.Application.InPlaceHostingManager" /> 使用的所有资源。
+                </summary>
+    </member>
+    <member name="M:System.Deployment.Application.InPlaceHostingManager.DownloadApplicationAsync">
+      <summary>
+                    在后台下载应用程序更新。
+                </summary>
+      <exception cref="T:System.InvalidOperationException">
+                    在 <see cref="M:System.Deployment.Application.InPlaceHostingManager.GetManifestAsync" /> 和 <see cref="M:System.Deployment.Application.InPlaceHostingManager.AssertApplicationRequirements" /> 方法之前调用此方法时引发。
+                </exception>
+    </member>
+    <member name="E:System.Deployment.Application.InPlaceHostingManager.DownloadApplicationCompleted">
+      <summary>
+                    应用程序向本地计算机下载完成时发生。
+                </summary>
+    </member>
+    <member name="E:System.Deployment.Application.InPlaceHostingManager.DownloadProgressChanged">
+      <summary>
+                    更改应用程序或清单下载状态时发生。
+                </summary>
+    </member>
+    <member name="M:System.Deployment.Application.InPlaceHostingManager.Execute">
+      <summary>
+                    当且仅当 ClickOnce 应用程序是一个在 Web 浏览器中运行的基于 Windows Presentation Foundation 的应用程序时，才启动该应用程序。
+                </summary>
+      <returns>
+                    对应于已启动应用程序的 <see cref="T:System.Runtime.Remoting.ObjectHandle" />。
+                </returns>
+    </member>
+    <member name="M:System.Deployment.Application.InPlaceHostingManager.GetManifestAsync">
+      <summary>
+                    在后台下载 ClickOnce 应用程序的部署清单，并在操作完成或遇到错误时引发事件。
+                </summary>
+    </member>
+    <member name="E:System.Deployment.Application.InPlaceHostingManager.GetManifestCompleted">
+      <summary>
+                    部署清单已下载到本地计算机时发生。
+                </summary>
+    </member>
+    <member name="T:System.Deployment.Application.InvalidDeploymentException">
+      <summary>指示 ClickOnce 不能读取部署或应用程序清单。</summary>
+    </member>
+    <member name="M:System.Deployment.Application.InvalidDeploymentException.#ctor"></member>
+    <member name="M:System.Deployment.Application.InvalidDeploymentException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"></member>
+    <member name="M:System.Deployment.Application.InvalidDeploymentException.#ctor(System.String)"></member>
+    <member name="M:System.Deployment.Application.InvalidDeploymentException.#ctor(System.String,System.Exception)"></member>
+    <member name="T:System.Deployment.Application.TrustNotGrantedException">
+      <summary>指示应用程序不具有在本地计算机上运行的相应信任级别。</summary>
+    </member>
+    <member name="M:System.Deployment.Application.TrustNotGrantedException.#ctor"></member>
+    <member name="M:System.Deployment.Application.TrustNotGrantedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"></member>
+    <member name="M:System.Deployment.Application.TrustNotGrantedException.#ctor(System.String)"></member>
+    <member name="M:System.Deployment.Application.TrustNotGrantedException.#ctor(System.String,System.Exception)"></member>
+    <member name="T:System.Deployment.Application.UpdateCheckInfo">
+      <summary>表示通过调用 <see cref="M:System.Deployment.Application.ApplicationDeployment.CheckForDetailedUpdate" /> 获得的详细更新信息。</summary>
+    </member>
+    <member name="P:System.Deployment.Application.UpdateCheckInfo.AvailableVersion">
+      <summary>获取尚未安装的最新版本的版本号。</summary>
+      <returns>
+        <see cref="T:System.Version" /> 表示最新版本的主内部版本号、次内部版本号和修订号。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.UpdateCheckInfo.IsUpdateRequired">
+      <summary>获取一个指示是否必须安装更新的值。</summary>
+      <returns>
+            如果更新是必需的，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.UpdateCheckInfo.MinimumRequiredVersion">
+      <summary>获取用户必须在计算机上安装的最低版本。</summary>
+      <returns>一个 <see cref="T:System.Version" />，它表示用户必须安装的最低版本。</returns>
+      <exception cref="T:System.InvalidOperationException">没有可供安装的新版本。</exception>
+    </member>
+    <member name="P:System.Deployment.Application.UpdateCheckInfo.UpdateAvailable">
+      <summary>获取表示是否有未安装更新的值。</summary>
+      <returns>
+            如果提供有应用程序的新版本，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.UpdateCheckInfo.UpdateSizeBytes">
+      <summary>获取可用更新的大小。</summary>
+      <returns>一个 <see cref="T:System.Int64" />，描述可用更新的大小（以字节为单位）。如果没有可用更新，则返回 0。</returns>
+    </member>
+    <member name="M:System.Deployment.Application.ApplicationDeployment.CheckForDetailedUpdate(System.Boolean)">
+      <summary>
+                    执行与 <see cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdate" /> 相同的操作，但返回有关可用更新的扩展信息。
+                </summary>
+      <param name="persistUpdateCheckResult">
+                    如果为 false，将以静默方式应用该更新，且不会显示任何对话框。
+                </param>
+    </member>
+    <member name="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdate(System.Boolean)">
+      <summary>
+                    检查 <see cref="P:System.Deployment.Application.ApplicationDeployment.UpdateLocation" /> 以确定是否有新的更新可用。
+                </summary>
+      <param name="persistUpdateCheckResult">
+                    如果为 false，将以静默方式应用该更新，且不会显示任何对话框。
+                </param>
+    </member>
+    <member name="M:System.Deployment.Application.DeploymentServiceCom.ActivateApplicationExtension(System.String,System.String,System.String)">
+      <summary>
+                    激活应用程序扩展名。
+                </summary>
+      <param name="textualSubId">
+部署的内部 ID。
+                </param>
+      <param name="deploymentProviderUrl">
+                    部署的 URL。
+                </param>
+      <param name="targetAssociatedFile">
+                    目标文件。
+                </param>
+    </member>
+    <member name="M:System.Deployment.Application.DeploymentServiceCom.ActivateDeploymentEx(System.String,System.Int32,System.Int32)">
+      <summary>
+在客户端计算机上启动部署。
+                </summary>
+      <param name="deploymentLocation">
+                    部署清单的位置。
+                </param>
+      <param name="unsignedPolicy">
+                    用于未签名的应用程序的策略。
+                </param>
+      <param name="signedPolicy">
+                    用于已签名的应用程序的策略。
+                </param>
+    </member>
+    <member name="P:System.Deployment.Application.DownloadApplicationCompletedEventArgs.ShortcutAppId">
+      <summary>已下载的应用程序的 ID。</summary>
+      <returns>一个 <see cref="T:System.String" />，包含已下载的应用程序的 ID。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.GetManifestCompletedEventArgs.ActivationContext">
+      <summary>获取当前 ClickOnce 应用程序的上下文。</summary>
+      <returns>一个 <see cref="T:System.ActivationContext" /> 对象，表示当前应用程序的上下文。</returns>
+    </member>
+    <member name="P:System.Deployment.Application.GetManifestCompletedEventArgs.SubscriptionIdentity">
+      <summary>获取标识该订阅的字符串。</summary>
+      <returns>一个字符串，其中包含标识该订阅的信息。</returns>
+    </member>
+    <member name="M:System.Deployment.Application.InPlaceHostingManager.AssertApplicationRequirements(System.Boolean)">
+      <summary>
+                    确定 ClickOnce 应用程序是否具有合适的权限和平台依赖项，以便在本地计算机上运行。
+                </summary>
+      <param name="grantApplicationTrust">
+                    如果为 true，应用程序将尝试将其权限提升至所需级别。
+                </param>
+    </member>
+    <member name="M:System.Deployment.Application.InPlaceHostingManager.UninstallCustomAddIn(System.String)">
+      <summary>
+                    删除应用程序中以前安装的用户定义组件。
+                </summary>
+      <param name="subscriptionId">
+                    一个包含订阅标识的字符串，指示要删除的外接程序。
+                </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="subscriptionId" /> 不是有效的订阅标识，或者不包括名称、公钥标记、处理器架构和版本号。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="subscriptionId" /> 为 null。
+                </exception>
+    </member>
+    <member name="M:System.Deployment.Application.InPlaceHostingManager.UninstallCustomUXApplication(System.String)">
+      <summary>
+                    移除以前安装的用户定义的应用程序。
+                </summary>
+      <param name="subscriptionId">
+                    一个包含订阅标识的字符串，指示要删除的外接程序。
+                </param>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,50 @@
+gradle.taskGraph.beforeTask{ Task task ->
+    println "$task start executing..."
+}
+
+gradle.taskGraph.afterTask{ Task task, TaskState state -> 
+    def result = "Done"
+    if(state.failure){
+        result = "FAILED"
+    }
+
+    println "$task has executed $result"
+}
+
+ext.buildWorkspace = 'buildWorkspace'
+
+ext.deleteIfExists = { String[] names -> 
+	names.each{String each -> deleteFileIfExists(each)}
+}
+
+ext.deleteFileIfExists = { String name -> 
+	if(!file(name).exists()) return
+	
+	def current = file(name)
+	if(current.isDirectory()){
+		current.listFiles().each{File file -> deleteIfExists(name + File.separator + file.name)}
+	}
+    current.delete()
+}
+
+ext.create = { String[] dirNames -> 
+    dirNames.each{String each -> file(each).mkdir()}
+}
+
+ext.allProjectSrcDirs = { String[] projectNames ->
+    return projectNames.collect{String each -> each + "/src"} as String[]
+}
+
+ext.allProjectLibDirs = { String[] projectNames ->
+    return projectNames.collect{String each -> each + "/lib"} as String[]
+}
+
+ext.getDate = {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMddHHmmss')
+    return formattedDate
+}
+
+ext.getBuildDir = { String dir -> 
+	return buildWorkspace + File.separator + dir
+}

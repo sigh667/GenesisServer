@@ -1,0 +1,1 @@
+long[] costByCountsArray;[Collection(7,1);readAll=true]//购买次数与购买价格模板

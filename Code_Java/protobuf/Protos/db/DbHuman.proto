@@ -1,0 +1,150 @@
+package com.mokylin;
+
+option java_package = "com.mokylin.bleach.protobuf.db";
+
+option java_outer_classname = "DbHuman";
+
+/**
+ * Point Blob Array，包含：
+ * point
+ * lastPointRecoverTime
+ * buyPointCounts
+ * lastBuyPointCountsResetTime
+ */
+message DbHumanPoints {
+    /**所有点数信息*/
+    repeated DbPoint points = 1;
+}
+/**
+ * Point Blob
+ */
+message DbPoint {
+    /**PointType的枚举ordinal */
+    required int32 pointType = 1;
+    /**Point点数 */
+    required int32 point = 2;
+    /**上次恢复时间 */
+    required int64 lastPointRecoverTime = 3;
+    /**当日已购买次数 */
+    required int32 buyPointCounts = 4;
+    /**上次购买次数重置时间 */
+    required int64 lastBuyPointCountsResetTime = 5;
+}
+
+
+/**
+ * 阵型信息 Blob，登陆时通知客户端
+ */
+message DBHumanFormations {
+    repeated DBFormation formations = 1;
+}
+/**
+ * 阵型 Blob
+ */
+message DBFormation {
+    /**阵容类型 */
+    required FormationType formationType = 1;
+    /**HeroDbId */
+    repeated int64 heros = 2;
+}
+/**阵容类型。新增类型请在最后插入，已有的枚举数值不可改变 */
+enum FormationType {
+    /**竞技场防守阵容*/
+    ArenaDefense = 0;
+    /**竞技场进攻阵容*/
+    ArenaAttack = 1;
+    /**公会战*/
+    GuildWar = 2;
+    /**跨服战*/
+    CrossWar = 3;
+    /**远征*/
+    Expedition = 4;
+    /**副本*/
+    Mission = 5;
+}
+
+/**
+ * 客户端队伍系统的消息
+ */
+message DBTeam {
+    /**玩家当前使用作为Avatar外观的英雄的UUID*/
+    required int64 currentAvatarHeroId = 1;
+    /**玩家当前使用的头像框ID*/
+    required int32 currentHeadFrameId = 2;
+    /**玩家已经获得的头像框ID列表*/
+    repeated int32 openedHeadFrameIds = 3;
+}
+
+/**
+ * CD信息
+ */
+message DBCD {
+    /**所有CD类型的信息 */
+    repeated CDNode cdNodes = 1;
+}
+/**某种类型的CD信息 */
+message CDNode {
+    /**CD类型 */
+    required CDType cdType = 1;
+    /**
+     * 若用于DB存储：到期时间点。
+     * 若用于给客户端的消息：剩余时间，单位：毫秒。
+     */
+    required int64 remainingTime = 2;
+}
+/**
+ * CD类型。新增类型请在最后插入，已有的枚举数值不可改变。
+ * 消CD时，是客户端先斩后奏的，所有CD消息都会先过PlayerActor，请注意时序。
+ */
+enum CDType {
+    /**竞技场挑战CD*/
+    AttackInArena = 0;
+    /**巅峰竞技场挑战CD*/
+    AttackInMultiArena = 1;
+}
+
+/**
+ * 任务系统信息
+ */
+message DBQuestData {
+    /*玩家任务信息*/
+    required DBQuestInfo questInfo = 1;
+    /*任务刷新信息*/
+    required DBQuestRefreshInfo refreshInfo = 2;
+}
+
+/**
+ * 玩家任务信息
+ */
+message DBQuestInfo {
+    /**定时任务信息 */
+    repeated DBQuest cronQuests = 1;
+    /**每日任务信息 */
+    repeated DBQuest dailyQuests = 2;
+    /**一次性任务信息 */
+    repeated DBQuest oneTimeQuests = 3;
+    /*已领奖的任务存档*/
+    repeated int32 completeIds = 4;
+}
+
+/**
+ * 任务刷新信息
+ */
+message DBQuestRefreshInfo {
+    /*定时任务上次刷新时间*/
+    optional int64 lastCronQuestRefreshTime = 1;
+    /*每日任务上次刷新时间*/
+    optional int64 lastDailyQuestRefreshTime = 2;
+}
+
+/**
+ * 任务信息
+ */
+message DBQuest {
+    /*任务模板ID*/
+    required int32 id = 1;
+    /*任务状态，是否已完成*/
+    required bool done = 2;
+    /*任务进度，选填*/
+    optional int32 progress = 3;
+}

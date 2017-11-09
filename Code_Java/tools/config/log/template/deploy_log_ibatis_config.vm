@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN"
+          "http://www.ibatis.com/dtd/sql-map-config-2.dtd" >
+<sqlMapConfig>
+	<settings cacheModelsEnabled="true" enhancementEnabled="true"
+		lazyLoadingEnabled="true" maxRequests="64" maxSessions="30"
+		maxTransactions="100" useStatementNamespaces="false" />
+	<transactionManager type="JDBC">
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="com.mysql.jdbc.Driver" />
+\#if(${log_db.ip}==${server.lanIp})
+<property name="JDBC.ConnectionURL" value="jdbc:mysql://127.0.0.1:${log_db.port}/${log_db.database}?useUnicode=true&amp;characterEncoding=utf-8&amp;useServerPrepStmts=true" />
+\#else
+<property name="JDBC.ConnectionURL" value="jdbc:mysql://${log_db.ip}:${log_db.port}/${log_db.database}?useUnicode=true&amp;characterEncoding=utf-8&amp;useServerPrepStmts=true" />
+\#end
+			<property name="JDBC.Username" value="${log_db.username}" />
+			<property name="JDBC.Password" value="${log_db.password}" />
+			<property name="Pool.MaximumActiveConnections" value="50"/>
+            <property name="Pool.MaximumIdleConnections" value="1"/>
+		</dataSource>
+	</transactionManager>
+	
+	<!-- 手写配置开始 -->
+	
+	<!-- 手写配置结束 -->
+	
+	<!-- 自动生成日志的配置开始 -->
+${sqlMaps}
+	<!-- 自动生成日志的配置结束 -->
+</sqlMapConfig>

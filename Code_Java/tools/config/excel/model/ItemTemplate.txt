@@ -1,0 +1,17 @@
+String name;//物品名称
+String desc;//物品描述
+String iconId;//物品IconID 
+com.mokylin.bleach.common.item.ItemType itemType;[notNull=true]//物品类型
+com.mokylin.bleach.common.quality.QualityType qualityType;[notNull=true]//物品品质
+com.mokylin.bleach.common.currency.CurrencyPropId currencyPropId;[notNull=true]//出售货币类型
+long sellPrice;[notNull=false]//出售货币数量
+int isValid;[notNull=false;minValue=0;maxValue=1] //出售是否提示
+int level;[notNull=false]//物品等级
+int useLevel;[notNull=false]//使用等级
+int maxOverlap;//叠加上限
+int func;[notNull=false]//使用函数
+int[] funcParams;[Collection(5,1)]//参数
+List<com.mokylin.bleach.common.core.excelmodel.TempAttrNode3Col> attributeList;[collection(6,3);notNull=true]	//装备附加的属性
+int[] fromMissionTemplateIds;[Collection(5,1)]//物品产生的关卡ID
+String fromOtherPlaceDesc;[notNull=false]//物品没有关卡掉落时显示的文本
+;//卖出时提示的文本，服务器不用，不读取

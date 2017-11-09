@@ -1,0 +1,112 @@
+package com.mokylin;
+option java_package = "com.mokylin.bleach.protobuf.db";
+option java_outer_classname = "DBMail";
+
+message DBTemplateMails {
+	repeated DBTemplateMail mails = 1;
+}
+
+message DBOperationTemplateMails {
+	repeated DBOperationTemplateMail mails = 1;
+}
+
+message DBOperationMails {
+	repeated DBOperationMail mails = 1;
+}
+
+/**收件人列表 */
+message DBMailReceivers {
+	repeated int64 receivers = 1;
+}
+
+message DBMailItems {
+	repeated DBMailItem items = 1;
+}
+
+message DBMailResources {
+	repeated PrizResource resources = 1;
+}
+
+/**已领取的运营邮件ID，防止多次领取 */
+message DBMailOperationMarks {
+	/**运营邮件ID标识 */
+	repeated int64 operationMark = 1;
+}
+
+/**DB 模板邮件 */
+message DBTemplateMail {
+	/**邮件ID，玩家唯一 */
+	required int32 id = 1;
+	/**邮件模板ID，对应策划配置模板 */
+	required int32 templateId = 2;
+	/**是否已读 */
+	required bool isRead = 3;
+	/**发送时间 */
+	required int64 sendTime = 4;
+	/**过期时间 */
+	required int64 dueTime = 5;
+	/**模板邮件参数列表 */
+	repeated string args = 6;
+
+	repeated DBMailItem items = 7;
+	repeated PrizResource resources = 8;
+}
+
+/**DB 运营模板邮件 */
+message DBOperationTemplateMail {
+	/**邮件ID，玩家唯一 */
+	required int32 id = 1;
+	/**运营邮件ID，对应运营邮件表的ID */
+	required int64 operationId = 2;
+	/**是否已读 */
+	required bool isRead = 3;
+}
+
+/**DB 运营邮件
+ * 该对象有2个用途：
+ * 1，数据库存储，GM发给单个玩家的运营邮件
+ * 2，GC消息，所有运营邮件都使用该对象发送
+ */
+message DBOperationMail {
+	/**邮件ID，玩家唯一 */
+	required int32 id = 1;
+	/**是否已读 */
+	required bool isRead = 2;
+	/** 邮件类型，对应MailType枚举的index */
+	required int32 mailType = 3;
+	/** 邮件发送时间 */
+	required int64 sendTime = 4;
+	/** 邮件过期时间 */
+	required int64 dueTime = 5;
+	/** 邮件Icon */
+	required int32 icon = 6;
+	/** 邮件标题 */
+	required string title = 7;
+	/** 邮件摘要 */
+	required string resume = 8;
+	/** 邮件内容 */
+	required string content = 9;
+	/** 发件人 */
+	required string sender = 10;
+	/** 奖励道具BLOB，对应DBMailItems */
+	repeated DBMailItem items = 11;
+	/** 奖励资源BLOB，对应DBMailResources */
+	repeated PrizResource resources = 12;
+}
+
+/**DB 邮件道具奖励 */
+message DBMailItem {
+	/**道具ID */
+	required int32 id = 1;
+	/**数量 */
+	required int32 amount = 2;
+}
+
+/**资源奖励 */
+message PrizResource {
+	/**资源ID，对应 PrizResourceType的枚举index */
+	required int32 id = 1;
+	/**数量 */
+	required int64 amount = 2;
+}
+

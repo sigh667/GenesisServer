@@ -1,0 +1,4 @@
+float growthRate;//成长率
+int starUpCostfragment;[notNull=false]//升到下一星级需要的碎片数量
+long starUpCostMoney;//升到下一星级需要的金币
+long hireCost;//直接召唤所需金币

@@ -1,0 +1,25 @@
+package com.mokylin;
+import "MessageType.proto";
+option java_package = "com.mokylin.bleach.protobuf";
+option java_outer_classname = "WindowMessage";
+
+/**
+ * 打开窗口
+ */
+message CGOpenWindow {
+	option (cg_message_type) = CG_OPEN_WINDOW;
+	/** 窗口类型Id */
+	required int32 windowTypeId = 1;
+}
+
+/**
+ * 关闭窗口
+ */
+message CGCloseWindow {
+	option (cg_message_type) = CG_CLOSE_WINDOW;
+	/** 窗口类型Id */
+	required int32 windowTypeId = 1;
+}
+
+
+////////////////////////////////////////////////////////////////////////

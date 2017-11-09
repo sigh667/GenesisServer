@@ -1,0 +1,23 @@
+package com.mokylin;
+import "MessageType.proto";
+option java_package = "com.mokylin.bleach.protobuf";
+option java_outer_classname = "ChatMessage";
+
+/**
+ * 客户端请求，使用某GM命令
+ */
+message CGGmCmdMessage{
+	option (cg_message_type) = CG_GM_CMD;
+	required string cmd = 1;
+	repeated string param = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+/**
+ * 服务器通知，GM命令执行后，需要显示在GM界面的文本
+ */
+message GCGmCmd{
+	option (gc_message_type) = GC_GM_CMD;
+	repeated string param = 1;
+}

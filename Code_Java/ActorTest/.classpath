@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="lib/akka-testkit_2.11-2.3.4.jar" sourcepath="lib-src/akka-testkit_2.11-2.3.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/scalatest_2.11-2.2.0.jar" sourcepath="lib-src/scalatest_2.11-2.2.0-sources.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/game_server"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/server_msg"/>
+	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/mockito-all-1.9.5.jar" sourcepath="lib-src/mockito-all-1.9.5-sources.jar"/>
+	<classpathentry kind="lib" path="lib/cglib-nodep-2.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/javassist-3.18.2-GA.jar"/>
+	<classpathentry kind="lib" path="lib/powermock-mockito-1.5.5-full.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="lib/powermock-classloading-base-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/powermock-classloading-objenesis-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/powermock-module-junit4-rule-1.5.5.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
