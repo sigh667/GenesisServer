@@ -56,9 +56,9 @@ public class Globals {
 		serverConfig = LoginServerConfig.loadConfig();
 		logger.info("conf文件读取完毕");
 
-		// 2.0表格数据初始化
-		GlobalData.init(LoginServerConfig.getBaseResourceDir(), LoginServerConfig.isXorLoad());
-		logger.info("Excel文件读取完毕");
+//		// 2.0表格数据初始化
+//		GlobalData.init(LoginServerConfig.getBaseResourceDir(), LoginServerConfig.isXorLoad());
+//		logger.info("Excel文件读取完毕");
 
 		// 3.0客户端消息解析器
 		pd = new ProtoSerializationDefine();
