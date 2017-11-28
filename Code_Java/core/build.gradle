@@ -25,9 +25,12 @@ repositories {
 dependencies {
 
     compile 'com.typesafe.akka:akka-actor_2.12:2.5.6'
+    compile group: 'com.typesafe.akka', name: 'akka-remote_2.12', version: '2.5.7'
+    compile group: 'com.typesafe.akka', name: 'akka-slf4j_2.12', version: '2.5.7'
     compile 'org.apache.velocity:velocity:1.7'
     compile 'com.alibaba:fastjson:1.2.41'
     compile 'org.slf4j:slf4j-api:1.7.25'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
     compile 'com.google.protobuf:protobuf-java:3.5.0'
     compile 'io.netty:netty-all:4.1.17.Final'
     compile 'org.hibernate:hibernate-core:4.3.10.Final'
