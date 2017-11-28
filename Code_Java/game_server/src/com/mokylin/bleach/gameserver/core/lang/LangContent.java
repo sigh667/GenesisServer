@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 /**
  * 语言内容
- * 
+ *
  * @author yaguang.xiao
  *
  */
@@ -15,9 +15,9 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface LangContent {
 
-	/**
-	 * 内容
-	 * @return
-	 */
-	String value() default "";
+    /**
+     * 内容
+     * @return
+     */
+    String value() default "";
 }

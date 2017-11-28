@@ -4,14 +4,14 @@ import java.util.Map;
 
 public class MapConfig {
 
-	private Map<TestEnum, Integer> map;
+    private Map<TestEnum, Integer> map;
 
-	public Map<TestEnum, Integer> getMap() {
-		return map;
-	}
+    public Map<TestEnum, Integer> getMap() {
+        return map;
+    }
 
-	public void setMap(Map<TestEnum, Integer> map) {
-		this.map = map;
-	}
+    public void setMap(Map<TestEnum, Integer> map) {
+        this.map = map;
+    }
 
 }

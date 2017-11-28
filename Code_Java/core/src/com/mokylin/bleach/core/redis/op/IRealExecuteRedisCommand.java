@@ -11,6 +11,6 @@ import com.mokylin.bleach.core.redis.IRedisResponse;
  */
 public interface IRealExecuteRedisCommand<P, R extends IRedisResponse<?>> {
 
-	R realExec(P input);
-	
+    R realExec(P input);
+
 }

@@ -1,13 +1,13 @@
 package com.mokylin.bleach.gamedb.orm.entity;
 
+import com.mokylin.bleach.gamedb.orm.EntityWithRedisKey;
+import com.mokylin.bleach.gamedb.orm.IHumanRelatedEntity;
+import com.mokylin.bleach.gamedb.redis.key.model.ArenaSnapKey;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import com.mokylin.bleach.gamedb.orm.EntityWithRedisKey;
-import com.mokylin.bleach.gamedb.orm.IHumanRelatedEntity;
-import com.mokylin.bleach.gamedb.redis.key.model.ArenaSnapKey;
 
 /**
  * 竞技场镜像
@@ -16,63 +16,63 @@ import com.mokylin.bleach.gamedb.redis.key.model.ArenaSnapKey;
 @Table(name = "t_arena_snap")
 public class ArenaSnapEntity implements EntityWithRedisKey<ArenaSnapKey>, IHumanRelatedEntity {
 
-	/***/
-	private static final long serialVersionUID = 1L;
-	
-	/**角色ID 主键*/
-	private long id;
-	/**角色名称，战斗显示用*/
-	private String name;
-	/**角色等级，战斗显示用*/
-	private int level;
-	/**竞技场排名*/
-	private int arenaRank;
+    /***/
+    private static final long serialVersionUID = 1L;
 
-	@Override
-	public ArenaSnapKey newRedisKey(Integer serverId) {
-		return new ArenaSnapKey(serverId,this.getId());
-	}
+    /**角色ID 主键*/
+    private long id;
+    /**角色名称，战斗显示用*/
+    private String name;
+    /**角色等级，战斗显示用*/
+    private int level;
+    /**竞技场排名*/
+    private int arenaRank;
 
-	@Id
-	@Column
-	public long getId() {
-		return id;
-	}
+    @Override
+    public ArenaSnapKey newRedisKey(Integer serverId) {
+        return new ArenaSnapKey(serverId, this.getId());
+    }
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    @Id
+    @Column
+    public long getId() {
+        return id;
+    }
 
-	@Column
-	public String getName() {
-		return name;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    @Column
+    public String getName() {
+        return name;
+    }
 
-	@Column
-	public int getLevel() {
-		return level;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setLevel(int level) {
-		this.level = level;
-	}
+    @Column
+    public int getLevel() {
+        return level;
+    }
 
-	@Column
-	public int getArenaRank() {
-		return arenaRank;
-	}
+    public void setLevel(int level) {
+        this.level = level;
+    }
 
-	public void setArenaRank(int arenaRank) {
-		this.arenaRank = arenaRank;
-	}
+    @Column
+    public int getArenaRank() {
+        return arenaRank;
+    }
 
-	@Override
-	public long humanId() {
-		return this.id;
-	}
+    public void setArenaRank(int arenaRank) {
+        this.arenaRank = arenaRank;
+    }
+
+    @Override
+    public long humanId() {
+        return this.id;
+    }
 
 }

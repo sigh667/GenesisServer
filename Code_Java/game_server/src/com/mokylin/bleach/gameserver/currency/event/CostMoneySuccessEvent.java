@@ -8,18 +8,18 @@ import com.mokylin.bleach.gameserver.human.Human;
  * @author yaguang.xiao
  *
  */
-public class CostMoneySuccessEvent{
+public class CostMoneySuccessEvent {
 
-	/** 玩家对象 */
-	public final Human human;
-	/** 金钱类型 */
-	public final CurrencyPropId currency;
-	/** 扣掉的金钱 */
-	public final long costValue;
-	
-	public CostMoneySuccessEvent(Human human, CurrencyPropId currency, long costValue) {
-		this.human = human;
-		this.currency = currency;
-		this.costValue = costValue;
-	}
+    /** 玩家对象 */
+    public final Human human;
+    /** 金钱类型 */
+    public final CurrencyPropId currency;
+    /** 扣掉的金钱 */
+    public final long costValue;
+
+    public CostMoneySuccessEvent(Human human, CurrencyPropId currency, long costValue) {
+        this.human = human;
+        this.currency = currency;
+        this.costValue = costValue;
+    }
 }

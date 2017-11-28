@@ -4,5 +4,5 @@ import com.mokylin.bleach.common.prop.battleprop.BattlePropContainer;
 
 public interface IHero {
 
-	BattlePropContainer getPropContainer();
+    BattlePropContainer getPropContainer();
 }

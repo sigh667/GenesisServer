@@ -6,10 +6,10 @@ import com.mokylin.bleach.core.template.exception.TemplateConfigException;
 @ExcelRowBinding
 public class HeroSkillLevelMaxTemplate extends HeroSkillLevelMaxTemplateVO {
 
-	@Override
-	public void check() throws TemplateConfigException {
-		// TODO Auto-generated method stub
+    @Override
+    public void check() throws TemplateConfigException {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

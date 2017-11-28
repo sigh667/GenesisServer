@@ -6,7 +6,6 @@ package com.mokylin.bleach.gameserver.hero.equip;
  *
  */
 public enum EquipFixedPropOriginalType {
-	/**固有的*/
-	Original,
-	;
+    /**固有的*/
+    Original,;
 }

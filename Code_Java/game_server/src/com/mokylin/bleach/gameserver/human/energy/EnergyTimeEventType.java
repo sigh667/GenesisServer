@@ -7,6 +7,6 @@ import com.mokylin.bleach.core.timeaxis.ITimeEventType;
  *
  */
 public enum EnergyTimeEventType implements ITimeEventType {
-	/** 恢复体力 */
-	ENERGY_RECOVER
+    /** 恢复体力 */
+    ENERGY_RECOVER
 }

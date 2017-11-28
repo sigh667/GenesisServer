@@ -6,12 +6,9 @@ package com.mokylin.bleach.common.prop.battleprop.source;
  *
  */
 public enum PropSourceType {
-	
-	/**品质*/
-	QUALITY,
-	/** 等级 */
-	StarAndLevel,
-	/** 装备 */
-	EQUIP,
-	;
+
+    /**品质*/
+    QUALITY, /** 等级 */
+    StarAndLevel, /** 装备 */
+    EQUIP,;
 }

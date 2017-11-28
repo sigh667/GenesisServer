@@ -5,5 +5,5 @@ import com.mokylin.bleach.core.isc.remote.actorrefs.IActorPackages;
 
 public interface IRemoteFactory {
 
-	public IRemote createRemote(ServerConfig localConfig, IActorPackages actorPackages);
+    public IRemote createRemote(ServerConfig localConfig, IActorPackages actorPackages);
 }

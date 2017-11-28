@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 /**
  * 标注一个字段，加载配置的时候忽略指定字段
- * 
+ *
  * @author yaguang.xiao
  *
  */

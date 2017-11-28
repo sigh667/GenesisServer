@@ -1,12 +1,12 @@
 package com.mokylin.bleach.gameserver.core.autoexecutetask;
 
-import java.util.List;
-
-import org.joda.time.LocalTime;
-
 import com.mokylin.bleach.core.timeaxis.TimeAxis;
 import com.mokylin.bleach.gamedb.persistance.IObjectInSql;
 import com.mokylin.bleach.gameserver.core.global.Globals;
+
+import org.joda.time.LocalTime;
+
+import java.util.List;
 
 /**
  * 有一种任务，需要在每天的指定时间点自动执行<p>
@@ -17,81 +17,83 @@ import com.mokylin.bleach.gameserver.core.global.Globals;
  *
  * @param <H>
  */
-public abstract class AbstractAutoExecuteTaskWithHandleObjectInSql<H> extends AbstractAutoExecuteTask<H> {
+public abstract class AbstractAutoExecuteTaskWithHandleObjectInSql<H>
+        extends AbstractAutoExecuteTask<H> {
 
-	private long lastExecuteTime;
-	private IObjectInSql<?, ?> objectInSql;
-	
-	protected AbstractAutoExecuteTaskWithHandleObjectInSql(LocalTime autoExecuteTime, TimeAxis<H> timeAxis, long lastExecuteTime, IObjectInSql<?, ?> objectInSql) {
-		super(autoExecuteTime, timeAxis);
-		this.lastExecuteTime = lastExecuteTime;
-		this.objectInSql = objectInSql;
-	}
-	
-	protected AbstractAutoExecuteTaskWithHandleObjectInSql(
-			List<LocalTime> autoExecuteTimeList, TimeAxis<H> timeAxis, long lastExecuteTime, IObjectInSql<?, ?> objectInSql) {
-		super(autoExecuteTimeList, timeAxis);
-		this.lastExecuteTime = lastExecuteTime;
-		this.objectInSql = objectInSql;
-	}
+    private long lastExecuteTime;
+    private IObjectInSql<?, ?> objectInSql;
 
-	@Override
-	public final long getLastExecuteTime() {
-		return this.lastExecuteTime;
-	}
+    protected AbstractAutoExecuteTaskWithHandleObjectInSql(LocalTime autoExecuteTime,
+            TimeAxis<H> timeAxis, long lastExecuteTime, IObjectInSql<?, ?> objectInSql) {
+        super(autoExecuteTime, timeAxis);
+        this.lastExecuteTime = lastExecuteTime;
+        this.objectInSql = objectInSql;
+    }
 
-	@Override
-	public final void triggerExecute(H host) {
-		try {
-			if(this.isNeedExecute()) {
-				this.execute(host);
-			}
-		} catch (Exception e) {
-			//TODO 记录日志
-		}
-	}
+    protected AbstractAutoExecuteTaskWithHandleObjectInSql(List<LocalTime> autoExecuteTimeList,
+            TimeAxis<H> timeAxis, long lastExecuteTime, IObjectInSql<?, ?> objectInSql) {
+        super(autoExecuteTimeList, timeAxis);
+        this.lastExecuteTime = lastExecuteTime;
+        this.objectInSql = objectInSql;
+    }
 
-	@Override
-	public final void autoExecute(H host) {
-		try {
-			if(this.isNeedExecute() && this.isCanAutoExecute(host)) {
-				this.execute(host);
-				this.sendMessage(host);
-			}
-		} catch (Exception e) {
-			//TODO 记录日志
-		}
-	}
-	
-	/**
-	 * 确实的执行任务
-	 * @param host
-	 */
-	private void execute(H host) {
-		long now = Globals.getTimeService().now();
-		this.simplyExecute(now, host);
-		this.lastExecuteTime = now;
-		this.objectInSql.setModified();
-	}
-	
-	/**
-	 * 自动执行任务的限制条件
-	 * @param host
-	 * @return
-	 */
-	protected abstract boolean isCanAutoExecute(H host);
-	
-	/**
-	 * 执行任务，这里不需要检测是否可以执行，因为已经检测过了
-	 * @param executeTime
-	 * @param host
-	 */
-	protected abstract void simplyExecute(long executeTime, H host);
-	
-	/**
-	 * 自动执行之后发送消息
-	 * @param host
-	 */
-	protected abstract void sendMessage(H host);
-	
+    @Override
+    public final long getLastExecuteTime() {
+        return this.lastExecuteTime;
+    }
+
+    @Override
+    public final void triggerExecute(H host) {
+        try {
+            if (this.isNeedExecute()) {
+                this.execute(host);
+            }
+        } catch (Exception e) {
+            //TODO 记录日志
+        }
+    }
+
+    @Override
+    public final void autoExecute(H host) {
+        try {
+            if (this.isNeedExecute() && this.isCanAutoExecute(host)) {
+                this.execute(host);
+                this.sendMessage(host);
+            }
+        } catch (Exception e) {
+            //TODO 记录日志
+        }
+    }
+
+    /**
+     * 确实的执行任务
+     * @param host
+     */
+    private void execute(H host) {
+        long now = Globals.getTimeService().now();
+        this.simplyExecute(now, host);
+        this.lastExecuteTime = now;
+        this.objectInSql.setModified();
+    }
+
+    /**
+     * 自动执行任务的限制条件
+     * @param host
+     * @return
+     */
+    protected abstract boolean isCanAutoExecute(H host);
+
+    /**
+     * 执行任务，这里不需要检测是否可以执行，因为已经检测过了
+     * @param executeTime
+     * @param host
+     */
+    protected abstract void simplyExecute(long executeTime, H host);
+
+    /**
+     * 自动执行之后发送消息
+     * @param host
+     */
+    protected abstract void sendMessage(H host);
+
 }

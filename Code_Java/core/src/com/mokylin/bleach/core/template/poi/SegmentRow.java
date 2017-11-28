@@ -1,12 +1,12 @@
 package com.mokylin.bleach.core.template.poi;
 
-import java.util.Iterator;
-
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
+
+import java.util.Iterator;
 
 public class SegmentRow implements Row {
 
@@ -49,12 +49,12 @@ public class SegmentRow implements Row {
     }
 
     @Override
-    public void setRowNum(int rowNum) {
+    public int getRowNum() {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public int getRowNum() {
+    public void setRowNum(int rowNum) {
         throw new UnsupportedOperationException();
     }
 
@@ -84,24 +84,12 @@ public class SegmentRow implements Row {
     }
 
     @Override
-    public void setHeight(short height) {
-        throw new UnsupportedOperationException();
-
-    }
-
-    @Override
-    public void setZeroHeight(boolean zHeight) {
-        throw new UnsupportedOperationException();
-
-    }
-
-    @Override
     public boolean getZeroHeight() {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public void setHeightInPoints(float height) {
+    public void setZeroHeight(boolean zHeight) {
         throw new UnsupportedOperationException();
 
     }
@@ -112,8 +100,20 @@ public class SegmentRow implements Row {
     }
 
     @Override
+    public void setHeight(short height) {
+        throw new UnsupportedOperationException();
+
+    }
+
+    @Override
     public float getHeightInPoints() {
         throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void setHeightInPoints(float height) {
+        throw new UnsupportedOperationException();
+
     }
 
     @Override

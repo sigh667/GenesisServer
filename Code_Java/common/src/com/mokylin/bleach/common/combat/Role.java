@@ -10,14 +10,15 @@ import com.mokylin.bleach.common.prop.battleprop.BattlePropContainer;
  */
 public class Role {
 
-	/** 战斗属性容器 */
-	private final BattlePropContainer battlePropContainer;
-	
-	
-	public Role(IPropNotifier iPropNotifier) {
-		this.battlePropContainer = new BattlePropContainer(iPropNotifier);
-	}
-	public BattlePropContainer getPropContainer() {
-		return this.battlePropContainer;
-	}
+    /** 战斗属性容器 */
+    private final BattlePropContainer battlePropContainer;
+
+
+    public Role(IPropNotifier iPropNotifier) {
+        this.battlePropContainer = new BattlePropContainer(iPropNotifier);
+    }
+
+    public BattlePropContainer getPropContainer() {
+        return this.battlePropContainer;
+    }
 }

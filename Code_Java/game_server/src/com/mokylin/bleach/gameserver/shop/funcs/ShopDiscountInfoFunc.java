@@ -16,34 +16,49 @@ import com.mokylin.bleach.servermsg.gameserver.shop.ShopDiscountInfo;
  *
  */
 
-public class ShopDiscountInfoFunc implements IServerMsgFunc<ShopDiscountInfo, ServerGlobals, MsgArgs> {
+public class ShopDiscountInfoFunc
+        implements IServerMsgFunc<ShopDiscountInfo, ServerGlobals, MsgArgs> {
 
-	@Override
-	public void handle(IRemote remote, ShopDiscountInfo msg,
-			ServerGlobals sGlobals, MsgArgs arg2) {
-		if(msg.serverId != sGlobals.getServerId()) return;
-		
-		ShopType shopType = ShopType.getByIndex(msg.shopTypeId);
-		if(shopType == null) return;
-		
-		if(msg.discount <= 0) return;
-		
-		if(msg.numMultiple < 1) return;
-		
-		if(msg.startTime == null || msg.endTime == null) return;
-		
-		if(msg.startTime.getTime() > msg.endTime.getTime()) return;
-		
-		long nextShopDiscountUUID = sGlobals.getUUIDGenerator().getNextUUID(UUIDType.ShopDiscount);
-		
-		ShopDiscount shopDiscount = new ShopDiscount(sGlobals, nextShopDiscountUUID, msg.serverId, shopType, msg.discount, msg.numMultiple, msg.startTime.getTime(), msg.endTime.getTime());
-		
-		sGlobals.getDiscountService().addDiscountInfo(shopDiscount, sGlobals);
-	}
+    @Override
+    public void handle(IRemote remote, ShopDiscountInfo msg, ServerGlobals sGlobals, MsgArgs arg2) {
+        if (msg.serverId != sGlobals.getServerId()) {
+            return;
+        }
 
-	@Override
-	public MessageTarget getTarget() {
-		return MessageTarget.SERVER;
-	}
+        ShopType shopType = ShopType.getByIndex(msg.shopTypeId);
+        if (shopType == null) {
+            return;
+        }
+
+        if (msg.discount <= 0) {
+            return;
+        }
+
+        if (msg.numMultiple < 1) {
+            return;
+        }
+
+        if (msg.startTime == null || msg.endTime == null) {
+            return;
+        }
+
+        if (msg.startTime.getTime() > msg.endTime.getTime()) {
+            return;
+        }
+
+        long nextShopDiscountUUID = sGlobals.getUUIDGenerator().getNextUUID(UUIDType.ShopDiscount);
+
+        ShopDiscount shopDiscount =
+                new ShopDiscount(sGlobals, nextShopDiscountUUID, msg.serverId, shopType,
+                        msg.discount, msg.numMultiple, msg.startTime.getTime(),
+                        msg.endTime.getTime());
+
+        sGlobals.getDiscountService().addDiscountInfo(shopDiscount, sGlobals);
+    }
+
+    @Override
+    public MessageTarget getTarget() {
+        return MessageTarget.SERVER;
+    }
 
 }

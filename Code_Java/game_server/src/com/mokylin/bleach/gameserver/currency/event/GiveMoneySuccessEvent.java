@@ -9,17 +9,17 @@ import com.mokylin.bleach.gameserver.human.Human;
  *
  */
 public class GiveMoneySuccessEvent {
-	
-	/** 玩家对象 */
-	public final Human human;
-	/** 金钱类型 */
-	public final CurrencyPropId currency;
-	/** 金钱数量 */
-	public final long giveValue;
-	
-	public GiveMoneySuccessEvent(Human human, CurrencyPropId currency, long giveValue) {
-		this.human = human;
-		this.currency = currency;
-		this.giveValue = giveValue;
-	}
+
+    /** 玩家对象 */
+    public final Human human;
+    /** 金钱类型 */
+    public final CurrencyPropId currency;
+    /** 金钱数量 */
+    public final long giveValue;
+
+    public GiveMoneySuccessEvent(Human human, CurrencyPropId currency, long giveValue) {
+        this.human = human;
+        this.currency = currency;
+        this.giveValue = giveValue;
+    }
 }

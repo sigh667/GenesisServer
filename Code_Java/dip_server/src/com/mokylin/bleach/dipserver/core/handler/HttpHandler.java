@@ -13,13 +13,13 @@ import java.lang.annotation.Target;
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-@Target(value={ElementType.TYPE})
+@Target(value = {ElementType.TYPE})
 public @interface HttpHandler {
 
-	/**
-	 * URI路径
-	 * @return
-	 */
-	String path() default "";
-	
+    /**
+     * URI路径
+     * @return
+     */
+    String path() default "";
+
 }

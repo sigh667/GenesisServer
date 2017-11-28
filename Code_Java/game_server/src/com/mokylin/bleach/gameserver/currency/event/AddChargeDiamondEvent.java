@@ -9,12 +9,12 @@ import com.mokylin.bleach.gameserver.human.Human;
  */
 public class AddChargeDiamondEvent {
 
-	public final long addValue;
-	public final Human human;
-	
-	public AddChargeDiamondEvent(long addValue, Human human) {
-		this.addValue = addValue;
-		this.human = human;
-	}
-	
+    public final long addValue;
+    public final Human human;
+
+    public AddChargeDiamondEvent(long addValue, Human human) {
+        this.addValue = addValue;
+        this.human = human;
+    }
+
 }

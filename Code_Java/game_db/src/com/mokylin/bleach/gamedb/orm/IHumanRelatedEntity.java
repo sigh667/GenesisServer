@@ -8,9 +8,9 @@ package com.mokylin.bleach.gamedb.orm;
  */
 public interface IHumanRelatedEntity {
 
-	/**
-	 * 所属的Human的UUID
-	 * @return
-	 */
-	long humanId();
+    /**
+     * 所属的Human的UUID
+     * @return
+     */
+    long humanId();
 }

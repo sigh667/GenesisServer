@@ -12,45 +12,46 @@ import com.mokylin.bleach.gameserver.hero.Hero;
  * @author baoliang.shen
  *
  */
-public class QualityProp implements IPropHolder<QualityPropType>{
+public class QualityProp implements IPropHolder<QualityPropType> {
 
-	private final Prop<QualityPropType> prop;
+    private final Prop<QualityPropType> prop;
 
 
-	public QualityProp(Hero hero) {
-		HeroAttrTemplate template = hero.getTemplate();
-		this.prop = new Prop<QualityPropType>(PropSourceType.QUALITY, template.getId(), QualityPropType.class);
-		
-		initProp(hero);
-	}
+    public QualityProp(Hero hero) {
+        HeroAttrTemplate template = hero.getTemplate();
+        this.prop = new Prop<QualityPropType>(PropSourceType.QUALITY, template.getId(),
+                QualityPropType.class);
 
-	@Override
-	public Prop<QualityPropType> getProp() {
-		return prop;
-	}
+        initProp(hero);
+    }
 
-	@Override
-	public void addProp(BattlePropContainer battlePropContainer) {
-		battlePropContainer.addProp(this);
-	}
+    @Override
+    public Prop<QualityPropType> getProp() {
+        return prop;
+    }
 
-	public void onQualityUp(Hero hero) {
-		//1.0移除我带来的影响
-		hero.getPropContainer().removeProp(this);
+    @Override
+    public void addProp(BattlePropContainer battlePropContainer) {
+        battlePropContainer.addProp(this);
+    }
 
-		//2.0我自己的属性清空
-		this.getProp().removeAll();
+    public void onQualityUp(Hero hero) {
+        //1.0移除我带来的影响
+        hero.getPropContainer().removeProp(this);
 
-		//3.0重新添加我自己的属性
-		initProp(hero);
+        //2.0我自己的属性清空
+        this.getProp().removeAll();
 
-		//4.0将作用施加到Hero身上
-		this.addProp(hero.getPropContainer());
-	}
+        //3.0重新添加我自己的属性
+        initProp(hero);
 
-	private void initProp(Hero hero) {
-		HeroAttrTemplate template = hero.getTemplate();
-		this.getProp().addAll(QualityPropType.Original, template.getNewPropEffects());
-	}
+        //4.0将作用施加到Hero身上
+        this.addProp(hero.getPropContainer());
+    }
+
+    private void initProp(Hero hero) {
+        HeroAttrTemplate template = hero.getTemplate();
+        this.getProp().addAll(QualityPropType.Original, template.getNewPropEffects());
+    }
 
 }

@@ -9,5 +9,5 @@ import com.mokylin.bleach.dataserver.serverdb.ServerDBManager;
  */
 public interface ILoadGlobalData {
 
-	void load(ServerDBManager dbm);
+    void load(ServerDBManager dbm);
 }

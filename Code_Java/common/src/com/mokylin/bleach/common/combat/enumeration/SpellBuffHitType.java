@@ -7,7 +7,7 @@ package com.mokylin.bleach.common.combat.enumeration;
  */
 public enum SpellBuffHitType {
 
-	HitNoMiss,			//命中率为100%，必中
-	HitWhileSpellHit,	//当技能命中时，buff生效
-	;
+    HitNoMiss,            //命中率为100%，必中
+    HitWhileSpellHit,    //当技能命中时，buff生效
+    ;
 }

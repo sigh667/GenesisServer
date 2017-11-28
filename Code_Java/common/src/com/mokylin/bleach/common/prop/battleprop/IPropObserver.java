@@ -9,9 +9,9 @@ import com.mokylin.bleach.common.prop.battleprop.propeffect.BattlePropEffect;
  */
 public interface IPropObserver {
 
-	/**
-	 * 更新属性
-	 * @param changes	属性改变效果
-	 */
-	void update(BattlePropEffect... changes);
+    /**
+     * 更新属性
+     * @param changes    属性改变效果
+     */
+    void update(BattlePropEffect... changes);
 }

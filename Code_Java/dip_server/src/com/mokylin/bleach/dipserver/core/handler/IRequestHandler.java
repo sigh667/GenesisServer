@@ -10,11 +10,11 @@ import org.restlet.Response;
  */
 public interface IRequestHandler {
 
-	/**
-	 * 处理http请求
-	 * @param request
-	 * @param response
-	 */
-	public void handle(Request request, Response response);
-	
+    /**
+     * 处理http请求
+     * @param request
+     * @param response
+     */
+    public void handle(Request request, Response response);
+
 }

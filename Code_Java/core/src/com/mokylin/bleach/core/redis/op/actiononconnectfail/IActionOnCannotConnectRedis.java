@@ -7,6 +7,6 @@ package com.mokylin.bleach.core.redis.op.actiononconnectfail;
  */
 public interface IActionOnCannotConnectRedis {
 
-	void action();
+    void action();
 
 }

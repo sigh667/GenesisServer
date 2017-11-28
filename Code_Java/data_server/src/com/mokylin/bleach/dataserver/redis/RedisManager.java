@@ -13,23 +13,24 @@ import com.mokylin.bleach.dataserver.globals.Globals;
  */
 public class RedisManager {
 
-	private final RedisService redisService;
+    private final RedisService redisService;
 
-	public RedisManager(){
-		redisService = new RedisService(null, RedisConfig.getRedisConfigs().values().toArray(new RedisConfig[0]));
-	}
+    public RedisManager() {
+        redisService = new RedisService(null,
+                RedisConfig.getRedisConfigs().values().toArray(new RedisConfig[0]));
+    }
 
-	/**
-	 * 根据原服务器ID取IRedis
-	 * @param originalServerId
-	 * @return
-	 */
-	public IRedis getIRedis(Integer originalServerId) {
-		Mapping mapConf = Globals.getServerConfig().mappingConf;
-		Integer currentServerId = mapConf.getOriginalgs_currentgs_map().get(originalServerId);
-		String redisName = mapConf.getGs_redis_map().get(currentServerId);
-		
-		return redisService.getRedis(redisName).get();
-	}
+    /**
+     * 根据原服务器ID取IRedis
+     * @param originalServerId
+     * @return
+     */
+    public IRedis getIRedis(Integer originalServerId) {
+        Mapping mapConf = Globals.getServerConfig().mappingConf;
+        Integer currentServerId = mapConf.getOriginalgs_currentgs_map().get(originalServerId);
+        String redisName = mapConf.getGs_redis_map().get(currentServerId);
+
+        return redisService.getRedis(redisName).get();
+    }
 
 }

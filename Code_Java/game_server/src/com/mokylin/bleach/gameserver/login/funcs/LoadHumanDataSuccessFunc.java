@@ -12,30 +12,34 @@ import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
 
 /**
  * 加载角色成功的函数对象。<p>
- * 
+ *
  * 该函数对象在PlayerManagerActor中执行。
- * 
+ *
  * @author pangchong
  *
  */
 
-public class LoadHumanDataSuccessFunc implements IServerMsgFunc<LoadHumanDataSuccess, ServerGlobals, PlayerManagerArgs> {
+public class LoadHumanDataSuccessFunc
+        implements IServerMsgFunc<LoadHumanDataSuccess, ServerGlobals, PlayerManagerArgs> {
 
-	@Override
-	public void handle(IRemote remote, LoadHumanDataSuccess msg, ServerGlobals sGlobals, PlayerManagerArgs playerManagerArgs) {
-		
-		Player player = msg.player;
-		if(player.getStatus() == LoginStatus.Logouting){
-			playerManagerArgs.onlinePlayerService.removePlayer(player.getChannel(), player.getAccountId());
-			return;
-		}
-		player.setStatus(LoginStatus.LoadingHumanSucceed);
-		CreatePlayerActorHelper.createPlayerActor(player, msg.humanData, sGlobals, playerManagerArgs);
-	}
+    @Override
+    public void handle(IRemote remote, LoadHumanDataSuccess msg, ServerGlobals sGlobals,
+            PlayerManagerArgs playerManagerArgs) {
 
-	@Override
-	public MessageTarget getTarget() {
-		return MessageTarget.PLAYER_MANAGER;
-	}
+        Player player = msg.player;
+        if (player.getStatus() == LoginStatus.Logouting) {
+            playerManagerArgs.onlinePlayerService
+                    .removePlayer(player.getChannel(), player.getAccountId());
+            return;
+        }
+        player.setStatus(LoginStatus.LoadingHumanSucceed);
+        CreatePlayerActorHelper
+                .createPlayerActor(player, msg.humanData, sGlobals, playerManagerArgs);
+    }
+
+    @Override
+    public MessageTarget getTarget() {
+        return MessageTarget.PLAYER_MANAGER;
+    }
 
 }

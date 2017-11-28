@@ -7,20 +7,7 @@ package com.mokylin.bleach.common.combat.enumeration;
  */
 public enum EffectID {
 
-	DoNothing,
-	ChangeAttributeAbs,
-	ChangeAttributePer,
-	StopPositiveBuff,
-	StopIndifferentBuff,
-	StopNegativeBuff,
-	AddBuff,
-	RecoverHpByGongJiLi,
-	DecreaseHpByDamage,
-	RecoverHpABS,
-	DecreaseHpABS,
-	ChangeNormalSkillCD,
-	ChangeSpellSkillCD,
-	ChangeZhuanJingSkillCD,
-	ClearSpellCD,
-	;
+    DoNothing, ChangeAttributeAbs, ChangeAttributePer, StopPositiveBuff, StopIndifferentBuff,
+    StopNegativeBuff, AddBuff, RecoverHpByGongJiLi, DecreaseHpByDamage, RecoverHpABS, DecreaseHpABS,
+    ChangeNormalSkillCD, ChangeSpellSkillCD, ChangeZhuanJingSkillCD, ClearSpellCD,;
 }

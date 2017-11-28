@@ -8,26 +8,26 @@ import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
 @ExcelRowBinding
 public class EffectBase {
 
-	/** 效果器ID */
-	@BeanFieldNumber(number = 0)
-	private EffectID effectName;
-	
-	@ExcelCollectionMapping(clazz = int.class, collectionNumber = "1;2;3;4;5")
-	private int[] params;
+    /** 效果器ID */
+    @BeanFieldNumber(number = 0)
+    private EffectID effectName;
 
-	public EffectID getEffectName() {
-		return effectName;
-	}
+    @ExcelCollectionMapping(clazz = int.class, collectionNumber = "1;2;3;4;5")
+    private int[] params;
 
-	public void setEffectName(EffectID effectName) {
-		this.effectName = effectName;
-	}
+    public EffectID getEffectName() {
+        return effectName;
+    }
 
-	public int[] getParams() {
-		return params;
-	}
+    public void setEffectName(EffectID effectName) {
+        this.effectName = effectName;
+    }
 
-	public void setParams(int[] params) {
-		this.params = params;
-	}
+    public int[] getParams() {
+        return params;
+    }
+
+    public void setParams(int[] params) {
+        this.params = params;
+    }
 }

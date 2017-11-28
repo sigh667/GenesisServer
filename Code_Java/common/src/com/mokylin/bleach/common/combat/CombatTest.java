@@ -7,9 +7,9 @@ package com.mokylin.bleach.common.combat;
  */
 public class CombatTest {
 
-	public static void main(String[] args) {
-		CombatProcess combatProcess = new CombatProcess();
-		combatProcess.start();
-	}
+    public static void main(String[] args) {
+        CombatProcess combatProcess = new CombatProcess();
+        combatProcess.start();
+    }
 
 }

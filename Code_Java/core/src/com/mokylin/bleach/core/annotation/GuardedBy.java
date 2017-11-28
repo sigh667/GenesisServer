@@ -8,16 +8,16 @@ import java.lang.annotation.Target;
 
 /**
  * 表明指定类型、方法或者变量被某个锁保护
- * 
+ *
  * @author yaguang.xiao
  *
  */
 
 @Documented
 @Retention(RetentionPolicy.SOURCE)
-@Target(value={ElementType.TYPE, ElementType.FIELD, ElementType.METHOD})
+@Target(value = {ElementType.TYPE, ElementType.FIELD, ElementType.METHOD})
 public @interface GuardedBy {
-	
-	String value() default "";
-	
+
+    String value() default "";
+
 }

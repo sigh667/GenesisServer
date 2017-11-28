@@ -7,8 +7,8 @@ import com.mokylin.bleach.robot.robot.Robot;
 
 public class GCInventoryInfoFunc extends HumanBaseMsgFunc<GCInventoryInfo> {
 
-	@Override
-	protected void handle(Robot robot, Human human, GCInventoryInfo msg) {
-		human.getInventory().load(msg);
-	}
+    @Override
+    protected void handle(Robot robot, Human human, GCInventoryInfo msg) {
+        human.getInventory().load(msg);
+    }
 }

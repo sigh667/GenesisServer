@@ -7,9 +7,9 @@ package com.mokylin.bleach.gamedb.orm;
  */
 public interface IServerRelatedEntity {
 
-	/**
-	 * 所属的Server的ID
-	 * @return
-	 */
-	int serverId();
+    /**
+     * 所属的Server的ID
+     * @return
+     */
+    int serverId();
 }

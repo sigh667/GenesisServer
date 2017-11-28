@@ -1,11 +1,5 @@
 package com.mokylin.bleach.gameserver.human;
 
-import java.sql.Timestamp;
-import java.util.ArrayList;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.google.protobuf.GeneratedMessage;
 
 import com.mokylin.bleach.common.core.GlobalData;
@@ -46,21 +40,27 @@ import com.mokylin.bleach.protobuf.HumanMessage.GCHumanDetailInfo;
 import com.mokylin.bleach.protobuf.HumanMessage.GCHumanDetailInfo.Builder;
 import com.mokylin.bleach.protobuf.HumanMessage.GCHumanLevelUp;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.sql.Timestamp;
+import java.util.ArrayList;
+
 /**
  * 角色
  * @author baoliang.shen
  *
  */
 public class Human extends ObjectInSqlImpl<Long, HumanEntity> implements MsgArgs, IPropNotifier {
-    private static final Logger log = LoggerFactory.getLogger(Human.class);
-
     /** 玩家的最低等级 */
     public static final int MIN_LEVEL = 1;
-
+    private static final Logger log = LoggerFactory.getLogger(Human.class);
+    /**玩家时间轴*/
+    public final TimeAxis<Human> timeAxis = new TimeAxis<Human>(Globals.getTimeService(), this);
     private final ServerGlobals sGlobals;
-
     private final Player player;
-
+    /** 登陆时间 */
+    private final Timestamp loginTime;
     /**角色ID*/
     private Long id;
     /**渠道*/
@@ -75,16 +75,10 @@ public class Human extends ObjectInSqlImpl<Long, HumanEntity> implements MsgArgs
     private String name;
     /**创建时间*/
     private Timestamp createTime;
-    /** 登陆时间 */
-    private final Timestamp loginTime;
     /** 上次humanEntity保存时间，初始为登陆时间 */
     private long lastToEntityTime;
     /** 总在线时长 */
     private long totalOnlineTime;
-
-    /**玩家时间轴*/
-    public final TimeAxis<Human> timeAxis = new TimeAxis<Human>(Globals.getTimeService(), this);
-
     /** 属性容器 */
     private HumanPropContainer propContaniner = new HumanPropContainer();
 
@@ -136,21 +130,6 @@ public class Human extends ObjectInSqlImpl<Long, HumanEntity> implements MsgArgs
     }
 
     /**
-     * 新创建的角色才调用此方法
-     */
-    public void initAfterNewCreate() {
-        //初始化策划指定的数据
-        propContaniner.set(HumanPropId.LEVEL, Human.MIN_LEVEL);
-        heroManager.giveInitialHeros();
-        dailyRewardManager.giveHeroWhenNewCreateIfNecessary();
-        this.funcManager.initWhenNewCreateHuman();
-        this.shopManager.initWhenNewCreateHuman();
-        //初始化体力相关数据
-        this.energyManager.initWhenNewCreateHuman();
-
-    }
-
-    /**
      * 加载已有角色时，使用的构造函数
      * @param humanData
      * @param dataUpdater
@@ -172,6 +151,21 @@ public class Human extends ObjectInSqlImpl<Long, HumanEntity> implements MsgArgs
         heroManager.loadFromEntity(humanData.heroEntityList);
         shopManager.loadFromEntity(humanData.shopEntityList);
         funcManager.loadFromEntities(humanData.functionEntityList);
+    }
+
+    /**
+     * 新创建的角色才调用此方法
+     */
+    public void initAfterNewCreate() {
+        //初始化策划指定的数据
+        propContaniner.set(HumanPropId.LEVEL, Human.MIN_LEVEL);
+        heroManager.giveInitialHeros();
+        dailyRewardManager.giveHeroWhenNewCreateIfNecessary();
+        this.funcManager.initWhenNewCreateHuman();
+        this.shopManager.initWhenNewCreateHuman();
+        //初始化体力相关数据
+        this.energyManager.initWhenNewCreateHuman();
+
     }
 
     /**

@@ -9,14 +9,14 @@ import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
 
 public class ToPlayerMessageFunc implements IServerMsgFunc<ToPlayerMessage, MsgArgs, MsgArgs> {
 
-	@Override
-	public void handle(IRemote remote, ToPlayerMessage msg, MsgArgs arg1, MsgArgs arg2) {
-		AgentClientSessions.Inst.sendToClientByAgentSessionId(msg.agentSessionId, msg.msg);
-	}
+    @Override
+    public void handle(IRemote remote, ToPlayerMessage msg, MsgArgs arg1, MsgArgs arg2) {
+        AgentClientSessions.Inst.sendToClientByAgentSessionId(msg.agentSessionId, msg.msg);
+    }
 
-	@Override
-	public MessageTarget getTarget() {
-		return MessageTarget.ISC_ACTOR;
-	}
+    @Override
+    public MessageTarget getTarget() {
+        return MessageTarget.ISC_ACTOR;
+    }
 
 }

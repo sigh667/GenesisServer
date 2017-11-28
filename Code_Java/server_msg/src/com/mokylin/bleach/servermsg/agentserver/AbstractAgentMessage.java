@@ -5,9 +5,9 @@ import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
 
 public abstract class AbstractAgentMessage implements IMessage {
 
-	@Override
-	public MessageTarget getTarget() {
-		return MessageTarget.ISC_ACTOR;
-	}
+    @Override
+    public MessageTarget getTarget() {
+        return MessageTarget.ISC_ACTOR;
+    }
 
 }

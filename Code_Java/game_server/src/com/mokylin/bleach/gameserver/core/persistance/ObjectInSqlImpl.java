@@ -1,12 +1,12 @@
 package com.mokylin.bleach.gameserver.core.persistance;
 
-import static com.google.common.base.Preconditions.checkNotNull;
-
-import java.io.Serializable;
-
 import com.mokylin.bleach.gamedb.orm.EntityWithRedisKey;
 import com.mokylin.bleach.gamedb.persistance.IObjectInSql;
 import com.mokylin.bleach.gamedb.persistance.PersistanceWrapper;
+
+import java.io.Serializable;
+
+import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
  * GameServer中的需要持久化的类的基类<p>
@@ -18,36 +18,39 @@ import com.mokylin.bleach.gamedb.persistance.PersistanceWrapper;
  * @param <IdType>
  * @param <T>
  */
-public abstract class ObjectInSqlImpl<IdType extends Serializable, T extends EntityWithRedisKey<?>> implements IObjectInSql<IdType, T> {
-	
-	private final PersistanceWrapper persistanceWrapper;
-	
-	private final IDataUpdater dataUpdater; 
-	
-	public ObjectInSqlImpl(IDataUpdater dataUpdater) {
-		this.dataUpdater = checkNotNull(dataUpdater);
-		this.persistanceWrapper = new PersistanceWrapper(this);
-	}
-	public PersistanceWrapper getPersistanceWrapper() {
-		return persistanceWrapper;
-	}
-	
-	/**
-	 * 设置当前对象为已修改状态
-	 */
-	@Override
-	public void setModified() {
-		dataUpdater.addUpdate(persistanceWrapper);
-	}
+public abstract class ObjectInSqlImpl<IdType extends Serializable, T extends EntityWithRedisKey<?>>
+        implements IObjectInSql<IdType, T> {
 
-	/**
-	 * 被删除时调用
-	 */
-	@Override
-	public void onDelete() {
-		dataUpdater.addDelete(persistanceWrapper);
-	}
-	public IDataUpdater getDataUpdater() {
-		return dataUpdater;
-	}
+    private final PersistanceWrapper persistanceWrapper;
+
+    private final IDataUpdater dataUpdater;
+
+    public ObjectInSqlImpl(IDataUpdater dataUpdater) {
+        this.dataUpdater = checkNotNull(dataUpdater);
+        this.persistanceWrapper = new PersistanceWrapper(this);
+    }
+
+    public PersistanceWrapper getPersistanceWrapper() {
+        return persistanceWrapper;
+    }
+
+    /**
+     * 设置当前对象为已修改状态
+     */
+    @Override
+    public void setModified() {
+        dataUpdater.addUpdate(persistanceWrapper);
+    }
+
+    /**
+     * 被删除时调用
+     */
+    @Override
+    public void onDelete() {
+        dataUpdater.addDelete(persistanceWrapper);
+    }
+
+    public IDataUpdater getDataUpdater() {
+        return dataUpdater;
+    }
 }

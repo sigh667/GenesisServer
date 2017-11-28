@@ -7,12 +7,12 @@ package com.mokylin.bleach.common.prop;
  */
 public interface IProp {
 
-	/**
-	 * 获取属性类型
-	 * @return
-	 */
-	PropType getPropType();
-	
-	
-	//TODO 记得检查所有子类的枚举名字不能重复
+    /**
+     * 获取属性类型
+     * @return
+     */
+    PropType getPropType();
+
+
+    //TODO 记得检查所有子类的枚举名字不能重复
 }

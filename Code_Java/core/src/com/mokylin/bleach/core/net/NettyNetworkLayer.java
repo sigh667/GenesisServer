@@ -17,62 +17,61 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  */
 public class NettyNetworkLayer {
 
-	private final Network net;
-//	private final INettyMessageHandler process;
-//	private final IChannelListener rs;
-	public static volatile ServerBootstrap server;
+    //	private final INettyMessageHandler process;
+    //	private final IChannelListener rs;
+    public static volatile ServerBootstrap server;
+    private final Network net;
 
-	private NettyNetworkLayer(Network net) {
-		this.net = net;
-//		this.process = mp;
-//		this.rs = new ChannelListenerSimpleImpl();
-	}
+    private NettyNetworkLayer(Network net) {
+        this.net = net;
+        //		this.process = mp;
+        //		this.rs = new ChannelListenerSimpleImpl();
+    }
 
-//	private NettyNetworkLayer(Network net, INettyMessageHandler mp, IChannelListener rs) {
-//		this.net = net;
-////		this.process = mp;
-////		this.rs = rs;
-//	}
+    //	private NettyNetworkLayer(Network net, INettyMessageHandler mp, IChannelListener rs) {
+    //		this.net = net;
+    ////		this.process = mp;
+    ////		this.rs = rs;
+    //	}
 
-	public void start(ChannelHandler childHandler) throws Exception {
-		server = new ServerBootstrap();
+    public static NettyNetworkLayer configNet(String host, int port) {
+        return new NettyNetworkLayer(new Network(host, port));
+    }
 
-		server.group(new NioEventLoopGroup(), new NioEventLoopGroup())
-		.channel(NioServerSocketChannel.class)
-		.childHandler(childHandler)
-		.option(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT)
-		.option(ChannelOption.TCP_NODELAY, true);
+    public void start(ChannelHandler childHandler) throws Exception {
+        server = new ServerBootstrap();
 
-		if(net.host == null) {
-			ChannelFuture future = server.bind(net.port).sync();
-			future.await();
-		}else{
-			InetSocketAddress address = new InetSocketAddress(net.host, net.port);
-			ChannelFuture future = server.bind(address).sync();
-			future.await();
-		}
-	}
+        server.group(new NioEventLoopGroup(), new NioEventLoopGroup())
+                .channel(NioServerSocketChannel.class).childHandler(childHandler)
+                .option(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT)
+                .option(ChannelOption.TCP_NODELAY, true);
 
-	public static NettyNetworkLayer configNet(String host, int port) {
-		return new NettyNetworkLayer(new Network(host, port));
-	}
+        if (net.host == null) {
+            ChannelFuture future = server.bind(net.port).sync();
+            future.await();
+        } else {
+            InetSocketAddress address = new InetSocketAddress(net.host, net.port);
+            ChannelFuture future = server.bind(address).sync();
+            future.await();
+        }
+    }
 
-	public static class Network {
+    public static class Network {
 
-		private final String host;
-		private final int port;
+        private final String host;
+        private final int port;
 
-		private Network(String host, int port) {
-			this.host = host;
-			this.port = port;
-		}
+        private Network(String host, int port) {
+            this.host = host;
+            this.port = port;
+        }
 
-//		public NettyNetworkLayer addMessageProcess(INettyMessageHandler mp, IChannelListener rs) {
-//			return new NettyNetworkLayer(this, mp, rs);
-//		}
-//
-//		public NettyNetworkLayer addMessageProcess(INettyMessageHandler mp) {
-//			return new NettyNetworkLayer(this, mp);
-//		}
-	}
+        //		public NettyNetworkLayer addMessageProcess(INettyMessageHandler mp, IChannelListener rs) {
+        //			return new NettyNetworkLayer(this, mp, rs);
+        //		}
+        //
+        //		public NettyNetworkLayer addMessageProcess(INettyMessageHandler mp) {
+        //			return new NettyNetworkLayer(this, mp);
+        //		}
+    }
 }

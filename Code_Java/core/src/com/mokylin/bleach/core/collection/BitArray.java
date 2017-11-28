@@ -12,18 +12,26 @@ import java.util.Arrays;
 
 public class BitArray {
 
+    public static final int BITS_PER_UNIT = 8;
+    private static final byte[][] NYBBLE = {{(byte) '0', (byte) '0', (byte) '0', (byte) '0'},
+            {(byte) '0', (byte) '0', (byte) '0', (byte) '1'},
+            {(byte) '0', (byte) '0', (byte) '1', (byte) '0'},
+            {(byte) '0', (byte) '0', (byte) '1', (byte) '1'},
+            {(byte) '0', (byte) '1', (byte) '0', (byte) '0'},
+            {(byte) '0', (byte) '1', (byte) '0', (byte) '1'},
+            {(byte) '0', (byte) '1', (byte) '1', (byte) '0'},
+            {(byte) '0', (byte) '1', (byte) '1', (byte) '1'},
+            {(byte) '1', (byte) '0', (byte) '0', (byte) '0'},
+            {(byte) '1', (byte) '0', (byte) '0', (byte) '1'},
+            {(byte) '1', (byte) '0', (byte) '1', (byte) '0'},
+            {(byte) '1', (byte) '0', (byte) '1', (byte) '1'},
+            {(byte) '1', (byte) '1', (byte) '0', (byte) '0'},
+            {(byte) '1', (byte) '1', (byte) '0', (byte) '1'},
+            {(byte) '1', (byte) '1', (byte) '1', (byte) '0'},
+            {(byte) '1', (byte) '1', (byte) '1', (byte) '1'}};
+    private static final int BYTES_PER_LINE = 8;
     private byte[] repn;
     private int length;
-
-    public static final int BITS_PER_UNIT = 8;
-
-    private static int subscript(int idx) {
-        return idx / BITS_PER_UNIT;
-    }
-
-    private static int position(int idx) { // bits big-endian in each unit
-        return 1 << (BITS_PER_UNIT - 1 - (idx % BITS_PER_UNIT));
-    }
 
     /**
      * Creates a BitArray of the specified size, initialized to zeros.
@@ -35,7 +43,7 @@ public class BitArray {
 
         this.length = length;
 
-        repn = new byte[(length + BITS_PER_UNIT - 1)/BITS_PER_UNIT];
+        repn = new byte[(length + BITS_PER_UNIT - 1) / BITS_PER_UNIT];
     }
 
 
@@ -52,14 +60,14 @@ public class BitArray {
             throw new IllegalArgumentException("Negative length for BitArray");
         }
         if (a.length * BITS_PER_UNIT < length) {
-            throw new IllegalArgumentException("Byte array too short to represent " +
-                                               "bit array of given length");
+            throw new IllegalArgumentException(
+                    "Byte array too short to represent " + "bit array of given length");
         }
 
         this.length = length;
 
-        int repLength = ((length + BITS_PER_UNIT - 1)/BITS_PER_UNIT);
-        int unusedBits = repLength*BITS_PER_UNIT - length;
+        int repLength = ((length + BITS_PER_UNIT - 1) / BITS_PER_UNIT);
+        int unusedBits = repLength * BITS_PER_UNIT - length;
         byte bitMask = (byte) (0xFF << unusedBits);
 
         /*
@@ -80,9 +88,9 @@ public class BitArray {
      */
     public BitArray(boolean[] bits) {
         length = bits.length;
-        repn = new byte[(length + 7)/8];
+        repn = new byte[(length + 7) / 8];
 
-        for (int i=0; i < length; i++) {
+        for (int i = 0; i < length; i++) {
             set(i, bits[i]);
         }
     }
@@ -94,6 +102,14 @@ public class BitArray {
     private BitArray(BitArray ba) {
         length = ba.length;
         repn = ba.repn.clone();
+    }
+
+    private static int subscript(int idx) {
+        return idx / BITS_PER_UNIT;
+    }
+
+    private static int position(int idx) { // bits big-endian in each unit
+        return 1 << (BITS_PER_UNIT - 1 - (idx % BITS_PER_UNIT));
     }
 
     /**
@@ -110,8 +126,7 @@ public class BitArray {
     /**
      *  Sets the indexed bit in this BitArray.
      */
-    public void set(int index, boolean value)
-    throws ArrayIndexOutOfBoundsException {
+    public void set(int index, boolean value) throws ArrayIndexOutOfBoundsException {
         if (index < 0 || index >= length) {
             throw new ArrayIndexOutOfBoundsException(Integer.toString(index));
         }
@@ -130,11 +145,11 @@ public class BitArray {
      * @return
      */
     public int size() {
-    	return length2Size(this.length);
+        return length2Size(this.length);
     }
-    
+
     int length2Size(int length) {
-    	return ((length + BITS_PER_UNIT - 1)/BITS_PER_UNIT);
+        return ((length + BITS_PER_UNIT - 1) / BITS_PER_UNIT);
     }
 
     /**
@@ -158,15 +173,23 @@ public class BitArray {
     }
 
     public boolean equals(Object obj) {
-        if (obj == this) return true;
-        if (obj == null || !(obj instanceof BitArray)) return false;
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || !(obj instanceof BitArray)) {
+            return false;
+        }
 
         BitArray ba = (BitArray) obj;
 
-        if (ba.length != length) return false;
+        if (ba.length != length) {
+            return false;
+        }
 
         for (int i = 0; i < repn.length; i += 1) {
-            if (repn[i] != ba.repn[i]) return false;
+            if (repn[i] != ba.repn[i]) {
+                return false;
+            }
         }
         return true;
     }
@@ -177,7 +200,7 @@ public class BitArray {
     public boolean[] toBooleanArray() {
         boolean[] bits = new boolean[length];
 
-        for (int i=0; i < length; i++) {
+        for (int i = 0; i < length; i++) {
             bits[i] = get(i);
         }
         return bits;
@@ -186,43 +209,21 @@ public class BitArray {
     /**
      * Returns a hash code value for this bit array.
      *
-     * @return  a hash code value for this bit array.
+     * @return a hash code value for this bit array.
      */
     public int hashCode() {
         int hashCode = 0;
 
-        for (int i = 0; i < repn.length; i++)
-            hashCode = 31*hashCode + repn[i];
+        for (int i = 0; i < repn.length; i++) {
+            hashCode = 31 * hashCode + repn[i];
+        }
 
         return hashCode ^ length;
     }
 
-
     public Object clone() {
         return new BitArray(this);
     }
-
-
-    private static final byte[][] NYBBLE = {
-        { (byte)'0',(byte)'0',(byte)'0',(byte)'0'},
-        { (byte)'0',(byte)'0',(byte)'0',(byte)'1'},
-        { (byte)'0',(byte)'0',(byte)'1',(byte)'0'},
-        { (byte)'0',(byte)'0',(byte)'1',(byte)'1'},
-        { (byte)'0',(byte)'1',(byte)'0',(byte)'0'},
-        { (byte)'0',(byte)'1',(byte)'0',(byte)'1'},
-        { (byte)'0',(byte)'1',(byte)'1',(byte)'0'},
-        { (byte)'0',(byte)'1',(byte)'1',(byte)'1'},
-        { (byte)'1',(byte)'0',(byte)'0',(byte)'0'},
-        { (byte)'1',(byte)'0',(byte)'0',(byte)'1'},
-        { (byte)'1',(byte)'0',(byte)'1',(byte)'0'},
-        { (byte)'1',(byte)'0',(byte)'1',(byte)'1'},
-        { (byte)'1',(byte)'1',(byte)'0',(byte)'0'},
-        { (byte)'1',(byte)'1',(byte)'0',(byte)'1'},
-        { (byte)'1',(byte)'1',(byte)'1',(byte)'0'},
-        { (byte)'1',(byte)'1',(byte)'1',(byte)'1'}
-    };
-
-    private static final int BYTES_PER_LINE = 8;
 
     /**
      *  Returns a string representation of this BitArray.
@@ -251,9 +252,10 @@ public class BitArray {
     }
 
     public BitArray truncate() {
-        for (int i=length-1; i>=0; i--) {
+        for (int i = length - 1; i >= 0; i--) {
             if (get(i)) {
-                return new BitArray(i+1, Arrays.copyOf(repn, (i + BITS_PER_UNIT)/BITS_PER_UNIT));
+                return new BitArray(i + 1,
+                        Arrays.copyOf(repn, (i + BITS_PER_UNIT) / BITS_PER_UNIT));
             }
         }
         return new BitArray(1);

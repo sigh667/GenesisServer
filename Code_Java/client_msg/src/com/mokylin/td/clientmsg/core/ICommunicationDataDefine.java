@@ -8,6 +8,7 @@ import io.netty.buffer.ByteBuf;
 
 public interface ICommunicationDataDefine {
 
-	public ICommunicationDataBase getCommunicationData(ByteBuf __bytes, int __messageID)
-			throws InstantiationException, IllegalAccessException, UnsupportedEncodingException, NotSupportedException;
+    public ICommunicationDataBase getCommunicationData(ByteBuf __bytes, int __messageID)
+            throws InstantiationException, IllegalAccessException, UnsupportedEncodingException,
+            NotSupportedException;
 }

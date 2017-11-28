@@ -9,24 +9,24 @@ import com.mokylin.bleach.common.prop.battleprop.HeroBattlePropId;
  */
 public class PEIdentifier {
 
-	private final HeroBattlePropId id;
-	private final PropEffectType effectType;
+    private final HeroBattlePropId id;
+    private final PropEffectType effectType;
 
-	/**
-	 * 不能再本包外面创建本对象
-	 * @param id
-	 * @param effectType
-	 */
-	PEIdentifier(HeroBattlePropId id, PropEffectType effectType) {
-		this.id = id;
-		this.effectType = effectType;
-	}
+    /**
+     * 不能再本包外面创建本对象
+     * @param id
+     * @param effectType
+     */
+    PEIdentifier(HeroBattlePropId id, PropEffectType effectType) {
+        this.id = id;
+        this.effectType = effectType;
+    }
 
-	public HeroBattlePropId getId() {
-		return id;
-	}
+    public HeroBattlePropId getId() {
+        return id;
+    }
 
-	public PropEffectType getEffectType() {
-		return effectType;
-	}
+    public PropEffectType getEffectType() {
+        return effectType;
+    }
 }

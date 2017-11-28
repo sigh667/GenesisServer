@@ -9,9 +9,9 @@ import com.mokylin.bleach.core.redis.op.actiononconnectfail.IActionOnCannotConne
  */
 public class ActionOnCannotConnectRedis implements IActionOnCannotConnectRedis {
 
-	@Override
-	public void action() {
-		// 处理由于Redis连不上导致的停服，注意本方法在Redis线程中执行
-	}
+    @Override
+    public void action() {
+        // 处理由于Redis连不上导致的停服，注意本方法在Redis线程中执行
+    }
 
 }

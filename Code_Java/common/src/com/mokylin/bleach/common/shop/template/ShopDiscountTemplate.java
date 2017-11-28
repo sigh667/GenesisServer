@@ -11,9 +11,9 @@ import com.mokylin.bleach.core.template.exception.TemplateConfigException;
 @ExcelRowBinding
 public class ShopDiscountTemplate extends ShopDiscountTemplateVO {
 
-	@Override
-	public void check() throws TemplateConfigException {
-		
-	}
+    @Override
+    public void check() throws TemplateConfigException {
+
+    }
 
 }

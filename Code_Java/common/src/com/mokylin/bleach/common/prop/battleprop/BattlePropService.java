@@ -7,9 +7,9 @@ import com.mokylin.bleach.common.prop.battleprop.propeffect.PEIdFactory;
  * @author yaguang.xiao
  *
  */
-public class BattlePropService  {
-	public void init() {
-		PEIdFactory.init();
-	}
+public class BattlePropService {
+    public void init() {
+        PEIdFactory.init();
+    }
 
 }

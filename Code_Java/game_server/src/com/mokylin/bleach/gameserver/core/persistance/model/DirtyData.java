@@ -9,19 +9,22 @@ import com.mokylin.bleach.gamedb.redis.DirtyDataInfo;
  *
  */
 public class DirtyData {
-	private DirtyDataInfo dirtyDataInfo;
-	private EntityWithRedisKey<?> entity;
+    private DirtyDataInfo dirtyDataInfo;
+    private EntityWithRedisKey<?> entity;
 
-	public DirtyDataInfo getDirtyDataInfo() {
-		return dirtyDataInfo;
-	}
-	public void setDirtyDataInfo(DirtyDataInfo dirtyDataInfo) {
-		this.dirtyDataInfo = dirtyDataInfo;
-	}
-	public EntityWithRedisKey<?> getEntity() {
-		return entity;
-	}
-	public void setEntity(EntityWithRedisKey<?> entity) {
-		this.entity = entity;
-	}
+    public DirtyDataInfo getDirtyDataInfo() {
+        return dirtyDataInfo;
+    }
+
+    public void setDirtyDataInfo(DirtyDataInfo dirtyDataInfo) {
+        this.dirtyDataInfo = dirtyDataInfo;
+    }
+
+    public EntityWithRedisKey<?> getEntity() {
+        return entity;
+    }
+
+    public void setEntity(EntityWithRedisKey<?> entity) {
+        this.entity = entity;
+    }
 }

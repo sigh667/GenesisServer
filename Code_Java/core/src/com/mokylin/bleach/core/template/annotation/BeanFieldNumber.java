@@ -7,11 +7,11 @@ import java.lang.annotation.Target;
 
 /**
  * 注解类属性在类中的编号
- * 
- * 
+ *
+ *
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.FIELD })
+@Target({ElementType.FIELD})
 public @interface BeanFieldNumber {
-	int number();
+    int number();
 }

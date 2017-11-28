@@ -1,5 +1,8 @@
 package com.mokylin.bleach.simulator;
 
+import com.mokylin.bleach.robot.core.net.codec.ServerToRobotMessageDecoder;
+import com.mokylin.td.network2client.core.codec.ServerToClientMessageEncoder;
+
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -9,16 +12,13 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
-import com.mokylin.bleach.robot.core.net.codec.ServerToRobotMessageDecoder;
-import com.mokylin.td.network2client.core.codec.ServerToClientMessageEncoder;
-
 public class ClientSimulator {
 
-	public static void main(String[] s) throws Exception{
-		String host = "127.0.0.1";
-		int port = 12306;
-		EventLoopGroup workerGroup = new NioEventLoopGroup();
-		try {
+    public static void main(String[] s) throws Exception {
+        String host = "127.0.0.1";
+        int port = 12306;
+        EventLoopGroup workerGroup = new NioEventLoopGroup();
+        try {
             Bootstrap b = new Bootstrap();
             b.group(workerGroup);
             b.channel(NioSocketChannel.class);
@@ -26,7 +26,8 @@ public class ClientSimulator {
             b.handler(new ChannelInitializer<SocketChannel>() {
                 @Override
                 public void initChannel(SocketChannel ch) throws Exception {
-                    ch.pipeline().addLast(new ServerToClientMessageEncoder()).addLast(new ServerToRobotMessageDecoder()).addLast(new Handler());
+                    ch.pipeline().addLast(new ServerToClientMessageEncoder())
+                            .addLast(new ServerToRobotMessageDecoder()).addLast(new Handler());
                 }
             });
 
@@ -38,5 +39,5 @@ public class ClientSimulator {
         } finally {
             workerGroup.shutdownGracefully();
         }
-	}
+    }
 }

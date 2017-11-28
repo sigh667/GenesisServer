@@ -1,13 +1,13 @@
 package com.mokylin.bleach.core.redis.op;
 
-import redis.clients.jedis.Client;
-import redis.clients.jedis.JedisPool;
-import redis.clients.util.SafeEncoder;
-
 import com.mokylin.bleach.core.redis.IRedisResponse;
 import com.mokylin.bleach.core.redis.op.actiononconnectfail.IActionOnCannotConnectRedis;
 import com.mokylin.bleach.core.serializer.ISerializer;
 import com.mokylin.bleach.core.serializer.ISerializerPool;
+
+import redis.clients.jedis.Client;
+import redis.clients.jedis.JedisPool;
+import redis.clients.util.SafeEncoder;
 
 /**
  * Redis中单值操作的实现。

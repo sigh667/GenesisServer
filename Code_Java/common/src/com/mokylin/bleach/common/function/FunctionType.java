@@ -1,8 +1,8 @@
 package com.mokylin.bleach.common.function;
 
-import java.util.List;
-
 import com.mokylin.bleach.core.enums.ArrayIndexedEnum;
+
+import java.util.List;
 
 /**
  * 功能枚举
@@ -11,19 +11,18 @@ import com.mokylin.bleach.core.enums.ArrayIndexedEnum;
  */
 public enum FunctionType implements ArrayIndexedEnum<FunctionType> {
 
-	GENERAL_SHOP,
-	MYSTERIOUS_SHOP,
-	;
-	
-	/** 按索引顺序存放的枚举数组 */
-	private static final List<FunctionType> indexes = ArrayIndexedEnum.EnumUtil.toIndexes(FunctionType.values());
+    GENERAL_SHOP, MYSTERIOUS_SHOP,;
 
-	public static FunctionType valueOf(int index) {
-		return ArrayIndexedEnum.EnumUtil.valueOf(indexes, index);
-	}
+    /** 按索引顺序存放的枚举数组 */
+    private static final List<FunctionType> indexes =
+            ArrayIndexedEnum.EnumUtil.toIndexes(FunctionType.values());
 
-	@Override
-	public int getIndex() {
-		return this.ordinal();
-	}
+    public static FunctionType valueOf(int index) {
+        return ArrayIndexedEnum.EnumUtil.valueOf(indexes, index);
+    }
+
+    @Override
+    public int getIndex() {
+        return this.ordinal();
+    }
 }

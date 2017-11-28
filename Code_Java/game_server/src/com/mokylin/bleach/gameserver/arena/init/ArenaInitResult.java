@@ -1,15 +1,16 @@
 package com.mokylin.bleach.gameserver.arena.init;
 
-import static com.google.common.base.Preconditions.checkNotNull;
+import com.mokylin.bleach.gamedb.orm.entity.ArenaSnapEntity;
+
 import java.util.Collection;
 
-import com.mokylin.bleach.gamedb.orm.entity.ArenaSnapEntity;
+import static com.google.common.base.Preconditions.checkNotNull;
 
 public class ArenaInitResult {
 
-	public final Collection<ArenaSnapEntity> list;
-	
-	public ArenaInitResult(Collection<ArenaSnapEntity> list){
-		this.list = checkNotNull(list);
-	}
+    public final Collection<ArenaSnapEntity> list;
+
+    public ArenaInitResult(Collection<ArenaSnapEntity> list) {
+        this.list = checkNotNull(list);
+    }
 }

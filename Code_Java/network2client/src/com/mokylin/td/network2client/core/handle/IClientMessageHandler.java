@@ -4,5 +4,5 @@ import com.mokylin.td.clientmsg.core.ICommunicationDataBase;
 import com.mokylin.td.network2client.core.session.IClientSession;
 
 public interface IClientMessageHandler {
-	void handle(IClientSession session, ICommunicationDataBase msg);
+    void handle(IClientSession session, ICommunicationDataBase msg);
 }

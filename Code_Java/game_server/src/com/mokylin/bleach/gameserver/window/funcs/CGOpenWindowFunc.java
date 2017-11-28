@@ -9,23 +9,22 @@ import com.mokylin.bleach.protobuf.WindowMessage.CGOpenWindow;
 
 /**
  * 处理打开窗口的消息对象
- * 
+ *
  * 该函数对象在PlayerActor中执行
- * 
+ *
  * @author yaguang.xiao
  *
  */
 public class CGOpenWindowFunc extends AbstractClientMsgFunc<CGOpenWindow, Human, ServerGlobals> {
 
-	@Override
-	public void handle(Player player, CGOpenWindow msg, Human human,
-			ServerGlobals sGlobals) {
-		Window window = Window.getByIndex(msg.getWindowTypeId());
-		if(window == null) {
-			human.notifyDataErrorAndDisconnect();
-		}
-		
-		human.getWindowManager().open(window);
-	}
+    @Override
+    public void handle(Player player, CGOpenWindow msg, Human human, ServerGlobals sGlobals) {
+        Window window = Window.getByIndex(msg.getWindowTypeId());
+        if (window == null) {
+            human.notifyDataErrorAndDisconnect();
+        }
+
+        human.getWindowManager().open(window);
+    }
 
 }

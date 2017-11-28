@@ -4,5 +4,5 @@ import com.mokylin.bleach.core.timeaxis.ITimeEventType;
 
 public enum TestTimeEventType implements ITimeEventType {
 
-	TEST;
+    TEST;
 }

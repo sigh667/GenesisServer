@@ -7,13 +7,6 @@ package com.mokylin.bleach.common.combat.enumeration;
  */
 public enum RangeSelectorType {
 
-	Single,
-	Row,
-	RowBoth,
-	RayCast,
-	RayCastBoth,
-	BattleField,
-	BattleFieldBoth,
-	BattleFieldBothWithoutSelf,
-	;
+    Single, Row, RowBoth, RayCast, RayCastBoth, BattleField, BattleFieldBoth,
+    BattleFieldBothWithoutSelf,;
 }

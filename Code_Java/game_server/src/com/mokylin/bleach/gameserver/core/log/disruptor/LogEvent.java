@@ -6,18 +6,18 @@ package com.mokylin.bleach.gameserver.core.log.disruptor;
  *
  */
 public class LogEvent {
-	/** 日志内容 */
-	private String logStr;
-	
-	public String getLogStr() {
-		return this.logStr;
-	}
-	
-	public void setLogStr(String logStr) {
-		this.logStr = logStr;
-	}
+    /** 日志内容 */
+    private String logStr;
 
-	public void clear() {
-		this.logStr = null;
-	}
+    public String getLogStr() {
+        return this.logStr;
+    }
+
+    public void setLogStr(String logStr) {
+        this.logStr = logStr;
+    }
+
+    public void clear() {
+        this.logStr = null;
+    }
 }

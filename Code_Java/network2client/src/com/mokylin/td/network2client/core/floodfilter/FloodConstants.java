@@ -6,14 +6,15 @@ package com.mokylin.td.network2client.core.floodfilter;
  *
  */
 public enum FloodConstants {
-	Inst;
+    Inst;
 
-	private boolean isOpenFloodFilter;
+    private boolean isOpenFloodFilter;
 
-	public boolean isOpenFloodFilter() {
-		return isOpenFloodFilter;
-	}
-	public void setOpenFloodFilter(boolean isOpenFloodFilter) {
-		this.isOpenFloodFilter = isOpenFloodFilter;
-	}
+    public boolean isOpenFloodFilter() {
+        return isOpenFloodFilter;
+    }
+
+    public void setOpenFloodFilter(boolean isOpenFloodFilter) {
+        this.isOpenFloodFilter = isOpenFloodFilter;
+    }
 }

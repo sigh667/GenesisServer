@@ -1,20 +1,5 @@
 package com.mokylin.bleach.remotelogserver;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadFactory;
-
-import org.apache.thrift.protocol.TBinaryProtocol;
-import org.apache.thrift.server.TServer;
-import org.apache.thrift.server.TThreadedSelectorServer;
-import org.apache.thrift.transport.TFramedTransport;
-import org.apache.thrift.transport.TNonblockingServerSocket;
-import org.apache.thrift.transport.TNonblockingServerTransport;
-import org.apache.thrift.transport.TTransportException;
-
-import scribe.thrift.scribe;
-import akka.actor.Props;
-
 import com.mokylin.bleach.core.akka.Akka;
 import com.mokylin.bleach.core.akka.config.AkkaConfig;
 import com.mokylin.bleach.core.config.ConfigBuilder;
@@ -26,17 +11,22 @@ import com.mokylin.bleach.core.isc.ServerType;
 import com.mokylin.bleach.core.isc.remote.DefaultRemoteFactory;
 import com.mokylin.bleach.remotelogserver.disruptor.LogManager;
 
+import org.apache.thrift.protocol.TBinaryProtocol;
+import org.apache.thrift.server.TServer;
+import org.apache.thrift.server.TThreadedSelectorServer;
+import org.apache.thrift.transport.TFramedTransport;
+import org.apache.thrift.transport.TNonblockingServerSocket;
+import org.apache.thrift.transport.TNonblockingServerTransport;
+import org.apache.thrift.transport.TTransportException;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadFactory;
+
+import akka.actor.Props;
+import scribe.thrift.scribe;
+
 public class Globals {
-
-    private static RemoteLogServerConfig config;
-    private static RemoteLogServerLogicConfig logicConfig;
-    private static ServerConfig serverConfig;
-
-    private static Akka akka = null;
-
-    private static ISCService iscService = null;
-
-    private static TServer server;
 
     private static final ExecutorService mainThread =
             Executors.newSingleThreadExecutor(new ThreadFactory() {
@@ -49,6 +39,12 @@ public class Globals {
                 }
 
             });
+    private static RemoteLogServerConfig config;
+    private static RemoteLogServerLogicConfig logicConfig;
+    private static ServerConfig serverConfig;
+    private static Akka akka = null;
+    private static ISCService iscService = null;
+    private static TServer server;
 
     public static void init() throws TTransportException {
         buildConfig();

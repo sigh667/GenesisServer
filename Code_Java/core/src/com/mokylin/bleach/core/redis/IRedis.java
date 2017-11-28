@@ -9,24 +9,24 @@ import com.mokylin.bleach.core.redis.op.IValueOp;
 
 public interface IRedis {
 
-	IValueOp getValueOp();
-	
-	IHashOp getHashOp();
-	
-	IListOp getListOp();
-	
-	ISetOp getSetOp();
-	
-	IPipelineOp pipeline();
-	
-	ITransactionOp multi();
-	
-	String getServerKey();
-	
-	/**
-	 * 检测当前Redis的连接是否正常。
-	 * 
-	 * @return
-	 */
-	boolean isConnected();
+    IValueOp getValueOp();
+
+    IHashOp getHashOp();
+
+    IListOp getListOp();
+
+    ISetOp getSetOp();
+
+    IPipelineOp pipeline();
+
+    ITransactionOp multi();
+
+    String getServerKey();
+
+    /**
+     * 检测当前Redis的连接是否正常。
+     *
+     * @return
+     */
+    boolean isConnected();
 }

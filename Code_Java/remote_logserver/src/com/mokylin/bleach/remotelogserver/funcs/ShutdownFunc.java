@@ -14,22 +14,21 @@ import com.mokylin.bleach.servermsg.remotelogserver.Shutdown;
  */
 public class ShutdownFunc implements IServerMsgFunc<Shutdown, MsgArgs, MsgArgs> {
 
-	@Override
-	public void handle(IRemote remote, Shutdown msg, MsgArgs arg1,
-			MsgArgs arg2) {
-		Globals.getMainthread().execute(new Runnable() {
+    @Override
+    public void handle(IRemote remote, Shutdown msg, MsgArgs arg1, MsgArgs arg2) {
+        Globals.getMainthread().execute(new Runnable() {
 
-			@Override
-			public void run() {
-				Globals.shutdown();
-			}
-			
-		});
-	}
+            @Override
+            public void run() {
+                Globals.shutdown();
+            }
 
-	@Override
-	public MessageTarget getTarget() {
-		return MessageTarget.ISC_ACTOR;
-	}
+        });
+    }
+
+    @Override
+    public MessageTarget getTarget() {
+        return MessageTarget.ISC_ACTOR;
+    }
 
 }

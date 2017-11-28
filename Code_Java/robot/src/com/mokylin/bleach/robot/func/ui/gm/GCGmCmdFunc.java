@@ -7,12 +7,12 @@ import com.mokylin.bleach.robot.human.Human;
 import com.mokylin.bleach.robot.robot.Robot;
 import com.mokylin.bleach.robot.ui.PanelFactory;
 
-public class GCGmCmdFunc extends HumanBaseMsgFunc<GCGmCmd>{
+public class GCGmCmdFunc extends HumanBaseMsgFunc<GCGmCmd> {
 
-	@Override
-	protected void handle(Robot robot, Human human, GCGmCmd msg) {
-		GMFrame frame = PanelFactory.getGMFrame(human);
-		frame.setVisible(true);
-		frame.handle(msg);
-	}
+    @Override
+    protected void handle(Robot robot, Human human, GCGmCmd msg) {
+        GMFrame frame = PanelFactory.getGMFrame(human);
+        frame.setVisible(true);
+        frame.handle(msg);
+    }
 }

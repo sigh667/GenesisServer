@@ -9,12 +9,12 @@ import com.mokylin.bleach.dataserver.globals.Globals;
  */
 public class DataServer {
 
-	public static void main(String[] args) {
-		try {
-			Globals.init();
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.exit(1);
-		}
-	}
+    public static void main(String[] args) {
+        try {
+            Globals.init();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+    }
 }

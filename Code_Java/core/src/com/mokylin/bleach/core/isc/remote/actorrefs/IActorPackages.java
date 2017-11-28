@@ -5,15 +5,15 @@ import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
 
 /**
  * 代表组装好的的ActorRef的接口。
- * 
+ *
  * @author pangchong
  *
  */
 public interface IActorPackages {
 
-	public void sendMessage(Object sendingMsg, MessageTarget target);
-	
-	public ServerType getServerType();
-	
-	public int getServerId();
+    public void sendMessage(Object sendingMsg, MessageTarget target);
+
+    public ServerType getServerType();
+
+    public int getServerId();
 }

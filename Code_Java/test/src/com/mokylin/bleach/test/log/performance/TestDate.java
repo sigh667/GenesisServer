@@ -5,11 +5,11 @@ import java.util.Date;
 
 public class TestDate {
 
-	public static void main(String[] args) {
-		Date date = new Date();
-		SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd HH:MM:ss");
-		String dateStr = dateFormat.format(date);
-		System.out.println(dateStr);
-	}
+    public static void main(String[] args) {
+        Date date = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd HH:MM:ss");
+        String dateStr = dateFormat.format(date);
+        System.out.println(dateStr);
+    }
 
 }

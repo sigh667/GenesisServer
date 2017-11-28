@@ -13,29 +13,34 @@ import com.mokylin.bleach.protobuf.PlayerMessage.LoginFailReason;
 
 /**
  * 处理加载角色错误的函数对象。<p>
- * 
+ *
  * 该函数对象在PlayerManagerActor中执行。
- * 
+ *
  * @author pangchong
  *
  */
-public class LoadHumanDataFailedFunc implements IServerMsgFunc<LoadHumanDataFailed, ServerGlobals, PlayerManagerArgs> {
+public class LoadHumanDataFailedFunc
+        implements IServerMsgFunc<LoadHumanDataFailed, ServerGlobals, PlayerManagerArgs> {
 
-	@Override
-	public void handle(IRemote remote, LoadHumanDataFailed msg, ServerGlobals sGlobals, PlayerManagerArgs playerManagerArgs) {
-		Player player = msg.player;
-		if(player.getStatus() != LoginStatus.Logouting){
-			player.setStatus(LoginStatus.LoadingHumanFailed);
-			player.sendMessage(GCLoginFail.newBuilder().setAccountId(player.getAccountId()).setChannel(player.getChannel()).setKey(player.getKey()).setFailReason(LoginFailReason.LOAD_ROLE_FAIL));
-			player.disconnect();
-		}else{
-			playerManagerArgs.onlinePlayerService.removePlayer(player.getChannel(), player.getAccountId());
-		}		
-	}
+    @Override
+    public void handle(IRemote remote, LoadHumanDataFailed msg, ServerGlobals sGlobals,
+            PlayerManagerArgs playerManagerArgs) {
+        Player player = msg.player;
+        if (player.getStatus() != LoginStatus.Logouting) {
+            player.setStatus(LoginStatus.LoadingHumanFailed);
+            player.sendMessage(GCLoginFail.newBuilder().setAccountId(player.getAccountId())
+                    .setChannel(player.getChannel()).setKey(player.getKey())
+                    .setFailReason(LoginFailReason.LOAD_ROLE_FAIL));
+            player.disconnect();
+        } else {
+            playerManagerArgs.onlinePlayerService
+                    .removePlayer(player.getChannel(), player.getAccountId());
+        }
+    }
 
-	@Override
-	public MessageTarget getTarget() {
-		return MessageTarget.PLAYER_MANAGER;
-	}
+    @Override
+    public MessageTarget getTarget() {
+        return MessageTarget.PLAYER_MANAGER;
+    }
 
 }

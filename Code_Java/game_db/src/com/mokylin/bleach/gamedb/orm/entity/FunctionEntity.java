@@ -1,5 +1,9 @@
 package com.mokylin.bleach.gamedb.orm.entity;
 
+import com.mokylin.bleach.gamedb.orm.EntityWithRedisKey;
+import com.mokylin.bleach.gamedb.orm.IHumanRelatedEntity;
+import com.mokylin.bleach.gamedb.redis.key.model.FunctionKey;
+
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
@@ -7,70 +11,66 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.mokylin.bleach.gamedb.orm.EntityWithRedisKey;
-import com.mokylin.bleach.gamedb.orm.IHumanRelatedEntity;
-import com.mokylin.bleach.gamedb.redis.key.model.FunctionKey;
-
 @Entity
 @Table(name = "t_function")
 public class FunctionEntity implements EntityWithRedisKey<FunctionKey>, IHumanRelatedEntity {
 
-	private static final long serialVersionUID = 1L;
-	
-	/** 主键Id */
-	private long id;
-	/** 玩家Id */
-	private long humanId;
-	/** 功能Id */
-	private int functionId;
-	/** 打开时间 */
-	private Timestamp openTime;
+    private static final long serialVersionUID = 1L;
 
-	@Override
-	public long humanId() {
-		return this.humanId;
-	}
+    /** 主键Id */
+    private long id;
+    /** 玩家Id */
+    private long humanId;
+    /** 功能Id */
+    private int functionId;
+    /** 打开时间 */
+    private Timestamp openTime;
 
-	@Override
-	public FunctionKey newRedisKey(Integer serverId) {
-		return new FunctionKey(serverId, humanId, functionId, id);
-	}
+    @Override
+    public long humanId() {
+        return this.humanId;
+    }
 
-	@Id
-	@Column
-	public long getId() {
-		return id;
-	}
+    @Override
+    public FunctionKey newRedisKey(Integer serverId) {
+        return new FunctionKey(serverId, humanId, functionId, id);
+    }
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    @Id
+    @Column
+    public long getId() {
+        return id;
+    }
 
-	@Column
-	public long getHumanId() {
-		return humanId;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public void setHumanId(long humanId) {
-		this.humanId = humanId;
-	}
+    @Column
+    public long getHumanId() {
+        return humanId;
+    }
 
-	@Column
-	public int getFunctionId() {
-		return functionId;
-	}
+    public void setHumanId(long humanId) {
+        this.humanId = humanId;
+    }
 
-	public void setFunctionId(int functionId) {
-		this.functionId = functionId;
-	}
+    @Column
+    public int getFunctionId() {
+        return functionId;
+    }
 
-	@Column
-	public Timestamp getOpenTime() {
-		return openTime;
-	}
+    public void setFunctionId(int functionId) {
+        this.functionId = functionId;
+    }
 
-	public void setOpenTime(Timestamp openTime) {
-		this.openTime = openTime;
-	}
+    @Column
+    public Timestamp getOpenTime() {
+        return openTime;
+    }
+
+    public void setOpenTime(Timestamp openTime) {
+        this.openTime = openTime;
+    }
 
 }

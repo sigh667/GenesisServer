@@ -4,5 +4,5 @@ import com.mokylin.bleach.core.isc.remote.IRemote;
 
 public interface IProcessLinker {
 
-	public void execute(IRemote sender, Object msg);
+    public void execute(IRemote sender, Object msg);
 }

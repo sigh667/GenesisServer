@@ -6,6 +6,6 @@ package com.mokylin.bleach.gameserver.hero.skill;
  *
  */
 public interface SkillConstants {
-	/**Hero拥有的辅助技能最大数量*/
-	public int SkillCount = 5;
+    /**Hero拥有的辅助技能最大数量*/
+    public int SkillCount = 5;
 }

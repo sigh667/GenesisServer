@@ -3,7 +3,7 @@ package com.mokylin.bleach.core.event;
 
 /**
  * 事件监听器
- * 
+ *
  * <P>
  * @author yaguang.xiao
  *
@@ -11,9 +11,9 @@ package com.mokylin.bleach.core.event;
  */
 public interface IEventListener<T> {
 
-	/**
-	 * 发生事件时调用该方法
-	 * @param event
-	 */
-	void onEventOccur(T event);
+    /**
+     * 发生事件时调用该方法
+     * @param event
+     */
+    void onEventOccur(T event);
 }

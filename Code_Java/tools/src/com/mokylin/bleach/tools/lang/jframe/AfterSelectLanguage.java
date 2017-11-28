@@ -9,9 +9,9 @@ import com.mokylin.bleach.tools.lang.Language;
  */
 public interface AfterSelectLanguage {
 
-	/**
-	 * 选择语言之后的操作
-	 * @param lan
-	 */
-	void action(Language lan);
+    /**
+     * 选择语言之后的操作
+     * @param lan
+     */
+    void action(Language lan);
 }

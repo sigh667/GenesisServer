@@ -1,5 +1,15 @@
 package com.mokylin.bleach.core.util;
 
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Font;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,17 +18,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Iterator;
-
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.HorizontalAlignment;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * 语言Excel操作的封装
@@ -29,19 +28,6 @@ import org.slf4j.LoggerFactory;
 public class ExcelOperation {
 
     private static final Logger logger = LoggerFactory.getLogger(ExcelOperation.class);
-
-    /**
-     * 加载所有表格操作
-     * @author yaguang.xiao
-     *
-     */
-    public interface LoadSheetsOperation {
-        /**
-         * 加载所有表格
-         * @param sheetIt
-         */
-        void load(Iterator<Sheet> sheetIt);
-    }
 
     /**
      * 加载指定excel文件
@@ -72,20 +58,6 @@ public class ExcelOperation {
                 }
             }
         }
-    }
-
-    /**
-     * 加载Excel行的操作
-     *
-     * @author yaguang.xiao
-     *
-     */
-    public interface LoadRowOperation {
-        /**
-         * 加载行
-         * @param row
-         */
-        void load(Row row);
     }
 
     /**
@@ -125,19 +97,6 @@ public class ExcelOperation {
                 }
             }
         }
-    }
-
-    /**
-     * 修改操作
-     * @author yaguang.xiao
-     *
-     */
-    public interface ModifyWorkbookOperation {
-        /**
-         * 创建Sheet
-         * @return
-         */
-        void modify(Workbook wb, CellStyle cellStyle);
     }
 
     /**
@@ -217,5 +176,45 @@ public class ExcelOperation {
                 }
             }
         }
+    }
+
+    /**
+     * 加载所有表格操作
+     * @author yaguang.xiao
+     *
+     */
+    public interface LoadSheetsOperation {
+        /**
+         * 加载所有表格
+         * @param sheetIt
+         */
+        void load(Iterator<Sheet> sheetIt);
+    }
+
+    /**
+     * 加载Excel行的操作
+     *
+     * @author yaguang.xiao
+     *
+     */
+    public interface LoadRowOperation {
+        /**
+         * 加载行
+         * @param row
+         */
+        void load(Row row);
+    }
+
+    /**
+     * 修改操作
+     * @author yaguang.xiao
+     *
+     */
+    public interface ModifyWorkbookOperation {
+        /**
+         * 创建Sheet
+         * @return
+         */
+        void modify(Workbook wb, CellStyle cellStyle);
     }
 }

@@ -2,23 +2,23 @@ package com.mokylin.bleach.core.config.model;
 
 public class RedisInfo {
 
-	private String host;
-	
-	private int port;
+    private String host;
 
-	public String getHost() {
-		return host;
-	}
+    private int port;
 
-	public void setHost(String host) {
-		this.host = host;
-	}
+    public String getHost() {
+        return host;
+    }
 
-	public int getPort() {
-		return port;
-	}
+    public void setHost(String host) {
+        this.host = host;
+    }
 
-	public void setPort(int port) {
-		this.port = port;
-	}
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
+    }
 }

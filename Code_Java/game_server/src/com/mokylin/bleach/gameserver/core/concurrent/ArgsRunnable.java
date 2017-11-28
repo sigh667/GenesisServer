@@ -2,5 +2,5 @@ package com.mokylin.bleach.gameserver.core.concurrent;
 
 public interface ArgsRunnable {
 
-	public void run(AsyncArgs args);
+    public void run(AsyncArgs args);
 }

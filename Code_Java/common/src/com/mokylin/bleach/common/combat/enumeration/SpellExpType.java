@@ -7,7 +7,7 @@ package com.mokylin.bleach.common.combat.enumeration;
  */
 public enum SpellExpType {
 
-	Attack,			//攻击类型结算公式
-	Heal,			//治愈类型结算公式
-	;
+    Attack,            //攻击类型结算公式
+    Heal,            //治愈类型结算公式
+    ;
 }

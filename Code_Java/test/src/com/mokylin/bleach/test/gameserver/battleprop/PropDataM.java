@@ -1,23 +1,23 @@
 package com.mokylin.bleach.test.gameserver.battleprop;
 
 public class PropDataM {
-	private int id;
-	private float value;
+    private int id;
+    private float value;
 
-	public int getId() {
-		return id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public float getValue() {
-		return value;
-	}
+    public float getValue() {
+        return value;
+    }
 
-	public void setValue(float value) {
-		this.value = value;
-	}
+    public void setValue(float value) {
+        this.value = value;
+    }
 
 }

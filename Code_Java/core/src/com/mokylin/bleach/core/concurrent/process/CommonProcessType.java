@@ -4,8 +4,9 @@ import static com.mokylin.bleach.core.concurrent.process.ProcessUnitHelper.creat
 import static com.mokylin.bleach.core.concurrent.process.ProcessUnitHelper.createSingleProcessUnit;
 
 public interface CommonProcessType {
-	
-	public ProcessUnit MAIN = createSingleProcessUnit("Game Server Main Process Unit");
-	
-	public ScheduledProcessUnit SCHEDULED = createScheduledProcessUnit("Scheduled Process Unit", Runtime.getRuntime().availableProcessors());
+
+    public ProcessUnit MAIN = createSingleProcessUnit("Game Server Main Process Unit");
+
+    public ScheduledProcessUnit SCHEDULED = createScheduledProcessUnit("Scheduled Process Unit",
+            Runtime.getRuntime().availableProcessors());
 }

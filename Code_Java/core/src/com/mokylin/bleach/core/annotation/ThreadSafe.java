@@ -8,14 +8,14 @@ import java.lang.annotation.Target;
 
 /**
  * 表示某种类型是线程安全的
- * 
+ *
  * @author yaguang.xiao
  *
  */
 
 @Documented
 @Retention(RetentionPolicy.SOURCE)
-@Target(value={ElementType.TYPE})
+@Target(value = {ElementType.TYPE})
 public @interface ThreadSafe {
 
 }

@@ -8,43 +8,44 @@ import com.mokylin.bleach.gamedb.redis.key.RedisKeyWithServerId;
 import com.mokylin.bleach.gamedb.redis.redisop.IEntityRedisOp;
 import com.mokylin.bleach.gamedb.redis.redisop.model.EntityMultiKeyRedisOp;
 
-public class FunctionKey extends RedisKeyWithServerId<Long, FunctionEntity> implements IMultiRedisKey<Long, FunctionEntity> {
+public class FunctionKey extends RedisKeyWithServerId<Long, FunctionEntity>
+        implements IMultiRedisKey<Long, FunctionEntity> {
 
-	/** 玩家Id */
-	private final long humanId;
-	/** 功能Id */
-	private final int functionId;
-	
-	public FunctionKey(Integer serverId, long humanId, int functionId, Long id) {
-		super(serverId, id);
-		this.humanId = humanId;
-		this.functionId = functionId;
-	}
+    /** 玩家Id */
+    private final long humanId;
+    /** 功能Id */
+    private final int functionId;
 
-	@Override
-	public String getKey() {
-		StringBuilder sb = new StringBuilder();
-		sb.append(this.getServerId());
-		sb.append(AbstractRedisKey.separator);
-		sb.append(RedisKeyType.Function.toString());
-		sb.append(AbstractRedisKey.separator);
-		sb.append(humanId);
-		return sb.toString();
-	}
+    public FunctionKey(Integer serverId, long humanId, int functionId, Long id) {
+        super(serverId, id);
+        this.humanId = humanId;
+        this.functionId = functionId;
+    }
 
-	@Override
-	public Class<FunctionEntity> getEntityType() {
-		return FunctionEntity.class;
-	}
+    @Override
+    public String getKey() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.getServerId());
+        sb.append(AbstractRedisKey.separator);
+        sb.append(RedisKeyType.Function.toString());
+        sb.append(AbstractRedisKey.separator);
+        sb.append(humanId);
+        return sb.toString();
+    }
 
-	@Override
-	public IEntityRedisOp getEntityRedisOp() {
-		return EntityMultiKeyRedisOp.INSTANCE;
-	}
+    @Override
+    public Class<FunctionEntity> getEntityType() {
+        return FunctionEntity.class;
+    }
 
-	@Override
-	public String getField() {
-		return String.valueOf(this.functionId);
-	}
+    @Override
+    public IEntityRedisOp getEntityRedisOp() {
+        return EntityMultiKeyRedisOp.INSTANCE;
+    }
+
+    @Override
+    public String getField() {
+        return String.valueOf(this.functionId);
+    }
 
 }

@@ -8,49 +8,50 @@ import com.mokylin.bleach.gamedb.redis.key.RedisKeyWithServerId;
 import com.mokylin.bleach.gamedb.redis.redisop.IEntityRedisOp;
 import com.mokylin.bleach.gamedb.redis.redisop.model.EntityMultiKeyRedisOp;
 
-public class ShopKey extends RedisKeyWithServerId<Long, ShopEntity> implements IMultiRedisKey<Long,ShopEntity> {
+public class ShopKey extends RedisKeyWithServerId<Long, ShopEntity>
+        implements IMultiRedisKey<Long, ShopEntity> {
 
-	/**所属角色ID*/
-	private final long humanId;
-	/** 商店类型 */
-	private final int shopType;
-	
-	/**
-	 * 
-	 * @param serverId	服务器Id
-	 * @param humanId	角色Id
-	 * @param id		商店Id
-	 */
-	public ShopKey(int serverId, long humanId, int shopType, long id) {
-		super(serverId, id);
-		this.humanId = humanId;
-		this.shopType = shopType;
-	}
+    /**所属角色ID*/
+    private final long humanId;
+    /** 商店类型 */
+    private final int shopType;
 
-	@Override
-	public String getKey() {
-		StringBuilder sb = new StringBuilder();
-		sb.append(this.getServerId());
-		sb.append(AbstractRedisKey.separator);
-		sb.append(RedisKeyType.Shop.toString());
-		sb.append(AbstractRedisKey.separator);
-		sb.append(humanId);
-		return sb.toString();
-	}
+    /**
+     *
+     * @param serverId    服务器Id
+     * @param humanId    角色Id
+     * @param id        商店Id
+     */
+    public ShopKey(int serverId, long humanId, int shopType, long id) {
+        super(serverId, id);
+        this.humanId = humanId;
+        this.shopType = shopType;
+    }
 
-	@Override
-	public Class<ShopEntity> getEntityType() {
-		return ShopEntity.class;
-	}
+    @Override
+    public String getKey() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.getServerId());
+        sb.append(AbstractRedisKey.separator);
+        sb.append(RedisKeyType.Shop.toString());
+        sb.append(AbstractRedisKey.separator);
+        sb.append(humanId);
+        return sb.toString();
+    }
 
-	@Override
-	public IEntityRedisOp getEntityRedisOp() {
-		return EntityMultiKeyRedisOp.INSTANCE;
-	}
+    @Override
+    public Class<ShopEntity> getEntityType() {
+        return ShopEntity.class;
+    }
 
-	@Override
-	public String getField() {
-		return String.valueOf(this.shopType);
-	}
+    @Override
+    public IEntityRedisOp getEntityRedisOp() {
+        return EntityMultiKeyRedisOp.INSTANCE;
+    }
+
+    @Override
+    public String getField() {
+        return String.valueOf(this.shopType);
+    }
 
 }

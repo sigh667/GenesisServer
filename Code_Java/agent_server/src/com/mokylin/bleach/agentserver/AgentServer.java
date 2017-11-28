@@ -1,20 +1,5 @@
 package com.mokylin.bleach.agentserver;
 
-import io.netty.channel.ChannelHandler;
-
-import java.util.concurrent.TimeUnit;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import scala.concurrent.Await;
-import scala.concurrent.Future;
-import scala.concurrent.duration.Duration;
-import akka.actor.ActorRef;
-import akka.actor.Props;
-import akka.pattern.Patterns;
-import akka.util.Timeout;
-
 import com.google.common.base.Optional;
 
 import com.mokylin.bleach.agentserver.channel.AgentServerChannelListener;
@@ -36,6 +21,20 @@ import com.mokylin.bleach.core.net.NettyNetworkLayer;
 import com.mokylin.bleach.servermsg.loginserver.PlayerLogout;
 import com.mokylin.td.network2client.core.channel.ChannelInitializerImpl;
 import com.mokylin.td.network2client.core.handle.ServerIoHandler;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.concurrent.TimeUnit;
+
+import akka.actor.ActorRef;
+import akka.actor.Props;
+import akka.pattern.Patterns;
+import akka.util.Timeout;
+import io.netty.channel.ChannelHandler;
+import scala.concurrent.Await;
+import scala.concurrent.Future;
+import scala.concurrent.duration.Duration;
 
 public class AgentServer {
 

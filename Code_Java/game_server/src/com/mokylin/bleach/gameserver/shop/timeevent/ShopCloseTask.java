@@ -13,30 +13,30 @@ import com.mokylin.bleach.protobuf.ShopMessage.GCShopClose;
  */
 public class ShopCloseTask implements ITimeEvent<Human> {
 
-	private final Shop shop;
-	
-	public ShopCloseTask(Shop shop) {
-		this.shop = shop;
-	}
-	
-	@Override
-	public ITimeEventType getEventType() {
-		return ShopTimeEventType.SHOP_CLOSE;
-	}
+    private final Shop shop;
 
-	@Override
-	public long getEventId() {
-		return this.shop.getShopType().getIndex();
-	}
+    public ShopCloseTask(Shop shop) {
+        this.shop = shop;
+    }
 
-	@Override
-	public void eventOccur(Human human) {
-		shop.close();
-		
-		// 发送商店关闭消息
-		GCShopClose.Builder msgB = GCShopClose.newBuilder();
-		msgB.setShopTypeId(this.shop.getShopType().getIndex());
-		human.sendMessage(msgB);
-	}
+    @Override
+    public ITimeEventType getEventType() {
+        return ShopTimeEventType.SHOP_CLOSE;
+    }
+
+    @Override
+    public long getEventId() {
+        return this.shop.getShopType().getIndex();
+    }
+
+    @Override
+    public void eventOccur(Human human) {
+        shop.close();
+
+        // 发送商店关闭消息
+        GCShopClose.Builder msgB = GCShopClose.newBuilder();
+        msgB.setShopTypeId(this.shop.getShopType().getIndex());
+        human.sendMessage(msgB);
+    }
 
 }

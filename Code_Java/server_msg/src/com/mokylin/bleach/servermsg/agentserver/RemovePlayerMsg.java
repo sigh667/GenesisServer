@@ -6,9 +6,9 @@ package com.mokylin.bleach.servermsg.agentserver;
  *
  */
 public class RemovePlayerMsg extends AbstractAgentMessage {
-	public final long agentSessionId;
-	
-	public RemovePlayerMsg(long id){
-		this.agentSessionId = id;
-	}
+    public final long agentSessionId;
+
+    public RemovePlayerMsg(long id) {
+        this.agentSessionId = id;
+    }
 }

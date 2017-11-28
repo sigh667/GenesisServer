@@ -10,10 +10,10 @@ import com.mokylin.bleach.core.concurrent.fixthreadpool.IRunnableBindId;
  */
 public class ActionOnExceptionOfLogin implements IActionOnException {
 
-	@Override
-	public void action(IRunnableBindId iRunnableBindId) {
-		LoginRunnable runnable = (LoginRunnable)iRunnableBindId;
-		runnable.getSession().disconnect();
-	}
+    @Override
+    public void action(IRunnableBindId iRunnableBindId) {
+        LoginRunnable runnable = (LoginRunnable) iRunnableBindId;
+        runnable.getSession().disconnect();
+    }
 
 }

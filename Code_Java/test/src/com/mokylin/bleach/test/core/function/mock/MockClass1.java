@@ -4,32 +4,29 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MockClass1 {
-	
-	private final int a = 0;
-	
-	private final long b = 1L;
-	
-	private final String c = "";
-	
-	private static Logger logger = LoggerFactory.getLogger(MockClass1.class);
 
-	public int getA() {
-		return a;
-	}
+    private static Logger logger = LoggerFactory.getLogger(MockClass1.class);
+    private final int a = 0;
+    private final long b = 1L;
+    private final String c = "";
 
-	public Long getB() {
-		return b;
-	}
+    public static Logger getLogger() {
+        return logger;
+    }
 
-	public String getC() {
-		return c;
-	}
+    public static void setLogger(Logger logger) {
+        MockClass1.logger = logger;
+    }
 
-	public static Logger getLogger() {
-		return logger;
-	}
+    public int getA() {
+        return a;
+    }
 
-	public static void setLogger(Logger logger) {
-		MockClass1.logger = logger;
-	}
+    public Long getB() {
+        return b;
+    }
+
+    public String getC() {
+        return c;
+    }
 }

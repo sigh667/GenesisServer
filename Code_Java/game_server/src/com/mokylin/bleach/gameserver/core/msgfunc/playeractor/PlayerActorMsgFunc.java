@@ -1,6 +1,7 @@
 package com.mokylin.bleach.gameserver.core.msgfunc.playeractor;
 
 import com.google.protobuf.GeneratedMessage;
+
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.core.msgfunc.AbstractClientMsgFunc;
 import com.mokylin.bleach.gameserver.human.Human;
@@ -12,12 +13,13 @@ import com.mokylin.bleach.gameserver.player.Player;
  *
  * @param <Msg>
  */
-public abstract class PlayerActorMsgFunc<Msg extends GeneratedMessage> extends AbstractClientMsgFunc<Msg, Human, ServerGlobals> {
+public abstract class PlayerActorMsgFunc<Msg extends GeneratedMessage>
+        extends AbstractClientMsgFunc<Msg, Human, ServerGlobals> {
 
-	@Override
-	public void handle(Player player, Msg msg, Human human, ServerGlobals sGlobals) {
-		this.process(player, msg, human, sGlobals);
-	}
+    @Override
+    public void handle(Player player, Msg msg, Human human, ServerGlobals sGlobals) {
+        this.process(player, msg, human, sGlobals);
+    }
 
-	public abstract void process(Player player, Msg msg, Human human, ServerGlobals sGlobals);
+    public abstract void process(Player player, Msg msg, Human human, ServerGlobals sGlobals);
 }

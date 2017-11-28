@@ -11,66 +11,71 @@ import com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo.Builder;
  *
  */
 public class Skill {
-	
-	private Hero hero;
 
-	/**技能模板ID*/
-	private int templateId;
-	/**技能等级*/
-	private int level;
+    private Hero hero;
+
+    /**技能模板ID*/
+    private int templateId;
+    /**技能等级*/
+    private int level;
 
 
-	private Skill(){}
-	public static Skill buildNewSkill(int templateId, int level, Hero hero) {
-		Skill skill = new Skill();
-		skill.templateId = templateId;
-		skill.level = level;
-		skill.hero = hero;
-		return skill;
-	}
-	public static Skill buildFromHeroSkill(HeroSkill heroSkill, Hero hero) {
-		Skill skill = new Skill();
+    private Skill() {
+    }
 
-		skill.templateId = heroSkill.getTemplateId();
-		skill.level = heroSkill.getLevel();
-		skill.hero = hero;
+    public static Skill buildNewSkill(int templateId, int level, Hero hero) {
+        Skill skill = new Skill();
+        skill.templateId = templateId;
+        skill.level = level;
+        skill.hero = hero;
+        return skill;
+    }
 
-		return skill;
-	}
+    public static Skill buildFromHeroSkill(HeroSkill heroSkill, Hero hero) {
+        Skill skill = new Skill();
 
-	public HeroSkill convertToHeroSkill() {
-		HeroSkill heroSkill = new HeroSkill();
-		
-		heroSkill.setTemplateId(templateId);
-		heroSkill.setLevel(level);
-		
-		return heroSkill;
-	}
+        skill.templateId = heroSkill.getTemplateId();
+        skill.level = heroSkill.getLevel();
+        skill.hero = hero;
 
-	public HeroSkillInfo buildHeroSkillInfo() {
-		Builder builder = HeroSkillInfo.newBuilder();
-		builder.setLevel(level);
-		builder.setTemplateId(templateId);
-		return builder.build();
-	}
-	public int getTemplateId() {
-		return templateId;
-	}
-	public int getLevel() {
-		return level;
-	}
+        return skill;
+    }
 
-	/**
-	 * 技能升级
-	 * @param levelUpCount	具体升几级
-	 */
-	public void levelUp(int levelUpCount) {
-		if (levelUpCount<=0) {
-			return;
-		}
-		
-		this.level += levelUpCount;
-		hero.setModified();
-	}
+    public HeroSkill convertToHeroSkill() {
+        HeroSkill heroSkill = new HeroSkill();
+
+        heroSkill.setTemplateId(templateId);
+        heroSkill.setLevel(level);
+
+        return heroSkill;
+    }
+
+    public HeroSkillInfo buildHeroSkillInfo() {
+        Builder builder = HeroSkillInfo.newBuilder();
+        builder.setLevel(level);
+        builder.setTemplateId(templateId);
+        return builder.build();
+    }
+
+    public int getTemplateId() {
+        return templateId;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    /**
+     * 技能升级
+     * @param levelUpCount    具体升几级
+     */
+    public void levelUp(int levelUpCount) {
+        if (levelUpCount <= 0) {
+            return;
+        }
+
+        this.level += levelUpCount;
+        hero.setModified();
+    }
 
 }

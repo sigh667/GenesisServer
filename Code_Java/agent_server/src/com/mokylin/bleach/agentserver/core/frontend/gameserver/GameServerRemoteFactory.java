@@ -8,10 +8,10 @@ import com.mokylin.bleach.core.isc.remote.actorrefs.IActorPackages;
 
 public class GameServerRemoteFactory extends DefaultRemoteFactory {
 
-	@Override
-	public IRemote createRemote(ServerConfig localConfig, IActorPackages actorPackages) {
-		IRemote remote = super.createRemote(localConfig, actorPackages);
-		Globals.getGameServerManager().publish(new GameServerFrontend(remote, localConfig));
-		return remote;
-	}
+    @Override
+    public IRemote createRemote(ServerConfig localConfig, IActorPackages actorPackages) {
+        IRemote remote = super.createRemote(localConfig, actorPackages);
+        Globals.getGameServerManager().publish(new GameServerFrontend(remote, localConfig));
+        return remote;
+    }
 }

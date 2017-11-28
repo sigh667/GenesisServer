@@ -7,29 +7,25 @@ package com.mokylin.bleach.common.prop.battleprop.propeffect;
  */
 public enum PropEffectType {
 
-	/** 绝对值作用 */
-	Abs() {
+    /** 绝对值作用 */
+    Abs() {
+        @Override
+        public String getSymbol() {
+            return "+";
+        }
 
-		@Override
-		public String getSymbol() {
-			return "+";
-		}
-		
-	},
-	/** 百分比作用 */
-	Per() {
+    }, /** 百分比作用 */
+    Per() {
+                @Override
+                public String getSymbol() {
+                    return "%";
+                }
 
-		@Override
-		public String getSymbol() {
-			return "%";
-		}
-		
-	}
-	;
-	
-	/**
-	 * 获取标识本属性作用类型的符号
-	 * @return
-	 */
-	public abstract String getSymbol();
+            };
+
+    /**
+     * 获取标识本属性作用类型的符号
+     * @return
+     */
+    public abstract String getSymbol();
 }

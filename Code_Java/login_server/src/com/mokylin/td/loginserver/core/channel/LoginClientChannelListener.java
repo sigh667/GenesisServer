@@ -6,14 +6,14 @@ import com.mokylin.td.network2client.core.session.IClientSession;
 
 public class LoginClientChannelListener implements IChannelListener {
 
-	@Override
-	public void onChannelActive(IClientSession session) {
-		ClientSessionContainer.Inst.insert(session);
-	}
+    @Override
+    public void onChannelActive(IClientSession session) {
+        ClientSessionContainer.Inst.insert(session);
+    }
 
-	@Override
-	public void onChannelInActive(IClientSession session) {
-		ClientSessionContainer.Inst.remove(session.getSessionId());
-	}
+    @Override
+    public void onChannelInActive(IClientSession session) {
+        ClientSessionContainer.Inst.remove(session.getSessionId());
+    }
 
 }

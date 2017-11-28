@@ -6,15 +6,15 @@ import java.lang.annotation.Target;
 
 /**
  * 日志数据表的标识，用于GM后台的显示
- * 
+ *
  * @author yaguang.xiao
  *
  */
 
-@Target({ java.lang.annotation.ElementType.TYPE })
+@Target({java.lang.annotation.ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface TableView {
 
-	String value() default "";
+    String value() default "";
 
 }

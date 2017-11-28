@@ -9,11 +9,11 @@ import com.mokylin.bleach.gameserver.human.vip.VipHelper;
  * @author ChangXiao
  *
  */
-public class AddChargeDiamondVipListener implements IEventListener<AddChargeDiamondEvent>{
+public class AddChargeDiamondVipListener implements IEventListener<AddChargeDiamondEvent> {
 
-	@Override
-	public void onEventOccur(AddChargeDiamondEvent event) {
-		VipHelper.addExp(event.human, event.addValue);
-	}
-	
+    @Override
+    public void onEventOccur(AddChargeDiamondEvent event) {
+        VipHelper.addExp(event.human, event.addValue);
+    }
+
 }

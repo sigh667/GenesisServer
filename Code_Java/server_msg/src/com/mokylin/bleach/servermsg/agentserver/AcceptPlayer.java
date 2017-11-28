@@ -9,27 +9,27 @@ import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
  * @author baoliang.shen
  *
  */
-public class AcceptPlayer implements IMessage{
+public class AcceptPlayer implements IMessage {
 
-	/**账号ID*/
-	public final String accountId;
-	/**渠道*/
-	public final String channel;
-	/**角色ID*/
-	public final long humanUuid;
-	/**本次登陆使用的秘钥，用后即失效*/
-	public final String secretKey;
+    /**账号ID*/
+    public final String accountId;
+    /**渠道*/
+    public final String channel;
+    /**角色ID*/
+    public final long humanUuid;
+    /**本次登陆使用的秘钥，用后即失效*/
+    public final String secretKey;
 
-	public AcceptPlayer(String accountId, String channel, long humanUuid, String secretKey) {
-		this.accountId = accountId;
-		this.channel = channel;
-		this.humanUuid = humanUuid;
-		this.secretKey = secretKey;
-	}
+    public AcceptPlayer(String accountId, String channel, long humanUuid, String secretKey) {
+        this.accountId = accountId;
+        this.channel = channel;
+        this.humanUuid = humanUuid;
+        this.secretKey = secretKey;
+    }
 
-	@Override
-	public MessageTarget getTarget() {
-		return MessageTarget.ISC_ACTOR;
-	}
+    @Override
+    public MessageTarget getTarget() {
+        return MessageTarget.ISC_ACTOR;
+    }
 
 }

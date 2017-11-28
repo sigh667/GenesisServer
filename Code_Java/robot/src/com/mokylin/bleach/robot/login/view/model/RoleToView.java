@@ -4,17 +4,17 @@ import com.mokylin.bleach.protobuf.PlayerMessage.Role;
 
 public class RoleToView {
 
-	private final Role role;
-	
-	public RoleToView(Role role) {
-		this.role = role;
-	}
+    private final Role role;
 
-	public Role getRole() {
-		return role;
-	}
-	
-	public String toString() {
-		return role.getName();
-	}
+    public RoleToView(Role role) {
+        this.role = role;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public String toString() {
+        return role.getName();
+    }
 }

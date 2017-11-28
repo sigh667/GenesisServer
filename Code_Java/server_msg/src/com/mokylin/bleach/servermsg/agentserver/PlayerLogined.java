@@ -1,36 +1,36 @@
 package com.mokylin.bleach.servermsg.agentserver;
 
-import static com.google.common.base.Preconditions.checkNotNull;
+import com.mokylin.bleach.core.isc.msg.IMessage;
+import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
 
 import java.io.Serializable;
 
 import akka.actor.ActorRef;
 
-import com.mokylin.bleach.core.isc.msg.IMessage;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import static com.google.common.base.Preconditions.checkNotNull;
 
 public class PlayerLogined implements IMessage, Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	public final long agentSessionId;
-	
-	public final long humanUuid;
-	
-	public final int gameServerId;
-	
-	public final ActorRef playerActorRef;
+    public final long agentSessionId;
 
-	public PlayerLogined(long sessionId, long humanUuid, int serverId, ActorRef self) {
-		this.agentSessionId = sessionId;
-		this.humanUuid = humanUuid;
-		this.gameServerId = serverId;
-		this.playerActorRef = checkNotNull(self);
-	}
+    public final long humanUuid;
 
-	@Override
-	public MessageTarget getTarget() {
-		return MessageTarget.ISC_ACTOR;
-	}
+    public final int gameServerId;
+
+    public final ActorRef playerActorRef;
+
+    public PlayerLogined(long sessionId, long humanUuid, int serverId, ActorRef self) {
+        this.agentSessionId = sessionId;
+        this.humanUuid = humanUuid;
+        this.gameServerId = serverId;
+        this.playerActorRef = checkNotNull(self);
+    }
+
+    @Override
+    public MessageTarget getTarget() {
+        return MessageTarget.ISC_ACTOR;
+    }
 
 }
