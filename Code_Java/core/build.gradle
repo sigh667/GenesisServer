@@ -48,5 +48,9 @@ sourceSets {
         java {
             srcDirs = ['src']
         }
+
+        resources {
+            srcDir 'config'
+        }
     }
 }
