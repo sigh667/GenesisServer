@@ -1,0 +1,8 @@
+{
+	"MaxLogLength":8388608,
+	"LogName":"BleachCombat",
+	"LogPath":"/",
+	"EnableLog":true,
+	"EnableLogConsole":true,
+	"EnableLogFile":true
+}

@@ -1,0 +1,121 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+#foreach($namespace in $NAMESPACES)
+using $namespace;
+#end
+
+namespace Bleach.Table
+{
+	public class DataHandler
+	{
+		private static List<Bleach.Util.Pair<string, Type>> loadedTable = new List<Util.Pair<string, Type>>()
+		{
+			#foreach($bean in $BEANS)			
+new Bleach.Util.Pair<string, Type>("${bean.excelName}", typeof(${bean.className})),
+			#end
+
+		};
+
+		private const int HEAD_LENGTH = 1;
+
+		public delegate TextAsset LoadDelegate(string table);
+
+		public static LoadDelegate loadDelegate = null;
+		
+		private static Dictionary<Type, Dictionary<int, TableLoader>> tables = new Dictionary<Type, Dictionary<int, TableLoader>>(64);
+
+		private static void LoadTables(Type type, string[] lines)
+		{
+			Dictionary<int, TableLoader> table = new Dictionary<int, TableLoader>(lines.Length);
+
+			for (int index = 0; index < lines.Length - HEAD_LENGTH; index++)
+			{
+				if (lines[index + HEAD_LENGTH].StartsWith("#") || lines[index + HEAD_LENGTH].Trim() == "")
+				{
+					continue;
+				}
+				
+				string[] content = lines[index + HEAD_LENGTH].Split('\t');
+				TableLoader row = (TableLoader)Activator.CreateInstance(type, content, 1);
+				table.Add(row.id, row);
+			}
+			tables.Add(type, table);
+		}
+		
+		private static string[] GetLines(string table)
+		{
+			TextAsset content = null;
+
+			if (loadDelegate == null)
+			{
+				content = Resources.Load(table, typeof(TextAsset)) as TextAsset;
+			}
+			else
+			{
+				content = loadDelegate(table) as TextAsset;
+			}
+			
+			string[] lines = null;
+			
+			if (content != null)
+			{
+				lines = content.text.Split('\n');
+			}
+			return lines;
+		}
+		
+		public static void Register()
+		{
+			string[] lines = null;
+
+			foreach (Bleach.Util.Pair<string, Type> t in loadedTable)
+			{
+				Bleach.Util.LogUtil.Log("Load table {0}", t.First);
+				lines = GetLines(t.First);
+				if (lines == null || lines.Length <= 2)
+				{
+					Bleach.Util.LogUtil.Log("ERROR: table " + t.First + "not exist error");
+					return;
+				}
+
+				LoadTables(t.Second, lines);	
+			}	
+		}
+
+		public static T GetData<T>(int id) where T : TableLoader
+		{
+			TableLoader item = null;
+			Dictionary<int, TableLoader> table = null;
+			if(true != tables.TryGetValue(typeof(T), out table))
+			{
+				return (T)item;
+			}
+
+			table.TryGetValue(id, out item);
+			return (T)item;
+		}
+
+		public static Dictionary<int, TableLoader> GetTable<T>() where T : TableLoader
+		{
+			Dictionary<int, TableLoader> table = null;
+			tables.TryGetValue(typeof(T), out table);
+			return table;
+		}
+
+		public static void LoadFinishProcess()
+		{
+			foreach(KeyValuePair<Type, Dictionary<int, TableLoader>> t in tables)
+			{
+				foreach(KeyValuePair<int, TableLoader> row in t.Value)
+				{
+					row.Value.LoadFinishProcess();
+				}
+			}
+			Table.TableLoader.ReleaseStringCache();
+		}
+	}
+}
+
+

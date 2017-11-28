@@ -1,0 +1,8 @@
+{
+    "energyRecoverSecond":300,
+    "energyRecoverValue":1,
+    "maxEnergy":500,
+    "energyBuyingValue":100,
+    "maxLevel":100,
+    "logOnlineCountsPeriod":300
+}

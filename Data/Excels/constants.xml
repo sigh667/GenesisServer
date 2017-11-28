@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <constants>
+	<!-- 体力恢复间隔，单位：秒-->
+    <energyRecoverSecond>300</energyRecoverSecond>
+    <!-- 体力恢复值，点/每次-->
+    <energyRecoverValue>1</energyRecoverValue>
+	<!-- 体力上限-->
+    <maxEnergy>500</maxEnergy>
+    <!-- 玩家每购买一次得到的体力值-->
+    <energyBuyingValue>100</energyBuyingValue>
+	<!-- 玩家等级上限-->
+    <maxLevel>100</maxLevel>
+    <!-- 运营日志-记录玩家在线数量日志的时间间隔，单位：秒-->
+    <logOnlineCountsPeriod>300</logOnlineCountsPeriod>
+  </constants>

@@ -1,0 +1,4 @@
+int    buffID;      [notNull=true]   //对应的buffID
+int    spellID;     [notNull=true]   //对应的spellID
+int    triggerID;   [notNull=true]   //对应的triggerID
+int    range;       [notNull=true]   //攻击范围: 0-默认目标单体；1-全体；2-目标和相邻1单位

@@ -1,0 +1,4 @@
+String Type;        [notNull=true] 
+String PrefabName; [notNull=true] 
+String CameraName; [notNull=true] 
+int    FighterCount;    [notNull=true] 

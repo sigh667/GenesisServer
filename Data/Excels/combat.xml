@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <CombatConfig>
+	<ShanBiSwitch>true</ShanBiSwitch>
+  <ShanBiQuanJuXiShu>0.0</ShanBiQuanJuXiShu>
+  <GeDangGaiLvQuanJuXiShu>0.0</GeDangGaiLvQuanJuXiShu>
+  <GeDangQuanJuXiShu>0.5</GeDangQuanJuXiShu>
+	<DuoChongDaJiQuanJuChuFaXiShu>0.0</DuoChongDaJiQuanJuChuFaXiShu>
+	<DuoChongDaJiaChuShiBeiLv>2.0</DuoChongDaJiaChuShiBeiLv>
+  <DuoChongDaJiQuanJuXiuZhengXiShu>0.0</DuoChongDaJiQuanJuXiuZhengXiShu>
+  <PoJiaGaiLvQuanJuXiShu>0.0</PoJiaGaiLvQuanJuXiShu>
+	<BaoJiQuanJuXiuZhengXiShu>1.0</BaoJiQuanJuXiuZhengXiShu>
+  <BinSiPanDingXiShu>0.2</BinSiPanDingXiShu>
+  <BinSiShangHaiXiShu>2.0</BinSiShangHaiXiShu>
+  <YuanSuXiuZhengXiShuJianShu>1.0</YuanSuXiuZhengXiShuJianShu>
+  <YuanSuXiuZhengXiShuFaShu>1.0</YuanSuXiuZhengXiShuFaShu>
+  <YuanSuXiuZhengXiShuLeiXi>1.0</YuanSuXiuZhengXiShuLeiXi>
+	<YuanSuXiuZhengXiShuHuoXi>1.0</YuanSuXiuZhengXiShuHuoXi>
+  <YuanSuXiuZhengXiShuBingXi>1.0</YuanSuXiuZhengXiShuBingXi>
+  <YuanSuXiuZhengXiShuFengXi>1.0</YuanSuXiuZhengXiShuFengXi>
+  <YuanSuXiuZhengXiShuDuXi>1.0</YuanSuXiuZhengXiShuDuXi>
+
+  <NuQiDaoJiGongJiFangHuiFuBiLi>0.0</NuQiDaoJiGongJiFangHuiFuBiLi>
+  <NuQiDaoJiBeiJiFangHuiFuBiLi>2.0</NuQiDaoJiBeiJiFangHuiFuBiLi>
+  <NuQiPuGongBeiJiFangHuiFuBiLi>1.0</NuQiPuGongBeiJiFangHuiFuBiLi>
+  <NuQiShanBiGongJiFangHuiFuBiLi>0.5</NuQiShanBiGongJiFangHuiFuBiLi>
+  <NuQiShanBiBeiJiFangHuiFuBiLi>0.2</NuQiShanBiBeiJiFangHuiFuBiLi>
+  <NuQiMaxTeamChuShi>1800</NuQiMaxTeamChuShi>
+
+  <IsCheckHasEnoughMana>true</IsCheckHasEnoughMana>
+  <IsCheckSpellCD>true</IsCheckSpellCD>
+
+  <JuXingKuanDu>2</JuXingKuanDu>
+	<LeftPositionAngle>0</LeftPositionAngle>
+	<RightPositionAngle>0</RightPositionAngle>
+
+	<BulletSpeed>5.0</BulletSpeed>
+	<BulletAccSpeed>150.0</BulletAccSpeed>
+	<CriticalHitHPFlag>0.2</CriticalHitHPFlag>
+	<CriticalHitEffectPath>""</CriticalHitEffectPath>
+	<CriticalHitEffectPlayTime>0.0</CriticalHitEffectPlayTime>
+  <!-- 角色出手前等待的时间，单位秒。用于目标不在原位时，进攻方等待目标的时间。 -->
+  <AttackWaitTime>0.1</AttackWaitTime>
+	<LeftFighterCharacterID>
+<!---->
+		<int>101</int>
+		<int>2201</int>
+		<int>301</int>
+		<int>401</int>
+		<int>2601</int>
+		<int>501</int>
+		<int>201</int>
+		<int>1301</int>
+	</LeftFighterCharacterID>
+	<RightFighterCharacterID>
+<!---->
+	    <int>2601</int>
+		<int>201</int>
+		<int>2201</int>
+		<int>301</int>
+		<int>501</int>
+		<int>401</int>
+	</RightFighterCharacterID>
+  
+</CombatConfig>

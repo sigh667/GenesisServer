@@ -1,0 +1,25 @@
+using System;
+
+namespace $NAMESPACE_NAME
+{
+	public class $CLASS_NAME : TableLoader
+	{
+		#foreach( $field in $FIELDS)
+
+		//${field.comment}
+		public readonly ${field.type} ${field.name};
+		#end
+
+		// Constructor	
+		public ${CLASS_NAME}(string[] content,int id):base(content)
+		{
+		#foreach( $field in $FIELDS)
+	this.${field.name} = ${field.content};
+		#end
+		
+		}
+
+	}
+}
+
+

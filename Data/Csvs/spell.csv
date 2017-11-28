@@ -1,0 +1,49 @@
+0	59	什么都不干	normal attack	1	0	0	0	YouFangMoRenMuBiao	Single	JianShu	Normal	False	DoNothing	Attack	0	10000	False	False	False	False	False	True	2	1	10001	0|0		0										
+1	59	虚闪	100%鬼道伤害,击穿	5	0	3	5	DiFangMoRenMuBiao	RayCast	JianShu	Normal	True	ZhuanJingAttack	Attack	0	10000	False	False	False	False	False	True	0.8	100	10021	0												
+2	75	Attack	normal attack	4	0	0	0	DiFangMoRenMuBiao	Single	JianShu	Normal	False	NormalAttack	Attack	0	8000	False	False	False	False	False	True	0.7	0.1	220001	0		2500										
+3	55	斩击	100%技能伤害\nCD：2	9	600	0	2	DiFangMoRenMuBiao	RayCast	JianShu	CriticalSpell	True	SpellAttack	Attack	0	27000	True	False	False	False	False	True	3	100	10013	0|0	1											
+4	75	斩击	100%技能伤害\nCD：2	9	600	0	2	DiFangMoRenMuBiao	Row	JianShu	CriticalSpell	True	SpellAttack	Attack	0	24000	True	False	True	False	False	True	4	100	220014	0	8											
+5	1	Attack	normal attack	4	0	0	0	DiFangMoRenMuBiao	Single	JianShu	Normal	False	NormalAttack	Attack	0	8000	False	False	False	False	False	True	1	0.1	10001	0|0		2500										
+6	79	破道之四·白雷	70%鬼道伤害,无法闪避	5	0	1	3	DiFangMoRenMuBiao	Single	JianShu	Normal	True	ZhuanJingAttack	Attack	0	7000	True	False	False	False	False	True	0.8	100	130021	0												
+8	45	斩击	100%技能伤害\nCD：2	9	600	0	2	DiFangMoRenMuBiao	Single	JianShu	CriticalSpell	True	SpellAttack	Attack	0	36000	True	False	False	False	False	True	3	100	50013	0	3											
+9	46	Skill	normal attack	4	0	0	0	DiFangMoRenMuBiao	Single	JianShu	Normal	False	ZhuanJingAttack	Attack	0	8000	False	False	False	False	False	True	1.4	0.1	50001	0|0		2500										
+10	49	破道之三十一·赤火炮	120%鬼道伤害	5	0	2	4	DiFangMoRenMuBiao	Single	JianShu	Normal	True	ZhuanJingAttack	Attack	0	7000	False	False	False	False	False	True	0.8	100	50021	0												
+11	70	斩击	100%技能伤害\nCD：2	9	600	0	3	DiFangMoRenMuBiao	Single	FengXi	CriticalSpell	True	SpellAttack	Attack	0	10000	True	False	False	False	False	True	3	100	130012	0|13	6											
+12	1	缚道之一·塞	90%鬼道伤害	5	0	1	3	DiFangMoRenMuBiao	Single	JianShu	Normal	True	ZhuanJingAttack	Attack	0	9000	False	False	False	False	False	True	0.8	100	50022	0												
+13	71	Attack	normal attack	4	0	0	0	DiFangMoRenMuBiao	Row	FengXi	Normal	False	NormalAttack	Attack	0	8000	False	False	False	False	False	True	0.867	0.01	130001	0		2500										
+18	57	YiHuMaster	normal attack	5	0	0	0	DiFangMoRenMuBiao	Single	JianShu	ComboMaster	False	NormalAttack	Attack	0	8000	True	False	False	False	False	True	1	0.1	10002	0|0|0												
+19	47	LianCiSlave	normal attack	6	0	0	0	DiFangMoRenMuBiao	Single	JianShu	ComboSlave	False	NormalAttack	Attack	0	8000	True	False	False	False	False	True	1.8	0.1	50003	0|0|0												
+20	80	Attack	normal attack	4	0	0	0	DiFangMoRenMuBiao	Single	BingXi	Normal	False	NormalAttack	Attack	0	8000	False	False	False	False	False	True	1.2	0.01	260001	0		2500										
+21	81	初舞·月白	50%技能伤害，冰冻1回合\nCD：3	9	600	0	3	DiFangMoRenMuBiao	Row	JianShu	CriticalSpell	True	SpellAttack	Attack	0	10000	True	False	False	False	False	True	4.167	100	260012	11	7											
+22	48	LianCiMaster	normal attack	5	0	0	0	DiFangMoRenMuBiao	Single	JianShu	ComboMaster	False	NormalAttack	Attack	0	8000	True	False	False	False	False	True	1.333	0.1	50002	0|0|0												
+23	82	LuQiYaSlave	normal attack	6	0	0	0	DiFangMoRenMuBiao	Single	JianShu	ComboSlave	False	NormalAttack	Attack	0	8000	True	False	False	False	False	True	2.4	1	260003	0|0|0												
+24	50	Attack	normal attack	4	0	0	0	DiFangMoRenMuBiao	Single	JianShu	Normal	False	NormalAttack	Attack	0	8000	False	False	False	False	False	True	0.9	0.1	30001	0		2500										
+25	50	巨人一击	100%技能伤害\nCD：3	9	600	0	2	DiFangMoRenMuBiao	Single	JianShu	CriticalSpell	True	SpellAttack	Attack	0	24000	True	False	False	False	False	True	2.367	0.01	30021	17	2											
+26	60	双天归盾	为HP最低伙伴恢复攻击力120%的生命\nCD：3	5	600	0	2	YouFangMoRenMuBiao	BattleField	FaShu	CriticalSpell	True	SpellAttack	Heal	0	12000	True	False	False	False	False	False	2.2	100	20011	0	4											
+27	77	BaiZaiSlave	normal attack	6	0	0	0	DiFangMoRenMuBiao	Single	JianShu	ComboSlave	False	NormalAttack	Attack	0	8000	True	False	False	False	False	True	1.567	1	220003	0|0|0												
+28	58	YiHuSlave	normal attack	6	0	0	0	DiFangMoRenMuBiao	Single	JianShu	ComboSlave	False	NormalAttack	Attack	0	8000	True	False	False	False	False	True	2.1	10	10003	0|0|0|0|0												
+29	78	BaiZaiMaster	normal attack	5	0	0	0	DiFangMoRenMuBiao	Single	JianShu	ComboMaster	False	NormalAttack	Attack	0	8000	True	False	False	False	False	True	1.3	0.1	220002	0|0												
+30	83	LuQiYaMaster	normal attack	5	0	0	0	DiFangMoRenMuBiao	Single	JianShu	ComboMaster	False	NormalAttack	Attack	0	8000	True	False	False	False	False	True	1	0.01	260002	0|0												
+31	61	Attack	normal attack	4	0	0	0	DiFangMoRenMuBiao	Single	JianShu	Normal	False	NormalAttack	Attack	0	6000	False	False	False	False	False	True	2	100	20001	0		2500										
+32	65	Attack	normal attack	4	0	0	0	DiFangMoRenMuBiao	RayCast	JianShu	Normal	False	NormalAttack	Attack	0	8000	False	False	False	False	False	True	1.567	100	40001	0		2500										
+33	65	光之雨	对远程横排造成50%技能伤害\nCD：3	9	600	0	2	DiFangMoRenMuBiao	BattleField	JianShu	CriticalSpell	True	SpellAttack	Attack	0	10000	True	False	False	False	False	True	2.7	100	40012	0|0	5											
+34	64	孤天斩盾	70%技能伤害	5	0	2	3	DiFangMoRenMuBiao	Single	JianShu	Normal	True	ZhuanJingAttack	Attack	0	7000	False	False	False	False	False	True	1.1	100	20021	0|0												
+38	72	LuanJunSlave	normal attack	6	0	0	0	DiFangMoRenMuBiao	Single	JianShu	ComboSlave	False	NormalAttack	Attack	0	8000	True	False	False	False	False	True	2	1	130003	0|0												
+39	73	LuanJunMaster	normal attack	5	0	0	0	DiFangMoRenMuBiao	Row	JianShu	ComboMaster	False	NormalAttack	Attack	0	8000	True	False	False	False	False	True	0.833	0.01	130002	0|0												
+40	52	ChaDuSlave	normal attack	6	0	0	0	DiFangMoRenMuBiao	Single	JianShu	ComboSlave	False	NormalAttack	Attack	0	8000	True	False	False	False	False	True	1.8	0.1	30003	0|0												
+41	53	ChaDuMaster	normal attack	5	0	0	0	DiFangMoRenMuBiao	Single	JianShu	ComboMaster	False	NormalAttack	Attack	0	8000	True	False	False	False	False	True	0.8	0.1	30002	0|0												
+42	67	ShiTianSlave	normal attack	6	0	0	0	DiFangMoRenMuBiao	Single	JianShu	ComboSlave	False	NormalAttack	Attack	0	8000	True	False	False	False	False	True	1.1	100	40003	0|0												
+43	68	ShiTianMaster	normal attack	5	0	0	0	DiFangMoRenMuBiao	RayCast	JianShu	ComboMaster	False	NormalAttack	Attack	0	8000	True	False	False	False	False	True	1.1	100	40002	0|0												
+44	62	JingShangSlave	normal attack	6	0	0	0	DiFangMoRenMuBiao	Single	JianShu	ComboSlave	False	NormalAttack	Attack	0	6000	True	False	False	False	False	True	2.5	100	20003	0|0												
+45	63	JingShangMaster	normal attack	5	0	0	0	DiFangMoRenMuBiao	Single	JianShu	ComboMaster	False	NormalAttack	Attack	0	6000	True	False	False	False	False	True	0.73	100	20002	0|0												
+46	1	缚道之一·塞	90%鬼道伤害	5	0	1	3	DiFangMoRenMuBiao	Single	JianShu	Normal	True	ZhuanJingAttack	Attack	0	9000	False	False	False	False	False	True	0.8	100	260021	0												
+47	79	破道之四·白雷	70%鬼道伤害,无法闪避	5	0	1	3	DiFangMoRenMuBiao	Single	JianShu	Normal	True	ZhuanJingAttack	Attack	0	7000	True	False	False	False	False	True	0.8	100	260021	0												
+48	49	破道之三十一·赤火炮	120%鬼道伤害	5	0	2	4	DiFangMoRenMuBiao	Single	JianShu	Normal	True	ZhuanJingAttack	Attack	0	7000	False	False	False	False	False	True	0.8	100	260021	0												
+10001	55	斩击	100%技能伤害\nCD：2	9	600	0	2	DiFangMoRenMuBiao	RayCast	JianShu	Normal	True	SpellAttack	Attack	0	27000	True	False	False	False	False	True	3	100	10013	0|0	9											
+10002	75	斩击	100%技能伤害\nCD：2	9	600	0	3	DiFangMoRenMuBiao	Row	JianShu	Normal	True	SpellAttack	Attack	0	24000	True	False	True	False	False	True	4	100	220014	0	16											
+10003	45	斩击	100%技能伤害\nCD：2	9	600	0	2	DiFangMoRenMuBiao	Single	JianShu	Normal	True	SpellAttack	Attack	0	36000	True	False	False	False	False	True	3	100	50013	0	11											
+10004	70	斩击	100%技能伤害\nCD：2	9	600	0	3	DiFangMoRenMuBiao	Single	FengXi	Normal	True	SpellAttack	Attack	0	10000	True	False	False	False	False	True	2.6	100	130012	0|13	14											
+10005	81	初舞·月白	50%技能伤害，缴械1回合\nCD：3	9	600	0	3	DiFangMoRenMuBiao	Row	JianShu	Normal	True	SpellAttack	Attack	0	10000	True	False	False	False	False	True	4.167	100	260012	11	15											
+10006	50	巨人一击	100%技能伤害\nCD：3	9	600	0	2	DiFangMoRenMuBiao	Single	JianShu	Normal	True	SpellAttack	Attack	0	24000	True	False	False	False	False	True	2.433	1	30021	17	10											
+10007	60	双天归盾	为HP最低伙伴恢复攻击力120%的生命\nCD：3	5	600	0	2	YouFangMoRenMuBiao	BattleField	FaShu	Normal	True	SpellAttack	Heal	0	12000	True	False	False	False	False	False	4	100	20011	0	12											
+10008	65	光之雨	对远程横排造成50%技能伤害\nCD：3	9	600	0	3	DiFangMoRenMuBiao	BattleField	JianShu	Normal	True	SpellAttack	Attack	0	10000	True	False	False	False	False	True	2.7	100	40012	0|0	13											

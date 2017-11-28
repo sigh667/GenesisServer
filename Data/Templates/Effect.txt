@@ -1,0 +1,3 @@
+String PrefabName;        [notNull=true]   //x
+String BonDingPoint;        [notNull=true]   //y
+float DelayTime;        [notNull=true]   //z

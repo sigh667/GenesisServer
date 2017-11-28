@@ -1,0 +1,5 @@
+String WeaponPrefabName;        [notNull=true]
+String BindingPointName; [notNull=true]
+String WeaponPrefabName;        [notNull=true]
+String BindingPointName; [notNull=true]
+

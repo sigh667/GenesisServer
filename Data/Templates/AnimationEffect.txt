@@ -1,0 +1,2 @@
+int CharacterID;        [notNull=true]   //角色ID
+float    DelayTime;      [notNull=true]   //延迟时间

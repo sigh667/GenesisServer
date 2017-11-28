@@ -1,0 +1,56 @@
+1	小EXP包	白痴也知道	OOXX1	Equipment	White	GOLD	100	0	1	6	999	1	5000					LiLiang	22		Lingli	55		SuDu	2000		ZhuanJing	10	8000							1	2	3	4	5			True
+2	金币包	白痴也知道	OOXX2	Equipment	Green	GOLD	100	0	1	6	999	2	50					SuDu	54	3000	FangYuLi	21														2	2	3	4				True
+3	钻石包	白痴也知道	OOXX2	Equipment	Green	GOLD	10	0	1	6	999	3	10					LiLiang	23		SuDu	21														3	2	3	4				True
+4	灵子刀	装备	OOXX3	Equipment	Blue	GOLD	20	1	1	6	9999	3	1					Lingli	21	7000	SuDu	10	5000													4	2	3	4				True
+5	？？	神秘物品	OOXX4	Equipment	Green	GOLD	10	1	1	6	9999	3	1	2	5			FangYuLi	21		DuoChongDaJi	21														5	2	3	4				False
+6	刀柄	装备	OOXX3	Equipment	White	GOLD	20	1	1	6	9999	3	1																							6	2	3	4				False
+7	小EXP包	白痴也知道	OOXX1	EquipmentMaterial	Green	GOLD	20	1	1	6	9999	3	1																							7	2	3					False
+8	金币包	白痴也知道	OOXX2	EquipmentMaterial	Green	GOLD	20	1	1	6	9999	3	1																							8	2	3					False
+9	钻石包	白痴也知道	OOXX2	EquipmentMaterial	Blue	GOLD	20	1	1	6	9999	3	1																							9	2	3	5				False
+10	灵子刀	装备	OOXX3	EquipmentMaterial	Purple	GOLD	20	1	1	6	9999	3	1																							1	2	3				这么NB的东西，你确定要卖出吗？	False
+11	更NB的灵子刀	神秘物品	OOXX4	EquipmentMaterial	Gold	GOLD	20	1	1	6	9999	3	1	2	5																					1	2	3					False
+12	刀柄	装备	OOXX3	EquipmentMaterial	White	GOLD	20	1	1	6	9999	3	1																							1	2	3					False
+13	小EXP包	白痴也知道	OOXX1	EquipmentMaterial	White	GOLD	20	1	1	6	9999	3	1																							1	2	5					False
+14	金币包	白痴也知道	OOXX2	EquipmentMaterial	Blue	GOLD	20	1	5	5	9999	3	1																							1	2						False
+15	钻石包	白痴也知道	OOXX2	EquipmentMaterial	White	GOLD	20	1	5	5	9999	3	1																							1	2	4					False
+16	灵子刀	装备	OOXX3	EquipmentMaterial	Purple	GOLD	20	1	5	5	9999	3	1																							1	2						False
+17	小EXP包	白痴也知道	OOXX1	EquipmentMaterial	White	GOLD	20	1	5	5	9999	3	1																							1	2						False
+18	金币包	白痴也知道	OOXX2	EquipmentMaterial	White	GOLD	20	1	5	5	9999	3	1																							1	2	2	5				False
+19	钻石包	白痴也知道	OOXX2	EquipmentMaterial	Purple	GOLD	20	1	5	5	9999	3	1																							1	2						False
+20	灵子刀	装备	OOXX3	ActiveConsumables	White	GOLD	20	1	5	5	9999	3	1																							1	2						False
+21	？？	神秘物品	OOXX4	ActiveConsumables	White	GOLD	20	1	5	5	9999	3	1	2	5																					1							False
+22	刀柄	装备	OOXX3	ActiveConsumables	White	GOLD	20	1	5	5	9999	3	1																							1							False
+23	小EXP包	白痴也知道	OOXX1	ActiveConsumables	White	GOLD	20	1	5	5	9999	3	1																							1							False
+24	金币包	白痴也知道	OOXX2	ActiveConsumables	White	GOLD	20	1	5	5	9999	3	1																							1							False
+25	钻石包	白痴也知道	OOXX2	PassiveConsumables	White	GOLD	20	1	5	5	9999	3	1																							1							False
+26	灵子刀	装备	OOXX3	PassiveConsumables	White	GOLD	20	1	5	5	9999	3	1																							1							False
+27	？？	神秘物品	OOXX4	PassiveConsumables	White	GOLD	20	1	5	5	9999	3	1	2	5																					1							False
+28	刀柄	装备	OOXX3	PassiveConsumables	White	GOLD	20	1	5	5	9999	3	1																							1							False
+29	小EXP包	白痴也知道	OOXX1	PassiveConsumables	White	GOLD	20	1	5	5	9999	3	1																														False
+30	灵魂石	白痴也知道	OOXX2	Soulstone	White	GOLD	20	1	5	5	9999	3	1																														False
+31	灵魂石	白痴也知道	OOXX2	Soulstone	White	GOLD	20	1	5	5	9999	3	1																														False
+32	灵魂石	装备	OOXX3	Soulstone	White	GOLD	20	1	5	5	9999	3	1																														False
+33	灵魂石	白痴也知道	OOXX1	Soulstone	White	GOLD	20	1	5	5	9999	3	1																														False
+34	灵魂石	白痴也知道	OOXX2	Soulstone	White	GOLD	20	1	5	5	9999	3	1																														False
+35	灵魂石	白痴也知道	OOXX2	Soulstone	White	GOLD	20	1	5	5	9999	3	1																														False
+36	灵魂石	装备	OOXX3	Soulstone	White	GOLD	20	1	5	5	9999	3	1																														False
+101	刀柄碎片	装备	OOXX3	EquipmentPieces	White	GOLD	20	1	5	5	9999	3	1																														False
+102	刀柄	装备	OOXX3	EquipmentPieces	Green	GOLD	20	1	5	5	9999	3	1																														False
+103	刀柄二阶	装备	OOXX3	EquipmentPieces	Blue	GOLD	20	1	5	5	9999	3	1																														False
+104	刀柄三阶	装备	OOXX3	EquipmentPieces	Purple	GOLD	20	1	5	5	9999	3	1																														False
+105	刀柄四阶	装备	OOXX3	EquipmentPieces	Gold	GOLD	20	1	5	5	9999	3	1																														False
+106	刀刃碎片	装备	OOXX3	EquipmentPieces	White	GOLD	20	1	5	5	9999	3	1																														False
+107	刀刃	装备	OOXX3	EquipmentPieces	Green	GOLD	20	1	5	5	9999	3	1																														False
+108	刀刃二阶	装备	OOXX3	EquipmentPieces	Blue	GOLD	20	1	5	5	9999	3	1																														False
+109	刀刃三阶	装备	OOXX3	EquipmentPieces	Purple	GOLD	20	1	5	5	9999	3	1																														False
+110	刀刃四阶	装备	OOXX3	EquipmentPieces	Gold	GOLD	20	1	5	5	9999	3	1																														False
+111	灵子刀	装备	OOXX3	EquipmentPieces	White	GOLD	20	1	5	5	9999	3	1																														False
+112	灵子刀二阶	装备	OOXX3	EquipmentPieces	Green	GOLD	20	1	5	5	9999	3	1																														False
+113	灵子刀三阶	装备	OOXX3	EquipmentPieces	Blue	GOLD	20	1	5	5	9999	3	1																														False
+114	灵子刀四阶	装备	OOXX3	Equipment	Purple	GOLD	20	1	5	5	9999	3	1																														False
+115	灵子碎片	装备	OOXX3	EquipmentPieces	White	GOLD	20	1	5	5	9999	3	1																														False
+116	灵子	装备	OOXX3	EquipmentPieces	Green	GOLD	20	1	5	5	9999	3	1																														False
+117	灵子二阶	装备	OOXX3	EquipmentPieces	Blue	GOLD	20	1	5	5	9999	3	1																														False
+118	灵子三阶	装备	OOXX3	EquipmentPieces	Purple	GOLD	20	1	5	5	9999	3	1																														False
+119	灵子四阶	装备	OOXX3	EquipmentPieces	Gold	GOLD	20	1	5	5	9999	3	1																														False
+20001	灵魂石	黑崎一护灵魂石	OOXX3	Soulstone	Gold	GOLD	20	1	5	5	9999	3	1																														False

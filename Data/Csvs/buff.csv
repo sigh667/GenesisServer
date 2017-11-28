@@ -1,0 +1,14 @@
+1	中毒	50			BeforAttack	1	Negative	True	HitWhileSpellHit	DecreaseHpByDamage	3333	0				DoNothing														
+2	眩晕	60			EndAttack	1	Negative	True	HitWhileSpellHit	DoNothing						DoNothing						Faint	1	0						
+3	连击	51			BeforAttack	1	Negative	True	HitWhileSpellHit	DoNothing						DoNothing														
+4	加防御	52			BeforAttack	1	Negative	True	HitWhileSpellHit	DoNothing						DoNothing						FangYuLi	0	2500						
+5	闪避减低	53			BeforAttack	1	Negative	True	HitWhileSpellHit	DoNothing						DoNothing						ShanBi	-50	0						
+6	闪避增强	54			BeforAttack	1	Negative	True	HitWhileSpellHit	DoNothing						DoNothing						ShanBi	50	0						
+7	冻结	59			EndAttack	1	Negative	True	HitWhileSpellHit	DoNothing						DoNothing						Freeze	1	0						
+8	回复	59			BeforAttack	1	Negative	True	HitWhileSpellHit	RecoverHpByGongJiLi	2000	25				DoNothing														
+9	防御降低	62			BeforAttack	3	Negative	True	HitWhileSpellHit	DoNothing						DoNothing						FangYuLi	0	-6000						
+10	降低闪避	53			BeforAttack	1	Negative	True	HitWhileSpellHit	DoNothing						DoNothing						ShanBi	-100	0						
+11	降低攻击	41			EndAttack	1	Negative	True	HitWhileSpellHit	DoNothing						DoNothing						GongJiLiMin	0	1000	GongJiLiMax	0	1000			
+12	增加普攻减免15%	52			BeforAttack	1	Positive	True	HitWhileSpellHit	DoNothing						DoNothing						PuGongJianMian	1500	0						
+13	删除负面效果				BeforAttack	1	Indifferent	True	HitWhileSpellHit	StopNegativeBuff	1					DoNothing														
+14	沉默大招	63			EndAttack	1	Negative	True	HitWhileSpellHit	DoNothing						DoNothing						ForbidenSpellAttack	1	0						

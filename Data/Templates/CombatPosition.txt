@@ -1,0 +1,3 @@
+float x;        [notNull=true]   //x
+float y;        [notNull=true]   //y
+float z;        [notNull=true]   //z

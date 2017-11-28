@@ -1,0 +1,7 @@
+String EffectID;        [notNull=true]   //x
+String TimeSelectEffctID;        [notNull=true]   //y
+String EndEffectID;        [notNull=true]   //z
+bool RoundCheckBeforAttack; [notNull=true]
+float EffectCD; [notNull=true]
+float BuffRemainTime; [notNull=true]
+String YuanSuLeiXing;[notNull=true]

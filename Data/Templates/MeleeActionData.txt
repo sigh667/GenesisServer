@@ -1,0 +1,13 @@
+String type;				[notNull=true]	//技能类型
+float runToTime;			[notNull=true]	//跑去时间
+String runToAnimation;		[notNull=true]  //跑去动作
+float runBackTime;			[notNull=true]  //跑回时间
+String runBackAnimation;	[notNull=true]	//跑回动作
+float attackAnimation;		[notNull=true]	//攻击动作
+float attackRadius;		[notNull=true]
+bool needTurnBack;			[notNull=true]	//是否需要转身
+String hitAnimation;		[notNull=true]	//受击动作
+float hitMoveX;				[notNull=true]	//受击位移X
+float hitMoveY;				[notNull=true]	//受击位移Y
+float hitMoveZ;				[notNull=true]	//受击位移Z
+float hitTime;				[notNull=true]	//受击时间

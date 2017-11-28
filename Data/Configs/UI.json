@@ -1,0 +1,17 @@
+{
+	"RootPrefabName":"Prefab/UI/UIRoot",
+	"CameraName":"Camera",
+	"BlurCameraName":"BlurCamera",
+	"CombatManaSectionPrefabName":"Prefab/UI/Combat/ManaSection",
+	"SlotPrefabName":"Prefab/UI/Inventory/Slot/Slot",
+	"HeroSlotPrefabName":"Prefab/UI/Inventory/Slot/HeroSlot",
+	"ItemSlotPrefabName":"Prefab/UI/Inventory/Slot/ItemInfo",
+	"RecipeSlotPrefabName":"Prefab/UI/Inventory/Slot/RecipeSlot",
+	"SourceSlotPrefabName":"Prefab/UI/Inventory/Slot/SourceInfo",
+	"SkillSlotPrefabName":"Prefab/UI/Pets/Slot/SpellSlot",
+	"LevelUpBannerPrefabName":"Prefab/UI/Pets/Slot/LevelUpBanner",
+	"CurrencySlotPrefabName":"Prefab/UI/Common/CurrencySlot",
+	"ShopItemSlotPrefabName":"Prefab/UI/Shop/ShopItemSlot",
+	"EmbattleSlotPrefabName":"Prefab/UI/CombatEmbattle/EmbattleSlot",
+	"EmbattleStageProgressbarIconPrefabName":"Prefab/UI/CombatEmbattle/StageProgressbarIcon"
+}
