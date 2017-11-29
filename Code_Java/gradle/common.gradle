@@ -1,0 +1,50 @@
+import java.util.zip.ZipEntry
+import java.util.zip.ZipFile
+
+version = '1.0'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+configurations {
+    compile
+}
+
+def akkaReferenceFile = new File("$buildDir/reference.conf")
+akkaReferenceFile.deleteOnExit()
+
+task createReferenceFile {
+    doLast {
+        configurations.compile.files.each {
+            println it.name
+        }
+
+        def files = configurations.compile.files.findAll { it.name.startsWith("akka") }
+        files.each {
+            println "akka file:" + it.name
+        }
+        files.each { File file ->
+            def zipFile = new ZipFile(file);
+            zipFile.entries().findAll { it.name == "reference.conf" }.each {
+                akkaReferenceFile << zipFile.getInputStream(it as ZipEntry).text
+            }
+        }
+    }
+}
+
+//create a single Jar with all dependencies
+task fatJar(type: Jar) {
+
+    zip64 true
+
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Jar File Example',
+                'Implementation-Version': version,
+                'Main-Class': 'com.mkyong.DateUtils'
+    }
+    baseName = project.name + '-all'
+    from({ configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } })
+    from files(akkaReferenceFile)
+    with jar
+}
+
+fatJar.dependsOn createReferenceFile
