@@ -28,8 +28,6 @@ dependencies {
 
     compile project(":core")
     compile project(":client_msg")
-
-    compile group: 'io.netty', name: 'netty-all', version: '4.1.17.Final'
 }
 
 sourceSets {

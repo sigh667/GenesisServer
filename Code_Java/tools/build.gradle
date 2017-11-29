@@ -27,9 +27,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 
     compile 'org.apache.poi:poi:3.17'
-    compile 'org.apache.poi:poi-ooxml:3.17'
     compile 'org.apache.poi:poi-ooxml-schemas:3.17'
-    compile 'org.slf4j:slf4j-api:1.7.25'
     compile group: 'com.dyuproject.protostuff', name: 'protostuff-parser', version: '1.0.12'
 
     compile project(':core')

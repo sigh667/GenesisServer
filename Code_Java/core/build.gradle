@@ -31,7 +31,6 @@ dependencies {
     compile 'com.alibaba:fastjson:1.2.41'
     compile 'org.slf4j:slf4j-api:1.7.25'
     compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
-    compile 'com.google.protobuf:protobuf-java:3.5.0'
     compile 'io.netty:netty-all:4.1.17.Final'
     compile 'org.hibernate:hibernate-core:4.3.10.Final'
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'

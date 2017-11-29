@@ -28,9 +28,6 @@ dependencies {
 
     compile project(":network2client")
     compile project(":game_server")
-
-    compile 'org.slf4j:slf4j-api:1.7.25'
-    compile 'com.google.protobuf:protobuf-java:3.5.0'
 }
 
 sourceSets {

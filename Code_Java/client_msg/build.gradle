@@ -27,9 +27,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 
     compile project(":core")
-
-    compile group: 'io.netty', name: 'netty-all', version: '4.1.17.Final'
-    compile group: 'javax.transaction', name: 'jta', version: '1.1'
 }
 
 sourceSets {
