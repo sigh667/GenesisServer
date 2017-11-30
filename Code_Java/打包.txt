@@ -1,0 +1,12 @@
+到gradle目录下执行build.sh文件，格式如下
+
+sh build.sh [要打包的工程目录名字]
+
+比如用 sh build.sh login_server  命令进行login_server的打包
+
+打包完成后会在指定工程路径下创建一个build文件夹，结构如下
+    build
+        dependencies 用来放置所有的外部jar包依赖
+        libs         用来放置包含我们自己写的代码的jar包和启动脚本start.sh
+
+打包完成后执行build/libs/start.sh文件可启动服务器
