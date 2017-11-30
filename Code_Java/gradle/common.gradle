@@ -1,6 +1,3 @@
-import java.util.zip.ZipEntry
-import java.util.zip.ZipFile
-
 version = '1.0'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -9,24 +6,37 @@ configurations {
     compile
 }
 
-def akkaReferenceFile = new File("$buildDir/reference.conf")
-akkaReferenceFile.deleteOnExit()
+ext.isProjectJar = { String jarName ->
+    for (def subProject : project.parent.subprojects) {
+        def projectJarName = subProject.name + ".jar"
+        if (projectJarName.equals(jarName)) {
+            return true
+        }
+    }
 
-task createReferenceFile {
+    return false
+}
+
+task copyDependencies {
     doLast {
-        configurations.compile.files.each {
-            println it.name
-        }
+        copy {
+            from({
+                configurations.compile.findAll {
+                    !isProjectJar(it.name)
+                }
+            })
 
-        def files = configurations.compile.files.findAll { it.name.startsWith("akka") }
-        files.each {
-            println "akka file:" + it.name
+            into project.buildDir.path + "/dependencies/"
+            include "**/*.jar"
         }
-        files.each { File file ->
-            def zipFile = new ZipFile(file);
-            zipFile.entries().findAll { it.name == "reference.conf" }.each {
-                akkaReferenceFile << zipFile.getInputStream(it as ZipEntry).text
-            }
+    }
+}
+
+task copyStartScript {
+    doLast {
+        copy {
+            from "start.sh"
+            into project.buildDir.path + "/libs/"
         }
     }
 }
@@ -42,9 +52,13 @@ task fatJar(type: Jar) {
                 'Main-Class': 'com.mkyong.DateUtils'
     }
     baseName = project.name + '-all'
-    from({ configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } })
-    from files(akkaReferenceFile)
+    from({
+        configurations.compile.findAll {
+            isProjectJar(it.name)
+        }.collect { it.isDirectory() ? it : zipTree(it) }
+    })
     with jar
 }
 
-fatJar.dependsOn createReferenceFile
+fatJar.dependsOn copyDependencies
+fatJar.dependsOn copyStartScript
