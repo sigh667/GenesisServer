@@ -108,34 +108,34 @@ public class HeroEntity implements EntityWithRedisKey<HeroKey>, IHumanRelatedEnt
         this.fragmentCount = fragmentCount;
     }
 
-    @Type(type = "com.mokylin.bleach.gamedb.orm.type.HeroSkillType")
-    @Columns(columns = {@Column(name = "skillTemplateId1"), @Column(name = "skillLevel1"),
-            @Column(name = "skillTemplateId2"), @Column(name = "skillLevel2"),
-            @Column(name = "skillTemplateId3"), @Column(name = "skillLevel3"),
-            @Column(name = "skillTemplateId4"), @Column(name = "skillLevel4"),
-            @Column(name = "skillTemplateId5"), @Column(name = "skillLevel5"),
-            @Column(name = "skillTemplateId6"), @Column(name = "skillLevel6")})
-    public HeroSkill[] getHeroSkills() {
-        return heroSkills;
-    }
+    //    @Type(type = "com.mokylin.bleach.gamedb.orm.type.HeroSkillType")
+    //    @Columns(columns = {@Column(name = "skillTemplateId1"), @Column(name = "skillLevel1"),
+    //            @Column(name = "skillTemplateId2"), @Column(name = "skillLevel2"),
+    //            @Column(name = "skillTemplateId3"), @Column(name = "skillLevel3"),
+    //            @Column(name = "skillTemplateId4"), @Column(name = "skillLevel4"),
+    //            @Column(name = "skillTemplateId5"), @Column(name = "skillLevel5"),
+    //            @Column(name = "skillTemplateId6"), @Column(name = "skillLevel6")})
+    //    public HeroSkill[] getHeroSkills() {
+    //        return heroSkills;
+    //    }
 
     public void setHeroSkills(HeroSkill[] heroSkills) {
         this.heroSkills = heroSkills;
     }
 
-    @Type(type = "com.mokylin.bleach.gamedb.orm.type.HeroEquipType")
-    @Columns(columns = {@Column(name = "equipTemplateId1"), @Column(name = "equipEnchantLevel1"),
-            @Column(name = "equipEnchantExp1"), @Column(name = "equipTemplateId2"),
-            @Column(name = "equipEnchantLevel2"), @Column(name = "equipEnchantExp2"),
-            @Column(name = "equipTemplateId3"), @Column(name = "equipEnchantLevel3"),
-            @Column(name = "equipEnchantExp3"), @Column(name = "equipTemplateId4"),
-            @Column(name = "equipEnchantLevel4"), @Column(name = "equipEnchantExp4"),
-            @Column(name = "equipTemplateId5"), @Column(name = "equipEnchantLevel5"),
-            @Column(name = "equipEnchantExp5"), @Column(name = "equipTemplateId6"),
-            @Column(name = "equipEnchantLevel6"), @Column(name = "equipEnchantExp6")})
-    public HeroEquip[] getHeroEquips() {
-        return heroEquips;
-    }
+    //    @Type(type = "com.mokylin.bleach.gamedb.orm.type.HeroEquipType")
+    //    @Columns(columns = {@Column(name = "equipTemplateId1"), @Column(name = "equipEnchantLevel1"),
+    //            @Column(name = "equipEnchantExp1"), @Column(name = "equipTemplateId2"),
+    //            @Column(name = "equipEnchantLevel2"), @Column(name = "equipEnchantExp2"),
+    //            @Column(name = "equipTemplateId3"), @Column(name = "equipEnchantLevel3"),
+    //            @Column(name = "equipEnchantExp3"), @Column(name = "equipTemplateId4"),
+    //            @Column(name = "equipEnchantLevel4"), @Column(name = "equipEnchantExp4"),
+    //            @Column(name = "equipTemplateId5"), @Column(name = "equipEnchantLevel5"),
+    //            @Column(name = "equipEnchantExp5"), @Column(name = "equipTemplateId6"),
+    //            @Column(name = "equipEnchantLevel6"), @Column(name = "equipEnchantExp6")})
+    //    public HeroEquip[] getHeroEquips() {
+    //        return heroEquips;
+    //    }
 
     public void setHeroEquips(HeroEquip[] heroEquips) {
         this.heroEquips = heroEquips;

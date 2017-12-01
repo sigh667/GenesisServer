@@ -185,12 +185,12 @@ public class Hero extends ObjectInSqlImpl<Long, HeroEntity> {
         createTime = entity.getCreateTime();
 
         //装备
-        final HeroEquip[] heroEquips = entity.getHeroEquips();
-        equipManager.initFromHeroEquips(heroEquips);
+        //        final HeroEquip[] heroEquips = entity.getHeroEquips();
+        //        equipManager.initFromHeroEquips(heroEquips);
 
         //技能
-        final HeroSkill[] heroSkills = entity.getHeroSkills();
-        skillManager.initFromHeroSkills(heroSkills);
+        //        final HeroSkill[] heroSkills = entity.getHeroSkills();
+        //        skillManager.initFromHeroSkills(heroSkills);
     }
 
     /**
