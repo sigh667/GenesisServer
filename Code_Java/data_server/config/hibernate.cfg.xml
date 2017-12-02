@@ -17,6 +17,7 @@
         <property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider
         </property>
         <property name="hibernate.cache.use_query_cache">false</property>
+        <property name="connection.verifyServerCertificate">false</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.jdbc.batch_size">25</property>
         <property name="hibernate.connection.autocommit">false</property>

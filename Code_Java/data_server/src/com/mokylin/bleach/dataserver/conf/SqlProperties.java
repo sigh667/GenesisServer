@@ -11,7 +11,7 @@ public class SqlProperties {
 
     private final static String DB_URL_PRE = "jdbc:mysql://";
     private final static String DB_URL_POST =
-            "?useUnicode=true&characterEncoding=utf-8&useServerPrepStmts=true";
+            "?useUnicode=true&characterEncoding=utf-8&useSSL=false&useServerPrepStmts=true&serverTimezone=GMT";
     private String ip;
     private int port;
     private String databaseName;
