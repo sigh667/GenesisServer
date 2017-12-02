@@ -14,6 +14,7 @@ import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import com.typesafe.config.ConfigValue;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -83,9 +84,23 @@ public final class ConfigBuilder {
     }
 
     public static Config buildConfigFromFileName(String cfgName) {
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        InputStream in = classLoader.getResourceAsStream(cfgName);
-        return buildConfigFromInputStream(in);
+        String curJarPath =
+                ConfigBuilder.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+        String filePath = curJarPath.substring(0, curJarPath.lastIndexOf("/") + 1) + cfgName;
+        File file = new File(filePath);
+        if (curJarPath.endsWith("jar") && file.exists()) {
+            try {
+                return buildConfigFromInputStream(new FileInputStream(file));
+            } catch (FileNotFoundException e) {
+                throw new ConfigBuildException(
+                        "parse configuration file content fail!please check your configuration file's format!",
+                        e);
+            }
+        } else {
+            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+            InputStream in = classLoader.getResourceAsStream(cfgName);
+            return buildConfigFromInputStream(in);
+        }
     }
 
     /**
