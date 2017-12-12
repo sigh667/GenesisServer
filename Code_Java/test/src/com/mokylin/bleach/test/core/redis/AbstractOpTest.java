@@ -52,7 +52,7 @@ public class AbstractOpTest {
             Assert.fail("Test Redis can not started!");
             throw new RuntimeException("Test Redis can not started!");
         }
-        redisService.addNewRedisConnection(new RedisConfig("default", "127.0.0.1", 6379, 1), null);
+        redisService.addNewRedisConnection(new RedisConfig("default", "127.0.0.1", 6379, 3), null);
         redis = redisService.getRedis("default").get();
     }
 
