@@ -38,16 +38,27 @@ public class ExcelOperation {
         if (!(new File(path).exists())) {
             return;
         }
-
-        XSSFWorkbook workbook = null;
         InputStream ins = null;
         try {
             ins = new FileInputStream(path);
+        } catch (FileNotFoundException e) {
+            logger.error("load error!", e);
+        }
+
+        loadExcel(ins, operation);
+    }
+
+    /**
+     * 加载指定excel文件
+     * @param ins
+     * @param operation
+     */
+    public static void loadExcel(InputStream ins, LoadSheetsOperation operation) {
+        XSSFWorkbook workbook = null;
+        try {
             workbook = new XSSFWorkbook(ins);
             Iterator<Sheet> sheetIt = workbook.iterator();
             operation.load(sheetIt);
-        } catch (FileNotFoundException e) {
-            logger.error("load error!", e);
         } catch (IOException e) {
             logger.error("load error!", e);
         } finally {
@@ -55,6 +66,7 @@ public class ExcelOperation {
                 try {
                     ins.close();
                 } catch (IOException ex) {
+                    logger.error("close input stream error!", ex);
                 }
             }
         }

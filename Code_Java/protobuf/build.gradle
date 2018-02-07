@@ -10,6 +10,7 @@
 apply plugin: 'java-library'
 
 apply plugin: 'java'
+apply plugin: 'com.google.protobuf'
 apply plugin: 'idea'
 apply plugin: 'maven'
 
@@ -23,6 +24,15 @@ repositories {
 
 //    mavenLocal()
 //    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.4'
+    }
 }
 
 tasks.withType(JavaCompile) {
@@ -44,11 +54,29 @@ sourceSets {
         java {
             srcDirs = ['src']
         }
+
+        proto {
+            srcDir 'Protos'
+            srcDir 'Protos/google/protobuf'
+            srcDir 'Protos/db'
+
+            include '**/*.protodevel'
+        }
     }
 }
 
 uploadArchives {
     repositories {
         mavenLocal()
+    }
+}
+
+protobuf {
+
+    generatedFilesBaseDir = "$projectDir/src/"
+    // Configure the protoc executable
+    protoc {
+        // Download from repositories
+        artifact = 'com.google.protobuf:protoc:2.6.1'
     }
 }

@@ -3,7 +3,7 @@ package com.mokylin.bleach.robot.item;
 import com.mokylin.bleach.common.core.GlobalData;
 import com.mokylin.bleach.common.item.IItem;
 import com.mokylin.bleach.common.item.template.ItemTemplate;
-import com.mokylin.bleach.protobuf.ItemMessage.ItemData;
+import com.mokylin.bleach.protobuf.db.DBInventoryBlob.ItemData;
 import com.mokylin.bleach.robot.human.Human;
 
 public class Item implements IItem {

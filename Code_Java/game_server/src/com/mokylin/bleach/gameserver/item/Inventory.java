@@ -9,8 +9,8 @@ import com.mokylin.bleach.gamedb.orm.entity.ItemEntity;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.item.ItemInfo.DetailItemInfo;
 import com.mokylin.bleach.protobuf.ItemMessage.GCInventoryInfo;
-import com.mokylin.bleach.protobuf.ItemMessage.ItemData;
-import com.mokylin.bleach.protobuf.ItemMessage.ItemData.Builder;
+import com.mokylin.bleach.protobuf.db.DBInventoryBlob.ItemData;
+import com.mokylin.bleach.protobuf.db.DBInventoryBlob.ItemData.Builder;
 
 import java.util.List;
 
