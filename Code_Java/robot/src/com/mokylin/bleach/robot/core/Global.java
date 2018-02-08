@@ -2,15 +2,12 @@ package com.mokylin.bleach.robot.core;
 
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.Parser;
-
 import com.mokylin.bleach.common.core.GlobalData;
 import com.mokylin.bleach.core.event.EventBus;
 import com.mokylin.bleach.robot.core.config.RobotConfig;
 import com.mokylin.bleach.robot.core.msgfunc.GCMsgFunctionService;
 import com.mokylin.bleach.robot.core.msgfunc.GCMsgFunctionUtil;
 import com.mokylin.bleach.robot.core.msgfunc.IGCMsgFunc;
-import com.mokylin.td.clientmsg.ProtoSerializationDefine;
-
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.Map;
@@ -26,14 +23,10 @@ public class Global {
     private static GCMsgFunctionService gcMsgFuncService;
     /**事件管理器*/
     private static EventBus eventBus;
-    /**消息反序列化工具*/
-    private static ProtoSerializationDefine pd;
 
 
     public static void init(boolean haveUI) {
         GlobalData.init(RobotConfig.getBaseResourceDir(), RobotConfig.isXorLoad());
-
-        pd = new ProtoSerializationDefine();
 
         if (haveUI) {
             Pair<Map<Integer, IGCMsgFunc<GeneratedMessage>>, Map<Integer, Parser<? extends GeneratedMessage>>>
@@ -128,10 +121,6 @@ public class Global {
         //				System.out.println();
         //			}
         //		}
-    }
-
-    public static ProtoSerializationDefine getPd() {
-        return pd;
     }
 
     public static GCMsgFunctionService getGCMsgFuncService() {
