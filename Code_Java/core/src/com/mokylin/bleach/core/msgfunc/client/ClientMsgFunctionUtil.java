@@ -24,9 +24,8 @@ import java.util.Set;
 public class ClientMsgFunctionUtil {
 
     /**
-     *
-     * @param clisentMsgFuncsPackage
-     * @param isCG
+     * 遍历指定包名下的所有Java文件，组装Handler
+     * @param clisentMsgFuncsPackage    包名
      * @return
      */
     @SuppressWarnings("unchecked")

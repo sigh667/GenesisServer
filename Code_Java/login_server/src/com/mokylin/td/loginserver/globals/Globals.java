@@ -1,5 +1,9 @@
 package com.mokylin.td.loginserver.globals;
 
+import akka.actor.Props;
+import com.google.common.collect.Table;
+import com.google.protobuf.GeneratedMessage;
+import com.google.protobuf.Parser;
 import com.mokylin.bleach.core.akka.Akka;
 import com.mokylin.bleach.core.concurrent.process.CommonProcessType;
 import com.mokylin.bleach.core.heartbeat.HeartbeatService;
@@ -9,44 +13,45 @@ import com.mokylin.bleach.core.isc.RemoteActorManager;
 import com.mokylin.bleach.core.redis.IRedis;
 import com.mokylin.bleach.core.redis.RedisUtil;
 import com.mokylin.bleach.core.redis.config.RedisConfig;
-import com.mokylin.td.clientmsg.ProtoSerializationDefine;
-import com.mokylin.td.clientmsg.core.ICommunicationDataBase;
+import com.mokylin.bleach.protobuf.MessageType;
 import com.mokylin.td.loginserver.config.LoginServerConfig;
 import com.mokylin.td.loginserver.core.ClientSessionContainer;
-import com.mokylin.td.network2client.handle.ClientMsgHandleUtil;
-import com.mokylin.td.network2client.handle.IClientMsgHandle;
-
+import com.mokylin.td.loginserver.core.process.ClientMsgHandlerUtil;
+import com.mokylin.td.loginserver.core.process.ClientMsgProcessor;
+import com.mokylin.td.loginserver.core.process.IClientMsgHandler;
+import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-import akka.actor.Props;
-
 /**
  * LoginServer的全局服务
- * @author baoliang.shen
  *
+ * @author baoliang.shen
  */
 public class Globals {
-    /** 日志 */
+    /**
+     * 日志
+     */
     private static final Logger logger = LoggerFactory.getLogger(Globals.class);
 
     private static LoginServerConfig serverConfig;
     private static Akka akka;
     private static ISCService iscService;
 
-    /**心跳服务*/
+    /**
+     * 心跳服务
+     */
     private static HeartbeatService heartBeatService = null;
-    /**Redis连接*/
+    /**
+     * Redis连接
+     */
     private static IRedis iRedis = null;
-
-    //	/**客户端消息解析服务*/
-    //	private static ClientMsgHandleService clientMsgHandleService;
-    /**客户端消息反序列化*/
-    private static ProtoSerializationDefine pd;
-    /**客户端消息处理器map*/
-    private static Map<Integer, IClientMsgHandle<ICommunicationDataBase>> handleMap;
+    /**
+     * 客户端消息分发器
+     */
+    private static ClientMsgProcessor clientMsgProcessor;
 
 
     public static void init() throws InstantiationException, IllegalAccessException {
@@ -58,9 +63,10 @@ public class Globals {
         //		GlobalData.init(LoginServerConfig.getBaseResourceDir(), LoginServerConfig.isXorLoad());
         //		logger.info("Excel文件读取完毕");
 
-        // 3.0客户端消息解析器
-        pd = new ProtoSerializationDefine();
-        handleMap = ClientMsgHandleUtil.buildMsgHandle("com.mokylin.td.loginserver");
+        // 3.0客户端消息分发器
+        Pair<Table<MessageType.MessageTarget, Integer, IClientMsgHandler<GeneratedMessage>>, Map<Integer, Parser<? extends GeneratedMessage>>>
+                tableMapPair = ClientMsgHandlerUtil.buildMsgHandlers("com.mokylin.td.loginserver");
+        clientMsgProcessor = new ClientMsgProcessor(tableMapPair.getLeft(), tableMapPair.getRight());
 
         // 4.0初始化Redis访问服务
         iRedis = RedisUtil.createRedis(null, RedisConfig.getRedisConfig());//TODO 正式上线时，不能传null
@@ -85,22 +91,7 @@ public class Globals {
         getHeartBeatService().registerHeartbeat(ClientSessionContainer.Inst);
     }
 
-    /**
-     *
-     * @param msgType    消息号
-     * @return 消息处理器
-     */
-    public static IClientMsgHandle<ICommunicationDataBase> getMsgHandle(Integer msgType) {
-        return handleMap.get(msgType);
-    }
-
-    /**
-     *
-     * @return 客户端消息反序列化工具
-     */
-    public static ProtoSerializationDefine getPd() {
-        return pd;
-    }
+    public static ClientMsgProcessor getClientMsgProcessor() { return clientMsgProcessor; }
 
     public static HeartbeatService getHeartBeatService() {
         return heartBeatService;

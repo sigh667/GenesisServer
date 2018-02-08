@@ -43,25 +43,29 @@ public final class MessageType {
      */
     SERVER(3, 3),
     /**
+     * <code>LOGIN_SERVER = 4;</code>
+     */
+    LOGIN_SERVER(4, 4),
+    /**
      * <code>PLAYER_MANAGER = 10;</code>
      */
-    PLAYER_MANAGER(4, 10),
+    PLAYER_MANAGER(5, 10),
     /**
      * <code>PLAYER = 11;</code>
      */
-    PLAYER(5, 11),
+    PLAYER(6, 11),
     /**
      * <code>SCENE = 12;</code>
      */
-    SCENE(6, 12),
+    SCENE(7, 12),
     /**
      * <code>GUILD = 13;</code>
      */
-    GUILD(7, 13),
+    GUILD(8, 13),
     /**
      * <code>ARENA = 14;</code>
      */
-    ARENA(8, 14),
+    ARENA(9, 14),
     ;
 
     /**
@@ -80,6 +84,10 @@ public final class MessageType {
      * <code>SERVER = 3;</code>
      */
     public static final int SERVER_VALUE = 3;
+    /**
+     * <code>LOGIN_SERVER = 4;</code>
+     */
+    public static final int LOGIN_SERVER_VALUE = 4;
     /**
      * <code>PLAYER_MANAGER = 10;</code>
      */
@@ -110,6 +118,7 @@ public final class MessageType {
         case 1: return ISC_ACTOR;
         case 2: return SERVER_MANAGER;
         case 3: return SERVER;
+        case 4: return LOGIN_SERVER;
         case 10: return PLAYER_MANAGER;
         case 11: return PLAYER;
         case 12: return SCENE;
@@ -1291,60 +1300,60 @@ public final class MessageType {
   static {
     java.lang.String[] descriptorData = {
       "\n\021MessageType.proto\022\013com.mokylin\032 google" +
-      "/protobuf/descriptor.proto*\212\001\n\rMessageTa" +
+      "/protobuf/descriptor.proto*\234\001\n\rMessageTa" +
       "rget\022\t\n\005ERROR\020\000\022\r\n\tISC_ACTOR\020\001\022\022\n\016SERVER" +
-      "_MANAGER\020\002\022\n\n\006SERVER\020\003\022\022\n\016PLAYER_MANAGER" +
-      "\020\n\022\n\n\006PLAYER\020\013\022\t\n\005SCENE\020\014\022\t\n\005GUILD\020\r\022\t\n\005" +
-      "ARENA\020\016*\234\005\n\rCGMessageType\022\027\n\023CG_GAME_SER" +
-      "VER_INFO\020\001\022\017\n\013CG_TEST_MSG\020\002\022\020\n\014CG_LOGIN_" +
-      "NEW\020\013\022\026\n\022CG_LOGIN_MSG_BEGIN\0202\022\022\n\010CG_LOGI" +
-      "N\0203\032\004\210\265\030\n\022\030\n\016CG_CREATE_ROLE\0204\032\004\210\265\030\n\022\030\n\016C" +
-      "G_SELECT_ROLE\0205\032\004\210\265\030\n\022\024\n\020CG_LOGIN_MSG_EN",
-      "D\020d\022\025\n\013CG_ITEM_USE\020e\032\004\210\265\030\013\022\026\n\014CG_ITEM_SE" +
-      "LL\020f\032\004\210\265\030\013\022\032\n\020CG_ITEM_COMPOUND\020g\032\004\210\265\030\013\022\027" +
-      "\n\014CG_HIRE_HERO\020\311\001\032\004\210\265\030\013\022\032\n\017CG_HERO_STAR_" +
-      "UP\020\312\001\032\004\210\265\030\013\022\035\n\022CG_HERO_QUALITY_UP\020\313\001\032\004\210\265" +
-      "\030\013\022!\n\026CG_HERO_SKILL_LEVEL_UP\020\314\001\032\004\210\265\030\013\022\035\n" +
-      "\022CG_HERO_WEAR_EQUIP\020\315\001\032\004\210\265\030\013\022\035\n\022CG_BUY_S" +
-      "KILL_POINT\020\316\001\032\004\210\265\030\013\022\024\n\tCG_GM_CMD\020\255\002\032\004\210\265\030" +
-      "\013\022\036\n\023CG_GET_DAILY_REWARD\020\337\002\032\004\210\265\030\013\022\027\n\014CG_" +
-      "OPEN_SHOP\020\221\003\032\004\210\265\030\013\022\033\n\020CG_REFRESH_GOODS\020\222" +
-      "\003\032\004\210\265\030\013\022\026\n\013CG_BUY_GOOD\020\223\003\032\004\210\265\030\013\022\031\n\016CG_OP",
-      "EN_WINDOW\020\303\003\032\004\210\265\030\013\022\032\n\017CG_CLOSE_WINDOW\020\304\003" +
-      "\032\004\210\265\030\013\022\036\n\023CG_HUMAN_BUY_ENERGY\020\365\003\032\004\210\265\030\013*\325" +
-      "\006\n\rGCMessageType\022\021\n\rGC_LOGIN_FAIL\0203\022\020\n\014G" +
-      "C_ROLE_LIST\0204\022\022\n\016GC_CREATE_ROLE\0205\022\027\n\023GC_" +
-      "CREATE_ROLE_FAIL\0206\022\030\n\024GC_HUMAN_DETAIL_IN" +
-      "FO\020e\022\021\n\rGC_DATA_ERROR\020f\022\033\n\027GC_HUMAN_BUY_" +
-      "ENERGY_ACK\020g\022\033\n\027GC_HUMAN_BUY_ENERGY_NEG\020" +
-      "h\022 \n\034GC_HUMAN_ENERGY_RECOVER_INFO\020i\022\037\n\033G" +
-      "C_HUMAN_COST_ENERGY_FAILED\020j\022$\n GC_HUMAN" +
-      "_BUY_ENERGY_COUNTS_RESET\020k\022\023\n\017GC_VIP_LEV",
-      "EL_UP\020l\022\025\n\021GC_HUMAN_LEVEL_UP\020m\022\032\n\025GC_HER" +
-      "O_CHANGED_PROPS\020\311\001\022\025\n\020GC_ALL_HERO_INFO\020\312" +
-      "\001\022\020\n\013GC_HERO_ADD\020\313\001\022\023\n\016GC_HERO_UPDATE\020\314\001" +
-      "\022\026\n\021GC_INVENTORY_INFO\020\255\002\022\023\n\016GC_ITEM_UPDA" +
-      "TE\020\256\002\022\031\n\024GC_DAILY_REWARD_INFO\020\221\003\022\037\n\032GC_G" +
-      "ET_DAILY_REWARD_FAILED\020\222\003\022\021\n\014GC_SHOP_INF" +
-      "O\020\303\003\022\"\n\035GC_SHOP_MANUALLY_REFRESH_INFO\020\304\003" +
-      "\022\030\n\023GC_GOOD_BUY_SUCCESS\020\305\003\022)\n$GC_SHOP_MA" +
-      "NUALLY_REFRESH_COUNT_RESET\020\306\003\022\036\n\031GC_SHOP" +
-      "_AUTO_REFRESH_INFO\020\307\003\022\022\n\rGC_SHOP_CLOSE\020\310",
-      "\003\022\023\n\016GC_SHOP_PROMPT\020\311\003\022\030\n\023GC_OPENED_TEMP" +
-      "_SHOP\020\312\003\022\021\n\014GC_OPEN_SHOP\020\313\003\022\032\n\025GC_FUNCTI" +
-      "ON_OPEN_LIST\020\365\003\022\025\n\020GC_FUNCTION_OPEN\020\366\003\022\016" +
-      "\n\tGC_GM_CMD\020\247\004*\"\n\rMGMessageType\022\021\n\rMG_BR" +
-      "OAD_CAST\020\001:V\n\017cg_message_type\022\037.google.p" +
-      "rotobuf.MessageOptions\030\321\206\003 \001(\0162\032.com.mok" +
-      "ylin.CGMessageType:V\n\017gc_message_type\022\037." +
-      "google.protobuf.MessageOptions\030\322\206\003 \001(\0162\032" +
-      ".com.mokylin.GCMessageType:V\n\017mg_message" +
-      "_type\022\037.google.protobuf.MessageOptions\030\323",
-      "\206\003 \001(\0162\032.com.mokylin.MGMessageType:V\n\006TA" +
-      "RGET\022!.google.protobuf.EnumValueOptions\030" +
-      "\321\206\003 \001(\0162\032.com.mokylin.MessageTarget:\005ERR" +
-      "ORB*\n\033com.mokylin.bleach.protobufB\013Messa" +
-      "geType"
+      "_MANAGER\020\002\022\n\n\006SERVER\020\003\022\020\n\014LOGIN_SERVER\020\004" +
+      "\022\022\n\016PLAYER_MANAGER\020\n\022\n\n\006PLAYER\020\013\022\t\n\005SCEN" +
+      "E\020\014\022\t\n\005GUILD\020\r\022\t\n\005ARENA\020\016*\242\005\n\rCGMessageT" +
+      "ype\022\027\n\023CG_GAME_SERVER_INFO\020\001\022\017\n\013CG_TEST_" +
+      "MSG\020\002\022\026\n\014CG_LOGIN_NEW\020\013\032\004\210\265\030\004\022\026\n\022CG_LOGI" +
+      "N_MSG_BEGIN\0202\022\022\n\010CG_LOGIN\0203\032\004\210\265\030\n\022\030\n\016CG_" +
+      "CREATE_ROLE\0204\032\004\210\265\030\n\022\030\n\016CG_SELECT_ROLE\0205\032",
+      "\004\210\265\030\n\022\024\n\020CG_LOGIN_MSG_END\020d\022\025\n\013CG_ITEM_U" +
+      "SE\020e\032\004\210\265\030\013\022\026\n\014CG_ITEM_SELL\020f\032\004\210\265\030\013\022\032\n\020CG" +
+      "_ITEM_COMPOUND\020g\032\004\210\265\030\013\022\027\n\014CG_HIRE_HERO\020\311" +
+      "\001\032\004\210\265\030\013\022\032\n\017CG_HERO_STAR_UP\020\312\001\032\004\210\265\030\013\022\035\n\022C" +
+      "G_HERO_QUALITY_UP\020\313\001\032\004\210\265\030\013\022!\n\026CG_HERO_SK" +
+      "ILL_LEVEL_UP\020\314\001\032\004\210\265\030\013\022\035\n\022CG_HERO_WEAR_EQ" +
+      "UIP\020\315\001\032\004\210\265\030\013\022\035\n\022CG_BUY_SKILL_POINT\020\316\001\032\004\210" +
+      "\265\030\013\022\024\n\tCG_GM_CMD\020\255\002\032\004\210\265\030\013\022\036\n\023CG_GET_DAIL" +
+      "Y_REWARD\020\337\002\032\004\210\265\030\013\022\027\n\014CG_OPEN_SHOP\020\221\003\032\004\210\265" +
+      "\030\013\022\033\n\020CG_REFRESH_GOODS\020\222\003\032\004\210\265\030\013\022\026\n\013CG_BU",
+      "Y_GOOD\020\223\003\032\004\210\265\030\013\022\031\n\016CG_OPEN_WINDOW\020\303\003\032\004\210\265" +
+      "\030\013\022\032\n\017CG_CLOSE_WINDOW\020\304\003\032\004\210\265\030\013\022\036\n\023CG_HUM" +
+      "AN_BUY_ENERGY\020\365\003\032\004\210\265\030\013*\325\006\n\rGCMessageType" +
+      "\022\021\n\rGC_LOGIN_FAIL\0203\022\020\n\014GC_ROLE_LIST\0204\022\022\n" +
+      "\016GC_CREATE_ROLE\0205\022\027\n\023GC_CREATE_ROLE_FAIL" +
+      "\0206\022\030\n\024GC_HUMAN_DETAIL_INFO\020e\022\021\n\rGC_DATA_" +
+      "ERROR\020f\022\033\n\027GC_HUMAN_BUY_ENERGY_ACK\020g\022\033\n\027" +
+      "GC_HUMAN_BUY_ENERGY_NEG\020h\022 \n\034GC_HUMAN_EN" +
+      "ERGY_RECOVER_INFO\020i\022\037\n\033GC_HUMAN_COST_ENE" +
+      "RGY_FAILED\020j\022$\n GC_HUMAN_BUY_ENERGY_COUN",
+      "TS_RESET\020k\022\023\n\017GC_VIP_LEVEL_UP\020l\022\025\n\021GC_HU" +
+      "MAN_LEVEL_UP\020m\022\032\n\025GC_HERO_CHANGED_PROPS\020" +
+      "\311\001\022\025\n\020GC_ALL_HERO_INFO\020\312\001\022\020\n\013GC_HERO_ADD" +
+      "\020\313\001\022\023\n\016GC_HERO_UPDATE\020\314\001\022\026\n\021GC_INVENTORY" +
+      "_INFO\020\255\002\022\023\n\016GC_ITEM_UPDATE\020\256\002\022\031\n\024GC_DAIL" +
+      "Y_REWARD_INFO\020\221\003\022\037\n\032GC_GET_DAILY_REWARD_" +
+      "FAILED\020\222\003\022\021\n\014GC_SHOP_INFO\020\303\003\022\"\n\035GC_SHOP_" +
+      "MANUALLY_REFRESH_INFO\020\304\003\022\030\n\023GC_GOOD_BUY_" +
+      "SUCCESS\020\305\003\022)\n$GC_SHOP_MANUALLY_REFRESH_C" +
+      "OUNT_RESET\020\306\003\022\036\n\031GC_SHOP_AUTO_REFRESH_IN",
+      "FO\020\307\003\022\022\n\rGC_SHOP_CLOSE\020\310\003\022\023\n\016GC_SHOP_PRO" +
+      "MPT\020\311\003\022\030\n\023GC_OPENED_TEMP_SHOP\020\312\003\022\021\n\014GC_O" +
+      "PEN_SHOP\020\313\003\022\032\n\025GC_FUNCTION_OPEN_LIST\020\365\003\022" +
+      "\025\n\020GC_FUNCTION_OPEN\020\366\003\022\016\n\tGC_GM_CMD\020\247\004*\"" +
+      "\n\rMGMessageType\022\021\n\rMG_BROAD_CAST\020\001:V\n\017cg" +
+      "_message_type\022\037.google.protobuf.MessageO" +
+      "ptions\030\321\206\003 \001(\0162\032.com.mokylin.CGMessageTy" +
+      "pe:V\n\017gc_message_type\022\037.google.protobuf." +
+      "MessageOptions\030\322\206\003 \001(\0162\032.com.mokylin.GCM" +
+      "essageType:V\n\017mg_message_type\022\037.google.p",
+      "rotobuf.MessageOptions\030\323\206\003 \001(\0162\032.com.mok" +
+      "ylin.MGMessageType:V\n\006TARGET\022!.google.pr" +
+      "otobuf.EnumValueOptions\030\321\206\003 \001(\0162\032.com.mo" +
+      "kylin.MessageTarget:\005ERRORB*\n\033com.mokyli" +
+      "n.bleach.protobufB\013MessageType"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1365,6 +1374,7 @@ public final class MessageType {
     tARGET.internalInit(descriptor.getExtensions().get(3));
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.mokylin.bleach.protobuf.MessageType.tARGET);
     registry.add(com.mokylin.bleach.protobuf.MessageType.tARGET);
     registry.add(com.mokylin.bleach.protobuf.MessageType.tARGET);
     registry.add(com.mokylin.bleach.protobuf.MessageType.tARGET);

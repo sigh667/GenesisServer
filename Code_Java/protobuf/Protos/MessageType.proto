@@ -25,6 +25,7 @@ enum MessageTarget{
 	ISC_ACTOR = 1;
 	SERVER_MANAGER = 2;
 	SERVER = 3;
+	LOGIN_SERVER = 4;
 	PLAYER_MANAGER = 10;
 	PLAYER = 11;
 	SCENE = 12;
@@ -38,7 +39,7 @@ enum CGMessageType{
 	CG_TEST_MSG = 2;
 
 	//新版登陆消息，11-50
-	CG_LOGIN_NEW = 11;
+	CG_LOGIN_NEW = 11 [(TARGET) = LOGIN_SERVER];
 
 	//登录消息，50-100
 	CG_LOGIN_MSG_BEGIN = 50;

@@ -1,18 +1,14 @@
 package com.mokylin.td.loginserver.core.codec;
 
-import com.mokylin.td.clientmsg.ProtoSerializationDefine;
-import com.mokylin.td.clientmsg.core.ICommunicationDataBase;
-import com.mokylin.td.loginserver.globals.Globals;
-
+import com.mokylin.bleach.core.net.msg.CSMessage;
+import io.netty.buffer.ByteBuf;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.handler.codec.ByteToMessageDecoder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.nio.ByteOrder;
 import java.util.List;
-
-import io.netty.buffer.ByteBuf;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.ByteToMessageDecoder;
 
 /**
  * 客户端发送给Login服务器的消息解析器。<p>
@@ -59,9 +55,9 @@ public class ClientToLoginMessageDecoder extends ByteToMessageDecoder {
 
         //这里是正确的，不用循环读取，因为超类里已经做了
         ByteBuf littleEdianIn = in.order(ByteOrder.LITTLE_ENDIAN);
-        int msgBodyLength = littleEdianIn.readUnsignedShort();
-        int msgType = littleEdianIn.readUnsignedShort();
-        byte _index = littleEdianIn.readByte();
+        final int msgBodyLength = littleEdianIn.readUnsignedShort();
+        final int msgType = littleEdianIn.readUnsignedShort();
+        final byte indexTmp = littleEdianIn.readByte();
 
         // 0.2 检查消息体是否到达
         if (littleEdianIn.readableBytes() < msgBodyLength) {
@@ -72,10 +68,10 @@ public class ClientToLoginMessageDecoder extends ByteToMessageDecoder {
 
         // 1.0 验证序号(目的：防止消息重放)
         if (!isInited) {
-            index = _index;
+            index = indexTmp;
             isInited = true;
         } else {
-            if (_index + 1 == index) {
+            if (indexTmp + 1 == index) {
                 // 验证通过
                 index += 1;
             } else {
@@ -85,20 +81,9 @@ public class ClientToLoginMessageDecoder extends ByteToMessageDecoder {
             }
         }
 
-        // 2.0 消息反序列化
-        ProtoSerializationDefine pd = Globals.getPd();
-        ICommunicationDataBase communicationData = pd.getCommunicationData(littleEdianIn, msgType);
-        log.debug("msgBodyLength==" + msgBodyLength);
-        log.debug("msgType==" + msgType);
-        if (communicationData == null) {
-            // 这里以后要改为记log，然后踢掉
-            littleEdianIn.readBytes(msgBodyLength);
-            return;
-        } else {
-            log.debug(communicationData.getClass().getName());
-            log.debug(littleEdianIn.toString());
-        }
-        out.add(communicationData);
+        // 2.0 发给逻辑层
+        CSMessage csMsg = new CSMessage(msgType, littleEdianIn.readBytes(msgBodyLength).array());
+        out.add(csMsg);
     }
 
 }

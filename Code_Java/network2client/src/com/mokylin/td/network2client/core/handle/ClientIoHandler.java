@@ -1,22 +1,20 @@
 package com.mokylin.td.network2client.core.handle;
 
+import com.mokylin.bleach.core.net.msg.CSMessage;
 import com.mokylin.bleach.core.net.msg.SCMessage;
 import com.mokylin.bleach.core.time.TimeService;
 import com.mokylin.bleach.protobuf.MessageType;
-import com.mokylin.td.clientmsg.core.ICommunicationDataBase;
 import com.mokylin.td.network2client.core.channel.IChannelListener;
 import com.mokylin.td.network2client.core.id.IdGenerator;
 import com.mokylin.td.network2client.core.session.IClientSession;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.util.concurrent.atomic.AtomicInteger;
-
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.AttributeKey;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 服务器响应客户端IO消息的Handler，用于netty。<p>
@@ -82,16 +80,16 @@ public class ClientIoHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
-        if (!(msg instanceof ICommunicationDataBase)) {
+        if (!(msg instanceof CSMessage)) {
             log.warn("Something received strange: {}", msg);
             return;
         }
 
-        ICommunicationDataBase cMsg = (ICommunicationDataBase) msg;
+        CSMessage cMsg = (CSMessage) msg;
         IClientSession session = ctx.attr(sessionKey).get();
         if (log.isDebugEnabled()) {
-            log.debug("[[[Received message]]]: session - {}, msgType - {}", session.getSessionId(),
-                    cMsg.getSerializationID());
+            log.debug("[[[Received message]]]: session - {}, msgType - {}",
+                    session.getSessionId(), cMsg.messageType);
         }
         msgProcess.handle(session, cMsg);
     }

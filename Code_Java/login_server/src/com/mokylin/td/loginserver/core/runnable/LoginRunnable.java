@@ -1,11 +1,10 @@
 package com.mokylin.td.loginserver.core.runnable;
 
 import com.mokylin.bleach.core.concurrent.fixthreadpool.IRunnableBindId;
-import com.mokylin.td.clientmsg.core.ICommunicationDataBase;
+import com.mokylin.bleach.core.net.msg.CSMessage;
+import com.mokylin.bleach.protobuf.MessageType;
 import com.mokylin.td.loginserver.globals.Globals;
 import com.mokylin.td.network2client.core.session.IClientSession;
-import com.mokylin.td.network2client.handle.IClientMsgHandle;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,23 +17,18 @@ public class LoginRunnable implements IRunnableBindId {
     private static Logger log = LoggerFactory.getLogger(LoginRunnable.class);
 
     private final IClientSession session;
-    private final ICommunicationDataBase msg;
+    private final CSMessage msg;
 
-    public LoginRunnable(IClientSession session, ICommunicationDataBase msg) {
+    public LoginRunnable(IClientSession session, CSMessage msg) {
         this.session = session;
         this.msg = msg;
     }
 
     @Override
     public void run() {
-        final int msgType = msg.getSerializationID();
-        IClientMsgHandle<ICommunicationDataBase> msgHandle = Globals.getMsgHandle(msgType);
-        if (msgHandle == null) {
-            log.warn("msgType【" + msgType + "】 missing handle!");
-            return;
-        }
-
-        msgHandle.handle(session, msg);
+        Globals.getClientMsgProcessor().handle(
+                MessageType.MessageTarget.ISC_ACTOR, msg.messageType, msg.messageContent, session
+        );
     }
 
     @Override
