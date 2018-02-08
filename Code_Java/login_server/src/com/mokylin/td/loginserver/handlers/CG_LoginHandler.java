@@ -4,11 +4,11 @@ import com.mokylin.bleach.protobuf.LoginMessage;
 import com.mokylin.td.loginserver.core.process.IClientMsgHandler;
 import com.mokylin.td.network2client.core.session.IClientSession;
 
-public class CG_LoginHandler implements IClientMsgHandler<LoginMessage.CGLoginNew> {
+public class CG_LoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
 
 
     @Override
-    public void handle(IClientSession session, LoginMessage.CGLoginNew cgLoginNew) {
+    public void handle(IClientSession session, LoginMessage.CSLogin cgLogin) {
 
     }
 

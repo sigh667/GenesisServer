@@ -9,7 +9,7 @@ option java_outer_classname = "LoginMessage";
 /**
  * 客户端请求，登录
  */
-message CGLoginNew {
+message CSLogin {
     option (cg_message_type) = CG_LOGIN_NEW;
     /**服务器ID。联服的几个Server共用一个LoginServer，因此登陆时需要选择serverId */
     required int32 serverId = 1;

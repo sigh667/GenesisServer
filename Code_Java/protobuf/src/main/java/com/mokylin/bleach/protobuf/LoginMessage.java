@@ -8,8 +8,8 @@ public final class LoginMessage {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface CGLoginNewOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CGLoginNew)
+  public interface CSLoginOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.mokylin.CSLogin)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -108,30 +108,30 @@ public final class LoginMessage {
         getKeyBytes();
   }
   /**
-   * Protobuf type {@code com.mokylin.CGLoginNew}
+   * Protobuf type {@code com.mokylin.CSLogin}
    *
    * <pre>
    **
    * 客户端请求，登录
    * </pre>
    */
-  public static final class CGLoginNew extends
+  public static final class CSLogin extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CGLoginNew)
-      CGLoginNewOrBuilder {
-    // Use CGLoginNew.newBuilder() to construct.
-    private CGLoginNew(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:com.mokylin.CSLogin)
+      CSLoginOrBuilder {
+    // Use CSLogin.newBuilder() to construct.
+    private CSLogin(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CGLoginNew(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CSLogin(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final CGLoginNew defaultInstance;
-    public static CGLoginNew getDefaultInstance() {
+    private static final CSLogin defaultInstance;
+    public static CSLogin getDefaultInstance() {
       return defaultInstance;
     }
 
-    public CGLoginNew getDefaultInstanceForType() {
+    public CSLogin getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -141,7 +141,7 @@ public final class LoginMessage {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private CGLoginNew(
+    private CSLogin(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -201,28 +201,28 @@ public final class LoginMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_CGLoginNew_descriptor;
+      return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_CSLogin_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_CGLoginNew_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_CSLogin_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew.class, com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew.Builder.class);
+              com.mokylin.bleach.protobuf.LoginMessage.CSLogin.class, com.mokylin.bleach.protobuf.LoginMessage.CSLogin.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CGLoginNew> PARSER =
-        new com.google.protobuf.AbstractParser<CGLoginNew>() {
-      public CGLoginNew parsePartialFrom(
+    public static com.google.protobuf.Parser<CSLogin> PARSER =
+        new com.google.protobuf.AbstractParser<CSLogin>() {
+      public CSLogin parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CGLoginNew(input, extensionRegistry);
+        return new CSLogin(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CGLoginNew> getParserForType() {
+    public com.google.protobuf.Parser<CSLogin> getParserForType() {
       return PARSER;
     }
 
@@ -496,53 +496,53 @@ public final class LoginMessage {
       return super.writeReplace();
     }
 
-    public static com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew parseFrom(
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSLogin parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew parseFrom(
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSLogin parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew parseFrom(byte[] data)
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSLogin parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew parseFrom(
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSLogin parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew parseFrom(java.io.InputStream input)
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSLogin parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew parseFrom(
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSLogin parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew parseDelimitedFrom(java.io.InputStream input)
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSLogin parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew parseDelimitedFrom(
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSLogin parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew parseFrom(
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSLogin parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew parseFrom(
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSLogin parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -551,7 +551,7 @@ public final class LoginMessage {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew prototype) {
+    public static Builder newBuilder(com.mokylin.bleach.protobuf.LoginMessage.CSLogin prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -563,7 +563,7 @@ public final class LoginMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CGLoginNew}
+     * Protobuf type {@code com.mokylin.CSLogin}
      *
      * <pre>
      **
@@ -572,21 +572,21 @@ public final class LoginMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CGLoginNew)
-        com.mokylin.bleach.protobuf.LoginMessage.CGLoginNewOrBuilder {
+        // @@protoc_insertion_point(builder_implements:com.mokylin.CSLogin)
+        com.mokylin.bleach.protobuf.LoginMessage.CSLoginOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_CGLoginNew_descriptor;
+        return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_CSLogin_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_CGLoginNew_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_CSLogin_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew.class, com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew.Builder.class);
+                com.mokylin.bleach.protobuf.LoginMessage.CSLogin.class, com.mokylin.bleach.protobuf.LoginMessage.CSLogin.Builder.class);
       }
 
-      // Construct using com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew.newBuilder()
+      // Construct using com.mokylin.bleach.protobuf.LoginMessage.CSLogin.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -623,23 +623,23 @@ public final class LoginMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_CGLoginNew_descriptor;
+        return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_CSLogin_descriptor;
       }
 
-      public com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew getDefaultInstanceForType() {
-        return com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew.getDefaultInstance();
+      public com.mokylin.bleach.protobuf.LoginMessage.CSLogin getDefaultInstanceForType() {
+        return com.mokylin.bleach.protobuf.LoginMessage.CSLogin.getDefaultInstance();
       }
 
-      public com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew build() {
-        com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew result = buildPartial();
+      public com.mokylin.bleach.protobuf.LoginMessage.CSLogin build() {
+        com.mokylin.bleach.protobuf.LoginMessage.CSLogin result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew buildPartial() {
-        com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew result = new com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew(this);
+      public com.mokylin.bleach.protobuf.LoginMessage.CSLogin buildPartial() {
+        com.mokylin.bleach.protobuf.LoginMessage.CSLogin result = new com.mokylin.bleach.protobuf.LoginMessage.CSLogin(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -664,16 +664,16 @@ public final class LoginMessage {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew) {
-          return mergeFrom((com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew)other);
+        if (other instanceof com.mokylin.bleach.protobuf.LoginMessage.CSLogin) {
+          return mergeFrom((com.mokylin.bleach.protobuf.LoginMessage.CSLogin)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew other) {
-        if (other == com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.mokylin.bleach.protobuf.LoginMessage.CSLogin other) {
+        if (other == com.mokylin.bleach.protobuf.LoginMessage.CSLogin.getDefaultInstance()) return this;
         if (other.hasServerId()) {
           setServerId(other.getServerId());
         }
@@ -720,11 +720,11 @@ public final class LoginMessage {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew parsedMessage = null;
+        com.mokylin.bleach.protobuf.LoginMessage.CSLogin parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.mokylin.bleach.protobuf.LoginMessage.CGLoginNew) e.getUnfinishedMessage();
+          parsedMessage = (com.mokylin.bleach.protobuf.LoginMessage.CSLogin) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -1083,22 +1083,22 @@ public final class LoginMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CGLoginNew)
+      // @@protoc_insertion_point(builder_scope:com.mokylin.CSLogin)
     }
 
     static {
-      defaultInstance = new CGLoginNew(true);
+      defaultInstance = new CSLogin(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CGLoginNew)
+    // @@protoc_insertion_point(class_scope:com.mokylin.CSLogin)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CGLoginNew_descriptor;
+    internal_static_com_mokylin_CSLogin_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CGLoginNew_fieldAccessorTable;
+      internal_static_com_mokylin_CSLogin_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1109,10 +1109,10 @@ public final class LoginMessage {
   static {
     java.lang.String[] descriptorData = {
       "\n\013Login.proto\022\013com.mokylin\032\021MessageType." +
-      "proto\"U\n\nCGLoginNew\022\020\n\010serverId\030\001 \002(\005\022\017\n" +
-      "\007channel\030\002 \002(\t\022\021\n\taccountId\030\003 \002(\t\022\013\n\003key" +
-      "\030\004 \002(\t:\004\210\265\030\013B+\n\033com.mokylin.bleach.proto" +
-      "bufB\014LoginMessage"
+      "proto\"R\n\007CSLogin\022\020\n\010serverId\030\001 \002(\005\022\017\n\007ch" +
+      "annel\030\002 \002(\t\022\021\n\taccountId\030\003 \002(\t\022\013\n\003key\030\004 " +
+      "\002(\t:\004\210\265\030\013B+\n\033com.mokylin.bleach.protobuf" +
+      "B\014LoginMessage"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1127,11 +1127,11 @@ public final class LoginMessage {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.mokylin.bleach.protobuf.MessageType.getDescriptor(),
         }, assigner);
-    internal_static_com_mokylin_CGLoginNew_descriptor =
+    internal_static_com_mokylin_CSLogin_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_mokylin_CGLoginNew_fieldAccessorTable = new
+    internal_static_com_mokylin_CSLogin_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CGLoginNew_descriptor,
+        internal_static_com_mokylin_CSLogin_descriptor,
         new java.lang.String[] { "ServerId", "Channel", "AccountId", "Key", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

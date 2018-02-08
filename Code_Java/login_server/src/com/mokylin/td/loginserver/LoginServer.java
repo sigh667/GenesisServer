@@ -11,11 +11,9 @@ import com.mokylin.td.loginserver.core.runnable.ActionOnExceptionOfLogin;
 import com.mokylin.td.loginserver.globals.Globals;
 import com.mokylin.td.network2client.core.channel.ChannelInitializerImpl;
 import com.mokylin.td.network2client.core.handle.ClientIoHandler;
-
+import io.netty.channel.ChannelHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import io.netty.channel.ChannelHandler;
 
 public class LoginServer {
     /** 日志 */
@@ -39,10 +37,8 @@ public class LoginServer {
                     new FixThreadPool(50, new ActionOnExceptionOfLogin()));
             LoginClientChannelListener rs = new LoginClientChannelListener();
             ClientIoHandler handler = new ClientIoHandler(mp, rs);
-            ChannelHandler childHandler =
-                    new ChannelInitializerImpl(handler, ClientToLoginMessageDecoder.class);
-            NettyNetworkLayer.configNet(netInfoToClient.getHost(), netInfoToClient.getPort())
-                    .start(childHandler);
+            ChannelHandler childHandler = new ChannelInitializerImpl(handler, ClientToLoginMessageDecoder.class);
+            NettyNetworkLayer.configNet(netInfoToClient.getHost(), netInfoToClient.getPort()).start(childHandler);
         } catch (Exception e) {
             logger.error("Netty启动发生异常！", e);
             System.exit(-1);
