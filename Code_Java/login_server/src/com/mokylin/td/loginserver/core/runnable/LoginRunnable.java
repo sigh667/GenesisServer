@@ -26,9 +26,7 @@ public class LoginRunnable implements IRunnableBindId {
 
     @Override
     public void run() {
-        Globals.getClientMsgProcessor().handle(
-                MessageType.MessageTarget.ISC_ACTOR, msg.messageType, msg.messageContent, session
-        );
+        Globals.getClientMsgProcessor().handle(msg.messageType, msg.messageContent, session);
     }
 
     @Override

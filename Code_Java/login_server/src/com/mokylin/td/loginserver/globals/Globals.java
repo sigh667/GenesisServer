@@ -1,7 +1,6 @@
 package com.mokylin.td.loginserver.globals;
 
 import akka.actor.Props;
-import com.google.common.collect.Table;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.Parser;
 import com.mokylin.bleach.core.akka.Akka;
@@ -13,7 +12,6 @@ import com.mokylin.bleach.core.isc.RemoteActorManager;
 import com.mokylin.bleach.core.redis.IRedis;
 import com.mokylin.bleach.core.redis.RedisUtil;
 import com.mokylin.bleach.core.redis.config.RedisConfig;
-import com.mokylin.bleach.protobuf.MessageType;
 import com.mokylin.td.loginserver.config.LoginServerConfig;
 import com.mokylin.td.loginserver.core.ClientSessionContainer;
 import com.mokylin.td.loginserver.core.process.ClientMsgHandlerUtil;
@@ -64,7 +62,7 @@ public class Globals {
         //		logger.info("Excel文件读取完毕");
 
         // 3.0客户端消息分发器
-        Pair<Table<MessageType.MessageTarget, Integer, IClientMsgHandler<GeneratedMessage>>, Map<Integer, Parser<? extends GeneratedMessage>>>
+        Pair<Map<Integer, IClientMsgHandler<GeneratedMessage>>, Map<Integer, Parser<? extends GeneratedMessage>>>
                 tableMapPair = ClientMsgHandlerUtil.buildMsgHandlers("com.mokylin.td.loginserver");
         clientMsgProcessor = new ClientMsgProcessor(tableMapPair.getLeft(), tableMapPair.getRight());
 

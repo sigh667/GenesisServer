@@ -1,15 +1,8 @@
 package com.mokylin.td.loginserver.core.process;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableTable;
-import com.google.common.collect.Table;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Parser;
-import com.mokylin.bleach.core.isc.session.ISession;
-import com.mokylin.bleach.core.msgfunc.MsgArgs;
-import com.mokylin.bleach.core.msgfunc.client.IClientMsgFunc;
-import com.mokylin.bleach.protobuf.MessageType;
 import com.mokylin.td.network2client.core.session.IClientSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,21 +17,21 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * @create: 2018-02-08 14:27
  */
 public class ClientMsgProcessor {
+    // 日志
     private static Logger logger = LoggerFactory.getLogger(ClientMsgProcessor.class);
 
-    private Table<MessageType.MessageTarget, Integer, IClientMsgHandler<GeneratedMessage>>  funcTable;
+    private Map<Integer, IClientMsgHandler<GeneratedMessage>> funcMap;
     private Map<Integer, Parser<? extends GeneratedMessage>> paserMap;
 
     public ClientMsgProcessor(
-            Table<MessageType.MessageTarget, Integer, IClientMsgHandler<GeneratedMessage>> funcTable,
+            Map<Integer, IClientMsgHandler<GeneratedMessage>> funcTable,
             Map<Integer, Parser<? extends GeneratedMessage>> paserMap) {
-        this.funcTable = checkNotNull(funcTable,"MsgFunctionService can not init with null parsers!");
+        this.funcMap = checkNotNull(funcTable,"MsgFunctionService can not init with null parsers!");
         this.paserMap = checkNotNull(paserMap,"MsgFunctionService can not init with null parsers!");
     }
 
-    public void handle(MessageType.MessageTarget messageTarget, int msgType, byte[] content, IClientSession session) {
-        IClientMsgHandler<GeneratedMessage> msgFunc =
-                this.funcTable.get(messageTarget, msgType);
+    public void handle(int msgType, byte[] content, IClientSession session) {
+        IClientMsgHandler<GeneratedMessage> msgFunc = funcMap.get(msgType);
         Parser<? extends GeneratedMessage> parser = this.paserMap.get(msgType);
         if (msgFunc == null || parser == null) {
             logger.error(String.format("Cannot find IClientMsgHandler for message[%d]", msgType));

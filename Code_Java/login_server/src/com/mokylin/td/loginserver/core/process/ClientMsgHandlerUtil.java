@@ -29,17 +29,16 @@ public class ClientMsgHandlerUtil {
      * @return
      */
     @SuppressWarnings("unchecked")
-    public static Pair<Table<MessageType.MessageTarget, Integer, IClientMsgHandler<GeneratedMessage>>, Map<Integer, Parser<? extends GeneratedMessage>>> buildMsgHandlers(
+    public static Pair<Map<Integer, IClientMsgHandler<GeneratedMessage>>, Map<Integer, Parser<? extends GeneratedMessage>>> buildMsgHandlers(
             String packageName) {
-        Table<MessageType.MessageTarget, Integer, IClientMsgHandler<GeneratedMessage>>
-                funcsTable = HashBasedTable.create();
+        Map<Integer, IClientMsgHandler<GeneratedMessage>> funcsMap = new HashMap<>();
         Map<Integer, Parser<? extends GeneratedMessage>> parserMap = new HashMap<>();
 
         Set<Class<?>> funcClassSet =
                 PackageUtil.getSubClass(packageName, IClientMsgHandler.class);
 
         if (funcClassSet == null || funcClassSet.isEmpty()) {
-            return Pair.of(funcsTable, parserMap);
+            return Pair.of(funcsMap, parserMap);
         }
 
         try {
@@ -49,10 +48,8 @@ public class ClientMsgHandlerUtil {
                         GenericityUtil.extractFirstGenericType(each, IClientMsgHandler.class);
                 Integer msgTypeId = MsgUtil.getMsgType(msgTypeClass, true);
                 MessageType.CGMessageType msgType = MessageType.CGMessageType.valueOf(msgTypeId);
-                MessageType.MessageTarget target =
-                        msgType.getValueDescriptor().getOptions().getExtension(MessageType.tARGET);
 
-                if (funcsTable.contains(target, msgTypeId)) {
+                if (funcsMap.containsKey(msgTypeId)) {
                     throw new RuntimeException("Multi Client Msg Function for One Message Type: " +
                             msgTypeClass.getName());
                 }
@@ -61,14 +58,13 @@ public class ClientMsgHandlerUtil {
                             msgTypeClass.getName());
                 }
 
-                funcsTable.put(target, msgTypeId,
-                        (IClientMsgHandler<GeneratedMessage>) each.newInstance());
+                funcsMap.put(msgTypeId, (IClientMsgHandler<GeneratedMessage>) each.newInstance());
                 parserMap.put(msgTypeId, MsgUtil.extractMsgParser(msgTypeClass));
             }
         } catch (Exception e) {
             throw new MessageFunctionParseException(e);
         }
-        return Pair.of(funcsTable, parserMap);
+        return Pair.of(funcsMap, parserMap);
     }
 
 
