@@ -4,13 +4,22 @@ option java_package = "com.mokylin.bleach.protobuf";
 option java_outer_classname = "LoginMessage";
 
 ///////////////////////////////////////////////////////////////////////////////
-//这里定义TD的登陆相关消息
+//这里定义登陆相关消息
+
+/**
+ * 客户端请求，握手
+ */
+message CSHandshake {
+    option (cg_message_type) = CS_LOGIN_HANDSHAKE;
+
+    /**空消息*/
+}
 
 /**
  * 客户端请求，登录
  */
 message CSLogin {
-    option (cg_message_type) = CG_LOGIN_NEW;
+    option (cg_message_type) = CS_LOGIN_NEW;
     /**服务器ID。联服的几个Server共用一个LoginServer，因此登陆时需要选择serverId */
     required int32 serverId = 1;
     /**渠道ID */

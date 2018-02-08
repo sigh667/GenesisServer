@@ -193,13 +193,17 @@ public final class MessageType {
      */
     CG_TEST_MSG(1, 2),
     /**
-     * <code>CG_LOGIN_NEW = 11;</code>
+     * <code>CS_LOGIN_HANDSHAKE = 11;</code>
      *
      * <pre>
      *新版登陆消息，11-50
      * </pre>
      */
-    CG_LOGIN_NEW(2, 11),
+    CS_LOGIN_HANDSHAKE(2, 11),
+    /**
+     * <code>CS_LOGIN_NEW = 12;</code>
+     */
+    CS_LOGIN_NEW(3, 12),
     /**
      * <code>CG_LOGIN_MSG_BEGIN = 50;</code>
      *
@@ -207,23 +211,23 @@ public final class MessageType {
      *登录消息，50-100
      * </pre>
      */
-    CG_LOGIN_MSG_BEGIN(3, 50),
+    CG_LOGIN_MSG_BEGIN(4, 50),
     /**
      * <code>CG_LOGIN = 51;</code>
      */
-    CG_LOGIN(4, 51),
+    CG_LOGIN(5, 51),
     /**
      * <code>CG_CREATE_ROLE = 52;</code>
      */
-    CG_CREATE_ROLE(5, 52),
+    CG_CREATE_ROLE(6, 52),
     /**
      * <code>CG_SELECT_ROLE = 53;</code>
      */
-    CG_SELECT_ROLE(6, 53),
+    CG_SELECT_ROLE(7, 53),
     /**
      * <code>CG_LOGIN_MSG_END = 100;</code>
      */
-    CG_LOGIN_MSG_END(7, 100),
+    CG_LOGIN_MSG_END(8, 100),
     /**
      * <code>CG_ITEM_USE = 101;</code>
      *
@@ -231,15 +235,15 @@ public final class MessageType {
      *道具消息，101-200
      * </pre>
      */
-    CG_ITEM_USE(8, 101),
+    CG_ITEM_USE(9, 101),
     /**
      * <code>CG_ITEM_SELL = 102;</code>
      */
-    CG_ITEM_SELL(9, 102),
+    CG_ITEM_SELL(10, 102),
     /**
      * <code>CG_ITEM_COMPOUND = 103;</code>
      */
-    CG_ITEM_COMPOUND(10, 103),
+    CG_ITEM_COMPOUND(11, 103),
     /**
      * <code>CG_HIRE_HERO = 201;</code>
      *
@@ -247,27 +251,27 @@ public final class MessageType {
      *英雄消息，201-300
      * </pre>
      */
-    CG_HIRE_HERO(11, 201),
+    CG_HIRE_HERO(12, 201),
     /**
      * <code>CG_HERO_STAR_UP = 202;</code>
      */
-    CG_HERO_STAR_UP(12, 202),
+    CG_HERO_STAR_UP(13, 202),
     /**
      * <code>CG_HERO_QUALITY_UP = 203;</code>
      */
-    CG_HERO_QUALITY_UP(13, 203),
+    CG_HERO_QUALITY_UP(14, 203),
     /**
      * <code>CG_HERO_SKILL_LEVEL_UP = 204;</code>
      */
-    CG_HERO_SKILL_LEVEL_UP(14, 204),
+    CG_HERO_SKILL_LEVEL_UP(15, 204),
     /**
      * <code>CG_HERO_WEAR_EQUIP = 205;</code>
      */
-    CG_HERO_WEAR_EQUIP(15, 205),
+    CG_HERO_WEAR_EQUIP(16, 205),
     /**
      * <code>CG_BUY_SKILL_POINT = 206;</code>
      */
-    CG_BUY_SKILL_POINT(16, 206),
+    CG_BUY_SKILL_POINT(17, 206),
     /**
      * <code>CG_GM_CMD = 301;</code>
      *
@@ -275,7 +279,7 @@ public final class MessageType {
      *聊天消息，301-350
      * </pre>
      */
-    CG_GM_CMD(17, 301),
+    CG_GM_CMD(18, 301),
     /**
      * <code>CG_GET_DAILY_REWARD = 351;</code>
      *
@@ -283,7 +287,7 @@ public final class MessageType {
      *日常签到奖励领取，351-400
      * </pre>
      */
-    CG_GET_DAILY_REWARD(18, 351),
+    CG_GET_DAILY_REWARD(19, 351),
     /**
      * <code>CG_OPEN_SHOP = 401;</code>
      *
@@ -291,7 +295,7 @@ public final class MessageType {
      *商店消息401-450
      * </pre>
      */
-    CG_OPEN_SHOP(19, 401),
+    CG_OPEN_SHOP(20, 401),
     /**
      * <code>CG_REFRESH_GOODS = 402;</code>
      *
@@ -299,7 +303,7 @@ public final class MessageType {
      *刷新//
      * </pre>
      */
-    CG_REFRESH_GOODS(20, 402),
+    CG_REFRESH_GOODS(21, 402),
     /**
      * <code>CG_BUY_GOOD = 403;</code>
      *
@@ -307,7 +311,7 @@ public final class MessageType {
      *购买货物//
      * </pre>
      */
-    CG_BUY_GOOD(21, 403),
+    CG_BUY_GOOD(22, 403),
     /**
      * <code>CG_OPEN_WINDOW = 451;</code>
      *
@@ -315,7 +319,7 @@ public final class MessageType {
      *窗口消息，451-500
      * </pre>
      */
-    CG_OPEN_WINDOW(22, 451),
+    CG_OPEN_WINDOW(23, 451),
     /**
      * <code>CG_CLOSE_WINDOW = 452;</code>
      *
@@ -323,7 +327,7 @@ public final class MessageType {
      *关闭窗口//
      * </pre>
      */
-    CG_CLOSE_WINDOW(23, 452),
+    CG_CLOSE_WINDOW(24, 452),
     /**
      * <code>CG_HUMAN_BUY_ENERGY = 501;</code>
      *
@@ -331,7 +335,7 @@ public final class MessageType {
      *Human消息，501-600
      * </pre>
      */
-    CG_HUMAN_BUY_ENERGY(24, 501),
+    CG_HUMAN_BUY_ENERGY(25, 501),
     ;
 
     /**
@@ -347,13 +351,17 @@ public final class MessageType {
      */
     public static final int CG_TEST_MSG_VALUE = 2;
     /**
-     * <code>CG_LOGIN_NEW = 11;</code>
+     * <code>CS_LOGIN_HANDSHAKE = 11;</code>
      *
      * <pre>
      *新版登陆消息，11-50
      * </pre>
      */
-    public static final int CG_LOGIN_NEW_VALUE = 11;
+    public static final int CS_LOGIN_HANDSHAKE_VALUE = 11;
+    /**
+     * <code>CS_LOGIN_NEW = 12;</code>
+     */
+    public static final int CS_LOGIN_NEW_VALUE = 12;
     /**
      * <code>CG_LOGIN_MSG_BEGIN = 50;</code>
      *
@@ -494,7 +502,8 @@ public final class MessageType {
       switch (value) {
         case 1: return CG_GAME_SERVER_INFO;
         case 2: return CG_TEST_MSG;
-        case 11: return CG_LOGIN_NEW;
+        case 11: return CS_LOGIN_HANDSHAKE;
+        case 12: return CS_LOGIN_NEW;
         case 50: return CG_LOGIN_MSG_BEGIN;
         case 51: return CG_LOGIN;
         case 52: return CG_CREATE_ROLE;
@@ -1304,56 +1313,57 @@ public final class MessageType {
       "rget\022\t\n\005ERROR\020\000\022\r\n\tISC_ACTOR\020\001\022\022\n\016SERVER" +
       "_MANAGER\020\002\022\n\n\006SERVER\020\003\022\020\n\014LOGIN_SERVER\020\004" +
       "\022\022\n\016PLAYER_MANAGER\020\n\022\n\n\006PLAYER\020\013\022\t\n\005SCEN" +
-      "E\020\014\022\t\n\005GUILD\020\r\022\t\n\005ARENA\020\016*\242\005\n\rCGMessageT" +
+      "E\020\014\022\t\n\005GUILD\020\r\022\t\n\005ARENA\020\016*\300\005\n\rCGMessageT" +
       "ype\022\027\n\023CG_GAME_SERVER_INFO\020\001\022\017\n\013CG_TEST_" +
-      "MSG\020\002\022\026\n\014CG_LOGIN_NEW\020\013\032\004\210\265\030\004\022\026\n\022CG_LOGI" +
-      "N_MSG_BEGIN\0202\022\022\n\010CG_LOGIN\0203\032\004\210\265\030\n\022\030\n\016CG_" +
-      "CREATE_ROLE\0204\032\004\210\265\030\n\022\030\n\016CG_SELECT_ROLE\0205\032",
-      "\004\210\265\030\n\022\024\n\020CG_LOGIN_MSG_END\020d\022\025\n\013CG_ITEM_U" +
-      "SE\020e\032\004\210\265\030\013\022\026\n\014CG_ITEM_SELL\020f\032\004\210\265\030\013\022\032\n\020CG" +
-      "_ITEM_COMPOUND\020g\032\004\210\265\030\013\022\027\n\014CG_HIRE_HERO\020\311" +
-      "\001\032\004\210\265\030\013\022\032\n\017CG_HERO_STAR_UP\020\312\001\032\004\210\265\030\013\022\035\n\022C" +
-      "G_HERO_QUALITY_UP\020\313\001\032\004\210\265\030\013\022!\n\026CG_HERO_SK" +
-      "ILL_LEVEL_UP\020\314\001\032\004\210\265\030\013\022\035\n\022CG_HERO_WEAR_EQ" +
-      "UIP\020\315\001\032\004\210\265\030\013\022\035\n\022CG_BUY_SKILL_POINT\020\316\001\032\004\210" +
-      "\265\030\013\022\024\n\tCG_GM_CMD\020\255\002\032\004\210\265\030\013\022\036\n\023CG_GET_DAIL" +
-      "Y_REWARD\020\337\002\032\004\210\265\030\013\022\027\n\014CG_OPEN_SHOP\020\221\003\032\004\210\265" +
-      "\030\013\022\033\n\020CG_REFRESH_GOODS\020\222\003\032\004\210\265\030\013\022\026\n\013CG_BU",
-      "Y_GOOD\020\223\003\032\004\210\265\030\013\022\031\n\016CG_OPEN_WINDOW\020\303\003\032\004\210\265" +
-      "\030\013\022\032\n\017CG_CLOSE_WINDOW\020\304\003\032\004\210\265\030\013\022\036\n\023CG_HUM" +
-      "AN_BUY_ENERGY\020\365\003\032\004\210\265\030\013*\325\006\n\rGCMessageType" +
-      "\022\021\n\rGC_LOGIN_FAIL\0203\022\020\n\014GC_ROLE_LIST\0204\022\022\n" +
-      "\016GC_CREATE_ROLE\0205\022\027\n\023GC_CREATE_ROLE_FAIL" +
-      "\0206\022\030\n\024GC_HUMAN_DETAIL_INFO\020e\022\021\n\rGC_DATA_" +
-      "ERROR\020f\022\033\n\027GC_HUMAN_BUY_ENERGY_ACK\020g\022\033\n\027" +
-      "GC_HUMAN_BUY_ENERGY_NEG\020h\022 \n\034GC_HUMAN_EN" +
-      "ERGY_RECOVER_INFO\020i\022\037\n\033GC_HUMAN_COST_ENE" +
-      "RGY_FAILED\020j\022$\n GC_HUMAN_BUY_ENERGY_COUN",
-      "TS_RESET\020k\022\023\n\017GC_VIP_LEVEL_UP\020l\022\025\n\021GC_HU" +
-      "MAN_LEVEL_UP\020m\022\032\n\025GC_HERO_CHANGED_PROPS\020" +
-      "\311\001\022\025\n\020GC_ALL_HERO_INFO\020\312\001\022\020\n\013GC_HERO_ADD" +
-      "\020\313\001\022\023\n\016GC_HERO_UPDATE\020\314\001\022\026\n\021GC_INVENTORY" +
-      "_INFO\020\255\002\022\023\n\016GC_ITEM_UPDATE\020\256\002\022\031\n\024GC_DAIL" +
-      "Y_REWARD_INFO\020\221\003\022\037\n\032GC_GET_DAILY_REWARD_" +
-      "FAILED\020\222\003\022\021\n\014GC_SHOP_INFO\020\303\003\022\"\n\035GC_SHOP_" +
-      "MANUALLY_REFRESH_INFO\020\304\003\022\030\n\023GC_GOOD_BUY_" +
-      "SUCCESS\020\305\003\022)\n$GC_SHOP_MANUALLY_REFRESH_C" +
-      "OUNT_RESET\020\306\003\022\036\n\031GC_SHOP_AUTO_REFRESH_IN",
-      "FO\020\307\003\022\022\n\rGC_SHOP_CLOSE\020\310\003\022\023\n\016GC_SHOP_PRO" +
-      "MPT\020\311\003\022\030\n\023GC_OPENED_TEMP_SHOP\020\312\003\022\021\n\014GC_O" +
-      "PEN_SHOP\020\313\003\022\032\n\025GC_FUNCTION_OPEN_LIST\020\365\003\022" +
-      "\025\n\020GC_FUNCTION_OPEN\020\366\003\022\016\n\tGC_GM_CMD\020\247\004*\"" +
-      "\n\rMGMessageType\022\021\n\rMG_BROAD_CAST\020\001:V\n\017cg" +
-      "_message_type\022\037.google.protobuf.MessageO" +
-      "ptions\030\321\206\003 \001(\0162\032.com.mokylin.CGMessageTy" +
-      "pe:V\n\017gc_message_type\022\037.google.protobuf." +
-      "MessageOptions\030\322\206\003 \001(\0162\032.com.mokylin.GCM" +
-      "essageType:V\n\017mg_message_type\022\037.google.p",
-      "rotobuf.MessageOptions\030\323\206\003 \001(\0162\032.com.mok" +
-      "ylin.MGMessageType:V\n\006TARGET\022!.google.pr" +
-      "otobuf.EnumValueOptions\030\321\206\003 \001(\0162\032.com.mo" +
-      "kylin.MessageTarget:\005ERRORB*\n\033com.mokyli" +
-      "n.bleach.protobufB\013MessageType"
+      "MSG\020\002\022\034\n\022CS_LOGIN_HANDSHAKE\020\013\032\004\210\265\030\004\022\026\n\014C" +
+      "S_LOGIN_NEW\020\014\032\004\210\265\030\004\022\026\n\022CG_LOGIN_MSG_BEGI" +
+      "N\0202\022\022\n\010CG_LOGIN\0203\032\004\210\265\030\n\022\030\n\016CG_CREATE_ROL",
+      "E\0204\032\004\210\265\030\n\022\030\n\016CG_SELECT_ROLE\0205\032\004\210\265\030\n\022\024\n\020C" +
+      "G_LOGIN_MSG_END\020d\022\025\n\013CG_ITEM_USE\020e\032\004\210\265\030\013" +
+      "\022\026\n\014CG_ITEM_SELL\020f\032\004\210\265\030\013\022\032\n\020CG_ITEM_COMP" +
+      "OUND\020g\032\004\210\265\030\013\022\027\n\014CG_HIRE_HERO\020\311\001\032\004\210\265\030\013\022\032\n" +
+      "\017CG_HERO_STAR_UP\020\312\001\032\004\210\265\030\013\022\035\n\022CG_HERO_QUA" +
+      "LITY_UP\020\313\001\032\004\210\265\030\013\022!\n\026CG_HERO_SKILL_LEVEL_" +
+      "UP\020\314\001\032\004\210\265\030\013\022\035\n\022CG_HERO_WEAR_EQUIP\020\315\001\032\004\210\265" +
+      "\030\013\022\035\n\022CG_BUY_SKILL_POINT\020\316\001\032\004\210\265\030\013\022\024\n\tCG_" +
+      "GM_CMD\020\255\002\032\004\210\265\030\013\022\036\n\023CG_GET_DAILY_REWARD\020\337" +
+      "\002\032\004\210\265\030\013\022\027\n\014CG_OPEN_SHOP\020\221\003\032\004\210\265\030\013\022\033\n\020CG_R",
+      "EFRESH_GOODS\020\222\003\032\004\210\265\030\013\022\026\n\013CG_BUY_GOOD\020\223\003\032" +
+      "\004\210\265\030\013\022\031\n\016CG_OPEN_WINDOW\020\303\003\032\004\210\265\030\013\022\032\n\017CG_C" +
+      "LOSE_WINDOW\020\304\003\032\004\210\265\030\013\022\036\n\023CG_HUMAN_BUY_ENE" +
+      "RGY\020\365\003\032\004\210\265\030\013*\325\006\n\rGCMessageType\022\021\n\rGC_LOG" +
+      "IN_FAIL\0203\022\020\n\014GC_ROLE_LIST\0204\022\022\n\016GC_CREATE" +
+      "_ROLE\0205\022\027\n\023GC_CREATE_ROLE_FAIL\0206\022\030\n\024GC_H" +
+      "UMAN_DETAIL_INFO\020e\022\021\n\rGC_DATA_ERROR\020f\022\033\n" +
+      "\027GC_HUMAN_BUY_ENERGY_ACK\020g\022\033\n\027GC_HUMAN_B" +
+      "UY_ENERGY_NEG\020h\022 \n\034GC_HUMAN_ENERGY_RECOV" +
+      "ER_INFO\020i\022\037\n\033GC_HUMAN_COST_ENERGY_FAILED",
+      "\020j\022$\n GC_HUMAN_BUY_ENERGY_COUNTS_RESET\020k" +
+      "\022\023\n\017GC_VIP_LEVEL_UP\020l\022\025\n\021GC_HUMAN_LEVEL_" +
+      "UP\020m\022\032\n\025GC_HERO_CHANGED_PROPS\020\311\001\022\025\n\020GC_A" +
+      "LL_HERO_INFO\020\312\001\022\020\n\013GC_HERO_ADD\020\313\001\022\023\n\016GC_" +
+      "HERO_UPDATE\020\314\001\022\026\n\021GC_INVENTORY_INFO\020\255\002\022\023" +
+      "\n\016GC_ITEM_UPDATE\020\256\002\022\031\n\024GC_DAILY_REWARD_I" +
+      "NFO\020\221\003\022\037\n\032GC_GET_DAILY_REWARD_FAILED\020\222\003\022" +
+      "\021\n\014GC_SHOP_INFO\020\303\003\022\"\n\035GC_SHOP_MANUALLY_R" +
+      "EFRESH_INFO\020\304\003\022\030\n\023GC_GOOD_BUY_SUCCESS\020\305\003" +
+      "\022)\n$GC_SHOP_MANUALLY_REFRESH_COUNT_RESET",
+      "\020\306\003\022\036\n\031GC_SHOP_AUTO_REFRESH_INFO\020\307\003\022\022\n\rG" +
+      "C_SHOP_CLOSE\020\310\003\022\023\n\016GC_SHOP_PROMPT\020\311\003\022\030\n\023" +
+      "GC_OPENED_TEMP_SHOP\020\312\003\022\021\n\014GC_OPEN_SHOP\020\313" +
+      "\003\022\032\n\025GC_FUNCTION_OPEN_LIST\020\365\003\022\025\n\020GC_FUNC" +
+      "TION_OPEN\020\366\003\022\016\n\tGC_GM_CMD\020\247\004*\"\n\rMGMessag" +
+      "eType\022\021\n\rMG_BROAD_CAST\020\001:V\n\017cg_message_t" +
+      "ype\022\037.google.protobuf.MessageOptions\030\321\206\003" +
+      " \001(\0162\032.com.mokylin.CGMessageType:V\n\017gc_m" +
+      "essage_type\022\037.google.protobuf.MessageOpt" +
+      "ions\030\322\206\003 \001(\0162\032.com.mokylin.GCMessageType",
+      ":V\n\017mg_message_type\022\037.google.protobuf.Me" +
+      "ssageOptions\030\323\206\003 \001(\0162\032.com.mokylin.MGMes" +
+      "sageType:V\n\006TARGET\022!.google.protobuf.Enu" +
+      "mValueOptions\030\321\206\003 \001(\0162\032.com.mokylin.Mess" +
+      "ageTarget:\005ERRORB*\n\033com.mokylin.bleach.p" +
+      "rotobufB\013MessageType"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1374,6 +1384,7 @@ public final class MessageType {
     tARGET.internalInit(descriptor.getExtensions().get(3));
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.mokylin.bleach.protobuf.MessageType.tARGET);
     registry.add(com.mokylin.bleach.protobuf.MessageType.tARGET);
     registry.add(com.mokylin.bleach.protobuf.MessageType.tARGET);
     registry.add(com.mokylin.bleach.protobuf.MessageType.tARGET);

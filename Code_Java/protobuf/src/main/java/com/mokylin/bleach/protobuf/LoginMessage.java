@@ -8,6 +8,329 @@ public final class LoginMessage {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  public interface CSHandshakeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.mokylin.CSHandshake)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code com.mokylin.CSHandshake}
+   *
+   * <pre>
+   **
+   * 客户端请求，握手
+   * </pre>
+   */
+  public static final class CSHandshake extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.mokylin.CSHandshake)
+      CSHandshakeOrBuilder {
+    // Use CSHandshake.newBuilder() to construct.
+    private CSHandshake(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSHandshake(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSHandshake defaultInstance;
+    public static CSHandshake getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSHandshake getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSHandshake(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_CSHandshake_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_CSHandshake_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mokylin.bleach.protobuf.LoginMessage.CSHandshake.class, com.mokylin.bleach.protobuf.LoginMessage.CSHandshake.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSHandshake> PARSER =
+        new com.google.protobuf.AbstractParser<CSHandshake>() {
+      public CSHandshake parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSHandshake(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSHandshake> getParserForType() {
+      return PARSER;
+    }
+
+    private void initFields() {
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSHandshake parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSHandshake parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSHandshake parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSHandshake parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSHandshake parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSHandshake parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSHandshake parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSHandshake parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSHandshake parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.CSHandshake parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.mokylin.bleach.protobuf.LoginMessage.CSHandshake prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.mokylin.CSHandshake}
+     *
+     * <pre>
+     **
+     * 客户端请求，握手
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.mokylin.CSHandshake)
+        com.mokylin.bleach.protobuf.LoginMessage.CSHandshakeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_CSHandshake_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_CSHandshake_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mokylin.bleach.protobuf.LoginMessage.CSHandshake.class, com.mokylin.bleach.protobuf.LoginMessage.CSHandshake.Builder.class);
+      }
+
+      // Construct using com.mokylin.bleach.protobuf.LoginMessage.CSHandshake.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_CSHandshake_descriptor;
+      }
+
+      public com.mokylin.bleach.protobuf.LoginMessage.CSHandshake getDefaultInstanceForType() {
+        return com.mokylin.bleach.protobuf.LoginMessage.CSHandshake.getDefaultInstance();
+      }
+
+      public com.mokylin.bleach.protobuf.LoginMessage.CSHandshake build() {
+        com.mokylin.bleach.protobuf.LoginMessage.CSHandshake result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.mokylin.bleach.protobuf.LoginMessage.CSHandshake buildPartial() {
+        com.mokylin.bleach.protobuf.LoginMessage.CSHandshake result = new com.mokylin.bleach.protobuf.LoginMessage.CSHandshake(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mokylin.bleach.protobuf.LoginMessage.CSHandshake) {
+          return mergeFrom((com.mokylin.bleach.protobuf.LoginMessage.CSHandshake)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mokylin.bleach.protobuf.LoginMessage.CSHandshake other) {
+        if (other == com.mokylin.bleach.protobuf.LoginMessage.CSHandshake.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.mokylin.bleach.protobuf.LoginMessage.CSHandshake parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.mokylin.bleach.protobuf.LoginMessage.CSHandshake) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.mokylin.CSHandshake)
+    }
+
+    static {
+      defaultInstance = new CSHandshake(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.mokylin.CSHandshake)
+  }
+
   public interface CSLoginOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.mokylin.CSLogin)
       com.google.protobuf.MessageOrBuilder {
@@ -1095,6 +1418,11 @@ public final class LoginMessage {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_mokylin_CSHandshake_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_mokylin_CSHandshake_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_mokylin_CSLogin_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -1109,10 +1437,10 @@ public final class LoginMessage {
   static {
     java.lang.String[] descriptorData = {
       "\n\013Login.proto\022\013com.mokylin\032\021MessageType." +
-      "proto\"R\n\007CSLogin\022\020\n\010serverId\030\001 \002(\005\022\017\n\007ch" +
-      "annel\030\002 \002(\t\022\021\n\taccountId\030\003 \002(\t\022\013\n\003key\030\004 " +
-      "\002(\t:\004\210\265\030\013B+\n\033com.mokylin.bleach.protobuf" +
-      "B\014LoginMessage"
+      "proto\"\023\n\013CSHandshake:\004\210\265\030\013\"R\n\007CSLogin\022\020\n" +
+      "\010serverId\030\001 \002(\005\022\017\n\007channel\030\002 \002(\t\022\021\n\tacco" +
+      "untId\030\003 \002(\t\022\013\n\003key\030\004 \002(\t:\004\210\265\030\014B+\n\033com.mo" +
+      "kylin.bleach.protobufB\014LoginMessage"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1127,14 +1455,21 @@ public final class LoginMessage {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.mokylin.bleach.protobuf.MessageType.getDescriptor(),
         }, assigner);
-    internal_static_com_mokylin_CSLogin_descriptor =
+    internal_static_com_mokylin_CSHandshake_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_com_mokylin_CSHandshake_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_mokylin_CSHandshake_descriptor,
+        new java.lang.String[] { });
+    internal_static_com_mokylin_CSLogin_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_com_mokylin_CSLogin_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_mokylin_CSLogin_descriptor,
         new java.lang.String[] { "ServerId", "Channel", "AccountId", "Key", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
     registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
