@@ -23,11 +23,14 @@ public class RBucketTest extends AbstractRedissonTest {
     @Test
     public void testRBucketString() {
         RBucket<String> rBucket = RedisUtils.getInstance().getRBucket(redisson, "testBucket");
+
         //同步放置
         rBucket.set("redisBucketASync");
+        String value = rBucket.get();
+        assertThat(value, is("redisBucketASync"));
+
         //异步放置
         rBucket.setAsync("测试");
-
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

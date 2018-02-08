@@ -7,7 +7,6 @@ import org.redisson.Redisson;
 /***
  * Redis client的辅助工具类
  * 用于连接Redis服务器 创建不同的Redis Server对应的客户端对象
- * @author u1
  *
  */
 public class RedisUtils {
