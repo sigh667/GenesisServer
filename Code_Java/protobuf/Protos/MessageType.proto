@@ -15,7 +15,7 @@ extend google.protobuf.EnumValueOptions{
 /**
  * 这里的消息类型的定义有一些限制
  * 每种类型的服务器只能处理消息号在特定范围内的消息
- * 详情请看com.mokylin.bleach.agentserver.core.msgtarget.MessageTargetManager类
+ * 详情请看core.msgtarget.MessageTargetManager类
  * 以下是各类型服务器可以处理的消息号范围
  * 由GameServer处理的消息号的消息范围：1-20000
  */
