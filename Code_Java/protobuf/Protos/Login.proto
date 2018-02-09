@@ -1,6 +1,6 @@
-package com.mokylin;
+package com.icewind;
 import "MessageType.proto";
-option java_package = "com.mokylin.bleach.protobuf";
+//option java_package = "com.icewind.bleach.protobuf";
 option java_outer_classname = "LoginMessage";
 
 ///////////////////////////////////////////////////////////////////////////////

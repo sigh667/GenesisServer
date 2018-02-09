@@ -9,19 +9,19 @@ public final class DBMission {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface DBMissionInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.DBMissionInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.DBMissionInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .com.mokylin.MissionInfo missionInfo = 1;</code>
+     * <code>required .com.icewind.MissionInfo missionInfo = 1;</code>
      */
     boolean hasMissionInfo();
     /**
-     * <code>required .com.mokylin.MissionInfo missionInfo = 1;</code>
+     * <code>required .com.icewind.MissionInfo missionInfo = 1;</code>
      */
     com.mokylin.bleach.protobuf.db.DBMission.MissionInfo getMissionInfo();
     /**
-     * <code>required .com.mokylin.MissionInfo missionInfo = 1;</code>
+     * <code>required .com.icewind.MissionInfo missionInfo = 1;</code>
      */
     com.mokylin.bleach.protobuf.db.DBMission.MissionInfoOrBuilder getMissionInfoOrBuilder();
 
@@ -43,7 +43,7 @@ public final class DBMission {
     long getLastResetStageEliteTime();
   }
   /**
-   * Protobuf type {@code com.mokylin.DBMissionInfo}
+   * Protobuf type {@code com.icewind.DBMissionInfo}
    *
    * <pre>
    **
@@ -52,7 +52,7 @@ public final class DBMission {
    */
   public static final class DBMissionInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.DBMissionInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.DBMissionInfo)
       DBMissionInfoOrBuilder {
     // Use DBMissionInfo.newBuilder() to construct.
     private DBMissionInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -131,12 +131,12 @@ public final class DBMission {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_DBMissionInfo_descriptor;
+      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_DBMissionInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_DBMissionInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_DBMissionInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.db.DBMission.DBMissionInfo.class, com.mokylin.bleach.protobuf.db.DBMission.DBMissionInfo.Builder.class);
     }
@@ -160,19 +160,19 @@ public final class DBMission {
     public static final int MISSIONINFO_FIELD_NUMBER = 1;
     private com.mokylin.bleach.protobuf.db.DBMission.MissionInfo missionInfo_;
     /**
-     * <code>required .com.mokylin.MissionInfo missionInfo = 1;</code>
+     * <code>required .com.icewind.MissionInfo missionInfo = 1;</code>
      */
     public boolean hasMissionInfo() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .com.mokylin.MissionInfo missionInfo = 1;</code>
+     * <code>required .com.icewind.MissionInfo missionInfo = 1;</code>
      */
     public com.mokylin.bleach.protobuf.db.DBMission.MissionInfo getMissionInfo() {
       return missionInfo_;
     }
     /**
-     * <code>required .com.mokylin.MissionInfo missionInfo = 1;</code>
+     * <code>required .com.icewind.MissionInfo missionInfo = 1;</code>
      */
     public com.mokylin.bleach.protobuf.db.DBMission.MissionInfoOrBuilder getMissionInfoOrBuilder() {
       return missionInfo_;
@@ -332,7 +332,7 @@ public final class DBMission {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.DBMissionInfo}
+     * Protobuf type {@code com.icewind.DBMissionInfo}
      *
      * <pre>
      **
@@ -341,16 +341,16 @@ public final class DBMission {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.DBMissionInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.DBMissionInfo)
         com.mokylin.bleach.protobuf.db.DBMission.DBMissionInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_DBMissionInfo_descriptor;
+        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_DBMissionInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_DBMissionInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_DBMissionInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.db.DBMission.DBMissionInfo.class, com.mokylin.bleach.protobuf.db.DBMission.DBMissionInfo.Builder.class);
       }
@@ -393,7 +393,7 @@ public final class DBMission {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_DBMissionInfo_descriptor;
+        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_DBMissionInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.db.DBMission.DBMissionInfo getDefaultInstanceForType() {
@@ -489,13 +489,13 @@ public final class DBMission {
       private com.google.protobuf.SingleFieldBuilder<
           com.mokylin.bleach.protobuf.db.DBMission.MissionInfo, com.mokylin.bleach.protobuf.db.DBMission.MissionInfo.Builder, com.mokylin.bleach.protobuf.db.DBMission.MissionInfoOrBuilder> missionInfoBuilder_;
       /**
-       * <code>required .com.mokylin.MissionInfo missionInfo = 1;</code>
+       * <code>required .com.icewind.MissionInfo missionInfo = 1;</code>
        */
       public boolean hasMissionInfo() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .com.mokylin.MissionInfo missionInfo = 1;</code>
+       * <code>required .com.icewind.MissionInfo missionInfo = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBMission.MissionInfo getMissionInfo() {
         if (missionInfoBuilder_ == null) {
@@ -505,7 +505,7 @@ public final class DBMission {
         }
       }
       /**
-       * <code>required .com.mokylin.MissionInfo missionInfo = 1;</code>
+       * <code>required .com.icewind.MissionInfo missionInfo = 1;</code>
        */
       public Builder setMissionInfo(com.mokylin.bleach.protobuf.db.DBMission.MissionInfo value) {
         if (missionInfoBuilder_ == null) {
@@ -521,7 +521,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>required .com.mokylin.MissionInfo missionInfo = 1;</code>
+       * <code>required .com.icewind.MissionInfo missionInfo = 1;</code>
        */
       public Builder setMissionInfo(
           com.mokylin.bleach.protobuf.db.DBMission.MissionInfo.Builder builderForValue) {
@@ -535,7 +535,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>required .com.mokylin.MissionInfo missionInfo = 1;</code>
+       * <code>required .com.icewind.MissionInfo missionInfo = 1;</code>
        */
       public Builder mergeMissionInfo(com.mokylin.bleach.protobuf.db.DBMission.MissionInfo value) {
         if (missionInfoBuilder_ == null) {
@@ -554,7 +554,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>required .com.mokylin.MissionInfo missionInfo = 1;</code>
+       * <code>required .com.icewind.MissionInfo missionInfo = 1;</code>
        */
       public Builder clearMissionInfo() {
         if (missionInfoBuilder_ == null) {
@@ -567,7 +567,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>required .com.mokylin.MissionInfo missionInfo = 1;</code>
+       * <code>required .com.icewind.MissionInfo missionInfo = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBMission.MissionInfo.Builder getMissionInfoBuilder() {
         bitField0_ |= 0x00000001;
@@ -575,7 +575,7 @@ public final class DBMission {
         return getMissionInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .com.mokylin.MissionInfo missionInfo = 1;</code>
+       * <code>required .com.icewind.MissionInfo missionInfo = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBMission.MissionInfoOrBuilder getMissionInfoOrBuilder() {
         if (missionInfoBuilder_ != null) {
@@ -585,7 +585,7 @@ public final class DBMission {
         }
       }
       /**
-       * <code>required .com.mokylin.MissionInfo missionInfo = 1;</code>
+       * <code>required .com.icewind.MissionInfo missionInfo = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.mokylin.bleach.protobuf.db.DBMission.MissionInfo, com.mokylin.bleach.protobuf.db.DBMission.MissionInfo.Builder, com.mokylin.bleach.protobuf.db.DBMission.MissionInfoOrBuilder> 
@@ -649,7 +649,7 @@ public final class DBMission {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.DBMissionInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.DBMissionInfo)
     }
 
     static {
@@ -657,63 +657,63 @@ public final class DBMission {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.DBMissionInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.DBMissionInfo)
   }
 
   public interface MissionInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.MissionInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.MissionInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+     * <code>repeated .com.icewind.StageInfo stages = 1;</code>
      */
     java.util.List<com.mokylin.bleach.protobuf.db.DBMission.StageInfo> 
         getStagesList();
     /**
-     * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+     * <code>repeated .com.icewind.StageInfo stages = 1;</code>
      */
     com.mokylin.bleach.protobuf.db.DBMission.StageInfo getStages(int index);
     /**
-     * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+     * <code>repeated .com.icewind.StageInfo stages = 1;</code>
      */
     int getStagesCount();
     /**
-     * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+     * <code>repeated .com.icewind.StageInfo stages = 1;</code>
      */
     java.util.List<? extends com.mokylin.bleach.protobuf.db.DBMission.StageInfoOrBuilder> 
         getStagesOrBuilderList();
     /**
-     * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+     * <code>repeated .com.icewind.StageInfo stages = 1;</code>
      */
     com.mokylin.bleach.protobuf.db.DBMission.StageInfoOrBuilder getStagesOrBuilder(
         int index);
 
     /**
-     * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+     * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
      */
     java.util.List<com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo> 
         getStageElitesList();
     /**
-     * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+     * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
      */
     com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo getStageElites(int index);
     /**
-     * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+     * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
      */
     int getStageElitesCount();
     /**
-     * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+     * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
      */
     java.util.List<? extends com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfoOrBuilder> 
         getStageElitesOrBuilderList();
     /**
-     * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+     * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
      */
     com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfoOrBuilder getStageElitesOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code com.mokylin.MissionInfo}
+   * Protobuf type {@code com.icewind.MissionInfo}
    *
    * <pre>
    **
@@ -722,7 +722,7 @@ public final class DBMission {
    */
   public static final class MissionInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.MissionInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.MissionInfo)
       MissionInfoOrBuilder {
     // Use MissionInfo.newBuilder() to construct.
     private MissionInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -805,12 +805,12 @@ public final class DBMission {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_MissionInfo_descriptor;
+      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_MissionInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_MissionInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_MissionInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.db.DBMission.MissionInfo.class, com.mokylin.bleach.protobuf.db.DBMission.MissionInfo.Builder.class);
     }
@@ -833,32 +833,32 @@ public final class DBMission {
     public static final int STAGES_FIELD_NUMBER = 1;
     private java.util.List<com.mokylin.bleach.protobuf.db.DBMission.StageInfo> stages_;
     /**
-     * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+     * <code>repeated .com.icewind.StageInfo stages = 1;</code>
      */
     public java.util.List<com.mokylin.bleach.protobuf.db.DBMission.StageInfo> getStagesList() {
       return stages_;
     }
     /**
-     * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+     * <code>repeated .com.icewind.StageInfo stages = 1;</code>
      */
     public java.util.List<? extends com.mokylin.bleach.protobuf.db.DBMission.StageInfoOrBuilder> 
         getStagesOrBuilderList() {
       return stages_;
     }
     /**
-     * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+     * <code>repeated .com.icewind.StageInfo stages = 1;</code>
      */
     public int getStagesCount() {
       return stages_.size();
     }
     /**
-     * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+     * <code>repeated .com.icewind.StageInfo stages = 1;</code>
      */
     public com.mokylin.bleach.protobuf.db.DBMission.StageInfo getStages(int index) {
       return stages_.get(index);
     }
     /**
-     * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+     * <code>repeated .com.icewind.StageInfo stages = 1;</code>
      */
     public com.mokylin.bleach.protobuf.db.DBMission.StageInfoOrBuilder getStagesOrBuilder(
         int index) {
@@ -868,32 +868,32 @@ public final class DBMission {
     public static final int STAGEELITES_FIELD_NUMBER = 2;
     private java.util.List<com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo> stageElites_;
     /**
-     * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+     * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
      */
     public java.util.List<com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo> getStageElitesList() {
       return stageElites_;
     }
     /**
-     * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+     * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
      */
     public java.util.List<? extends com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfoOrBuilder> 
         getStageElitesOrBuilderList() {
       return stageElites_;
     }
     /**
-     * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+     * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
      */
     public int getStageElitesCount() {
       return stageElites_.size();
     }
     /**
-     * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+     * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
      */
     public com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo getStageElites(int index) {
       return stageElites_.get(index);
     }
     /**
-     * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+     * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
      */
     public com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfoOrBuilder getStageElitesOrBuilder(
         int index) {
@@ -1031,7 +1031,7 @@ public final class DBMission {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.MissionInfo}
+     * Protobuf type {@code com.icewind.MissionInfo}
      *
      * <pre>
      **
@@ -1040,16 +1040,16 @@ public final class DBMission {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.MissionInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.MissionInfo)
         com.mokylin.bleach.protobuf.db.DBMission.MissionInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_MissionInfo_descriptor;
+        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_MissionInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_MissionInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_MissionInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.db.DBMission.MissionInfo.class, com.mokylin.bleach.protobuf.db.DBMission.MissionInfo.Builder.class);
       }
@@ -1097,7 +1097,7 @@ public final class DBMission {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_MissionInfo_descriptor;
+        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_MissionInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.db.DBMission.MissionInfo getDefaultInstanceForType() {
@@ -1252,7 +1252,7 @@ public final class DBMission {
           com.mokylin.bleach.protobuf.db.DBMission.StageInfo, com.mokylin.bleach.protobuf.db.DBMission.StageInfo.Builder, com.mokylin.bleach.protobuf.db.DBMission.StageInfoOrBuilder> stagesBuilder_;
 
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.db.DBMission.StageInfo> getStagesList() {
         if (stagesBuilder_ == null) {
@@ -1262,7 +1262,7 @@ public final class DBMission {
         }
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public int getStagesCount() {
         if (stagesBuilder_ == null) {
@@ -1272,7 +1272,7 @@ public final class DBMission {
         }
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBMission.StageInfo getStages(int index) {
         if (stagesBuilder_ == null) {
@@ -1282,7 +1282,7 @@ public final class DBMission {
         }
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public Builder setStages(
           int index, com.mokylin.bleach.protobuf.db.DBMission.StageInfo value) {
@@ -1299,7 +1299,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public Builder setStages(
           int index, com.mokylin.bleach.protobuf.db.DBMission.StageInfo.Builder builderForValue) {
@@ -1313,7 +1313,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public Builder addStages(com.mokylin.bleach.protobuf.db.DBMission.StageInfo value) {
         if (stagesBuilder_ == null) {
@@ -1329,7 +1329,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public Builder addStages(
           int index, com.mokylin.bleach.protobuf.db.DBMission.StageInfo value) {
@@ -1346,7 +1346,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public Builder addStages(
           com.mokylin.bleach.protobuf.db.DBMission.StageInfo.Builder builderForValue) {
@@ -1360,7 +1360,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public Builder addStages(
           int index, com.mokylin.bleach.protobuf.db.DBMission.StageInfo.Builder builderForValue) {
@@ -1374,7 +1374,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public Builder addAllStages(
           java.lang.Iterable<? extends com.mokylin.bleach.protobuf.db.DBMission.StageInfo> values) {
@@ -1389,7 +1389,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public Builder clearStages() {
         if (stagesBuilder_ == null) {
@@ -1402,7 +1402,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public Builder removeStages(int index) {
         if (stagesBuilder_ == null) {
@@ -1415,14 +1415,14 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBMission.StageInfo.Builder getStagesBuilder(
           int index) {
         return getStagesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBMission.StageInfoOrBuilder getStagesOrBuilder(
           int index) {
@@ -1432,7 +1432,7 @@ public final class DBMission {
         }
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public java.util.List<? extends com.mokylin.bleach.protobuf.db.DBMission.StageInfoOrBuilder> 
            getStagesOrBuilderList() {
@@ -1443,14 +1443,14 @@ public final class DBMission {
         }
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBMission.StageInfo.Builder addStagesBuilder() {
         return getStagesFieldBuilder().addBuilder(
             com.mokylin.bleach.protobuf.db.DBMission.StageInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBMission.StageInfo.Builder addStagesBuilder(
           int index) {
@@ -1458,7 +1458,7 @@ public final class DBMission {
             index, com.mokylin.bleach.protobuf.db.DBMission.StageInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.StageInfo stages = 1;</code>
+       * <code>repeated .com.icewind.StageInfo stages = 1;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.db.DBMission.StageInfo.Builder> 
            getStagesBuilderList() {
@@ -1492,7 +1492,7 @@ public final class DBMission {
           com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo, com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo.Builder, com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfoOrBuilder> stageElitesBuilder_;
 
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo> getStageElitesList() {
         if (stageElitesBuilder_ == null) {
@@ -1502,7 +1502,7 @@ public final class DBMission {
         }
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public int getStageElitesCount() {
         if (stageElitesBuilder_ == null) {
@@ -1512,7 +1512,7 @@ public final class DBMission {
         }
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo getStageElites(int index) {
         if (stageElitesBuilder_ == null) {
@@ -1522,7 +1522,7 @@ public final class DBMission {
         }
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public Builder setStageElites(
           int index, com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo value) {
@@ -1539,7 +1539,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public Builder setStageElites(
           int index, com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo.Builder builderForValue) {
@@ -1553,7 +1553,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public Builder addStageElites(com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo value) {
         if (stageElitesBuilder_ == null) {
@@ -1569,7 +1569,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public Builder addStageElites(
           int index, com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo value) {
@@ -1586,7 +1586,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public Builder addStageElites(
           com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo.Builder builderForValue) {
@@ -1600,7 +1600,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public Builder addStageElites(
           int index, com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo.Builder builderForValue) {
@@ -1614,7 +1614,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public Builder addAllStageElites(
           java.lang.Iterable<? extends com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo> values) {
@@ -1629,7 +1629,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public Builder clearStageElites() {
         if (stageElitesBuilder_ == null) {
@@ -1642,7 +1642,7 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public Builder removeStageElites(int index) {
         if (stageElitesBuilder_ == null) {
@@ -1655,14 +1655,14 @@ public final class DBMission {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo.Builder getStageElitesBuilder(
           int index) {
         return getStageElitesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfoOrBuilder getStageElitesOrBuilder(
           int index) {
@@ -1672,7 +1672,7 @@ public final class DBMission {
         }
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public java.util.List<? extends com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfoOrBuilder> 
            getStageElitesOrBuilderList() {
@@ -1683,14 +1683,14 @@ public final class DBMission {
         }
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo.Builder addStageElitesBuilder() {
         return getStageElitesFieldBuilder().addBuilder(
             com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo.Builder addStageElitesBuilder(
           int index) {
@@ -1698,7 +1698,7 @@ public final class DBMission {
             index, com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.StageEliteInfo stageElites = 2;</code>
+       * <code>repeated .com.icewind.StageEliteInfo stageElites = 2;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo.Builder> 
            getStageElitesBuilderList() {
@@ -1719,7 +1719,7 @@ public final class DBMission {
         return stageElitesBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.MissionInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.MissionInfo)
     }
 
     static {
@@ -1727,11 +1727,11 @@ public final class DBMission {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.MissionInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.MissionInfo)
   }
 
   public interface StageInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.StageInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.StageInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1778,7 +1778,7 @@ public final class DBMission {
     boolean getIsTreasureOpen();
   }
   /**
-   * Protobuf type {@code com.mokylin.StageInfo}
+   * Protobuf type {@code com.icewind.StageInfo}
    *
    * <pre>
    **
@@ -1787,7 +1787,7 @@ public final class DBMission {
    */
   public static final class StageInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.StageInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.StageInfo)
       StageInfoOrBuilder {
     // Use StageInfo.newBuilder() to construct.
     private StageInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -1863,12 +1863,12 @@ public final class DBMission {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_StageInfo_descriptor;
+      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_StageInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_StageInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_StageInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.db.DBMission.StageInfo.class, com.mokylin.bleach.protobuf.db.DBMission.StageInfo.Builder.class);
     }
@@ -2089,7 +2089,7 @@ public final class DBMission {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.StageInfo}
+     * Protobuf type {@code com.icewind.StageInfo}
      *
      * <pre>
      **
@@ -2098,16 +2098,16 @@ public final class DBMission {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.StageInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.StageInfo)
         com.mokylin.bleach.protobuf.db.DBMission.StageInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_StageInfo_descriptor;
+        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_StageInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_StageInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_StageInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.db.DBMission.StageInfo.class, com.mokylin.bleach.protobuf.db.DBMission.StageInfo.Builder.class);
       }
@@ -2147,7 +2147,7 @@ public final class DBMission {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_StageInfo_descriptor;
+        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_StageInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.db.DBMission.StageInfo getDefaultInstanceForType() {
@@ -2370,7 +2370,7 @@ public final class DBMission {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.StageInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.StageInfo)
     }
 
     static {
@@ -2378,11 +2378,11 @@ public final class DBMission {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.StageInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.StageInfo)
   }
 
   public interface StageEliteInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.StageEliteInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.StageEliteInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2446,7 +2446,7 @@ public final class DBMission {
     int getResetTimes();
   }
   /**
-   * Protobuf type {@code com.mokylin.StageEliteInfo}
+   * Protobuf type {@code com.icewind.StageEliteInfo}
    *
    * <pre>
    **
@@ -2455,7 +2455,7 @@ public final class DBMission {
    */
   public static final class StageEliteInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.StageEliteInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.StageEliteInfo)
       StageEliteInfoOrBuilder {
     // Use StageEliteInfo.newBuilder() to construct.
     private StageEliteInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -2536,12 +2536,12 @@ public final class DBMission {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_StageEliteInfo_descriptor;
+      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_StageEliteInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_StageEliteInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_StageEliteInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo.class, com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo.Builder.class);
     }
@@ -2797,7 +2797,7 @@ public final class DBMission {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.StageEliteInfo}
+     * Protobuf type {@code com.icewind.StageEliteInfo}
      *
      * <pre>
      **
@@ -2806,16 +2806,16 @@ public final class DBMission {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.StageEliteInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.StageEliteInfo)
         com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_StageEliteInfo_descriptor;
+        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_StageEliteInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_StageEliteInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_StageEliteInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo.class, com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo.Builder.class);
       }
@@ -2857,7 +2857,7 @@ public final class DBMission {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_mokylin_StageEliteInfo_descriptor;
+        return com.mokylin.bleach.protobuf.db.DBMission.internal_static_com_icewind_StageEliteInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.db.DBMission.StageEliteInfo getDefaultInstanceForType() {
@@ -3139,7 +3139,7 @@ public final class DBMission {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.StageEliteInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.StageEliteInfo)
     }
 
     static {
@@ -3147,29 +3147,29 @@ public final class DBMission {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.StageEliteInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.StageEliteInfo)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_DBMissionInfo_descriptor;
+    internal_static_com_icewind_DBMissionInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_DBMissionInfo_fieldAccessorTable;
+      internal_static_com_icewind_DBMissionInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_MissionInfo_descriptor;
+    internal_static_com_icewind_MissionInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_MissionInfo_fieldAccessorTable;
+      internal_static_com_icewind_MissionInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_StageInfo_descriptor;
+    internal_static_com_icewind_StageInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_StageInfo_fieldAccessorTable;
+      internal_static_com_icewind_StageInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_StageEliteInfo_descriptor;
+    internal_static_com_icewind_StageEliteInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_StageEliteInfo_fieldAccessorTable;
+      internal_static_com_icewind_StageEliteInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3179,12 +3179,12 @@ public final class DBMission {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022db/DBMission.proto\022\013com.mokylin\"_\n\rDBM" +
-      "issionInfo\022-\n\013missionInfo\030\001 \002(\0132\030.com.mo" +
-      "kylin.MissionInfo\022\037\n\027lastResetStageElite" +
+      "\n\022db/DBMission.proto\022\013com.icewind\"_\n\rDBM" +
+      "issionInfo\022-\n\013missionInfo\030\001 \002(\0132\030.com.ic" +
+      "ewind.MissionInfo\022\037\n\027lastResetStageElite" +
       "Time\030\002 \002(\003\"g\n\013MissionInfo\022&\n\006stages\030\001 \003(" +
-      "\0132\026.com.mokylin.StageInfo\0220\n\013stageElites" +
-      "\030\002 \003(\0132\033.com.mokylin.StageEliteInfo\"F\n\tS" +
+      "\0132\026.com.icewind.StageInfo\0220\n\013stageElites" +
+      "\030\002 \003(\0132\033.com.icewind.StageEliteInfo\"F\n\tS" +
       "tageInfo\022\022\n\ntemplateId\030\001 \002(\005\022\r\n\005stars\030\002 " +
       "\002(\005\022\026\n\016isTreasureOpen\030\003 \002(\010\"\\\n\016StageElit" +
       "eInfo\022\022\n\ntemplateId\030\001 \002(\005\022\r\n\005stars\030\002 \002(\005" +
@@ -3204,29 +3204,29 @@ public final class DBMission {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_mokylin_DBMissionInfo_descriptor =
+    internal_static_com_icewind_DBMissionInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_mokylin_DBMissionInfo_fieldAccessorTable = new
+    internal_static_com_icewind_DBMissionInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_DBMissionInfo_descriptor,
+        internal_static_com_icewind_DBMissionInfo_descriptor,
         new java.lang.String[] { "MissionInfo", "LastResetStageEliteTime", });
-    internal_static_com_mokylin_MissionInfo_descriptor =
+    internal_static_com_icewind_MissionInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_mokylin_MissionInfo_fieldAccessorTable = new
+    internal_static_com_icewind_MissionInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_MissionInfo_descriptor,
+        internal_static_com_icewind_MissionInfo_descriptor,
         new java.lang.String[] { "Stages", "StageElites", });
-    internal_static_com_mokylin_StageInfo_descriptor =
+    internal_static_com_icewind_StageInfo_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_com_mokylin_StageInfo_fieldAccessorTable = new
+    internal_static_com_icewind_StageInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_StageInfo_descriptor,
+        internal_static_com_icewind_StageInfo_descriptor,
         new java.lang.String[] { "TemplateId", "Stars", "IsTreasureOpen", });
-    internal_static_com_mokylin_StageEliteInfo_descriptor =
+    internal_static_com_icewind_StageEliteInfo_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_com_mokylin_StageEliteInfo_fieldAccessorTable = new
+    internal_static_com_icewind_StageEliteInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_StageEliteInfo_descriptor,
+        internal_static_com_icewind_StageEliteInfo_descriptor,
         new java.lang.String[] { "TemplateId", "Stars", "AttackTimes", "ResetTimes", });
   }
 

@@ -9,7 +9,7 @@ public final class CommonMessage {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface CurrencyChangeInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CurrencyChangeInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CurrencyChangeInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -47,7 +47,7 @@ public final class CommonMessage {
     long getChangeValue();
   }
   /**
-   * Protobuf type {@code com.mokylin.CurrencyChangeInfo}
+   * Protobuf type {@code com.icewind.CurrencyChangeInfo}
    *
    * <pre>
    **
@@ -56,7 +56,7 @@ public final class CommonMessage {
    */
   public static final class CurrencyChangeInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CurrencyChangeInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.CurrencyChangeInfo)
       CurrencyChangeInfoOrBuilder {
     // Use CurrencyChangeInfo.newBuilder() to construct.
     private CurrencyChangeInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -127,12 +127,12 @@ public final class CommonMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.CommonMessage.internal_static_com_mokylin_CurrencyChangeInfo_descriptor;
+      return com.mokylin.bleach.protobuf.CommonMessage.internal_static_com_icewind_CurrencyChangeInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.CommonMessage.internal_static_com_mokylin_CurrencyChangeInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.CommonMessage.internal_static_com_icewind_CurrencyChangeInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo.class, com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo.Builder.class);
     }
@@ -326,7 +326,7 @@ public final class CommonMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CurrencyChangeInfo}
+     * Protobuf type {@code com.icewind.CurrencyChangeInfo}
      *
      * <pre>
      **
@@ -335,16 +335,16 @@ public final class CommonMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CurrencyChangeInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CurrencyChangeInfo)
         com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.CommonMessage.internal_static_com_mokylin_CurrencyChangeInfo_descriptor;
+        return com.mokylin.bleach.protobuf.CommonMessage.internal_static_com_icewind_CurrencyChangeInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.CommonMessage.internal_static_com_mokylin_CurrencyChangeInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.CommonMessage.internal_static_com_icewind_CurrencyChangeInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo.class, com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo.Builder.class);
       }
@@ -382,7 +382,7 @@ public final class CommonMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.CommonMessage.internal_static_com_mokylin_CurrencyChangeInfo_descriptor;
+        return com.mokylin.bleach.protobuf.CommonMessage.internal_static_com_icewind_CurrencyChangeInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo getDefaultInstanceForType() {
@@ -562,7 +562,7 @@ public final class CommonMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CurrencyChangeInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CurrencyChangeInfo)
     }
 
     static {
@@ -570,14 +570,14 @@ public final class CommonMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CurrencyChangeInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.CurrencyChangeInfo)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CurrencyChangeInfo_descriptor;
+    internal_static_com_icewind_CurrencyChangeInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CurrencyChangeInfo_fieldAccessorTable;
+      internal_static_com_icewind_CurrencyChangeInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -587,7 +587,7 @@ public final class CommonMessage {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014Common.proto\022\013com.mokylin\032\021MessageType" +
+      "\n\014Common.proto\022\013com.icewind\032\021MessageType" +
       ".proto\"A\n\022CurrencyChangeInfo\022\026\n\016currency" +
       "TypeId\030\001 \002(\005\022\023\n\013changeValue\030\002 \002(\003B,\n\033com" +
       ".mokylin.bleach.protobufB\rCommonMessage"
@@ -603,15 +603,15 @@ public final class CommonMessage {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.mokylin.bleach.protobuf.MessageType.getDescriptor(),
+          com.icewind.MessageType.getDescriptor(),
         }, assigner);
-    internal_static_com_mokylin_CurrencyChangeInfo_descriptor =
+    internal_static_com_icewind_CurrencyChangeInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_mokylin_CurrencyChangeInfo_fieldAccessorTable = new
+    internal_static_com_icewind_CurrencyChangeInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CurrencyChangeInfo_descriptor,
+        internal_static_com_icewind_CurrencyChangeInfo_descriptor,
         new java.lang.String[] { "CurrencyTypeId", "ChangeValue", });
-    com.mokylin.bleach.protobuf.MessageType.getDescriptor();
+    com.icewind.MessageType.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

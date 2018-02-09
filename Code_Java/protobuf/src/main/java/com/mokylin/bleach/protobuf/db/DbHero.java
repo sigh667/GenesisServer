@@ -9,7 +9,7 @@ public final class DbHero {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface DbHeroLingYaInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.DbHeroLingYaInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.DbHeroLingYaInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -38,7 +38,7 @@ public final class DbHero {
     int getTemplateIds(int index);
 
     /**
-     * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+     * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
      *
      * <pre>
      **灵压暴击等级
@@ -47,7 +47,7 @@ public final class DbHero {
     java.util.List<com.mokylin.bleach.protobuf.db.DbHero.CritLevel> 
         getCritLevelsList();
     /**
-     * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+     * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
      *
      * <pre>
      **灵压暴击等级
@@ -55,7 +55,7 @@ public final class DbHero {
      */
     com.mokylin.bleach.protobuf.db.DbHero.CritLevel getCritLevels(int index);
     /**
-     * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+     * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
      *
      * <pre>
      **灵压暴击等级
@@ -63,7 +63,7 @@ public final class DbHero {
      */
     int getCritLevelsCount();
     /**
-     * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+     * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
      *
      * <pre>
      **灵压暴击等级
@@ -72,7 +72,7 @@ public final class DbHero {
     java.util.List<? extends com.mokylin.bleach.protobuf.db.DbHero.CritLevelOrBuilder> 
         getCritLevelsOrBuilderList();
     /**
-     * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+     * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
      *
      * <pre>
      **灵压暴击等级
@@ -99,7 +99,7 @@ public final class DbHero {
     int getHeroGroupId();
   }
   /**
-   * Protobuf type {@code com.mokylin.DbHeroLingYaInfo}
+   * Protobuf type {@code com.icewind.DbHeroLingYaInfo}
    *
    * <pre>
    **
@@ -108,7 +108,7 @@ public final class DbHero {
    */
   public static final class DbHeroLingYaInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.DbHeroLingYaInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.DbHeroLingYaInfo)
       DbHeroLingYaInfoOrBuilder {
     // Use DbHeroLingYaInfo.newBuilder() to construct.
     private DbHeroLingYaInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -209,12 +209,12 @@ public final class DbHero {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_mokylin_DbHeroLingYaInfo_descriptor;
+      return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_icewind_DbHeroLingYaInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_mokylin_DbHeroLingYaInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_icewind_DbHeroLingYaInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.db.DbHero.DbHeroLingYaInfo.class, com.mokylin.bleach.protobuf.db.DbHero.DbHeroLingYaInfo.Builder.class);
     }
@@ -272,7 +272,7 @@ public final class DbHero {
     public static final int CRITLEVELS_FIELD_NUMBER = 2;
     private java.util.List<com.mokylin.bleach.protobuf.db.DbHero.CritLevel> critLevels_;
     /**
-     * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+     * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
      *
      * <pre>
      **灵压暴击等级
@@ -282,7 +282,7 @@ public final class DbHero {
       return critLevels_;
     }
     /**
-     * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+     * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
      *
      * <pre>
      **灵压暴击等级
@@ -293,7 +293,7 @@ public final class DbHero {
       return critLevels_;
     }
     /**
-     * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+     * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
      *
      * <pre>
      **灵压暴击等级
@@ -303,7 +303,7 @@ public final class DbHero {
       return critLevels_.size();
     }
     /**
-     * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+     * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
      *
      * <pre>
      **灵压暴击等级
@@ -313,7 +313,7 @@ public final class DbHero {
       return critLevels_.get(index);
     }
     /**
-     * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+     * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
      *
      * <pre>
      **灵压暴击等级
@@ -485,7 +485,7 @@ public final class DbHero {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.DbHeroLingYaInfo}
+     * Protobuf type {@code com.icewind.DbHeroLingYaInfo}
      *
      * <pre>
      **
@@ -494,16 +494,16 @@ public final class DbHero {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.DbHeroLingYaInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.DbHeroLingYaInfo)
         com.mokylin.bleach.protobuf.db.DbHero.DbHeroLingYaInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_mokylin_DbHeroLingYaInfo_descriptor;
+        return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_icewind_DbHeroLingYaInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_mokylin_DbHeroLingYaInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_icewind_DbHeroLingYaInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.db.DbHero.DbHeroLingYaInfo.class, com.mokylin.bleach.protobuf.db.DbHero.DbHeroLingYaInfo.Builder.class);
       }
@@ -548,7 +548,7 @@ public final class DbHero {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_mokylin_DbHeroLingYaInfo_descriptor;
+        return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_icewind_DbHeroLingYaInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.db.DbHero.DbHeroLingYaInfo getDefaultInstanceForType() {
@@ -780,7 +780,7 @@ public final class DbHero {
           com.mokylin.bleach.protobuf.db.DbHero.CritLevel, com.mokylin.bleach.protobuf.db.DbHero.CritLevel.Builder, com.mokylin.bleach.protobuf.db.DbHero.CritLevelOrBuilder> critLevelsBuilder_;
 
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -794,7 +794,7 @@ public final class DbHero {
         }
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -808,7 +808,7 @@ public final class DbHero {
         }
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -822,7 +822,7 @@ public final class DbHero {
         }
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -843,7 +843,7 @@ public final class DbHero {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -861,7 +861,7 @@ public final class DbHero {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -881,7 +881,7 @@ public final class DbHero {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -902,7 +902,7 @@ public final class DbHero {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -920,7 +920,7 @@ public final class DbHero {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -938,7 +938,7 @@ public final class DbHero {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -957,7 +957,7 @@ public final class DbHero {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -974,7 +974,7 @@ public final class DbHero {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -991,7 +991,7 @@ public final class DbHero {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -1002,7 +1002,7 @@ public final class DbHero {
         return getCritLevelsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -1016,7 +1016,7 @@ public final class DbHero {
         }
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -1031,7 +1031,7 @@ public final class DbHero {
         }
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -1042,7 +1042,7 @@ public final class DbHero {
             com.mokylin.bleach.protobuf.db.DbHero.CritLevel.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -1054,7 +1054,7 @@ public final class DbHero {
             index, com.mokylin.bleach.protobuf.db.DbHero.CritLevel.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.CritLevel critLevels = 2;</code>
+       * <code>repeated .com.icewind.CritLevel critLevels = 2;</code>
        *
        * <pre>
        **灵压暴击等级
@@ -1127,7 +1127,7 @@ public final class DbHero {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.DbHeroLingYaInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.DbHeroLingYaInfo)
     }
 
     static {
@@ -1135,11 +1135,11 @@ public final class DbHero {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.DbHeroLingYaInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.DbHeroLingYaInfo)
   }
 
   public interface CritLevelOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CritLevel)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CritLevel)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1185,7 +1185,7 @@ public final class DbHero {
     int getLevels(int index);
   }
   /**
-   * Protobuf type {@code com.mokylin.CritLevel}
+   * Protobuf type {@code com.icewind.CritLevel}
    *
    * <pre>
    **
@@ -1194,7 +1194,7 @@ public final class DbHero {
    */
   public static final class CritLevel extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CritLevel)
+      // @@protoc_insertion_point(message_implements:com.icewind.CritLevel)
       CritLevelOrBuilder {
     // Use CritLevel.newBuilder() to construct.
     private CritLevel(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -1284,12 +1284,12 @@ public final class DbHero {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_mokylin_CritLevel_descriptor;
+      return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_icewind_CritLevel_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_mokylin_CritLevel_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_icewind_CritLevel_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.db.DbHero.CritLevel.class, com.mokylin.bleach.protobuf.db.DbHero.CritLevel.Builder.class);
     }
@@ -1495,7 +1495,7 @@ public final class DbHero {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CritLevel}
+     * Protobuf type {@code com.icewind.CritLevel}
      *
      * <pre>
      **
@@ -1504,16 +1504,16 @@ public final class DbHero {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CritLevel)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CritLevel)
         com.mokylin.bleach.protobuf.db.DbHero.CritLevelOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_mokylin_CritLevel_descriptor;
+        return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_icewind_CritLevel_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_mokylin_CritLevel_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_icewind_CritLevel_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.db.DbHero.CritLevel.class, com.mokylin.bleach.protobuf.db.DbHero.CritLevel.Builder.class);
       }
@@ -1551,7 +1551,7 @@ public final class DbHero {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_mokylin_CritLevel_descriptor;
+        return com.mokylin.bleach.protobuf.db.DbHero.internal_static_com_icewind_CritLevel_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.db.DbHero.CritLevel getDefaultInstanceForType() {
@@ -1781,7 +1781,7 @@ public final class DbHero {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CritLevel)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CritLevel)
     }
 
     static {
@@ -1789,19 +1789,19 @@ public final class DbHero {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CritLevel)
+    // @@protoc_insertion_point(class_scope:com.icewind.CritLevel)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_DbHeroLingYaInfo_descriptor;
+    internal_static_com_icewind_DbHeroLingYaInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_DbHeroLingYaInfo_fieldAccessorTable;
+      internal_static_com_icewind_DbHeroLingYaInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CritLevel_descriptor;
+    internal_static_com_icewind_CritLevel_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CritLevel_fieldAccessorTable;
+      internal_static_com_icewind_CritLevel_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1811,9 +1811,9 @@ public final class DbHero {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017db/DbHero.proto\022\013com.mokylin\"h\n\020DbHero" +
+      "\n\017db/DbHero.proto\022\013com.icewind\"h\n\020DbHero" +
       "LingYaInfo\022\023\n\013templateIds\030\001 \003(\005\022*\n\ncritL" +
-      "evels\030\002 \003(\0132\026.com.mokylin.CritLevel\022\023\n\013h" +
+      "evels\030\002 \003(\0132\026.com.icewind.CritLevel\022\023\n\013h" +
       "eroGroupId\030\003 \001(\005\"*\n\tCritLevel\022\r\n\005phase\030\001" +
       " \002(\005\022\016\n\006levels\030\002 \003(\005B(\n\036com.mokylin.blea" +
       "ch.protobuf.dbB\006DbHero"
@@ -1830,17 +1830,17 @@ public final class DbHero {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_mokylin_DbHeroLingYaInfo_descriptor =
+    internal_static_com_icewind_DbHeroLingYaInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_mokylin_DbHeroLingYaInfo_fieldAccessorTable = new
+    internal_static_com_icewind_DbHeroLingYaInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_DbHeroLingYaInfo_descriptor,
+        internal_static_com_icewind_DbHeroLingYaInfo_descriptor,
         new java.lang.String[] { "TemplateIds", "CritLevels", "HeroGroupId", });
-    internal_static_com_mokylin_CritLevel_descriptor =
+    internal_static_com_icewind_CritLevel_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_mokylin_CritLevel_fieldAccessorTable = new
+    internal_static_com_icewind_CritLevel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CritLevel_descriptor,
+        internal_static_com_icewind_CritLevel_descriptor,
         new java.lang.String[] { "Phase", "Levels", });
   }
 

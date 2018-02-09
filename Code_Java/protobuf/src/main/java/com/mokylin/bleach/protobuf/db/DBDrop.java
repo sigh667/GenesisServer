@@ -9,29 +9,29 @@ public final class DBDrop {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface DropInfosOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.DropInfos)
+      // @@protoc_insertion_point(interface_extends:com.icewind.DropInfos)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+     * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
      */
     java.util.List<com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo> 
         getItemDropInfoList();
     /**
-     * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+     * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
      */
     com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo getItemDropInfo(int index);
     /**
-     * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+     * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
      */
     int getItemDropInfoCount();
     /**
-     * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+     * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
      */
     java.util.List<? extends com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfoOrBuilder> 
         getItemDropInfoOrBuilderList();
     /**
-     * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+     * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
      */
     com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfoOrBuilder getItemDropInfoOrBuilder(
         int index);
@@ -54,11 +54,11 @@ public final class DBDrop {
     long getLastResetNegativeDropValueTime();
   }
   /**
-   * Protobuf type {@code com.mokylin.DropInfos}
+   * Protobuf type {@code com.icewind.DropInfos}
    */
   public static final class DropInfos extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.DropInfos)
+      // @@protoc_insertion_point(message_implements:com.icewind.DropInfos)
       DropInfosOrBuilder {
     // Use DropInfos.newBuilder() to construct.
     private DropInfos(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -135,12 +135,12 @@ public final class DBDrop {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_mokylin_DropInfos_descriptor;
+      return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_icewind_DropInfos_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_mokylin_DropInfos_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_icewind_DropInfos_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.db.DBDrop.DropInfos.class, com.mokylin.bleach.protobuf.db.DBDrop.DropInfos.Builder.class);
     }
@@ -164,32 +164,32 @@ public final class DBDrop {
     public static final int ITEMDROPINFO_FIELD_NUMBER = 1;
     private java.util.List<com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo> itemDropInfo_;
     /**
-     * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+     * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
      */
     public java.util.List<com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo> getItemDropInfoList() {
       return itemDropInfo_;
     }
     /**
-     * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+     * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
      */
     public java.util.List<? extends com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfoOrBuilder> 
         getItemDropInfoOrBuilderList() {
       return itemDropInfo_;
     }
     /**
-     * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+     * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
      */
     public int getItemDropInfoCount() {
       return itemDropInfo_.size();
     }
     /**
-     * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+     * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
      */
     public com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo getItemDropInfo(int index) {
       return itemDropInfo_.get(index);
     }
     /**
-     * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+     * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
      */
     public com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfoOrBuilder getItemDropInfoOrBuilder(
         int index) {
@@ -348,20 +348,20 @@ public final class DBDrop {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.DropInfos}
+     * Protobuf type {@code com.icewind.DropInfos}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.DropInfos)
+        // @@protoc_insertion_point(builder_implements:com.icewind.DropInfos)
         com.mokylin.bleach.protobuf.db.DBDrop.DropInfosOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_mokylin_DropInfos_descriptor;
+        return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_icewind_DropInfos_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_mokylin_DropInfos_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_icewind_DropInfos_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.db.DBDrop.DropInfos.class, com.mokylin.bleach.protobuf.db.DBDrop.DropInfos.Builder.class);
       }
@@ -404,7 +404,7 @@ public final class DBDrop {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_mokylin_DropInfos_descriptor;
+        return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_icewind_DropInfos_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.db.DBDrop.DropInfos getDefaultInstanceForType() {
@@ -531,7 +531,7 @@ public final class DBDrop {
           com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo, com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo.Builder, com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfoOrBuilder> itemDropInfoBuilder_;
 
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo> getItemDropInfoList() {
         if (itemDropInfoBuilder_ == null) {
@@ -541,7 +541,7 @@ public final class DBDrop {
         }
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public int getItemDropInfoCount() {
         if (itemDropInfoBuilder_ == null) {
@@ -551,7 +551,7 @@ public final class DBDrop {
         }
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo getItemDropInfo(int index) {
         if (itemDropInfoBuilder_ == null) {
@@ -561,7 +561,7 @@ public final class DBDrop {
         }
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public Builder setItemDropInfo(
           int index, com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo value) {
@@ -578,7 +578,7 @@ public final class DBDrop {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public Builder setItemDropInfo(
           int index, com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo.Builder builderForValue) {
@@ -592,7 +592,7 @@ public final class DBDrop {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public Builder addItemDropInfo(com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo value) {
         if (itemDropInfoBuilder_ == null) {
@@ -608,7 +608,7 @@ public final class DBDrop {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public Builder addItemDropInfo(
           int index, com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo value) {
@@ -625,7 +625,7 @@ public final class DBDrop {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public Builder addItemDropInfo(
           com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo.Builder builderForValue) {
@@ -639,7 +639,7 @@ public final class DBDrop {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public Builder addItemDropInfo(
           int index, com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo.Builder builderForValue) {
@@ -653,7 +653,7 @@ public final class DBDrop {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public Builder addAllItemDropInfo(
           java.lang.Iterable<? extends com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo> values) {
@@ -668,7 +668,7 @@ public final class DBDrop {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public Builder clearItemDropInfo() {
         if (itemDropInfoBuilder_ == null) {
@@ -681,7 +681,7 @@ public final class DBDrop {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public Builder removeItemDropInfo(int index) {
         if (itemDropInfoBuilder_ == null) {
@@ -694,14 +694,14 @@ public final class DBDrop {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo.Builder getItemDropInfoBuilder(
           int index) {
         return getItemDropInfoFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfoOrBuilder getItemDropInfoOrBuilder(
           int index) {
@@ -711,7 +711,7 @@ public final class DBDrop {
         }
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public java.util.List<? extends com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfoOrBuilder> 
            getItemDropInfoOrBuilderList() {
@@ -722,14 +722,14 @@ public final class DBDrop {
         }
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo.Builder addItemDropInfoBuilder() {
         return getItemDropInfoFieldBuilder().addBuilder(
             com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo.Builder addItemDropInfoBuilder(
           int index) {
@@ -737,7 +737,7 @@ public final class DBDrop {
             index, com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.ItemDropInfo itemDropInfo = 1;</code>
+       * <code>repeated .com.icewind.ItemDropInfo itemDropInfo = 1;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo.Builder> 
            getItemDropInfoBuilderList() {
@@ -806,7 +806,7 @@ public final class DBDrop {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.DropInfos)
+      // @@protoc_insertion_point(builder_scope:com.icewind.DropInfos)
     }
 
     static {
@@ -814,11 +814,11 @@ public final class DBDrop {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.DropInfos)
+    // @@protoc_insertion_point(class_scope:com.icewind.DropInfos)
   }
 
   public interface ItemDropInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.ItemDropInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.ItemDropInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -848,11 +848,11 @@ public final class DBDrop {
     int getDropValue();
   }
   /**
-   * Protobuf type {@code com.mokylin.ItemDropInfo}
+   * Protobuf type {@code com.icewind.ItemDropInfo}
    */
   public static final class ItemDropInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.ItemDropInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.ItemDropInfo)
       ItemDropInfoOrBuilder {
     // Use ItemDropInfo.newBuilder() to construct.
     private ItemDropInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -923,12 +923,12 @@ public final class DBDrop {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_mokylin_ItemDropInfo_descriptor;
+      return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_icewind_ItemDropInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_mokylin_ItemDropInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_icewind_ItemDropInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo.class, com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo.Builder.class);
     }
@@ -1114,20 +1114,20 @@ public final class DBDrop {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.ItemDropInfo}
+     * Protobuf type {@code com.icewind.ItemDropInfo}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.ItemDropInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.ItemDropInfo)
         com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_mokylin_ItemDropInfo_descriptor;
+        return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_icewind_ItemDropInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_mokylin_ItemDropInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_icewind_ItemDropInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo.class, com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo.Builder.class);
       }
@@ -1165,7 +1165,7 @@ public final class DBDrop {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_mokylin_ItemDropInfo_descriptor;
+        return com.mokylin.bleach.protobuf.db.DBDrop.internal_static_com_icewind_ItemDropInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.db.DBDrop.ItemDropInfo getDefaultInstanceForType() {
@@ -1329,7 +1329,7 @@ public final class DBDrop {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.ItemDropInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.ItemDropInfo)
     }
 
     static {
@@ -1337,19 +1337,19 @@ public final class DBDrop {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.ItemDropInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.ItemDropInfo)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_DropInfos_descriptor;
+    internal_static_com_icewind_DropInfos_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_DropInfos_fieldAccessorTable;
+      internal_static_com_icewind_DropInfos_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_ItemDropInfo_descriptor;
+    internal_static_com_icewind_ItemDropInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_ItemDropInfo_fieldAccessorTable;
+      internal_static_com_icewind_ItemDropInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1359,8 +1359,8 @@ public final class DBDrop {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017db/DBDrop.proto\022\013com.mokylin\"d\n\tDropIn" +
-      "fos\022/\n\014itemDropInfo\030\001 \003(\0132\031.com.mokylin." +
+      "\n\017db/DBDrop.proto\022\013com.icewind\"d\n\tDropIn" +
+      "fos\022/\n\014itemDropInfo\030\001 \003(\0132\031.com.icewind." +
       "ItemDropInfo\022&\n\036lastResetNegativeDropVal" +
       "ueTime\030\002 \002(\003\"9\n\014ItemDropInfo\022\026\n\016itemTemp" +
       "lateId\030\001 \002(\005\022\021\n\tdropValue\030\002 \002(\005B(\n\036com.m" +
@@ -1378,17 +1378,17 @@ public final class DBDrop {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_mokylin_DropInfos_descriptor =
+    internal_static_com_icewind_DropInfos_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_mokylin_DropInfos_fieldAccessorTable = new
+    internal_static_com_icewind_DropInfos_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_DropInfos_descriptor,
+        internal_static_com_icewind_DropInfos_descriptor,
         new java.lang.String[] { "ItemDropInfo", "LastResetNegativeDropValueTime", });
-    internal_static_com_mokylin_ItemDropInfo_descriptor =
+    internal_static_com_icewind_ItemDropInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_mokylin_ItemDropInfo_fieldAccessorTable = new
+    internal_static_com_icewind_ItemDropInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_ItemDropInfo_descriptor,
+        internal_static_com_icewind_ItemDropInfo_descriptor,
         new java.lang.String[] { "ItemTemplateId", "DropValue", });
   }
 

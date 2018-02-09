@@ -9,7 +9,7 @@ public final class HeroMessage {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface CGHireHeroOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CGHireHero)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CGHireHero)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -30,7 +30,7 @@ public final class HeroMessage {
     int getTemplateId();
   }
   /**
-   * Protobuf type {@code com.mokylin.CGHireHero}
+   * Protobuf type {@code com.icewind.CGHireHero}
    *
    * <pre>
    **
@@ -39,7 +39,7 @@ public final class HeroMessage {
    */
   public static final class CGHireHero extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CGHireHero)
+      // @@protoc_insertion_point(message_implements:com.icewind.CGHireHero)
       CGHireHeroOrBuilder {
     // Use CGHireHero.newBuilder() to construct.
     private CGHireHero(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -105,12 +105,12 @@ public final class HeroMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHireHero_descriptor;
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHireHero_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHireHero_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHireHero_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HeroMessage.CGHireHero.class, com.mokylin.bleach.protobuf.HeroMessage.CGHireHero.Builder.class);
     }
@@ -269,7 +269,7 @@ public final class HeroMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CGHireHero}
+     * Protobuf type {@code com.icewind.CGHireHero}
      *
      * <pre>
      **
@@ -278,16 +278,16 @@ public final class HeroMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CGHireHero)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CGHireHero)
         com.mokylin.bleach.protobuf.HeroMessage.CGHireHeroOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHireHero_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHireHero_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHireHero_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHireHero_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HeroMessage.CGHireHero.class, com.mokylin.bleach.protobuf.HeroMessage.CGHireHero.Builder.class);
       }
@@ -323,7 +323,7 @@ public final class HeroMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHireHero_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHireHero_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HeroMessage.CGHireHero getDefaultInstanceForType() {
@@ -444,7 +444,7 @@ public final class HeroMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CGHireHero)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CGHireHero)
     }
 
     static {
@@ -452,11 +452,11 @@ public final class HeroMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CGHireHero)
+    // @@protoc_insertion_point(class_scope:com.icewind.CGHireHero)
   }
 
   public interface CGHeroStarUpOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CGHeroStarUp)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CGHeroStarUp)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -477,7 +477,7 @@ public final class HeroMessage {
     long getId();
   }
   /**
-   * Protobuf type {@code com.mokylin.CGHeroStarUp}
+   * Protobuf type {@code com.icewind.CGHeroStarUp}
    *
    * <pre>
    **
@@ -486,7 +486,7 @@ public final class HeroMessage {
    */
   public static final class CGHeroStarUp extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CGHeroStarUp)
+      // @@protoc_insertion_point(message_implements:com.icewind.CGHeroStarUp)
       CGHeroStarUpOrBuilder {
     // Use CGHeroStarUp.newBuilder() to construct.
     private CGHeroStarUp(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -552,12 +552,12 @@ public final class HeroMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroStarUp_descriptor;
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroStarUp_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroStarUp_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroStarUp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HeroMessage.CGHeroStarUp.class, com.mokylin.bleach.protobuf.HeroMessage.CGHeroStarUp.Builder.class);
     }
@@ -716,7 +716,7 @@ public final class HeroMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CGHeroStarUp}
+     * Protobuf type {@code com.icewind.CGHeroStarUp}
      *
      * <pre>
      **
@@ -725,16 +725,16 @@ public final class HeroMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CGHeroStarUp)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CGHeroStarUp)
         com.mokylin.bleach.protobuf.HeroMessage.CGHeroStarUpOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroStarUp_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroStarUp_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroStarUp_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroStarUp_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HeroMessage.CGHeroStarUp.class, com.mokylin.bleach.protobuf.HeroMessage.CGHeroStarUp.Builder.class);
       }
@@ -770,7 +770,7 @@ public final class HeroMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroStarUp_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroStarUp_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HeroMessage.CGHeroStarUp getDefaultInstanceForType() {
@@ -891,7 +891,7 @@ public final class HeroMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CGHeroStarUp)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CGHeroStarUp)
     }
 
     static {
@@ -899,11 +899,11 @@ public final class HeroMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CGHeroStarUp)
+    // @@protoc_insertion_point(class_scope:com.icewind.CGHeroStarUp)
   }
 
   public interface CGHeroQualityUpOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CGHeroQualityUp)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CGHeroQualityUp)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -924,7 +924,7 @@ public final class HeroMessage {
     long getId();
   }
   /**
-   * Protobuf type {@code com.mokylin.CGHeroQualityUp}
+   * Protobuf type {@code com.icewind.CGHeroQualityUp}
    *
    * <pre>
    **
@@ -933,7 +933,7 @@ public final class HeroMessage {
    */
   public static final class CGHeroQualityUp extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CGHeroQualityUp)
+      // @@protoc_insertion_point(message_implements:com.icewind.CGHeroQualityUp)
       CGHeroQualityUpOrBuilder {
     // Use CGHeroQualityUp.newBuilder() to construct.
     private CGHeroQualityUp(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -999,12 +999,12 @@ public final class HeroMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroQualityUp_descriptor;
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroQualityUp_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroQualityUp_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroQualityUp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HeroMessage.CGHeroQualityUp.class, com.mokylin.bleach.protobuf.HeroMessage.CGHeroQualityUp.Builder.class);
     }
@@ -1163,7 +1163,7 @@ public final class HeroMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CGHeroQualityUp}
+     * Protobuf type {@code com.icewind.CGHeroQualityUp}
      *
      * <pre>
      **
@@ -1172,16 +1172,16 @@ public final class HeroMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CGHeroQualityUp)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CGHeroQualityUp)
         com.mokylin.bleach.protobuf.HeroMessage.CGHeroQualityUpOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroQualityUp_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroQualityUp_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroQualityUp_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroQualityUp_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HeroMessage.CGHeroQualityUp.class, com.mokylin.bleach.protobuf.HeroMessage.CGHeroQualityUp.Builder.class);
       }
@@ -1217,7 +1217,7 @@ public final class HeroMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroQualityUp_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroQualityUp_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HeroMessage.CGHeroQualityUp getDefaultInstanceForType() {
@@ -1338,7 +1338,7 @@ public final class HeroMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CGHeroQualityUp)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CGHeroQualityUp)
     }
 
     static {
@@ -1346,11 +1346,11 @@ public final class HeroMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CGHeroQualityUp)
+    // @@protoc_insertion_point(class_scope:com.icewind.CGHeroQualityUp)
   }
 
   public interface CGHeroSkillLevelUpOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CGHeroSkillLevelUp)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CGHeroSkillLevelUp)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1405,7 +1405,7 @@ public final class HeroMessage {
     int getLevelUpCount();
   }
   /**
-   * Protobuf type {@code com.mokylin.CGHeroSkillLevelUp}
+   * Protobuf type {@code com.icewind.CGHeroSkillLevelUp}
    *
    * <pre>
    **
@@ -1414,7 +1414,7 @@ public final class HeroMessage {
    */
   public static final class CGHeroSkillLevelUp extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CGHeroSkillLevelUp)
+      // @@protoc_insertion_point(message_implements:com.icewind.CGHeroSkillLevelUp)
       CGHeroSkillLevelUpOrBuilder {
     // Use CGHeroSkillLevelUp.newBuilder() to construct.
     private CGHeroSkillLevelUp(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -1490,12 +1490,12 @@ public final class HeroMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroSkillLevelUp_descriptor;
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroSkillLevelUp_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroSkillLevelUp_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroSkillLevelUp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HeroMessage.CGHeroSkillLevelUp.class, com.mokylin.bleach.protobuf.HeroMessage.CGHeroSkillLevelUp.Builder.class);
     }
@@ -1724,7 +1724,7 @@ public final class HeroMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CGHeroSkillLevelUp}
+     * Protobuf type {@code com.icewind.CGHeroSkillLevelUp}
      *
      * <pre>
      **
@@ -1733,16 +1733,16 @@ public final class HeroMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CGHeroSkillLevelUp)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CGHeroSkillLevelUp)
         com.mokylin.bleach.protobuf.HeroMessage.CGHeroSkillLevelUpOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroSkillLevelUp_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroSkillLevelUp_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroSkillLevelUp_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroSkillLevelUp_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HeroMessage.CGHeroSkillLevelUp.class, com.mokylin.bleach.protobuf.HeroMessage.CGHeroSkillLevelUp.Builder.class);
       }
@@ -1782,7 +1782,7 @@ public final class HeroMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroSkillLevelUp_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroSkillLevelUp_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HeroMessage.CGHeroSkillLevelUp getDefaultInstanceForType() {
@@ -2021,7 +2021,7 @@ public final class HeroMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CGHeroSkillLevelUp)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CGHeroSkillLevelUp)
     }
 
     static {
@@ -2029,11 +2029,11 @@ public final class HeroMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CGHeroSkillLevelUp)
+    // @@protoc_insertion_point(class_scope:com.icewind.CGHeroSkillLevelUp)
   }
 
   public interface CGHeroWearEquipOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CGHeroWearEquip)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CGHeroWearEquip)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2071,7 +2071,7 @@ public final class HeroMessage {
     int getPosition();
   }
   /**
-   * Protobuf type {@code com.mokylin.CGHeroWearEquip}
+   * Protobuf type {@code com.icewind.CGHeroWearEquip}
    *
    * <pre>
    **
@@ -2080,7 +2080,7 @@ public final class HeroMessage {
    */
   public static final class CGHeroWearEquip extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CGHeroWearEquip)
+      // @@protoc_insertion_point(message_implements:com.icewind.CGHeroWearEquip)
       CGHeroWearEquipOrBuilder {
     // Use CGHeroWearEquip.newBuilder() to construct.
     private CGHeroWearEquip(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -2151,12 +2151,12 @@ public final class HeroMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroWearEquip_descriptor;
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroWearEquip_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroWearEquip_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroWearEquip_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HeroMessage.CGHeroWearEquip.class, com.mokylin.bleach.protobuf.HeroMessage.CGHeroWearEquip.Builder.class);
     }
@@ -2350,7 +2350,7 @@ public final class HeroMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CGHeroWearEquip}
+     * Protobuf type {@code com.icewind.CGHeroWearEquip}
      *
      * <pre>
      **
@@ -2359,16 +2359,16 @@ public final class HeroMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CGHeroWearEquip)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CGHeroWearEquip)
         com.mokylin.bleach.protobuf.HeroMessage.CGHeroWearEquipOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroWearEquip_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroWearEquip_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroWearEquip_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroWearEquip_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HeroMessage.CGHeroWearEquip.class, com.mokylin.bleach.protobuf.HeroMessage.CGHeroWearEquip.Builder.class);
       }
@@ -2406,7 +2406,7 @@ public final class HeroMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGHeroWearEquip_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGHeroWearEquip_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HeroMessage.CGHeroWearEquip getDefaultInstanceForType() {
@@ -2586,7 +2586,7 @@ public final class HeroMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CGHeroWearEquip)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CGHeroWearEquip)
     }
 
     static {
@@ -2594,15 +2594,15 @@ public final class HeroMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CGHeroWearEquip)
+    // @@protoc_insertion_point(class_scope:com.icewind.CGHeroWearEquip)
   }
 
   public interface CGBuySkillPointOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CGBuySkillPoint)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CGBuySkillPoint)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code com.mokylin.CGBuySkillPoint}
+   * Protobuf type {@code com.icewind.CGBuySkillPoint}
    *
    * <pre>
    **
@@ -2611,7 +2611,7 @@ public final class HeroMessage {
    */
   public static final class CGBuySkillPoint extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CGBuySkillPoint)
+      // @@protoc_insertion_point(message_implements:com.icewind.CGBuySkillPoint)
       CGBuySkillPointOrBuilder {
     // Use CGBuySkillPoint.newBuilder() to construct.
     private CGBuySkillPoint(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -2671,12 +2671,12 @@ public final class HeroMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGBuySkillPoint_descriptor;
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGBuySkillPoint_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGBuySkillPoint_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGBuySkillPoint_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HeroMessage.CGBuySkillPoint.class, com.mokylin.bleach.protobuf.HeroMessage.CGBuySkillPoint.Builder.class);
     }
@@ -2799,7 +2799,7 @@ public final class HeroMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CGBuySkillPoint}
+     * Protobuf type {@code com.icewind.CGBuySkillPoint}
      *
      * <pre>
      **
@@ -2808,16 +2808,16 @@ public final class HeroMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CGBuySkillPoint)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CGBuySkillPoint)
         com.mokylin.bleach.protobuf.HeroMessage.CGBuySkillPointOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGBuySkillPoint_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGBuySkillPoint_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGBuySkillPoint_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGBuySkillPoint_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HeroMessage.CGBuySkillPoint.class, com.mokylin.bleach.protobuf.HeroMessage.CGBuySkillPoint.Builder.class);
       }
@@ -2851,7 +2851,7 @@ public final class HeroMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_CGBuySkillPoint_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_CGBuySkillPoint_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HeroMessage.CGBuySkillPoint getDefaultInstanceForType() {
@@ -2909,7 +2909,7 @@ public final class HeroMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CGBuySkillPoint)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CGBuySkillPoint)
     }
 
     static {
@@ -2917,63 +2917,63 @@ public final class HeroMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CGBuySkillPoint)
+    // @@protoc_insertion_point(class_scope:com.icewind.CGBuySkillPoint)
   }
 
   public interface GCAllHeroInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCAllHeroInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCAllHeroInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+     * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
      */
     java.util.List<com.mokylin.bleach.protobuf.HeroMessage.HeroInfo> 
         getHeroInfosList();
     /**
-     * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+     * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
      */
     com.mokylin.bleach.protobuf.HeroMessage.HeroInfo getHeroInfos(int index);
     /**
-     * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+     * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
      */
     int getHeroInfosCount();
     /**
-     * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+     * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
      */
     java.util.List<? extends com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder> 
         getHeroInfosOrBuilderList();
     /**
-     * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+     * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
      */
     com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder getHeroInfosOrBuilder(
         int index);
 
     /**
-     * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+     * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
      */
     java.util.List<com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn> 
         getHeroUnOwnsList();
     /**
-     * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+     * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
      */
     com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn getHeroUnOwns(int index);
     /**
-     * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+     * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
      */
     int getHeroUnOwnsCount();
     /**
-     * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+     * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
      */
     java.util.List<? extends com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwnOrBuilder> 
         getHeroUnOwnsOrBuilderList();
     /**
-     * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+     * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
      */
     com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwnOrBuilder getHeroUnOwnsOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code com.mokylin.GCAllHeroInfo}
+   * Protobuf type {@code com.icewind.GCAllHeroInfo}
    *
    * <pre>
    **
@@ -2982,7 +2982,7 @@ public final class HeroMessage {
    */
   public static final class GCAllHeroInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCAllHeroInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCAllHeroInfo)
       GCAllHeroInfoOrBuilder {
     // Use GCAllHeroInfo.newBuilder() to construct.
     private GCAllHeroInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -3065,12 +3065,12 @@ public final class HeroMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCAllHeroInfo_descriptor;
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCAllHeroInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCAllHeroInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCAllHeroInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HeroMessage.GCAllHeroInfo.class, com.mokylin.bleach.protobuf.HeroMessage.GCAllHeroInfo.Builder.class);
     }
@@ -3093,32 +3093,32 @@ public final class HeroMessage {
     public static final int HEROINFOS_FIELD_NUMBER = 1;
     private java.util.List<com.mokylin.bleach.protobuf.HeroMessage.HeroInfo> heroInfos_;
     /**
-     * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+     * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
      */
     public java.util.List<com.mokylin.bleach.protobuf.HeroMessage.HeroInfo> getHeroInfosList() {
       return heroInfos_;
     }
     /**
-     * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+     * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
      */
     public java.util.List<? extends com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder> 
         getHeroInfosOrBuilderList() {
       return heroInfos_;
     }
     /**
-     * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+     * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
      */
     public int getHeroInfosCount() {
       return heroInfos_.size();
     }
     /**
-     * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+     * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
      */
     public com.mokylin.bleach.protobuf.HeroMessage.HeroInfo getHeroInfos(int index) {
       return heroInfos_.get(index);
     }
     /**
-     * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+     * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
      */
     public com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder getHeroInfosOrBuilder(
         int index) {
@@ -3128,32 +3128,32 @@ public final class HeroMessage {
     public static final int HEROUNOWNS_FIELD_NUMBER = 2;
     private java.util.List<com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn> heroUnOwns_;
     /**
-     * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+     * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
      */
     public java.util.List<com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn> getHeroUnOwnsList() {
       return heroUnOwns_;
     }
     /**
-     * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+     * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
      */
     public java.util.List<? extends com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwnOrBuilder> 
         getHeroUnOwnsOrBuilderList() {
       return heroUnOwns_;
     }
     /**
-     * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+     * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
      */
     public int getHeroUnOwnsCount() {
       return heroUnOwns_.size();
     }
     /**
-     * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+     * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
      */
     public com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn getHeroUnOwns(int index) {
       return heroUnOwns_.get(index);
     }
     /**
-     * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+     * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
      */
     public com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwnOrBuilder getHeroUnOwnsOrBuilder(
         int index) {
@@ -3291,7 +3291,7 @@ public final class HeroMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCAllHeroInfo}
+     * Protobuf type {@code com.icewind.GCAllHeroInfo}
      *
      * <pre>
      **
@@ -3300,16 +3300,16 @@ public final class HeroMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCAllHeroInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCAllHeroInfo)
         com.mokylin.bleach.protobuf.HeroMessage.GCAllHeroInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCAllHeroInfo_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCAllHeroInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCAllHeroInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCAllHeroInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HeroMessage.GCAllHeroInfo.class, com.mokylin.bleach.protobuf.HeroMessage.GCAllHeroInfo.Builder.class);
       }
@@ -3357,7 +3357,7 @@ public final class HeroMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCAllHeroInfo_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCAllHeroInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HeroMessage.GCAllHeroInfo getDefaultInstanceForType() {
@@ -3512,7 +3512,7 @@ public final class HeroMessage {
           com.mokylin.bleach.protobuf.HeroMessage.HeroInfo, com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder, com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder> heroInfosBuilder_;
 
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.HeroMessage.HeroInfo> getHeroInfosList() {
         if (heroInfosBuilder_ == null) {
@@ -3522,7 +3522,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public int getHeroInfosCount() {
         if (heroInfosBuilder_ == null) {
@@ -3532,7 +3532,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroInfo getHeroInfos(int index) {
         if (heroInfosBuilder_ == null) {
@@ -3542,7 +3542,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public Builder setHeroInfos(
           int index, com.mokylin.bleach.protobuf.HeroMessage.HeroInfo value) {
@@ -3559,7 +3559,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public Builder setHeroInfos(
           int index, com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder builderForValue) {
@@ -3573,7 +3573,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public Builder addHeroInfos(com.mokylin.bleach.protobuf.HeroMessage.HeroInfo value) {
         if (heroInfosBuilder_ == null) {
@@ -3589,7 +3589,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public Builder addHeroInfos(
           int index, com.mokylin.bleach.protobuf.HeroMessage.HeroInfo value) {
@@ -3606,7 +3606,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public Builder addHeroInfos(
           com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder builderForValue) {
@@ -3620,7 +3620,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public Builder addHeroInfos(
           int index, com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder builderForValue) {
@@ -3634,7 +3634,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public Builder addAllHeroInfos(
           java.lang.Iterable<? extends com.mokylin.bleach.protobuf.HeroMessage.HeroInfo> values) {
@@ -3649,7 +3649,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public Builder clearHeroInfos() {
         if (heroInfosBuilder_ == null) {
@@ -3662,7 +3662,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public Builder removeHeroInfos(int index) {
         if (heroInfosBuilder_ == null) {
@@ -3675,14 +3675,14 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder getHeroInfosBuilder(
           int index) {
         return getHeroInfosFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder getHeroInfosOrBuilder(
           int index) {
@@ -3692,7 +3692,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public java.util.List<? extends com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder> 
            getHeroInfosOrBuilderList() {
@@ -3703,14 +3703,14 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder addHeroInfosBuilder() {
         return getHeroInfosFieldBuilder().addBuilder(
             com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder addHeroInfosBuilder(
           int index) {
@@ -3718,7 +3718,7 @@ public final class HeroMessage {
             index, com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.HeroInfo heroInfos = 1;</code>
+       * <code>repeated .com.icewind.HeroInfo heroInfos = 1;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder> 
            getHeroInfosBuilderList() {
@@ -3752,7 +3752,7 @@ public final class HeroMessage {
           com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn, com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn.Builder, com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwnOrBuilder> heroUnOwnsBuilder_;
 
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn> getHeroUnOwnsList() {
         if (heroUnOwnsBuilder_ == null) {
@@ -3762,7 +3762,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public int getHeroUnOwnsCount() {
         if (heroUnOwnsBuilder_ == null) {
@@ -3772,7 +3772,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn getHeroUnOwns(int index) {
         if (heroUnOwnsBuilder_ == null) {
@@ -3782,7 +3782,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public Builder setHeroUnOwns(
           int index, com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn value) {
@@ -3799,7 +3799,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public Builder setHeroUnOwns(
           int index, com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn.Builder builderForValue) {
@@ -3813,7 +3813,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public Builder addHeroUnOwns(com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn value) {
         if (heroUnOwnsBuilder_ == null) {
@@ -3829,7 +3829,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public Builder addHeroUnOwns(
           int index, com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn value) {
@@ -3846,7 +3846,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public Builder addHeroUnOwns(
           com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn.Builder builderForValue) {
@@ -3860,7 +3860,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public Builder addHeroUnOwns(
           int index, com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn.Builder builderForValue) {
@@ -3874,7 +3874,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public Builder addAllHeroUnOwns(
           java.lang.Iterable<? extends com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn> values) {
@@ -3889,7 +3889,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public Builder clearHeroUnOwns() {
         if (heroUnOwnsBuilder_ == null) {
@@ -3902,7 +3902,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public Builder removeHeroUnOwns(int index) {
         if (heroUnOwnsBuilder_ == null) {
@@ -3915,14 +3915,14 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn.Builder getHeroUnOwnsBuilder(
           int index) {
         return getHeroUnOwnsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwnOrBuilder getHeroUnOwnsOrBuilder(
           int index) {
@@ -3932,7 +3932,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public java.util.List<? extends com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwnOrBuilder> 
            getHeroUnOwnsOrBuilderList() {
@@ -3943,14 +3943,14 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn.Builder addHeroUnOwnsBuilder() {
         return getHeroUnOwnsFieldBuilder().addBuilder(
             com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn.Builder addHeroUnOwnsBuilder(
           int index) {
@@ -3958,7 +3958,7 @@ public final class HeroMessage {
             index, com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.HeroUnOwn heroUnOwns = 2;</code>
+       * <code>repeated .com.icewind.HeroUnOwn heroUnOwns = 2;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn.Builder> 
            getHeroUnOwnsBuilderList() {
@@ -3979,7 +3979,7 @@ public final class HeroMessage {
         return heroUnOwnsBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCAllHeroInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCAllHeroInfo)
     }
 
     static {
@@ -3987,11 +3987,11 @@ public final class HeroMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCAllHeroInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCAllHeroInfo)
   }
 
   public interface HeroUnOwnOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.HeroUnOwn)
+      // @@protoc_insertion_point(interface_extends:com.icewind.HeroUnOwn)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4029,7 +4029,7 @@ public final class HeroMessage {
     int getFragmentCount();
   }
   /**
-   * Protobuf type {@code com.mokylin.HeroUnOwn}
+   * Protobuf type {@code com.icewind.HeroUnOwn}
    *
    * <pre>
    **
@@ -4038,7 +4038,7 @@ public final class HeroMessage {
    */
   public static final class HeroUnOwn extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.HeroUnOwn)
+      // @@protoc_insertion_point(message_implements:com.icewind.HeroUnOwn)
       HeroUnOwnOrBuilder {
     // Use HeroUnOwn.newBuilder() to construct.
     private HeroUnOwn(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -4109,12 +4109,12 @@ public final class HeroMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroUnOwn_descriptor;
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroUnOwn_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroUnOwn_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroUnOwn_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn.class, com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn.Builder.class);
     }
@@ -4308,7 +4308,7 @@ public final class HeroMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.HeroUnOwn}
+     * Protobuf type {@code com.icewind.HeroUnOwn}
      *
      * <pre>
      **
@@ -4317,16 +4317,16 @@ public final class HeroMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.HeroUnOwn)
+        // @@protoc_insertion_point(builder_implements:com.icewind.HeroUnOwn)
         com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwnOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroUnOwn_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroUnOwn_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroUnOwn_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroUnOwn_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn.class, com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn.Builder.class);
       }
@@ -4364,7 +4364,7 @@ public final class HeroMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroUnOwn_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroUnOwn_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HeroMessage.HeroUnOwn getDefaultInstanceForType() {
@@ -4544,7 +4544,7 @@ public final class HeroMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.HeroUnOwn)
+      // @@protoc_insertion_point(builder_scope:com.icewind.HeroUnOwn)
     }
 
     static {
@@ -4552,11 +4552,11 @@ public final class HeroMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.HeroUnOwn)
+    // @@protoc_insertion_point(class_scope:com.icewind.HeroUnOwn)
   }
 
   public interface HeroInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.HeroInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.HeroInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4628,7 +4628,7 @@ public final class HeroMessage {
     int getFragmentCount();
 
     /**
-     * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+     * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
      *
      * <pre>
      **英雄已经学会的技能 
@@ -4637,7 +4637,7 @@ public final class HeroMessage {
     java.util.List<com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo> 
         getHeroSkillInfosList();
     /**
-     * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+     * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
      *
      * <pre>
      **英雄已经学会的技能 
@@ -4645,7 +4645,7 @@ public final class HeroMessage {
      */
     com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo getHeroSkillInfos(int index);
     /**
-     * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+     * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
      *
      * <pre>
      **英雄已经学会的技能 
@@ -4653,7 +4653,7 @@ public final class HeroMessage {
      */
     int getHeroSkillInfosCount();
     /**
-     * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+     * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
      *
      * <pre>
      **英雄已经学会的技能 
@@ -4662,7 +4662,7 @@ public final class HeroMessage {
     java.util.List<? extends com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfoOrBuilder> 
         getHeroSkillInfosOrBuilderList();
     /**
-     * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+     * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
      *
      * <pre>
      **英雄已经学会的技能 
@@ -4672,7 +4672,7 @@ public final class HeroMessage {
         int index);
 
     /**
-     * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+     * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
      *
      * <pre>
      **英雄已经穿戴的装备 
@@ -4681,7 +4681,7 @@ public final class HeroMessage {
     java.util.List<com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfo> 
         getHeroEquipInfosList();
     /**
-     * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+     * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
      *
      * <pre>
      **英雄已经穿戴的装备 
@@ -4689,7 +4689,7 @@ public final class HeroMessage {
      */
     com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfo getHeroEquipInfos(int index);
     /**
-     * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+     * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
      *
      * <pre>
      **英雄已经穿戴的装备 
@@ -4697,7 +4697,7 @@ public final class HeroMessage {
      */
     int getHeroEquipInfosCount();
     /**
-     * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+     * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
      *
      * <pre>
      **英雄已经穿戴的装备 
@@ -4706,7 +4706,7 @@ public final class HeroMessage {
     java.util.List<? extends com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfoOrBuilder> 
         getHeroEquipInfosOrBuilderList();
     /**
-     * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+     * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
      *
      * <pre>
      **英雄已经穿戴的装备 
@@ -4733,7 +4733,7 @@ public final class HeroMessage {
     int getStarCount();
   }
   /**
-   * Protobuf type {@code com.mokylin.HeroInfo}
+   * Protobuf type {@code com.icewind.HeroInfo}
    *
    * <pre>
    **
@@ -4742,7 +4742,7 @@ public final class HeroMessage {
    */
   public static final class HeroInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.HeroInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.HeroInfo)
       HeroInfoOrBuilder {
     // Use HeroInfo.newBuilder() to construct.
     private HeroInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -4850,12 +4850,12 @@ public final class HeroMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroInfo_descriptor;
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.class, com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder.class);
     }
@@ -4971,7 +4971,7 @@ public final class HeroMessage {
     public static final int HEROSKILLINFOS_FIELD_NUMBER = 5;
     private java.util.List<com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo> heroSkillInfos_;
     /**
-     * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+     * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
      *
      * <pre>
      **英雄已经学会的技能 
@@ -4981,7 +4981,7 @@ public final class HeroMessage {
       return heroSkillInfos_;
     }
     /**
-     * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+     * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
      *
      * <pre>
      **英雄已经学会的技能 
@@ -4992,7 +4992,7 @@ public final class HeroMessage {
       return heroSkillInfos_;
     }
     /**
-     * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+     * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
      *
      * <pre>
      **英雄已经学会的技能 
@@ -5002,7 +5002,7 @@ public final class HeroMessage {
       return heroSkillInfos_.size();
     }
     /**
-     * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+     * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
      *
      * <pre>
      **英雄已经学会的技能 
@@ -5012,7 +5012,7 @@ public final class HeroMessage {
       return heroSkillInfos_.get(index);
     }
     /**
-     * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+     * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
      *
      * <pre>
      **英雄已经学会的技能 
@@ -5026,7 +5026,7 @@ public final class HeroMessage {
     public static final int HEROEQUIPINFOS_FIELD_NUMBER = 6;
     private java.util.List<com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfo> heroEquipInfos_;
     /**
-     * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+     * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
      *
      * <pre>
      **英雄已经穿戴的装备 
@@ -5036,7 +5036,7 @@ public final class HeroMessage {
       return heroEquipInfos_;
     }
     /**
-     * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+     * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
      *
      * <pre>
      **英雄已经穿戴的装备 
@@ -5047,7 +5047,7 @@ public final class HeroMessage {
       return heroEquipInfos_;
     }
     /**
-     * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+     * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
      *
      * <pre>
      **英雄已经穿戴的装备 
@@ -5057,7 +5057,7 @@ public final class HeroMessage {
       return heroEquipInfos_.size();
     }
     /**
-     * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+     * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
      *
      * <pre>
      **英雄已经穿戴的装备 
@@ -5067,7 +5067,7 @@ public final class HeroMessage {
       return heroEquipInfos_.get(index);
     }
     /**
-     * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+     * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
      *
      * <pre>
      **英雄已经穿戴的装备 
@@ -5292,7 +5292,7 @@ public final class HeroMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.HeroInfo}
+     * Protobuf type {@code com.icewind.HeroInfo}
      *
      * <pre>
      **
@@ -5301,16 +5301,16 @@ public final class HeroMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.HeroInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.HeroInfo)
         com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroInfo_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.class, com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder.class);
       }
@@ -5368,7 +5368,7 @@ public final class HeroMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroInfo_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HeroMessage.HeroInfo getDefaultInstanceForType() {
@@ -5772,7 +5772,7 @@ public final class HeroMessage {
           com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo, com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo.Builder, com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfoOrBuilder> heroSkillInfosBuilder_;
 
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -5786,7 +5786,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -5800,7 +5800,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -5814,7 +5814,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -5835,7 +5835,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -5853,7 +5853,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -5873,7 +5873,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -5894,7 +5894,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -5912,7 +5912,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -5930,7 +5930,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -5949,7 +5949,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -5966,7 +5966,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -5983,7 +5983,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -5994,7 +5994,7 @@ public final class HeroMessage {
         return getHeroSkillInfosFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -6008,7 +6008,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -6023,7 +6023,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -6034,7 +6034,7 @@ public final class HeroMessage {
             com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -6046,7 +6046,7 @@ public final class HeroMessage {
             index, com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.HeroSkillInfo heroSkillInfos = 5;</code>
+       * <code>repeated .com.icewind.HeroSkillInfo heroSkillInfos = 5;</code>
        *
        * <pre>
        **英雄已经学会的技能 
@@ -6084,7 +6084,7 @@ public final class HeroMessage {
           com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfo, com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfo.Builder, com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfoOrBuilder> heroEquipInfosBuilder_;
 
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6098,7 +6098,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6112,7 +6112,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6126,7 +6126,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6147,7 +6147,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6165,7 +6165,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6185,7 +6185,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6206,7 +6206,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6224,7 +6224,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6242,7 +6242,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6261,7 +6261,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6278,7 +6278,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6295,7 +6295,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6306,7 +6306,7 @@ public final class HeroMessage {
         return getHeroEquipInfosFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6320,7 +6320,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6335,7 +6335,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6346,7 +6346,7 @@ public final class HeroMessage {
             com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6358,7 +6358,7 @@ public final class HeroMessage {
             index, com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.HeroEquipInfo heroEquipInfos = 6;</code>
+       * <code>repeated .com.icewind.HeroEquipInfo heroEquipInfos = 6;</code>
        *
        * <pre>
        **英雄已经穿戴的装备 
@@ -6431,7 +6431,7 @@ public final class HeroMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.HeroInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.HeroInfo)
     }
 
     static {
@@ -6439,11 +6439,11 @@ public final class HeroMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.HeroInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.HeroInfo)
   }
 
   public interface HeroSkillInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.HeroSkillInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.HeroSkillInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6481,7 +6481,7 @@ public final class HeroMessage {
     int getLevel();
   }
   /**
-   * Protobuf type {@code com.mokylin.HeroSkillInfo}
+   * Protobuf type {@code com.icewind.HeroSkillInfo}
    *
    * <pre>
    **
@@ -6490,7 +6490,7 @@ public final class HeroMessage {
    */
   public static final class HeroSkillInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.HeroSkillInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.HeroSkillInfo)
       HeroSkillInfoOrBuilder {
     // Use HeroSkillInfo.newBuilder() to construct.
     private HeroSkillInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -6561,12 +6561,12 @@ public final class HeroMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroSkillInfo_descriptor;
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroSkillInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroSkillInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroSkillInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo.class, com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo.Builder.class);
     }
@@ -6760,7 +6760,7 @@ public final class HeroMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.HeroSkillInfo}
+     * Protobuf type {@code com.icewind.HeroSkillInfo}
      *
      * <pre>
      **
@@ -6769,16 +6769,16 @@ public final class HeroMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.HeroSkillInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.HeroSkillInfo)
         com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroSkillInfo_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroSkillInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroSkillInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroSkillInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo.class, com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo.Builder.class);
       }
@@ -6816,7 +6816,7 @@ public final class HeroMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroSkillInfo_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroSkillInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo getDefaultInstanceForType() {
@@ -6996,7 +6996,7 @@ public final class HeroMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.HeroSkillInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.HeroSkillInfo)
     }
 
     static {
@@ -7004,11 +7004,11 @@ public final class HeroMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.HeroSkillInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.HeroSkillInfo)
   }
 
   public interface HeroEquipInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.HeroEquipInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.HeroEquipInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -7063,7 +7063,7 @@ public final class HeroMessage {
     int getEnchantingExp();
   }
   /**
-   * Protobuf type {@code com.mokylin.HeroEquipInfo}
+   * Protobuf type {@code com.icewind.HeroEquipInfo}
    *
    * <pre>
    **
@@ -7072,7 +7072,7 @@ public final class HeroMessage {
    */
   public static final class HeroEquipInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.HeroEquipInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.HeroEquipInfo)
       HeroEquipInfoOrBuilder {
     // Use HeroEquipInfo.newBuilder() to construct.
     private HeroEquipInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -7148,12 +7148,12 @@ public final class HeroMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroEquipInfo_descriptor;
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroEquipInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroEquipInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroEquipInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfo.class, com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfo.Builder.class);
     }
@@ -7382,7 +7382,7 @@ public final class HeroMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.HeroEquipInfo}
+     * Protobuf type {@code com.icewind.HeroEquipInfo}
      *
      * <pre>
      **
@@ -7391,16 +7391,16 @@ public final class HeroMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.HeroEquipInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.HeroEquipInfo)
         com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroEquipInfo_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroEquipInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroEquipInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroEquipInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfo.class, com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfo.Builder.class);
       }
@@ -7440,7 +7440,7 @@ public final class HeroMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_HeroEquipInfo_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_HeroEquipInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfo getDefaultInstanceForType() {
@@ -7679,7 +7679,7 @@ public final class HeroMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.HeroEquipInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.HeroEquipInfo)
     }
 
     static {
@@ -7687,28 +7687,28 @@ public final class HeroMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.HeroEquipInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.HeroEquipInfo)
   }
 
   public interface GCHeroUpdateOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCHeroUpdate)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCHeroUpdate)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .com.mokylin.HeroInfo heroInfo = 1;</code>
+     * <code>required .com.icewind.HeroInfo heroInfo = 1;</code>
      */
     boolean hasHeroInfo();
     /**
-     * <code>required .com.mokylin.HeroInfo heroInfo = 1;</code>
+     * <code>required .com.icewind.HeroInfo heroInfo = 1;</code>
      */
     com.mokylin.bleach.protobuf.HeroMessage.HeroInfo getHeroInfo();
     /**
-     * <code>required .com.mokylin.HeroInfo heroInfo = 1;</code>
+     * <code>required .com.icewind.HeroInfo heroInfo = 1;</code>
      */
     com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder getHeroInfoOrBuilder();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCHeroUpdate}
+   * Protobuf type {@code com.icewind.GCHeroUpdate}
    *
    * <pre>
    **
@@ -7716,7 +7716,7 @@ public final class HeroMessage {
    */
   public static final class GCHeroUpdate extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCHeroUpdate)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCHeroUpdate)
       GCHeroUpdateOrBuilder {
     // Use GCHeroUpdate.newBuilder() to construct.
     private GCHeroUpdate(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -7790,12 +7790,12 @@ public final class HeroMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCHeroUpdate_descriptor;
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCHeroUpdate_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCHeroUpdate_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCHeroUpdate_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HeroMessage.GCHeroUpdate.class, com.mokylin.bleach.protobuf.HeroMessage.GCHeroUpdate.Builder.class);
     }
@@ -7819,19 +7819,19 @@ public final class HeroMessage {
     public static final int HEROINFO_FIELD_NUMBER = 1;
     private com.mokylin.bleach.protobuf.HeroMessage.HeroInfo heroInfo_;
     /**
-     * <code>required .com.mokylin.HeroInfo heroInfo = 1;</code>
+     * <code>required .com.icewind.HeroInfo heroInfo = 1;</code>
      */
     public boolean hasHeroInfo() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .com.mokylin.HeroInfo heroInfo = 1;</code>
+     * <code>required .com.icewind.HeroInfo heroInfo = 1;</code>
      */
     public com.mokylin.bleach.protobuf.HeroMessage.HeroInfo getHeroInfo() {
       return heroInfo_;
     }
     /**
-     * <code>required .com.mokylin.HeroInfo heroInfo = 1;</code>
+     * <code>required .com.icewind.HeroInfo heroInfo = 1;</code>
      */
     public com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder getHeroInfoOrBuilder() {
       return heroInfo_;
@@ -7956,7 +7956,7 @@ public final class HeroMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCHeroUpdate}
+     * Protobuf type {@code com.icewind.GCHeroUpdate}
      *
      * <pre>
      **
@@ -7964,16 +7964,16 @@ public final class HeroMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCHeroUpdate)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCHeroUpdate)
         com.mokylin.bleach.protobuf.HeroMessage.GCHeroUpdateOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCHeroUpdate_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCHeroUpdate_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCHeroUpdate_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCHeroUpdate_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HeroMessage.GCHeroUpdate.class, com.mokylin.bleach.protobuf.HeroMessage.GCHeroUpdate.Builder.class);
       }
@@ -8014,7 +8014,7 @@ public final class HeroMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCHeroUpdate_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCHeroUpdate_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HeroMessage.GCHeroUpdate getDefaultInstanceForType() {
@@ -8099,13 +8099,13 @@ public final class HeroMessage {
       private com.google.protobuf.SingleFieldBuilder<
           com.mokylin.bleach.protobuf.HeroMessage.HeroInfo, com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder, com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder> heroInfoBuilder_;
       /**
-       * <code>required .com.mokylin.HeroInfo heroInfo = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroInfo = 1;</code>
        */
       public boolean hasHeroInfo() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroInfo = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroInfo = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroInfo getHeroInfo() {
         if (heroInfoBuilder_ == null) {
@@ -8115,7 +8115,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroInfo = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroInfo = 1;</code>
        */
       public Builder setHeroInfo(com.mokylin.bleach.protobuf.HeroMessage.HeroInfo value) {
         if (heroInfoBuilder_ == null) {
@@ -8131,7 +8131,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroInfo = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroInfo = 1;</code>
        */
       public Builder setHeroInfo(
           com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder builderForValue) {
@@ -8145,7 +8145,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroInfo = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroInfo = 1;</code>
        */
       public Builder mergeHeroInfo(com.mokylin.bleach.protobuf.HeroMessage.HeroInfo value) {
         if (heroInfoBuilder_ == null) {
@@ -8164,7 +8164,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroInfo = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroInfo = 1;</code>
        */
       public Builder clearHeroInfo() {
         if (heroInfoBuilder_ == null) {
@@ -8177,7 +8177,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroInfo = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroInfo = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder getHeroInfoBuilder() {
         bitField0_ |= 0x00000001;
@@ -8185,7 +8185,7 @@ public final class HeroMessage {
         return getHeroInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroInfo = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroInfo = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder getHeroInfoOrBuilder() {
         if (heroInfoBuilder_ != null) {
@@ -8195,7 +8195,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroInfo = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroInfo = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.mokylin.bleach.protobuf.HeroMessage.HeroInfo, com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder, com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder> 
@@ -8211,7 +8211,7 @@ public final class HeroMessage {
         return heroInfoBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCHeroUpdate)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCHeroUpdate)
     }
 
     static {
@@ -8219,28 +8219,28 @@ public final class HeroMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCHeroUpdate)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCHeroUpdate)
   }
 
   public interface GCHeroAddOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCHeroAdd)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCHeroAdd)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .com.mokylin.HeroInfo heroAdd = 1;</code>
+     * <code>required .com.icewind.HeroInfo heroAdd = 1;</code>
      */
     boolean hasHeroAdd();
     /**
-     * <code>required .com.mokylin.HeroInfo heroAdd = 1;</code>
+     * <code>required .com.icewind.HeroInfo heroAdd = 1;</code>
      */
     com.mokylin.bleach.protobuf.HeroMessage.HeroInfo getHeroAdd();
     /**
-     * <code>required .com.mokylin.HeroInfo heroAdd = 1;</code>
+     * <code>required .com.icewind.HeroInfo heroAdd = 1;</code>
      */
     com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder getHeroAddOrBuilder();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCHeroAdd}
+   * Protobuf type {@code com.icewind.GCHeroAdd}
    *
    * <pre>
    **
@@ -8249,7 +8249,7 @@ public final class HeroMessage {
    */
   public static final class GCHeroAdd extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCHeroAdd)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCHeroAdd)
       GCHeroAddOrBuilder {
     // Use GCHeroAdd.newBuilder() to construct.
     private GCHeroAdd(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -8323,12 +8323,12 @@ public final class HeroMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCHeroAdd_descriptor;
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCHeroAdd_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCHeroAdd_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCHeroAdd_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HeroMessage.GCHeroAdd.class, com.mokylin.bleach.protobuf.HeroMessage.GCHeroAdd.Builder.class);
     }
@@ -8352,19 +8352,19 @@ public final class HeroMessage {
     public static final int HEROADD_FIELD_NUMBER = 1;
     private com.mokylin.bleach.protobuf.HeroMessage.HeroInfo heroAdd_;
     /**
-     * <code>required .com.mokylin.HeroInfo heroAdd = 1;</code>
+     * <code>required .com.icewind.HeroInfo heroAdd = 1;</code>
      */
     public boolean hasHeroAdd() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .com.mokylin.HeroInfo heroAdd = 1;</code>
+     * <code>required .com.icewind.HeroInfo heroAdd = 1;</code>
      */
     public com.mokylin.bleach.protobuf.HeroMessage.HeroInfo getHeroAdd() {
       return heroAdd_;
     }
     /**
-     * <code>required .com.mokylin.HeroInfo heroAdd = 1;</code>
+     * <code>required .com.icewind.HeroInfo heroAdd = 1;</code>
      */
     public com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder getHeroAddOrBuilder() {
       return heroAdd_;
@@ -8489,7 +8489,7 @@ public final class HeroMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCHeroAdd}
+     * Protobuf type {@code com.icewind.GCHeroAdd}
      *
      * <pre>
      **
@@ -8498,16 +8498,16 @@ public final class HeroMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCHeroAdd)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCHeroAdd)
         com.mokylin.bleach.protobuf.HeroMessage.GCHeroAddOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCHeroAdd_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCHeroAdd_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCHeroAdd_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCHeroAdd_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HeroMessage.GCHeroAdd.class, com.mokylin.bleach.protobuf.HeroMessage.GCHeroAdd.Builder.class);
       }
@@ -8548,7 +8548,7 @@ public final class HeroMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCHeroAdd_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCHeroAdd_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HeroMessage.GCHeroAdd getDefaultInstanceForType() {
@@ -8633,13 +8633,13 @@ public final class HeroMessage {
       private com.google.protobuf.SingleFieldBuilder<
           com.mokylin.bleach.protobuf.HeroMessage.HeroInfo, com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder, com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder> heroAddBuilder_;
       /**
-       * <code>required .com.mokylin.HeroInfo heroAdd = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroAdd = 1;</code>
        */
       public boolean hasHeroAdd() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroAdd = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroAdd = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroInfo getHeroAdd() {
         if (heroAddBuilder_ == null) {
@@ -8649,7 +8649,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroAdd = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroAdd = 1;</code>
        */
       public Builder setHeroAdd(com.mokylin.bleach.protobuf.HeroMessage.HeroInfo value) {
         if (heroAddBuilder_ == null) {
@@ -8665,7 +8665,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroAdd = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroAdd = 1;</code>
        */
       public Builder setHeroAdd(
           com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder builderForValue) {
@@ -8679,7 +8679,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroAdd = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroAdd = 1;</code>
        */
       public Builder mergeHeroAdd(com.mokylin.bleach.protobuf.HeroMessage.HeroInfo value) {
         if (heroAddBuilder_ == null) {
@@ -8698,7 +8698,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroAdd = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroAdd = 1;</code>
        */
       public Builder clearHeroAdd() {
         if (heroAddBuilder_ == null) {
@@ -8711,7 +8711,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroAdd = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroAdd = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder getHeroAddBuilder() {
         bitField0_ |= 0x00000001;
@@ -8719,7 +8719,7 @@ public final class HeroMessage {
         return getHeroAddFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroAdd = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroAdd = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder getHeroAddOrBuilder() {
         if (heroAddBuilder_ != null) {
@@ -8729,7 +8729,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.HeroInfo heroAdd = 1;</code>
+       * <code>required .com.icewind.HeroInfo heroAdd = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.mokylin.bleach.protobuf.HeroMessage.HeroInfo, com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder, com.mokylin.bleach.protobuf.HeroMessage.HeroInfoOrBuilder> 
@@ -8745,7 +8745,7 @@ public final class HeroMessage {
         return heroAddBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCHeroAdd)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCHeroAdd)
     }
 
     static {
@@ -8753,39 +8753,39 @@ public final class HeroMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCHeroAdd)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCHeroAdd)
   }
 
   public interface GCChangedPropsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCChangedProps)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCChangedProps)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+     * <code>repeated .com.icewind.PropData changedProps = 1;</code>
      */
     java.util.List<com.mokylin.bleach.protobuf.HeroMessage.PropData> 
         getChangedPropsList();
     /**
-     * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+     * <code>repeated .com.icewind.PropData changedProps = 1;</code>
      */
     com.mokylin.bleach.protobuf.HeroMessage.PropData getChangedProps(int index);
     /**
-     * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+     * <code>repeated .com.icewind.PropData changedProps = 1;</code>
      */
     int getChangedPropsCount();
     /**
-     * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+     * <code>repeated .com.icewind.PropData changedProps = 1;</code>
      */
     java.util.List<? extends com.mokylin.bleach.protobuf.HeroMessage.PropDataOrBuilder> 
         getChangedPropsOrBuilderList();
     /**
-     * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+     * <code>repeated .com.icewind.PropData changedProps = 1;</code>
      */
     com.mokylin.bleach.protobuf.HeroMessage.PropDataOrBuilder getChangedPropsOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code com.mokylin.GCChangedProps}
+   * Protobuf type {@code com.icewind.GCChangedProps}
    *
    * <pre>
    **
@@ -8794,7 +8794,7 @@ public final class HeroMessage {
    */
   public static final class GCChangedProps extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCChangedProps)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCChangedProps)
       GCChangedPropsOrBuilder {
     // Use GCChangedProps.newBuilder() to construct.
     private GCChangedProps(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -8866,12 +8866,12 @@ public final class HeroMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCChangedProps_descriptor;
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCChangedProps_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCChangedProps_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCChangedProps_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HeroMessage.GCChangedProps.class, com.mokylin.bleach.protobuf.HeroMessage.GCChangedProps.Builder.class);
     }
@@ -8894,32 +8894,32 @@ public final class HeroMessage {
     public static final int CHANGEDPROPS_FIELD_NUMBER = 1;
     private java.util.List<com.mokylin.bleach.protobuf.HeroMessage.PropData> changedProps_;
     /**
-     * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+     * <code>repeated .com.icewind.PropData changedProps = 1;</code>
      */
     public java.util.List<com.mokylin.bleach.protobuf.HeroMessage.PropData> getChangedPropsList() {
       return changedProps_;
     }
     /**
-     * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+     * <code>repeated .com.icewind.PropData changedProps = 1;</code>
      */
     public java.util.List<? extends com.mokylin.bleach.protobuf.HeroMessage.PropDataOrBuilder> 
         getChangedPropsOrBuilderList() {
       return changedProps_;
     }
     /**
-     * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+     * <code>repeated .com.icewind.PropData changedProps = 1;</code>
      */
     public int getChangedPropsCount() {
       return changedProps_.size();
     }
     /**
-     * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+     * <code>repeated .com.icewind.PropData changedProps = 1;</code>
      */
     public com.mokylin.bleach.protobuf.HeroMessage.PropData getChangedProps(int index) {
       return changedProps_.get(index);
     }
     /**
-     * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+     * <code>repeated .com.icewind.PropData changedProps = 1;</code>
      */
     public com.mokylin.bleach.protobuf.HeroMessage.PropDataOrBuilder getChangedPropsOrBuilder(
         int index) {
@@ -9043,7 +9043,7 @@ public final class HeroMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCChangedProps}
+     * Protobuf type {@code com.icewind.GCChangedProps}
      *
      * <pre>
      **
@@ -9052,16 +9052,16 @@ public final class HeroMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCChangedProps)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCChangedProps)
         com.mokylin.bleach.protobuf.HeroMessage.GCChangedPropsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCChangedProps_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCChangedProps_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCChangedProps_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCChangedProps_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HeroMessage.GCChangedProps.class, com.mokylin.bleach.protobuf.HeroMessage.GCChangedProps.Builder.class);
       }
@@ -9102,7 +9102,7 @@ public final class HeroMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_GCChangedProps_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_GCChangedProps_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HeroMessage.GCChangedProps getDefaultInstanceForType() {
@@ -9216,7 +9216,7 @@ public final class HeroMessage {
           com.mokylin.bleach.protobuf.HeroMessage.PropData, com.mokylin.bleach.protobuf.HeroMessage.PropData.Builder, com.mokylin.bleach.protobuf.HeroMessage.PropDataOrBuilder> changedPropsBuilder_;
 
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.HeroMessage.PropData> getChangedPropsList() {
         if (changedPropsBuilder_ == null) {
@@ -9226,7 +9226,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public int getChangedPropsCount() {
         if (changedPropsBuilder_ == null) {
@@ -9236,7 +9236,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.PropData getChangedProps(int index) {
         if (changedPropsBuilder_ == null) {
@@ -9246,7 +9246,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public Builder setChangedProps(
           int index, com.mokylin.bleach.protobuf.HeroMessage.PropData value) {
@@ -9263,7 +9263,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public Builder setChangedProps(
           int index, com.mokylin.bleach.protobuf.HeroMessage.PropData.Builder builderForValue) {
@@ -9277,7 +9277,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public Builder addChangedProps(com.mokylin.bleach.protobuf.HeroMessage.PropData value) {
         if (changedPropsBuilder_ == null) {
@@ -9293,7 +9293,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public Builder addChangedProps(
           int index, com.mokylin.bleach.protobuf.HeroMessage.PropData value) {
@@ -9310,7 +9310,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public Builder addChangedProps(
           com.mokylin.bleach.protobuf.HeroMessage.PropData.Builder builderForValue) {
@@ -9324,7 +9324,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public Builder addChangedProps(
           int index, com.mokylin.bleach.protobuf.HeroMessage.PropData.Builder builderForValue) {
@@ -9338,7 +9338,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public Builder addAllChangedProps(
           java.lang.Iterable<? extends com.mokylin.bleach.protobuf.HeroMessage.PropData> values) {
@@ -9353,7 +9353,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public Builder clearChangedProps() {
         if (changedPropsBuilder_ == null) {
@@ -9366,7 +9366,7 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public Builder removeChangedProps(int index) {
         if (changedPropsBuilder_ == null) {
@@ -9379,14 +9379,14 @@ public final class HeroMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.PropData.Builder getChangedPropsBuilder(
           int index) {
         return getChangedPropsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.PropDataOrBuilder getChangedPropsOrBuilder(
           int index) {
@@ -9396,7 +9396,7 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public java.util.List<? extends com.mokylin.bleach.protobuf.HeroMessage.PropDataOrBuilder> 
            getChangedPropsOrBuilderList() {
@@ -9407,14 +9407,14 @@ public final class HeroMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.PropData.Builder addChangedPropsBuilder() {
         return getChangedPropsFieldBuilder().addBuilder(
             com.mokylin.bleach.protobuf.HeroMessage.PropData.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public com.mokylin.bleach.protobuf.HeroMessage.PropData.Builder addChangedPropsBuilder(
           int index) {
@@ -9422,7 +9422,7 @@ public final class HeroMessage {
             index, com.mokylin.bleach.protobuf.HeroMessage.PropData.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.PropData changedProps = 1;</code>
+       * <code>repeated .com.icewind.PropData changedProps = 1;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.HeroMessage.PropData.Builder> 
            getChangedPropsBuilderList() {
@@ -9443,7 +9443,7 @@ public final class HeroMessage {
         return changedPropsBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCChangedProps)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCChangedProps)
     }
 
     static {
@@ -9451,11 +9451,11 @@ public final class HeroMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCChangedProps)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCChangedProps)
   }
 
   public interface PropDataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.PropData)
+      // @@protoc_insertion_point(interface_extends:com.icewind.PropData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -9477,11 +9477,11 @@ public final class HeroMessage {
     float getValue();
   }
   /**
-   * Protobuf type {@code com.mokylin.PropData}
+   * Protobuf type {@code com.icewind.PropData}
    */
   public static final class PropData extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.PropData)
+      // @@protoc_insertion_point(message_implements:com.icewind.PropData)
       PropDataOrBuilder {
     // Use PropData.newBuilder() to construct.
     private PropData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -9552,12 +9552,12 @@ public final class HeroMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_PropData_descriptor;
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_PropData_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_PropData_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_PropData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HeroMessage.PropData.class, com.mokylin.bleach.protobuf.HeroMessage.PropData.Builder.class);
     }
@@ -9735,20 +9735,20 @@ public final class HeroMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.PropData}
+     * Protobuf type {@code com.icewind.PropData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.PropData)
+        // @@protoc_insertion_point(builder_implements:com.icewind.PropData)
         com.mokylin.bleach.protobuf.HeroMessage.PropDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_PropData_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_PropData_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_PropData_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_PropData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HeroMessage.PropData.class, com.mokylin.bleach.protobuf.HeroMessage.PropData.Builder.class);
       }
@@ -9786,7 +9786,7 @@ public final class HeroMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_mokylin_PropData_descriptor;
+        return com.mokylin.bleach.protobuf.HeroMessage.internal_static_com_icewind_PropData_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HeroMessage.PropData getDefaultInstanceForType() {
@@ -9934,7 +9934,7 @@ public final class HeroMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.PropData)
+      // @@protoc_insertion_point(builder_scope:com.icewind.PropData)
     }
 
     static {
@@ -9942,84 +9942,84 @@ public final class HeroMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.PropData)
+    // @@protoc_insertion_point(class_scope:com.icewind.PropData)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CGHireHero_descriptor;
+    internal_static_com_icewind_CGHireHero_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CGHireHero_fieldAccessorTable;
+      internal_static_com_icewind_CGHireHero_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CGHeroStarUp_descriptor;
+    internal_static_com_icewind_CGHeroStarUp_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CGHeroStarUp_fieldAccessorTable;
+      internal_static_com_icewind_CGHeroStarUp_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CGHeroQualityUp_descriptor;
+    internal_static_com_icewind_CGHeroQualityUp_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CGHeroQualityUp_fieldAccessorTable;
+      internal_static_com_icewind_CGHeroQualityUp_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CGHeroSkillLevelUp_descriptor;
+    internal_static_com_icewind_CGHeroSkillLevelUp_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CGHeroSkillLevelUp_fieldAccessorTable;
+      internal_static_com_icewind_CGHeroSkillLevelUp_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CGHeroWearEquip_descriptor;
+    internal_static_com_icewind_CGHeroWearEquip_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CGHeroWearEquip_fieldAccessorTable;
+      internal_static_com_icewind_CGHeroWearEquip_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CGBuySkillPoint_descriptor;
+    internal_static_com_icewind_CGBuySkillPoint_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CGBuySkillPoint_fieldAccessorTable;
+      internal_static_com_icewind_CGBuySkillPoint_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCAllHeroInfo_descriptor;
+    internal_static_com_icewind_GCAllHeroInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCAllHeroInfo_fieldAccessorTable;
+      internal_static_com_icewind_GCAllHeroInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_HeroUnOwn_descriptor;
+    internal_static_com_icewind_HeroUnOwn_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_HeroUnOwn_fieldAccessorTable;
+      internal_static_com_icewind_HeroUnOwn_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_HeroInfo_descriptor;
+    internal_static_com_icewind_HeroInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_HeroInfo_fieldAccessorTable;
+      internal_static_com_icewind_HeroInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_HeroSkillInfo_descriptor;
+    internal_static_com_icewind_HeroSkillInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_HeroSkillInfo_fieldAccessorTable;
+      internal_static_com_icewind_HeroSkillInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_HeroEquipInfo_descriptor;
+    internal_static_com_icewind_HeroEquipInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_HeroEquipInfo_fieldAccessorTable;
+      internal_static_com_icewind_HeroEquipInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCHeroUpdate_descriptor;
+    internal_static_com_icewind_GCHeroUpdate_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCHeroUpdate_fieldAccessorTable;
+      internal_static_com_icewind_GCHeroUpdate_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCHeroAdd_descriptor;
+    internal_static_com_icewind_GCHeroAdd_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCHeroAdd_fieldAccessorTable;
+      internal_static_com_icewind_GCHeroAdd_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCChangedProps_descriptor;
+    internal_static_com_icewind_GCChangedProps_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCChangedProps_fieldAccessorTable;
+      internal_static_com_icewind_GCChangedProps_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_PropData_descriptor;
+    internal_static_com_icewind_PropData_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_PropData_fieldAccessorTable;
+      internal_static_com_icewind_PropData_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -10029,7 +10029,7 @@ public final class HeroMessage {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\nHero.proto\022\013com.mokylin\032\021MessageType.p" +
+      "\n\nHero.proto\022\013com.icewind\032\021MessageType.p" +
       "roto\"\'\n\nCGHireHero\022\022\n\ntemplateId\030\001 \002(\005:\005" +
       "\210\265\030\311\001\"!\n\014CGHeroStarUp\022\n\n\002id\030\001 \002(\003:\005\210\265\030\312\001" +
       "\"$\n\017CGHeroQualityUp\022\n\n\002id\030\001 \002(\003:\005\210\265\030\313\001\"Q" +
@@ -10038,23 +10038,23 @@ public final class HeroMessage {
       "\001\"6\n\017CGHeroWearEquip\022\n\n\002id\030\001 \002(\003\022\020\n\010posi" +
       "tion\030\002 \002(\005:\005\210\265\030\315\001\"\030\n\017CGBuySkillPoint:\005\210\265" +
       "\030\316\001\"l\n\rGCAllHeroInfo\022(\n\theroInfos\030\001 \003(\0132" +
-      "\025.com.mokylin.HeroInfo\022*\n\nheroUnOwns\030\002 \003",
-      "(\0132\026.com.mokylin.HeroUnOwn:\005\220\265\030\312\001\"6\n\tHer" +
+      "\025.com.icewind.HeroInfo\022*\n\nheroUnOwns\030\002 \003",
+      "(\0132\026.com.icewind.HeroUnOwn:\005\220\265\030\312\001\"6\n\tHer" +
       "oUnOwn\022\022\n\ntemplateId\030\002 \002(\005\022\025\n\rfragmentCo" +
       "unt\030\004 \002(\005\"\313\001\n\010HeroInfo\022\n\n\002id\030\001 \002(\003\022\022\n\nte" +
       "mplateId\030\002 \002(\005\022\r\n\005level\030\003 \002(\005\022\025\n\rfragmen" +
       "tCount\030\004 \002(\005\0222\n\016heroSkillInfos\030\005 \003(\0132\032.c" +
-      "om.mokylin.HeroSkillInfo\0222\n\016heroEquipInf" +
-      "os\030\006 \003(\0132\032.com.mokylin.HeroEquipInfo\022\021\n\t" +
+      "om.icewind.HeroSkillInfo\0222\n\016heroEquipInf" +
+      "os\030\006 \003(\0132\032.com.icewind.HeroEquipInfo\022\021\n\t" +
       "starCount\030\007 \002(\005\"2\n\rHeroSkillInfo\022\022\n\ntemp" +
       "lateId\030\001 \002(\005\022\r\n\005level\030\002 \002(\005\"Q\n\rHeroEquip" +
       "Info\022\020\n\010position\030\001 \002(\005\022\027\n\017enchantingLeve",
       "l\030\002 \002(\005\022\025\n\renchantingExp\030\003 \002(\005\">\n\014GCHero" +
-      "Update\022\'\n\010heroInfo\030\001 \002(\0132\025.com.mokylin.H" +
+      "Update\022\'\n\010heroInfo\030\001 \002(\0132\025.com.icewind.H" +
       "eroInfo:\005\220\265\030\314\001\":\n\tGCHeroAdd\022&\n\007heroAdd\030\001" +
-      " \002(\0132\025.com.mokylin.HeroInfo:\005\220\265\030\313\001\"D\n\016GC" +
+      " \002(\0132\025.com.icewind.HeroInfo:\005\220\265\030\313\001\"D\n\016GC" +
       "ChangedProps\022+\n\014changedProps\030\001 \003(\0132\025.com" +
-      ".mokylin.PropData:\005\220\265\030\311\001\")\n\010PropData\022\016\n\006" +
+      ".icewind.PropData:\005\220\265\030\311\001\")\n\010PropData\022\016\n\006" +
       "propId\030\001 \002(\005\022\r\n\005value\030\002 \002(\002B*\n\033com.mokyl" +
       "in.bleach.protobufB\013HeroMessage"
     };
@@ -10069,113 +10069,113 @@ public final class HeroMessage {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.mokylin.bleach.protobuf.MessageType.getDescriptor(),
+          com.icewind.MessageType.getDescriptor(),
         }, assigner);
-    internal_static_com_mokylin_CGHireHero_descriptor =
+    internal_static_com_icewind_CGHireHero_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_mokylin_CGHireHero_fieldAccessorTable = new
+    internal_static_com_icewind_CGHireHero_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CGHireHero_descriptor,
+        internal_static_com_icewind_CGHireHero_descriptor,
         new java.lang.String[] { "TemplateId", });
-    internal_static_com_mokylin_CGHeroStarUp_descriptor =
+    internal_static_com_icewind_CGHeroStarUp_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_mokylin_CGHeroStarUp_fieldAccessorTable = new
+    internal_static_com_icewind_CGHeroStarUp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CGHeroStarUp_descriptor,
+        internal_static_com_icewind_CGHeroStarUp_descriptor,
         new java.lang.String[] { "Id", });
-    internal_static_com_mokylin_CGHeroQualityUp_descriptor =
+    internal_static_com_icewind_CGHeroQualityUp_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_com_mokylin_CGHeroQualityUp_fieldAccessorTable = new
+    internal_static_com_icewind_CGHeroQualityUp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CGHeroQualityUp_descriptor,
+        internal_static_com_icewind_CGHeroQualityUp_descriptor,
         new java.lang.String[] { "Id", });
-    internal_static_com_mokylin_CGHeroSkillLevelUp_descriptor =
+    internal_static_com_icewind_CGHeroSkillLevelUp_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_com_mokylin_CGHeroSkillLevelUp_fieldAccessorTable = new
+    internal_static_com_icewind_CGHeroSkillLevelUp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CGHeroSkillLevelUp_descriptor,
+        internal_static_com_icewind_CGHeroSkillLevelUp_descriptor,
         new java.lang.String[] { "Id", "TemplateId", "LevelUpCount", });
-    internal_static_com_mokylin_CGHeroWearEquip_descriptor =
+    internal_static_com_icewind_CGHeroWearEquip_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_com_mokylin_CGHeroWearEquip_fieldAccessorTable = new
+    internal_static_com_icewind_CGHeroWearEquip_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CGHeroWearEquip_descriptor,
+        internal_static_com_icewind_CGHeroWearEquip_descriptor,
         new java.lang.String[] { "Id", "Position", });
-    internal_static_com_mokylin_CGBuySkillPoint_descriptor =
+    internal_static_com_icewind_CGBuySkillPoint_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_com_mokylin_CGBuySkillPoint_fieldAccessorTable = new
+    internal_static_com_icewind_CGBuySkillPoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CGBuySkillPoint_descriptor,
+        internal_static_com_icewind_CGBuySkillPoint_descriptor,
         new java.lang.String[] { });
-    internal_static_com_mokylin_GCAllHeroInfo_descriptor =
+    internal_static_com_icewind_GCAllHeroInfo_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_com_mokylin_GCAllHeroInfo_fieldAccessorTable = new
+    internal_static_com_icewind_GCAllHeroInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCAllHeroInfo_descriptor,
+        internal_static_com_icewind_GCAllHeroInfo_descriptor,
         new java.lang.String[] { "HeroInfos", "HeroUnOwns", });
-    internal_static_com_mokylin_HeroUnOwn_descriptor =
+    internal_static_com_icewind_HeroUnOwn_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_com_mokylin_HeroUnOwn_fieldAccessorTable = new
+    internal_static_com_icewind_HeroUnOwn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_HeroUnOwn_descriptor,
+        internal_static_com_icewind_HeroUnOwn_descriptor,
         new java.lang.String[] { "TemplateId", "FragmentCount", });
-    internal_static_com_mokylin_HeroInfo_descriptor =
+    internal_static_com_icewind_HeroInfo_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_com_mokylin_HeroInfo_fieldAccessorTable = new
+    internal_static_com_icewind_HeroInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_HeroInfo_descriptor,
+        internal_static_com_icewind_HeroInfo_descriptor,
         new java.lang.String[] { "Id", "TemplateId", "Level", "FragmentCount", "HeroSkillInfos", "HeroEquipInfos", "StarCount", });
-    internal_static_com_mokylin_HeroSkillInfo_descriptor =
+    internal_static_com_icewind_HeroSkillInfo_descriptor =
       getDescriptor().getMessageTypes().get(9);
-    internal_static_com_mokylin_HeroSkillInfo_fieldAccessorTable = new
+    internal_static_com_icewind_HeroSkillInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_HeroSkillInfo_descriptor,
+        internal_static_com_icewind_HeroSkillInfo_descriptor,
         new java.lang.String[] { "TemplateId", "Level", });
-    internal_static_com_mokylin_HeroEquipInfo_descriptor =
+    internal_static_com_icewind_HeroEquipInfo_descriptor =
       getDescriptor().getMessageTypes().get(10);
-    internal_static_com_mokylin_HeroEquipInfo_fieldAccessorTable = new
+    internal_static_com_icewind_HeroEquipInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_HeroEquipInfo_descriptor,
+        internal_static_com_icewind_HeroEquipInfo_descriptor,
         new java.lang.String[] { "Position", "EnchantingLevel", "EnchantingExp", });
-    internal_static_com_mokylin_GCHeroUpdate_descriptor =
+    internal_static_com_icewind_GCHeroUpdate_descriptor =
       getDescriptor().getMessageTypes().get(11);
-    internal_static_com_mokylin_GCHeroUpdate_fieldAccessorTable = new
+    internal_static_com_icewind_GCHeroUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCHeroUpdate_descriptor,
+        internal_static_com_icewind_GCHeroUpdate_descriptor,
         new java.lang.String[] { "HeroInfo", });
-    internal_static_com_mokylin_GCHeroAdd_descriptor =
+    internal_static_com_icewind_GCHeroAdd_descriptor =
       getDescriptor().getMessageTypes().get(12);
-    internal_static_com_mokylin_GCHeroAdd_fieldAccessorTable = new
+    internal_static_com_icewind_GCHeroAdd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCHeroAdd_descriptor,
+        internal_static_com_icewind_GCHeroAdd_descriptor,
         new java.lang.String[] { "HeroAdd", });
-    internal_static_com_mokylin_GCChangedProps_descriptor =
+    internal_static_com_icewind_GCChangedProps_descriptor =
       getDescriptor().getMessageTypes().get(13);
-    internal_static_com_mokylin_GCChangedProps_fieldAccessorTable = new
+    internal_static_com_icewind_GCChangedProps_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCChangedProps_descriptor,
+        internal_static_com_icewind_GCChangedProps_descriptor,
         new java.lang.String[] { "ChangedProps", });
-    internal_static_com_mokylin_PropData_descriptor =
+    internal_static_com_icewind_PropData_descriptor =
       getDescriptor().getMessageTypes().get(14);
-    internal_static_com_mokylin_PropData_fieldAccessorTable = new
+    internal_static_com_icewind_PropData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_PropData_descriptor,
+        internal_static_com_icewind_PropData_descriptor,
         new java.lang.String[] { "PropId", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.cgMessageType);
+    registry.add(com.icewind.MessageType.cgMessageType);
+    registry.add(com.icewind.MessageType.cgMessageType);
+    registry.add(com.icewind.MessageType.cgMessageType);
+    registry.add(com.icewind.MessageType.cgMessageType);
+    registry.add(com.icewind.MessageType.cgMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.mokylin.bleach.protobuf.MessageType.getDescriptor();
+    com.icewind.MessageType.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

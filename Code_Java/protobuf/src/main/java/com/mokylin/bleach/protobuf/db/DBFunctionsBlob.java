@@ -9,7 +9,7 @@ public final class DBFunctionsBlob {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface DBFunctionsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.DBFunctions)
+      // @@protoc_insertion_point(interface_extends:com.icewind.DBFunctions)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -26,11 +26,11 @@ public final class DBFunctionsBlob {
     int getOpenedFunctions(int index);
   }
   /**
-   * Protobuf type {@code com.mokylin.DBFunctions}
+   * Protobuf type {@code com.icewind.DBFunctions}
    */
   public static final class DBFunctions extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.DBFunctions)
+      // @@protoc_insertion_point(message_implements:com.icewind.DBFunctions)
       DBFunctionsOrBuilder {
     // Use DBFunctions.newBuilder() to construct.
     private DBFunctions(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -115,12 +115,12 @@ public final class DBFunctionsBlob {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.db.DBFunctionsBlob.internal_static_com_mokylin_DBFunctions_descriptor;
+      return com.mokylin.bleach.protobuf.db.DBFunctionsBlob.internal_static_com_icewind_DBFunctions_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.db.DBFunctionsBlob.internal_static_com_mokylin_DBFunctions_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.db.DBFunctionsBlob.internal_static_com_icewind_DBFunctions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.db.DBFunctionsBlob.DBFunctions.class, com.mokylin.bleach.protobuf.db.DBFunctionsBlob.DBFunctions.Builder.class);
     }
@@ -278,20 +278,20 @@ public final class DBFunctionsBlob {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.DBFunctions}
+     * Protobuf type {@code com.icewind.DBFunctions}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.DBFunctions)
+        // @@protoc_insertion_point(builder_implements:com.icewind.DBFunctions)
         com.mokylin.bleach.protobuf.db.DBFunctionsBlob.DBFunctionsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.db.DBFunctionsBlob.internal_static_com_mokylin_DBFunctions_descriptor;
+        return com.mokylin.bleach.protobuf.db.DBFunctionsBlob.internal_static_com_icewind_DBFunctions_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.db.DBFunctionsBlob.internal_static_com_mokylin_DBFunctions_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.db.DBFunctionsBlob.internal_static_com_icewind_DBFunctions_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.db.DBFunctionsBlob.DBFunctions.class, com.mokylin.bleach.protobuf.db.DBFunctionsBlob.DBFunctions.Builder.class);
       }
@@ -327,7 +327,7 @@ public final class DBFunctionsBlob {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.db.DBFunctionsBlob.internal_static_com_mokylin_DBFunctions_descriptor;
+        return com.mokylin.bleach.protobuf.db.DBFunctionsBlob.internal_static_com_icewind_DBFunctions_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.db.DBFunctionsBlob.DBFunctions getDefaultInstanceForType() {
@@ -468,7 +468,7 @@ public final class DBFunctionsBlob {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.DBFunctions)
+      // @@protoc_insertion_point(builder_scope:com.icewind.DBFunctions)
     }
 
     static {
@@ -476,14 +476,14 @@ public final class DBFunctionsBlob {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.DBFunctions)
+    // @@protoc_insertion_point(class_scope:com.icewind.DBFunctions)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_DBFunctions_descriptor;
+    internal_static_com_icewind_DBFunctions_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_DBFunctions_fieldAccessorTable;
+      internal_static_com_icewind_DBFunctions_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -493,7 +493,7 @@ public final class DBFunctionsBlob {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\024db/DBFunctions.proto\022\013com.mokylin\"&\n\013D" +
+      "\n\024db/DBFunctions.proto\022\013com.icewind\"&\n\013D" +
       "BFunctions\022\027\n\017openedFunctions\030\001 \003(\005B1\n\036c" +
       "om.mokylin.bleach.protobuf.dbB\017DBFunctio" +
       "nsBlob"
@@ -510,11 +510,11 @@ public final class DBFunctionsBlob {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_mokylin_DBFunctions_descriptor =
+    internal_static_com_icewind_DBFunctions_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_mokylin_DBFunctions_fieldAccessorTable = new
+    internal_static_com_icewind_DBFunctions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_DBFunctions_descriptor,
+        internal_static_com_icewind_DBFunctions_descriptor,
         new java.lang.String[] { "OpenedFunctions", });
   }
 

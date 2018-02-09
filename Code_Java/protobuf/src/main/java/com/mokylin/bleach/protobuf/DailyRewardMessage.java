@@ -9,7 +9,7 @@ public final class DailyRewardMessage {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface CGGetDailyRewardOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CGGetDailyReward)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CGGetDailyReward)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -22,7 +22,7 @@ public final class DailyRewardMessage {
     int getRewardIndex();
   }
   /**
-   * Protobuf type {@code com.mokylin.CGGetDailyReward}
+   * Protobuf type {@code com.icewind.CGGetDailyReward}
    *
    * <pre>
    **
@@ -31,7 +31,7 @@ public final class DailyRewardMessage {
    */
   public static final class CGGetDailyReward extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CGGetDailyReward)
+      // @@protoc_insertion_point(message_implements:com.icewind.CGGetDailyReward)
       CGGetDailyRewardOrBuilder {
     // Use CGGetDailyReward.newBuilder() to construct.
     private CGGetDailyReward(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -97,12 +97,12 @@ public final class DailyRewardMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_mokylin_CGGetDailyReward_descriptor;
+      return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_icewind_CGGetDailyReward_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_mokylin_CGGetDailyReward_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_icewind_CGGetDailyReward_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.DailyRewardMessage.CGGetDailyReward.class, com.mokylin.bleach.protobuf.DailyRewardMessage.CGGetDailyReward.Builder.class);
     }
@@ -253,7 +253,7 @@ public final class DailyRewardMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CGGetDailyReward}
+     * Protobuf type {@code com.icewind.CGGetDailyReward}
      *
      * <pre>
      **
@@ -262,16 +262,16 @@ public final class DailyRewardMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CGGetDailyReward)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CGGetDailyReward)
         com.mokylin.bleach.protobuf.DailyRewardMessage.CGGetDailyRewardOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_mokylin_CGGetDailyReward_descriptor;
+        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_icewind_CGGetDailyReward_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_mokylin_CGGetDailyReward_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_icewind_CGGetDailyReward_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.DailyRewardMessage.CGGetDailyReward.class, com.mokylin.bleach.protobuf.DailyRewardMessage.CGGetDailyReward.Builder.class);
       }
@@ -307,7 +307,7 @@ public final class DailyRewardMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_mokylin_CGGetDailyReward_descriptor;
+        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_icewind_CGGetDailyReward_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.DailyRewardMessage.CGGetDailyReward getDefaultInstanceForType() {
@@ -412,7 +412,7 @@ public final class DailyRewardMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CGGetDailyReward)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CGGetDailyReward)
     }
 
     static {
@@ -420,11 +420,11 @@ public final class DailyRewardMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CGGetDailyReward)
+    // @@protoc_insertion_point(class_scope:com.icewind.CGGetDailyReward)
   }
 
   public interface GCDailyRewardInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCDailyRewardInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCDailyRewardInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -496,7 +496,7 @@ public final class DailyRewardMessage {
     boolean getHasNewReward();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCDailyRewardInfo}
+   * Protobuf type {@code com.icewind.GCDailyRewardInfo}
    *
    * <pre>
    **
@@ -505,7 +505,7 @@ public final class DailyRewardMessage {
    */
   public static final class GCDailyRewardInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCDailyRewardInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCDailyRewardInfo)
       GCDailyRewardInfoOrBuilder {
     // Use GCDailyRewardInfo.newBuilder() to construct.
     private GCDailyRewardInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -586,12 +586,12 @@ public final class DailyRewardMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_mokylin_GCDailyRewardInfo_descriptor;
+      return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_icewind_GCDailyRewardInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_mokylin_GCDailyRewardInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_icewind_GCDailyRewardInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.DailyRewardMessage.GCDailyRewardInfo.class, com.mokylin.bleach.protobuf.DailyRewardMessage.GCDailyRewardInfo.Builder.class);
     }
@@ -855,7 +855,7 @@ public final class DailyRewardMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCDailyRewardInfo}
+     * Protobuf type {@code com.icewind.GCDailyRewardInfo}
      *
      * <pre>
      **
@@ -864,16 +864,16 @@ public final class DailyRewardMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCDailyRewardInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCDailyRewardInfo)
         com.mokylin.bleach.protobuf.DailyRewardMessage.GCDailyRewardInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_mokylin_GCDailyRewardInfo_descriptor;
+        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_icewind_GCDailyRewardInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_mokylin_GCDailyRewardInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_icewind_GCDailyRewardInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.DailyRewardMessage.GCDailyRewardInfo.class, com.mokylin.bleach.protobuf.DailyRewardMessage.GCDailyRewardInfo.Builder.class);
       }
@@ -915,7 +915,7 @@ public final class DailyRewardMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_mokylin_GCDailyRewardInfo_descriptor;
+        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_icewind_GCDailyRewardInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.DailyRewardMessage.GCDailyRewardInfo getDefaultInstanceForType() {
@@ -1213,7 +1213,7 @@ public final class DailyRewardMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCDailyRewardInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCDailyRewardInfo)
     }
 
     static {
@@ -1221,15 +1221,15 @@ public final class DailyRewardMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCDailyRewardInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCDailyRewardInfo)
   }
 
   public interface GCGetDailyRewardFailedOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCGetDailyRewardFailed)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCGetDailyRewardFailed)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code com.mokylin.GCGetDailyRewardFailed}
+   * Protobuf type {@code com.icewind.GCGetDailyRewardFailed}
    *
    * <pre>
    **
@@ -1238,7 +1238,7 @@ public final class DailyRewardMessage {
    */
   public static final class GCGetDailyRewardFailed extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCGetDailyRewardFailed)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCGetDailyRewardFailed)
       GCGetDailyRewardFailedOrBuilder {
     // Use GCGetDailyRewardFailed.newBuilder() to construct.
     private GCGetDailyRewardFailed(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -1298,12 +1298,12 @@ public final class DailyRewardMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_mokylin_GCGetDailyRewardFailed_descriptor;
+      return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_icewind_GCGetDailyRewardFailed_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_mokylin_GCGetDailyRewardFailed_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_icewind_GCGetDailyRewardFailed_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.DailyRewardMessage.GCGetDailyRewardFailed.class, com.mokylin.bleach.protobuf.DailyRewardMessage.GCGetDailyRewardFailed.Builder.class);
     }
@@ -1426,7 +1426,7 @@ public final class DailyRewardMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCGetDailyRewardFailed}
+     * Protobuf type {@code com.icewind.GCGetDailyRewardFailed}
      *
      * <pre>
      **
@@ -1435,16 +1435,16 @@ public final class DailyRewardMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCGetDailyRewardFailed)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCGetDailyRewardFailed)
         com.mokylin.bleach.protobuf.DailyRewardMessage.GCGetDailyRewardFailedOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_mokylin_GCGetDailyRewardFailed_descriptor;
+        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_icewind_GCGetDailyRewardFailed_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_mokylin_GCGetDailyRewardFailed_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_icewind_GCGetDailyRewardFailed_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.DailyRewardMessage.GCGetDailyRewardFailed.class, com.mokylin.bleach.protobuf.DailyRewardMessage.GCGetDailyRewardFailed.Builder.class);
       }
@@ -1478,7 +1478,7 @@ public final class DailyRewardMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_mokylin_GCGetDailyRewardFailed_descriptor;
+        return com.mokylin.bleach.protobuf.DailyRewardMessage.internal_static_com_icewind_GCGetDailyRewardFailed_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.DailyRewardMessage.GCGetDailyRewardFailed getDefaultInstanceForType() {
@@ -1536,7 +1536,7 @@ public final class DailyRewardMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCGetDailyRewardFailed)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCGetDailyRewardFailed)
     }
 
     static {
@@ -1544,24 +1544,24 @@ public final class DailyRewardMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCGetDailyRewardFailed)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCGetDailyRewardFailed)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CGGetDailyReward_descriptor;
+    internal_static_com_icewind_CGGetDailyReward_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CGGetDailyReward_fieldAccessorTable;
+      internal_static_com_icewind_CGGetDailyReward_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCDailyRewardInfo_descriptor;
+    internal_static_com_icewind_GCDailyRewardInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCDailyRewardInfo_fieldAccessorTable;
+      internal_static_com_icewind_GCDailyRewardInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCGetDailyRewardFailed_descriptor;
+    internal_static_com_icewind_GCGetDailyRewardFailed_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCGetDailyRewardFailed_fieldAccessorTable;
+      internal_static_com_icewind_GCGetDailyRewardFailed_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1571,7 +1571,7 @@ public final class DailyRewardMessage {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021DailyReward.proto\022\013com.mokylin\032\021Messag" +
+      "\n\021DailyReward.proto\022\013com.icewind\032\021Messag" +
       "eType.proto\".\n\020CGGetDailyReward\022\023\n\013rewar" +
       "dIndex\030\001 \002(\005:\005\210\265\030\337\002\"r\n\021GCDailyRewardInfo" +
       "\022\025\n\rtimesOfReward\030\001 \002(\005\022\024\n\014currentMonth\030" +
@@ -1591,34 +1591,34 @@ public final class DailyRewardMessage {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.mokylin.bleach.protobuf.MessageType.getDescriptor(),
+          com.icewind.MessageType.getDescriptor(),
         }, assigner);
-    internal_static_com_mokylin_CGGetDailyReward_descriptor =
+    internal_static_com_icewind_CGGetDailyReward_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_mokylin_CGGetDailyReward_fieldAccessorTable = new
+    internal_static_com_icewind_CGGetDailyReward_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CGGetDailyReward_descriptor,
+        internal_static_com_icewind_CGGetDailyReward_descriptor,
         new java.lang.String[] { "RewardIndex", });
-    internal_static_com_mokylin_GCDailyRewardInfo_descriptor =
+    internal_static_com_icewind_GCDailyRewardInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_mokylin_GCDailyRewardInfo_fieldAccessorTable = new
+    internal_static_com_icewind_GCDailyRewardInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCDailyRewardInfo_descriptor,
+        internal_static_com_icewind_GCDailyRewardInfo_descriptor,
         new java.lang.String[] { "TimesOfReward", "CurrentMonth", "IndexOfHero", "HasNewReward", });
-    internal_static_com_mokylin_GCGetDailyRewardFailed_descriptor =
+    internal_static_com_icewind_GCGetDailyRewardFailed_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_com_mokylin_GCGetDailyRewardFailed_fieldAccessorTable = new
+    internal_static_com_icewind_GCGetDailyRewardFailed_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCGetDailyRewardFailed_descriptor,
+        internal_static_com_icewind_GCGetDailyRewardFailed_descriptor,
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.cgMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.mokylin.bleach.protobuf.MessageType.getDescriptor();
+    com.icewind.MessageType.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

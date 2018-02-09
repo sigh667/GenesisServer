@@ -9,7 +9,7 @@ public final class ShopMessage {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   /**
-   * Protobuf enum {@code com.mokylin.ShopPrompt}
+   * Protobuf enum {@code com.icewind.ShopPrompt}
    *
    * <pre>
    **
@@ -159,11 +159,11 @@ public final class ShopMessage {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:com.mokylin.ShopPrompt)
+    // @@protoc_insertion_point(enum_scope:com.icewind.ShopPrompt)
   }
 
   public interface CGOpenShopOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CGOpenShop)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CGOpenShop)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -184,7 +184,7 @@ public final class ShopMessage {
     int getShopTypeId();
   }
   /**
-   * Protobuf type {@code com.mokylin.CGOpenShop}
+   * Protobuf type {@code com.icewind.CGOpenShop}
    *
    * <pre>
    **
@@ -193,7 +193,7 @@ public final class ShopMessage {
    */
   public static final class CGOpenShop extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CGOpenShop)
+      // @@protoc_insertion_point(message_implements:com.icewind.CGOpenShop)
       CGOpenShopOrBuilder {
     // Use CGOpenShop.newBuilder() to construct.
     private CGOpenShop(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -259,12 +259,12 @@ public final class ShopMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_CGOpenShop_descriptor;
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_CGOpenShop_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_CGOpenShop_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_CGOpenShop_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ShopMessage.CGOpenShop.class, com.mokylin.bleach.protobuf.ShopMessage.CGOpenShop.Builder.class);
     }
@@ -423,7 +423,7 @@ public final class ShopMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CGOpenShop}
+     * Protobuf type {@code com.icewind.CGOpenShop}
      *
      * <pre>
      **
@@ -432,16 +432,16 @@ public final class ShopMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CGOpenShop)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CGOpenShop)
         com.mokylin.bleach.protobuf.ShopMessage.CGOpenShopOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_CGOpenShop_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_CGOpenShop_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_CGOpenShop_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_CGOpenShop_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ShopMessage.CGOpenShop.class, com.mokylin.bleach.protobuf.ShopMessage.CGOpenShop.Builder.class);
       }
@@ -477,7 +477,7 @@ public final class ShopMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_CGOpenShop_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_CGOpenShop_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ShopMessage.CGOpenShop getDefaultInstanceForType() {
@@ -598,7 +598,7 @@ public final class ShopMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CGOpenShop)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CGOpenShop)
     }
 
     static {
@@ -606,11 +606,11 @@ public final class ShopMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CGOpenShop)
+    // @@protoc_insertion_point(class_scope:com.icewind.CGOpenShop)
   }
 
   public interface CGRefreshGoodsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CGRefreshGoods)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CGRefreshGoods)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -631,7 +631,7 @@ public final class ShopMessage {
     int getShopTypeId();
   }
   /**
-   * Protobuf type {@code com.mokylin.CGRefreshGoods}
+   * Protobuf type {@code com.icewind.CGRefreshGoods}
    *
    * <pre>
    **
@@ -640,7 +640,7 @@ public final class ShopMessage {
    */
   public static final class CGRefreshGoods extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CGRefreshGoods)
+      // @@protoc_insertion_point(message_implements:com.icewind.CGRefreshGoods)
       CGRefreshGoodsOrBuilder {
     // Use CGRefreshGoods.newBuilder() to construct.
     private CGRefreshGoods(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -706,12 +706,12 @@ public final class ShopMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_CGRefreshGoods_descriptor;
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_CGRefreshGoods_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_CGRefreshGoods_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_CGRefreshGoods_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ShopMessage.CGRefreshGoods.class, com.mokylin.bleach.protobuf.ShopMessage.CGRefreshGoods.Builder.class);
     }
@@ -870,7 +870,7 @@ public final class ShopMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CGRefreshGoods}
+     * Protobuf type {@code com.icewind.CGRefreshGoods}
      *
      * <pre>
      **
@@ -879,16 +879,16 @@ public final class ShopMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CGRefreshGoods)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CGRefreshGoods)
         com.mokylin.bleach.protobuf.ShopMessage.CGRefreshGoodsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_CGRefreshGoods_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_CGRefreshGoods_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_CGRefreshGoods_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_CGRefreshGoods_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ShopMessage.CGRefreshGoods.class, com.mokylin.bleach.protobuf.ShopMessage.CGRefreshGoods.Builder.class);
       }
@@ -924,7 +924,7 @@ public final class ShopMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_CGRefreshGoods_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_CGRefreshGoods_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ShopMessage.CGRefreshGoods getDefaultInstanceForType() {
@@ -1045,7 +1045,7 @@ public final class ShopMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CGRefreshGoods)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CGRefreshGoods)
     }
 
     static {
@@ -1053,11 +1053,11 @@ public final class ShopMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CGRefreshGoods)
+    // @@protoc_insertion_point(class_scope:com.icewind.CGRefreshGoods)
   }
 
   public interface CGBuyGoodOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CGBuyGood)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CGBuyGood)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1112,7 +1112,7 @@ public final class ShopMessage {
     long getCurGoodBornTime();
   }
   /**
-   * Protobuf type {@code com.mokylin.CGBuyGood}
+   * Protobuf type {@code com.icewind.CGBuyGood}
    *
    * <pre>
    **
@@ -1121,7 +1121,7 @@ public final class ShopMessage {
    */
   public static final class CGBuyGood extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CGBuyGood)
+      // @@protoc_insertion_point(message_implements:com.icewind.CGBuyGood)
       CGBuyGoodOrBuilder {
     // Use CGBuyGood.newBuilder() to construct.
     private CGBuyGood(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -1197,12 +1197,12 @@ public final class ShopMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_CGBuyGood_descriptor;
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_CGBuyGood_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_CGBuyGood_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_CGBuyGood_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ShopMessage.CGBuyGood.class, com.mokylin.bleach.protobuf.ShopMessage.CGBuyGood.Builder.class);
     }
@@ -1431,7 +1431,7 @@ public final class ShopMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CGBuyGood}
+     * Protobuf type {@code com.icewind.CGBuyGood}
      *
      * <pre>
      **
@@ -1440,16 +1440,16 @@ public final class ShopMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CGBuyGood)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CGBuyGood)
         com.mokylin.bleach.protobuf.ShopMessage.CGBuyGoodOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_CGBuyGood_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_CGBuyGood_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_CGBuyGood_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_CGBuyGood_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ShopMessage.CGBuyGood.class, com.mokylin.bleach.protobuf.ShopMessage.CGBuyGood.Builder.class);
       }
@@ -1489,7 +1489,7 @@ public final class ShopMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_CGBuyGood_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_CGBuyGood_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ShopMessage.CGBuyGood getDefaultInstanceForType() {
@@ -1728,7 +1728,7 @@ public final class ShopMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CGBuyGood)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CGBuyGood)
     }
 
     static {
@@ -1736,11 +1736,11 @@ public final class ShopMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CGBuyGood)
+    // @@protoc_insertion_point(class_scope:com.icewind.CGBuyGood)
   }
 
   public interface GCShopInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCShopInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCShopInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1837,7 +1837,7 @@ public final class ShopMessage {
     int getLeftOpenTime();
 
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -1846,7 +1846,7 @@ public final class ShopMessage {
     java.util.List<com.mokylin.bleach.protobuf.ShopMessage.GoodInfo> 
         getGoodInfoListList();
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -1854,7 +1854,7 @@ public final class ShopMessage {
      */
     com.mokylin.bleach.protobuf.ShopMessage.GoodInfo getGoodInfoList(int index);
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -1862,7 +1862,7 @@ public final class ShopMessage {
      */
     int getGoodInfoListCount();
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -1871,7 +1871,7 @@ public final class ShopMessage {
     java.util.List<? extends com.mokylin.bleach.protobuf.ShopMessage.GoodInfoOrBuilder> 
         getGoodInfoListOrBuilderList();
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -1915,7 +1915,7 @@ public final class ShopMessage {
     int getManuallyRefreshCount();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCShopInfo}
+   * Protobuf type {@code com.icewind.GCShopInfo}
    *
    * <pre>
    **
@@ -1924,7 +1924,7 @@ public final class ShopMessage {
    */
   public static final class GCShopInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCShopInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCShopInfo)
       GCShopInfoOrBuilder {
     // Use GCShopInfo.newBuilder() to construct.
     private GCShopInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -2050,12 +2050,12 @@ public final class ShopMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopInfo_descriptor;
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ShopMessage.GCShopInfo.class, com.mokylin.bleach.protobuf.ShopMessage.GCShopInfo.Builder.class);
     }
@@ -2205,7 +2205,7 @@ public final class ShopMessage {
     public static final int GOODINFOLIST_FIELD_NUMBER = 6;
     private java.util.List<com.mokylin.bleach.protobuf.ShopMessage.GoodInfo> goodInfoList_;
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -2215,7 +2215,7 @@ public final class ShopMessage {
       return goodInfoList_;
     }
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -2226,7 +2226,7 @@ public final class ShopMessage {
       return goodInfoList_;
     }
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -2236,7 +2236,7 @@ public final class ShopMessage {
       return goodInfoList_.size();
     }
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -2246,7 +2246,7 @@ public final class ShopMessage {
       return goodInfoList_.get(index);
     }
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -2505,7 +2505,7 @@ public final class ShopMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCShopInfo}
+     * Protobuf type {@code com.icewind.GCShopInfo}
      *
      * <pre>
      **
@@ -2514,16 +2514,16 @@ public final class ShopMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCShopInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCShopInfo)
         com.mokylin.bleach.protobuf.ShopMessage.GCShopInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopInfo_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ShopMessage.GCShopInfo.class, com.mokylin.bleach.protobuf.ShopMessage.GCShopInfo.Builder.class);
       }
@@ -2578,7 +2578,7 @@ public final class ShopMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopInfo_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ShopMessage.GCShopInfo getDefaultInstanceForType() {
@@ -3061,7 +3061,7 @@ public final class ShopMessage {
           com.mokylin.bleach.protobuf.ShopMessage.GoodInfo, com.mokylin.bleach.protobuf.ShopMessage.GoodInfo.Builder, com.mokylin.bleach.protobuf.ShopMessage.GoodInfoOrBuilder> goodInfoListBuilder_;
 
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3075,7 +3075,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3089,7 +3089,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3103,7 +3103,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3124,7 +3124,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3142,7 +3142,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3162,7 +3162,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3183,7 +3183,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3201,7 +3201,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3219,7 +3219,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3238,7 +3238,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3255,7 +3255,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3272,7 +3272,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3283,7 +3283,7 @@ public final class ShopMessage {
         return getGoodInfoListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3297,7 +3297,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3312,7 +3312,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3323,7 +3323,7 @@ public final class ShopMessage {
             com.mokylin.bleach.protobuf.ShopMessage.GoodInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3335,7 +3335,7 @@ public final class ShopMessage {
             index, com.mokylin.bleach.protobuf.ShopMessage.GoodInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 6;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 6;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -3456,7 +3456,7 @@ public final class ShopMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCShopInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCShopInfo)
     }
 
     static {
@@ -3464,11 +3464,11 @@ public final class ShopMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCShopInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCShopInfo)
   }
 
   public interface GoodInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GoodInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GoodInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3540,7 +3540,7 @@ public final class ShopMessage {
     boolean getIsSelling();
   }
   /**
-   * Protobuf type {@code com.mokylin.GoodInfo}
+   * Protobuf type {@code com.icewind.GoodInfo}
    *
    * <pre>
    **
@@ -3549,7 +3549,7 @@ public final class ShopMessage {
    */
   public static final class GoodInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GoodInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.GoodInfo)
       GoodInfoOrBuilder {
     // Use GoodInfo.newBuilder() to construct.
     private GoodInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -3630,12 +3630,12 @@ public final class ShopMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GoodInfo_descriptor;
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GoodInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GoodInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GoodInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ShopMessage.GoodInfo.class, com.mokylin.bleach.protobuf.ShopMessage.GoodInfo.Builder.class);
     }
@@ -3899,7 +3899,7 @@ public final class ShopMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GoodInfo}
+     * Protobuf type {@code com.icewind.GoodInfo}
      *
      * <pre>
      **
@@ -3908,16 +3908,16 @@ public final class ShopMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GoodInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GoodInfo)
         com.mokylin.bleach.protobuf.ShopMessage.GoodInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GoodInfo_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GoodInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GoodInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GoodInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ShopMessage.GoodInfo.class, com.mokylin.bleach.protobuf.ShopMessage.GoodInfo.Builder.class);
       }
@@ -3959,7 +3959,7 @@ public final class ShopMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GoodInfo_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GoodInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ShopMessage.GoodInfo getDefaultInstanceForType() {
@@ -4257,7 +4257,7 @@ public final class ShopMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GoodInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GoodInfo)
     }
 
     static {
@@ -4265,15 +4265,15 @@ public final class ShopMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GoodInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.GoodInfo)
   }
 
   public interface GCShopManuallyRefreshInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCShopManuallyRefreshInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCShopManuallyRefreshInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
      *
      * <pre>
      ** 货币改变信息 
@@ -4281,7 +4281,7 @@ public final class ShopMessage {
      */
     boolean hasCurrencyChange();
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
      *
      * <pre>
      ** 货币改变信息 
@@ -4289,7 +4289,7 @@ public final class ShopMessage {
      */
     com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo getCurrencyChange();
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
      *
      * <pre>
      ** 货币改变信息 
@@ -4298,7 +4298,7 @@ public final class ShopMessage {
     com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfoOrBuilder getCurrencyChangeOrBuilder();
 
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -4307,7 +4307,7 @@ public final class ShopMessage {
     java.util.List<com.mokylin.bleach.protobuf.ShopMessage.GoodInfo> 
         getGoodInfoListList();
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -4315,7 +4315,7 @@ public final class ShopMessage {
      */
     com.mokylin.bleach.protobuf.ShopMessage.GoodInfo getGoodInfoList(int index);
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -4323,7 +4323,7 @@ public final class ShopMessage {
      */
     int getGoodInfoListCount();
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -4332,7 +4332,7 @@ public final class ShopMessage {
     java.util.List<? extends com.mokylin.bleach.protobuf.ShopMessage.GoodInfoOrBuilder> 
         getGoodInfoListOrBuilderList();
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -4359,7 +4359,7 @@ public final class ShopMessage {
     long getGoodBornTime();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCShopManuallyRefreshInfo}
+   * Protobuf type {@code com.icewind.GCShopManuallyRefreshInfo}
    *
    * <pre>
    **
@@ -4368,7 +4368,7 @@ public final class ShopMessage {
    */
   public static final class GCShopManuallyRefreshInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCShopManuallyRefreshInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCShopManuallyRefreshInfo)
       GCShopManuallyRefreshInfoOrBuilder {
     // Use GCShopManuallyRefreshInfo.newBuilder() to construct.
     private GCShopManuallyRefreshInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -4458,12 +4458,12 @@ public final class ShopMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopManuallyRefreshInfo_descriptor;
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopManuallyRefreshInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopManuallyRefreshInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopManuallyRefreshInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ShopMessage.GCShopManuallyRefreshInfo.class, com.mokylin.bleach.protobuf.ShopMessage.GCShopManuallyRefreshInfo.Builder.class);
     }
@@ -4487,7 +4487,7 @@ public final class ShopMessage {
     public static final int CURRENCYCHANGE_FIELD_NUMBER = 1;
     private com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo currencyChange_;
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
      *
      * <pre>
      ** 货币改变信息 
@@ -4497,7 +4497,7 @@ public final class ShopMessage {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
      *
      * <pre>
      ** 货币改变信息 
@@ -4507,7 +4507,7 @@ public final class ShopMessage {
       return currencyChange_;
     }
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
      *
      * <pre>
      ** 货币改变信息 
@@ -4520,7 +4520,7 @@ public final class ShopMessage {
     public static final int GOODINFOLIST_FIELD_NUMBER = 2;
     private java.util.List<com.mokylin.bleach.protobuf.ShopMessage.GoodInfo> goodInfoList_;
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -4530,7 +4530,7 @@ public final class ShopMessage {
       return goodInfoList_;
     }
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -4541,7 +4541,7 @@ public final class ShopMessage {
       return goodInfoList_;
     }
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -4551,7 +4551,7 @@ public final class ShopMessage {
       return goodInfoList_.size();
     }
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -4561,7 +4561,7 @@ public final class ShopMessage {
       return goodInfoList_.get(index);
     }
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -4740,7 +4740,7 @@ public final class ShopMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCShopManuallyRefreshInfo}
+     * Protobuf type {@code com.icewind.GCShopManuallyRefreshInfo}
      *
      * <pre>
      **
@@ -4749,16 +4749,16 @@ public final class ShopMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCShopManuallyRefreshInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCShopManuallyRefreshInfo)
         com.mokylin.bleach.protobuf.ShopMessage.GCShopManuallyRefreshInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopManuallyRefreshInfo_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopManuallyRefreshInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopManuallyRefreshInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopManuallyRefreshInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ShopMessage.GCShopManuallyRefreshInfo.class, com.mokylin.bleach.protobuf.ShopMessage.GCShopManuallyRefreshInfo.Builder.class);
       }
@@ -4808,7 +4808,7 @@ public final class ShopMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopManuallyRefreshInfo_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopManuallyRefreshInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ShopMessage.GCShopManuallyRefreshInfo getDefaultInstanceForType() {
@@ -4945,7 +4945,7 @@ public final class ShopMessage {
       private com.google.protobuf.SingleFieldBuilder<
           com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo, com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo.Builder, com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfoOrBuilder> currencyChangeBuilder_;
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -4955,7 +4955,7 @@ public final class ShopMessage {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -4969,7 +4969,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -4989,7 +4989,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -5007,7 +5007,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -5030,7 +5030,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -5047,7 +5047,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -5059,7 +5059,7 @@ public final class ShopMessage {
         return getCurrencyChangeFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -5073,7 +5073,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -5106,7 +5106,7 @@ public final class ShopMessage {
           com.mokylin.bleach.protobuf.ShopMessage.GoodInfo, com.mokylin.bleach.protobuf.ShopMessage.GoodInfo.Builder, com.mokylin.bleach.protobuf.ShopMessage.GoodInfoOrBuilder> goodInfoListBuilder_;
 
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5120,7 +5120,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5134,7 +5134,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5148,7 +5148,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5169,7 +5169,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5187,7 +5187,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5207,7 +5207,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5228,7 +5228,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5246,7 +5246,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5264,7 +5264,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5283,7 +5283,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5300,7 +5300,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5317,7 +5317,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5328,7 +5328,7 @@ public final class ShopMessage {
         return getGoodInfoListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5342,7 +5342,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5357,7 +5357,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5368,7 +5368,7 @@ public final class ShopMessage {
             com.mokylin.bleach.protobuf.ShopMessage.GoodInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5380,7 +5380,7 @@ public final class ShopMessage {
             index, com.mokylin.bleach.protobuf.ShopMessage.GoodInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 2;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 2;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -5453,7 +5453,7 @@ public final class ShopMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCShopManuallyRefreshInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCShopManuallyRefreshInfo)
     }
 
     static {
@@ -5461,15 +5461,15 @@ public final class ShopMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCShopManuallyRefreshInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCShopManuallyRefreshInfo)
   }
 
   public interface GCShopAutoRefreshInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCShopAutoRefreshInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCShopAutoRefreshInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -5478,7 +5478,7 @@ public final class ShopMessage {
     java.util.List<com.mokylin.bleach.protobuf.ShopMessage.GoodInfo> 
         getGoodInfoListList();
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -5486,7 +5486,7 @@ public final class ShopMessage {
      */
     com.mokylin.bleach.protobuf.ShopMessage.GoodInfo getGoodInfoList(int index);
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -5494,7 +5494,7 @@ public final class ShopMessage {
      */
     int getGoodInfoListCount();
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -5503,7 +5503,7 @@ public final class ShopMessage {
     java.util.List<? extends com.mokylin.bleach.protobuf.ShopMessage.GoodInfoOrBuilder> 
         getGoodInfoListOrBuilderList();
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -5547,7 +5547,7 @@ public final class ShopMessage {
     int getSecondsBeforeNextAutoRefreshTime();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCShopAutoRefreshInfo}
+   * Protobuf type {@code com.icewind.GCShopAutoRefreshInfo}
    *
    * <pre>
    **
@@ -5556,7 +5556,7 @@ public final class ShopMessage {
    */
   public static final class GCShopAutoRefreshInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCShopAutoRefreshInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCShopAutoRefreshInfo)
       GCShopAutoRefreshInfoOrBuilder {
     // Use GCShopAutoRefreshInfo.newBuilder() to construct.
     private GCShopAutoRefreshInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -5638,12 +5638,12 @@ public final class ShopMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopAutoRefreshInfo_descriptor;
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopAutoRefreshInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopAutoRefreshInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopAutoRefreshInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ShopMessage.GCShopAutoRefreshInfo.class, com.mokylin.bleach.protobuf.ShopMessage.GCShopAutoRefreshInfo.Builder.class);
     }
@@ -5667,7 +5667,7 @@ public final class ShopMessage {
     public static final int GOODINFOLIST_FIELD_NUMBER = 1;
     private java.util.List<com.mokylin.bleach.protobuf.ShopMessage.GoodInfo> goodInfoList_;
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -5677,7 +5677,7 @@ public final class ShopMessage {
       return goodInfoList_;
     }
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -5688,7 +5688,7 @@ public final class ShopMessage {
       return goodInfoList_;
     }
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -5698,7 +5698,7 @@ public final class ShopMessage {
       return goodInfoList_.size();
     }
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -5708,7 +5708,7 @@ public final class ShopMessage {
       return goodInfoList_.get(index);
     }
     /**
-     * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+     * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
      *
      * <pre>
      ** 货物信息列表 
@@ -5906,7 +5906,7 @@ public final class ShopMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCShopAutoRefreshInfo}
+     * Protobuf type {@code com.icewind.GCShopAutoRefreshInfo}
      *
      * <pre>
      **
@@ -5915,16 +5915,16 @@ public final class ShopMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCShopAutoRefreshInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCShopAutoRefreshInfo)
         com.mokylin.bleach.protobuf.ShopMessage.GCShopAutoRefreshInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopAutoRefreshInfo_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopAutoRefreshInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopAutoRefreshInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopAutoRefreshInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ShopMessage.GCShopAutoRefreshInfo.class, com.mokylin.bleach.protobuf.ShopMessage.GCShopAutoRefreshInfo.Builder.class);
       }
@@ -5969,7 +5969,7 @@ public final class ShopMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopAutoRefreshInfo_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopAutoRefreshInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ShopMessage.GCShopAutoRefreshInfo getDefaultInstanceForType() {
@@ -6107,7 +6107,7 @@ public final class ShopMessage {
           com.mokylin.bleach.protobuf.ShopMessage.GoodInfo, com.mokylin.bleach.protobuf.ShopMessage.GoodInfo.Builder, com.mokylin.bleach.protobuf.ShopMessage.GoodInfoOrBuilder> goodInfoListBuilder_;
 
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6121,7 +6121,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6135,7 +6135,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6149,7 +6149,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6170,7 +6170,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6188,7 +6188,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6208,7 +6208,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6229,7 +6229,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6247,7 +6247,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6265,7 +6265,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6284,7 +6284,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6301,7 +6301,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6318,7 +6318,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6329,7 +6329,7 @@ public final class ShopMessage {
         return getGoodInfoListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6343,7 +6343,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6358,7 +6358,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6369,7 +6369,7 @@ public final class ShopMessage {
             com.mokylin.bleach.protobuf.ShopMessage.GoodInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6381,7 +6381,7 @@ public final class ShopMessage {
             index, com.mokylin.bleach.protobuf.ShopMessage.GoodInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.GoodInfo goodInfoList = 1;</code>
+       * <code>repeated .com.icewind.GoodInfo goodInfoList = 1;</code>
        *
        * <pre>
        ** 货物信息列表 
@@ -6502,7 +6502,7 @@ public final class ShopMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCShopAutoRefreshInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCShopAutoRefreshInfo)
     }
 
     static {
@@ -6510,15 +6510,15 @@ public final class ShopMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCShopAutoRefreshInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCShopAutoRefreshInfo)
   }
 
   public interface GCGoodBuySuccessOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCGoodBuySuccess)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCGoodBuySuccess)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
      *
      * <pre>
      ** 货币改变信息 
@@ -6526,7 +6526,7 @@ public final class ShopMessage {
      */
     boolean hasCurrencyChange();
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
      *
      * <pre>
      ** 货币改变信息 
@@ -6534,7 +6534,7 @@ public final class ShopMessage {
      */
     com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo getCurrencyChange();
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
      *
      * <pre>
      ** 货币改变信息 
@@ -6560,7 +6560,7 @@ public final class ShopMessage {
     int getPosition();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCGoodBuySuccess}
+   * Protobuf type {@code com.icewind.GCGoodBuySuccess}
    *
    * <pre>
    **
@@ -6569,7 +6569,7 @@ public final class ShopMessage {
    */
   public static final class GCGoodBuySuccess extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCGoodBuySuccess)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCGoodBuySuccess)
       GCGoodBuySuccessOrBuilder {
     // Use GCGoodBuySuccess.newBuilder() to construct.
     private GCGoodBuySuccess(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -6648,12 +6648,12 @@ public final class ShopMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCGoodBuySuccess_descriptor;
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCGoodBuySuccess_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCGoodBuySuccess_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCGoodBuySuccess_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ShopMessage.GCGoodBuySuccess.class, com.mokylin.bleach.protobuf.ShopMessage.GCGoodBuySuccess.Builder.class);
     }
@@ -6677,7 +6677,7 @@ public final class ShopMessage {
     public static final int CURRENCYCHANGE_FIELD_NUMBER = 1;
     private com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo currencyChange_;
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
      *
      * <pre>
      ** 货币改变信息 
@@ -6687,7 +6687,7 @@ public final class ShopMessage {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
      *
      * <pre>
      ** 货币改变信息 
@@ -6697,7 +6697,7 @@ public final class ShopMessage {
       return currencyChange_;
     }
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
      *
      * <pre>
      ** 货币改变信息 
@@ -6861,7 +6861,7 @@ public final class ShopMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCGoodBuySuccess}
+     * Protobuf type {@code com.icewind.GCGoodBuySuccess}
      *
      * <pre>
      **
@@ -6870,16 +6870,16 @@ public final class ShopMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCGoodBuySuccess)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCGoodBuySuccess)
         com.mokylin.bleach.protobuf.ShopMessage.GCGoodBuySuccessOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCGoodBuySuccess_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCGoodBuySuccess_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCGoodBuySuccess_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCGoodBuySuccess_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ShopMessage.GCGoodBuySuccess.class, com.mokylin.bleach.protobuf.ShopMessage.GCGoodBuySuccess.Builder.class);
       }
@@ -6922,7 +6922,7 @@ public final class ShopMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCGoodBuySuccess_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCGoodBuySuccess_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ShopMessage.GCGoodBuySuccess getDefaultInstanceForType() {
@@ -7018,7 +7018,7 @@ public final class ShopMessage {
       private com.google.protobuf.SingleFieldBuilder<
           com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo, com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo.Builder, com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfoOrBuilder> currencyChangeBuilder_;
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -7028,7 +7028,7 @@ public final class ShopMessage {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -7042,7 +7042,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -7062,7 +7062,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -7080,7 +7080,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -7103,7 +7103,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -7120,7 +7120,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -7132,7 +7132,7 @@ public final class ShopMessage {
         return getCurrencyChangeFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -7146,7 +7146,7 @@ public final class ShopMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChange = 1;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChange = 1;</code>
        *
        * <pre>
        ** 货币改变信息 
@@ -7214,7 +7214,7 @@ public final class ShopMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCGoodBuySuccess)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCGoodBuySuccess)
     }
 
     static {
@@ -7222,11 +7222,11 @@ public final class ShopMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCGoodBuySuccess)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCGoodBuySuccess)
   }
 
   public interface GCShopManuallyRefreshCountResetOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCShopManuallyRefreshCountReset)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCShopManuallyRefreshCountReset)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -7247,7 +7247,7 @@ public final class ShopMessage {
     int getShopTypeId();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCShopManuallyRefreshCountReset}
+   * Protobuf type {@code com.icewind.GCShopManuallyRefreshCountReset}
    *
    * <pre>
    **
@@ -7256,7 +7256,7 @@ public final class ShopMessage {
    */
   public static final class GCShopManuallyRefreshCountReset extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCShopManuallyRefreshCountReset)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCShopManuallyRefreshCountReset)
       GCShopManuallyRefreshCountResetOrBuilder {
     // Use GCShopManuallyRefreshCountReset.newBuilder() to construct.
     private GCShopManuallyRefreshCountReset(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -7322,12 +7322,12 @@ public final class ShopMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopManuallyRefreshCountReset_descriptor;
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopManuallyRefreshCountReset_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopManuallyRefreshCountReset_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopManuallyRefreshCountReset_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ShopMessage.GCShopManuallyRefreshCountReset.class, com.mokylin.bleach.protobuf.ShopMessage.GCShopManuallyRefreshCountReset.Builder.class);
     }
@@ -7486,7 +7486,7 @@ public final class ShopMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCShopManuallyRefreshCountReset}
+     * Protobuf type {@code com.icewind.GCShopManuallyRefreshCountReset}
      *
      * <pre>
      **
@@ -7495,16 +7495,16 @@ public final class ShopMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCShopManuallyRefreshCountReset)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCShopManuallyRefreshCountReset)
         com.mokylin.bleach.protobuf.ShopMessage.GCShopManuallyRefreshCountResetOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopManuallyRefreshCountReset_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopManuallyRefreshCountReset_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopManuallyRefreshCountReset_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopManuallyRefreshCountReset_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ShopMessage.GCShopManuallyRefreshCountReset.class, com.mokylin.bleach.protobuf.ShopMessage.GCShopManuallyRefreshCountReset.Builder.class);
       }
@@ -7540,7 +7540,7 @@ public final class ShopMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopManuallyRefreshCountReset_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopManuallyRefreshCountReset_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ShopMessage.GCShopManuallyRefreshCountReset getDefaultInstanceForType() {
@@ -7661,7 +7661,7 @@ public final class ShopMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCShopManuallyRefreshCountReset)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCShopManuallyRefreshCountReset)
     }
 
     static {
@@ -7669,11 +7669,11 @@ public final class ShopMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCShopManuallyRefreshCountReset)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCShopManuallyRefreshCountReset)
   }
 
   public interface GCOpenedTempShopOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCOpenedTempShop)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCOpenedTempShop)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -7702,7 +7702,7 @@ public final class ShopMessage {
     int getShopTypeList(int index);
   }
   /**
-   * Protobuf type {@code com.mokylin.GCOpenedTempShop}
+   * Protobuf type {@code com.icewind.GCOpenedTempShop}
    *
    * <pre>
    **
@@ -7711,7 +7711,7 @@ public final class ShopMessage {
    */
   public static final class GCOpenedTempShop extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCOpenedTempShop)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCOpenedTempShop)
       GCOpenedTempShopOrBuilder {
     // Use GCOpenedTempShop.newBuilder() to construct.
     private GCOpenedTempShop(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -7796,12 +7796,12 @@ public final class ShopMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCOpenedTempShop_descriptor;
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCOpenedTempShop_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCOpenedTempShop_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCOpenedTempShop_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ShopMessage.GCOpenedTempShop.class, com.mokylin.bleach.protobuf.ShopMessage.GCOpenedTempShop.Builder.class);
     }
@@ -7971,7 +7971,7 @@ public final class ShopMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCOpenedTempShop}
+     * Protobuf type {@code com.icewind.GCOpenedTempShop}
      *
      * <pre>
      **
@@ -7980,16 +7980,16 @@ public final class ShopMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCOpenedTempShop)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCOpenedTempShop)
         com.mokylin.bleach.protobuf.ShopMessage.GCOpenedTempShopOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCOpenedTempShop_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCOpenedTempShop_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCOpenedTempShop_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCOpenedTempShop_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ShopMessage.GCOpenedTempShop.class, com.mokylin.bleach.protobuf.ShopMessage.GCOpenedTempShop.Builder.class);
       }
@@ -8025,7 +8025,7 @@ public final class ShopMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCOpenedTempShop_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCOpenedTempShop_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ShopMessage.GCOpenedTempShop getDefaultInstanceForType() {
@@ -8194,7 +8194,7 @@ public final class ShopMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCOpenedTempShop)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCOpenedTempShop)
     }
 
     static {
@@ -8202,11 +8202,11 @@ public final class ShopMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCOpenedTempShop)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCOpenedTempShop)
   }
 
   public interface GCOpenShopOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCOpenShop)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCOpenShop)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -8227,7 +8227,7 @@ public final class ShopMessage {
     int getShopTypeId();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCOpenShop}
+   * Protobuf type {@code com.icewind.GCOpenShop}
    *
    * <pre>
    **
@@ -8236,7 +8236,7 @@ public final class ShopMessage {
    */
   public static final class GCOpenShop extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCOpenShop)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCOpenShop)
       GCOpenShopOrBuilder {
     // Use GCOpenShop.newBuilder() to construct.
     private GCOpenShop(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -8302,12 +8302,12 @@ public final class ShopMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCOpenShop_descriptor;
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCOpenShop_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCOpenShop_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCOpenShop_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ShopMessage.GCOpenShop.class, com.mokylin.bleach.protobuf.ShopMessage.GCOpenShop.Builder.class);
     }
@@ -8466,7 +8466,7 @@ public final class ShopMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCOpenShop}
+     * Protobuf type {@code com.icewind.GCOpenShop}
      *
      * <pre>
      **
@@ -8475,16 +8475,16 @@ public final class ShopMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCOpenShop)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCOpenShop)
         com.mokylin.bleach.protobuf.ShopMessage.GCOpenShopOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCOpenShop_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCOpenShop_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCOpenShop_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCOpenShop_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ShopMessage.GCOpenShop.class, com.mokylin.bleach.protobuf.ShopMessage.GCOpenShop.Builder.class);
       }
@@ -8520,7 +8520,7 @@ public final class ShopMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCOpenShop_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCOpenShop_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ShopMessage.GCOpenShop getDefaultInstanceForType() {
@@ -8641,7 +8641,7 @@ public final class ShopMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCOpenShop)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCOpenShop)
     }
 
     static {
@@ -8649,11 +8649,11 @@ public final class ShopMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCOpenShop)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCOpenShop)
   }
 
   public interface GCShopCloseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCShopClose)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCShopClose)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -8674,7 +8674,7 @@ public final class ShopMessage {
     int getShopTypeId();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCShopClose}
+   * Protobuf type {@code com.icewind.GCShopClose}
    *
    * <pre>
    **
@@ -8683,7 +8683,7 @@ public final class ShopMessage {
    */
   public static final class GCShopClose extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCShopClose)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCShopClose)
       GCShopCloseOrBuilder {
     // Use GCShopClose.newBuilder() to construct.
     private GCShopClose(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -8749,12 +8749,12 @@ public final class ShopMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopClose_descriptor;
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopClose_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopClose_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopClose_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ShopMessage.GCShopClose.class, com.mokylin.bleach.protobuf.ShopMessage.GCShopClose.Builder.class);
     }
@@ -8913,7 +8913,7 @@ public final class ShopMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCShopClose}
+     * Protobuf type {@code com.icewind.GCShopClose}
      *
      * <pre>
      **
@@ -8922,16 +8922,16 @@ public final class ShopMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCShopClose)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCShopClose)
         com.mokylin.bleach.protobuf.ShopMessage.GCShopCloseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopClose_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopClose_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopClose_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopClose_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ShopMessage.GCShopClose.class, com.mokylin.bleach.protobuf.ShopMessage.GCShopClose.Builder.class);
       }
@@ -8967,7 +8967,7 @@ public final class ShopMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopClose_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopClose_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ShopMessage.GCShopClose getDefaultInstanceForType() {
@@ -9088,7 +9088,7 @@ public final class ShopMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCShopClose)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCShopClose)
     }
 
     static {
@@ -9096,15 +9096,15 @@ public final class ShopMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCShopClose)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCShopClose)
   }
 
   public interface GCShopPromptOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCShopPrompt)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCShopPrompt)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .com.mokylin.ShopPrompt prompt = 1;</code>
+     * <code>required .com.icewind.ShopPrompt prompt = 1;</code>
      *
      * <pre>
      ** 语言常量Id 
@@ -9112,7 +9112,7 @@ public final class ShopMessage {
      */
     boolean hasPrompt();
     /**
-     * <code>required .com.mokylin.ShopPrompt prompt = 1;</code>
+     * <code>required .com.icewind.ShopPrompt prompt = 1;</code>
      *
      * <pre>
      ** 语言常量Id 
@@ -9121,7 +9121,7 @@ public final class ShopMessage {
     com.mokylin.bleach.protobuf.ShopMessage.ShopPrompt getPrompt();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCShopPrompt}
+   * Protobuf type {@code com.icewind.GCShopPrompt}
    *
    * <pre>
    **
@@ -9130,7 +9130,7 @@ public final class ShopMessage {
    */
   public static final class GCShopPrompt extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCShopPrompt)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCShopPrompt)
       GCShopPromptOrBuilder {
     // Use GCShopPrompt.newBuilder() to construct.
     private GCShopPrompt(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -9202,12 +9202,12 @@ public final class ShopMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopPrompt_descriptor;
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopPrompt_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopPrompt_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopPrompt_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ShopMessage.GCShopPrompt.class, com.mokylin.bleach.protobuf.ShopMessage.GCShopPrompt.Builder.class);
     }
@@ -9231,7 +9231,7 @@ public final class ShopMessage {
     public static final int PROMPT_FIELD_NUMBER = 1;
     private com.mokylin.bleach.protobuf.ShopMessage.ShopPrompt prompt_;
     /**
-     * <code>required .com.mokylin.ShopPrompt prompt = 1;</code>
+     * <code>required .com.icewind.ShopPrompt prompt = 1;</code>
      *
      * <pre>
      ** 语言常量Id 
@@ -9241,7 +9241,7 @@ public final class ShopMessage {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .com.mokylin.ShopPrompt prompt = 1;</code>
+     * <code>required .com.icewind.ShopPrompt prompt = 1;</code>
      *
      * <pre>
      ** 语言常量Id 
@@ -9366,7 +9366,7 @@ public final class ShopMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCShopPrompt}
+     * Protobuf type {@code com.icewind.GCShopPrompt}
      *
      * <pre>
      **
@@ -9375,16 +9375,16 @@ public final class ShopMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCShopPrompt)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCShopPrompt)
         com.mokylin.bleach.protobuf.ShopMessage.GCShopPromptOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopPrompt_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopPrompt_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopPrompt_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopPrompt_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ShopMessage.GCShopPrompt.class, com.mokylin.bleach.protobuf.ShopMessage.GCShopPrompt.Builder.class);
       }
@@ -9420,7 +9420,7 @@ public final class ShopMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_mokylin_GCShopPrompt_descriptor;
+        return com.mokylin.bleach.protobuf.ShopMessage.internal_static_com_icewind_GCShopPrompt_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ShopMessage.GCShopPrompt getDefaultInstanceForType() {
@@ -9495,7 +9495,7 @@ public final class ShopMessage {
 
       private com.mokylin.bleach.protobuf.ShopMessage.ShopPrompt prompt_ = com.mokylin.bleach.protobuf.ShopMessage.ShopPrompt.SHOP_CLOSED;
       /**
-       * <code>required .com.mokylin.ShopPrompt prompt = 1;</code>
+       * <code>required .com.icewind.ShopPrompt prompt = 1;</code>
        *
        * <pre>
        ** 语言常量Id 
@@ -9505,7 +9505,7 @@ public final class ShopMessage {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .com.mokylin.ShopPrompt prompt = 1;</code>
+       * <code>required .com.icewind.ShopPrompt prompt = 1;</code>
        *
        * <pre>
        ** 语言常量Id 
@@ -9515,7 +9515,7 @@ public final class ShopMessage {
         return prompt_;
       }
       /**
-       * <code>required .com.mokylin.ShopPrompt prompt = 1;</code>
+       * <code>required .com.icewind.ShopPrompt prompt = 1;</code>
        *
        * <pre>
        ** 语言常量Id 
@@ -9531,7 +9531,7 @@ public final class ShopMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.ShopPrompt prompt = 1;</code>
+       * <code>required .com.icewind.ShopPrompt prompt = 1;</code>
        *
        * <pre>
        ** 语言常量Id 
@@ -9544,7 +9544,7 @@ public final class ShopMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCShopPrompt)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCShopPrompt)
     }
 
     static {
@@ -9552,74 +9552,74 @@ public final class ShopMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCShopPrompt)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCShopPrompt)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CGOpenShop_descriptor;
+    internal_static_com_icewind_CGOpenShop_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CGOpenShop_fieldAccessorTable;
+      internal_static_com_icewind_CGOpenShop_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CGRefreshGoods_descriptor;
+    internal_static_com_icewind_CGRefreshGoods_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CGRefreshGoods_fieldAccessorTable;
+      internal_static_com_icewind_CGRefreshGoods_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CGBuyGood_descriptor;
+    internal_static_com_icewind_CGBuyGood_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CGBuyGood_fieldAccessorTable;
+      internal_static_com_icewind_CGBuyGood_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCShopInfo_descriptor;
+    internal_static_com_icewind_GCShopInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCShopInfo_fieldAccessorTable;
+      internal_static_com_icewind_GCShopInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GoodInfo_descriptor;
+    internal_static_com_icewind_GoodInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GoodInfo_fieldAccessorTable;
+      internal_static_com_icewind_GoodInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCShopManuallyRefreshInfo_descriptor;
+    internal_static_com_icewind_GCShopManuallyRefreshInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCShopManuallyRefreshInfo_fieldAccessorTable;
+      internal_static_com_icewind_GCShopManuallyRefreshInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCShopAutoRefreshInfo_descriptor;
+    internal_static_com_icewind_GCShopAutoRefreshInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCShopAutoRefreshInfo_fieldAccessorTable;
+      internal_static_com_icewind_GCShopAutoRefreshInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCGoodBuySuccess_descriptor;
+    internal_static_com_icewind_GCGoodBuySuccess_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCGoodBuySuccess_fieldAccessorTable;
+      internal_static_com_icewind_GCGoodBuySuccess_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCShopManuallyRefreshCountReset_descriptor;
+    internal_static_com_icewind_GCShopManuallyRefreshCountReset_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCShopManuallyRefreshCountReset_fieldAccessorTable;
+      internal_static_com_icewind_GCShopManuallyRefreshCountReset_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCOpenedTempShop_descriptor;
+    internal_static_com_icewind_GCOpenedTempShop_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCOpenedTempShop_fieldAccessorTable;
+      internal_static_com_icewind_GCOpenedTempShop_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCOpenShop_descriptor;
+    internal_static_com_icewind_GCOpenShop_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCOpenShop_fieldAccessorTable;
+      internal_static_com_icewind_GCOpenShop_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCShopClose_descriptor;
+    internal_static_com_icewind_GCShopClose_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCShopClose_fieldAccessorTable;
+      internal_static_com_icewind_GCShopClose_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCShopPrompt_descriptor;
+    internal_static_com_icewind_GCShopPrompt_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCShopPrompt_fieldAccessorTable;
+      internal_static_com_icewind_GCShopPrompt_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -9629,7 +9629,7 @@ public final class ShopMessage {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\nShop.proto\022\013com.mokylin\032\021MessageType.p" +
+      "\n\nShop.proto\022\013com.icewind\032\021MessageType.p" +
       "roto\032\014Common.proto\"\'\n\nCGOpenShop\022\022\n\nshop" +
       "TypeId\030\001 \002(\005:\005\210\265\030\221\003\"+\n\016CGRefreshGoods\022\022\n" +
       "\nshopTypeId\030\001 \002(\005:\005\210\265\030\222\003\"U\n\tCGBuyGood\022\022\n" +
@@ -9639,27 +9639,27 @@ public final class ShopMessage {
       "st\030\002 \003(\005\022\025\n\risOpenForever\030\003 \002(\010\022(\n secon" +
       "dsBeforeNextAutoRefreshTime\030\004 \002(\005\022\024\n\014lef" +
       "tOpenTime\030\005 \002(\005\022+\n\014goodInfoList\030\006 \003(\0132\025.",
-      "com.mokylin.GoodInfo\022\024\n\014goodBornTime\030\007 \002" +
+      "com.icewind.GoodInfo\022\024\n\014goodBornTime\030\007 \002" +
       "(\003\022\034\n\024manuallyRefreshCount\030\010 \002(\005:\005\220\265\030\303\003\"" +
       "T\n\010GoodInfo\022\026\n\016itemTemplateId\030\001 \002(\005\022\013\n\003n" +
       "um\030\002 \002(\005\022\020\n\010discount\030\003 \002(\005\022\021\n\tisSelling\030" +
       "\004 \002(\010\"\236\001\n\031GCShopManuallyRefreshInfo\0227\n\016c" +
-      "urrencyChange\030\001 \002(\0132\037.com.mokylin.Curren" +
+      "urrencyChange\030\001 \002(\0132\037.com.icewind.Curren" +
       "cyChangeInfo\022+\n\014goodInfoList\030\002 \003(\0132\025.com" +
-      ".mokylin.GoodInfo\022\024\n\014goodBornTime\030\003 \002(\003:" +
+      ".icewind.GoodInfo\022\024\n\014goodBornTime\030\003 \002(\003:" +
       "\005\220\265\030\304\003\"\213\001\n\025GCShopAutoRefreshInfo\022+\n\014good" +
-      "InfoList\030\001 \003(\0132\025.com.mokylin.GoodInfo\022\024\n",
+      "InfoList\030\001 \003(\0132\025.com.icewind.GoodInfo\022\024\n",
       "\014goodBornTime\030\002 \002(\003\022(\n secondsBeforeNext" +
       "AutoRefreshTime\030\003 \002(\005:\005\220\265\030\307\003\"d\n\020GCGoodBu" +
-      "ySuccess\0227\n\016currencyChange\030\001 \002(\0132\037.com.m" +
-      "okylin.CurrencyChangeInfo\022\020\n\010position\030\002 " +
+      "ySuccess\0227\n\016currencyChange\030\001 \002(\0132\037.com.i" +
+      "cewind.CurrencyChangeInfo\022\020\n\010position\030\002 " +
       "\002(\005:\005\220\265\030\305\003\"<\n\037GCShopManuallyRefreshCount" +
       "Reset\022\022\n\nshopTypeId\030\001 \002(\005:\005\220\265\030\306\003\"/\n\020GCOp" +
       "enedTempShop\022\024\n\014shopTypeList\030\001 \003(\005:\005\220\265\030\312" +
       "\003\"\'\n\nGCOpenShop\022\022\n\nshopTypeId\030\001 \002(\005:\005\220\265\030" +
       "\313\003\"(\n\013GCShopClose\022\022\n\nshopTypeId\030\001 \002(\005:\005\220" +
       "\265\030\310\003\">\n\014GCShopPrompt\022\'\n\006prompt\030\001 \002(\0162\027.c",
-      "om.mokylin.ShopPrompt:\005\220\265\030\311\003*\222\001\n\nShopPro" +
+      "om.icewind.ShopPrompt:\005\220\265\030\311\003*\222\001\n\nShopPro" +
       "mpt\022\017\n\013SHOP_CLOSED\020\000\022%\n!ALREADY_REACH_RE" +
       "FRESH_UPPER_LIMIT\020\001\022\024\n\020MONEY_NOT_ENOUGH\020" +
       "\002\022\033\n\027GOODS_ALREADY_REFRESHED\020\003\022\031\n\025GOODS_" +
@@ -9677,104 +9677,104 @@ public final class ShopMessage {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.mokylin.bleach.protobuf.MessageType.getDescriptor(),
+          com.icewind.MessageType.getDescriptor(),
           com.mokylin.bleach.protobuf.CommonMessage.getDescriptor(),
         }, assigner);
-    internal_static_com_mokylin_CGOpenShop_descriptor =
+    internal_static_com_icewind_CGOpenShop_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_mokylin_CGOpenShop_fieldAccessorTable = new
+    internal_static_com_icewind_CGOpenShop_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CGOpenShop_descriptor,
+        internal_static_com_icewind_CGOpenShop_descriptor,
         new java.lang.String[] { "ShopTypeId", });
-    internal_static_com_mokylin_CGRefreshGoods_descriptor =
+    internal_static_com_icewind_CGRefreshGoods_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_mokylin_CGRefreshGoods_fieldAccessorTable = new
+    internal_static_com_icewind_CGRefreshGoods_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CGRefreshGoods_descriptor,
+        internal_static_com_icewind_CGRefreshGoods_descriptor,
         new java.lang.String[] { "ShopTypeId", });
-    internal_static_com_mokylin_CGBuyGood_descriptor =
+    internal_static_com_icewind_CGBuyGood_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_com_mokylin_CGBuyGood_fieldAccessorTable = new
+    internal_static_com_icewind_CGBuyGood_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CGBuyGood_descriptor,
+        internal_static_com_icewind_CGBuyGood_descriptor,
         new java.lang.String[] { "ShopTypeId", "GoodPosition", "CurGoodBornTime", });
-    internal_static_com_mokylin_GCShopInfo_descriptor =
+    internal_static_com_icewind_GCShopInfo_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_com_mokylin_GCShopInfo_fieldAccessorTable = new
+    internal_static_com_icewind_GCShopInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCShopInfo_descriptor,
+        internal_static_com_icewind_GCShopInfo_descriptor,
         new java.lang.String[] { "ShopTypeId", "CurrencyList", "IsOpenForever", "SecondsBeforeNextAutoRefreshTime", "LeftOpenTime", "GoodInfoList", "GoodBornTime", "ManuallyRefreshCount", });
-    internal_static_com_mokylin_GoodInfo_descriptor =
+    internal_static_com_icewind_GoodInfo_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_com_mokylin_GoodInfo_fieldAccessorTable = new
+    internal_static_com_icewind_GoodInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GoodInfo_descriptor,
+        internal_static_com_icewind_GoodInfo_descriptor,
         new java.lang.String[] { "ItemTemplateId", "Num", "Discount", "IsSelling", });
-    internal_static_com_mokylin_GCShopManuallyRefreshInfo_descriptor =
+    internal_static_com_icewind_GCShopManuallyRefreshInfo_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_com_mokylin_GCShopManuallyRefreshInfo_fieldAccessorTable = new
+    internal_static_com_icewind_GCShopManuallyRefreshInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCShopManuallyRefreshInfo_descriptor,
+        internal_static_com_icewind_GCShopManuallyRefreshInfo_descriptor,
         new java.lang.String[] { "CurrencyChange", "GoodInfoList", "GoodBornTime", });
-    internal_static_com_mokylin_GCShopAutoRefreshInfo_descriptor =
+    internal_static_com_icewind_GCShopAutoRefreshInfo_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_com_mokylin_GCShopAutoRefreshInfo_fieldAccessorTable = new
+    internal_static_com_icewind_GCShopAutoRefreshInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCShopAutoRefreshInfo_descriptor,
+        internal_static_com_icewind_GCShopAutoRefreshInfo_descriptor,
         new java.lang.String[] { "GoodInfoList", "GoodBornTime", "SecondsBeforeNextAutoRefreshTime", });
-    internal_static_com_mokylin_GCGoodBuySuccess_descriptor =
+    internal_static_com_icewind_GCGoodBuySuccess_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_com_mokylin_GCGoodBuySuccess_fieldAccessorTable = new
+    internal_static_com_icewind_GCGoodBuySuccess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCGoodBuySuccess_descriptor,
+        internal_static_com_icewind_GCGoodBuySuccess_descriptor,
         new java.lang.String[] { "CurrencyChange", "Position", });
-    internal_static_com_mokylin_GCShopManuallyRefreshCountReset_descriptor =
+    internal_static_com_icewind_GCShopManuallyRefreshCountReset_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_com_mokylin_GCShopManuallyRefreshCountReset_fieldAccessorTable = new
+    internal_static_com_icewind_GCShopManuallyRefreshCountReset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCShopManuallyRefreshCountReset_descriptor,
+        internal_static_com_icewind_GCShopManuallyRefreshCountReset_descriptor,
         new java.lang.String[] { "ShopTypeId", });
-    internal_static_com_mokylin_GCOpenedTempShop_descriptor =
+    internal_static_com_icewind_GCOpenedTempShop_descriptor =
       getDescriptor().getMessageTypes().get(9);
-    internal_static_com_mokylin_GCOpenedTempShop_fieldAccessorTable = new
+    internal_static_com_icewind_GCOpenedTempShop_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCOpenedTempShop_descriptor,
+        internal_static_com_icewind_GCOpenedTempShop_descriptor,
         new java.lang.String[] { "ShopTypeList", });
-    internal_static_com_mokylin_GCOpenShop_descriptor =
+    internal_static_com_icewind_GCOpenShop_descriptor =
       getDescriptor().getMessageTypes().get(10);
-    internal_static_com_mokylin_GCOpenShop_fieldAccessorTable = new
+    internal_static_com_icewind_GCOpenShop_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCOpenShop_descriptor,
+        internal_static_com_icewind_GCOpenShop_descriptor,
         new java.lang.String[] { "ShopTypeId", });
-    internal_static_com_mokylin_GCShopClose_descriptor =
+    internal_static_com_icewind_GCShopClose_descriptor =
       getDescriptor().getMessageTypes().get(11);
-    internal_static_com_mokylin_GCShopClose_fieldAccessorTable = new
+    internal_static_com_icewind_GCShopClose_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCShopClose_descriptor,
+        internal_static_com_icewind_GCShopClose_descriptor,
         new java.lang.String[] { "ShopTypeId", });
-    internal_static_com_mokylin_GCShopPrompt_descriptor =
+    internal_static_com_icewind_GCShopPrompt_descriptor =
       getDescriptor().getMessageTypes().get(12);
-    internal_static_com_mokylin_GCShopPrompt_fieldAccessorTable = new
+    internal_static_com_icewind_GCShopPrompt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCShopPrompt_descriptor,
+        internal_static_com_icewind_GCShopPrompt_descriptor,
         new java.lang.String[] { "Prompt", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.cgMessageType);
+    registry.add(com.icewind.MessageType.cgMessageType);
+    registry.add(com.icewind.MessageType.cgMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.mokylin.bleach.protobuf.MessageType.getDescriptor();
+    com.icewind.MessageType.getDescriptor();
     com.mokylin.bleach.protobuf.CommonMessage.getDescriptor();
   }
 

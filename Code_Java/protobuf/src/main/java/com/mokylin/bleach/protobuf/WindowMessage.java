@@ -9,7 +9,7 @@ public final class WindowMessage {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface CGOpenWindowOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CGOpenWindow)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CGOpenWindow)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -30,7 +30,7 @@ public final class WindowMessage {
     int getWindowTypeId();
   }
   /**
-   * Protobuf type {@code com.mokylin.CGOpenWindow}
+   * Protobuf type {@code com.icewind.CGOpenWindow}
    *
    * <pre>
    **
@@ -39,7 +39,7 @@ public final class WindowMessage {
    */
   public static final class CGOpenWindow extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CGOpenWindow)
+      // @@protoc_insertion_point(message_implements:com.icewind.CGOpenWindow)
       CGOpenWindowOrBuilder {
     // Use CGOpenWindow.newBuilder() to construct.
     private CGOpenWindow(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -105,12 +105,12 @@ public final class WindowMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_mokylin_CGOpenWindow_descriptor;
+      return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_icewind_CGOpenWindow_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_mokylin_CGOpenWindow_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_icewind_CGOpenWindow_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.WindowMessage.CGOpenWindow.class, com.mokylin.bleach.protobuf.WindowMessage.CGOpenWindow.Builder.class);
     }
@@ -269,7 +269,7 @@ public final class WindowMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CGOpenWindow}
+     * Protobuf type {@code com.icewind.CGOpenWindow}
      *
      * <pre>
      **
@@ -278,16 +278,16 @@ public final class WindowMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CGOpenWindow)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CGOpenWindow)
         com.mokylin.bleach.protobuf.WindowMessage.CGOpenWindowOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_mokylin_CGOpenWindow_descriptor;
+        return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_icewind_CGOpenWindow_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_mokylin_CGOpenWindow_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_icewind_CGOpenWindow_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.WindowMessage.CGOpenWindow.class, com.mokylin.bleach.protobuf.WindowMessage.CGOpenWindow.Builder.class);
       }
@@ -323,7 +323,7 @@ public final class WindowMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_mokylin_CGOpenWindow_descriptor;
+        return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_icewind_CGOpenWindow_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.WindowMessage.CGOpenWindow getDefaultInstanceForType() {
@@ -444,7 +444,7 @@ public final class WindowMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CGOpenWindow)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CGOpenWindow)
     }
 
     static {
@@ -452,11 +452,11 @@ public final class WindowMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CGOpenWindow)
+    // @@protoc_insertion_point(class_scope:com.icewind.CGOpenWindow)
   }
 
   public interface CGCloseWindowOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CGCloseWindow)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CGCloseWindow)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -477,7 +477,7 @@ public final class WindowMessage {
     int getWindowTypeId();
   }
   /**
-   * Protobuf type {@code com.mokylin.CGCloseWindow}
+   * Protobuf type {@code com.icewind.CGCloseWindow}
    *
    * <pre>
    **
@@ -486,7 +486,7 @@ public final class WindowMessage {
    */
   public static final class CGCloseWindow extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CGCloseWindow)
+      // @@protoc_insertion_point(message_implements:com.icewind.CGCloseWindow)
       CGCloseWindowOrBuilder {
     // Use CGCloseWindow.newBuilder() to construct.
     private CGCloseWindow(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -552,12 +552,12 @@ public final class WindowMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_mokylin_CGCloseWindow_descriptor;
+      return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_icewind_CGCloseWindow_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_mokylin_CGCloseWindow_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_icewind_CGCloseWindow_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.WindowMessage.CGCloseWindow.class, com.mokylin.bleach.protobuf.WindowMessage.CGCloseWindow.Builder.class);
     }
@@ -716,7 +716,7 @@ public final class WindowMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CGCloseWindow}
+     * Protobuf type {@code com.icewind.CGCloseWindow}
      *
      * <pre>
      **
@@ -725,16 +725,16 @@ public final class WindowMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CGCloseWindow)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CGCloseWindow)
         com.mokylin.bleach.protobuf.WindowMessage.CGCloseWindowOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_mokylin_CGCloseWindow_descriptor;
+        return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_icewind_CGCloseWindow_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_mokylin_CGCloseWindow_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_icewind_CGCloseWindow_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.WindowMessage.CGCloseWindow.class, com.mokylin.bleach.protobuf.WindowMessage.CGCloseWindow.Builder.class);
       }
@@ -770,7 +770,7 @@ public final class WindowMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_mokylin_CGCloseWindow_descriptor;
+        return com.mokylin.bleach.protobuf.WindowMessage.internal_static_com_icewind_CGCloseWindow_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.WindowMessage.CGCloseWindow getDefaultInstanceForType() {
@@ -891,7 +891,7 @@ public final class WindowMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CGCloseWindow)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CGCloseWindow)
     }
 
     static {
@@ -899,19 +899,19 @@ public final class WindowMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CGCloseWindow)
+    // @@protoc_insertion_point(class_scope:com.icewind.CGCloseWindow)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CGOpenWindow_descriptor;
+    internal_static_com_icewind_CGOpenWindow_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CGOpenWindow_fieldAccessorTable;
+      internal_static_com_icewind_CGOpenWindow_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CGCloseWindow_descriptor;
+    internal_static_com_icewind_CGCloseWindow_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CGCloseWindow_fieldAccessorTable;
+      internal_static_com_icewind_CGCloseWindow_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -921,7 +921,7 @@ public final class WindowMessage {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014Window.proto\022\013com.mokylin\032\021MessageType" +
+      "\n\014Window.proto\022\013com.icewind\032\021MessageType" +
       ".proto\"+\n\014CGOpenWindow\022\024\n\014windowTypeId\030\001" +
       " \002(\005:\005\210\265\030\303\003\",\n\rCGCloseWindow\022\024\n\014windowTy" +
       "peId\030\001 \002(\005:\005\210\265\030\304\003B,\n\033com.mokylin.bleach." +
@@ -938,27 +938,27 @@ public final class WindowMessage {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.mokylin.bleach.protobuf.MessageType.getDescriptor(),
+          com.icewind.MessageType.getDescriptor(),
         }, assigner);
-    internal_static_com_mokylin_CGOpenWindow_descriptor =
+    internal_static_com_icewind_CGOpenWindow_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_mokylin_CGOpenWindow_fieldAccessorTable = new
+    internal_static_com_icewind_CGOpenWindow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CGOpenWindow_descriptor,
+        internal_static_com_icewind_CGOpenWindow_descriptor,
         new java.lang.String[] { "WindowTypeId", });
-    internal_static_com_mokylin_CGCloseWindow_descriptor =
+    internal_static_com_icewind_CGCloseWindow_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_mokylin_CGCloseWindow_fieldAccessorTable = new
+    internal_static_com_icewind_CGCloseWindow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CGCloseWindow_descriptor,
+        internal_static_com_icewind_CGCloseWindow_descriptor,
         new java.lang.String[] { "WindowTypeId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
+    registry.add(com.icewind.MessageType.cgMessageType);
+    registry.add(com.icewind.MessageType.cgMessageType);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.mokylin.bleach.protobuf.MessageType.getDescriptor();
+    com.icewind.MessageType.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

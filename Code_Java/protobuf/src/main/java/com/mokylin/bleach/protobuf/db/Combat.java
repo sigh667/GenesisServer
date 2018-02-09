@@ -9,35 +9,35 @@ public final class Combat {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface CombatMirrorImageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CombatMirrorImage)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CombatMirrorImage)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+     * <code>repeated .com.icewind.HeroData heroData = 1;</code>
      */
     java.util.List<com.mokylin.bleach.protobuf.db.Combat.HeroData> 
         getHeroDataList();
     /**
-     * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+     * <code>repeated .com.icewind.HeroData heroData = 1;</code>
      */
     com.mokylin.bleach.protobuf.db.Combat.HeroData getHeroData(int index);
     /**
-     * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+     * <code>repeated .com.icewind.HeroData heroData = 1;</code>
      */
     int getHeroDataCount();
     /**
-     * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+     * <code>repeated .com.icewind.HeroData heroData = 1;</code>
      */
     java.util.List<? extends com.mokylin.bleach.protobuf.db.Combat.HeroDataOrBuilder> 
         getHeroDataOrBuilderList();
     /**
-     * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+     * <code>repeated .com.icewind.HeroData heroData = 1;</code>
      */
     com.mokylin.bleach.protobuf.db.Combat.HeroDataOrBuilder getHeroDataOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code com.mokylin.CombatMirrorImage}
+   * Protobuf type {@code com.icewind.CombatMirrorImage}
    *
    * <pre>
    **
@@ -46,7 +46,7 @@ public final class Combat {
    */
   public static final class CombatMirrorImage extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CombatMirrorImage)
+      // @@protoc_insertion_point(message_implements:com.icewind.CombatMirrorImage)
       CombatMirrorImageOrBuilder {
     // Use CombatMirrorImage.newBuilder() to construct.
     private CombatMirrorImage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -118,12 +118,12 @@ public final class Combat {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_CombatMirrorImage_descriptor;
+      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_CombatMirrorImage_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_CombatMirrorImage_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_CombatMirrorImage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.db.Combat.CombatMirrorImage.class, com.mokylin.bleach.protobuf.db.Combat.CombatMirrorImage.Builder.class);
     }
@@ -146,32 +146,32 @@ public final class Combat {
     public static final int HERODATA_FIELD_NUMBER = 1;
     private java.util.List<com.mokylin.bleach.protobuf.db.Combat.HeroData> heroData_;
     /**
-     * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+     * <code>repeated .com.icewind.HeroData heroData = 1;</code>
      */
     public java.util.List<com.mokylin.bleach.protobuf.db.Combat.HeroData> getHeroDataList() {
       return heroData_;
     }
     /**
-     * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+     * <code>repeated .com.icewind.HeroData heroData = 1;</code>
      */
     public java.util.List<? extends com.mokylin.bleach.protobuf.db.Combat.HeroDataOrBuilder> 
         getHeroDataOrBuilderList() {
       return heroData_;
     }
     /**
-     * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+     * <code>repeated .com.icewind.HeroData heroData = 1;</code>
      */
     public int getHeroDataCount() {
       return heroData_.size();
     }
     /**
-     * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+     * <code>repeated .com.icewind.HeroData heroData = 1;</code>
      */
     public com.mokylin.bleach.protobuf.db.Combat.HeroData getHeroData(int index) {
       return heroData_.get(index);
     }
     /**
-     * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+     * <code>repeated .com.icewind.HeroData heroData = 1;</code>
      */
     public com.mokylin.bleach.protobuf.db.Combat.HeroDataOrBuilder getHeroDataOrBuilder(
         int index) {
@@ -295,7 +295,7 @@ public final class Combat {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CombatMirrorImage}
+     * Protobuf type {@code com.icewind.CombatMirrorImage}
      *
      * <pre>
      **
@@ -304,16 +304,16 @@ public final class Combat {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CombatMirrorImage)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CombatMirrorImage)
         com.mokylin.bleach.protobuf.db.Combat.CombatMirrorImageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_CombatMirrorImage_descriptor;
+        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_CombatMirrorImage_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_CombatMirrorImage_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_CombatMirrorImage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.db.Combat.CombatMirrorImage.class, com.mokylin.bleach.protobuf.db.Combat.CombatMirrorImage.Builder.class);
       }
@@ -354,7 +354,7 @@ public final class Combat {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_CombatMirrorImage_descriptor;
+        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_CombatMirrorImage_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.db.Combat.CombatMirrorImage getDefaultInstanceForType() {
@@ -468,7 +468,7 @@ public final class Combat {
           com.mokylin.bleach.protobuf.db.Combat.HeroData, com.mokylin.bleach.protobuf.db.Combat.HeroData.Builder, com.mokylin.bleach.protobuf.db.Combat.HeroDataOrBuilder> heroDataBuilder_;
 
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.db.Combat.HeroData> getHeroDataList() {
         if (heroDataBuilder_ == null) {
@@ -478,7 +478,7 @@ public final class Combat {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public int getHeroDataCount() {
         if (heroDataBuilder_ == null) {
@@ -488,7 +488,7 @@ public final class Combat {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.Combat.HeroData getHeroData(int index) {
         if (heroDataBuilder_ == null) {
@@ -498,7 +498,7 @@ public final class Combat {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public Builder setHeroData(
           int index, com.mokylin.bleach.protobuf.db.Combat.HeroData value) {
@@ -515,7 +515,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public Builder setHeroData(
           int index, com.mokylin.bleach.protobuf.db.Combat.HeroData.Builder builderForValue) {
@@ -529,7 +529,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public Builder addHeroData(com.mokylin.bleach.protobuf.db.Combat.HeroData value) {
         if (heroDataBuilder_ == null) {
@@ -545,7 +545,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public Builder addHeroData(
           int index, com.mokylin.bleach.protobuf.db.Combat.HeroData value) {
@@ -562,7 +562,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public Builder addHeroData(
           com.mokylin.bleach.protobuf.db.Combat.HeroData.Builder builderForValue) {
@@ -576,7 +576,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public Builder addHeroData(
           int index, com.mokylin.bleach.protobuf.db.Combat.HeroData.Builder builderForValue) {
@@ -590,7 +590,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public Builder addAllHeroData(
           java.lang.Iterable<? extends com.mokylin.bleach.protobuf.db.Combat.HeroData> values) {
@@ -605,7 +605,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public Builder clearHeroData() {
         if (heroDataBuilder_ == null) {
@@ -618,7 +618,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public Builder removeHeroData(int index) {
         if (heroDataBuilder_ == null) {
@@ -631,14 +631,14 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.Combat.HeroData.Builder getHeroDataBuilder(
           int index) {
         return getHeroDataFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.Combat.HeroDataOrBuilder getHeroDataOrBuilder(
           int index) {
@@ -648,7 +648,7 @@ public final class Combat {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public java.util.List<? extends com.mokylin.bleach.protobuf.db.Combat.HeroDataOrBuilder> 
            getHeroDataOrBuilderList() {
@@ -659,14 +659,14 @@ public final class Combat {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.Combat.HeroData.Builder addHeroDataBuilder() {
         return getHeroDataFieldBuilder().addBuilder(
             com.mokylin.bleach.protobuf.db.Combat.HeroData.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public com.mokylin.bleach.protobuf.db.Combat.HeroData.Builder addHeroDataBuilder(
           int index) {
@@ -674,7 +674,7 @@ public final class Combat {
             index, com.mokylin.bleach.protobuf.db.Combat.HeroData.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.HeroData heroData = 1;</code>
+       * <code>repeated .com.icewind.HeroData heroData = 1;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.db.Combat.HeroData.Builder> 
            getHeroDataBuilderList() {
@@ -695,7 +695,7 @@ public final class Combat {
         return heroDataBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CombatMirrorImage)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CombatMirrorImage)
     }
 
     static {
@@ -703,11 +703,11 @@ public final class Combat {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CombatMirrorImage)
+    // @@protoc_insertion_point(class_scope:com.icewind.CombatMirrorImage)
   }
 
   public interface HeroDataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.HeroData)
+      // @@protoc_insertion_point(interface_extends:com.icewind.HeroData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -729,25 +729,25 @@ public final class Combat {
     int getTempateId();
 
     /**
-     * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+     * <code>repeated .com.icewind.HeroProp props = 6;</code>
      */
     java.util.List<com.mokylin.bleach.protobuf.db.Combat.HeroProp> 
         getPropsList();
     /**
-     * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+     * <code>repeated .com.icewind.HeroProp props = 6;</code>
      */
     com.mokylin.bleach.protobuf.db.Combat.HeroProp getProps(int index);
     /**
-     * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+     * <code>repeated .com.icewind.HeroProp props = 6;</code>
      */
     int getPropsCount();
     /**
-     * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+     * <code>repeated .com.icewind.HeroProp props = 6;</code>
      */
     java.util.List<? extends com.mokylin.bleach.protobuf.db.Combat.HeroPropOrBuilder> 
         getPropsOrBuilderList();
     /**
-     * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+     * <code>repeated .com.icewind.HeroProp props = 6;</code>
      */
     com.mokylin.bleach.protobuf.db.Combat.HeroPropOrBuilder getPropsOrBuilder(
         int index);
@@ -766,7 +766,7 @@ public final class Combat {
     int getBuffId(int index);
   }
   /**
-   * Protobuf type {@code com.mokylin.HeroData}
+   * Protobuf type {@code com.icewind.HeroData}
    *
    * <pre>
    **
@@ -775,7 +775,7 @@ public final class Combat {
    */
   public static final class HeroData extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.HeroData)
+      // @@protoc_insertion_point(message_implements:com.icewind.HeroData)
       HeroDataOrBuilder {
     // Use HeroData.newBuilder() to construct.
     private HeroData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -881,12 +881,12 @@ public final class Combat {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_HeroData_descriptor;
+      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_HeroData_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_HeroData_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_HeroData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.db.Combat.HeroData.class, com.mokylin.bleach.protobuf.db.Combat.HeroData.Builder.class);
     }
@@ -940,32 +940,32 @@ public final class Combat {
     public static final int PROPS_FIELD_NUMBER = 6;
     private java.util.List<com.mokylin.bleach.protobuf.db.Combat.HeroProp> props_;
     /**
-     * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+     * <code>repeated .com.icewind.HeroProp props = 6;</code>
      */
     public java.util.List<com.mokylin.bleach.protobuf.db.Combat.HeroProp> getPropsList() {
       return props_;
     }
     /**
-     * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+     * <code>repeated .com.icewind.HeroProp props = 6;</code>
      */
     public java.util.List<? extends com.mokylin.bleach.protobuf.db.Combat.HeroPropOrBuilder> 
         getPropsOrBuilderList() {
       return props_;
     }
     /**
-     * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+     * <code>repeated .com.icewind.HeroProp props = 6;</code>
      */
     public int getPropsCount() {
       return props_.size();
     }
     /**
-     * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+     * <code>repeated .com.icewind.HeroProp props = 6;</code>
      */
     public com.mokylin.bleach.protobuf.db.Combat.HeroProp getProps(int index) {
       return props_.get(index);
     }
     /**
-     * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+     * <code>repeated .com.icewind.HeroProp props = 6;</code>
      */
     public com.mokylin.bleach.protobuf.db.Combat.HeroPropOrBuilder getPropsOrBuilder(
         int index) {
@@ -1148,7 +1148,7 @@ public final class Combat {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.HeroData}
+     * Protobuf type {@code com.icewind.HeroData}
      *
      * <pre>
      **
@@ -1157,16 +1157,16 @@ public final class Combat {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.HeroData)
+        // @@protoc_insertion_point(builder_implements:com.icewind.HeroData)
         com.mokylin.bleach.protobuf.db.Combat.HeroDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_HeroData_descriptor;
+        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_HeroData_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_HeroData_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_HeroData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.db.Combat.HeroData.class, com.mokylin.bleach.protobuf.db.Combat.HeroData.Builder.class);
       }
@@ -1213,7 +1213,7 @@ public final class Combat {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_HeroData_descriptor;
+        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_HeroData_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.db.Combat.HeroData getDefaultInstanceForType() {
@@ -1430,7 +1430,7 @@ public final class Combat {
           com.mokylin.bleach.protobuf.db.Combat.HeroProp, com.mokylin.bleach.protobuf.db.Combat.HeroProp.Builder, com.mokylin.bleach.protobuf.db.Combat.HeroPropOrBuilder> propsBuilder_;
 
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.db.Combat.HeroProp> getPropsList() {
         if (propsBuilder_ == null) {
@@ -1440,7 +1440,7 @@ public final class Combat {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public int getPropsCount() {
         if (propsBuilder_ == null) {
@@ -1450,7 +1450,7 @@ public final class Combat {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public com.mokylin.bleach.protobuf.db.Combat.HeroProp getProps(int index) {
         if (propsBuilder_ == null) {
@@ -1460,7 +1460,7 @@ public final class Combat {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public Builder setProps(
           int index, com.mokylin.bleach.protobuf.db.Combat.HeroProp value) {
@@ -1477,7 +1477,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public Builder setProps(
           int index, com.mokylin.bleach.protobuf.db.Combat.HeroProp.Builder builderForValue) {
@@ -1491,7 +1491,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public Builder addProps(com.mokylin.bleach.protobuf.db.Combat.HeroProp value) {
         if (propsBuilder_ == null) {
@@ -1507,7 +1507,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public Builder addProps(
           int index, com.mokylin.bleach.protobuf.db.Combat.HeroProp value) {
@@ -1524,7 +1524,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public Builder addProps(
           com.mokylin.bleach.protobuf.db.Combat.HeroProp.Builder builderForValue) {
@@ -1538,7 +1538,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public Builder addProps(
           int index, com.mokylin.bleach.protobuf.db.Combat.HeroProp.Builder builderForValue) {
@@ -1552,7 +1552,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public Builder addAllProps(
           java.lang.Iterable<? extends com.mokylin.bleach.protobuf.db.Combat.HeroProp> values) {
@@ -1567,7 +1567,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public Builder clearProps() {
         if (propsBuilder_ == null) {
@@ -1580,7 +1580,7 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public Builder removeProps(int index) {
         if (propsBuilder_ == null) {
@@ -1593,14 +1593,14 @@ public final class Combat {
         return this;
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public com.mokylin.bleach.protobuf.db.Combat.HeroProp.Builder getPropsBuilder(
           int index) {
         return getPropsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public com.mokylin.bleach.protobuf.db.Combat.HeroPropOrBuilder getPropsOrBuilder(
           int index) {
@@ -1610,7 +1610,7 @@ public final class Combat {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public java.util.List<? extends com.mokylin.bleach.protobuf.db.Combat.HeroPropOrBuilder> 
            getPropsOrBuilderList() {
@@ -1621,14 +1621,14 @@ public final class Combat {
         }
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public com.mokylin.bleach.protobuf.db.Combat.HeroProp.Builder addPropsBuilder() {
         return getPropsFieldBuilder().addBuilder(
             com.mokylin.bleach.protobuf.db.Combat.HeroProp.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public com.mokylin.bleach.protobuf.db.Combat.HeroProp.Builder addPropsBuilder(
           int index) {
@@ -1636,7 +1636,7 @@ public final class Combat {
             index, com.mokylin.bleach.protobuf.db.Combat.HeroProp.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.mokylin.HeroProp props = 6;</code>
+       * <code>repeated .com.icewind.HeroProp props = 6;</code>
        */
       public java.util.List<com.mokylin.bleach.protobuf.db.Combat.HeroProp.Builder> 
            getPropsBuilderList() {
@@ -1723,7 +1723,7 @@ public final class Combat {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.HeroData)
+      // @@protoc_insertion_point(builder_scope:com.icewind.HeroData)
     }
 
     static {
@@ -1731,11 +1731,11 @@ public final class Combat {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.HeroData)
+    // @@protoc_insertion_point(class_scope:com.icewind.HeroData)
   }
 
   public interface CombatPropEffectMirrorDataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CombatPropEffectMirrorData)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CombatPropEffectMirrorData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1766,7 +1766,7 @@ public final class Combat {
     int getValue();
   }
   /**
-   * Protobuf type {@code com.mokylin.CombatPropEffectMirrorData}
+   * Protobuf type {@code com.icewind.CombatPropEffectMirrorData}
    *
    * <pre>
    **
@@ -1775,7 +1775,7 @@ public final class Combat {
    */
   public static final class CombatPropEffectMirrorData extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CombatPropEffectMirrorData)
+      // @@protoc_insertion_point(message_implements:com.icewind.CombatPropEffectMirrorData)
       CombatPropEffectMirrorDataOrBuilder {
     // Use CombatPropEffectMirrorData.newBuilder() to construct.
     private CombatPropEffectMirrorData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -1851,12 +1851,12 @@ public final class Combat {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_CombatPropEffectMirrorData_descriptor;
+      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_CombatPropEffectMirrorData_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_CombatPropEffectMirrorData_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_CombatPropEffectMirrorData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.db.Combat.CombatPropEffectMirrorData.class, com.mokylin.bleach.protobuf.db.Combat.CombatPropEffectMirrorData.Builder.class);
     }
@@ -2061,7 +2061,7 @@ public final class Combat {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CombatPropEffectMirrorData}
+     * Protobuf type {@code com.icewind.CombatPropEffectMirrorData}
      *
      * <pre>
      **
@@ -2070,16 +2070,16 @@ public final class Combat {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CombatPropEffectMirrorData)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CombatPropEffectMirrorData)
         com.mokylin.bleach.protobuf.db.Combat.CombatPropEffectMirrorDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_CombatPropEffectMirrorData_descriptor;
+        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_CombatPropEffectMirrorData_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_CombatPropEffectMirrorData_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_CombatPropEffectMirrorData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.db.Combat.CombatPropEffectMirrorData.class, com.mokylin.bleach.protobuf.db.Combat.CombatPropEffectMirrorData.Builder.class);
       }
@@ -2119,7 +2119,7 @@ public final class Combat {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_CombatPropEffectMirrorData_descriptor;
+        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_CombatPropEffectMirrorData_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.db.Combat.CombatPropEffectMirrorData getDefaultInstanceForType() {
@@ -2310,7 +2310,7 @@ public final class Combat {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CombatPropEffectMirrorData)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CombatPropEffectMirrorData)
     }
 
     static {
@@ -2318,11 +2318,11 @@ public final class Combat {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CombatPropEffectMirrorData)
+    // @@protoc_insertion_point(class_scope:com.icewind.CombatPropEffectMirrorData)
   }
 
   public interface HeroPropOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.HeroProp)
+      // @@protoc_insertion_point(interface_extends:com.icewind.HeroProp)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2344,7 +2344,7 @@ public final class Combat {
     float getValue();
   }
   /**
-   * Protobuf type {@code com.mokylin.HeroProp}
+   * Protobuf type {@code com.icewind.HeroProp}
    *
    * <pre>
    **
@@ -2353,7 +2353,7 @@ public final class Combat {
    */
   public static final class HeroProp extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.HeroProp)
+      // @@protoc_insertion_point(message_implements:com.icewind.HeroProp)
       HeroPropOrBuilder {
     // Use HeroProp.newBuilder() to construct.
     private HeroProp(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -2424,12 +2424,12 @@ public final class Combat {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_HeroProp_descriptor;
+      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_HeroProp_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_HeroProp_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_HeroProp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.db.Combat.HeroProp.class, com.mokylin.bleach.protobuf.db.Combat.HeroProp.Builder.class);
     }
@@ -2607,7 +2607,7 @@ public final class Combat {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.HeroProp}
+     * Protobuf type {@code com.icewind.HeroProp}
      *
      * <pre>
      **
@@ -2616,16 +2616,16 @@ public final class Combat {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.HeroProp)
+        // @@protoc_insertion_point(builder_implements:com.icewind.HeroProp)
         com.mokylin.bleach.protobuf.db.Combat.HeroPropOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_HeroProp_descriptor;
+        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_HeroProp_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_HeroProp_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_HeroProp_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.db.Combat.HeroProp.class, com.mokylin.bleach.protobuf.db.Combat.HeroProp.Builder.class);
       }
@@ -2663,7 +2663,7 @@ public final class Combat {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_mokylin_HeroProp_descriptor;
+        return com.mokylin.bleach.protobuf.db.Combat.internal_static_com_icewind_HeroProp_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.db.Combat.HeroProp getDefaultInstanceForType() {
@@ -2811,7 +2811,7 @@ public final class Combat {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.HeroProp)
+      // @@protoc_insertion_point(builder_scope:com.icewind.HeroProp)
     }
 
     static {
@@ -2819,29 +2819,29 @@ public final class Combat {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.HeroProp)
+    // @@protoc_insertion_point(class_scope:com.icewind.HeroProp)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CombatMirrorImage_descriptor;
+    internal_static_com_icewind_CombatMirrorImage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CombatMirrorImage_fieldAccessorTable;
+      internal_static_com_icewind_CombatMirrorImage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_HeroData_descriptor;
+    internal_static_com_icewind_HeroData_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_HeroData_fieldAccessorTable;
+      internal_static_com_icewind_HeroData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CombatPropEffectMirrorData_descriptor;
+    internal_static_com_icewind_CombatPropEffectMirrorData_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CombatPropEffectMirrorData_fieldAccessorTable;
+      internal_static_com_icewind_CombatPropEffectMirrorData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_HeroProp_descriptor;
+    internal_static_com_icewind_HeroProp_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_HeroProp_fieldAccessorTable;
+      internal_static_com_icewind_HeroProp_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2851,11 +2851,11 @@ public final class Combat {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017db/Combat.proto\022\013com.mokylin\"<\n\021Combat" +
-      "MirrorImage\022\'\n\010heroData\030\001 \003(\0132\025.com.moky" +
-      "lin.HeroData\"e\n\010HeroData\022\020\n\010position\030\001 \002" +
+      "\n\017db/Combat.proto\022\013com.icewind\"<\n\021Combat" +
+      "MirrorImage\022\'\n\010heroData\030\001 \003(\0132\025.com.icew" +
+      "ind.HeroData\"e\n\010HeroData\022\020\n\010position\030\001 \002" +
       "(\005\022\021\n\ttempateId\030\002 \002(\005\022$\n\005props\030\006 \003(\0132\025.c" +
-      "om.mokylin.HeroProp\022\016\n\006buffId\030\007 \003(\005\"K\n\032C" +
+      "om.icewind.HeroProp\022\016\n\006buffId\030\007 \003(\005\"K\n\032C" +
       "ombatPropEffectMirrorData\022\n\n\002id\030\001 \002(\005\022\022\n" +
       "\neffectType\030\002 \002(\005\022\r\n\005value\030\003 \002(\005\"%\n\010Hero" +
       "Prop\022\n\n\002id\030\001 \002(\005\022\r\n\005value\030\002 \002(\002B(\n\036com.m" +
@@ -2873,29 +2873,29 @@ public final class Combat {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_mokylin_CombatMirrorImage_descriptor =
+    internal_static_com_icewind_CombatMirrorImage_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_mokylin_CombatMirrorImage_fieldAccessorTable = new
+    internal_static_com_icewind_CombatMirrorImage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CombatMirrorImage_descriptor,
+        internal_static_com_icewind_CombatMirrorImage_descriptor,
         new java.lang.String[] { "HeroData", });
-    internal_static_com_mokylin_HeroData_descriptor =
+    internal_static_com_icewind_HeroData_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_mokylin_HeroData_fieldAccessorTable = new
+    internal_static_com_icewind_HeroData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_HeroData_descriptor,
+        internal_static_com_icewind_HeroData_descriptor,
         new java.lang.String[] { "Position", "TempateId", "Props", "BuffId", });
-    internal_static_com_mokylin_CombatPropEffectMirrorData_descriptor =
+    internal_static_com_icewind_CombatPropEffectMirrorData_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_com_mokylin_CombatPropEffectMirrorData_fieldAccessorTable = new
+    internal_static_com_icewind_CombatPropEffectMirrorData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CombatPropEffectMirrorData_descriptor,
+        internal_static_com_icewind_CombatPropEffectMirrorData_descriptor,
         new java.lang.String[] { "Id", "EffectType", "Value", });
-    internal_static_com_mokylin_HeroProp_descriptor =
+    internal_static_com_icewind_HeroProp_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_com_mokylin_HeroProp_fieldAccessorTable = new
+    internal_static_com_icewind_HeroProp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_HeroProp_descriptor,
+        internal_static_com_icewind_HeroProp_descriptor,
         new java.lang.String[] { "Id", "Value", });
   }
 

@@ -9,7 +9,7 @@ public final class DbDailyReward {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface DailyRewardOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.DailyReward)
+      // @@protoc_insertion_point(interface_extends:com.icewind.DailyReward)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -64,7 +64,7 @@ public final class DbDailyReward {
     boolean getCanGetVipReward();
   }
   /**
-   * Protobuf type {@code com.mokylin.DailyReward}
+   * Protobuf type {@code com.icewind.DailyReward}
    *
    * <pre>
    ** 每日签到奖励存储 
@@ -72,7 +72,7 @@ public final class DbDailyReward {
    */
   public static final class DailyReward extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.DailyReward)
+      // @@protoc_insertion_point(message_implements:com.icewind.DailyReward)
       DailyRewardOrBuilder {
     // Use DailyReward.newBuilder() to construct.
     private DailyReward(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -148,12 +148,12 @@ public final class DbDailyReward {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.db.DbDailyReward.internal_static_com_mokylin_DailyReward_descriptor;
+      return com.mokylin.bleach.protobuf.db.DbDailyReward.internal_static_com_icewind_DailyReward_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.db.DbDailyReward.internal_static_com_mokylin_DailyReward_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.db.DbDailyReward.internal_static_com_icewind_DailyReward_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.db.DbDailyReward.DailyReward.class, com.mokylin.bleach.protobuf.db.DbDailyReward.DailyReward.Builder.class);
     }
@@ -382,7 +382,7 @@ public final class DbDailyReward {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.DailyReward}
+     * Protobuf type {@code com.icewind.DailyReward}
      *
      * <pre>
      ** 每日签到奖励存储 
@@ -390,16 +390,16 @@ public final class DbDailyReward {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.DailyReward)
+        // @@protoc_insertion_point(builder_implements:com.icewind.DailyReward)
         com.mokylin.bleach.protobuf.db.DbDailyReward.DailyRewardOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.db.DbDailyReward.internal_static_com_mokylin_DailyReward_descriptor;
+        return com.mokylin.bleach.protobuf.db.DbDailyReward.internal_static_com_icewind_DailyReward_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.db.DbDailyReward.internal_static_com_mokylin_DailyReward_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.db.DbDailyReward.internal_static_com_icewind_DailyReward_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.db.DbDailyReward.DailyReward.class, com.mokylin.bleach.protobuf.db.DbDailyReward.DailyReward.Builder.class);
       }
@@ -439,7 +439,7 @@ public final class DbDailyReward {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.db.DbDailyReward.internal_static_com_mokylin_DailyReward_descriptor;
+        return com.mokylin.bleach.protobuf.db.DbDailyReward.internal_static_com_icewind_DailyReward_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.db.DbDailyReward.DailyReward getDefaultInstanceForType() {
@@ -678,7 +678,7 @@ public final class DbDailyReward {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.DailyReward)
+      // @@protoc_insertion_point(builder_scope:com.icewind.DailyReward)
     }
 
     static {
@@ -686,14 +686,14 @@ public final class DbDailyReward {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.DailyReward)
+    // @@protoc_insertion_point(class_scope:com.icewind.DailyReward)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_DailyReward_descriptor;
+    internal_static_com_icewind_DailyReward_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_DailyReward_fieldAccessorTable;
+      internal_static_com_icewind_DailyReward_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -703,7 +703,7 @@ public final class DbDailyReward {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026db/DbDailyReward.proto\022\013com.mokylin\"S\n" +
+      "\n\026db/DbDailyReward.proto\022\013com.icewind\"S\n" +
       "\013DailyReward\022\023\n\013rewardIndex\030\001 \002(\005\022\026\n\016las" +
       "tRewardTime\030\002 \002(\003\022\027\n\017canGetVipReward\030\003 \002" +
       "(\010B/\n\036com.mokylin.bleach.protobuf.dbB\rDb" +
@@ -721,11 +721,11 @@ public final class DbDailyReward {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_mokylin_DailyReward_descriptor =
+    internal_static_com_icewind_DailyReward_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_mokylin_DailyReward_fieldAccessorTable = new
+    internal_static_com_icewind_DailyReward_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_DailyReward_descriptor,
+        internal_static_com_icewind_DailyReward_descriptor,
         new java.lang.String[] { "RewardIndex", "LastRewardTime", "CanGetVipReward", });
   }
 

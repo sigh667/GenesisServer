@@ -9,7 +9,7 @@ public final class ChatMessage {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface CGGmCmdMessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CGGmCmdMessage)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CGGmCmdMessage)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -46,7 +46,7 @@ public final class ChatMessage {
         getParamBytes(int index);
   }
   /**
-   * Protobuf type {@code com.mokylin.CGGmCmdMessage}
+   * Protobuf type {@code com.icewind.CGGmCmdMessage}
    *
    * <pre>
    **
@@ -55,7 +55,7 @@ public final class ChatMessage {
    */
   public static final class CGGmCmdMessage extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CGGmCmdMessage)
+      // @@protoc_insertion_point(message_implements:com.icewind.CGGmCmdMessage)
       CGGmCmdMessageOrBuilder {
     // Use CGGmCmdMessage.newBuilder() to construct.
     private CGGmCmdMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -134,12 +134,12 @@ public final class ChatMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_mokylin_CGGmCmdMessage_descriptor;
+      return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_icewind_CGGmCmdMessage_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_mokylin_CGGmCmdMessage_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_icewind_CGGmCmdMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ChatMessage.CGGmCmdMessage.class, com.mokylin.bleach.protobuf.ChatMessage.CGGmCmdMessage.Builder.class);
     }
@@ -359,7 +359,7 @@ public final class ChatMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CGGmCmdMessage}
+     * Protobuf type {@code com.icewind.CGGmCmdMessage}
      *
      * <pre>
      **
@@ -368,16 +368,16 @@ public final class ChatMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CGGmCmdMessage)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CGGmCmdMessage)
         com.mokylin.bleach.protobuf.ChatMessage.CGGmCmdMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_mokylin_CGGmCmdMessage_descriptor;
+        return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_icewind_CGGmCmdMessage_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_mokylin_CGGmCmdMessage_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_icewind_CGGmCmdMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ChatMessage.CGGmCmdMessage.class, com.mokylin.bleach.protobuf.ChatMessage.CGGmCmdMessage.Builder.class);
       }
@@ -415,7 +415,7 @@ public final class ChatMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_mokylin_CGGmCmdMessage_descriptor;
+        return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_icewind_CGGmCmdMessage_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ChatMessage.CGGmCmdMessage getDefaultInstanceForType() {
@@ -674,7 +674,7 @@ public final class ChatMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CGGmCmdMessage)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CGGmCmdMessage)
     }
 
     static {
@@ -682,11 +682,11 @@ public final class ChatMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CGGmCmdMessage)
+    // @@protoc_insertion_point(class_scope:com.icewind.CGGmCmdMessage)
   }
 
   public interface GCGmCmdOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCGmCmd)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCGmCmd)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -709,7 +709,7 @@ public final class ChatMessage {
         getParamBytes(int index);
   }
   /**
-   * Protobuf type {@code com.mokylin.GCGmCmd}
+   * Protobuf type {@code com.icewind.GCGmCmd}
    *
    * <pre>
    **
@@ -718,7 +718,7 @@ public final class ChatMessage {
    */
   public static final class GCGmCmd extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCGmCmd)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCGmCmd)
       GCGmCmdOrBuilder {
     // Use GCGmCmd.newBuilder() to construct.
     private GCGmCmd(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -791,12 +791,12 @@ public final class ChatMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_mokylin_GCGmCmd_descriptor;
+      return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_icewind_GCGmCmd_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_mokylin_GCGmCmd_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_icewind_GCGmCmd_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ChatMessage.GCGmCmd.class, com.mokylin.bleach.protobuf.ChatMessage.GCGmCmd.Builder.class);
     }
@@ -961,7 +961,7 @@ public final class ChatMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCGmCmd}
+     * Protobuf type {@code com.icewind.GCGmCmd}
      *
      * <pre>
      **
@@ -970,16 +970,16 @@ public final class ChatMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCGmCmd)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCGmCmd)
         com.mokylin.bleach.protobuf.ChatMessage.GCGmCmdOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_mokylin_GCGmCmd_descriptor;
+        return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_icewind_GCGmCmd_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_mokylin_GCGmCmd_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_icewind_GCGmCmd_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ChatMessage.GCGmCmd.class, com.mokylin.bleach.protobuf.ChatMessage.GCGmCmd.Builder.class);
       }
@@ -1015,7 +1015,7 @@ public final class ChatMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_mokylin_GCGmCmd_descriptor;
+        return com.mokylin.bleach.protobuf.ChatMessage.internal_static_com_icewind_GCGmCmd_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ChatMessage.GCGmCmd getDefaultInstanceForType() {
@@ -1183,7 +1183,7 @@ public final class ChatMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCGmCmd)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCGmCmd)
     }
 
     static {
@@ -1191,19 +1191,19 @@ public final class ChatMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCGmCmd)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCGmCmd)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CGGmCmdMessage_descriptor;
+    internal_static_com_icewind_CGGmCmdMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CGGmCmdMessage_fieldAccessorTable;
+      internal_static_com_icewind_CGGmCmdMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCGmCmd_descriptor;
+    internal_static_com_icewind_GCGmCmd_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCGmCmd_fieldAccessorTable;
+      internal_static_com_icewind_GCGmCmd_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1213,7 +1213,7 @@ public final class ChatMessage {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\nChat.proto\022\013com.mokylin\032\021MessageType.p" +
+      "\n\nChat.proto\022\013com.icewind\032\021MessageType.p" +
       "roto\"3\n\016CGGmCmdMessage\022\013\n\003cmd\030\001 \002(\t\022\r\n\005p" +
       "aram\030\002 \003(\t:\005\210\265\030\255\002\"\037\n\007GCGmCmd\022\r\n\005param\030\001 " +
       "\003(\t:\005\220\265\030\247\004B*\n\033com.mokylin.bleach.protobu" +
@@ -1230,27 +1230,27 @@ public final class ChatMessage {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.mokylin.bleach.protobuf.MessageType.getDescriptor(),
+          com.icewind.MessageType.getDescriptor(),
         }, assigner);
-    internal_static_com_mokylin_CGGmCmdMessage_descriptor =
+    internal_static_com_icewind_CGGmCmdMessage_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_mokylin_CGGmCmdMessage_fieldAccessorTable = new
+    internal_static_com_icewind_CGGmCmdMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CGGmCmdMessage_descriptor,
+        internal_static_com_icewind_CGGmCmdMessage_descriptor,
         new java.lang.String[] { "Cmd", "Param", });
-    internal_static_com_mokylin_GCGmCmd_descriptor =
+    internal_static_com_icewind_GCGmCmd_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_mokylin_GCGmCmd_fieldAccessorTable = new
+    internal_static_com_icewind_GCGmCmd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCGmCmd_descriptor,
+        internal_static_com_icewind_GCGmCmd_descriptor,
         new java.lang.String[] { "Param", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.cgMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.mokylin.bleach.protobuf.MessageType.getDescriptor();
+    com.icewind.MessageType.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -17,7 +17,7 @@ public final class PlayerMessage {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014Player.proto\022\013com.mokylin\032\021MessageType" +
+      "\n\014Player.proto\022\013com.icewind\032\021MessageType" +
       ".protoB,\n\033com.mokylin.bleach.protobufB\rP" +
       "layerMessage"
     };
@@ -32,9 +32,9 @@ public final class PlayerMessage {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.mokylin.bleach.protobuf.MessageType.getDescriptor(),
+          com.icewind.MessageType.getDescriptor(),
         }, assigner);
-    com.mokylin.bleach.protobuf.MessageType.getDescriptor();
+    com.icewind.MessageType.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

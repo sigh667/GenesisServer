@@ -9,11 +9,11 @@ public final class ReportMessage {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface ReportOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.Report)
+      // @@protoc_insertion_point(interface_extends:com.icewind.Report)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .com.mokylin.ReportInfo info = 1;</code>
+     * <code>required .com.icewind.ReportInfo info = 1;</code>
      *
      * <pre>
      * 战斗初始双方信息
@@ -21,7 +21,7 @@ public final class ReportMessage {
      */
     boolean hasInfo();
     /**
-     * <code>required .com.mokylin.ReportInfo info = 1;</code>
+     * <code>required .com.icewind.ReportInfo info = 1;</code>
      *
      * <pre>
      * 战斗初始双方信息
@@ -29,7 +29,7 @@ public final class ReportMessage {
      */
     com.mokylin.bleach.protobuf.ReportMessage.ReportInfo getInfo();
     /**
-     * <code>required .com.mokylin.ReportInfo info = 1;</code>
+     * <code>required .com.icewind.ReportInfo info = 1;</code>
      *
      * <pre>
      * 战斗初始双方信息
@@ -38,7 +38,7 @@ public final class ReportMessage {
     com.mokylin.bleach.protobuf.ReportMessage.ReportInfoOrBuilder getInfoOrBuilder();
 
     /**
-     * <code>required .com.mokylin.ReportRecord record = 2;</code>
+     * <code>required .com.icewind.ReportRecord record = 2;</code>
      *
      * <pre>
      * 战斗流程记录
@@ -46,7 +46,7 @@ public final class ReportMessage {
      */
     boolean hasRecord();
     /**
-     * <code>required .com.mokylin.ReportRecord record = 2;</code>
+     * <code>required .com.icewind.ReportRecord record = 2;</code>
      *
      * <pre>
      * 战斗流程记录
@@ -54,7 +54,7 @@ public final class ReportMessage {
      */
     com.mokylin.bleach.protobuf.ReportMessage.ReportRecord getRecord();
     /**
-     * <code>required .com.mokylin.ReportRecord record = 2;</code>
+     * <code>required .com.icewind.ReportRecord record = 2;</code>
      *
      * <pre>
      * 战斗流程记录
@@ -63,7 +63,7 @@ public final class ReportMessage {
     com.mokylin.bleach.protobuf.ReportMessage.ReportRecordOrBuilder getRecordOrBuilder();
 
     /**
-     * <code>required .com.mokylin.ReportResult result = 3;</code>
+     * <code>required .com.icewind.ReportResult result = 3;</code>
      *
      * <pre>
      * 战斗结果
@@ -71,7 +71,7 @@ public final class ReportMessage {
      */
     boolean hasResult();
     /**
-     * <code>required .com.mokylin.ReportResult result = 3;</code>
+     * <code>required .com.icewind.ReportResult result = 3;</code>
      *
      * <pre>
      * 战斗结果
@@ -79,7 +79,7 @@ public final class ReportMessage {
      */
     com.mokylin.bleach.protobuf.ReportMessage.ReportResult getResult();
     /**
-     * <code>required .com.mokylin.ReportResult result = 3;</code>
+     * <code>required .com.icewind.ReportResult result = 3;</code>
      *
      * <pre>
      * 战斗结果
@@ -88,7 +88,7 @@ public final class ReportMessage {
     com.mokylin.bleach.protobuf.ReportMessage.ReportResultOrBuilder getResultOrBuilder();
   }
   /**
-   * Protobuf type {@code com.mokylin.Report}
+   * Protobuf type {@code com.icewind.Report}
    *
    * <pre>
    **
@@ -97,7 +97,7 @@ public final class ReportMessage {
    */
   public static final class Report extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.Report)
+      // @@protoc_insertion_point(message_implements:com.icewind.Report)
       ReportOrBuilder {
     // Use Report.newBuilder() to construct.
     private Report(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -197,12 +197,12 @@ public final class ReportMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_Report_descriptor;
+      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_Report_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_Report_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_Report_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ReportMessage.Report.class, com.mokylin.bleach.protobuf.ReportMessage.Report.Builder.class);
     }
@@ -226,7 +226,7 @@ public final class ReportMessage {
     public static final int INFO_FIELD_NUMBER = 1;
     private com.mokylin.bleach.protobuf.ReportMessage.ReportInfo info_;
     /**
-     * <code>required .com.mokylin.ReportInfo info = 1;</code>
+     * <code>required .com.icewind.ReportInfo info = 1;</code>
      *
      * <pre>
      * 战斗初始双方信息
@@ -236,7 +236,7 @@ public final class ReportMessage {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .com.mokylin.ReportInfo info = 1;</code>
+     * <code>required .com.icewind.ReportInfo info = 1;</code>
      *
      * <pre>
      * 战斗初始双方信息
@@ -246,7 +246,7 @@ public final class ReportMessage {
       return info_;
     }
     /**
-     * <code>required .com.mokylin.ReportInfo info = 1;</code>
+     * <code>required .com.icewind.ReportInfo info = 1;</code>
      *
      * <pre>
      * 战斗初始双方信息
@@ -259,7 +259,7 @@ public final class ReportMessage {
     public static final int RECORD_FIELD_NUMBER = 2;
     private com.mokylin.bleach.protobuf.ReportMessage.ReportRecord record_;
     /**
-     * <code>required .com.mokylin.ReportRecord record = 2;</code>
+     * <code>required .com.icewind.ReportRecord record = 2;</code>
      *
      * <pre>
      * 战斗流程记录
@@ -269,7 +269,7 @@ public final class ReportMessage {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .com.mokylin.ReportRecord record = 2;</code>
+     * <code>required .com.icewind.ReportRecord record = 2;</code>
      *
      * <pre>
      * 战斗流程记录
@@ -279,7 +279,7 @@ public final class ReportMessage {
       return record_;
     }
     /**
-     * <code>required .com.mokylin.ReportRecord record = 2;</code>
+     * <code>required .com.icewind.ReportRecord record = 2;</code>
      *
      * <pre>
      * 战斗流程记录
@@ -292,7 +292,7 @@ public final class ReportMessage {
     public static final int RESULT_FIELD_NUMBER = 3;
     private com.mokylin.bleach.protobuf.ReportMessage.ReportResult result_;
     /**
-     * <code>required .com.mokylin.ReportResult result = 3;</code>
+     * <code>required .com.icewind.ReportResult result = 3;</code>
      *
      * <pre>
      * 战斗结果
@@ -302,7 +302,7 @@ public final class ReportMessage {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>required .com.mokylin.ReportResult result = 3;</code>
+     * <code>required .com.icewind.ReportResult result = 3;</code>
      *
      * <pre>
      * 战斗结果
@@ -312,7 +312,7 @@ public final class ReportMessage {
       return result_;
     }
     /**
-     * <code>required .com.mokylin.ReportResult result = 3;</code>
+     * <code>required .com.icewind.ReportResult result = 3;</code>
      *
      * <pre>
      * 战斗结果
@@ -461,7 +461,7 @@ public final class ReportMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.Report}
+     * Protobuf type {@code com.icewind.Report}
      *
      * <pre>
      **
@@ -470,16 +470,16 @@ public final class ReportMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.Report)
+        // @@protoc_insertion_point(builder_implements:com.icewind.Report)
         com.mokylin.bleach.protobuf.ReportMessage.ReportOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_Report_descriptor;
+        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_Report_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_Report_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_Report_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ReportMessage.Report.class, com.mokylin.bleach.protobuf.ReportMessage.Report.Builder.class);
       }
@@ -534,7 +534,7 @@ public final class ReportMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_Report_descriptor;
+        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_Report_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ReportMessage.Report getDefaultInstanceForType() {
@@ -645,7 +645,7 @@ public final class ReportMessage {
       private com.google.protobuf.SingleFieldBuilder<
           com.mokylin.bleach.protobuf.ReportMessage.ReportInfo, com.mokylin.bleach.protobuf.ReportMessage.ReportInfo.Builder, com.mokylin.bleach.protobuf.ReportMessage.ReportInfoOrBuilder> infoBuilder_;
       /**
-       * <code>required .com.mokylin.ReportInfo info = 1;</code>
+       * <code>required .com.icewind.ReportInfo info = 1;</code>
        *
        * <pre>
        * 战斗初始双方信息
@@ -655,7 +655,7 @@ public final class ReportMessage {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .com.mokylin.ReportInfo info = 1;</code>
+       * <code>required .com.icewind.ReportInfo info = 1;</code>
        *
        * <pre>
        * 战斗初始双方信息
@@ -669,7 +669,7 @@ public final class ReportMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.ReportInfo info = 1;</code>
+       * <code>required .com.icewind.ReportInfo info = 1;</code>
        *
        * <pre>
        * 战斗初始双方信息
@@ -689,7 +689,7 @@ public final class ReportMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.ReportInfo info = 1;</code>
+       * <code>required .com.icewind.ReportInfo info = 1;</code>
        *
        * <pre>
        * 战斗初始双方信息
@@ -707,7 +707,7 @@ public final class ReportMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.ReportInfo info = 1;</code>
+       * <code>required .com.icewind.ReportInfo info = 1;</code>
        *
        * <pre>
        * 战斗初始双方信息
@@ -730,7 +730,7 @@ public final class ReportMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.ReportInfo info = 1;</code>
+       * <code>required .com.icewind.ReportInfo info = 1;</code>
        *
        * <pre>
        * 战斗初始双方信息
@@ -747,7 +747,7 @@ public final class ReportMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.ReportInfo info = 1;</code>
+       * <code>required .com.icewind.ReportInfo info = 1;</code>
        *
        * <pre>
        * 战斗初始双方信息
@@ -759,7 +759,7 @@ public final class ReportMessage {
         return getInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .com.mokylin.ReportInfo info = 1;</code>
+       * <code>required .com.icewind.ReportInfo info = 1;</code>
        *
        * <pre>
        * 战斗初始双方信息
@@ -773,7 +773,7 @@ public final class ReportMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.ReportInfo info = 1;</code>
+       * <code>required .com.icewind.ReportInfo info = 1;</code>
        *
        * <pre>
        * 战斗初始双方信息
@@ -797,7 +797,7 @@ public final class ReportMessage {
       private com.google.protobuf.SingleFieldBuilder<
           com.mokylin.bleach.protobuf.ReportMessage.ReportRecord, com.mokylin.bleach.protobuf.ReportMessage.ReportRecord.Builder, com.mokylin.bleach.protobuf.ReportMessage.ReportRecordOrBuilder> recordBuilder_;
       /**
-       * <code>required .com.mokylin.ReportRecord record = 2;</code>
+       * <code>required .com.icewind.ReportRecord record = 2;</code>
        *
        * <pre>
        * 战斗流程记录
@@ -807,7 +807,7 @@ public final class ReportMessage {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .com.mokylin.ReportRecord record = 2;</code>
+       * <code>required .com.icewind.ReportRecord record = 2;</code>
        *
        * <pre>
        * 战斗流程记录
@@ -821,7 +821,7 @@ public final class ReportMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.ReportRecord record = 2;</code>
+       * <code>required .com.icewind.ReportRecord record = 2;</code>
        *
        * <pre>
        * 战斗流程记录
@@ -841,7 +841,7 @@ public final class ReportMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.ReportRecord record = 2;</code>
+       * <code>required .com.icewind.ReportRecord record = 2;</code>
        *
        * <pre>
        * 战斗流程记录
@@ -859,7 +859,7 @@ public final class ReportMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.ReportRecord record = 2;</code>
+       * <code>required .com.icewind.ReportRecord record = 2;</code>
        *
        * <pre>
        * 战斗流程记录
@@ -882,7 +882,7 @@ public final class ReportMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.ReportRecord record = 2;</code>
+       * <code>required .com.icewind.ReportRecord record = 2;</code>
        *
        * <pre>
        * 战斗流程记录
@@ -899,7 +899,7 @@ public final class ReportMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.ReportRecord record = 2;</code>
+       * <code>required .com.icewind.ReportRecord record = 2;</code>
        *
        * <pre>
        * 战斗流程记录
@@ -911,7 +911,7 @@ public final class ReportMessage {
         return getRecordFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .com.mokylin.ReportRecord record = 2;</code>
+       * <code>required .com.icewind.ReportRecord record = 2;</code>
        *
        * <pre>
        * 战斗流程记录
@@ -925,7 +925,7 @@ public final class ReportMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.ReportRecord record = 2;</code>
+       * <code>required .com.icewind.ReportRecord record = 2;</code>
        *
        * <pre>
        * 战斗流程记录
@@ -949,7 +949,7 @@ public final class ReportMessage {
       private com.google.protobuf.SingleFieldBuilder<
           com.mokylin.bleach.protobuf.ReportMessage.ReportResult, com.mokylin.bleach.protobuf.ReportMessage.ReportResult.Builder, com.mokylin.bleach.protobuf.ReportMessage.ReportResultOrBuilder> resultBuilder_;
       /**
-       * <code>required .com.mokylin.ReportResult result = 3;</code>
+       * <code>required .com.icewind.ReportResult result = 3;</code>
        *
        * <pre>
        * 战斗结果
@@ -959,7 +959,7 @@ public final class ReportMessage {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>required .com.mokylin.ReportResult result = 3;</code>
+       * <code>required .com.icewind.ReportResult result = 3;</code>
        *
        * <pre>
        * 战斗结果
@@ -973,7 +973,7 @@ public final class ReportMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.ReportResult result = 3;</code>
+       * <code>required .com.icewind.ReportResult result = 3;</code>
        *
        * <pre>
        * 战斗结果
@@ -993,7 +993,7 @@ public final class ReportMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.ReportResult result = 3;</code>
+       * <code>required .com.icewind.ReportResult result = 3;</code>
        *
        * <pre>
        * 战斗结果
@@ -1011,7 +1011,7 @@ public final class ReportMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.ReportResult result = 3;</code>
+       * <code>required .com.icewind.ReportResult result = 3;</code>
        *
        * <pre>
        * 战斗结果
@@ -1034,7 +1034,7 @@ public final class ReportMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.ReportResult result = 3;</code>
+       * <code>required .com.icewind.ReportResult result = 3;</code>
        *
        * <pre>
        * 战斗结果
@@ -1051,7 +1051,7 @@ public final class ReportMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.ReportResult result = 3;</code>
+       * <code>required .com.icewind.ReportResult result = 3;</code>
        *
        * <pre>
        * 战斗结果
@@ -1063,7 +1063,7 @@ public final class ReportMessage {
         return getResultFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .com.mokylin.ReportResult result = 3;</code>
+       * <code>required .com.icewind.ReportResult result = 3;</code>
        *
        * <pre>
        * 战斗结果
@@ -1077,7 +1077,7 @@ public final class ReportMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.ReportResult result = 3;</code>
+       * <code>required .com.icewind.ReportResult result = 3;</code>
        *
        * <pre>
        * 战斗结果
@@ -1097,7 +1097,7 @@ public final class ReportMessage {
         return resultBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.Report)
+      // @@protoc_insertion_point(builder_scope:com.icewind.Report)
     }
 
     static {
@@ -1105,15 +1105,15 @@ public final class ReportMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.Report)
+    // @@protoc_insertion_point(class_scope:com.icewind.Report)
   }
 
   public interface ReportInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.ReportInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.ReportInfo)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code com.mokylin.ReportInfo}
+   * Protobuf type {@code com.icewind.ReportInfo}
    *
    * <pre>
    **初始信息 
@@ -1121,7 +1121,7 @@ public final class ReportMessage {
    */
   public static final class ReportInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.ReportInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.ReportInfo)
       ReportInfoOrBuilder {
     // Use ReportInfo.newBuilder() to construct.
     private ReportInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -1181,12 +1181,12 @@ public final class ReportMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_ReportInfo_descriptor;
+      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_ReportInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_ReportInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_ReportInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ReportMessage.ReportInfo.class, com.mokylin.bleach.protobuf.ReportMessage.ReportInfo.Builder.class);
     }
@@ -1309,7 +1309,7 @@ public final class ReportMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.ReportInfo}
+     * Protobuf type {@code com.icewind.ReportInfo}
      *
      * <pre>
      **初始信息 
@@ -1317,16 +1317,16 @@ public final class ReportMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.ReportInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.ReportInfo)
         com.mokylin.bleach.protobuf.ReportMessage.ReportInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_ReportInfo_descriptor;
+        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_ReportInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_ReportInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_ReportInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ReportMessage.ReportInfo.class, com.mokylin.bleach.protobuf.ReportMessage.ReportInfo.Builder.class);
       }
@@ -1360,7 +1360,7 @@ public final class ReportMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_ReportInfo_descriptor;
+        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_ReportInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ReportMessage.ReportInfo getDefaultInstanceForType() {
@@ -1418,7 +1418,7 @@ public final class ReportMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.ReportInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.ReportInfo)
     }
 
     static {
@@ -1426,15 +1426,15 @@ public final class ReportMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.ReportInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.ReportInfo)
   }
 
   public interface ReportRecordOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.ReportRecord)
+      // @@protoc_insertion_point(interface_extends:com.icewind.ReportRecord)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code com.mokylin.ReportRecord}
+   * Protobuf type {@code com.icewind.ReportRecord}
    *
    * <pre>
    **战斗记录 
@@ -1442,7 +1442,7 @@ public final class ReportMessage {
    */
   public static final class ReportRecord extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.ReportRecord)
+      // @@protoc_insertion_point(message_implements:com.icewind.ReportRecord)
       ReportRecordOrBuilder {
     // Use ReportRecord.newBuilder() to construct.
     private ReportRecord(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -1502,12 +1502,12 @@ public final class ReportMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_ReportRecord_descriptor;
+      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_ReportRecord_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_ReportRecord_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_ReportRecord_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ReportMessage.ReportRecord.class, com.mokylin.bleach.protobuf.ReportMessage.ReportRecord.Builder.class);
     }
@@ -1630,7 +1630,7 @@ public final class ReportMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.ReportRecord}
+     * Protobuf type {@code com.icewind.ReportRecord}
      *
      * <pre>
      **战斗记录 
@@ -1638,16 +1638,16 @@ public final class ReportMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.ReportRecord)
+        // @@protoc_insertion_point(builder_implements:com.icewind.ReportRecord)
         com.mokylin.bleach.protobuf.ReportMessage.ReportRecordOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_ReportRecord_descriptor;
+        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_ReportRecord_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_ReportRecord_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_ReportRecord_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ReportMessage.ReportRecord.class, com.mokylin.bleach.protobuf.ReportMessage.ReportRecord.Builder.class);
       }
@@ -1681,7 +1681,7 @@ public final class ReportMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_ReportRecord_descriptor;
+        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_ReportRecord_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ReportMessage.ReportRecord getDefaultInstanceForType() {
@@ -1739,7 +1739,7 @@ public final class ReportMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.ReportRecord)
+      // @@protoc_insertion_point(builder_scope:com.icewind.ReportRecord)
     }
 
     static {
@@ -1747,15 +1747,15 @@ public final class ReportMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.ReportRecord)
+    // @@protoc_insertion_point(class_scope:com.icewind.ReportRecord)
   }
 
   public interface ReportResultOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.ReportResult)
+      // @@protoc_insertion_point(interface_extends:com.icewind.ReportResult)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code com.mokylin.ReportResult}
+   * Protobuf type {@code com.icewind.ReportResult}
    *
    * <pre>
    **战斗结果 
@@ -1763,7 +1763,7 @@ public final class ReportMessage {
    */
   public static final class ReportResult extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.ReportResult)
+      // @@protoc_insertion_point(message_implements:com.icewind.ReportResult)
       ReportResultOrBuilder {
     // Use ReportResult.newBuilder() to construct.
     private ReportResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -1823,12 +1823,12 @@ public final class ReportMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_ReportResult_descriptor;
+      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_ReportResult_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_ReportResult_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_ReportResult_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.ReportMessage.ReportResult.class, com.mokylin.bleach.protobuf.ReportMessage.ReportResult.Builder.class);
     }
@@ -1951,7 +1951,7 @@ public final class ReportMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.ReportResult}
+     * Protobuf type {@code com.icewind.ReportResult}
      *
      * <pre>
      **战斗结果 
@@ -1959,16 +1959,16 @@ public final class ReportMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.ReportResult)
+        // @@protoc_insertion_point(builder_implements:com.icewind.ReportResult)
         com.mokylin.bleach.protobuf.ReportMessage.ReportResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_ReportResult_descriptor;
+        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_ReportResult_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_ReportResult_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_ReportResult_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.ReportMessage.ReportResult.class, com.mokylin.bleach.protobuf.ReportMessage.ReportResult.Builder.class);
       }
@@ -2002,7 +2002,7 @@ public final class ReportMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_mokylin_ReportResult_descriptor;
+        return com.mokylin.bleach.protobuf.ReportMessage.internal_static_com_icewind_ReportResult_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.ReportMessage.ReportResult getDefaultInstanceForType() {
@@ -2060,7 +2060,7 @@ public final class ReportMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.ReportResult)
+      // @@protoc_insertion_point(builder_scope:com.icewind.ReportResult)
     }
 
     static {
@@ -2068,29 +2068,29 @@ public final class ReportMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.ReportResult)
+    // @@protoc_insertion_point(class_scope:com.icewind.ReportResult)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_Report_descriptor;
+    internal_static_com_icewind_Report_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_Report_fieldAccessorTable;
+      internal_static_com_icewind_Report_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_ReportInfo_descriptor;
+    internal_static_com_icewind_ReportInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_ReportInfo_fieldAccessorTable;
+      internal_static_com_icewind_ReportInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_ReportRecord_descriptor;
+    internal_static_com_icewind_ReportRecord_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_ReportRecord_fieldAccessorTable;
+      internal_static_com_icewind_ReportRecord_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_ReportResult_descriptor;
+    internal_static_com_icewind_ReportResult_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_ReportResult_fieldAccessorTable;
+      internal_static_com_icewind_ReportResult_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2100,11 +2100,11 @@ public final class ReportMessage {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014Report.proto\022\013com.mokylin\032\021MessageType" +
-      ".proto\"\205\001\n\006Report\022%\n\004info\030\001 \002(\0132\027.com.mo" +
-      "kylin.ReportInfo\022)\n\006record\030\002 \002(\0132\031.com.m" +
-      "okylin.ReportRecord\022)\n\006result\030\003 \002(\0132\031.co" +
-      "m.mokylin.ReportResult\"\014\n\nReportInfo\"\016\n\014" +
+      "\n\014Report.proto\022\013com.icewind\032\021MessageType" +
+      ".proto\"\205\001\n\006Report\022%\n\004info\030\001 \002(\0132\027.com.ic" +
+      "ewind.ReportInfo\022)\n\006record\030\002 \002(\0132\031.com.i" +
+      "cewind.ReportRecord\022)\n\006result\030\003 \002(\0132\031.co" +
+      "m.icewind.ReportResult\"\014\n\nReportInfo\"\016\n\014" +
       "ReportRecord\"\016\n\014ReportResultB,\n\033com.moky" +
       "lin.bleach.protobufB\rReportMessage"
     };
@@ -2119,33 +2119,33 @@ public final class ReportMessage {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.mokylin.bleach.protobuf.MessageType.getDescriptor(),
+          com.icewind.MessageType.getDescriptor(),
         }, assigner);
-    internal_static_com_mokylin_Report_descriptor =
+    internal_static_com_icewind_Report_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_mokylin_Report_fieldAccessorTable = new
+    internal_static_com_icewind_Report_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_Report_descriptor,
+        internal_static_com_icewind_Report_descriptor,
         new java.lang.String[] { "Info", "Record", "Result", });
-    internal_static_com_mokylin_ReportInfo_descriptor =
+    internal_static_com_icewind_ReportInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_mokylin_ReportInfo_fieldAccessorTable = new
+    internal_static_com_icewind_ReportInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_ReportInfo_descriptor,
+        internal_static_com_icewind_ReportInfo_descriptor,
         new java.lang.String[] { });
-    internal_static_com_mokylin_ReportRecord_descriptor =
+    internal_static_com_icewind_ReportRecord_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_com_mokylin_ReportRecord_fieldAccessorTable = new
+    internal_static_com_icewind_ReportRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_ReportRecord_descriptor,
+        internal_static_com_icewind_ReportRecord_descriptor,
         new java.lang.String[] { });
-    internal_static_com_mokylin_ReportResult_descriptor =
+    internal_static_com_icewind_ReportResult_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_com_mokylin_ReportResult_fieldAccessorTable = new
+    internal_static_com_icewind_ReportResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_ReportResult_descriptor,
+        internal_static_com_icewind_ReportResult_descriptor,
         new java.lang.String[] { });
-    com.mokylin.bleach.protobuf.MessageType.getDescriptor();
+    com.icewind.MessageType.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -9,7 +9,7 @@ public final class HumanMessage {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   /**
-   * Protobuf enum {@code com.mokylin.BuyEnergyFail}
+   * Protobuf enum {@code com.icewind.BuyEnergyFail}
    *
    * <pre>
    **
@@ -125,11 +125,11 @@ public final class HumanMessage {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:com.mokylin.BuyEnergyFail)
+    // @@protoc_insertion_point(enum_scope:com.icewind.BuyEnergyFail)
   }
 
   public interface CGBuyEnergyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.CGBuyEnergy)
+      // @@protoc_insertion_point(interface_extends:com.icewind.CGBuyEnergy)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -150,7 +150,7 @@ public final class HumanMessage {
     int getCounts();
   }
   /**
-   * Protobuf type {@code com.mokylin.CGBuyEnergy}
+   * Protobuf type {@code com.icewind.CGBuyEnergy}
    *
    * <pre>
    **
@@ -159,7 +159,7 @@ public final class HumanMessage {
    */
   public static final class CGBuyEnergy extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.CGBuyEnergy)
+      // @@protoc_insertion_point(message_implements:com.icewind.CGBuyEnergy)
       CGBuyEnergyOrBuilder {
     // Use CGBuyEnergy.newBuilder() to construct.
     private CGBuyEnergy(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -225,12 +225,12 @@ public final class HumanMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_CGBuyEnergy_descriptor;
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_CGBuyEnergy_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_CGBuyEnergy_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_CGBuyEnergy_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HumanMessage.CGBuyEnergy.class, com.mokylin.bleach.protobuf.HumanMessage.CGBuyEnergy.Builder.class);
     }
@@ -389,7 +389,7 @@ public final class HumanMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.CGBuyEnergy}
+     * Protobuf type {@code com.icewind.CGBuyEnergy}
      *
      * <pre>
      **
@@ -398,16 +398,16 @@ public final class HumanMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.CGBuyEnergy)
+        // @@protoc_insertion_point(builder_implements:com.icewind.CGBuyEnergy)
         com.mokylin.bleach.protobuf.HumanMessage.CGBuyEnergyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_CGBuyEnergy_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_CGBuyEnergy_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_CGBuyEnergy_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_CGBuyEnergy_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HumanMessage.CGBuyEnergy.class, com.mokylin.bleach.protobuf.HumanMessage.CGBuyEnergy.Builder.class);
       }
@@ -443,7 +443,7 @@ public final class HumanMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_CGBuyEnergy_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_CGBuyEnergy_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HumanMessage.CGBuyEnergy getDefaultInstanceForType() {
@@ -564,7 +564,7 @@ public final class HumanMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CGBuyEnergy)
+      // @@protoc_insertion_point(builder_scope:com.icewind.CGBuyEnergy)
     }
 
     static {
@@ -572,11 +572,11 @@ public final class HumanMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CGBuyEnergy)
+    // @@protoc_insertion_point(class_scope:com.icewind.CGBuyEnergy)
   }
 
   public interface GCHumanDetailInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCHumanDetailInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCHumanDetailInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -725,7 +725,7 @@ public final class HumanMessage {
     long getCurrencyProp(int index);
   }
   /**
-   * Protobuf type {@code com.mokylin.GCHumanDetailInfo}
+   * Protobuf type {@code com.icewind.GCHumanDetailInfo}
    *
    * <pre>
    **
@@ -734,7 +734,7 @@ public final class HumanMessage {
    */
   public static final class GCHumanDetailInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCHumanDetailInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCHumanDetailInfo)
       GCHumanDetailInfoOrBuilder {
     // Use GCHumanDetailInfo.newBuilder() to construct.
     private GCHumanDetailInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -866,12 +866,12 @@ public final class HumanMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCHumanDetailInfo_descriptor;
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCHumanDetailInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCHumanDetailInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCHumanDetailInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HumanMessage.GCHumanDetailInfo.class, com.mokylin.bleach.protobuf.HumanMessage.GCHumanDetailInfo.Builder.class);
     }
@@ -1322,7 +1322,7 @@ public final class HumanMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCHumanDetailInfo}
+     * Protobuf type {@code com.icewind.GCHumanDetailInfo}
      *
      * <pre>
      **
@@ -1331,16 +1331,16 @@ public final class HumanMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCHumanDetailInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCHumanDetailInfo)
         com.mokylin.bleach.protobuf.HumanMessage.GCHumanDetailInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCHumanDetailInfo_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCHumanDetailInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCHumanDetailInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCHumanDetailInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HumanMessage.GCHumanDetailInfo.class, com.mokylin.bleach.protobuf.HumanMessage.GCHumanDetailInfo.Builder.class);
       }
@@ -1386,7 +1386,7 @@ public final class HumanMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCHumanDetailInfo_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCHumanDetailInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HumanMessage.GCHumanDetailInfo getDefaultInstanceForType() {
@@ -2064,7 +2064,7 @@ public final class HumanMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCHumanDetailInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCHumanDetailInfo)
     }
 
     static {
@@ -2072,15 +2072,15 @@ public final class HumanMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCHumanDetailInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCHumanDetailInfo)
   }
 
   public interface GCDataErrorOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCDataError)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCDataError)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code com.mokylin.GCDataError}
+   * Protobuf type {@code com.icewind.GCDataError}
    *
    * <pre>
    **
@@ -2090,7 +2090,7 @@ public final class HumanMessage {
    */
   public static final class GCDataError extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCDataError)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCDataError)
       GCDataErrorOrBuilder {
     // Use GCDataError.newBuilder() to construct.
     private GCDataError(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -2150,12 +2150,12 @@ public final class HumanMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCDataError_descriptor;
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCDataError_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCDataError_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCDataError_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HumanMessage.GCDataError.class, com.mokylin.bleach.protobuf.HumanMessage.GCDataError.Builder.class);
     }
@@ -2278,7 +2278,7 @@ public final class HumanMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCDataError}
+     * Protobuf type {@code com.icewind.GCDataError}
      *
      * <pre>
      **
@@ -2288,16 +2288,16 @@ public final class HumanMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCDataError)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCDataError)
         com.mokylin.bleach.protobuf.HumanMessage.GCDataErrorOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCDataError_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCDataError_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCDataError_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCDataError_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HumanMessage.GCDataError.class, com.mokylin.bleach.protobuf.HumanMessage.GCDataError.Builder.class);
       }
@@ -2331,7 +2331,7 @@ public final class HumanMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCDataError_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCDataError_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HumanMessage.GCDataError getDefaultInstanceForType() {
@@ -2389,7 +2389,7 @@ public final class HumanMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCDataError)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCDataError)
     }
 
     static {
@@ -2397,15 +2397,15 @@ public final class HumanMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCDataError)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCDataError)
   }
 
   public interface GCCostEnergyFailedOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCCostEnergyFailed)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCCostEnergyFailed)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code com.mokylin.GCCostEnergyFailed}
+   * Protobuf type {@code com.icewind.GCCostEnergyFailed}
    *
    * <pre>
    **
@@ -2414,7 +2414,7 @@ public final class HumanMessage {
    */
   public static final class GCCostEnergyFailed extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCCostEnergyFailed)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCCostEnergyFailed)
       GCCostEnergyFailedOrBuilder {
     // Use GCCostEnergyFailed.newBuilder() to construct.
     private GCCostEnergyFailed(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -2474,12 +2474,12 @@ public final class HumanMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCCostEnergyFailed_descriptor;
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCCostEnergyFailed_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCCostEnergyFailed_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCCostEnergyFailed_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HumanMessage.GCCostEnergyFailed.class, com.mokylin.bleach.protobuf.HumanMessage.GCCostEnergyFailed.Builder.class);
     }
@@ -2602,7 +2602,7 @@ public final class HumanMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCCostEnergyFailed}
+     * Protobuf type {@code com.icewind.GCCostEnergyFailed}
      *
      * <pre>
      **
@@ -2611,16 +2611,16 @@ public final class HumanMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCCostEnergyFailed)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCCostEnergyFailed)
         com.mokylin.bleach.protobuf.HumanMessage.GCCostEnergyFailedOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCCostEnergyFailed_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCCostEnergyFailed_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCCostEnergyFailed_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCCostEnergyFailed_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HumanMessage.GCCostEnergyFailed.class, com.mokylin.bleach.protobuf.HumanMessage.GCCostEnergyFailed.Builder.class);
       }
@@ -2654,7 +2654,7 @@ public final class HumanMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCCostEnergyFailed_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCCostEnergyFailed_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HumanMessage.GCCostEnergyFailed getDefaultInstanceForType() {
@@ -2712,7 +2712,7 @@ public final class HumanMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCCostEnergyFailed)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCCostEnergyFailed)
     }
 
     static {
@@ -2720,11 +2720,11 @@ public final class HumanMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCCostEnergyFailed)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCCostEnergyFailed)
   }
 
   public interface GCEnergyRecoverInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCEnergyRecoverInfo)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCEnergyRecoverInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2737,7 +2737,7 @@ public final class HumanMessage {
     int getValue();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCEnergyRecoverInfo}
+   * Protobuf type {@code com.icewind.GCEnergyRecoverInfo}
    *
    * <pre>
    **
@@ -2746,7 +2746,7 @@ public final class HumanMessage {
    */
   public static final class GCEnergyRecoverInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCEnergyRecoverInfo)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCEnergyRecoverInfo)
       GCEnergyRecoverInfoOrBuilder {
     // Use GCEnergyRecoverInfo.newBuilder() to construct.
     private GCEnergyRecoverInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -2812,12 +2812,12 @@ public final class HumanMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCEnergyRecoverInfo_descriptor;
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCEnergyRecoverInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCEnergyRecoverInfo_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCEnergyRecoverInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HumanMessage.GCEnergyRecoverInfo.class, com.mokylin.bleach.protobuf.HumanMessage.GCEnergyRecoverInfo.Builder.class);
     }
@@ -2968,7 +2968,7 @@ public final class HumanMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCEnergyRecoverInfo}
+     * Protobuf type {@code com.icewind.GCEnergyRecoverInfo}
      *
      * <pre>
      **
@@ -2977,16 +2977,16 @@ public final class HumanMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCEnergyRecoverInfo)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCEnergyRecoverInfo)
         com.mokylin.bleach.protobuf.HumanMessage.GCEnergyRecoverInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCEnergyRecoverInfo_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCEnergyRecoverInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCEnergyRecoverInfo_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCEnergyRecoverInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HumanMessage.GCEnergyRecoverInfo.class, com.mokylin.bleach.protobuf.HumanMessage.GCEnergyRecoverInfo.Builder.class);
       }
@@ -3022,7 +3022,7 @@ public final class HumanMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCEnergyRecoverInfo_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCEnergyRecoverInfo_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HumanMessage.GCEnergyRecoverInfo getDefaultInstanceForType() {
@@ -3127,7 +3127,7 @@ public final class HumanMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCEnergyRecoverInfo)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCEnergyRecoverInfo)
     }
 
     static {
@@ -3135,15 +3135,15 @@ public final class HumanMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCEnergyRecoverInfo)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCEnergyRecoverInfo)
   }
 
   public interface GCBuyEnergyCountsResetOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCBuyEnergyCountsReset)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCBuyEnergyCountsReset)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code com.mokylin.GCBuyEnergyCountsReset}
+   * Protobuf type {@code com.icewind.GCBuyEnergyCountsReset}
    *
    * <pre>
    **
@@ -3152,7 +3152,7 @@ public final class HumanMessage {
    */
   public static final class GCBuyEnergyCountsReset extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCBuyEnergyCountsReset)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCBuyEnergyCountsReset)
       GCBuyEnergyCountsResetOrBuilder {
     // Use GCBuyEnergyCountsReset.newBuilder() to construct.
     private GCBuyEnergyCountsReset(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -3212,12 +3212,12 @@ public final class HumanMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCBuyEnergyCountsReset_descriptor;
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCBuyEnergyCountsReset_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCBuyEnergyCountsReset_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCBuyEnergyCountsReset_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyCountsReset.class, com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyCountsReset.Builder.class);
     }
@@ -3340,7 +3340,7 @@ public final class HumanMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCBuyEnergyCountsReset}
+     * Protobuf type {@code com.icewind.GCBuyEnergyCountsReset}
      *
      * <pre>
      **
@@ -3349,16 +3349,16 @@ public final class HumanMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCBuyEnergyCountsReset)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCBuyEnergyCountsReset)
         com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyCountsResetOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCBuyEnergyCountsReset_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCBuyEnergyCountsReset_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCBuyEnergyCountsReset_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCBuyEnergyCountsReset_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyCountsReset.class, com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyCountsReset.Builder.class);
       }
@@ -3392,7 +3392,7 @@ public final class HumanMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCBuyEnergyCountsReset_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCBuyEnergyCountsReset_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyCountsReset getDefaultInstanceForType() {
@@ -3450,7 +3450,7 @@ public final class HumanMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCBuyEnergyCountsReset)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCBuyEnergyCountsReset)
     }
 
     static {
@@ -3458,11 +3458,11 @@ public final class HumanMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCBuyEnergyCountsReset)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCBuyEnergyCountsReset)
   }
 
   public interface GCBuyEnergyAckOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCBuyEnergyAck)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCBuyEnergyAck)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3483,7 +3483,7 @@ public final class HumanMessage {
     int getAddedEnergy();
 
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChangeInfo = 2;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChangeInfo = 2;</code>
      *
      * <pre>
      ** 消耗的钻石数量 
@@ -3491,7 +3491,7 @@ public final class HumanMessage {
      */
     boolean hasCurrencyChangeInfo();
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChangeInfo = 2;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChangeInfo = 2;</code>
      *
      * <pre>
      ** 消耗的钻石数量 
@@ -3499,7 +3499,7 @@ public final class HumanMessage {
      */
     com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo getCurrencyChangeInfo();
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChangeInfo = 2;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChangeInfo = 2;</code>
      *
      * <pre>
      ** 消耗的钻石数量 
@@ -3508,7 +3508,7 @@ public final class HumanMessage {
     com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfoOrBuilder getCurrencyChangeInfoOrBuilder();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCBuyEnergyAck}
+   * Protobuf type {@code com.icewind.GCBuyEnergyAck}
    *
    * <pre>
    **
@@ -3517,7 +3517,7 @@ public final class HumanMessage {
    */
   public static final class GCBuyEnergyAck extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCBuyEnergyAck)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCBuyEnergyAck)
       GCBuyEnergyAckOrBuilder {
     // Use GCBuyEnergyAck.newBuilder() to construct.
     private GCBuyEnergyAck(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -3596,12 +3596,12 @@ public final class HumanMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCBuyEnergyAck_descriptor;
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCBuyEnergyAck_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCBuyEnergyAck_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCBuyEnergyAck_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyAck.class, com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyAck.Builder.class);
     }
@@ -3648,7 +3648,7 @@ public final class HumanMessage {
     public static final int CURRENCYCHANGEINFO_FIELD_NUMBER = 2;
     private com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo currencyChangeInfo_;
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChangeInfo = 2;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChangeInfo = 2;</code>
      *
      * <pre>
      ** 消耗的钻石数量 
@@ -3658,7 +3658,7 @@ public final class HumanMessage {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChangeInfo = 2;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChangeInfo = 2;</code>
      *
      * <pre>
      ** 消耗的钻石数量 
@@ -3668,7 +3668,7 @@ public final class HumanMessage {
       return currencyChangeInfo_;
     }
     /**
-     * <code>required .com.mokylin.CurrencyChangeInfo currencyChangeInfo = 2;</code>
+     * <code>required .com.icewind.CurrencyChangeInfo currencyChangeInfo = 2;</code>
      *
      * <pre>
      ** 消耗的钻石数量 
@@ -3809,7 +3809,7 @@ public final class HumanMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCBuyEnergyAck}
+     * Protobuf type {@code com.icewind.GCBuyEnergyAck}
      *
      * <pre>
      **
@@ -3818,16 +3818,16 @@ public final class HumanMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCBuyEnergyAck)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCBuyEnergyAck)
         com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyAckOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCBuyEnergyAck_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCBuyEnergyAck_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCBuyEnergyAck_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCBuyEnergyAck_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyAck.class, com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyAck.Builder.class);
       }
@@ -3870,7 +3870,7 @@ public final class HumanMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCBuyEnergyAck_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCBuyEnergyAck_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyAck getDefaultInstanceForType() {
@@ -4014,7 +4014,7 @@ public final class HumanMessage {
       private com.google.protobuf.SingleFieldBuilder<
           com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo, com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo.Builder, com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfoOrBuilder> currencyChangeInfoBuilder_;
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChangeInfo = 2;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChangeInfo = 2;</code>
        *
        * <pre>
        ** 消耗的钻石数量 
@@ -4024,7 +4024,7 @@ public final class HumanMessage {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChangeInfo = 2;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChangeInfo = 2;</code>
        *
        * <pre>
        ** 消耗的钻石数量 
@@ -4038,7 +4038,7 @@ public final class HumanMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChangeInfo = 2;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChangeInfo = 2;</code>
        *
        * <pre>
        ** 消耗的钻石数量 
@@ -4058,7 +4058,7 @@ public final class HumanMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChangeInfo = 2;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChangeInfo = 2;</code>
        *
        * <pre>
        ** 消耗的钻石数量 
@@ -4076,7 +4076,7 @@ public final class HumanMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChangeInfo = 2;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChangeInfo = 2;</code>
        *
        * <pre>
        ** 消耗的钻石数量 
@@ -4099,7 +4099,7 @@ public final class HumanMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChangeInfo = 2;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChangeInfo = 2;</code>
        *
        * <pre>
        ** 消耗的钻石数量 
@@ -4116,7 +4116,7 @@ public final class HumanMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChangeInfo = 2;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChangeInfo = 2;</code>
        *
        * <pre>
        ** 消耗的钻石数量 
@@ -4128,7 +4128,7 @@ public final class HumanMessage {
         return getCurrencyChangeInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChangeInfo = 2;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChangeInfo = 2;</code>
        *
        * <pre>
        ** 消耗的钻石数量 
@@ -4142,7 +4142,7 @@ public final class HumanMessage {
         }
       }
       /**
-       * <code>required .com.mokylin.CurrencyChangeInfo currencyChangeInfo = 2;</code>
+       * <code>required .com.icewind.CurrencyChangeInfo currencyChangeInfo = 2;</code>
        *
        * <pre>
        ** 消耗的钻石数量 
@@ -4162,7 +4162,7 @@ public final class HumanMessage {
         return currencyChangeInfoBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCBuyEnergyAck)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCBuyEnergyAck)
     }
 
     static {
@@ -4170,15 +4170,15 @@ public final class HumanMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCBuyEnergyAck)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCBuyEnergyAck)
   }
 
   public interface GCBuyEnergyNegOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCBuyEnergyNeg)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCBuyEnergyNeg)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .com.mokylin.BuyEnergyFail failType = 1;</code>
+     * <code>required .com.icewind.BuyEnergyFail failType = 1;</code>
      *
      * <pre>
      ** 体力购买结果 
@@ -4186,7 +4186,7 @@ public final class HumanMessage {
      */
     boolean hasFailType();
     /**
-     * <code>required .com.mokylin.BuyEnergyFail failType = 1;</code>
+     * <code>required .com.icewind.BuyEnergyFail failType = 1;</code>
      *
      * <pre>
      ** 体力购买结果 
@@ -4195,7 +4195,7 @@ public final class HumanMessage {
     com.mokylin.bleach.protobuf.HumanMessage.BuyEnergyFail getFailType();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCBuyEnergyNeg}
+   * Protobuf type {@code com.icewind.GCBuyEnergyNeg}
    *
    * <pre>
    **
@@ -4204,7 +4204,7 @@ public final class HumanMessage {
    */
   public static final class GCBuyEnergyNeg extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCBuyEnergyNeg)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCBuyEnergyNeg)
       GCBuyEnergyNegOrBuilder {
     // Use GCBuyEnergyNeg.newBuilder() to construct.
     private GCBuyEnergyNeg(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -4276,12 +4276,12 @@ public final class HumanMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCBuyEnergyNeg_descriptor;
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCBuyEnergyNeg_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCBuyEnergyNeg_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCBuyEnergyNeg_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyNeg.class, com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyNeg.Builder.class);
     }
@@ -4305,7 +4305,7 @@ public final class HumanMessage {
     public static final int FAILTYPE_FIELD_NUMBER = 1;
     private com.mokylin.bleach.protobuf.HumanMessage.BuyEnergyFail failType_;
     /**
-     * <code>required .com.mokylin.BuyEnergyFail failType = 1;</code>
+     * <code>required .com.icewind.BuyEnergyFail failType = 1;</code>
      *
      * <pre>
      ** 体力购买结果 
@@ -4315,7 +4315,7 @@ public final class HumanMessage {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .com.mokylin.BuyEnergyFail failType = 1;</code>
+     * <code>required .com.icewind.BuyEnergyFail failType = 1;</code>
      *
      * <pre>
      ** 体力购买结果 
@@ -4440,7 +4440,7 @@ public final class HumanMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCBuyEnergyNeg}
+     * Protobuf type {@code com.icewind.GCBuyEnergyNeg}
      *
      * <pre>
      **
@@ -4449,16 +4449,16 @@ public final class HumanMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCBuyEnergyNeg)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCBuyEnergyNeg)
         com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyNegOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCBuyEnergyNeg_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCBuyEnergyNeg_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCBuyEnergyNeg_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCBuyEnergyNeg_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyNeg.class, com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyNeg.Builder.class);
       }
@@ -4494,7 +4494,7 @@ public final class HumanMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCBuyEnergyNeg_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCBuyEnergyNeg_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyNeg getDefaultInstanceForType() {
@@ -4569,7 +4569,7 @@ public final class HumanMessage {
 
       private com.mokylin.bleach.protobuf.HumanMessage.BuyEnergyFail failType_ = com.mokylin.bleach.protobuf.HumanMessage.BuyEnergyFail.FAIL_DIAMOND_NOT_ENOUGH;
       /**
-       * <code>required .com.mokylin.BuyEnergyFail failType = 1;</code>
+       * <code>required .com.icewind.BuyEnergyFail failType = 1;</code>
        *
        * <pre>
        ** 体力购买结果 
@@ -4579,7 +4579,7 @@ public final class HumanMessage {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .com.mokylin.BuyEnergyFail failType = 1;</code>
+       * <code>required .com.icewind.BuyEnergyFail failType = 1;</code>
        *
        * <pre>
        ** 体力购买结果 
@@ -4589,7 +4589,7 @@ public final class HumanMessage {
         return failType_;
       }
       /**
-       * <code>required .com.mokylin.BuyEnergyFail failType = 1;</code>
+       * <code>required .com.icewind.BuyEnergyFail failType = 1;</code>
        *
        * <pre>
        ** 体力购买结果 
@@ -4605,7 +4605,7 @@ public final class HumanMessage {
         return this;
       }
       /**
-       * <code>required .com.mokylin.BuyEnergyFail failType = 1;</code>
+       * <code>required .com.icewind.BuyEnergyFail failType = 1;</code>
        *
        * <pre>
        ** 体力购买结果 
@@ -4618,7 +4618,7 @@ public final class HumanMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCBuyEnergyNeg)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCBuyEnergyNeg)
     }
 
     static {
@@ -4626,11 +4626,11 @@ public final class HumanMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCBuyEnergyNeg)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCBuyEnergyNeg)
   }
 
   public interface GCVipLevelUpOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCVipLevelUp)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCVipLevelUp)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4660,7 +4660,7 @@ public final class HumanMessage {
     long getVipExp();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCVipLevelUp}
+   * Protobuf type {@code com.icewind.GCVipLevelUp}
    *
    * <pre>
    **
@@ -4669,7 +4669,7 @@ public final class HumanMessage {
    */
   public static final class GCVipLevelUp extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCVipLevelUp)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCVipLevelUp)
       GCVipLevelUpOrBuilder {
     // Use GCVipLevelUp.newBuilder() to construct.
     private GCVipLevelUp(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -4740,12 +4740,12 @@ public final class HumanMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCVipLevelUp_descriptor;
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCVipLevelUp_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCVipLevelUp_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCVipLevelUp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HumanMessage.GCVipLevelUp.class, com.mokylin.bleach.protobuf.HumanMessage.GCVipLevelUp.Builder.class);
     }
@@ -4931,7 +4931,7 @@ public final class HumanMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCVipLevelUp}
+     * Protobuf type {@code com.icewind.GCVipLevelUp}
      *
      * <pre>
      **
@@ -4940,16 +4940,16 @@ public final class HumanMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCVipLevelUp)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCVipLevelUp)
         com.mokylin.bleach.protobuf.HumanMessage.GCVipLevelUpOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCVipLevelUp_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCVipLevelUp_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCVipLevelUp_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCVipLevelUp_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HumanMessage.GCVipLevelUp.class, com.mokylin.bleach.protobuf.HumanMessage.GCVipLevelUp.Builder.class);
       }
@@ -4987,7 +4987,7 @@ public final class HumanMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCVipLevelUp_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCVipLevelUp_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HumanMessage.GCVipLevelUp getDefaultInstanceForType() {
@@ -5151,7 +5151,7 @@ public final class HumanMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCVipLevelUp)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCVipLevelUp)
     }
 
     static {
@@ -5159,11 +5159,11 @@ public final class HumanMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCVipLevelUp)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCVipLevelUp)
   }
 
   public interface GCHumanLevelUpOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.mokylin.GCHumanLevelUp)
+      // @@protoc_insertion_point(interface_extends:com.icewind.GCHumanLevelUp)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -5193,7 +5193,7 @@ public final class HumanMessage {
     long getExp();
   }
   /**
-   * Protobuf type {@code com.mokylin.GCHumanLevelUp}
+   * Protobuf type {@code com.icewind.GCHumanLevelUp}
    *
    * <pre>
    **
@@ -5202,7 +5202,7 @@ public final class HumanMessage {
    */
   public static final class GCHumanLevelUp extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.mokylin.GCHumanLevelUp)
+      // @@protoc_insertion_point(message_implements:com.icewind.GCHumanLevelUp)
       GCHumanLevelUpOrBuilder {
     // Use GCHumanLevelUp.newBuilder() to construct.
     private GCHumanLevelUp(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
@@ -5273,12 +5273,12 @@ public final class HumanMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCHumanLevelUp_descriptor;
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCHumanLevelUp_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCHumanLevelUp_fieldAccessorTable
+      return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCHumanLevelUp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.mokylin.bleach.protobuf.HumanMessage.GCHumanLevelUp.class, com.mokylin.bleach.protobuf.HumanMessage.GCHumanLevelUp.Builder.class);
     }
@@ -5464,7 +5464,7 @@ public final class HumanMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code com.mokylin.GCHumanLevelUp}
+     * Protobuf type {@code com.icewind.GCHumanLevelUp}
      *
      * <pre>
      **
@@ -5473,16 +5473,16 @@ public final class HumanMessage {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.mokylin.GCHumanLevelUp)
+        // @@protoc_insertion_point(builder_implements:com.icewind.GCHumanLevelUp)
         com.mokylin.bleach.protobuf.HumanMessage.GCHumanLevelUpOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCHumanLevelUp_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCHumanLevelUp_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCHumanLevelUp_fieldAccessorTable
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCHumanLevelUp_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.mokylin.bleach.protobuf.HumanMessage.GCHumanLevelUp.class, com.mokylin.bleach.protobuf.HumanMessage.GCHumanLevelUp.Builder.class);
       }
@@ -5520,7 +5520,7 @@ public final class HumanMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_mokylin_GCHumanLevelUp_descriptor;
+        return com.mokylin.bleach.protobuf.HumanMessage.internal_static_com_icewind_GCHumanLevelUp_descriptor;
       }
 
       public com.mokylin.bleach.protobuf.HumanMessage.GCHumanLevelUp getDefaultInstanceForType() {
@@ -5684,7 +5684,7 @@ public final class HumanMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.GCHumanLevelUp)
+      // @@protoc_insertion_point(builder_scope:com.icewind.GCHumanLevelUp)
     }
 
     static {
@@ -5692,59 +5692,59 @@ public final class HumanMessage {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.GCHumanLevelUp)
+    // @@protoc_insertion_point(class_scope:com.icewind.GCHumanLevelUp)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_CGBuyEnergy_descriptor;
+    internal_static_com_icewind_CGBuyEnergy_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_CGBuyEnergy_fieldAccessorTable;
+      internal_static_com_icewind_CGBuyEnergy_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCHumanDetailInfo_descriptor;
+    internal_static_com_icewind_GCHumanDetailInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCHumanDetailInfo_fieldAccessorTable;
+      internal_static_com_icewind_GCHumanDetailInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCDataError_descriptor;
+    internal_static_com_icewind_GCDataError_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCDataError_fieldAccessorTable;
+      internal_static_com_icewind_GCDataError_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCCostEnergyFailed_descriptor;
+    internal_static_com_icewind_GCCostEnergyFailed_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCCostEnergyFailed_fieldAccessorTable;
+      internal_static_com_icewind_GCCostEnergyFailed_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCEnergyRecoverInfo_descriptor;
+    internal_static_com_icewind_GCEnergyRecoverInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCEnergyRecoverInfo_fieldAccessorTable;
+      internal_static_com_icewind_GCEnergyRecoverInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCBuyEnergyCountsReset_descriptor;
+    internal_static_com_icewind_GCBuyEnergyCountsReset_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCBuyEnergyCountsReset_fieldAccessorTable;
+      internal_static_com_icewind_GCBuyEnergyCountsReset_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCBuyEnergyAck_descriptor;
+    internal_static_com_icewind_GCBuyEnergyAck_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCBuyEnergyAck_fieldAccessorTable;
+      internal_static_com_icewind_GCBuyEnergyAck_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCBuyEnergyNeg_descriptor;
+    internal_static_com_icewind_GCBuyEnergyNeg_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCBuyEnergyNeg_fieldAccessorTable;
+      internal_static_com_icewind_GCBuyEnergyNeg_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCVipLevelUp_descriptor;
+    internal_static_com_icewind_GCVipLevelUp_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCVipLevelUp_fieldAccessorTable;
+      internal_static_com_icewind_GCVipLevelUp_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_mokylin_GCHumanLevelUp_descriptor;
+    internal_static_com_icewind_GCHumanLevelUp_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_mokylin_GCHumanLevelUp_fieldAccessorTable;
+      internal_static_com_icewind_GCHumanLevelUp_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5754,7 +5754,7 @@ public final class HumanMessage {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\013Human.proto\022\013com.mokylin\032\021MessageType." +
+      "\n\013Human.proto\022\013com.icewind\032\021MessageType." +
       "proto\032\014Common.proto\"$\n\013CGBuyEnergy\022\016\n\006co" +
       "unts\030\001 \002(\005:\005\210\265\030\365\003\"\177\n\021GCHumanDetailInfo\022\n" +
       "\n\002id\030\001 \002(\003\022\014\n\004name\030\002 \002(\t\022\017\n\007channel\030\003 \002(" +
@@ -5764,9 +5764,9 @@ public final class HumanMessage {
       "CEnergyRecoverInfo\022\r\n\005value\030\001 \002(\005:\004\220\265\030i\"" +
       "\036\n\026GCBuyEnergyCountsReset:\004\220\265\030k\"h\n\016GCBuy" +
       "EnergyAck\022\023\n\013addedEnergy\030\001 \002(\005\022;\n\022curren",
-      "cyChangeInfo\030\002 \002(\0132\037.com.mokylin.Currenc" +
+      "cyChangeInfo\030\002 \002(\0132\037.com.icewind.Currenc" +
       "yChangeInfo:\004\220\265\030g\"D\n\016GCBuyEnergyNeg\022,\n\010f" +
-      "ailType\030\001 \002(\0162\032.com.mokylin.BuyEnergyFai" +
+      "ailType\030\001 \002(\0162\032.com.icewind.BuyEnergyFai" +
       "l:\004\220\265\030h\"6\n\014GCVipLevelUp\022\020\n\010vipLevel\030\001 \002(" +
       "\005\022\016\n\006vipExp\030\002 \002(\003:\004\220\265\030l\"2\n\016GCHumanLevelU" +
       "p\022\r\n\005level\030\001 \002(\005\022\013\n\003exp\030\002 \002(\003:\004\220\265\030m*_\n\rB" +
@@ -5786,84 +5786,84 @@ public final class HumanMessage {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.mokylin.bleach.protobuf.MessageType.getDescriptor(),
+          com.icewind.MessageType.getDescriptor(),
           com.mokylin.bleach.protobuf.CommonMessage.getDescriptor(),
         }, assigner);
-    internal_static_com_mokylin_CGBuyEnergy_descriptor =
+    internal_static_com_icewind_CGBuyEnergy_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_mokylin_CGBuyEnergy_fieldAccessorTable = new
+    internal_static_com_icewind_CGBuyEnergy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_CGBuyEnergy_descriptor,
+        internal_static_com_icewind_CGBuyEnergy_descriptor,
         new java.lang.String[] { "Counts", });
-    internal_static_com_mokylin_GCHumanDetailInfo_descriptor =
+    internal_static_com_icewind_GCHumanDetailInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_mokylin_GCHumanDetailInfo_fieldAccessorTable = new
+    internal_static_com_icewind_GCHumanDetailInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCHumanDetailInfo_descriptor,
+        internal_static_com_icewind_GCHumanDetailInfo_descriptor,
         new java.lang.String[] { "Id", "Name", "Channel", "AccountId", "LongProp", "CurrencyProp", });
-    internal_static_com_mokylin_GCDataError_descriptor =
+    internal_static_com_icewind_GCDataError_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_com_mokylin_GCDataError_fieldAccessorTable = new
+    internal_static_com_icewind_GCDataError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCDataError_descriptor,
+        internal_static_com_icewind_GCDataError_descriptor,
         new java.lang.String[] { });
-    internal_static_com_mokylin_GCCostEnergyFailed_descriptor =
+    internal_static_com_icewind_GCCostEnergyFailed_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_com_mokylin_GCCostEnergyFailed_fieldAccessorTable = new
+    internal_static_com_icewind_GCCostEnergyFailed_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCCostEnergyFailed_descriptor,
+        internal_static_com_icewind_GCCostEnergyFailed_descriptor,
         new java.lang.String[] { });
-    internal_static_com_mokylin_GCEnergyRecoverInfo_descriptor =
+    internal_static_com_icewind_GCEnergyRecoverInfo_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_com_mokylin_GCEnergyRecoverInfo_fieldAccessorTable = new
+    internal_static_com_icewind_GCEnergyRecoverInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCEnergyRecoverInfo_descriptor,
+        internal_static_com_icewind_GCEnergyRecoverInfo_descriptor,
         new java.lang.String[] { "Value", });
-    internal_static_com_mokylin_GCBuyEnergyCountsReset_descriptor =
+    internal_static_com_icewind_GCBuyEnergyCountsReset_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_com_mokylin_GCBuyEnergyCountsReset_fieldAccessorTable = new
+    internal_static_com_icewind_GCBuyEnergyCountsReset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCBuyEnergyCountsReset_descriptor,
+        internal_static_com_icewind_GCBuyEnergyCountsReset_descriptor,
         new java.lang.String[] { });
-    internal_static_com_mokylin_GCBuyEnergyAck_descriptor =
+    internal_static_com_icewind_GCBuyEnergyAck_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_com_mokylin_GCBuyEnergyAck_fieldAccessorTable = new
+    internal_static_com_icewind_GCBuyEnergyAck_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCBuyEnergyAck_descriptor,
+        internal_static_com_icewind_GCBuyEnergyAck_descriptor,
         new java.lang.String[] { "AddedEnergy", "CurrencyChangeInfo", });
-    internal_static_com_mokylin_GCBuyEnergyNeg_descriptor =
+    internal_static_com_icewind_GCBuyEnergyNeg_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_com_mokylin_GCBuyEnergyNeg_fieldAccessorTable = new
+    internal_static_com_icewind_GCBuyEnergyNeg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCBuyEnergyNeg_descriptor,
+        internal_static_com_icewind_GCBuyEnergyNeg_descriptor,
         new java.lang.String[] { "FailType", });
-    internal_static_com_mokylin_GCVipLevelUp_descriptor =
+    internal_static_com_icewind_GCVipLevelUp_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_com_mokylin_GCVipLevelUp_fieldAccessorTable = new
+    internal_static_com_icewind_GCVipLevelUp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCVipLevelUp_descriptor,
+        internal_static_com_icewind_GCVipLevelUp_descriptor,
         new java.lang.String[] { "VipLevel", "VipExp", });
-    internal_static_com_mokylin_GCHumanLevelUp_descriptor =
+    internal_static_com_icewind_GCHumanLevelUp_descriptor =
       getDescriptor().getMessageTypes().get(9);
-    internal_static_com_mokylin_GCHumanLevelUp_fieldAccessorTable = new
+    internal_static_com_icewind_GCHumanLevelUp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_mokylin_GCHumanLevelUp_descriptor,
+        internal_static_com_icewind_GCHumanLevelUp_descriptor,
         new java.lang.String[] { "Level", "Exp", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.cgMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
+    registry.add(com.icewind.MessageType.gcMessageType);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.mokylin.bleach.protobuf.MessageType.getDescriptor();
+    com.icewind.MessageType.getDescriptor();
     com.mokylin.bleach.protobuf.CommonMessage.getDescriptor();
   }
 
