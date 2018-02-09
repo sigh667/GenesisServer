@@ -1,5 +1,6 @@
 package com.mokylin.td.network2client.core.session;
 
+import com.google.protobuf.GeneratedMessage;
 import com.mokylin.bleach.core.net.msg.SCMessage;
 
 /**
@@ -15,34 +16,38 @@ public interface IClientSession {
      * 给客户端发送消息
      * @param msg
      */
-    public void sendMessage(SCMessage msg);
+    void sendMessage(SCMessage msg);
+
+    void sendMessage(GeneratedMessage msg);
+
+    <T extends GeneratedMessage.Builder<T>> void sendMessage(GeneratedMessage.Builder<T> msg);
 
     /**
      * 断开与客户端的连接
      */
-    public void disconnect();
+    void disconnect();
 
     /**
      * 此连接在本服中的唯一ID
      * @return
      */
-    public long getSessionId();
+    long getSessionId();
 
     /**
      * 此连接要登入的GameServer的ID
      * @return
      */
-    public int getTargetGameServerId();
+    int getTargetGameServerId();
 
     /**
      * 设置此连接要登入的GameServer的ID
      * @param gameServerId
      */
-    public void setTargetGameServerId(int gameServerId);
+    void setTargetGameServerId(int gameServerId);
 
-    public long getUuid();
+    long getUuid();
 
-    public void setUuid(long uuid);
+    void setUuid(long uuid);
 
     /**
      * 连接是否已断开

@@ -4,12 +4,21 @@ import com.mokylin.bleach.protobuf.LoginMessage;
 import com.mokylin.td.loginserver.core.process.IClientMsgHandler;
 import com.mokylin.td.network2client.core.session.IClientSession;
 
+/**
+ * @description: 客户端登陆
+ * @author: Joey
+ * @create: 2018-02-08 18:57
+ **/
 public class CGLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
 
 
     @Override
     public void handle(IClientSession session, LoginMessage.CSLogin cgLogin) {
-
+        final String accountId = cgLogin.getAccountId();
+        final String channel = cgLogin.getChannel();
+        final String key = cgLogin.getKey();
+        final String macAddress = cgLogin.getMacAddress();
+        
     }
 
 //    @Override

@@ -1,5 +1,6 @@
 package com.mokylin.td.network2client.core.handle;
 
+import com.google.protobuf.GeneratedMessage;
 import com.mokylin.bleach.core.net.msg.CSMessage;
 import com.mokylin.bleach.core.net.msg.SCMessage;
 import com.mokylin.bleach.core.time.TimeService;
@@ -135,6 +136,19 @@ public class ServerIoHandler extends ChannelInboundHandlerAdapter {
                         msg.messageType, MessageType.GCMessageType.valueOf(msg.messageType));
             }
             ctx.writeAndFlush(msg);
+        }
+
+        @Override
+        public void sendMessage(GeneratedMessage msg) {
+            SCMessage scmsg = new SCMessage(
+                    msg.getDescriptorForType().getOptions().getExtension(MessageType.gcMessageType)
+                            .getNumber(), msg.toByteArray());
+            sendMessage(scmsg);
+        }
+
+        @Override
+        public <T extends GeneratedMessage.Builder<T>> void sendMessage(GeneratedMessage.Builder<T> msg) {
+            sendMessage((GeneratedMessage) msg.build());
         }
 
         @Override

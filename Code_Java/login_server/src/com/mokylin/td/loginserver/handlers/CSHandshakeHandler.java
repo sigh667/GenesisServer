@@ -1,5 +1,6 @@
 package com.mokylin.td.loginserver.handlers;
 
+import com.mokylin.bleach.core.util.RandomUtil;
 import com.mokylin.bleach.protobuf.LoginMessage;
 import com.mokylin.td.loginserver.core.process.IClientMsgHandler;
 import com.mokylin.td.network2client.core.session.IClientSession;
@@ -12,6 +13,9 @@ import com.mokylin.td.network2client.core.session.IClientSession;
 public class CSHandshakeHandler implements IClientMsgHandler<LoginMessage.CSHandshake> {
     @Override
     public void handle(IClientSession session, LoginMessage.CSHandshake csHandshake) {
-
+        LoginMessage.SCHandshakeReply.Builder builder = LoginMessage.SCHandshakeReply.newBuilder();
+        int indexBegin = RandomUtil.nextInt(256);
+        builder.setIndexBegin(indexBegin);
+        session.sendMessage(builder);
     }
 }
