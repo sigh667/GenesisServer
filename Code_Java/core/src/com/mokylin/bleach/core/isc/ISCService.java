@@ -9,7 +9,7 @@ import com.mokylin.bleach.core.isc.msg.Register;
 import com.mokylin.bleach.core.isc.remote.IRemote;
 import com.mokylin.bleach.core.isc.remote.RemoteServer;
 import com.mokylin.bleach.core.isc.remote.actorrefs.IActorPackages;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType.MessageTarget;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

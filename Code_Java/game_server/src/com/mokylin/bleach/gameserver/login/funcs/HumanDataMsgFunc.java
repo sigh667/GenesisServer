@@ -10,7 +10,7 @@ import com.mokylin.bleach.gameserver.player.CreatePlayerActorHelper;
 import com.mokylin.bleach.gameserver.player.LoginStatus;
 import com.mokylin.bleach.gameserver.player.Player;
 import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType.MessageTarget;
 import com.mokylin.bleach.servermsg.gameserver.HumanDataMsg;
 
 /**

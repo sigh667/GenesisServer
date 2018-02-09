@@ -1,4 +1,4 @@
-package com.icewind;
+package com.icewind.protobuf;
 import "google/protobuf/descriptor.proto";
 option java_outer_classname = "MessageType";
 

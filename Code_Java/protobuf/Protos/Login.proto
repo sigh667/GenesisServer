@@ -1,4 +1,4 @@
-package com.icewind;
+package com.icewind.protobuf;
 import "MessageType.proto";
 option java_outer_classname = "LoginMessage";
 

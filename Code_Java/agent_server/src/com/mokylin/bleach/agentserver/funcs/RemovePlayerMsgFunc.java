@@ -4,7 +4,7 @@ import com.mokylin.bleach.agentserver.core.session.AgentClientSessions;
 import com.mokylin.bleach.core.isc.remote.IRemote;
 import com.mokylin.bleach.core.msgfunc.MsgArgs;
 import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType.MessageTarget;
 import com.mokylin.bleach.servermsg.agentserver.RemovePlayerMsg;
 import com.mokylin.td.network2client.core.session.IClientSession;
 

@@ -10,7 +10,7 @@ import com.mokylin.bleach.agentserver.core.session.AgentClientSessions;
 import com.mokylin.bleach.core.isc.session.ISession;
 import com.mokylin.bleach.core.net.msg.CSMessage;
 import com.mokylin.bleach.core.net.msg.CSSMessage;
-import com.mokylin.bleach.protobuf.MessageType;
+import com.icewind.protobuf.MessageType;
 import com.mokylin.bleach.protobuf.agentserver.AgentMessage.CGGameServerInfo;
 import com.mokylin.bleach.servermsg.gameserver.PlayerConnected;
 import com.mokylin.td.network2client.core.handle.INettyMessageHandler;

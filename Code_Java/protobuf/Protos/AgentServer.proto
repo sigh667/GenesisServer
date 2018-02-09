@@ -1,6 +1,6 @@
-package com.icewind;
+package com.icewind.protobuf;
 import "MessageType.proto";
-option java_package = "com.mokylin.bleach.protobuf.agentserver";
+option java_package = "com.icewind.protobuf.agentserver";
 option java_outer_classname = "AgentMessage";
 
 // 测试消息

@@ -1,7 +1,7 @@
 package com.mokylin.bleach.servermsg.loginserver;
 
 import com.mokylin.bleach.core.isc.msg.IMessage;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType.MessageTarget;
 
 public class PlayerLogout implements IMessage {
 

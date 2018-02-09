@@ -1,9 +1,9 @@
 package com.mokylin.bleach.core.net.msg;
 
 import com.mokylin.bleach.core.isc.msg.IMessage;
-import com.mokylin.bleach.protobuf.MessageType;
-import com.mokylin.bleach.protobuf.MessageType.CGMessageType;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType;
+import com.icewind.protobuf.MessageType.CGMessageType;
+import com.icewind.protobuf.MessageType.MessageTarget;
 
 /**
  * 经由网关转发的客户端消息

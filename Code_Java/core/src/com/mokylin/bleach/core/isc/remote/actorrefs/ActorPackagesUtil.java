@@ -1,17 +1,15 @@
 package com.mokylin.bleach.core.isc.remote.actorrefs;
 
+import akka.actor.UntypedActor;
 import com.google.common.collect.ImmutableMap;
-
 import com.mokylin.bleach.core.isc.remote.actorrefs.annotation.MessageAcception;
 import com.mokylin.bleach.core.isc.remote.actorrefs.exception.MessageTargetDuplicatedException;
 import com.mokylin.bleach.core.util.PackageUtil;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType.MessageTarget;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
-import akka.actor.UntypedActor;
 
 import static com.google.common.base.Preconditions.checkArgument;
 

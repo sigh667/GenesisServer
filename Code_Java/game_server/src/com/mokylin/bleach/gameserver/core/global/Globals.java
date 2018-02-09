@@ -43,7 +43,7 @@ import com.mokylin.bleach.gameserver.hero.group.HeroGroupService;
 import com.mokylin.bleach.gameserver.hero.star.HeroStarService;
 import com.mokylin.bleach.gameserver.item.ItemRelatedTemplateBufferData;
 import com.mokylin.bleach.gameserver.shop.ShopRelatedTemplateBufferData;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType.MessageTarget;
 
 import org.apache.commons.lang3.tuple.Pair;
 

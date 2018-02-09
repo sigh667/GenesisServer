@@ -1,6 +1,6 @@
 package com.mokylin.bleach.core.isc.remote.actorrefs.annotation;
 
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType.MessageTarget;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

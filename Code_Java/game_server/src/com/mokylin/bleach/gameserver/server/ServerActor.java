@@ -32,7 +32,7 @@ import com.mokylin.bleach.gameserver.core.serverinit.ServerInitObject;
 import com.mokylin.bleach.gameserver.player.PlayerManagerActor;
 import com.mokylin.bleach.gameserver.scene.SceneActor;
 import com.mokylin.bleach.gameserver.server.init.ServerActorInitResult;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType.MessageTarget;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

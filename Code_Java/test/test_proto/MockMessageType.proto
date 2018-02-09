@@ -1,6 +1,6 @@
 package com.mokylin.test;
 import "google/protobuf/descriptor.proto";
-option java_package = "com.mokylin.bleach.test.protobuf";
+option java_package = "com.icewind.test.protobuf";
 option java_outer_classname = "MockMessageType";
 
 extend google.protobuf.MessageOptions{

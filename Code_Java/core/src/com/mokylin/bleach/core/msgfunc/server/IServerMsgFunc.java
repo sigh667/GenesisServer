@@ -2,7 +2,7 @@ package com.mokylin.bleach.core.msgfunc.server;
 
 import com.mokylin.bleach.core.isc.remote.IRemote;
 import com.mokylin.bleach.core.msgfunc.MsgArgs;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType.MessageTarget;
 
 public interface IServerMsgFunc<T, Arg1 extends MsgArgs, Arg2 extends MsgArgs> {
 

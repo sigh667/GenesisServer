@@ -6,7 +6,7 @@ import com.mokylin.bleach.core.isc.msg.IMessage;
 import com.mokylin.bleach.core.isc.msg.ToPlayerMessage;
 import com.mokylin.bleach.core.isc.remote.IRemote;
 import com.mokylin.bleach.core.net.msg.SCMessage;
-import com.mokylin.bleach.protobuf.MessageType;
+import com.icewind.protobuf.MessageType;
 
 public class PlayerSession implements ISession {
 

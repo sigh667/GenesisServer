@@ -1,6 +1,6 @@
 package com.mokylin.bleach.core.msgfunc.target;
 
-import com.mokylin.bleach.protobuf.MessageType;
+import com.icewind.protobuf.MessageType;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -7,7 +7,7 @@ import com.mokylin.bleach.core.function.FunctionUtil;
 import com.mokylin.bleach.core.msgfunc.MsgArgs;
 import com.mokylin.bleach.core.msgfunc.exception.MessageFunctionParseException;
 import com.mokylin.bleach.core.util.PackageUtil;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType.MessageTarget;
 
 import org.apache.commons.lang3.reflect.TypeUtils;
 

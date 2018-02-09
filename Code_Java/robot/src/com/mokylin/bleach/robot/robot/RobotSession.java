@@ -4,7 +4,7 @@ import com.google.protobuf.GeneratedMessage;
 
 import com.mokylin.bleach.core.isc.session.ISession;
 import com.mokylin.bleach.core.net.msg.SCMessage;
-import com.mokylin.bleach.protobuf.MessageType;
+import com.icewind.protobuf.MessageType;
 import com.mokylin.bleach.robot.login.Status;
 
 import org.slf4j.Logger;

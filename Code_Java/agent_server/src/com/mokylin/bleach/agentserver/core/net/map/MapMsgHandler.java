@@ -5,7 +5,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 import com.mokylin.bleach.agentserver.core.session.AgentClientSessions;
 import com.mokylin.bleach.core.net.msg.BaseMessage;
 import com.mokylin.bleach.core.net.msg.SCMessage;
-import com.mokylin.bleach.protobuf.MessageType.MGMessageType;
+import com.icewind.protobuf.MessageType.MGMessageType;
 import com.mokylin.bleach.protobuf.agentserver.AgentMessage.MGBroadCast;
 
 import org.slf4j.Logger;

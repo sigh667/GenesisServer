@@ -7,7 +7,7 @@ import com.mokylin.bleach.gameserver.login.protocol.LoadHumanDataFailed;
 import com.mokylin.bleach.gameserver.player.LoginStatus;
 import com.mokylin.bleach.gameserver.player.Player;
 import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType.MessageTarget;
 import com.mokylin.bleach.protobuf.PlayerMessage.GCLoginFail;
 import com.mokylin.bleach.protobuf.PlayerMessage.LoginFailReason;
 

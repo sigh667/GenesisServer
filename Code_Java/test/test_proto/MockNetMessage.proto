@@ -1,5 +1,5 @@
 package com.mokylin.test;
-option java_package = "com.mokylin.bleach.test.gameserver.net";
+option java_package = "com.icewind.test.gameserver.net";
 option java_outer_classname = "MockCGMessage";
 
 import "MockMessageType.proto";

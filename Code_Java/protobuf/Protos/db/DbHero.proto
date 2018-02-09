@@ -1,5 +1,5 @@
-package com.icewind;
-option java_package = "com.mokylin.bleach.protobuf.db";
+package com.icewind.protobuf;
+option java_package = "com.icewind.protobuf.db";
 option java_outer_classname = "DbHero";
 
 

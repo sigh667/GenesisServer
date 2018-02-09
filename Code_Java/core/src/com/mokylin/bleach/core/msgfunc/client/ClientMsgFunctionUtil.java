@@ -11,9 +11,9 @@ import com.mokylin.bleach.core.msgfunc.exception.MessageFunctionParseException;
 import com.mokylin.bleach.core.msgfunc.protobufutil.MsgUtil;
 import com.mokylin.bleach.core.util.GenericityUtil;
 import com.mokylin.bleach.core.util.PackageUtil;
-import com.mokylin.bleach.protobuf.MessageType;
-import com.mokylin.bleach.protobuf.MessageType.CGMessageType;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType;
+import com.icewind.protobuf.MessageType.CGMessageType;
+import com.icewind.protobuf.MessageType.MessageTarget;
 
 import org.apache.commons.lang3.tuple.Pair;
 

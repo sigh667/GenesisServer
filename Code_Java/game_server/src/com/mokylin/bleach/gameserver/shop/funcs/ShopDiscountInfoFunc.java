@@ -7,7 +7,7 @@ import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
 import com.mokylin.bleach.gamedb.uuid.UUIDType;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.shop.discount.ShopDiscount;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType.MessageTarget;
 import com.mokylin.bleach.servermsg.gameserver.shop.ShopDiscountInfo;
 
 /**

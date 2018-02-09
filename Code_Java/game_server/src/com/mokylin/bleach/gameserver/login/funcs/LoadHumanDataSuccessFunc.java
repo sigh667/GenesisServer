@@ -8,7 +8,7 @@ import com.mokylin.bleach.gameserver.player.CreatePlayerActorHelper;
 import com.mokylin.bleach.gameserver.player.LoginStatus;
 import com.mokylin.bleach.gameserver.player.Player;
 import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType.MessageTarget;
 
 /**
  * 加载角色成功的函数对象。<p>

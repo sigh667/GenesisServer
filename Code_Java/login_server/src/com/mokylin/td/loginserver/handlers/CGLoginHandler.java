@@ -1,6 +1,6 @@
 package com.mokylin.td.loginserver.handlers;
 
-import com.icewind.LoginMessage;
+import com.icewind.protobuf.LoginMessage;
 import com.mokylin.td.loginserver.core.process.IClientMsgHandler;
 import com.mokylin.td.loginserver.core.version.Version;
 import com.mokylin.td.network2client.core.session.IClientSession;

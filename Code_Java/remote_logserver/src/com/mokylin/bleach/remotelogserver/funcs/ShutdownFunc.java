@@ -3,7 +3,7 @@ package com.mokylin.bleach.remotelogserver.funcs;
 import com.mokylin.bleach.core.isc.remote.IRemote;
 import com.mokylin.bleach.core.msgfunc.MsgArgs;
 import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
-import com.mokylin.bleach.protobuf.MessageType.MessageTarget;
+import com.icewind.protobuf.MessageType.MessageTarget;
 import com.mokylin.bleach.remotelogserver.Globals;
 import com.mokylin.bleach.servermsg.remotelogserver.Shutdown;
 

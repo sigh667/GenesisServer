@@ -2,7 +2,7 @@ package com.mokylin.bleach.robot.core.net;
 
 import com.mokylin.bleach.core.net.msg.CSMessage;
 import com.mokylin.bleach.core.net.msg.SCMessage;
-import com.mokylin.bleach.protobuf.MessageType.CGMessageType;
+import com.icewind.protobuf.MessageType.CGMessageType;
 import com.mokylin.bleach.protobuf.PlayerMessage.CGLogin;
 import com.mokylin.bleach.protobuf.PlayerMessage.CGLogin.Builder;
 import com.mokylin.bleach.protobuf.agentserver.AgentMessage.CGGameServerInfo;

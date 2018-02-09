@@ -4,8 +4,8 @@ import com.google.protobuf.GeneratedMessage;
 
 import com.mokylin.bleach.core.net.msg.CSMessage;
 import com.mokylin.bleach.core.net.msg.SCMessage;
-import com.mokylin.bleach.protobuf.MessageType.CGMessageType;
-import com.mokylin.bleach.protobuf.MessageType.GCMessageType;
+import com.icewind.protobuf.MessageType.CGMessageType;
+import com.icewind.protobuf.MessageType.GCMessageType;
 import com.mokylin.bleach.protobuf.PlayerMessage.CGCreateRole;
 import com.mokylin.bleach.protobuf.PlayerMessage.CGLogin;
 import com.mokylin.bleach.protobuf.PlayerMessage.CGLogin.Builder;
