@@ -38,6 +38,9 @@ public class Globals {
     private static Akka akka;
     private static ISCService iscService;
 
+    /** 服务器是否开放登陆（默认值暂时为true，上线时要改为false）*/
+    private static boolean isServerOpen = true;
+
     /**
      * 心跳服务
      */
@@ -87,6 +90,11 @@ public class Globals {
         logger.info("心跳线程启动完毕");
         // 7.1注册心跳
         getHeartBeatService().registerHeartbeat(ClientSessionContainer.Inst);
+    }
+
+
+    public static boolean isIsServerOpen() {
+        return isServerOpen;
     }
 
     public static ClientMsgProcessor getClientMsgProcessor() { return clientMsgProcessor; }

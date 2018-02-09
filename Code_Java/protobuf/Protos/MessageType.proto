@@ -79,7 +79,8 @@ enum CGMessageType{
 enum GCMessageType{
 
 	//握手消息11-50
-	SC_LOGIN_HANDSHAKE_REPLY = 11;
+	SC_LOGIN_HANDSHAKE_REPLY = 11;	//握手成功//
+	SC_LOGIN_SERVER_NOT_OPEN = 12;	//服务器尚未开放//
 
 	//登录消息，51-100
 	SC_LOGIN_FAIL = 51;

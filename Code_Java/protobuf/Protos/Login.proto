@@ -25,8 +25,10 @@ message CSLogin{
     required string channel = 2;
     /**登录验证字串 */
     required string key = 3;
+    /**版本号*/
+    required string version = 4;
     /**mac地址*/
-    required string macAddress = 4;
+    required string macAddress = 5;
 }
 
 
@@ -41,37 +43,42 @@ message SCHandshakeReply {
     required int32 indexBegin = 1;
     /** 未来会添加加密的密钥*/
 }
+/**
+ * 服务器通知，服务器尚未开放
+ */
+message SCLoginServerNotOpen {
+    option (gc_message_type) = SC_LOGIN_SERVER_NOT_OPEN;
+
+    /**空消息。服务器发完这个消息之后，就会断开连接*/
+}
+
 
 /**
  * 服务器通知，登录失败
  */
 message SCLoginFail{
     option (gc_message_type) = SC_LOGIN_FAIL;
-    /**账号ID */
-    required string accountId = 1;
-    /**渠道ID */
-    required string channel = 2;
-    /**登录验证字串 */
-    required string key = 3;
     /**失败原因 */
-    required LoginFailReason failReason = 4;
+    required LoginFailReason failReason = 1;
 }
 /**
  * 登录失败的原因
  */
 enum LoginFailReason{
+    /**版本不符*/
+    VERSION_NOT_ALLOW = 0;
     /**渠道不存在 */
-    CHANNEL_NOT_EXIST = 0;
+    CHANNEL_NOT_EXIST = 1;
     /**账号不存在 */
-    ACCOUNT_NOT_EXIST = 1;
+    ACCOUNT_NOT_EXIST = 2;
     /**秘钥错误 */
-    KEY_WRONG = 2;
+    KEY_WRONG = 3;
     /**加载角色失败 */
-    LOAD_ROLE_FAIL = 3;
+    LOAD_ROLE_FAIL = 4;
     /**你所登录的账号当前已经在线（你顶号） */
-    YOUR_ACCOUNT_IS_ONLINE = 4;
+    YOUR_ACCOUNT_IS_ONLINE = 5;
     /**你的账号在另外的机器上登录了（别人顶你号） */
-    YOUR_ACCOUNT_LOGIN_AGAIN = 5;
+    YOUR_ACCOUNT_LOGIN_AGAIN = 6;
     /**你的角色信息正在保存，请稍候 */
-    YOUR_DATA_IS_SAVING = 6;
+    YOUR_DATA_IS_SAVING = 7;
 }

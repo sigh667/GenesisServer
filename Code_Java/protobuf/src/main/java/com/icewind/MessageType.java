@@ -19,7 +19,7 @@ public final class MessageType {
    **
    * 这里的消息类型的定义有一些限制
    * 每种类型的服务器只能处理消息号在特定范围内的消息
-   * 详情请看com.mokylin.bleach.agentserver.core.msgtarget.MessageTargetManager类
+   * 详情请看core.msgtarget.MessageTargetManager类
    * 以下是各类型服务器可以处理的消息号范围
    * 由GameServer处理的消息号的消息范围：1-20000
    * </pre>
@@ -555,13 +555,21 @@ public final class MessageType {
      */
     SC_LOGIN_HANDSHAKE_REPLY(0, 11),
     /**
+     * <code>SC_LOGIN_SERVER_NOT_OPEN = 12;</code>
+     *
+     * <pre>
+     *服务器尚未开放//
+     * </pre>
+     */
+    SC_LOGIN_SERVER_NOT_OPEN(1, 12),
+    /**
      * <code>SC_LOGIN_FAIL = 51;</code>
      *
      * <pre>
      *登录消息，51-100
      * </pre>
      */
-    SC_LOGIN_FAIL(1, 51),
+    SC_LOGIN_FAIL(2, 51),
     /**
      * <code>GC_HUMAN_DETAIL_INFO = 101;</code>
      *
@@ -569,11 +577,11 @@ public final class MessageType {
      *Human消息，101-200
      * </pre>
      */
-    GC_HUMAN_DETAIL_INFO(2, 101),
+    GC_HUMAN_DETAIL_INFO(3, 101),
     /**
      * <code>GC_DATA_ERROR = 102;</code>
      */
-    GC_DATA_ERROR(3, 102),
+    GC_DATA_ERROR(4, 102),
     /**
      * <code>GC_HUMAN_BUY_ENERGY_ACK = 103;</code>
      *
@@ -581,7 +589,7 @@ public final class MessageType {
      *购买体力成功//
      * </pre>
      */
-    GC_HUMAN_BUY_ENERGY_ACK(4, 103),
+    GC_HUMAN_BUY_ENERGY_ACK(5, 103),
     /**
      * <code>GC_HUMAN_BUY_ENERGY_NEG = 104;</code>
      *
@@ -589,7 +597,7 @@ public final class MessageType {
      *购买体力失败//
      * </pre>
      */
-    GC_HUMAN_BUY_ENERGY_NEG(5, 104),
+    GC_HUMAN_BUY_ENERGY_NEG(6, 104),
     /**
      * <code>GC_HUMAN_ENERGY_RECOVER_INFO = 105;</code>
      *
@@ -597,7 +605,7 @@ public final class MessageType {
      *体力恢复信息//
      * </pre>
      */
-    GC_HUMAN_ENERGY_RECOVER_INFO(6, 105),
+    GC_HUMAN_ENERGY_RECOVER_INFO(7, 105),
     /**
      * <code>GC_HUMAN_COST_ENERGY_FAILED = 106;</code>
      *
@@ -605,7 +613,7 @@ public final class MessageType {
      *扣体力失败，体力值不够//
      * </pre>
      */
-    GC_HUMAN_COST_ENERGY_FAILED(7, 106),
+    GC_HUMAN_COST_ENERGY_FAILED(8, 106),
     /**
      * <code>GC_HUMAN_BUY_ENERGY_COUNTS_RESET = 107;</code>
      *
@@ -613,7 +621,7 @@ public final class MessageType {
      *重置体力购买次数//
      * </pre>
      */
-    GC_HUMAN_BUY_ENERGY_COUNTS_RESET(8, 107),
+    GC_HUMAN_BUY_ENERGY_COUNTS_RESET(9, 107),
     /**
      * <code>GC_VIP_LEVEL_UP = 108;</code>
      *
@@ -621,7 +629,7 @@ public final class MessageType {
      *VIP等级提升//
      * </pre>
      */
-    GC_VIP_LEVEL_UP(9, 108),
+    GC_VIP_LEVEL_UP(10, 108),
     /**
      * <code>GC_HUMAN_LEVEL_UP = 109;</code>
      *
@@ -629,7 +637,7 @@ public final class MessageType {
      *玩家角色等级提升//
      * </pre>
      */
-    GC_HUMAN_LEVEL_UP(10, 109),
+    GC_HUMAN_LEVEL_UP(11, 109),
     /**
      * <code>GC_HERO_CHANGED_PROPS = 201;</code>
      *
@@ -637,7 +645,7 @@ public final class MessageType {
      *英雄消息，201-300
      * </pre>
      */
-    GC_HERO_CHANGED_PROPS(11, 201),
+    GC_HERO_CHANGED_PROPS(12, 201),
     /**
      * <code>GC_ALL_HERO_INFO = 202;</code>
      *
@@ -645,7 +653,7 @@ public final class MessageType {
      *所有英雄信息//
      * </pre>
      */
-    GC_ALL_HERO_INFO(12, 202),
+    GC_ALL_HERO_INFO(13, 202),
     /**
      * <code>GC_HERO_ADD = 203;</code>
      *
@@ -653,7 +661,7 @@ public final class MessageType {
      *添加一个英雄//
      * </pre>
      */
-    GC_HERO_ADD(13, 203),
+    GC_HERO_ADD(14, 203),
     /**
      * <code>GC_HERO_UPDATE = 204;</code>
      *
@@ -661,7 +669,7 @@ public final class MessageType {
      *英雄信息更新//
      * </pre>
      */
-    GC_HERO_UPDATE(14, 204),
+    GC_HERO_UPDATE(15, 204),
     /**
      * <code>GC_INVENTORY_INFO = 301;</code>
      *
@@ -669,7 +677,7 @@ public final class MessageType {
      *道具，301-400
      * </pre>
      */
-    GC_INVENTORY_INFO(15, 301),
+    GC_INVENTORY_INFO(16, 301),
     /**
      * <code>GC_ITEM_UPDATE = 302;</code>
      *
@@ -677,7 +685,7 @@ public final class MessageType {
      *物品更新消息，注意该消息只能用在特定情况下，请咨询尽可能多的人//
      * </pre>
      */
-    GC_ITEM_UPDATE(16, 302),
+    GC_ITEM_UPDATE(17, 302),
     /**
      * <code>GC_DAILY_REWARD_INFO = 401;</code>
      *
@@ -685,7 +693,7 @@ public final class MessageType {
      *日常奖励，401-450
      * </pre>
      */
-    GC_DAILY_REWARD_INFO(17, 401),
+    GC_DAILY_REWARD_INFO(18, 401),
     /**
      * <code>GC_GET_DAILY_REWARD_FAILED = 402;</code>
      *
@@ -693,7 +701,7 @@ public final class MessageType {
      *日常奖励领取失败，已经过了月刷新//
      * </pre>
      */
-    GC_GET_DAILY_REWARD_FAILED(18, 402),
+    GC_GET_DAILY_REWARD_FAILED(19, 402),
     /**
      * <code>GC_SHOP_INFO = 451;</code>
      *
@@ -701,7 +709,7 @@ public final class MessageType {
      *商店，451-500
      * </pre>
      */
-    GC_SHOP_INFO(19, 451),
+    GC_SHOP_INFO(20, 451),
     /**
      * <code>GC_SHOP_MANUALLY_REFRESH_INFO = 452;</code>
      *
@@ -709,7 +717,7 @@ public final class MessageType {
      *商店刷新信息//
      * </pre>
      */
-    GC_SHOP_MANUALLY_REFRESH_INFO(20, 452),
+    GC_SHOP_MANUALLY_REFRESH_INFO(21, 452),
     /**
      * <code>GC_GOOD_BUY_SUCCESS = 453;</code>
      *
@@ -717,7 +725,7 @@ public final class MessageType {
      *商品购买成功
      * </pre>
      */
-    GC_GOOD_BUY_SUCCESS(21, 453),
+    GC_GOOD_BUY_SUCCESS(22, 453),
     /**
      * <code>GC_SHOP_MANUALLY_REFRESH_COUNT_RESET = 454;</code>
      *
@@ -725,7 +733,7 @@ public final class MessageType {
      *商店手动刷新次数重置消息//
      * </pre>
      */
-    GC_SHOP_MANUALLY_REFRESH_COUNT_RESET(22, 454),
+    GC_SHOP_MANUALLY_REFRESH_COUNT_RESET(23, 454),
     /**
      * <code>GC_SHOP_AUTO_REFRESH_INFO = 455;</code>
      *
@@ -733,7 +741,7 @@ public final class MessageType {
      *商店自动刷新信息//
      * </pre>
      */
-    GC_SHOP_AUTO_REFRESH_INFO(23, 455),
+    GC_SHOP_AUTO_REFRESH_INFO(24, 455),
     /**
      * <code>GC_SHOP_CLOSE = 456;</code>
      *
@@ -741,7 +749,7 @@ public final class MessageType {
      *商店关闭信息//
      * </pre>
      */
-    GC_SHOP_CLOSE(24, 456),
+    GC_SHOP_CLOSE(25, 456),
     /**
      * <code>GC_SHOP_PROMPT = 457;</code>
      *
@@ -749,7 +757,7 @@ public final class MessageType {
      *商店提示//
      * </pre>
      */
-    GC_SHOP_PROMPT(25, 457),
+    GC_SHOP_PROMPT(26, 457),
     /**
      * <code>GC_OPENED_TEMP_SHOP = 458;</code>
      *
@@ -757,7 +765,7 @@ public final class MessageType {
      *已经打开的商店//
      * </pre>
      */
-    GC_OPENED_TEMP_SHOP(26, 458),
+    GC_OPENED_TEMP_SHOP(27, 458),
     /**
      * <code>GC_OPEN_SHOP = 459;</code>
      *
@@ -765,7 +773,7 @@ public final class MessageType {
      *打开商店//
      * </pre>
      */
-    GC_OPEN_SHOP(27, 459),
+    GC_OPEN_SHOP(28, 459),
     /**
      * <code>GC_FUNCTION_OPEN_LIST = 501;</code>
      *
@@ -773,7 +781,7 @@ public final class MessageType {
      *功能开放，501-550
      * </pre>
      */
-    GC_FUNCTION_OPEN_LIST(28, 501),
+    GC_FUNCTION_OPEN_LIST(29, 501),
     /**
      * <code>GC_FUNCTION_OPEN = 502;</code>
      *
@@ -781,7 +789,7 @@ public final class MessageType {
      *功能开放//
      * </pre>
      */
-    GC_FUNCTION_OPEN(29, 502),
+    GC_FUNCTION_OPEN(30, 502),
     /**
      * <code>GC_GM_CMD = 551;</code>
      *
@@ -789,7 +797,7 @@ public final class MessageType {
      *GM命令，551-600
      * </pre>
      */
-    GC_GM_CMD(30, 551),
+    GC_GM_CMD(31, 551),
     ;
 
     /**
@@ -800,6 +808,14 @@ public final class MessageType {
      * </pre>
      */
     public static final int SC_LOGIN_HANDSHAKE_REPLY_VALUE = 11;
+    /**
+     * <code>SC_LOGIN_SERVER_NOT_OPEN = 12;</code>
+     *
+     * <pre>
+     *服务器尚未开放//
+     * </pre>
+     */
+    public static final int SC_LOGIN_SERVER_NOT_OPEN_VALUE = 12;
     /**
      * <code>SC_LOGIN_FAIL = 51;</code>
      *
@@ -1043,6 +1059,7 @@ public final class MessageType {
     public static GCMessageType valueOf(int value) {
       switch (value) {
         case 11: return SC_LOGIN_HANDSHAKE_REPLY;
+        case 12: return SC_LOGIN_SERVER_NOT_OPEN;
         case 51: return SC_LOGIN_FAIL;
         case 101: return GC_HUMAN_DETAIL_INFO;
         case 102: return GC_DATA_ERROR;
@@ -1282,38 +1299,39 @@ public final class MessageType {
       "_SHOP\020\221\003\032\004\210\265\030\013\022\033\n\020CG_REFRESH_GOODS\020\222\003\032\004\210" +
       "\265\030\013\022\026\n\013CG_BUY_GOOD\020\223\003\032\004\210\265\030\013\022\031\n\016CG_OPEN_W" +
       "INDOW\020\303\003\032\004\210\265\030\013\022\032\n\017CG_CLOSE_WINDOW\020\304\003\032\004\210\265",
-      "\030\013\022\036\n\023CG_HUMAN_BUY_ENERGY\020\365\003\032\004\210\265\030\013*\264\006\n\rG" +
+      "\030\013\022\036\n\023CG_HUMAN_BUY_ENERGY\020\365\003\032\004\210\265\030\013*\322\006\n\rG" +
       "CMessageType\022\034\n\030SC_LOGIN_HANDSHAKE_REPLY" +
-      "\020\013\022\021\n\rSC_LOGIN_FAIL\0203\022\030\n\024GC_HUMAN_DETAIL" +
-      "_INFO\020e\022\021\n\rGC_DATA_ERROR\020f\022\033\n\027GC_HUMAN_B" +
-      "UY_ENERGY_ACK\020g\022\033\n\027GC_HUMAN_BUY_ENERGY_N" +
-      "EG\020h\022 \n\034GC_HUMAN_ENERGY_RECOVER_INFO\020i\022\037" +
-      "\n\033GC_HUMAN_COST_ENERGY_FAILED\020j\022$\n GC_HU" +
-      "MAN_BUY_ENERGY_COUNTS_RESET\020k\022\023\n\017GC_VIP_" +
-      "LEVEL_UP\020l\022\025\n\021GC_HUMAN_LEVEL_UP\020m\022\032\n\025GC_" +
-      "HERO_CHANGED_PROPS\020\311\001\022\025\n\020GC_ALL_HERO_INF",
-      "O\020\312\001\022\020\n\013GC_HERO_ADD\020\313\001\022\023\n\016GC_HERO_UPDATE" +
-      "\020\314\001\022\026\n\021GC_INVENTORY_INFO\020\255\002\022\023\n\016GC_ITEM_U" +
-      "PDATE\020\256\002\022\031\n\024GC_DAILY_REWARD_INFO\020\221\003\022\037\n\032G" +
-      "C_GET_DAILY_REWARD_FAILED\020\222\003\022\021\n\014GC_SHOP_" +
-      "INFO\020\303\003\022\"\n\035GC_SHOP_MANUALLY_REFRESH_INFO" +
-      "\020\304\003\022\030\n\023GC_GOOD_BUY_SUCCESS\020\305\003\022)\n$GC_SHOP" +
-      "_MANUALLY_REFRESH_COUNT_RESET\020\306\003\022\036\n\031GC_S" +
-      "HOP_AUTO_REFRESH_INFO\020\307\003\022\022\n\rGC_SHOP_CLOS" +
-      "E\020\310\003\022\023\n\016GC_SHOP_PROMPT\020\311\003\022\030\n\023GC_OPENED_T" +
-      "EMP_SHOP\020\312\003\022\021\n\014GC_OPEN_SHOP\020\313\003\022\032\n\025GC_FUN",
-      "CTION_OPEN_LIST\020\365\003\022\025\n\020GC_FUNCTION_OPEN\020\366" +
-      "\003\022\016\n\tGC_GM_CMD\020\247\004*\"\n\rMGMessageType\022\021\n\rMG" +
-      "_BROAD_CAST\020\001:V\n\017cg_message_type\022\037.googl" +
-      "e.protobuf.MessageOptions\030\321\206\003 \001(\0162\032.com." +
-      "icewind.CGMessageType:V\n\017gc_message_type" +
-      "\022\037.google.protobuf.MessageOptions\030\322\206\003 \001(" +
-      "\0162\032.com.icewind.GCMessageType:V\n\017mg_mess" +
-      "age_type\022\037.google.protobuf.MessageOption" +
-      "s\030\323\206\003 \001(\0162\032.com.icewind.MGMessageType:V\n" +
-      "\006TARGET\022!.google.protobuf.EnumValueOptio",
-      "ns\030\321\206\003 \001(\0162\032.com.icewind.MessageTarget:\005" +
-      "ERRORB\rB\013MessageType"
+      "\020\013\022\034\n\030SC_LOGIN_SERVER_NOT_OPEN\020\014\022\021\n\rSC_L" +
+      "OGIN_FAIL\0203\022\030\n\024GC_HUMAN_DETAIL_INFO\020e\022\021\n" +
+      "\rGC_DATA_ERROR\020f\022\033\n\027GC_HUMAN_BUY_ENERGY_" +
+      "ACK\020g\022\033\n\027GC_HUMAN_BUY_ENERGY_NEG\020h\022 \n\034GC" +
+      "_HUMAN_ENERGY_RECOVER_INFO\020i\022\037\n\033GC_HUMAN" +
+      "_COST_ENERGY_FAILED\020j\022$\n GC_HUMAN_BUY_EN" +
+      "ERGY_COUNTS_RESET\020k\022\023\n\017GC_VIP_LEVEL_UP\020l" +
+      "\022\025\n\021GC_HUMAN_LEVEL_UP\020m\022\032\n\025GC_HERO_CHANG",
+      "ED_PROPS\020\311\001\022\025\n\020GC_ALL_HERO_INFO\020\312\001\022\020\n\013GC" +
+      "_HERO_ADD\020\313\001\022\023\n\016GC_HERO_UPDATE\020\314\001\022\026\n\021GC_" +
+      "INVENTORY_INFO\020\255\002\022\023\n\016GC_ITEM_UPDATE\020\256\002\022\031" +
+      "\n\024GC_DAILY_REWARD_INFO\020\221\003\022\037\n\032GC_GET_DAIL" +
+      "Y_REWARD_FAILED\020\222\003\022\021\n\014GC_SHOP_INFO\020\303\003\022\"\n" +
+      "\035GC_SHOP_MANUALLY_REFRESH_INFO\020\304\003\022\030\n\023GC_" +
+      "GOOD_BUY_SUCCESS\020\305\003\022)\n$GC_SHOP_MANUALLY_" +
+      "REFRESH_COUNT_RESET\020\306\003\022\036\n\031GC_SHOP_AUTO_R" +
+      "EFRESH_INFO\020\307\003\022\022\n\rGC_SHOP_CLOSE\020\310\003\022\023\n\016GC" +
+      "_SHOP_PROMPT\020\311\003\022\030\n\023GC_OPENED_TEMP_SHOP\020\312",
+      "\003\022\021\n\014GC_OPEN_SHOP\020\313\003\022\032\n\025GC_FUNCTION_OPEN" +
+      "_LIST\020\365\003\022\025\n\020GC_FUNCTION_OPEN\020\366\003\022\016\n\tGC_GM" +
+      "_CMD\020\247\004*\"\n\rMGMessageType\022\021\n\rMG_BROAD_CAS" +
+      "T\020\001:V\n\017cg_message_type\022\037.google.protobuf" +
+      ".MessageOptions\030\321\206\003 \001(\0162\032.com.icewind.CG" +
+      "MessageType:V\n\017gc_message_type\022\037.google." +
+      "protobuf.MessageOptions\030\322\206\003 \001(\0162\032.com.ic" +
+      "ewind.GCMessageType:V\n\017mg_message_type\022\037" +
+      ".google.protobuf.MessageOptions\030\323\206\003 \001(\0162" +
+      "\032.com.icewind.MGMessageType:V\n\006TARGET\022!.",
+      "google.protobuf.EnumValueOptions\030\321\206\003 \001(\016" +
+      "2\032.com.icewind.MessageTarget:\005ERRORB\rB\013M" +
+      "essageType"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

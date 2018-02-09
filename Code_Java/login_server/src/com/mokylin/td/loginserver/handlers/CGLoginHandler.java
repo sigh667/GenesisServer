@@ -1,7 +1,8 @@
 package com.mokylin.td.loginserver.handlers;
 
-import com.mokylin.bleach.protobuf.LoginMessage;
+import com.icewind.LoginMessage;
 import com.mokylin.td.loginserver.core.process.IClientMsgHandler;
+import com.mokylin.td.loginserver.core.version.Version;
 import com.mokylin.td.network2client.core.session.IClientSession;
 
 /**
@@ -18,7 +19,29 @@ public class CGLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
         final String channel = cgLogin.getChannel();
         final String key = cgLogin.getKey();
         final String macAddress = cgLogin.getMacAddress();
-        
+        final String version = cgLogin.getVersion();
+
+        //1.0 开始验证
+        //1.1 检验版本
+        if (!Version.Inst.isAllowed(version)) {
+            notifyFail(session, LoginMessage.LoginFailReason.VERSION_NOT_ALLOW);
+            session.disconnect();
+            return;
+        }
+
+        //1.2 如果是封测，检验账号是否激活
+
+    }
+
+    /**
+     * 通知客户端，登陆失败
+     * @param session   客户端连接
+     * @param reason    失败原因
+     */
+    private void notifyFail(IClientSession session, LoginMessage.LoginFailReason reason) {
+        final LoginMessage.SCLoginFail.Builder builder = LoginMessage.SCLoginFail.newBuilder();
+        builder.setFailReason(reason);
+        session.sendMessage(builder);
     }
 
 //    @Override
