@@ -196,7 +196,7 @@ public final class MessageType {
      * <code>CS_LOGIN_HANDSHAKE = 11;</code>
      *
      * <pre>
-     *新版登陆消息，11-50
+     *握手消息，11-20
      * </pre>
      */
     CS_LOGIN_HANDSHAKE(2, 11),
@@ -205,29 +205,13 @@ public final class MessageType {
      */
     CS_LOGIN_NEW(3, 12),
     /**
-     * <code>CG_LOGIN_MSG_BEGIN = 50;</code>
+     * <code>CS_LOGIN = 51;</code>
      *
      * <pre>
      *登录消息，50-100
      * </pre>
      */
-    CG_LOGIN_MSG_BEGIN(4, 50),
-    /**
-     * <code>CG_LOGIN = 51;</code>
-     */
-    CG_LOGIN(5, 51),
-    /**
-     * <code>CG_CREATE_ROLE = 52;</code>
-     */
-    CG_CREATE_ROLE(6, 52),
-    /**
-     * <code>CG_SELECT_ROLE = 53;</code>
-     */
-    CG_SELECT_ROLE(7, 53),
-    /**
-     * <code>CG_LOGIN_MSG_END = 100;</code>
-     */
-    CG_LOGIN_MSG_END(8, 100),
+    CS_LOGIN(4, 51),
     /**
      * <code>CG_ITEM_USE = 101;</code>
      *
@@ -235,15 +219,15 @@ public final class MessageType {
      *道具消息，101-200
      * </pre>
      */
-    CG_ITEM_USE(9, 101),
+    CG_ITEM_USE(5, 101),
     /**
      * <code>CG_ITEM_SELL = 102;</code>
      */
-    CG_ITEM_SELL(10, 102),
+    CG_ITEM_SELL(6, 102),
     /**
      * <code>CG_ITEM_COMPOUND = 103;</code>
      */
-    CG_ITEM_COMPOUND(11, 103),
+    CG_ITEM_COMPOUND(7, 103),
     /**
      * <code>CG_HIRE_HERO = 201;</code>
      *
@@ -251,27 +235,27 @@ public final class MessageType {
      *英雄消息，201-300
      * </pre>
      */
-    CG_HIRE_HERO(12, 201),
+    CG_HIRE_HERO(8, 201),
     /**
      * <code>CG_HERO_STAR_UP = 202;</code>
      */
-    CG_HERO_STAR_UP(13, 202),
+    CG_HERO_STAR_UP(9, 202),
     /**
      * <code>CG_HERO_QUALITY_UP = 203;</code>
      */
-    CG_HERO_QUALITY_UP(14, 203),
+    CG_HERO_QUALITY_UP(10, 203),
     /**
      * <code>CG_HERO_SKILL_LEVEL_UP = 204;</code>
      */
-    CG_HERO_SKILL_LEVEL_UP(15, 204),
+    CG_HERO_SKILL_LEVEL_UP(11, 204),
     /**
      * <code>CG_HERO_WEAR_EQUIP = 205;</code>
      */
-    CG_HERO_WEAR_EQUIP(16, 205),
+    CG_HERO_WEAR_EQUIP(12, 205),
     /**
      * <code>CG_BUY_SKILL_POINT = 206;</code>
      */
-    CG_BUY_SKILL_POINT(17, 206),
+    CG_BUY_SKILL_POINT(13, 206),
     /**
      * <code>CG_GM_CMD = 301;</code>
      *
@@ -279,7 +263,7 @@ public final class MessageType {
      *聊天消息，301-350
      * </pre>
      */
-    CG_GM_CMD(18, 301),
+    CG_GM_CMD(14, 301),
     /**
      * <code>CG_GET_DAILY_REWARD = 351;</code>
      *
@@ -287,7 +271,7 @@ public final class MessageType {
      *日常签到奖励领取，351-400
      * </pre>
      */
-    CG_GET_DAILY_REWARD(19, 351),
+    CG_GET_DAILY_REWARD(15, 351),
     /**
      * <code>CG_OPEN_SHOP = 401;</code>
      *
@@ -295,7 +279,7 @@ public final class MessageType {
      *商店消息401-450
      * </pre>
      */
-    CG_OPEN_SHOP(20, 401),
+    CG_OPEN_SHOP(16, 401),
     /**
      * <code>CG_REFRESH_GOODS = 402;</code>
      *
@@ -303,7 +287,7 @@ public final class MessageType {
      *刷新//
      * </pre>
      */
-    CG_REFRESH_GOODS(21, 402),
+    CG_REFRESH_GOODS(17, 402),
     /**
      * <code>CG_BUY_GOOD = 403;</code>
      *
@@ -311,7 +295,7 @@ public final class MessageType {
      *购买货物//
      * </pre>
      */
-    CG_BUY_GOOD(22, 403),
+    CG_BUY_GOOD(18, 403),
     /**
      * <code>CG_OPEN_WINDOW = 451;</code>
      *
@@ -319,7 +303,7 @@ public final class MessageType {
      *窗口消息，451-500
      * </pre>
      */
-    CG_OPEN_WINDOW(23, 451),
+    CG_OPEN_WINDOW(19, 451),
     /**
      * <code>CG_CLOSE_WINDOW = 452;</code>
      *
@@ -327,7 +311,7 @@ public final class MessageType {
      *关闭窗口//
      * </pre>
      */
-    CG_CLOSE_WINDOW(24, 452),
+    CG_CLOSE_WINDOW(20, 452),
     /**
      * <code>CG_HUMAN_BUY_ENERGY = 501;</code>
      *
@@ -335,7 +319,7 @@ public final class MessageType {
      *Human消息，501-600
      * </pre>
      */
-    CG_HUMAN_BUY_ENERGY(25, 501),
+    CG_HUMAN_BUY_ENERGY(21, 501),
     ;
 
     /**
@@ -354,7 +338,7 @@ public final class MessageType {
      * <code>CS_LOGIN_HANDSHAKE = 11;</code>
      *
      * <pre>
-     *新版登陆消息，11-50
+     *握手消息，11-20
      * </pre>
      */
     public static final int CS_LOGIN_HANDSHAKE_VALUE = 11;
@@ -363,29 +347,13 @@ public final class MessageType {
      */
     public static final int CS_LOGIN_NEW_VALUE = 12;
     /**
-     * <code>CG_LOGIN_MSG_BEGIN = 50;</code>
+     * <code>CS_LOGIN = 51;</code>
      *
      * <pre>
      *登录消息，50-100
      * </pre>
      */
-    public static final int CG_LOGIN_MSG_BEGIN_VALUE = 50;
-    /**
-     * <code>CG_LOGIN = 51;</code>
-     */
-    public static final int CG_LOGIN_VALUE = 51;
-    /**
-     * <code>CG_CREATE_ROLE = 52;</code>
-     */
-    public static final int CG_CREATE_ROLE_VALUE = 52;
-    /**
-     * <code>CG_SELECT_ROLE = 53;</code>
-     */
-    public static final int CG_SELECT_ROLE_VALUE = 53;
-    /**
-     * <code>CG_LOGIN_MSG_END = 100;</code>
-     */
-    public static final int CG_LOGIN_MSG_END_VALUE = 100;
+    public static final int CS_LOGIN_VALUE = 51;
     /**
      * <code>CG_ITEM_USE = 101;</code>
      *
@@ -504,11 +472,7 @@ public final class MessageType {
         case 2: return CG_TEST_MSG;
         case 11: return CS_LOGIN_HANDSHAKE;
         case 12: return CS_LOGIN_NEW;
-        case 50: return CG_LOGIN_MSG_BEGIN;
-        case 51: return CG_LOGIN;
-        case 52: return CG_CREATE_ROLE;
-        case 53: return CG_SELECT_ROLE;
-        case 100: return CG_LOGIN_MSG_END;
+        case 51: return CS_LOGIN;
         case 101: return CG_ITEM_USE;
         case 102: return CG_ITEM_SELL;
         case 103: return CG_ITEM_COMPOUND;
@@ -583,25 +547,21 @@ public final class MessageType {
   public enum GCMessageType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>GC_LOGIN_FAIL = 51;</code>
+     * <code>SC_LOGIN_HANDSHAKE_REPLY = 11;</code>
+     *
+     * <pre>
+     *握手消息11-50
+     * </pre>
+     */
+    SC_LOGIN_HANDSHAKE_REPLY(0, 11),
+    /**
+     * <code>SC_LOGIN_FAIL = 51;</code>
      *
      * <pre>
      *登录消息，51-100
      * </pre>
      */
-    GC_LOGIN_FAIL(0, 51),
-    /**
-     * <code>GC_ROLE_LIST = 52;</code>
-     */
-    GC_ROLE_LIST(1, 52),
-    /**
-     * <code>GC_CREATE_ROLE = 53;</code>
-     */
-    GC_CREATE_ROLE(2, 53),
-    /**
-     * <code>GC_CREATE_ROLE_FAIL = 54;</code>
-     */
-    GC_CREATE_ROLE_FAIL(3, 54),
+    SC_LOGIN_FAIL(1, 51),
     /**
      * <code>GC_HUMAN_DETAIL_INFO = 101;</code>
      *
@@ -609,11 +569,11 @@ public final class MessageType {
      *Human消息，101-200
      * </pre>
      */
-    GC_HUMAN_DETAIL_INFO(4, 101),
+    GC_HUMAN_DETAIL_INFO(2, 101),
     /**
      * <code>GC_DATA_ERROR = 102;</code>
      */
-    GC_DATA_ERROR(5, 102),
+    GC_DATA_ERROR(3, 102),
     /**
      * <code>GC_HUMAN_BUY_ENERGY_ACK = 103;</code>
      *
@@ -621,7 +581,7 @@ public final class MessageType {
      *购买体力成功//
      * </pre>
      */
-    GC_HUMAN_BUY_ENERGY_ACK(6, 103),
+    GC_HUMAN_BUY_ENERGY_ACK(4, 103),
     /**
      * <code>GC_HUMAN_BUY_ENERGY_NEG = 104;</code>
      *
@@ -629,7 +589,7 @@ public final class MessageType {
      *购买体力失败//
      * </pre>
      */
-    GC_HUMAN_BUY_ENERGY_NEG(7, 104),
+    GC_HUMAN_BUY_ENERGY_NEG(5, 104),
     /**
      * <code>GC_HUMAN_ENERGY_RECOVER_INFO = 105;</code>
      *
@@ -637,7 +597,7 @@ public final class MessageType {
      *体力恢复信息//
      * </pre>
      */
-    GC_HUMAN_ENERGY_RECOVER_INFO(8, 105),
+    GC_HUMAN_ENERGY_RECOVER_INFO(6, 105),
     /**
      * <code>GC_HUMAN_COST_ENERGY_FAILED = 106;</code>
      *
@@ -645,7 +605,7 @@ public final class MessageType {
      *扣体力失败，体力值不够//
      * </pre>
      */
-    GC_HUMAN_COST_ENERGY_FAILED(9, 106),
+    GC_HUMAN_COST_ENERGY_FAILED(7, 106),
     /**
      * <code>GC_HUMAN_BUY_ENERGY_COUNTS_RESET = 107;</code>
      *
@@ -653,7 +613,7 @@ public final class MessageType {
      *重置体力购买次数//
      * </pre>
      */
-    GC_HUMAN_BUY_ENERGY_COUNTS_RESET(10, 107),
+    GC_HUMAN_BUY_ENERGY_COUNTS_RESET(8, 107),
     /**
      * <code>GC_VIP_LEVEL_UP = 108;</code>
      *
@@ -661,7 +621,7 @@ public final class MessageType {
      *VIP等级提升//
      * </pre>
      */
-    GC_VIP_LEVEL_UP(11, 108),
+    GC_VIP_LEVEL_UP(9, 108),
     /**
      * <code>GC_HUMAN_LEVEL_UP = 109;</code>
      *
@@ -669,7 +629,7 @@ public final class MessageType {
      *玩家角色等级提升//
      * </pre>
      */
-    GC_HUMAN_LEVEL_UP(12, 109),
+    GC_HUMAN_LEVEL_UP(10, 109),
     /**
      * <code>GC_HERO_CHANGED_PROPS = 201;</code>
      *
@@ -677,7 +637,7 @@ public final class MessageType {
      *英雄消息，201-300
      * </pre>
      */
-    GC_HERO_CHANGED_PROPS(13, 201),
+    GC_HERO_CHANGED_PROPS(11, 201),
     /**
      * <code>GC_ALL_HERO_INFO = 202;</code>
      *
@@ -685,7 +645,7 @@ public final class MessageType {
      *所有英雄信息//
      * </pre>
      */
-    GC_ALL_HERO_INFO(14, 202),
+    GC_ALL_HERO_INFO(12, 202),
     /**
      * <code>GC_HERO_ADD = 203;</code>
      *
@@ -693,7 +653,7 @@ public final class MessageType {
      *添加一个英雄//
      * </pre>
      */
-    GC_HERO_ADD(15, 203),
+    GC_HERO_ADD(13, 203),
     /**
      * <code>GC_HERO_UPDATE = 204;</code>
      *
@@ -701,7 +661,7 @@ public final class MessageType {
      *英雄信息更新//
      * </pre>
      */
-    GC_HERO_UPDATE(16, 204),
+    GC_HERO_UPDATE(14, 204),
     /**
      * <code>GC_INVENTORY_INFO = 301;</code>
      *
@@ -709,7 +669,7 @@ public final class MessageType {
      *道具，301-400
      * </pre>
      */
-    GC_INVENTORY_INFO(17, 301),
+    GC_INVENTORY_INFO(15, 301),
     /**
      * <code>GC_ITEM_UPDATE = 302;</code>
      *
@@ -717,7 +677,7 @@ public final class MessageType {
      *物品更新消息，注意该消息只能用在特定情况下，请咨询尽可能多的人//
      * </pre>
      */
-    GC_ITEM_UPDATE(18, 302),
+    GC_ITEM_UPDATE(16, 302),
     /**
      * <code>GC_DAILY_REWARD_INFO = 401;</code>
      *
@@ -725,7 +685,7 @@ public final class MessageType {
      *日常奖励，401-450
      * </pre>
      */
-    GC_DAILY_REWARD_INFO(19, 401),
+    GC_DAILY_REWARD_INFO(17, 401),
     /**
      * <code>GC_GET_DAILY_REWARD_FAILED = 402;</code>
      *
@@ -733,7 +693,7 @@ public final class MessageType {
      *日常奖励领取失败，已经过了月刷新//
      * </pre>
      */
-    GC_GET_DAILY_REWARD_FAILED(20, 402),
+    GC_GET_DAILY_REWARD_FAILED(18, 402),
     /**
      * <code>GC_SHOP_INFO = 451;</code>
      *
@@ -741,7 +701,7 @@ public final class MessageType {
      *商店，451-500
      * </pre>
      */
-    GC_SHOP_INFO(21, 451),
+    GC_SHOP_INFO(19, 451),
     /**
      * <code>GC_SHOP_MANUALLY_REFRESH_INFO = 452;</code>
      *
@@ -749,7 +709,7 @@ public final class MessageType {
      *商店刷新信息//
      * </pre>
      */
-    GC_SHOP_MANUALLY_REFRESH_INFO(22, 452),
+    GC_SHOP_MANUALLY_REFRESH_INFO(20, 452),
     /**
      * <code>GC_GOOD_BUY_SUCCESS = 453;</code>
      *
@@ -757,7 +717,7 @@ public final class MessageType {
      *商品购买成功
      * </pre>
      */
-    GC_GOOD_BUY_SUCCESS(23, 453),
+    GC_GOOD_BUY_SUCCESS(21, 453),
     /**
      * <code>GC_SHOP_MANUALLY_REFRESH_COUNT_RESET = 454;</code>
      *
@@ -765,7 +725,7 @@ public final class MessageType {
      *商店手动刷新次数重置消息//
      * </pre>
      */
-    GC_SHOP_MANUALLY_REFRESH_COUNT_RESET(24, 454),
+    GC_SHOP_MANUALLY_REFRESH_COUNT_RESET(22, 454),
     /**
      * <code>GC_SHOP_AUTO_REFRESH_INFO = 455;</code>
      *
@@ -773,7 +733,7 @@ public final class MessageType {
      *商店自动刷新信息//
      * </pre>
      */
-    GC_SHOP_AUTO_REFRESH_INFO(25, 455),
+    GC_SHOP_AUTO_REFRESH_INFO(23, 455),
     /**
      * <code>GC_SHOP_CLOSE = 456;</code>
      *
@@ -781,7 +741,7 @@ public final class MessageType {
      *商店关闭信息//
      * </pre>
      */
-    GC_SHOP_CLOSE(26, 456),
+    GC_SHOP_CLOSE(24, 456),
     /**
      * <code>GC_SHOP_PROMPT = 457;</code>
      *
@@ -789,7 +749,7 @@ public final class MessageType {
      *商店提示//
      * </pre>
      */
-    GC_SHOP_PROMPT(27, 457),
+    GC_SHOP_PROMPT(25, 457),
     /**
      * <code>GC_OPENED_TEMP_SHOP = 458;</code>
      *
@@ -797,7 +757,7 @@ public final class MessageType {
      *已经打开的商店//
      * </pre>
      */
-    GC_OPENED_TEMP_SHOP(28, 458),
+    GC_OPENED_TEMP_SHOP(26, 458),
     /**
      * <code>GC_OPEN_SHOP = 459;</code>
      *
@@ -805,7 +765,7 @@ public final class MessageType {
      *打开商店//
      * </pre>
      */
-    GC_OPEN_SHOP(29, 459),
+    GC_OPEN_SHOP(27, 459),
     /**
      * <code>GC_FUNCTION_OPEN_LIST = 501;</code>
      *
@@ -813,7 +773,7 @@ public final class MessageType {
      *功能开放，501-550
      * </pre>
      */
-    GC_FUNCTION_OPEN_LIST(30, 501),
+    GC_FUNCTION_OPEN_LIST(28, 501),
     /**
      * <code>GC_FUNCTION_OPEN = 502;</code>
      *
@@ -821,7 +781,7 @@ public final class MessageType {
      *功能开放//
      * </pre>
      */
-    GC_FUNCTION_OPEN(31, 502),
+    GC_FUNCTION_OPEN(29, 502),
     /**
      * <code>GC_GM_CMD = 551;</code>
      *
@@ -829,29 +789,25 @@ public final class MessageType {
      *GM命令，551-600
      * </pre>
      */
-    GC_GM_CMD(32, 551),
+    GC_GM_CMD(30, 551),
     ;
 
     /**
-     * <code>GC_LOGIN_FAIL = 51;</code>
+     * <code>SC_LOGIN_HANDSHAKE_REPLY = 11;</code>
+     *
+     * <pre>
+     *握手消息11-50
+     * </pre>
+     */
+    public static final int SC_LOGIN_HANDSHAKE_REPLY_VALUE = 11;
+    /**
+     * <code>SC_LOGIN_FAIL = 51;</code>
      *
      * <pre>
      *登录消息，51-100
      * </pre>
      */
-    public static final int GC_LOGIN_FAIL_VALUE = 51;
-    /**
-     * <code>GC_ROLE_LIST = 52;</code>
-     */
-    public static final int GC_ROLE_LIST_VALUE = 52;
-    /**
-     * <code>GC_CREATE_ROLE = 53;</code>
-     */
-    public static final int GC_CREATE_ROLE_VALUE = 53;
-    /**
-     * <code>GC_CREATE_ROLE_FAIL = 54;</code>
-     */
-    public static final int GC_CREATE_ROLE_FAIL_VALUE = 54;
+    public static final int SC_LOGIN_FAIL_VALUE = 51;
     /**
      * <code>GC_HUMAN_DETAIL_INFO = 101;</code>
      *
@@ -1086,10 +1042,8 @@ public final class MessageType {
 
     public static GCMessageType valueOf(int value) {
       switch (value) {
-        case 51: return GC_LOGIN_FAIL;
-        case 52: return GC_ROLE_LIST;
-        case 53: return GC_CREATE_ROLE;
-        case 54: return GC_CREATE_ROLE_FAIL;
+        case 11: return SC_LOGIN_HANDSHAKE_REPLY;
+        case 51: return SC_LOGIN_FAIL;
         case 101: return GC_HUMAN_DETAIL_INFO;
         case 102: return GC_DATA_ERROR;
         case 103: return GC_HUMAN_BUY_ENERGY_ACK;
@@ -1313,57 +1267,54 @@ public final class MessageType {
       "rget\022\t\n\005ERROR\020\000\022\r\n\tISC_ACTOR\020\001\022\022\n\016SERVER" +
       "_MANAGER\020\002\022\n\n\006SERVER\020\003\022\020\n\014LOGIN_SERVER\020\004" +
       "\022\022\n\016PLAYER_MANAGER\020\n\022\n\n\006PLAYER\020\013\022\t\n\005SCEN" +
-      "E\020\014\022\t\n\005GUILD\020\r\022\t\n\005ARENA\020\016*\300\005\n\rCGMessageT" +
+      "E\020\014\022\t\n\005GUILD\020\r\022\t\n\005ARENA\020\016*\336\004\n\rCGMessageT" +
       "ype\022\027\n\023CG_GAME_SERVER_INFO\020\001\022\017\n\013CG_TEST_" +
       "MSG\020\002\022\034\n\022CS_LOGIN_HANDSHAKE\020\013\032\004\210\265\030\004\022\026\n\014C" +
-      "S_LOGIN_NEW\020\014\032\004\210\265\030\004\022\026\n\022CG_LOGIN_MSG_BEGI" +
-      "N\0202\022\022\n\010CG_LOGIN\0203\032\004\210\265\030\n\022\030\n\016CG_CREATE_ROL",
-      "E\0204\032\004\210\265\030\n\022\030\n\016CG_SELECT_ROLE\0205\032\004\210\265\030\n\022\024\n\020C" +
-      "G_LOGIN_MSG_END\020d\022\025\n\013CG_ITEM_USE\020e\032\004\210\265\030\013" +
-      "\022\026\n\014CG_ITEM_SELL\020f\032\004\210\265\030\013\022\032\n\020CG_ITEM_COMP" +
-      "OUND\020g\032\004\210\265\030\013\022\027\n\014CG_HIRE_HERO\020\311\001\032\004\210\265\030\013\022\032\n" +
-      "\017CG_HERO_STAR_UP\020\312\001\032\004\210\265\030\013\022\035\n\022CG_HERO_QUA" +
-      "LITY_UP\020\313\001\032\004\210\265\030\013\022!\n\026CG_HERO_SKILL_LEVEL_" +
-      "UP\020\314\001\032\004\210\265\030\013\022\035\n\022CG_HERO_WEAR_EQUIP\020\315\001\032\004\210\265" +
-      "\030\013\022\035\n\022CG_BUY_SKILL_POINT\020\316\001\032\004\210\265\030\013\022\024\n\tCG_" +
-      "GM_CMD\020\255\002\032\004\210\265\030\013\022\036\n\023CG_GET_DAILY_REWARD\020\337" +
-      "\002\032\004\210\265\030\013\022\027\n\014CG_OPEN_SHOP\020\221\003\032\004\210\265\030\013\022\033\n\020CG_R",
-      "EFRESH_GOODS\020\222\003\032\004\210\265\030\013\022\026\n\013CG_BUY_GOOD\020\223\003\032" +
-      "\004\210\265\030\013\022\031\n\016CG_OPEN_WINDOW\020\303\003\032\004\210\265\030\013\022\032\n\017CG_C" +
-      "LOSE_WINDOW\020\304\003\032\004\210\265\030\013\022\036\n\023CG_HUMAN_BUY_ENE" +
-      "RGY\020\365\003\032\004\210\265\030\013*\325\006\n\rGCMessageType\022\021\n\rGC_LOG" +
-      "IN_FAIL\0203\022\020\n\014GC_ROLE_LIST\0204\022\022\n\016GC_CREATE" +
-      "_ROLE\0205\022\027\n\023GC_CREATE_ROLE_FAIL\0206\022\030\n\024GC_H" +
-      "UMAN_DETAIL_INFO\020e\022\021\n\rGC_DATA_ERROR\020f\022\033\n" +
-      "\027GC_HUMAN_BUY_ENERGY_ACK\020g\022\033\n\027GC_HUMAN_B" +
-      "UY_ENERGY_NEG\020h\022 \n\034GC_HUMAN_ENERGY_RECOV" +
-      "ER_INFO\020i\022\037\n\033GC_HUMAN_COST_ENERGY_FAILED",
-      "\020j\022$\n GC_HUMAN_BUY_ENERGY_COUNTS_RESET\020k" +
-      "\022\023\n\017GC_VIP_LEVEL_UP\020l\022\025\n\021GC_HUMAN_LEVEL_" +
-      "UP\020m\022\032\n\025GC_HERO_CHANGED_PROPS\020\311\001\022\025\n\020GC_A" +
-      "LL_HERO_INFO\020\312\001\022\020\n\013GC_HERO_ADD\020\313\001\022\023\n\016GC_" +
-      "HERO_UPDATE\020\314\001\022\026\n\021GC_INVENTORY_INFO\020\255\002\022\023" +
-      "\n\016GC_ITEM_UPDATE\020\256\002\022\031\n\024GC_DAILY_REWARD_I" +
-      "NFO\020\221\003\022\037\n\032GC_GET_DAILY_REWARD_FAILED\020\222\003\022" +
-      "\021\n\014GC_SHOP_INFO\020\303\003\022\"\n\035GC_SHOP_MANUALLY_R" +
-      "EFRESH_INFO\020\304\003\022\030\n\023GC_GOOD_BUY_SUCCESS\020\305\003" +
-      "\022)\n$GC_SHOP_MANUALLY_REFRESH_COUNT_RESET",
-      "\020\306\003\022\036\n\031GC_SHOP_AUTO_REFRESH_INFO\020\307\003\022\022\n\rG" +
-      "C_SHOP_CLOSE\020\310\003\022\023\n\016GC_SHOP_PROMPT\020\311\003\022\030\n\023" +
-      "GC_OPENED_TEMP_SHOP\020\312\003\022\021\n\014GC_OPEN_SHOP\020\313" +
-      "\003\022\032\n\025GC_FUNCTION_OPEN_LIST\020\365\003\022\025\n\020GC_FUNC" +
-      "TION_OPEN\020\366\003\022\016\n\tGC_GM_CMD\020\247\004*\"\n\rMGMessag" +
-      "eType\022\021\n\rMG_BROAD_CAST\020\001:V\n\017cg_message_t" +
-      "ype\022\037.google.protobuf.MessageOptions\030\321\206\003" +
-      " \001(\0162\032.com.mokylin.CGMessageType:V\n\017gc_m" +
-      "essage_type\022\037.google.protobuf.MessageOpt" +
-      "ions\030\322\206\003 \001(\0162\032.com.mokylin.GCMessageType",
-      ":V\n\017mg_message_type\022\037.google.protobuf.Me" +
-      "ssageOptions\030\323\206\003 \001(\0162\032.com.mokylin.MGMes" +
-      "sageType:V\n\006TARGET\022!.google.protobuf.Enu" +
-      "mValueOptions\030\321\206\003 \001(\0162\032.com.mokylin.Mess" +
-      "ageTarget:\005ERRORB*\n\033com.mokylin.bleach.p" +
-      "rotobufB\013MessageType"
+      "S_LOGIN_NEW\020\014\032\004\210\265\030\004\022\022\n\010CS_LOGIN\0203\032\004\210\265\030\n\022" +
+      "\025\n\013CG_ITEM_USE\020e\032\004\210\265\030\013\022\026\n\014CG_ITEM_SELL\020f",
+      "\032\004\210\265\030\013\022\032\n\020CG_ITEM_COMPOUND\020g\032\004\210\265\030\013\022\027\n\014CG" +
+      "_HIRE_HERO\020\311\001\032\004\210\265\030\013\022\032\n\017CG_HERO_STAR_UP\020\312" +
+      "\001\032\004\210\265\030\013\022\035\n\022CG_HERO_QUALITY_UP\020\313\001\032\004\210\265\030\013\022!" +
+      "\n\026CG_HERO_SKILL_LEVEL_UP\020\314\001\032\004\210\265\030\013\022\035\n\022CG_" +
+      "HERO_WEAR_EQUIP\020\315\001\032\004\210\265\030\013\022\035\n\022CG_BUY_SKILL" +
+      "_POINT\020\316\001\032\004\210\265\030\013\022\024\n\tCG_GM_CMD\020\255\002\032\004\210\265\030\013\022\036\n" +
+      "\023CG_GET_DAILY_REWARD\020\337\002\032\004\210\265\030\013\022\027\n\014CG_OPEN" +
+      "_SHOP\020\221\003\032\004\210\265\030\013\022\033\n\020CG_REFRESH_GOODS\020\222\003\032\004\210" +
+      "\265\030\013\022\026\n\013CG_BUY_GOOD\020\223\003\032\004\210\265\030\013\022\031\n\016CG_OPEN_W" +
+      "INDOW\020\303\003\032\004\210\265\030\013\022\032\n\017CG_CLOSE_WINDOW\020\304\003\032\004\210\265",
+      "\030\013\022\036\n\023CG_HUMAN_BUY_ENERGY\020\365\003\032\004\210\265\030\013*\264\006\n\rG" +
+      "CMessageType\022\034\n\030SC_LOGIN_HANDSHAKE_REPLY" +
+      "\020\013\022\021\n\rSC_LOGIN_FAIL\0203\022\030\n\024GC_HUMAN_DETAIL" +
+      "_INFO\020e\022\021\n\rGC_DATA_ERROR\020f\022\033\n\027GC_HUMAN_B" +
+      "UY_ENERGY_ACK\020g\022\033\n\027GC_HUMAN_BUY_ENERGY_N" +
+      "EG\020h\022 \n\034GC_HUMAN_ENERGY_RECOVER_INFO\020i\022\037" +
+      "\n\033GC_HUMAN_COST_ENERGY_FAILED\020j\022$\n GC_HU" +
+      "MAN_BUY_ENERGY_COUNTS_RESET\020k\022\023\n\017GC_VIP_" +
+      "LEVEL_UP\020l\022\025\n\021GC_HUMAN_LEVEL_UP\020m\022\032\n\025GC_" +
+      "HERO_CHANGED_PROPS\020\311\001\022\025\n\020GC_ALL_HERO_INF",
+      "O\020\312\001\022\020\n\013GC_HERO_ADD\020\313\001\022\023\n\016GC_HERO_UPDATE" +
+      "\020\314\001\022\026\n\021GC_INVENTORY_INFO\020\255\002\022\023\n\016GC_ITEM_U" +
+      "PDATE\020\256\002\022\031\n\024GC_DAILY_REWARD_INFO\020\221\003\022\037\n\032G" +
+      "C_GET_DAILY_REWARD_FAILED\020\222\003\022\021\n\014GC_SHOP_" +
+      "INFO\020\303\003\022\"\n\035GC_SHOP_MANUALLY_REFRESH_INFO" +
+      "\020\304\003\022\030\n\023GC_GOOD_BUY_SUCCESS\020\305\003\022)\n$GC_SHOP" +
+      "_MANUALLY_REFRESH_COUNT_RESET\020\306\003\022\036\n\031GC_S" +
+      "HOP_AUTO_REFRESH_INFO\020\307\003\022\022\n\rGC_SHOP_CLOS" +
+      "E\020\310\003\022\023\n\016GC_SHOP_PROMPT\020\311\003\022\030\n\023GC_OPENED_T" +
+      "EMP_SHOP\020\312\003\022\021\n\014GC_OPEN_SHOP\020\313\003\022\032\n\025GC_FUN",
+      "CTION_OPEN_LIST\020\365\003\022\025\n\020GC_FUNCTION_OPEN\020\366" +
+      "\003\022\016\n\tGC_GM_CMD\020\247\004*\"\n\rMGMessageType\022\021\n\rMG" +
+      "_BROAD_CAST\020\001:V\n\017cg_message_type\022\037.googl" +
+      "e.protobuf.MessageOptions\030\321\206\003 \001(\0162\032.com." +
+      "mokylin.CGMessageType:V\n\017gc_message_type" +
+      "\022\037.google.protobuf.MessageOptions\030\322\206\003 \001(" +
+      "\0162\032.com.mokylin.GCMessageType:V\n\017mg_mess" +
+      "age_type\022\037.google.protobuf.MessageOption" +
+      "s\030\323\206\003 \001(\0162\032.com.mokylin.MGMessageType:V\n" +
+      "\006TARGET\022!.google.protobuf.EnumValueOptio",
+      "ns\030\321\206\003 \001(\0162\032.com.mokylin.MessageTarget:\005" +
+      "ERRORB*\n\033com.mokylin.bleach.protobufB\013Me" +
+      "ssageType"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1384,8 +1335,6 @@ public final class MessageType {
     tARGET.internalInit(descriptor.getExtensions().get(3));
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.mokylin.bleach.protobuf.MessageType.tARGET);
-    registry.add(com.mokylin.bleach.protobuf.MessageType.tARGET);
     registry.add(com.mokylin.bleach.protobuf.MessageType.tARGET);
     registry.add(com.mokylin.bleach.protobuf.MessageType.tARGET);
     registry.add(com.mokylin.bleach.protobuf.MessageType.tARGET);

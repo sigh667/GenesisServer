@@ -8,6 +8,194 @@ public final class LoginMessage {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code com.mokylin.LoginFailReason}
+   *
+   * <pre>
+   **
+   * 登录失败的原因
+   * </pre>
+   */
+  public enum LoginFailReason
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>CHANNEL_NOT_EXIST = 0;</code>
+     *
+     * <pre>
+     **渠道不存在 
+     * </pre>
+     */
+    CHANNEL_NOT_EXIST(0, 0),
+    /**
+     * <code>ACCOUNT_NOT_EXIST = 1;</code>
+     *
+     * <pre>
+     **账号不存在 
+     * </pre>
+     */
+    ACCOUNT_NOT_EXIST(1, 1),
+    /**
+     * <code>KEY_WRONG = 2;</code>
+     *
+     * <pre>
+     **秘钥错误 
+     * </pre>
+     */
+    KEY_WRONG(2, 2),
+    /**
+     * <code>LOAD_ROLE_FAIL = 3;</code>
+     *
+     * <pre>
+     **加载角色失败 
+     * </pre>
+     */
+    LOAD_ROLE_FAIL(3, 3),
+    /**
+     * <code>YOUR_ACCOUNT_IS_ONLINE = 4;</code>
+     *
+     * <pre>
+     **你所登录的账号当前已经在线（你顶号） 
+     * </pre>
+     */
+    YOUR_ACCOUNT_IS_ONLINE(4, 4),
+    /**
+     * <code>YOUR_ACCOUNT_LOGIN_AGAIN = 5;</code>
+     *
+     * <pre>
+     **你的账号在另外的机器上登录了（别人顶你号） 
+     * </pre>
+     */
+    YOUR_ACCOUNT_LOGIN_AGAIN(5, 5),
+    /**
+     * <code>YOUR_DATA_IS_SAVING = 6;</code>
+     *
+     * <pre>
+     **你的角色信息正在保存，请稍候 
+     * </pre>
+     */
+    YOUR_DATA_IS_SAVING(6, 6),
+    ;
+
+    /**
+     * <code>CHANNEL_NOT_EXIST = 0;</code>
+     *
+     * <pre>
+     **渠道不存在 
+     * </pre>
+     */
+    public static final int CHANNEL_NOT_EXIST_VALUE = 0;
+    /**
+     * <code>ACCOUNT_NOT_EXIST = 1;</code>
+     *
+     * <pre>
+     **账号不存在 
+     * </pre>
+     */
+    public static final int ACCOUNT_NOT_EXIST_VALUE = 1;
+    /**
+     * <code>KEY_WRONG = 2;</code>
+     *
+     * <pre>
+     **秘钥错误 
+     * </pre>
+     */
+    public static final int KEY_WRONG_VALUE = 2;
+    /**
+     * <code>LOAD_ROLE_FAIL = 3;</code>
+     *
+     * <pre>
+     **加载角色失败 
+     * </pre>
+     */
+    public static final int LOAD_ROLE_FAIL_VALUE = 3;
+    /**
+     * <code>YOUR_ACCOUNT_IS_ONLINE = 4;</code>
+     *
+     * <pre>
+     **你所登录的账号当前已经在线（你顶号） 
+     * </pre>
+     */
+    public static final int YOUR_ACCOUNT_IS_ONLINE_VALUE = 4;
+    /**
+     * <code>YOUR_ACCOUNT_LOGIN_AGAIN = 5;</code>
+     *
+     * <pre>
+     **你的账号在另外的机器上登录了（别人顶你号） 
+     * </pre>
+     */
+    public static final int YOUR_ACCOUNT_LOGIN_AGAIN_VALUE = 5;
+    /**
+     * <code>YOUR_DATA_IS_SAVING = 6;</code>
+     *
+     * <pre>
+     **你的角色信息正在保存，请稍候 
+     * </pre>
+     */
+    public static final int YOUR_DATA_IS_SAVING_VALUE = 6;
+
+
+    public final int getNumber() { return value; }
+
+    public static LoginFailReason valueOf(int value) {
+      switch (value) {
+        case 0: return CHANNEL_NOT_EXIST;
+        case 1: return ACCOUNT_NOT_EXIST;
+        case 2: return KEY_WRONG;
+        case 3: return LOAD_ROLE_FAIL;
+        case 4: return YOUR_ACCOUNT_IS_ONLINE;
+        case 5: return YOUR_ACCOUNT_LOGIN_AGAIN;
+        case 6: return YOUR_DATA_IS_SAVING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<LoginFailReason>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<LoginFailReason>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<LoginFailReason>() {
+            public LoginFailReason findValueByNumber(int number) {
+              return LoginFailReason.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.mokylin.bleach.protobuf.LoginMessage.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final LoginFailReason[] VALUES = values();
+
+    public static LoginFailReason valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private LoginFailReason(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.mokylin.LoginFailReason)
+  }
+
   public interface CSHandshakeOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.mokylin.CSHandshake)
       com.google.protobuf.MessageOrBuilder {
@@ -336,21 +524,30 @@ public final class LoginMessage {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required int32 serverId = 1;</code>
+     * <code>required string accountId = 1;</code>
      *
      * <pre>
-     **服务器ID。联服的几个Server共用一个LoginServer，因此登陆时需要选择serverId 
+     **账号ID 
      * </pre>
      */
-    boolean hasServerId();
+    boolean hasAccountId();
     /**
-     * <code>required int32 serverId = 1;</code>
+     * <code>required string accountId = 1;</code>
      *
      * <pre>
-     **服务器ID。联服的几个Server共用一个LoginServer，因此登陆时需要选择serverId 
+     **账号ID 
      * </pre>
      */
-    int getServerId();
+    java.lang.String getAccountId();
+    /**
+     * <code>required string accountId = 1;</code>
+     *
+     * <pre>
+     **账号ID 
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getAccountIdBytes();
 
     /**
      * <code>required string channel = 2;</code>
@@ -379,56 +576,56 @@ public final class LoginMessage {
         getChannelBytes();
 
     /**
-     * <code>required string accountId = 3;</code>
+     * <code>required string key = 3;</code>
      *
      * <pre>
-     **账号ID 
-     * </pre>
-     */
-    boolean hasAccountId();
-    /**
-     * <code>required string accountId = 3;</code>
-     *
-     * <pre>
-     **账号ID 
-     * </pre>
-     */
-    java.lang.String getAccountId();
-    /**
-     * <code>required string accountId = 3;</code>
-     *
-     * <pre>
-     **账号ID 
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getAccountIdBytes();
-
-    /**
-     * <code>required string key = 4;</code>
-     *
-     * <pre>
-     **登录秘钥 
+     **登录验证字串 
      * </pre>
      */
     boolean hasKey();
     /**
-     * <code>required string key = 4;</code>
+     * <code>required string key = 3;</code>
      *
      * <pre>
-     **登录秘钥 
+     **登录验证字串 
      * </pre>
      */
     java.lang.String getKey();
     /**
-     * <code>required string key = 4;</code>
+     * <code>required string key = 3;</code>
      *
      * <pre>
-     **登录秘钥 
+     **登录验证字串 
      * </pre>
      */
     com.google.protobuf.ByteString
         getKeyBytes();
+
+    /**
+     * <code>required string macAddress = 4;</code>
+     *
+     * <pre>
+     **mac地址
+     * </pre>
+     */
+    boolean hasMacAddress();
+    /**
+     * <code>required string macAddress = 4;</code>
+     *
+     * <pre>
+     **mac地址
+     * </pre>
+     */
+    java.lang.String getMacAddress();
+    /**
+     * <code>required string macAddress = 4;</code>
+     *
+     * <pre>
+     **mac地址
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getMacAddressBytes();
   }
   /**
    * Protobuf type {@code com.mokylin.CSLogin}
@@ -487,9 +684,10 @@ public final class LoginMessage {
               }
               break;
             }
-            case 8: {
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              serverId_ = input.readInt32();
+              accountId_ = bs;
               break;
             }
             case 18: {
@@ -501,13 +699,13 @@ public final class LoginMessage {
             case 26: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              accountId_ = bs;
+              key_ = bs;
               break;
             }
             case 34: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
-              key_ = bs;
+              macAddress_ = bs;
               break;
             }
           }
@@ -550,27 +748,58 @@ public final class LoginMessage {
     }
 
     private int bitField0_;
-    public static final int SERVERID_FIELD_NUMBER = 1;
-    private int serverId_;
+    public static final int ACCOUNTID_FIELD_NUMBER = 1;
+    private java.lang.Object accountId_;
     /**
-     * <code>required int32 serverId = 1;</code>
+     * <code>required string accountId = 1;</code>
      *
      * <pre>
-     **服务器ID。联服的几个Server共用一个LoginServer，因此登陆时需要选择serverId 
+     **账号ID 
      * </pre>
      */
-    public boolean hasServerId() {
+    public boolean hasAccountId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 serverId = 1;</code>
+     * <code>required string accountId = 1;</code>
      *
      * <pre>
-     **服务器ID。联服的几个Server共用一个LoginServer，因此登陆时需要选择serverId 
+     **账号ID 
      * </pre>
      */
-    public int getServerId() {
-      return serverId_;
+    public java.lang.String getAccountId() {
+      java.lang.Object ref = accountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          accountId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string accountId = 1;</code>
+     *
+     * <pre>
+     **账号ID 
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getAccountIdBytes() {
+      java.lang.Object ref = accountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int CHANNEL_FIELD_NUMBER = 2;
@@ -627,77 +856,23 @@ public final class LoginMessage {
       }
     }
 
-    public static final int ACCOUNTID_FIELD_NUMBER = 3;
-    private java.lang.Object accountId_;
-    /**
-     * <code>required string accountId = 3;</code>
-     *
-     * <pre>
-     **账号ID 
-     * </pre>
-     */
-    public boolean hasAccountId() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>required string accountId = 3;</code>
-     *
-     * <pre>
-     **账号ID 
-     * </pre>
-     */
-    public java.lang.String getAccountId() {
-      java.lang.Object ref = accountId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          accountId_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>required string accountId = 3;</code>
-     *
-     * <pre>
-     **账号ID 
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getAccountIdBytes() {
-      java.lang.Object ref = accountId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        accountId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int KEY_FIELD_NUMBER = 4;
+    public static final int KEY_FIELD_NUMBER = 3;
     private java.lang.Object key_;
     /**
-     * <code>required string key = 4;</code>
+     * <code>required string key = 3;</code>
      *
      * <pre>
-     **登录秘钥 
+     **登录验证字串 
      * </pre>
      */
     public boolean hasKey() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>required string key = 4;</code>
+     * <code>required string key = 3;</code>
      *
      * <pre>
-     **登录秘钥 
+     **登录验证字串 
      * </pre>
      */
     public java.lang.String getKey() {
@@ -715,10 +890,10 @@ public final class LoginMessage {
       }
     }
     /**
-     * <code>required string key = 4;</code>
+     * <code>required string key = 3;</code>
      *
      * <pre>
-     **登录秘钥 
+     **登录验证字串 
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -735,11 +910,65 @@ public final class LoginMessage {
       }
     }
 
+    public static final int MACADDRESS_FIELD_NUMBER = 4;
+    private java.lang.Object macAddress_;
+    /**
+     * <code>required string macAddress = 4;</code>
+     *
+     * <pre>
+     **mac地址
+     * </pre>
+     */
+    public boolean hasMacAddress() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required string macAddress = 4;</code>
+     *
+     * <pre>
+     **mac地址
+     * </pre>
+     */
+    public java.lang.String getMacAddress() {
+      java.lang.Object ref = macAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          macAddress_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string macAddress = 4;</code>
+     *
+     * <pre>
+     **mac地址
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getMacAddressBytes() {
+      java.lang.Object ref = macAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        macAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
-      serverId_ = 0;
-      channel_ = "";
       accountId_ = "";
+      channel_ = "";
       key_ = "";
+      macAddress_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -747,7 +976,7 @@ public final class LoginMessage {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasServerId()) {
+      if (!hasAccountId()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -755,11 +984,11 @@ public final class LoginMessage {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasAccountId()) {
+      if (!hasKey()) {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasKey()) {
+      if (!hasMacAddress()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -771,16 +1000,16 @@ public final class LoginMessage {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, serverId_);
+        output.writeBytes(1, getAccountIdBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBytes(2, getChannelBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getAccountIdBytes());
+        output.writeBytes(3, getKeyBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeBytes(4, getKeyBytes());
+        output.writeBytes(4, getMacAddressBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -793,7 +1022,7 @@ public final class LoginMessage {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, serverId_);
+          .computeBytesSize(1, getAccountIdBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
@@ -801,11 +1030,11 @@ public final class LoginMessage {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getAccountIdBytes());
+          .computeBytesSize(3, getKeyBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getKeyBytes());
+          .computeBytesSize(4, getMacAddressBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -929,13 +1158,13 @@ public final class LoginMessage {
 
       public Builder clear() {
         super.clear();
-        serverId_ = 0;
+        accountId_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         channel_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
-        accountId_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
         key_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        macAddress_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
@@ -968,7 +1197,7 @@ public final class LoginMessage {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.serverId_ = serverId_;
+        result.accountId_ = accountId_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
@@ -976,11 +1205,11 @@ public final class LoginMessage {
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.accountId_ = accountId_;
+        result.key_ = key_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.key_ = key_;
+        result.macAddress_ = macAddress_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -997,22 +1226,24 @@ public final class LoginMessage {
 
       public Builder mergeFrom(com.mokylin.bleach.protobuf.LoginMessage.CSLogin other) {
         if (other == com.mokylin.bleach.protobuf.LoginMessage.CSLogin.getDefaultInstance()) return this;
-        if (other.hasServerId()) {
-          setServerId(other.getServerId());
+        if (other.hasAccountId()) {
+          bitField0_ |= 0x00000001;
+          accountId_ = other.accountId_;
+          onChanged();
         }
         if (other.hasChannel()) {
           bitField0_ |= 0x00000002;
           channel_ = other.channel_;
           onChanged();
         }
-        if (other.hasAccountId()) {
+        if (other.hasKey()) {
           bitField0_ |= 0x00000004;
-          accountId_ = other.accountId_;
+          key_ = other.key_;
           onChanged();
         }
-        if (other.hasKey()) {
+        if (other.hasMacAddress()) {
           bitField0_ |= 0x00000008;
-          key_ = other.key_;
+          macAddress_ = other.macAddress_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1020,7 +1251,7 @@ public final class LoginMessage {
       }
 
       public final boolean isInitialized() {
-        if (!hasServerId()) {
+        if (!hasAccountId()) {
           
           return false;
         }
@@ -1028,11 +1259,11 @@ public final class LoginMessage {
           
           return false;
         }
-        if (!hasAccountId()) {
+        if (!hasKey()) {
           
           return false;
         }
-        if (!hasKey()) {
+        if (!hasMacAddress()) {
           
           return false;
         }
@@ -1058,50 +1289,102 @@ public final class LoginMessage {
       }
       private int bitField0_;
 
-      private int serverId_ ;
+      private java.lang.Object accountId_ = "";
       /**
-       * <code>required int32 serverId = 1;</code>
+       * <code>required string accountId = 1;</code>
        *
        * <pre>
-       **服务器ID。联服的几个Server共用一个LoginServer，因此登陆时需要选择serverId 
+       **账号ID 
        * </pre>
        */
-      public boolean hasServerId() {
+      public boolean hasAccountId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 serverId = 1;</code>
+       * <code>required string accountId = 1;</code>
        *
        * <pre>
-       **服务器ID。联服的几个Server共用一个LoginServer，因此登陆时需要选择serverId 
+       **账号ID 
        * </pre>
        */
-      public int getServerId() {
-        return serverId_;
+      public java.lang.String getAccountId() {
+        java.lang.Object ref = accountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            accountId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>required int32 serverId = 1;</code>
+       * <code>required string accountId = 1;</code>
        *
        * <pre>
-       **服务器ID。联服的几个Server共用一个LoginServer，因此登陆时需要选择serverId 
+       **账号ID 
        * </pre>
        */
-      public Builder setServerId(int value) {
-        bitField0_ |= 0x00000001;
-        serverId_ = value;
+      public com.google.protobuf.ByteString
+          getAccountIdBytes() {
+        java.lang.Object ref = accountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string accountId = 1;</code>
+       *
+       * <pre>
+       **账号ID 
+       * </pre>
+       */
+      public Builder setAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        accountId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 serverId = 1;</code>
+       * <code>required string accountId = 1;</code>
        *
        * <pre>
-       **服务器ID。联服的几个Server共用一个LoginServer，因此登陆时需要选择serverId 
+       **账号ID 
        * </pre>
        */
-      public Builder clearServerId() {
+      public Builder clearAccountId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        serverId_ = 0;
+        accountId_ = getDefaultInstance().getAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string accountId = 1;</code>
+       *
+       * <pre>
+       **账号ID 
+       * </pre>
+       */
+      public Builder setAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        accountId_ = value;
         onChanged();
         return this;
       }
@@ -1206,19 +1489,1410 @@ public final class LoginMessage {
         return this;
       }
 
+      private java.lang.Object key_ = "";
+      /**
+       * <code>required string key = 3;</code>
+       *
+       * <pre>
+       **登录验证字串 
+       * </pre>
+       */
+      public boolean hasKey() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required string key = 3;</code>
+       *
+       * <pre>
+       **登录验证字串 
+       * </pre>
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            key_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string key = 3;</code>
+       *
+       * <pre>
+       **登录验证字串 
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string key = 3;</code>
+       *
+       * <pre>
+       **登录验证字串 
+       * </pre>
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        key_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string key = 3;</code>
+       *
+       * <pre>
+       **登录验证字串 
+       * </pre>
+       */
+      public Builder clearKey() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string key = 3;</code>
+       *
+       * <pre>
+       **登录验证字串 
+       * </pre>
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        key_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object macAddress_ = "";
+      /**
+       * <code>required string macAddress = 4;</code>
+       *
+       * <pre>
+       **mac地址
+       * </pre>
+       */
+      public boolean hasMacAddress() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required string macAddress = 4;</code>
+       *
+       * <pre>
+       **mac地址
+       * </pre>
+       */
+      public java.lang.String getMacAddress() {
+        java.lang.Object ref = macAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            macAddress_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string macAddress = 4;</code>
+       *
+       * <pre>
+       **mac地址
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getMacAddressBytes() {
+        java.lang.Object ref = macAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          macAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string macAddress = 4;</code>
+       *
+       * <pre>
+       **mac地址
+       * </pre>
+       */
+      public Builder setMacAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        macAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string macAddress = 4;</code>
+       *
+       * <pre>
+       **mac地址
+       * </pre>
+       */
+      public Builder clearMacAddress() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        macAddress_ = getDefaultInstance().getMacAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string macAddress = 4;</code>
+       *
+       * <pre>
+       **mac地址
+       * </pre>
+       */
+      public Builder setMacAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        macAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.mokylin.CSLogin)
+    }
+
+    static {
+      defaultInstance = new CSLogin(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.mokylin.CSLogin)
+  }
+
+  public interface SCHandshakeReplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.mokylin.SCHandshakeReply)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int32 indexBegin = 1;</code>
+     *
+     * <pre>
+     ** 自增序列号的起始值
+     * </pre>
+     */
+    boolean hasIndexBegin();
+    /**
+     * <code>required int32 indexBegin = 1;</code>
+     *
+     * <pre>
+     ** 自增序列号的起始值
+     * </pre>
+     */
+    int getIndexBegin();
+  }
+  /**
+   * Protobuf type {@code com.mokylin.SCHandshakeReply}
+   *
+   * <pre>
+   **
+   * 服务器通知，握手回复
+   * </pre>
+   */
+  public static final class SCHandshakeReply extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.mokylin.SCHandshakeReply)
+      SCHandshakeReplyOrBuilder {
+    // Use SCHandshakeReply.newBuilder() to construct.
+    private SCHandshakeReply(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCHandshakeReply(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCHandshakeReply defaultInstance;
+    public static SCHandshakeReply getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCHandshakeReply getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCHandshakeReply(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              indexBegin_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_SCHandshakeReply_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_SCHandshakeReply_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply.class, com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCHandshakeReply> PARSER =
+        new com.google.protobuf.AbstractParser<SCHandshakeReply>() {
+      public SCHandshakeReply parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCHandshakeReply(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCHandshakeReply> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int INDEXBEGIN_FIELD_NUMBER = 1;
+    private int indexBegin_;
+    /**
+     * <code>required int32 indexBegin = 1;</code>
+     *
+     * <pre>
+     ** 自增序列号的起始值
+     * </pre>
+     */
+    public boolean hasIndexBegin() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 indexBegin = 1;</code>
+     *
+     * <pre>
+     ** 自增序列号的起始值
+     * </pre>
+     */
+    public int getIndexBegin() {
+      return indexBegin_;
+    }
+
+    private void initFields() {
+      indexBegin_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasIndexBegin()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, indexBegin_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, indexBegin_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.mokylin.SCHandshakeReply}
+     *
+     * <pre>
+     **
+     * 服务器通知，握手回复
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.mokylin.SCHandshakeReply)
+        com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReplyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_SCHandshakeReply_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_SCHandshakeReply_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply.class, com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply.Builder.class);
+      }
+
+      // Construct using com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        indexBegin_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_SCHandshakeReply_descriptor;
+      }
+
+      public com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply getDefaultInstanceForType() {
+        return com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply.getDefaultInstance();
+      }
+
+      public com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply build() {
+        com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply buildPartial() {
+        com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply result = new com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.indexBegin_ = indexBegin_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply) {
+          return mergeFrom((com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply other) {
+        if (other == com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply.getDefaultInstance()) return this;
+        if (other.hasIndexBegin()) {
+          setIndexBegin(other.getIndexBegin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasIndexBegin()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.mokylin.bleach.protobuf.LoginMessage.SCHandshakeReply) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int indexBegin_ ;
+      /**
+       * <code>required int32 indexBegin = 1;</code>
+       *
+       * <pre>
+       ** 自增序列号的起始值
+       * </pre>
+       */
+      public boolean hasIndexBegin() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 indexBegin = 1;</code>
+       *
+       * <pre>
+       ** 自增序列号的起始值
+       * </pre>
+       */
+      public int getIndexBegin() {
+        return indexBegin_;
+      }
+      /**
+       * <code>required int32 indexBegin = 1;</code>
+       *
+       * <pre>
+       ** 自增序列号的起始值
+       * </pre>
+       */
+      public Builder setIndexBegin(int value) {
+        bitField0_ |= 0x00000001;
+        indexBegin_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 indexBegin = 1;</code>
+       *
+       * <pre>
+       ** 自增序列号的起始值
+       * </pre>
+       */
+      public Builder clearIndexBegin() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        indexBegin_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.mokylin.SCHandshakeReply)
+    }
+
+    static {
+      defaultInstance = new SCHandshakeReply(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.mokylin.SCHandshakeReply)
+  }
+
+  public interface SCLoginFailOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.mokylin.SCLoginFail)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string accountId = 1;</code>
+     *
+     * <pre>
+     **账号ID 
+     * </pre>
+     */
+    boolean hasAccountId();
+    /**
+     * <code>required string accountId = 1;</code>
+     *
+     * <pre>
+     **账号ID 
+     * </pre>
+     */
+    java.lang.String getAccountId();
+    /**
+     * <code>required string accountId = 1;</code>
+     *
+     * <pre>
+     **账号ID 
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getAccountIdBytes();
+
+    /**
+     * <code>required string channel = 2;</code>
+     *
+     * <pre>
+     **渠道ID 
+     * </pre>
+     */
+    boolean hasChannel();
+    /**
+     * <code>required string channel = 2;</code>
+     *
+     * <pre>
+     **渠道ID 
+     * </pre>
+     */
+    java.lang.String getChannel();
+    /**
+     * <code>required string channel = 2;</code>
+     *
+     * <pre>
+     **渠道ID 
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getChannelBytes();
+
+    /**
+     * <code>required string key = 3;</code>
+     *
+     * <pre>
+     **登录验证字串 
+     * </pre>
+     */
+    boolean hasKey();
+    /**
+     * <code>required string key = 3;</code>
+     *
+     * <pre>
+     **登录验证字串 
+     * </pre>
+     */
+    java.lang.String getKey();
+    /**
+     * <code>required string key = 3;</code>
+     *
+     * <pre>
+     **登录验证字串 
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>required .com.mokylin.LoginFailReason failReason = 4;</code>
+     *
+     * <pre>
+     **失败原因 
+     * </pre>
+     */
+    boolean hasFailReason();
+    /**
+     * <code>required .com.mokylin.LoginFailReason failReason = 4;</code>
+     *
+     * <pre>
+     **失败原因 
+     * </pre>
+     */
+    com.mokylin.bleach.protobuf.LoginMessage.LoginFailReason getFailReason();
+  }
+  /**
+   * Protobuf type {@code com.mokylin.SCLoginFail}
+   *
+   * <pre>
+   **
+   * 服务器通知，登录失败
+   * </pre>
+   */
+  public static final class SCLoginFail extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.mokylin.SCLoginFail)
+      SCLoginFailOrBuilder {
+    // Use SCLoginFail.newBuilder() to construct.
+    private SCLoginFail(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCLoginFail(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCLoginFail defaultInstance;
+    public static SCLoginFail getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCLoginFail getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCLoginFail(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              accountId_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              channel_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              key_ = bs;
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+              com.mokylin.bleach.protobuf.LoginMessage.LoginFailReason value = com.mokylin.bleach.protobuf.LoginMessage.LoginFailReason.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(4, rawValue);
+              } else {
+                bitField0_ |= 0x00000008;
+                failReason_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_SCLoginFail_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_SCLoginFail_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail.class, com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCLoginFail> PARSER =
+        new com.google.protobuf.AbstractParser<SCLoginFail>() {
+      public SCLoginFail parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCLoginFail(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCLoginFail> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ACCOUNTID_FIELD_NUMBER = 1;
+    private java.lang.Object accountId_;
+    /**
+     * <code>required string accountId = 1;</code>
+     *
+     * <pre>
+     **账号ID 
+     * </pre>
+     */
+    public boolean hasAccountId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string accountId = 1;</code>
+     *
+     * <pre>
+     **账号ID 
+     * </pre>
+     */
+    public java.lang.String getAccountId() {
+      java.lang.Object ref = accountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          accountId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string accountId = 1;</code>
+     *
+     * <pre>
+     **账号ID 
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getAccountIdBytes() {
+      java.lang.Object ref = accountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHANNEL_FIELD_NUMBER = 2;
+    private java.lang.Object channel_;
+    /**
+     * <code>required string channel = 2;</code>
+     *
+     * <pre>
+     **渠道ID 
+     * </pre>
+     */
+    public boolean hasChannel() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string channel = 2;</code>
+     *
+     * <pre>
+     **渠道ID 
+     * </pre>
+     */
+    public java.lang.String getChannel() {
+      java.lang.Object ref = channel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          channel_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string channel = 2;</code>
+     *
+     * <pre>
+     **渠道ID 
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getChannelBytes() {
+      java.lang.Object ref = channel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        channel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEY_FIELD_NUMBER = 3;
+    private java.lang.Object key_;
+    /**
+     * <code>required string key = 3;</code>
+     *
+     * <pre>
+     **登录验证字串 
+     * </pre>
+     */
+    public boolean hasKey() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required string key = 3;</code>
+     *
+     * <pre>
+     **登录验证字串 
+     * </pre>
+     */
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          key_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string key = 3;</code>
+     *
+     * <pre>
+     **登录验证字串 
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FAILREASON_FIELD_NUMBER = 4;
+    private com.mokylin.bleach.protobuf.LoginMessage.LoginFailReason failReason_;
+    /**
+     * <code>required .com.mokylin.LoginFailReason failReason = 4;</code>
+     *
+     * <pre>
+     **失败原因 
+     * </pre>
+     */
+    public boolean hasFailReason() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required .com.mokylin.LoginFailReason failReason = 4;</code>
+     *
+     * <pre>
+     **失败原因 
+     * </pre>
+     */
+    public com.mokylin.bleach.protobuf.LoginMessage.LoginFailReason getFailReason() {
+      return failReason_;
+    }
+
+    private void initFields() {
+      accountId_ = "";
+      channel_ = "";
+      key_ = "";
+      failReason_ = com.mokylin.bleach.protobuf.LoginMessage.LoginFailReason.CHANNEL_NOT_EXIST;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasAccountId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasChannel()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasKey()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasFailReason()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getAccountIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getChannelBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getKeyBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeEnum(4, failReason_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getAccountIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getChannelBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getKeyBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, failReason_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.mokylin.SCLoginFail}
+     *
+     * <pre>
+     **
+     * 服务器通知，登录失败
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.mokylin.SCLoginFail)
+        com.mokylin.bleach.protobuf.LoginMessage.SCLoginFailOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_SCLoginFail_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_SCLoginFail_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail.class, com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail.Builder.class);
+      }
+
+      // Construct using com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        accountId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        channel_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        key_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        failReason_ = com.mokylin.bleach.protobuf.LoginMessage.LoginFailReason.CHANNEL_NOT_EXIST;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mokylin.bleach.protobuf.LoginMessage.internal_static_com_mokylin_SCLoginFail_descriptor;
+      }
+
+      public com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail getDefaultInstanceForType() {
+        return com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail.getDefaultInstance();
+      }
+
+      public com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail build() {
+        com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail buildPartial() {
+        com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail result = new com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.accountId_ = accountId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.channel_ = channel_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.key_ = key_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.failReason_ = failReason_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail) {
+          return mergeFrom((com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail other) {
+        if (other == com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail.getDefaultInstance()) return this;
+        if (other.hasAccountId()) {
+          bitField0_ |= 0x00000001;
+          accountId_ = other.accountId_;
+          onChanged();
+        }
+        if (other.hasChannel()) {
+          bitField0_ |= 0x00000002;
+          channel_ = other.channel_;
+          onChanged();
+        }
+        if (other.hasKey()) {
+          bitField0_ |= 0x00000004;
+          key_ = other.key_;
+          onChanged();
+        }
+        if (other.hasFailReason()) {
+          setFailReason(other.getFailReason());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasAccountId()) {
+          
+          return false;
+        }
+        if (!hasChannel()) {
+          
+          return false;
+        }
+        if (!hasKey()) {
+          
+          return false;
+        }
+        if (!hasFailReason()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.mokylin.bleach.protobuf.LoginMessage.SCLoginFail) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
       private java.lang.Object accountId_ = "";
       /**
-       * <code>required string accountId = 3;</code>
+       * <code>required string accountId = 1;</code>
        *
        * <pre>
        **账号ID 
        * </pre>
        */
       public boolean hasAccountId() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
+        return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required string accountId = 3;</code>
+       * <code>required string accountId = 1;</code>
        *
        * <pre>
        **账号ID 
@@ -1239,7 +2913,7 @@ public final class LoginMessage {
         }
       }
       /**
-       * <code>required string accountId = 3;</code>
+       * <code>required string accountId = 1;</code>
        *
        * <pre>
        **账号ID 
@@ -1259,7 +2933,7 @@ public final class LoginMessage {
         }
       }
       /**
-       * <code>required string accountId = 3;</code>
+       * <code>required string accountId = 1;</code>
        *
        * <pre>
        **账号ID 
@@ -1270,26 +2944,26 @@ public final class LoginMessage {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000001;
         accountId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string accountId = 3;</code>
+       * <code>required string accountId = 1;</code>
        *
        * <pre>
        **账号ID 
        * </pre>
        */
       public Builder clearAccountId() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         accountId_ = getDefaultInstance().getAccountId();
         onChanged();
         return this;
       }
       /**
-       * <code>required string accountId = 3;</code>
+       * <code>required string accountId = 1;</code>
        *
        * <pre>
        **账号ID 
@@ -1300,28 +2974,128 @@ public final class LoginMessage {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000001;
         accountId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object channel_ = "";
+      /**
+       * <code>required string channel = 2;</code>
+       *
+       * <pre>
+       **渠道ID 
+       * </pre>
+       */
+      public boolean hasChannel() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string channel = 2;</code>
+       *
+       * <pre>
+       **渠道ID 
+       * </pre>
+       */
+      public java.lang.String getChannel() {
+        java.lang.Object ref = channel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            channel_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string channel = 2;</code>
+       *
+       * <pre>
+       **渠道ID 
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getChannelBytes() {
+        java.lang.Object ref = channel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          channel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string channel = 2;</code>
+       *
+       * <pre>
+       **渠道ID 
+       * </pre>
+       */
+      public Builder setChannel(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        channel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string channel = 2;</code>
+       *
+       * <pre>
+       **渠道ID 
+       * </pre>
+       */
+      public Builder clearChannel() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        channel_ = getDefaultInstance().getChannel();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string channel = 2;</code>
+       *
+       * <pre>
+       **渠道ID 
+       * </pre>
+       */
+      public Builder setChannelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        channel_ = value;
         onChanged();
         return this;
       }
 
       private java.lang.Object key_ = "";
       /**
-       * <code>required string key = 4;</code>
+       * <code>required string key = 3;</code>
        *
        * <pre>
-       **登录秘钥 
+       **登录验证字串 
        * </pre>
        */
       public boolean hasKey() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>required string key = 4;</code>
+       * <code>required string key = 3;</code>
        *
        * <pre>
-       **登录秘钥 
+       **登录验证字串 
        * </pre>
        */
       public java.lang.String getKey() {
@@ -1339,10 +3113,10 @@ public final class LoginMessage {
         }
       }
       /**
-       * <code>required string key = 4;</code>
+       * <code>required string key = 3;</code>
        *
        * <pre>
-       **登录秘钥 
+       **登录验证字串 
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -1359,10 +3133,10 @@ public final class LoginMessage {
         }
       }
       /**
-       * <code>required string key = 4;</code>
+       * <code>required string key = 3;</code>
        *
        * <pre>
-       **登录秘钥 
+       **登录验证字串 
        * </pre>
        */
       public Builder setKey(
@@ -1370,29 +3144,29 @@ public final class LoginMessage {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000004;
         key_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string key = 4;</code>
+       * <code>required string key = 3;</code>
        *
        * <pre>
-       **登录秘钥 
+       **登录验证字串 
        * </pre>
        */
       public Builder clearKey() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         key_ = getDefaultInstance().getKey();
         onChanged();
         return this;
       }
       /**
-       * <code>required string key = 4;</code>
+       * <code>required string key = 3;</code>
        *
        * <pre>
-       **登录秘钥 
+       **登录验证字串 
        * </pre>
        */
       public Builder setKeyBytes(
@@ -1400,21 +3174,72 @@ public final class LoginMessage {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000004;
         key_ = value;
         onChanged();
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.mokylin.CSLogin)
+      private com.mokylin.bleach.protobuf.LoginMessage.LoginFailReason failReason_ = com.mokylin.bleach.protobuf.LoginMessage.LoginFailReason.CHANNEL_NOT_EXIST;
+      /**
+       * <code>required .com.mokylin.LoginFailReason failReason = 4;</code>
+       *
+       * <pre>
+       **失败原因 
+       * </pre>
+       */
+      public boolean hasFailReason() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required .com.mokylin.LoginFailReason failReason = 4;</code>
+       *
+       * <pre>
+       **失败原因 
+       * </pre>
+       */
+      public com.mokylin.bleach.protobuf.LoginMessage.LoginFailReason getFailReason() {
+        return failReason_;
+      }
+      /**
+       * <code>required .com.mokylin.LoginFailReason failReason = 4;</code>
+       *
+       * <pre>
+       **失败原因 
+       * </pre>
+       */
+      public Builder setFailReason(com.mokylin.bleach.protobuf.LoginMessage.LoginFailReason value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        failReason_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .com.mokylin.LoginFailReason failReason = 4;</code>
+       *
+       * <pre>
+       **失败原因 
+       * </pre>
+       */
+      public Builder clearFailReason() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        failReason_ = com.mokylin.bleach.protobuf.LoginMessage.LoginFailReason.CHANNEL_NOT_EXIST;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.mokylin.SCLoginFail)
     }
 
     static {
-      defaultInstance = new CSLogin(true);
+      defaultInstance = new SCLoginFail(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.mokylin.CSLogin)
+    // @@protoc_insertion_point(class_scope:com.mokylin.SCLoginFail)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
@@ -1427,6 +3252,16 @@ public final class LoginMessage {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_mokylin_CSLogin_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_mokylin_SCHandshakeReply_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_mokylin_SCHandshakeReply_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_mokylin_SCLoginFail_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_mokylin_SCLoginFail_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1437,10 +3272,19 @@ public final class LoginMessage {
   static {
     java.lang.String[] descriptorData = {
       "\n\013Login.proto\022\013com.mokylin\032\021MessageType." +
-      "proto\"\023\n\013CSHandshake:\004\210\265\030\013\"R\n\007CSLogin\022\020\n" +
-      "\010serverId\030\001 \002(\005\022\017\n\007channel\030\002 \002(\t\022\021\n\tacco" +
-      "untId\030\003 \002(\t\022\013\n\003key\030\004 \002(\t:\004\210\265\030\014B+\n\033com.mo" +
-      "kylin.bleach.protobufB\014LoginMessage"
+      "proto\"\023\n\013CSHandshake:\004\210\265\030\013\"T\n\007CSLogin\022\021\n" +
+      "\taccountId\030\001 \002(\t\022\017\n\007channel\030\002 \002(\t\022\013\n\003key" +
+      "\030\003 \002(\t\022\022\n\nmacAddress\030\004 \002(\t:\004\210\265\0303\",\n\020SCHa" +
+      "ndshakeReply\022\022\n\nindexBegin\030\001 \002(\005:\004\220\265\030\013\"v" +
+      "\n\013SCLoginFail\022\021\n\taccountId\030\001 \002(\t\022\017\n\007chan" +
+      "nel\030\002 \002(\t\022\013\n\003key\030\003 \002(\t\0220\n\nfailReason\030\004 \002" +
+      "(\0162\034.com.mokylin.LoginFailReason:\004\220\265\0303*\265" +
+      "\001\n\017LoginFailReason\022\025\n\021CHANNEL_NOT_EXIST\020" +
+      "\000\022\025\n\021ACCOUNT_NOT_EXIST\020\001\022\r\n\tKEY_WRONG\020\002\022",
+      "\022\n\016LOAD_ROLE_FAIL\020\003\022\032\n\026YOUR_ACCOUNT_IS_O" +
+      "NLINE\020\004\022\034\n\030YOUR_ACCOUNT_LOGIN_AGAIN\020\005\022\027\n" +
+      "\023YOUR_DATA_IS_SAVING\020\006B+\n\033com.mokylin.bl" +
+      "each.protobufB\014LoginMessage"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1466,11 +3310,25 @@ public final class LoginMessage {
     internal_static_com_mokylin_CSLogin_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_mokylin_CSLogin_descriptor,
-        new java.lang.String[] { "ServerId", "Channel", "AccountId", "Key", });
+        new java.lang.String[] { "AccountId", "Channel", "Key", "MacAddress", });
+    internal_static_com_mokylin_SCHandshakeReply_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_mokylin_SCHandshakeReply_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_mokylin_SCHandshakeReply_descriptor,
+        new java.lang.String[] { "IndexBegin", });
+    internal_static_com_mokylin_SCLoginFail_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_mokylin_SCLoginFail_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_mokylin_SCLoginFail_descriptor,
+        new java.lang.String[] { "AccountId", "Channel", "Key", "FailReason", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
     registry.add(com.mokylin.bleach.protobuf.MessageType.cgMessageType);
+    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
+    registry.add(com.mokylin.bleach.protobuf.MessageType.gcMessageType);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.mokylin.bleach.protobuf.MessageType.getDescriptor();
