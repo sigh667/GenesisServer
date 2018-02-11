@@ -10,16 +10,16 @@ import com.mokylin.td.network2client.core.session.IClientSession;
  * @author: Joey
  * @create: 2018-02-08 18:57
  **/
-public class CGLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
+public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
 
 
     @Override
-    public void handle(IClientSession session, LoginMessage.CSLogin cgLogin) {
-        final String accountId = cgLogin.getAccountId();
-        final String channel = cgLogin.getChannel();
-        final String key = cgLogin.getKey();
-        final String macAddress = cgLogin.getMacAddress();
-        final String version = cgLogin.getVersion();
+    public void handle(IClientSession session, LoginMessage.CSLogin csLogin) {
+        final String accountId = csLogin.getAccountId();
+        final String channel = csLogin.getChannel();
+        final String key = csLogin.getKey();
+        final String macAddress = csLogin.getMacAddress();
+        final String version = csLogin.getVersion();
 
         //1.0 开始验证
         //1.1 检验版本
