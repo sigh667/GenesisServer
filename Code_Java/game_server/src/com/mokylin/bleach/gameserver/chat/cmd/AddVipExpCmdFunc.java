@@ -5,8 +5,8 @@ import com.mokylin.bleach.gameserver.chat.cmd.core.IGmCmdFunction;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.human.vip.VipHelper;
-import com.mokylin.bleach.protobuf.ChatMessage.GCGmCmd;
-import com.mokylin.bleach.protobuf.ChatMessage.GCGmCmd.Builder;
+import com.icewind.protobuf.ChatMessage.GCGmCmd;
+import com.icewind.protobuf.ChatMessage.GCGmCmd.Builder;
 
 import java.util.List;
 

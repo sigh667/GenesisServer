@@ -5,8 +5,8 @@ import com.mokylin.bleach.gameserver.core.timeout.callback.ITimeoutCallback;
 import com.mokylin.bleach.gameserver.player.LoginStatus;
 import com.mokylin.bleach.gameserver.player.Player;
 import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
-import com.mokylin.bleach.protobuf.PlayerMessage.GCLoginFail;
-import com.mokylin.bleach.protobuf.PlayerMessage.LoginFailReason;
+import com.icewind.protobuf.LoginMessage.SCLoginFail;
+import com.icewind.protobuf.LoginMessage.LoginFailReason;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,8 +50,7 @@ public class LoadHumanDataFromDBSTimeOutCallBack implements ITimeoutCallback {
                 player.getChannel(), player.getId(), humanInfo.getId());
 
         //告知玩家，数据加载失败
-        GCLoginFail msg = GCLoginFail.newBuilder().setAccountId(player.getAccountId())
-                .setChannel(player.getChannel()).setKey(player.getKey())
+        SCLoginFail msg = SCLoginFail.newBuilder()
                 .setFailReason(LoginFailReason.LOAD_ROLE_FAIL).build();
         player.sendMessage(msg);
 

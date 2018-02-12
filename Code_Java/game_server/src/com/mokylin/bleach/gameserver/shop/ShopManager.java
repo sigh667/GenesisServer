@@ -12,8 +12,8 @@ import com.mokylin.bleach.gameserver.core.global.Globals;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.shop.shop.Shop;
 import com.mokylin.bleach.gameserver.shop.timeevent.ShopCloseTask;
-import com.mokylin.bleach.protobuf.ShopMessage.GCOpenShop;
-import com.mokylin.bleach.protobuf.ShopMessage.GCOpenedTempShop;
+import com.icewind.protobuf.ShopMessage.GCOpenShop;
+import com.icewind.protobuf.ShopMessage.GCOpenedTempShop;
 
 import java.sql.Timestamp;
 import java.util.List;

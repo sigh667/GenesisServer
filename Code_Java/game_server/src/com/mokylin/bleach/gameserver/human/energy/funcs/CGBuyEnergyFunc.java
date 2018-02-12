@@ -11,11 +11,11 @@ import com.mokylin.bleach.gameserver.core.msgfunc.AbstractClientMsgFunc;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.human.vip.VipHelper;
 import com.mokylin.bleach.gameserver.player.Player;
-import com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo;
-import com.mokylin.bleach.protobuf.HumanMessage.BuyEnergyFail;
-import com.mokylin.bleach.protobuf.HumanMessage.CGBuyEnergy;
-import com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyAck;
-import com.mokylin.bleach.protobuf.HumanMessage.GCBuyEnergyNeg;
+import com.icewind.protobuf.CommonMessage.CurrencyChangeInfo;
+import com.icewind.protobuf.HumanMessage.BuyEnergyFail;
+import com.icewind.protobuf.HumanMessage.CGBuyEnergy;
+import com.icewind.protobuf.HumanMessage.GCBuyEnergyAck;
+import com.icewind.protobuf.HumanMessage.GCBuyEnergyNeg;
 
 /**
  * 处理客户端购买体力方法

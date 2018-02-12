@@ -8,8 +8,8 @@ import com.mokylin.bleach.gameserver.player.LoginStatus;
 import com.mokylin.bleach.gameserver.player.Player;
 import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
 import com.icewind.protobuf.MessageType.MessageTarget;
-import com.mokylin.bleach.protobuf.PlayerMessage.GCLoginFail;
-import com.mokylin.bleach.protobuf.PlayerMessage.LoginFailReason;
+import com.icewind.protobuf.LoginMessage.SCLoginFail;
+import com.icewind.protobuf.LoginMessage.LoginFailReason;
 
 /**
  * 处理加载角色错误的函数对象。<p>
@@ -28,8 +28,7 @@ public class LoadHumanDataFailedFunc
         Player player = msg.player;
         if (player.getStatus() != LoginStatus.Logouting) {
             player.setStatus(LoginStatus.LoadingHumanFailed);
-            player.sendMessage(GCLoginFail.newBuilder().setAccountId(player.getAccountId())
-                    .setChannel(player.getChannel()).setKey(player.getKey())
+            player.sendMessage(SCLoginFail.newBuilder()
                     .setFailReason(LoginFailReason.LOAD_ROLE_FAIL));
             player.disconnect();
         } else {

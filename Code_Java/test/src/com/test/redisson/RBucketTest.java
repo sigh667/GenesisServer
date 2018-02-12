@@ -22,7 +22,7 @@ public class RBucketTest extends AbstractRedissonTest {
      */
     @Test
     public void testRBucketString() {
-        RBucket<String> rBucket = RedisUtils.getInstance().getRBucket(redisson, "testBucket");
+        RBucket<String> rBucket = RedisUtils.getRBucket(redisson, "testBucket");
 
         //同步放置
         rBucket.set("redisBucketASync");
@@ -45,7 +45,7 @@ public class RBucketTest extends AbstractRedissonTest {
      */
     @Test
     public void testRBucketInt() {
-        RBucket<Integer> bucket = RedisUtils.getInstance().getRBucket(redisson, "testBucketInt");
+        RBucket<Integer> bucket = RedisUtils.getRBucket(redisson, "testBucketInt");
         bucket.set(20);
         boolean bRet = bucket.compareAndSet(15, 25);
         assertThat(bRet, is(false));
@@ -61,7 +61,7 @@ public class RBucketTest extends AbstractRedissonTest {
         bRet = bucket.trySet(100);
         assertThat(bRet, is(false));
 
-        RBucket<Integer> bucket2 = RedisUtils.getInstance().getRBucket(redisson, "testBucketInt2");
+        RBucket<Integer> bucket2 = RedisUtils.getRBucket(redisson, "testBucketInt2");
         bRet = bucket2.trySet(100);
         assertThat(bRet, is(true));
 

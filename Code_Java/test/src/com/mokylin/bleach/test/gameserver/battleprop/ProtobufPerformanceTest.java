@@ -2,8 +2,8 @@ package com.mokylin.bleach.test.gameserver.battleprop;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 
-import com.mokylin.bleach.protobuf.HeroMessage.GCChangedProps;
-import com.mokylin.bleach.protobuf.HeroMessage.PropData;
+import com.icewind.protobuf.HeroMessage.GCChangedProps;
+import com.icewind.protobuf.HeroMessage.PropData;
 
 public class ProtobufPerformanceTest {
 

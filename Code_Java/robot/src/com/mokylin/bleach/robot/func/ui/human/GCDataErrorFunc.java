@@ -1,6 +1,6 @@
 package com.mokylin.bleach.robot.func.ui.human;
 
-import com.mokylin.bleach.protobuf.HumanMessage.GCDataError;
+import com.icewind.protobuf.HumanMessage.GCDataError;
 import com.mokylin.bleach.robot.core.net.RobotBaseMsgFunc;
 import com.mokylin.bleach.robot.robot.Robot;
 

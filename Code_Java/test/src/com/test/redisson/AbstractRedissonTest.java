@@ -17,7 +17,7 @@ public class AbstractRedissonTest {
     public void before() {
         String ip = "127.0.0.1";
         String port = "6379";
-        redisson = RedisUtils.getInstance().getRedisson(ip, port);
+        redisson = RedisUtils.getRedisson(ip, port);
     }
 
     /**
@@ -26,6 +26,6 @@ public class AbstractRedissonTest {
      */
     @After
     public void after(){
-        RedisUtils.getInstance().closeRedisson(redisson);
+        RedisUtils.closeRedisson(redisson);
     }
 }

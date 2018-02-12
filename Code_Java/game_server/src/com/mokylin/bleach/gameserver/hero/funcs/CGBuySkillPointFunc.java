@@ -4,7 +4,7 @@ import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.core.msgfunc.playeractor.PlayerActorMsgFunc;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.player.Player;
-import com.mokylin.bleach.protobuf.HeroMessage.CGBuySkillPoint;
+import com.icewind.protobuf.HeroMessage.CGBuySkillPoint;
 
 public class CGBuySkillPointFunc extends PlayerActorMsgFunc<CGBuySkillPoint> {
 

@@ -4,8 +4,8 @@ import com.mokylin.bleach.robot.gm.GMFrame;
 import com.mokylin.bleach.robot.human.Human;
 import com.mokylin.bleach.robot.item.Inventory;
 import com.mokylin.bleach.robot.item.view.InventoryFrame;
-import com.mokylin.bleach.robot.login.view.CreateRoleFrame;
-import com.mokylin.bleach.robot.login.view.SelectRoleFrame;
+//import com.mokylin.bleach.robot.login.view.CreateRoleFrame;
+//import com.mokylin.bleach.robot.login.view.SelectRoleFrame;
 import com.mokylin.bleach.robot.ui.loading.LoadingDialog;
 
 import javax.swing.*;
@@ -16,9 +16,9 @@ public class PanelFactory {
 
     private static LoadingDialog loginingDialog;
 
-    private static CreateRoleFrame createRoleFram;
-
-    private static SelectRoleFrame selectRoleFrame;
+//    private static CreateRoleFrame createRoleFram;
+//
+//    private static SelectRoleFrame selectRoleFrame;
 
     private static InventoryFrame inventoryFrame;
 
@@ -40,13 +40,13 @@ public class PanelFactory {
         PanelFactory.loginFram = loginFram;
     }
 
-    public static CreateRoleFrame getCreateRoleFram() {
-        return createRoleFram;
-    }
-
-    public static void setCreateRoleFram(CreateRoleFrame createRoleFram) {
-        PanelFactory.createRoleFram = createRoleFram;
-    }
+//    public static CreateRoleFrame getCreateRoleFram() {
+//        return createRoleFram;
+//    }
+//
+//    public static void setCreateRoleFram(CreateRoleFrame createRoleFram) {
+//        PanelFactory.createRoleFram = createRoleFram;
+//    }
 
     public static InventoryFrame getInventoryFrame(Inventory inventory) {
         if (inventoryFrame == null) {
@@ -64,11 +64,11 @@ public class PanelFactory {
         return gmFrame;
     }
 
-    public static SelectRoleFrame getSelectRoleFrame() {
-        return selectRoleFrame;
-    }
-
-    public static void setSelectRoleFrame(SelectRoleFrame frame) {
-        selectRoleFrame = frame;
-    }
+//    public static SelectRoleFrame getSelectRoleFrame() {
+//        return selectRoleFrame;
+//    }
+//
+//    public static void setSelectRoleFrame(SelectRoleFrame frame) {
+//        selectRoleFrame = frame;
+//    }
 }

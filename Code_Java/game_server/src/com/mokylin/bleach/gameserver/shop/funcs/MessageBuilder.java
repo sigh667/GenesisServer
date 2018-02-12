@@ -3,14 +3,14 @@ package com.mokylin.bleach.gameserver.shop.funcs;
 import com.mokylin.bleach.common.currency.Currency;
 import com.mokylin.bleach.common.currency.Price;
 import com.mokylin.bleach.gameserver.shop.shop.Shop;
-import com.mokylin.bleach.protobuf.CommonMessage.CurrencyChangeInfo;
-import com.mokylin.bleach.protobuf.ShopMessage.GCGoodBuySuccess;
-import com.mokylin.bleach.protobuf.ShopMessage.GCShopAutoRefreshInfo;
-import com.mokylin.bleach.protobuf.ShopMessage.GCShopInfo;
-import com.mokylin.bleach.protobuf.ShopMessage.GCShopManuallyRefreshInfo;
-import com.mokylin.bleach.protobuf.ShopMessage.GCShopPrompt;
-import com.mokylin.bleach.protobuf.ShopMessage.GoodInfo;
-import com.mokylin.bleach.protobuf.ShopMessage.ShopPrompt;
+import com.icewind.protobuf.CommonMessage.CurrencyChangeInfo;
+import com.icewind.protobuf.ShopMessage.GCGoodBuySuccess;
+import com.icewind.protobuf.ShopMessage.GCShopAutoRefreshInfo;
+import com.icewind.protobuf.ShopMessage.GCShopInfo;
+import com.icewind.protobuf.ShopMessage.GCShopManuallyRefreshInfo;
+import com.icewind.protobuf.ShopMessage.GCShopPrompt;
+import com.icewind.protobuf.ShopMessage.GoodInfo;
+import com.icewind.protobuf.ShopMessage.ShopPrompt;
 
 import java.util.List;
 

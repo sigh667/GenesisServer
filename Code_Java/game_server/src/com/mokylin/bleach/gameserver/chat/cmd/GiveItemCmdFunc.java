@@ -5,8 +5,8 @@ import com.mokylin.bleach.common.item.template.ItemTemplate;
 import com.mokylin.bleach.gameserver.chat.cmd.core.IGmCmdFunction;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.human.Human;
-import com.mokylin.bleach.protobuf.ItemMessage.GCItemUpdate;
-import com.mokylin.bleach.protobuf.db.DBInventoryBlob.ItemData;
+import com.icewind.protobuf.ItemMessage.GCItemUpdate;
+import com.icewind.protobuf.db.DBInventoryBlob.ItemData;
 
 import java.util.List;
 

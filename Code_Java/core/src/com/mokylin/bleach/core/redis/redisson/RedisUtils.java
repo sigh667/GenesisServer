@@ -11,30 +11,13 @@ import org.redisson.Redisson;
  */
 public class RedisUtils {
 
-    private static RedisUtils redisUtils;
-
-    private RedisUtils(){}
-
-    /**
-     * 提供单例模式
-     * @return
-     */
-    public static RedisUtils getInstance(){
-        if(redisUtils==null)
-            synchronized (RedisUtils.class) {
-                if(redisUtils==null) redisUtils=new RedisUtils();
-            }
-        return redisUtils;
-    }
-
-
     /**
      * 使用config创建Redisson
      * Redisson是用于连接Redis Server的基础类
      * @param config
      * @return
      */
-    public RedissonClient getRedisson(Config config){
+    public static RedissonClient getRedisson(Config config){
         RedissonClient redisson=Redisson.create(config);
         System.out.println("成功连接Redis Server");
         return redisson;
@@ -46,7 +29,7 @@ public class RedisUtils {
      * @param port
      * @return
      */
-    public RedissonClient getRedisson(String ip,String port){
+    public static RedissonClient getRedisson(String ip,String port){
 
         //创建配置
         Config config = new Config();
@@ -64,7 +47,7 @@ public class RedisUtils {
      * 关闭Redisson客户端连接
      * @param redisson
      */
-    public void closeRedisson(RedissonClient redisson){
+    public static void closeRedisson(RedissonClient redisson){
         redisson.shutdown();
         System.out.println("成功关闭Redis Client连接");
     }
@@ -75,7 +58,7 @@ public class RedisUtils {
      * @param objectName
      * @return
      */
-    public <T> RBucket<T> getRBucket(RedissonClient redisson, String objectName){
+    public static <T> RBucket<T> getRBucket(RedissonClient redisson, String objectName){
         RBucket<T> bucket=redisson.getBucket(objectName);
         return bucket;
     }
@@ -86,7 +69,7 @@ public class RedisUtils {
      * @param objectName
      * @return
      */
-    public <K,V> RMap<K, V> getRMap(RedissonClient redisson, String objectName){
+    public static <K,V> RMap<K, V> getRMap(RedissonClient redisson, String objectName){
         RMap<K, V> map=redisson.getMap(objectName);
         return map;
     }
@@ -97,7 +80,7 @@ public class RedisUtils {
      * @param objectName
      * @return
      */
-    public <V> RSortedSet<V> getRSortedSet(RedissonClient redisson, String objectName){
+    public static <V> RSortedSet<V> getRSortedSet(RedissonClient redisson, String objectName){
         RSortedSet<V> sortedSet=redisson.getSortedSet(objectName);
         return sortedSet;
     }
@@ -108,7 +91,7 @@ public class RedisUtils {
      * @param objectName
      * @return
      */
-    public <V> RSet<V> getRSet(RedissonClient redisson, String objectName){
+    public static <V> RSet<V> getRSet(RedissonClient redisson, String objectName){
         RSet<V> rSet=redisson.getSet(objectName);
         return rSet;
     }
@@ -119,7 +102,7 @@ public class RedisUtils {
      * @param objectName
      * @return
      */
-    public <V> RList<V> getRList(RedissonClient redisson, String objectName){
+    public static <V> RList<V> getRList(RedissonClient redisson, String objectName){
         RList<V> rList=redisson.getList(objectName);
         return rList;
     }
@@ -130,7 +113,7 @@ public class RedisUtils {
      * @param objectName
      * @return
      */
-    public <V> RQueue<V> getRQueue(RedissonClient redisson, String objectName){
+    public static <V> RQueue<V> getRQueue(RedissonClient redisson, String objectName){
         RQueue<V> rQueue=redisson.getQueue(objectName);
         return rQueue;
     }
@@ -141,7 +124,7 @@ public class RedisUtils {
      * @param objectName
      * @return
      */
-    public <V> RDeque<V> getRDeque(RedissonClient redisson, String objectName){
+    public static <V> RDeque<V> getRDeque(RedissonClient redisson, String objectName){
         RDeque<V> rDeque=redisson.getDeque(objectName);
         return rDeque;
     }
@@ -165,7 +148,7 @@ public class RedisUtils {
      * @param objectName
      * @return
      */
-    public RLock getRLock(RedissonClient redisson, String objectName){
+    public static RLock getRLock(RedissonClient redisson, String objectName){
         RLock rLock=redisson.getLock(objectName);
         return rLock;
     }
@@ -176,7 +159,7 @@ public class RedisUtils {
      * @param objectName
      * @return
      */
-    public RAtomicLong getRAtomicLong(RedissonClient redisson, String objectName){
+    public static RAtomicLong getRAtomicLong(RedissonClient redisson, String objectName){
         RAtomicLong rAtomicLong=redisson.getAtomicLong(objectName);
         return rAtomicLong;
     }
@@ -187,7 +170,7 @@ public class RedisUtils {
      * @param objectName
      * @return
      */
-    public RCountDownLatch getRCountDownLatch(RedissonClient redisson, String objectName){
+    public static RCountDownLatch getRCountDownLatch(RedissonClient redisson, String objectName){
         RCountDownLatch rCountDownLatch=redisson.getCountDownLatch(objectName);
         return rCountDownLatch;
     }
@@ -198,10 +181,9 @@ public class RedisUtils {
      * @param objectName
      * @return
      */
-    public <M> RTopic<M> getRTopic(RedissonClient redisson, String objectName){
+    public static <M> RTopic<M> getRTopic(RedissonClient redisson, String objectName){
         RTopic<M> rTopic=redisson.getTopic(objectName);
         return rTopic;
     }
-
 
 }

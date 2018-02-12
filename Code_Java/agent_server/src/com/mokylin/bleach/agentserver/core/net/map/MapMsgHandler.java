@@ -6,7 +6,7 @@ import com.mokylin.bleach.agentserver.core.session.AgentClientSessions;
 import com.mokylin.bleach.core.net.msg.BaseMessage;
 import com.mokylin.bleach.core.net.msg.SCMessage;
 import com.icewind.protobuf.MessageType.MGMessageType;
-import com.mokylin.bleach.protobuf.agentserver.AgentMessage.MGBroadCast;
+import com.icewind.protobuf.agentserver.AgentMessage.MGBroadCast;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

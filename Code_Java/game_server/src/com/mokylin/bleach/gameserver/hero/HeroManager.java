@@ -6,11 +6,11 @@ import com.mokylin.bleach.common.hero.template.HeroGroupTemplate;
 import com.mokylin.bleach.gamedb.orm.entity.HeroEntity;
 import com.mokylin.bleach.gameserver.core.global.Globals;
 import com.mokylin.bleach.gameserver.human.Human;
-import com.mokylin.bleach.protobuf.HeroMessage.GCAllHeroInfo;
-import com.mokylin.bleach.protobuf.HeroMessage.GCAllHeroInfo.Builder;
-import com.mokylin.bleach.protobuf.HeroMessage.GCHeroAdd;
-import com.mokylin.bleach.protobuf.HeroMessage.GCHeroUpdate;
-import com.mokylin.bleach.protobuf.HeroMessage.HeroInfo;
+import com.icewind.protobuf.HeroMessage.GCAllHeroInfo;
+import com.icewind.protobuf.HeroMessage.GCAllHeroInfo.Builder;
+import com.icewind.protobuf.HeroMessage.GCHeroAdd;
+import com.icewind.protobuf.HeroMessage.GCHeroUpdate;
+import com.icewind.protobuf.HeroMessage.HeroInfo;
 
 import java.util.HashMap;
 import java.util.List;
@@ -61,7 +61,7 @@ public class HeroManager {
      */
     public void notifyOnLogin() {
         Builder allHeroBuilder = GCAllHeroInfo.newBuilder();
-        com.mokylin.bleach.protobuf.HeroMessage.HeroInfo.Builder heroBuilder =
+        com.icewind.protobuf.HeroMessage.HeroInfo.Builder heroBuilder =
                 HeroInfo.newBuilder();
         for (Hero hero : heroMap.values()) {
             final HeroInfo heroInfo = hero.builderHeroInfo(heroBuilder);

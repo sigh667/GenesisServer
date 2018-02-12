@@ -89,7 +89,7 @@ public class Globals {
         heartBeatService.start(CommonProcessType.MAIN, 1000);
         logger.info("心跳线程启动完毕");
         // 7.1注册心跳
-        getHeartBeatService().registerHeartbeat(ClientSessionContainer.Inst);
+        getHeartBeatService().registerHeartbeat(ClientSessionContainer.Inst);//清理死连接
     }
 
 

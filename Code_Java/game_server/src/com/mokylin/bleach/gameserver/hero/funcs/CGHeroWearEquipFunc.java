@@ -9,7 +9,7 @@ import com.mokylin.bleach.gameserver.hero.equip.Equip;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.item.Inventory;
 import com.mokylin.bleach.gameserver.player.Player;
-import com.mokylin.bleach.protobuf.HeroMessage.CGHeroWearEquip;
+import com.icewind.protobuf.HeroMessage.CGHeroWearEquip;
 
 public class CGHeroWearEquipFunc extends PlayerActorMsgFunc<CGHeroWearEquip> {
 

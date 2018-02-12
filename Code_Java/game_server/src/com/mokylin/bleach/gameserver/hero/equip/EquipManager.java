@@ -6,7 +6,7 @@ import com.mokylin.bleach.common.prop.battleprop.source.PropSourceType;
 import com.mokylin.bleach.gamedb.orm.vo.HeroEquip;
 import com.mokylin.bleach.gameserver.hero.Hero;
 import com.mokylin.bleach.gameserver.human.Human;
-import com.mokylin.bleach.protobuf.HeroMessage.HeroEquipInfo;
+import com.icewind.protobuf.HeroMessage.HeroEquipInfo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

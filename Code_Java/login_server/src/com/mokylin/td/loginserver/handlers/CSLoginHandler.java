@@ -72,7 +72,7 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
                 return;
         }
 
-        // 2.如果有必要则，进入排队列表 TODO
+        // 2.如果有必要，则进入排队列表 TODO
 
         // 3.分配一个Gate给此玩家 TODO
 

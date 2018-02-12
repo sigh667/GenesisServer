@@ -4,7 +4,7 @@ import com.mokylin.bleach.core.timeaxis.ITimeEvent;
 import com.mokylin.bleach.core.timeaxis.ITimeEventType;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.shop.shop.Shop;
-import com.mokylin.bleach.protobuf.ShopMessage.GCShopClose;
+import com.icewind.protobuf.ShopMessage.GCShopClose;
 
 /**
  * 商店关闭任务

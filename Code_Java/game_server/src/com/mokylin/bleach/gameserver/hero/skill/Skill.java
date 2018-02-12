@@ -2,8 +2,8 @@ package com.mokylin.bleach.gameserver.hero.skill;
 
 import com.mokylin.bleach.gamedb.orm.vo.HeroSkill;
 import com.mokylin.bleach.gameserver.hero.Hero;
-import com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo;
-import com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo.Builder;
+import com.icewind.protobuf.HeroMessage.HeroSkillInfo;
+import com.icewind.protobuf.HeroMessage.HeroSkillInfo.Builder;
 
 /**
  * Hero身上的技能

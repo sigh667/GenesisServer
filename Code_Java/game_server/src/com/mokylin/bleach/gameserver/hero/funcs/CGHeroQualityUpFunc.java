@@ -9,7 +9,7 @@ import com.mokylin.bleach.gameserver.hero.HeroManager;
 import com.mokylin.bleach.gameserver.hero.equip.EquipManager;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.player.Player;
-import com.mokylin.bleach.protobuf.HeroMessage.CGHeroQualityUp;
+import com.icewind.protobuf.HeroMessage.CGHeroQualityUp;
 
 public class CGHeroQualityUpFunc extends PlayerActorMsgFunc<CGHeroQualityUp> {
 

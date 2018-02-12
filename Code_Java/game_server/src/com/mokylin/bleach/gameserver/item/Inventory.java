@@ -8,9 +8,9 @@ import com.mokylin.bleach.common.item.template.ItemTemplate;
 import com.mokylin.bleach.gamedb.orm.entity.ItemEntity;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.item.ItemInfo.DetailItemInfo;
-import com.mokylin.bleach.protobuf.ItemMessage.GCInventoryInfo;
-import com.mokylin.bleach.protobuf.db.DBInventoryBlob.ItemData;
-import com.mokylin.bleach.protobuf.db.DBInventoryBlob.ItemData.Builder;
+import com.icewind.protobuf.ItemMessage.GCInventoryInfo;
+import com.icewind.protobuf.db.DBInventoryBlob.ItemData;
+import com.icewind.protobuf.db.DBInventoryBlob.ItemData.Builder;
 
 import java.util.List;
 
@@ -58,7 +58,7 @@ public class Inventory extends ItemContainer<Human, Item> {
      * 登录时，给客户端发背包所有信息
      */
     public void notifyOnLogin() {
-        com.mokylin.bleach.protobuf.ItemMessage.GCInventoryInfo.Builder inventoryBuilder =
+        com.icewind.protobuf.ItemMessage.GCInventoryInfo.Builder inventoryBuilder =
                 GCInventoryInfo.newBuilder();
         Builder itemBuilder = ItemData.newBuilder();
         for (Item item : map.values()) {

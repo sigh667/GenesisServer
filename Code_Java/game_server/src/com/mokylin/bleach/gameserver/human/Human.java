@@ -1,7 +1,6 @@
 package com.mokylin.bleach.gameserver.human;
 
 import com.google.protobuf.GeneratedMessage;
-
 import com.mokylin.bleach.common.core.GlobalData;
 import com.mokylin.bleach.common.currency.Currency;
 import com.mokylin.bleach.common.currency.CurrencyPropId;
@@ -33,13 +32,12 @@ import com.mokylin.bleach.gameserver.item.Inventory;
 import com.mokylin.bleach.gameserver.player.Player;
 import com.mokylin.bleach.gameserver.shop.ShopManager;
 import com.mokylin.bleach.gameserver.window.WindowManager;
-import com.mokylin.bleach.protobuf.HeroMessage.GCChangedProps;
-import com.mokylin.bleach.protobuf.HeroMessage.PropData;
-import com.mokylin.bleach.protobuf.HumanMessage.GCDataError;
-import com.mokylin.bleach.protobuf.HumanMessage.GCHumanDetailInfo;
-import com.mokylin.bleach.protobuf.HumanMessage.GCHumanDetailInfo.Builder;
-import com.mokylin.bleach.protobuf.HumanMessage.GCHumanLevelUp;
-
+import com.icewind.protobuf.HeroMessage.GCChangedProps;
+import com.icewind.protobuf.HeroMessage.PropData;
+import com.icewind.protobuf.HumanMessage.GCDataError;
+import com.icewind.protobuf.HumanMessage.GCHumanDetailInfo;
+import com.icewind.protobuf.HumanMessage.GCHumanDetailInfo.Builder;
+import com.icewind.protobuf.HumanMessage.GCHumanLevelUp;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

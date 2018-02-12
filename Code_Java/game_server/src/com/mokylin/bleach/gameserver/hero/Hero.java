@@ -20,8 +20,8 @@ import com.mokylin.bleach.gameserver.hero.quality.QualityProp;
 import com.mokylin.bleach.gameserver.hero.skill.SkillManager;
 import com.mokylin.bleach.gameserver.hero.star.StarAndLevelProp;
 import com.mokylin.bleach.gameserver.human.Human;
-import com.mokylin.bleach.protobuf.HeroMessage.HeroInfo;
-import com.mokylin.bleach.protobuf.HeroMessage.HeroSkillInfo;
+import com.icewind.protobuf.HeroMessage.HeroInfo;
+import com.icewind.protobuf.HeroMessage.HeroSkillInfo;
 
 import java.sql.Timestamp;
 

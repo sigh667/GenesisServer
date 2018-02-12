@@ -13,7 +13,7 @@ public enum LoginStatus {
     Init {
         @Override
         public boolean isCanProcess(int messageType) {
-            if (CGMessageType.CG_LOGIN_VALUE == messageType) {
+            if (CGMessageType.CS_LOGIN_VALUE == messageType) {
                 return true;
             }
             return false;
@@ -62,9 +62,9 @@ public enum LoginStatus {
     CreatingHuman {
                 @Override
                 public boolean isCanProcess(int messageType) {
-                    if (CGMessageType.CG_CREATE_ROLE_VALUE == messageType) {
-                        return true;
-                    }
+//                    if (CGMessageType.CG_CREATE_ROLE_VALUE == messageType) {
+//                        return true;
+//                    }
                     return false;
                 }
 
@@ -78,9 +78,9 @@ public enum LoginStatus {
     SelectingHuman {
                 @Override
                 public boolean isCanProcess(int messageType) {
-                    if (CGMessageType.CG_SELECT_ROLE_VALUE == messageType) {
-                        return true;
-                    }
+//                    if (CGMessageType.CG_SELECT_ROLE_VALUE == messageType) {
+//                        return true;
+//                    }
                     return false;
                 }
 
@@ -144,10 +144,10 @@ public enum LoginStatus {
     Gaming {
                 @Override
                 public boolean isCanProcess(int messageType) {
-                    if (messageType >= MessageType.CGMessageType.CG_LOGIN_MSG_BEGIN_VALUE &&
-                            messageType <= MessageType.CGMessageType.CG_LOGIN_MSG_END_VALUE) {
-                        return false;
-                    }
+//                    if (messageType >= MessageType.CGMessageType.CG_LOGIN_MSG_BEGIN_VALUE &&
+//                            messageType <= MessageType.CGMessageType.CG_LOGIN_MSG_END_VALUE) {
+//                        return false;
+//                    }
                     return true;
                 }
 

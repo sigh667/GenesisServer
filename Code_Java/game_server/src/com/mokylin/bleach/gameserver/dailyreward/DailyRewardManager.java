@@ -6,7 +6,7 @@ import com.mokylin.bleach.core.timeaxis.ITimeEventType;
 import com.mokylin.bleach.core.util.TimeUtils;
 import com.mokylin.bleach.gameserver.core.global.Globals;
 import com.mokylin.bleach.gameserver.human.Human;
-import com.mokylin.bleach.protobuf.DailyRewardMessage.GCDailyRewardInfo;
+import com.icewind.protobuf.DailyRewardMessage.GCDailyRewardInfo;
 
 import org.joda.time.Days;
 import org.joda.time.LocalDateTime;

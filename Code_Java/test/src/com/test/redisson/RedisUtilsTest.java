@@ -26,7 +26,7 @@ public class RedisUtilsTest {
     public void before() {
         String ip = "127.0.0.1";//"192.168.1.160";
         String port = "6379";
-        redisson = RedisUtils.getInstance().getRedisson(ip, port);
+        redisson = RedisUtils.getRedisson(ip, port);
     }
 
     /**
@@ -35,7 +35,7 @@ public class RedisUtilsTest {
      */
     @After
     public void after(){
-        RedisUtils.getInstance().closeRedisson(redisson);
+        RedisUtils.closeRedisson(redisson);
     }
 
     /**
@@ -49,7 +49,7 @@ public class RedisUtilsTest {
     @Test
     public void testGetRBucket() {
         // 1.0 string
-        RBucket<String> rBucket=RedisUtils.getInstance().getRBucket(redisson, "testBucket");
+        RBucket<String> rBucket=RedisUtils.getRBucket(redisson, "testBucket");
         //同步放置
         rBucket.set("redisBucketASync");
         //异步放置
@@ -58,7 +58,7 @@ public class RedisUtilsTest {
         assertThat(bucketString, is("测试"));
 
         // 2.0 数字
-        RBucket<Integer> _Bucket=RedisUtils.getInstance().getRBucket(redisson, "testBucketInt");
+        RBucket<Integer> _Bucket=RedisUtils.getRBucket(redisson, "testBucketInt");
         _Bucket.set(20);
         _Bucket.compareAndSet(15, 25);
     }
@@ -77,7 +77,7 @@ public class RedisUtilsTest {
      */
     @Test
     public void testGetRMap() throws InterruptedException, ExecutionException {
-        RMap<String, Integer> rMap=RedisUtils.getInstance().getRMap(redisson, "testMap");
+        RMap<String, Integer> rMap=RedisUtils.getRMap(redisson, "testMap");
         //清除集合
         rMap.clear();
         //添加key-value 返回之前关联过的值
@@ -114,7 +114,7 @@ public class RedisUtilsTest {
      */
     @Test
     public void testGetRSortedSet() {
-        RSortedSet<Integer> rSortedSet=RedisUtils.getInstance().getRSortedSet(redisson, "testSortedSet");
+        RSortedSet<Integer> rSortedSet=RedisUtils.getRSortedSet(redisson, "testSortedSet");
         //清除集合
         rSortedSet.clear();
         rSortedSet.add(45);
@@ -134,7 +134,7 @@ public class RedisUtilsTest {
      */
     @Test
     public void testGetRSet() {
-        RSet<Integer> rSet=RedisUtils.getInstance().getRSet(redisson, "testSet");
+        RSet<Integer> rSet=RedisUtils.getRSet(redisson, "testSet");
         //清除集合
         rSet.clear();
         Collection<Integer> c=Arrays.asList(12,45,12,34,56,78);
@@ -152,7 +152,7 @@ public class RedisUtilsTest {
      */
     @Test
     public void testGetRList() {
-        RList<Integer> rList=RedisUtils.getInstance().getRList(redisson, "testList");
+        RList<Integer> rList=RedisUtils.getRList(redisson, "testList");
         //清除集合
         rList.clear();
         Collection<Integer> c=Arrays.asList(12,45,12,34,56,78);
@@ -171,7 +171,7 @@ public class RedisUtilsTest {
      */
     @Test
     public void testGetRQueue() {
-        RQueue<Integer> rQueue=RedisUtils.getInstance().getRQueue(redisson, "testQueue");
+        RQueue<Integer> rQueue=RedisUtils.getRQueue(redisson, "testQueue");
         //清除队列
         rQueue.clear();
         Collection<Integer> c=Arrays.asList(12,45,12,34,56,78);
@@ -196,7 +196,7 @@ public class RedisUtilsTest {
      */
     @Test
     public void testGetRDeque() {
-        RDeque<Integer> rDeque=RedisUtils.getInstance().getRDeque(redisson, "testDeque");
+        RDeque<Integer> rDeque=RedisUtils.getRDeque(redisson, "testDeque");
         //清空双端队列
         rDeque.clear();
         Collection<Integer> c=Arrays.asList(12,45,12,34,56,78);
@@ -242,7 +242,7 @@ public class RedisUtilsTest {
      */
     @Test
     public void testGetRLock() {
-        RLock rLock=RedisUtils.getInstance().getRLock(redisson, "testLock1");
+        RLock rLock=RedisUtils.getRLock(redisson, "testLock1");
         if(rLock.isLocked()) rLock.unlock();
         else rLock.lock();
         //
@@ -261,7 +261,7 @@ public class RedisUtilsTest {
      */
     @Test
     public void testGetRAtomicLong() {
-        RAtomicLong rAtomicLong=RedisUtils.getInstance().getRAtomicLong(redisson, "testAtomicLong");
+        RAtomicLong rAtomicLong=RedisUtils.getRAtomicLong(redisson, "testAtomicLong");
         rAtomicLong.set(100);
         System.out.println(rAtomicLong.addAndGet(200));
         System.out.println(rAtomicLong.decrementAndGet());
@@ -278,7 +278,7 @@ public class RedisUtilsTest {
      */
     @Test
     public void testGetRCountDownLatch() throws InterruptedException {
-        RCountDownLatch rCountDownLatch=RedisUtils.getInstance().getRCountDownLatch(redisson, "testCountDownLatch");
+        RCountDownLatch rCountDownLatch=RedisUtils.getRCountDownLatch(redisson, "testCountDownLatch");
         System.out.println(rCountDownLatch.getCount());
         //rCountDownLatch.trySetCount(1l);
         System.out.println(rCountDownLatch.getCount());
@@ -312,10 +312,10 @@ public class RedisUtilsTest {
      */
     @Test
     public void testGetRTopicPub() {
-        RTopic<String> rTopic=RedisUtils.getInstance().getRTopic(redisson, "testTopic");
+        RTopic<String> rTopic=RedisUtils.getRTopic(redisson, "testTopic");
         System.out.println(rTopic.publish("今天是儿童节，大家儿童节快乐"));
         //发送完消息后 让订阅者不再等待
-        RCountDownLatch rCountDownLatch=RedisUtils.getInstance().getRCountDownLatch(redisson, "testCountDownLatch");
+        RCountDownLatch rCountDownLatch=RedisUtils.getRCountDownLatch(redisson, "testCountDownLatch");
         rCountDownLatch.countDown();
     }
 

@@ -6,7 +6,7 @@ import com.mokylin.bleach.gameserver.core.autoexecutetask.AbstractAutoExecuteTas
 import com.mokylin.bleach.gameserver.core.global.Globals;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.shop.shop.Shop;
-import com.mokylin.bleach.protobuf.ShopMessage.GCShopManuallyRefreshCountReset;
+import com.icewind.protobuf.ShopMessage.GCShopManuallyRefreshCountReset;
 
 import org.joda.time.LocalTime;
 

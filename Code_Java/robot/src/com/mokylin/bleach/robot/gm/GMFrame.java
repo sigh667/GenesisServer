@@ -2,10 +2,10 @@ package com.mokylin.bleach.robot.gm;
 
 import com.google.protobuf.GeneratedMessage;
 
-import com.mokylin.bleach.protobuf.ChatMessage.CGGmCmdMessage;
-import com.mokylin.bleach.protobuf.ChatMessage.CGGmCmdMessage.Builder;
-import com.mokylin.bleach.protobuf.ChatMessage.GCGmCmd;
-import com.mokylin.bleach.protobuf.HumanMessage.CGBuyEnergy;
+import com.icewind.protobuf.ChatMessage.CGGmCmdMessage;
+import com.icewind.protobuf.ChatMessage.CGGmCmdMessage.Builder;
+import com.icewind.protobuf.ChatMessage.GCGmCmd;
+import com.icewind.protobuf.HumanMessage.CGBuyEnergy;
 import com.mokylin.bleach.robot.human.Human;
 
 import java.awt.*;

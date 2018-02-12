@@ -1,7 +1,7 @@
 package com.mokylin.bleach.robot.item.view;
 
 import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.protobuf.ItemMessage.CGItemSell;
+import com.icewind.protobuf.ItemMessage.CGItemSell;
 import com.mokylin.bleach.robot.font.FontFactory;
 import com.mokylin.bleach.robot.item.Inventory;
 import com.mokylin.bleach.robot.item.Item;

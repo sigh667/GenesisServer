@@ -3,9 +3,9 @@ package com.mokylin.bleach.robot.core.net;
 import com.mokylin.bleach.core.net.msg.CSMessage;
 import com.mokylin.bleach.core.net.msg.SCMessage;
 import com.icewind.protobuf.MessageType.CGMessageType;
-import com.mokylin.bleach.protobuf.PlayerMessage.CGLogin;
-import com.mokylin.bleach.protobuf.PlayerMessage.CGLogin.Builder;
-import com.mokylin.bleach.protobuf.agentserver.AgentMessage.CGGameServerInfo;
+import com.icewind.protobuf.LoginMessage.CSLogin;
+import com.icewind.protobuf.LoginMessage.CSLogin.Builder;
+import com.icewind.protobuf.agentserver.AgentMessage.CGGameServerInfo;
 import com.mokylin.bleach.robot.core.Global;
 import com.mokylin.bleach.robot.robot.Robot;
 import com.mokylin.bleach.robot.robot.RobotSession;
@@ -47,11 +47,11 @@ public class Handler extends ChannelInboundHandlerAdapter {
     }
 
     private void sendLoginMsg(ChannelHandlerContext ctx) {
-        Builder login = CGLogin.newBuilder();
+        Builder login = CSLogin.newBuilder();
         login.setAccountId(this.account);
         login.setChannel("");
         login.setKey("");
-        ctx.writeAndFlush(new SCMessage(CGMessageType.CG_LOGIN_VALUE, login.build().toByteArray()));
+        ctx.writeAndFlush(new SCMessage(CGMessageType.CS_LOGIN_VALUE, login.build().toByteArray()));
     }
 
     @Override

@@ -6,10 +6,9 @@ import com.mokylin.bleach.core.net.msg.CSMessage;
 import com.mokylin.bleach.core.net.msg.SCMessage;
 import com.icewind.protobuf.MessageType.CGMessageType;
 import com.icewind.protobuf.MessageType.GCMessageType;
-import com.mokylin.bleach.protobuf.PlayerMessage.CGCreateRole;
-import com.mokylin.bleach.protobuf.PlayerMessage.CGLogin;
-import com.mokylin.bleach.protobuf.PlayerMessage.CGLogin.Builder;
-import com.mokylin.bleach.protobuf.agentserver.AgentMessage.CGGameServerInfo;
+import com.icewind.protobuf.LoginMessage.CSLogin;
+import com.icewind.protobuf.LoginMessage.CSLogin.Builder;
+import com.icewind.protobuf.agentserver.AgentMessage.CGGameServerInfo;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -22,11 +21,11 @@ public class Handler extends ChannelInboundHandlerAdapter {
         builder.setServerId(1001);
         ctx.writeAndFlush(new SCMessage(CGMessageType.CG_GAME_SERVER_INFO_VALUE,
                 builder.build().toByteArray()));
-        Builder login = CGLogin.newBuilder();
+        Builder login = CSLogin.newBuilder();
         login.setAccountId("3");
         login.setChannel("pangchongwan");
         login.setKey("");
-        ctx.writeAndFlush(new SCMessage(CGMessageType.CG_LOGIN_VALUE, login.build().toByteArray()));
+        ctx.writeAndFlush(new SCMessage(CGMessageType.CS_LOGIN_VALUE, login.build().toByteArray()));
     }
 
     @Override
@@ -38,10 +37,10 @@ public class Handler extends ChannelInboundHandlerAdapter {
         CSMessage scMsg = (CSMessage) msg;
         int mType = scMsg.messageType;
         switch (mType) {
-            case GCMessageType.GC_CREATE_ROLE_VALUE:
-                this.sendMsg(ctx, CGMessageType.CG_CREATE_ROLE_VALUE,
-                        CGCreateRole.newBuilder().setName("Test3"));
-                break;
+//            case GCMessageType.SC_CREATE_ROLE_VALUE:
+//                this.sendMsg(ctx, CGMessageType.CS_CREATE_ROLE_VALUE,
+//                        CSCreateRole.newBuilder().setName("Test3"));
+//                break;
 
             default:
                 break;

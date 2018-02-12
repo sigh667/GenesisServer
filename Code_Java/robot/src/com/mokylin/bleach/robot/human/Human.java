@@ -2,9 +2,9 @@ package com.mokylin.bleach.robot.human;
 
 import com.google.protobuf.GeneratedMessage;
 
-import com.mokylin.bleach.protobuf.ChatMessage.CGGmCmdMessage;
-import com.mokylin.bleach.protobuf.ChatMessage.CGGmCmdMessage.Builder;
-import com.mokylin.bleach.protobuf.HumanMessage.GCHumanDetailInfo;
+import com.icewind.protobuf.ChatMessage.CGGmCmdMessage;
+import com.icewind.protobuf.ChatMessage.CGGmCmdMessage.Builder;
+import com.icewind.protobuf.HumanMessage.GCHumanDetailInfo;
 import com.mokylin.bleach.robot.currency.CurrencyManager;
 import com.mokylin.bleach.robot.item.Inventory;
 import com.mokylin.bleach.robot.robot.Robot;

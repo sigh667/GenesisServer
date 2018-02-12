@@ -10,8 +10,8 @@ import com.mokylin.bleach.gameserver.core.msgfunc.AbstractClientMsgFunc;
 import com.mokylin.bleach.gameserver.dailyreward.DailyRewardManager;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.player.Player;
-import com.mokylin.bleach.protobuf.DailyRewardMessage.CGGetDailyReward;
-import com.mokylin.bleach.protobuf.DailyRewardMessage.GCGetDailyRewardFailed;
+import com.icewind.protobuf.DailyRewardMessage.CGGetDailyReward;
+import com.icewind.protobuf.DailyRewardMessage.GCGetDailyRewardFailed;
 
 /**
  * 获取当日对应的每日奖励（签到奖励）的函数对象。<p>

@@ -9,7 +9,7 @@ import com.mokylin.bleach.core.util.MathUtils;
 import com.mokylin.bleach.gameserver.core.global.Globals;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.human.vip.event.VipLevelUpEvent;
-import com.mokylin.bleach.protobuf.HumanMessage.GCVipLevelUp;
+import com.icewind.protobuf.HumanMessage.GCVipLevelUp;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

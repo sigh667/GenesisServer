@@ -5,7 +5,7 @@ import com.google.common.collect.Lists;
 import com.mokylin.bleach.common.core.GlobalData;
 import com.mokylin.bleach.common.currency.Price;
 import com.mokylin.bleach.common.item.template.ItemTemplate;
-import com.mokylin.bleach.protobuf.ShopMessage.GoodInfo;
+import com.icewind.protobuf.ShopMessage.GoodInfo;
 
 import java.util.List;
 

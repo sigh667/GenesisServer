@@ -12,7 +12,7 @@ import com.mokylin.bleach.gameserver.login.protocol.PlatformAuthResult;
 import com.mokylin.bleach.gameserver.player.LoginStatus;
 import com.mokylin.bleach.gameserver.player.Player;
 import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
-import com.mokylin.bleach.protobuf.PlayerMessage.CGLogin;
+import com.icewind.protobuf.LoginMessage.CSLogin;
 
 import akka.actor.ActorRef;
 
@@ -24,10 +24,10 @@ import akka.actor.ActorRef;
  * @author pangchong
  *
  */
-public class CGLoginFunc extends AbstractClientMsgFunc<CGLogin, ServerGlobals, PlayerManagerArgs> {
+public class CGLoginFunc extends AbstractClientMsgFunc<CSLogin, ServerGlobals, PlayerManagerArgs> {
 
     @Override
-    public void handle(Player player, CGLogin msg, ServerGlobals globals,
+    public void handle(Player player, CSLogin msg, ServerGlobals globals,
             PlayerManagerArgs playerManagerArgs) {
 
         final String channel = msg.getChannel();

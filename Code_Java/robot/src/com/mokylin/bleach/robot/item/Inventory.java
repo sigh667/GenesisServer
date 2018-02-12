@@ -2,8 +2,8 @@ package com.mokylin.bleach.robot.item;
 
 import com.mokylin.bleach.common.item.ItemContainer;
 import com.mokylin.bleach.common.item.template.ItemTemplate;
-import com.mokylin.bleach.protobuf.ItemMessage.GCInventoryInfo;
-import com.mokylin.bleach.protobuf.db.DBInventoryBlob.ItemData;
+import com.icewind.protobuf.ItemMessage.GCInventoryInfo;
+import com.icewind.protobuf.db.DBInventoryBlob.ItemData;
 import com.mokylin.bleach.robot.human.Human;
 
 import java.util.ArrayList;
