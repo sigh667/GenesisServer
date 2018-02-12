@@ -4,6 +4,7 @@ import com.mokylin.bleach.core.redis.redisson.RedisUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.redisson.api.RedissonClient;
+import org.redisson.config.Config;
 
 public class AbstractRedissonTest {
 
@@ -17,7 +18,8 @@ public class AbstractRedissonTest {
     public void before() {
         String ip = "127.0.0.1";
         String port = "6379";
-        redisson = RedisUtils.getRedisson(ip, port);
+        Config config = RedisUtils.buildConfig(ip, port);
+        redisson = RedisUtils.getRedisson(config);
     }
 
     /**

@@ -5,6 +5,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.redisson.api.*;
+import org.redisson.config.Config;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -26,7 +27,9 @@ public class RedisUtilsTest {
     public void before() {
         String ip = "127.0.0.1";//"192.168.1.160";
         String port = "6379";
-        redisson = RedisUtils.getRedisson(ip, port);
+
+        Config config = RedisUtils.buildConfig(ip, port);
+        redisson = RedisUtils.getRedisson(config);
     }
 
     /**

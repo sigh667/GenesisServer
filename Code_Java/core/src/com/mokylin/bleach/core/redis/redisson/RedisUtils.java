@@ -3,6 +3,11 @@ package com.mokylin.bleach.core.redis.redisson;
 import org.redisson.api.*;
 import org.redisson.config.Config;
 import org.redisson.Redisson;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /***
  * Redis client的辅助工具类
@@ -10,6 +15,9 @@ import org.redisson.Redisson;
  *
  */
 public class RedisUtils {
+    private static final Logger logger = LoggerFactory.getLogger(RedisUtils.class);
+
+    private static Map<Config, RedissonClient> map = new ConcurrentHashMap<>();
 
     /**
      * 使用config创建Redisson
@@ -18,29 +26,29 @@ public class RedisUtils {
      * @return
      */
     public static RedissonClient getRedisson(Config config){
+        if (map.containsKey(config)) {
+            return map.get(config);
+        }
+
         RedissonClient redisson=Redisson.create(config);
-        System.out.println("成功连接Redis Server");
+        map.put(config, redisson);
+        logger.info("成功连接Redis Server:" + config.toString());
         return redisson;
     }
 
     /**
-     * 使用ip地址和端口创建Redisson
+     * 创建单节点模式的配置文件
      * @param ip
      * @param port
      * @return
      */
-    public static RedissonClient getRedisson(String ip,String port){
-
+    public static Config buildConfig(String ip,String port) {
         //创建配置
         Config config = new Config();
         //指定使用单节点部署方式
         config.useSingleServer().setAddress("redis://" + ip + ":" + port);
-        //创建客户端(发现这一非常耗时，基本在2秒-4秒左右)
-        RedissonClient redisson = Redisson.create(config);
 
-
-        System.out.println("成功连接Redis Server"+"\t"+"连接"+ip+":"+port+"服务器");
-        return redisson;
+        return config;
     }
 
     /**
@@ -48,8 +56,13 @@ public class RedisUtils {
      * @param redisson
      */
     public static void closeRedisson(RedissonClient redisson){
+        final Config config = redisson.getConfig();
+        if (map.containsValue(redisson)) {
+            map.remove(config);
+        }
+
         redisson.shutdown();
-        System.out.println("成功关闭Redis Client连接");
+        logger.info("成功关闭Redis Client连接");
     }
 
     /**
