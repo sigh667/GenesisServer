@@ -25,7 +25,7 @@ public class RedisUtils {
      * @param config
      * @return
      */
-    public static RedissonClient getRedisson(Config config){
+    public static RedissonClient createRedisson(Config config){
         if (map.containsKey(config)) {
             return map.get(config);
         }
@@ -34,6 +34,20 @@ public class RedisUtils {
         map.put(config, redisson);
         logger.info("成功连接Redis Server:" + config.toString());
         return redisson;
+    }
+
+    /**
+     * 关闭Redisson客户端连接
+     * @param redisson
+     */
+    public static void closeRedisson(RedissonClient redisson){
+        final Config config = redisson.getConfig();
+        if (map.containsValue(redisson)) {
+            map.remove(config);
+        }
+
+        redisson.shutdown();
+        logger.info("成功关闭Redis Client连接");
     }
 
     /**
@@ -49,20 +63,6 @@ public class RedisUtils {
         config.useSingleServer().setAddress("redis://" + ip + ":" + port);
 
         return config;
-    }
-
-    /**
-     * 关闭Redisson客户端连接
-     * @param redisson
-     */
-    public static void closeRedisson(RedissonClient redisson){
-        final Config config = redisson.getConfig();
-        if (map.containsValue(redisson)) {
-            map.remove(config);
-        }
-
-        redisson.shutdown();
-        logger.info("成功关闭Redis Client连接");
     }
 
     /**

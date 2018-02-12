@@ -29,7 +29,7 @@ public class RedisUtilsTest {
         String port = "6379";
 
         Config config = RedisUtils.buildConfig(ip, port);
-        redisson = RedisUtils.getRedisson(config);
+        redisson = RedisUtils.createRedisson(config);
     }
 
     /**

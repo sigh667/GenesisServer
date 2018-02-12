@@ -12,15 +12,20 @@ import com.mokylin.bleach.core.isc.RemoteActorManager;
 import com.mokylin.bleach.core.redis.IRedis;
 import com.mokylin.bleach.core.redis.RedisUtil;
 import com.mokylin.bleach.core.redis.config.RedisConfig;
+import com.mokylin.bleach.core.redis.redisson.RedisUtils;
 import com.mokylin.td.loginserver.config.LoginServerConfig;
 import com.mokylin.td.loginserver.core.ClientSessionContainer;
 import com.mokylin.td.loginserver.core.process.ClientMsgHandlerUtil;
 import com.mokylin.td.loginserver.core.process.ClientMsgProcessor;
 import com.mokylin.td.loginserver.core.process.IClientMsgHandler;
 import org.apache.commons.lang3.tuple.Pair;
+import org.redisson.api.RedissonClient;
+import org.redisson.config.Config;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Map;
 
 /**
@@ -50,15 +55,26 @@ public class Globals {
      */
     private static IRedis iRedis = null;
     /**
+     * Redis连接
+     */
+    private static RedissonClient redisson;
+
+    /**
      * 客户端消息分发器
      */
     private static ClientMsgProcessor clientMsgProcessor;
 
 
-    public static void init() throws InstantiationException, IllegalAccessException {
+    public static void init() throws InstantiationException, IllegalAccessException, IOException {
         // 1.0 读取配置
         serverConfig = LoginServerConfig.loadConfig();
         logger.info("conf文件读取完毕");
+        // 新的Redis
+        File directory = new File("");//设定为当前文件夹
+        System.out.println(directory.getCanonicalPath());//获取标准的路径
+        System.out.println(directory.getAbsolutePath());//获取绝对路径
+        Config config = Config.fromYAML(new File("./login_server/config/redisson.yaml"));
+        redisson = RedisUtils.createRedisson(config);
 
         //		// 2.0表格数据初始化
         //		GlobalData.init(LoginServerConfig.getBaseResourceDir(), LoginServerConfig.isXorLoad());
@@ -92,6 +108,8 @@ public class Globals {
         getHeartBeatService().registerHeartbeat(ClientSessionContainer.Inst);//清理死连接
     }
 
+
+    public static RedissonClient getRedisson() { return redisson; }
 
     public static boolean isIsServerOpen() {
         return isServerOpen;

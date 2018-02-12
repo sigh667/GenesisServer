@@ -19,7 +19,7 @@ public class AbstractRedissonTest {
         String ip = "127.0.0.1";
         String port = "6379";
         Config config = RedisUtils.buildConfig(ip, port);
-        redisson = RedisUtils.getRedisson(config);
+        redisson = RedisUtils.createRedisson(config);
     }
 
     /**
