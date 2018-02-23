@@ -26,7 +26,7 @@ public class PlayerLogoutHandler implements IServerMsgFunc<PlayerLogout, MsgArgs
         AcceptPlayer acceptPlayer = new AcceptPlayer("账号1", "TX", 999, "qwe");
         remote.sendMessage(acceptPlayer);
 
-        //		IRemote iRemote = com.mokylin.td.loginserver.globals.Globals.getIscService().getRemote(ServerType.AGENT_SERVER, 1).get();
+        //		IRemote iRemote = com.mokylin.td.loginserver.globals.Globals.getIscService().getRemote(ServerType.GATE, 1).get();
         //		iRemote.sendMessage(acceptPlayer);
     }
 

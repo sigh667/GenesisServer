@@ -47,7 +47,7 @@ public class ServerManagerActor extends UntypedActor {
             return;
         }
         for (GameServerConfig config : configs) {
-            if (config.serverConfig.serverType != ServerType.GAME_SERVER) {
+            if (config.serverConfig.serverType != ServerType.GAME) {
                 //启动的时候默认要启动的GameServer配置错误，则启动失败
                 throw new IllegalArgumentException(
                         "ServerManagerActor can not start a server which is not game server");
@@ -99,7 +99,7 @@ public class ServerManagerActor extends UntypedActor {
             this.getSender().tell(new StartNewServer.Failed(
                             "ServerManagerActor can not start new server with null config"),
                     this.getSelf());
-        } else if (msg.newServerConfig.serverType != ServerType.GAME_SERVER) {
+        } else if (msg.newServerConfig.serverType != ServerType.GAME) {
             this.getSender().tell(new StartNewServer.Failed(
                             "ServerManagerActor can not start new server which is not game server"),
                     this.getSelf());

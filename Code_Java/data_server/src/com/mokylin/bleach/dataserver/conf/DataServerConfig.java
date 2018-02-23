@@ -31,7 +31,7 @@ public class DataServerConfig {
 
     public static DataServerConfig getDataServerConfig() {
         return new DataServerConfig(
-                new ServerConfig(ServerType.DATA_SERVER, config.getInt("dataServer.serverId"),
+                new ServerConfig(ServerType.DB, config.getInt("dataServer.serverId"),
                         getAkkaConfig()), getSqlProperties(), getMappingConf());
     }
 

@@ -30,7 +30,7 @@ public class LoginServerConfig {
      */
     public static LoginServerConfig loadConfig() {
         return new LoginServerConfig(
-                new ServerConfig(ServerType.LOGIN_SERVER, config.getInt("loginServer.serverId"),
+                new ServerConfig(ServerType.LOGIN, config.getInt("loginServer.serverId"),
                         getAkkaConfig()), loadNetInfoToClient(), loadLocalAuth());
     }
 

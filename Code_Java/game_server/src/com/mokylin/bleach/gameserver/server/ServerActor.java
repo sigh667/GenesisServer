@@ -150,13 +150,13 @@ public class ServerActor extends ResumeSupervisorStrategyActor {
 
                 //注册本服到DataServer
                 for (int each : serverConfig.dataServerIds) {
-                    registerToRemote(ServerType.DATA_SERVER, each);
+                    registerToRemote(ServerType.DB, each);
                     sGlobals.getDataService().add(each,
-                            sGlobals.getISCService().getRemote(ServerType.DATA_SERVER, each).get());
+                            sGlobals.getISCService().getRemote(ServerType.DB, each).get());
                 }
 
                 //注册本服到AgentServer
-                registerToRemote(ServerType.AGENT_SERVER, serverConfig.getConnectedAgentServerId());
+                registerToRemote(ServerType.GATE, serverConfig.getConnectedAgentServerId());
                 log.info("Server {} has started!", this.sGlobals.getServerId());
             } catch (Exception e) {
                 // 停止服务器

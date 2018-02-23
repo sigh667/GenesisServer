@@ -54,13 +54,13 @@ public class AgentServerConfig {
      */
     public static ServerConfig getConnectedLoginConfig() {
         Config tempConfig = config.getConfig("agentServer.connectTo.loginServer");
-        return new ServerConfig(ServerType.LOGIN_SERVER, tempConfig.getInt("id"),
+        return new ServerConfig(ServerType.LOGIN, tempConfig.getInt("id"),
                 new AkkaConfig(tempConfig.getString("host"), tempConfig.getInt("port")));
     }
 
     public static AgentServerConfig getAgentServerConfig() {
         return new AgentServerConfig(
-                new ServerConfig(ServerType.AGENT_SERVER, config.getInt("agentServer.serverId"),
+                new ServerConfig(ServerType.GATE, config.getInt("agentServer.serverId"),
                         getAkkaConfig()), getNetInfoToClient(), getNetInfoToMapServer(),
                 getConnectedLoginConfig());
     }

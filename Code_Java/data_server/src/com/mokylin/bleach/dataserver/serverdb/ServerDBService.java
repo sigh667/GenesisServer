@@ -133,7 +133,7 @@ public class ServerDBService implements IHeartbeat {
             }
 
             Integer currentgsId = originalgs_currentgs_map.get(entry.getKey());
-            ServerInfo serverInfo = addressConf.getTable().get(ServerType.GAME_SERVER, currentgsId);
+            ServerInfo serverInfo = addressConf.getTable().get(ServerType.GAME, currentgsId);
             set.add(serverInfo);
         }
 

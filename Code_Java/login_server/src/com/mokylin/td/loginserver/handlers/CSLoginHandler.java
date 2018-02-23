@@ -1,10 +1,12 @@
 package com.mokylin.td.loginserver.handlers;
 
 import com.icewind.protobuf.LoginMessage;
+import com.mokylin.bleach.core.isc.ServerType;
 import com.mokylin.td.loginserver.core.process.IClientMsgHandler;
 import com.mokylin.td.loginserver.core.version.Version;
 import com.mokylin.td.loginserver.globals.Globals;
 import com.mokylin.td.network2client.core.session.IClientSession;
+import org.redisson.api.RedissonClient;
 
 /**
  * 客户端登陆
@@ -72,10 +74,11 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
                 return;
         }
 
-        // 2.如果有必要，则进入排队列表 TODO
+        // 2.如果有必要，则进入排队列表（一般全球服游戏很少排队） TODO
 
         // 3.分配一个Gate给此玩家 TODO
-
+        //ServerType.GATE
+        final RedissonClient redisson = Globals.getRedisson();
     }
 
     /**

@@ -158,7 +158,7 @@ public class ServerGlobals implements MsgArgs {
      */
     public IRemote getAgentServer() {
         return this.iscService
-                .getRemote(ServerType.AGENT_SERVER, serverConfig.agentServerConfig.serverId).get();
+                .getRemote(ServerType.GATE, serverConfig.agentServerConfig.serverId).get();
     }
 
     /**
@@ -192,7 +192,7 @@ public class ServerGlobals implements MsgArgs {
      * @return
      */
     public IRemote getDataServer(int dataServerId) {
-        return this.iscService.getRemote(ServerType.DATA_SERVER, dataServerId).get();
+        return this.iscService.getRemote(ServerType.DB, dataServerId).get();
     }
 
     /**

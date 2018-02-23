@@ -124,7 +124,7 @@ public class PlayerActor extends UntypedActor {
     private void initHuman(Human human) {
         //告知AgentServer玩家登录，之后所有玩家的消息都将发往对应的Actor
         Optional<IActorPackages> agentOption = Globals.getRemoteActorManager()
-                .getRemoteActorPackage(ServerType.AGENT_SERVER,
+                .getRemoteActorPackage(ServerType.GATE,
                         sGlobals.getServerConfig().getConnectedAgentServerId());
         if (!agentOption.isPresent()) {
             //理论上这里不会走到，但是一旦发生，整个服务器应该出现了问题，无法继续，所以禁止玩家登录
@@ -137,7 +137,7 @@ public class PlayerActor extends UntypedActor {
                 new PlayerLogined(player.getId(), human.getId(), sGlobals.getServerId(),
                         this.self());
         agentOption.get().sendMessage(
-                new ActorRefMessage(ServerType.GAME_SERVER, sGlobals.getServerId(), playerLogined),
+                new ActorRefMessage(ServerType.GAME, sGlobals.getServerId(), playerLogined),
                 playerLogined.getTarget());
 
         human.init();

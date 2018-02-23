@@ -129,7 +129,7 @@ public class GameServerConfig {
      */
     public static ServerConfig getConnectedAgentConfig() {
         Config agentConfig = config.getConfig("server.connectTo.agentServer");
-        return new ServerConfig(ServerType.AGENT_SERVER, agentConfig.getInt("id"),
+        return new ServerConfig(ServerType.GATE, agentConfig.getInt("id"),
                 new AkkaConfig(agentConfig.getString("host"), agentConfig.getInt("port")));
     }
 
@@ -148,7 +148,7 @@ public class GameServerConfig {
         List<ServerConfig> dsConfigs = new ArrayList<>();
         for (ConfigValue each : dataServerList) {
             ConfigObject co = (ConfigObject) each;
-            dsConfigs.add(new ServerConfig(ServerType.DATA_SERVER, (int) co.get("id").unwrapped(),
+            dsConfigs.add(new ServerConfig(ServerType.DB, (int) co.get("id").unwrapped(),
                     new AkkaConfig((String) co.get("host").unwrapped(),
                             (int) co.get("port").unwrapped())));
         }
@@ -186,7 +186,7 @@ public class GameServerConfig {
             List<Integer> dataServerIds = (List<Integer>) co.get("dataServers").unwrapped();
             assertDataServerConfigured(dataServerIds, gameServerId, dataConfigs);
             sConfigs.add(new GameServerConfig(
-                    new ServerConfig(ServerType.GAME_SERVER, gameServerId, akkaConfig),
+                    new ServerConfig(ServerType.GAME, gameServerId, akkaConfig),
                     (int) co.get("group").unwrapped(), (String) co.get("redis").unwrapped(),
                     agentConfig, convertToIntArray(dataServerIds), isDefaultOpen,
                     isLocalLoginAllowed));

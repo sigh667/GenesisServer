@@ -43,7 +43,7 @@ public class DataServerLoadHumanTest extends AbstractTest {
     public void load_humandata_should_into_redis() throws InterruptedException, IOException {
         //启动模拟的其他Server
         ServerConfig config =
-                new ServerConfig(ServerType.GAME_SERVER, 1, new AkkaConfig("127.0.0.1", 6666));
+                new ServerConfig(ServerType.GAME, 1, new AkkaConfig("127.0.0.1", 6666));
         sp.acquire();
         Akka akka = new Akka(config.akkaConfig);
         RemoteActorManager ram = new RemoteActorManager(akka);
@@ -59,12 +59,12 @@ public class DataServerLoadHumanTest extends AbstractTest {
         //启动DataServer
         Globals.init();
 
-        ram.connectRemote(new RemoteServerConfig(ServerType.DATA_SERVER,
+        ram.connectRemote(new RemoteServerConfig(ServerType.DB,
                         Globals.getServerConfig().serverConfig.serverId,
                         Globals.getServerConfig().serverConfig.akkaConfig.ip,
                         Globals.getServerConfig().serverConfig.akkaConfig.port),
                 ISCActorSupervisor.ACTOR_NAME);
-        isc.registerToRemote(ServerType.DATA_SERVER,
+        isc.registerToRemote(ServerType.DB,
                 Globals.getServerConfig().serverConfig.serverId,
                 new SingleTargetActorRef(config.serverType, config.serverId, ar));
 
@@ -79,7 +79,7 @@ public class DataServerLoadHumanTest extends AbstractTest {
 
         LoadHumanDataMessage msg = new LoadHumanDataMessage(1, Handler.humanEntity.getAccountId(),
                 Handler.humanEntity.getChannel(), 1L, 2001);
-        isc.getRemote(ServerType.DATA_SERVER, Globals.getServerConfig().serverConfig.serverId).get()
+        isc.getRemote(ServerType.DB, Globals.getServerConfig().serverConfig.serverId).get()
                 .sendMessage(msg);
         if (!sp.tryAcquire(500000000, TimeUnit.SECONDS)) {
             Assert.fail();

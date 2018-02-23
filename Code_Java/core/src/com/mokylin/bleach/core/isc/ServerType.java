@@ -16,11 +16,16 @@ import java.util.List;
 public enum ServerType implements ArrayIndexedEnum<ServerType> {
 
     /** 网关 */
-    AGENT_SERVER(0), /** 游戏服务器 */
-    GAME_SERVER(1), /** 数据库同步服务器 */
-    DATA_SERVER(2), /** 日志服务器 */
-    LOG_SERVER(3), /** 登陆服务器*/
-    LOGIN_SERVER(4),;
+    GATE(0),
+    /** 游戏服务器 */
+    GAME(1),
+    /** 数据库同步服务器 */
+    DB(2),
+    /** 日志服务器 */
+    LOG(3),
+    /** 登陆服务器*/
+    LOGIN(4),
+    ;
 
     /** 按索引顺序存放的枚举数组 */
     private static final List<ServerType> indexes =
@@ -29,6 +34,10 @@ public enum ServerType implements ArrayIndexedEnum<ServerType> {
     private final int index;
 
     ServerType(int index) {
+        if (index!=this.ordinal()) {
+            throw new RuntimeException("Enum ServerType index must equals with ordinal! index==" + index);
+        }
+
         this.index = index;
     }
 

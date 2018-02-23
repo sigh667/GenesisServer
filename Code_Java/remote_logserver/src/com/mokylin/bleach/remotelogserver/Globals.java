@@ -81,7 +81,7 @@ public class Globals {
                 .buildConfigFromFileName("logicConfig.conf", RemoteLogServerLogicConfig.class);
 
         AkkaConfig akkaConfig = new AkkaConfig(config.getIp(), config.getAkkaPort());
-        serverConfig = new ServerConfig(ServerType.LOG_SERVER, config.getServerId(), akkaConfig);
+        serverConfig = new ServerConfig(ServerType.LOG, config.getServerId(), akkaConfig);
     }
 
     public static void shutdown() {
