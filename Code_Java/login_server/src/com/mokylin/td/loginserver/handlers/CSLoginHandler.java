@@ -1,7 +1,9 @@
 package com.mokylin.td.loginserver.handlers;
 
 import com.genesis.redis.center.GateInfo;
+import com.genesis.redis.login.LoginClientInfo;
 import com.icewind.protobuf.LoginMessage;
+import com.icewind.protobuf.SSLoginMessage;
 import com.mokylin.bleach.core.isc.ServerType;
 import com.mokylin.bleach.core.util.RandomUtil;
 import com.mokylin.td.loginserver.core.process.IClientMsgHandler;
@@ -105,16 +107,22 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
                 final int nextInt = RandomUtil.nextInt(Integer.MAX_VALUE);
                 vCode.add(nextInt);
             }
-            // 先通知Gate
+
+            // 先写入LoginRedis，之后由Gate读取
+            LoginClientInfo loginClientInfo = new LoginClientInfo();
+            loginClientInfo.accountId = accountId;
+            loginClientInfo.channel = channel;
+            loginClientInfo.vCode = vCode;
+            final RedissonClient redissonLogin = Globals.getRedissonLogin();
+            //redissonLogin.getBucket() // 组装待登陆的玩家key
+            // TODO
 
             // 再通知Client
             final LoginMessage.SCLoginSuccess.Builder builder = LoginMessage.SCLoginSuccess.newBuilder();
             builder.setGateIP(gateInfo.ip2Client)
                     .setGatePort(gateInfo.port2Client)
                     .addAllVerificationCode(vCode);
-
-            // 不过这样，还是可能出现客户端比Gate更快的情况.如果改成先通知Gate，等Gate回复了再通知Client又太麻烦了。
-            // 所以，万一客户端的key验证不通过，就多重试2次吧
+            session.sendMessage(builder);
         } else {
             // Gate全部人满
             this.notifyFailAndDisconnect(session, LoginMessage.LoginFailReason.PLAYER_IS_FULL);

@@ -55,9 +55,13 @@ public class Globals {
      */
     private static IRedis iRedis = null;
     /**
-     * Redis连接
+     * Redis连接(运维中心Redis)
      */
     private static RedissonClient redisson;
+    /**
+     * Redis连接(登陆Redis)
+     */
+    private static RedissonClient redissonLogin;
 
     /**
      * 客户端消息分发器
@@ -70,11 +74,10 @@ public class Globals {
         serverConfig = LoginServerConfig.loadConfig();
         logger.info("conf文件读取完毕");
         // 新的Redis
-        File directory = new File("");//设定为当前文件夹
-        System.out.println(directory.getCanonicalPath());//获取标准的路径
-        System.out.println(directory.getAbsolutePath());//获取绝对路径
         Config config = Config.fromYAML(new File("./login_server/config/redisson.yaml"));
         redisson = RedisUtils.createRedisson(config);
+        Config configLogin = Config.fromYAML(new File("./login_server/config/redissonLogin.yaml"));
+        redissonLogin = RedisUtils.createRedisson(configLogin);
 
         //		// 2.0表格数据初始化
         //		GlobalData.init(LoginServerConfig.getBaseResourceDir(), LoginServerConfig.isXorLoad());
@@ -110,6 +113,7 @@ public class Globals {
 
 
     public static RedissonClient getRedisson() { return redisson; }
+    public static RedissonClient getRedissonLogin() { return redissonLogin; }
 
     public static boolean isIsServerOpen() {
         return isServerOpen;
