@@ -27,61 +27,69 @@ public final class LoginMessage {
      */
     VERSION_NOT_ALLOW(0, 0),
     /**
-     * <code>CHANNEL_NOT_EXIST = 1;</code>
+     * <code>PLAYER_IS_FULL = 1;</code>
+     *
+     * <pre>
+     **服务器人满
+     * </pre>
+     */
+    PLAYER_IS_FULL(1, 1),
+    /**
+     * <code>CHANNEL_NOT_EXIST = 2;</code>
      *
      * <pre>
      **渠道不存在 
      * </pre>
      */
-    CHANNEL_NOT_EXIST(1, 1),
+    CHANNEL_NOT_EXIST(2, 2),
     /**
-     * <code>ACCOUNT_NOT_EXIST = 2;</code>
+     * <code>ACCOUNT_NOT_EXIST = 3;</code>
      *
      * <pre>
      **账号不存在 
      * </pre>
      */
-    ACCOUNT_NOT_EXIST(2, 2),
+    ACCOUNT_NOT_EXIST(3, 3),
     /**
-     * <code>KEY_WRONG = 3;</code>
+     * <code>KEY_WRONG = 4;</code>
      *
      * <pre>
      **秘钥错误 
      * </pre>
      */
-    KEY_WRONG(3, 3),
+    KEY_WRONG(4, 4),
     /**
-     * <code>LOAD_ROLE_FAIL = 4;</code>
+     * <code>LOAD_ROLE_FAIL = 5;</code>
      *
      * <pre>
      **加载角色失败 
      * </pre>
      */
-    LOAD_ROLE_FAIL(4, 4),
+    LOAD_ROLE_FAIL(5, 5),
     /**
-     * <code>YOUR_ACCOUNT_IS_ONLINE = 5;</code>
+     * <code>YOUR_ACCOUNT_IS_ONLINE = 6;</code>
      *
      * <pre>
      **你所登录的账号当前已经在线（你顶号） 
      * </pre>
      */
-    YOUR_ACCOUNT_IS_ONLINE(5, 5),
+    YOUR_ACCOUNT_IS_ONLINE(6, 6),
     /**
-     * <code>YOUR_ACCOUNT_LOGIN_AGAIN = 6;</code>
+     * <code>YOUR_ACCOUNT_LOGIN_AGAIN = 7;</code>
      *
      * <pre>
      **你的账号在另外的机器上登录了（别人顶你号） 
      * </pre>
      */
-    YOUR_ACCOUNT_LOGIN_AGAIN(6, 6),
+    YOUR_ACCOUNT_LOGIN_AGAIN(7, 7),
     /**
-     * <code>YOUR_DATA_IS_SAVING = 7;</code>
+     * <code>YOUR_DATA_IS_SAVING = 8;</code>
      *
      * <pre>
      **你的角色信息正在保存，请稍候 
      * </pre>
      */
-    YOUR_DATA_IS_SAVING(7, 7),
+    YOUR_DATA_IS_SAVING(8, 8),
     ;
 
     /**
@@ -93,61 +101,69 @@ public final class LoginMessage {
      */
     public static final int VERSION_NOT_ALLOW_VALUE = 0;
     /**
-     * <code>CHANNEL_NOT_EXIST = 1;</code>
+     * <code>PLAYER_IS_FULL = 1;</code>
+     *
+     * <pre>
+     **服务器人满
+     * </pre>
+     */
+    public static final int PLAYER_IS_FULL_VALUE = 1;
+    /**
+     * <code>CHANNEL_NOT_EXIST = 2;</code>
      *
      * <pre>
      **渠道不存在 
      * </pre>
      */
-    public static final int CHANNEL_NOT_EXIST_VALUE = 1;
+    public static final int CHANNEL_NOT_EXIST_VALUE = 2;
     /**
-     * <code>ACCOUNT_NOT_EXIST = 2;</code>
+     * <code>ACCOUNT_NOT_EXIST = 3;</code>
      *
      * <pre>
      **账号不存在 
      * </pre>
      */
-    public static final int ACCOUNT_NOT_EXIST_VALUE = 2;
+    public static final int ACCOUNT_NOT_EXIST_VALUE = 3;
     /**
-     * <code>KEY_WRONG = 3;</code>
+     * <code>KEY_WRONG = 4;</code>
      *
      * <pre>
      **秘钥错误 
      * </pre>
      */
-    public static final int KEY_WRONG_VALUE = 3;
+    public static final int KEY_WRONG_VALUE = 4;
     /**
-     * <code>LOAD_ROLE_FAIL = 4;</code>
+     * <code>LOAD_ROLE_FAIL = 5;</code>
      *
      * <pre>
      **加载角色失败 
      * </pre>
      */
-    public static final int LOAD_ROLE_FAIL_VALUE = 4;
+    public static final int LOAD_ROLE_FAIL_VALUE = 5;
     /**
-     * <code>YOUR_ACCOUNT_IS_ONLINE = 5;</code>
+     * <code>YOUR_ACCOUNT_IS_ONLINE = 6;</code>
      *
      * <pre>
      **你所登录的账号当前已经在线（你顶号） 
      * </pre>
      */
-    public static final int YOUR_ACCOUNT_IS_ONLINE_VALUE = 5;
+    public static final int YOUR_ACCOUNT_IS_ONLINE_VALUE = 6;
     /**
-     * <code>YOUR_ACCOUNT_LOGIN_AGAIN = 6;</code>
+     * <code>YOUR_ACCOUNT_LOGIN_AGAIN = 7;</code>
      *
      * <pre>
      **你的账号在另外的机器上登录了（别人顶你号） 
      * </pre>
      */
-    public static final int YOUR_ACCOUNT_LOGIN_AGAIN_VALUE = 6;
+    public static final int YOUR_ACCOUNT_LOGIN_AGAIN_VALUE = 7;
     /**
-     * <code>YOUR_DATA_IS_SAVING = 7;</code>
+     * <code>YOUR_DATA_IS_SAVING = 8;</code>
      *
      * <pre>
      **你的角色信息正在保存，请稍候 
      * </pre>
      */
-    public static final int YOUR_DATA_IS_SAVING_VALUE = 7;
+    public static final int YOUR_DATA_IS_SAVING_VALUE = 8;
 
 
     public final int getNumber() { return value; }
@@ -155,13 +171,14 @@ public final class LoginMessage {
     public static LoginFailReason valueOf(int value) {
       switch (value) {
         case 0: return VERSION_NOT_ALLOW;
-        case 1: return CHANNEL_NOT_EXIST;
-        case 2: return ACCOUNT_NOT_EXIST;
-        case 3: return KEY_WRONG;
-        case 4: return LOAD_ROLE_FAIL;
-        case 5: return YOUR_ACCOUNT_IS_ONLINE;
-        case 6: return YOUR_ACCOUNT_LOGIN_AGAIN;
-        case 7: return YOUR_DATA_IS_SAVING;
+        case 1: return PLAYER_IS_FULL;
+        case 2: return CHANNEL_NOT_EXIST;
+        case 3: return ACCOUNT_NOT_EXIST;
+        case 4: return KEY_WRONG;
+        case 5: return LOAD_ROLE_FAIL;
+        case 6: return YOUR_ACCOUNT_IS_ONLINE;
+        case 7: return YOUR_ACCOUNT_LOGIN_AGAIN;
+        case 8: return YOUR_DATA_IS_SAVING;
         default: return null;
       }
     }
@@ -2700,6 +2717,873 @@ public final class LoginMessage {
     // @@protoc_insertion_point(class_scope:com.icewind.protobuf.SCLoginServerNotOpen)
   }
 
+  public interface SCLoginSuccessOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.icewind.protobuf.SCLoginSuccess)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string gateIP = 1;</code>
+     *
+     * <pre>
+     **Gate的IP
+     * </pre>
+     */
+    boolean hasGateIP();
+    /**
+     * <code>required string gateIP = 1;</code>
+     *
+     * <pre>
+     **Gate的IP
+     * </pre>
+     */
+    java.lang.String getGateIP();
+    /**
+     * <code>required string gateIP = 1;</code>
+     *
+     * <pre>
+     **Gate的IP
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getGateIPBytes();
+
+    /**
+     * <code>required int32 gatePort = 2;</code>
+     *
+     * <pre>
+     **Gate的端口
+     * </pre>
+     */
+    boolean hasGatePort();
+    /**
+     * <code>required int32 gatePort = 2;</code>
+     *
+     * <pre>
+     **Gate的端口
+     * </pre>
+     */
+    int getGatePort();
+
+    /**
+     * <code>repeated int32 verificationCode = 3;</code>
+     *
+     * <pre>
+     **验证码
+     * </pre>
+     */
+    java.util.List<java.lang.Integer> getVerificationCodeList();
+    /**
+     * <code>repeated int32 verificationCode = 3;</code>
+     *
+     * <pre>
+     **验证码
+     * </pre>
+     */
+    int getVerificationCodeCount();
+    /**
+     * <code>repeated int32 verificationCode = 3;</code>
+     *
+     * <pre>
+     **验证码
+     * </pre>
+     */
+    int getVerificationCode(int index);
+  }
+  /**
+   * Protobuf type {@code com.icewind.protobuf.SCLoginSuccess}
+   *
+   * <pre>
+   **
+   * 服务器通知，登录成功并为其分配一个网关（Gate）
+   * </pre>
+   */
+  public static final class SCLoginSuccess extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.icewind.protobuf.SCLoginSuccess)
+      SCLoginSuccessOrBuilder {
+    // Use SCLoginSuccess.newBuilder() to construct.
+    private SCLoginSuccess(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCLoginSuccess(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCLoginSuccess defaultInstance;
+    public static SCLoginSuccess getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCLoginSuccess getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCLoginSuccess(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              gateIP_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              gatePort_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                verificationCode_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              verificationCode_.add(input.readInt32());
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
+                verificationCode_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                verificationCode_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          verificationCode_ = java.util.Collections.unmodifiableList(verificationCode_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.icewind.protobuf.LoginMessage.internal_static_com_icewind_protobuf_SCLoginSuccess_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.icewind.protobuf.LoginMessage.internal_static_com_icewind_protobuf_SCLoginSuccess_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.icewind.protobuf.LoginMessage.SCLoginSuccess.class, com.icewind.protobuf.LoginMessage.SCLoginSuccess.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCLoginSuccess> PARSER =
+        new com.google.protobuf.AbstractParser<SCLoginSuccess>() {
+      public SCLoginSuccess parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCLoginSuccess(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCLoginSuccess> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int GATEIP_FIELD_NUMBER = 1;
+    private java.lang.Object gateIP_;
+    /**
+     * <code>required string gateIP = 1;</code>
+     *
+     * <pre>
+     **Gate的IP
+     * </pre>
+     */
+    public boolean hasGateIP() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string gateIP = 1;</code>
+     *
+     * <pre>
+     **Gate的IP
+     * </pre>
+     */
+    public java.lang.String getGateIP() {
+      java.lang.Object ref = gateIP_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          gateIP_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string gateIP = 1;</code>
+     *
+     * <pre>
+     **Gate的IP
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getGateIPBytes() {
+      java.lang.Object ref = gateIP_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gateIP_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GATEPORT_FIELD_NUMBER = 2;
+    private int gatePort_;
+    /**
+     * <code>required int32 gatePort = 2;</code>
+     *
+     * <pre>
+     **Gate的端口
+     * </pre>
+     */
+    public boolean hasGatePort() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 gatePort = 2;</code>
+     *
+     * <pre>
+     **Gate的端口
+     * </pre>
+     */
+    public int getGatePort() {
+      return gatePort_;
+    }
+
+    public static final int VERIFICATIONCODE_FIELD_NUMBER = 3;
+    private java.util.List<java.lang.Integer> verificationCode_;
+    /**
+     * <code>repeated int32 verificationCode = 3;</code>
+     *
+     * <pre>
+     **验证码
+     * </pre>
+     */
+    public java.util.List<java.lang.Integer>
+        getVerificationCodeList() {
+      return verificationCode_;
+    }
+    /**
+     * <code>repeated int32 verificationCode = 3;</code>
+     *
+     * <pre>
+     **验证码
+     * </pre>
+     */
+    public int getVerificationCodeCount() {
+      return verificationCode_.size();
+    }
+    /**
+     * <code>repeated int32 verificationCode = 3;</code>
+     *
+     * <pre>
+     **验证码
+     * </pre>
+     */
+    public int getVerificationCode(int index) {
+      return verificationCode_.get(index);
+    }
+
+    private void initFields() {
+      gateIP_ = "";
+      gatePort_ = 0;
+      verificationCode_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasGateIP()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasGatePort()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getGateIPBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, gatePort_);
+      }
+      for (int i = 0; i < verificationCode_.size(); i++) {
+        output.writeInt32(3, verificationCode_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getGateIPBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, gatePort_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < verificationCode_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(verificationCode_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getVerificationCodeList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.icewind.protobuf.LoginMessage.SCLoginSuccess parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.icewind.protobuf.LoginMessage.SCLoginSuccess parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.icewind.protobuf.LoginMessage.SCLoginSuccess parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.icewind.protobuf.LoginMessage.SCLoginSuccess parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.icewind.protobuf.LoginMessage.SCLoginSuccess parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.icewind.protobuf.LoginMessage.SCLoginSuccess parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.icewind.protobuf.LoginMessage.SCLoginSuccess parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.icewind.protobuf.LoginMessage.SCLoginSuccess parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.icewind.protobuf.LoginMessage.SCLoginSuccess parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.icewind.protobuf.LoginMessage.SCLoginSuccess parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.icewind.protobuf.LoginMessage.SCLoginSuccess prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.icewind.protobuf.SCLoginSuccess}
+     *
+     * <pre>
+     **
+     * 服务器通知，登录成功并为其分配一个网关（Gate）
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.icewind.protobuf.SCLoginSuccess)
+        com.icewind.protobuf.LoginMessage.SCLoginSuccessOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.icewind.protobuf.LoginMessage.internal_static_com_icewind_protobuf_SCLoginSuccess_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.icewind.protobuf.LoginMessage.internal_static_com_icewind_protobuf_SCLoginSuccess_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.icewind.protobuf.LoginMessage.SCLoginSuccess.class, com.icewind.protobuf.LoginMessage.SCLoginSuccess.Builder.class);
+      }
+
+      // Construct using com.icewind.protobuf.LoginMessage.SCLoginSuccess.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        gateIP_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        gatePort_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        verificationCode_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.icewind.protobuf.LoginMessage.internal_static_com_icewind_protobuf_SCLoginSuccess_descriptor;
+      }
+
+      public com.icewind.protobuf.LoginMessage.SCLoginSuccess getDefaultInstanceForType() {
+        return com.icewind.protobuf.LoginMessage.SCLoginSuccess.getDefaultInstance();
+      }
+
+      public com.icewind.protobuf.LoginMessage.SCLoginSuccess build() {
+        com.icewind.protobuf.LoginMessage.SCLoginSuccess result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.icewind.protobuf.LoginMessage.SCLoginSuccess buildPartial() {
+        com.icewind.protobuf.LoginMessage.SCLoginSuccess result = new com.icewind.protobuf.LoginMessage.SCLoginSuccess(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.gateIP_ = gateIP_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.gatePort_ = gatePort_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          verificationCode_ = java.util.Collections.unmodifiableList(verificationCode_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.verificationCode_ = verificationCode_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.icewind.protobuf.LoginMessage.SCLoginSuccess) {
+          return mergeFrom((com.icewind.protobuf.LoginMessage.SCLoginSuccess)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.icewind.protobuf.LoginMessage.SCLoginSuccess other) {
+        if (other == com.icewind.protobuf.LoginMessage.SCLoginSuccess.getDefaultInstance()) return this;
+        if (other.hasGateIP()) {
+          bitField0_ |= 0x00000001;
+          gateIP_ = other.gateIP_;
+          onChanged();
+        }
+        if (other.hasGatePort()) {
+          setGatePort(other.getGatePort());
+        }
+        if (!other.verificationCode_.isEmpty()) {
+          if (verificationCode_.isEmpty()) {
+            verificationCode_ = other.verificationCode_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureVerificationCodeIsMutable();
+            verificationCode_.addAll(other.verificationCode_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasGateIP()) {
+          
+          return false;
+        }
+        if (!hasGatePort()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.icewind.protobuf.LoginMessage.SCLoginSuccess parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.icewind.protobuf.LoginMessage.SCLoginSuccess) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object gateIP_ = "";
+      /**
+       * <code>required string gateIP = 1;</code>
+       *
+       * <pre>
+       **Gate的IP
+       * </pre>
+       */
+      public boolean hasGateIP() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string gateIP = 1;</code>
+       *
+       * <pre>
+       **Gate的IP
+       * </pre>
+       */
+      public java.lang.String getGateIP() {
+        java.lang.Object ref = gateIP_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            gateIP_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string gateIP = 1;</code>
+       *
+       * <pre>
+       **Gate的IP
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getGateIPBytes() {
+        java.lang.Object ref = gateIP_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gateIP_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string gateIP = 1;</code>
+       *
+       * <pre>
+       **Gate的IP
+       * </pre>
+       */
+      public Builder setGateIP(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        gateIP_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string gateIP = 1;</code>
+       *
+       * <pre>
+       **Gate的IP
+       * </pre>
+       */
+      public Builder clearGateIP() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        gateIP_ = getDefaultInstance().getGateIP();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string gateIP = 1;</code>
+       *
+       * <pre>
+       **Gate的IP
+       * </pre>
+       */
+      public Builder setGateIPBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        gateIP_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int gatePort_ ;
+      /**
+       * <code>required int32 gatePort = 2;</code>
+       *
+       * <pre>
+       **Gate的端口
+       * </pre>
+       */
+      public boolean hasGatePort() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 gatePort = 2;</code>
+       *
+       * <pre>
+       **Gate的端口
+       * </pre>
+       */
+      public int getGatePort() {
+        return gatePort_;
+      }
+      /**
+       * <code>required int32 gatePort = 2;</code>
+       *
+       * <pre>
+       **Gate的端口
+       * </pre>
+       */
+      public Builder setGatePort(int value) {
+        bitField0_ |= 0x00000002;
+        gatePort_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 gatePort = 2;</code>
+       *
+       * <pre>
+       **Gate的端口
+       * </pre>
+       */
+      public Builder clearGatePort() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        gatePort_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> verificationCode_ = java.util.Collections.emptyList();
+      private void ensureVerificationCodeIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          verificationCode_ = new java.util.ArrayList<java.lang.Integer>(verificationCode_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated int32 verificationCode = 3;</code>
+       *
+       * <pre>
+       **验证码
+       * </pre>
+       */
+      public java.util.List<java.lang.Integer>
+          getVerificationCodeList() {
+        return java.util.Collections.unmodifiableList(verificationCode_);
+      }
+      /**
+       * <code>repeated int32 verificationCode = 3;</code>
+       *
+       * <pre>
+       **验证码
+       * </pre>
+       */
+      public int getVerificationCodeCount() {
+        return verificationCode_.size();
+      }
+      /**
+       * <code>repeated int32 verificationCode = 3;</code>
+       *
+       * <pre>
+       **验证码
+       * </pre>
+       */
+      public int getVerificationCode(int index) {
+        return verificationCode_.get(index);
+      }
+      /**
+       * <code>repeated int32 verificationCode = 3;</code>
+       *
+       * <pre>
+       **验证码
+       * </pre>
+       */
+      public Builder setVerificationCode(
+          int index, int value) {
+        ensureVerificationCodeIsMutable();
+        verificationCode_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 verificationCode = 3;</code>
+       *
+       * <pre>
+       **验证码
+       * </pre>
+       */
+      public Builder addVerificationCode(int value) {
+        ensureVerificationCodeIsMutable();
+        verificationCode_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 verificationCode = 3;</code>
+       *
+       * <pre>
+       **验证码
+       * </pre>
+       */
+      public Builder addAllVerificationCode(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureVerificationCodeIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, verificationCode_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 verificationCode = 3;</code>
+       *
+       * <pre>
+       **验证码
+       * </pre>
+       */
+      public Builder clearVerificationCode() {
+        verificationCode_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.icewind.protobuf.SCLoginSuccess)
+    }
+
+    static {
+      defaultInstance = new SCLoginSuccess(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.icewind.protobuf.SCLoginSuccess)
+  }
+
   public interface SCLoginFailOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.icewind.protobuf.SCLoginFail)
       com.google.protobuf.MessageOrBuilder {
@@ -3177,6 +4061,11 @@ public final class LoginMessage {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_icewind_protobuf_SCLoginServerNotOpen_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_icewind_protobuf_SCLoginSuccess_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_icewind_protobuf_SCLoginSuccess_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_icewind_protobuf_SCLoginFail_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -3196,14 +4085,17 @@ public final class LoginMessage {
       "(\t\022\013\n\003key\030\003 \002(\t\022\017\n\007version\030\004 \002(\t\022\022\n\nmacA" +
       "ddress\030\005 \002(\t:\004\210\265\0303\",\n\020SCHandshakeReply\022\022" +
       "\n\nindexBegin\030\001 \002(\005:\004\220\265\030\013\"\034\n\024SCLoginServe" +
-      "rNotOpen:\004\220\265\030\014\"N\n\013SCLoginFail\0229\n\nfailRea" +
-      "son\030\001 \002(\0162%.com.icewind.protobuf.LoginFa" +
-      "ilReason:\004\220\265\0303*\314\001\n\017LoginFailReason\022\025\n\021VE" +
-      "RSION_NOT_ALLOW\020\000\022\025\n\021CHANNEL_NOT_EXIST\020\001",
-      "\022\025\n\021ACCOUNT_NOT_EXIST\020\002\022\r\n\tKEY_WRONG\020\003\022\022" +
-      "\n\016LOAD_ROLE_FAIL\020\004\022\032\n\026YOUR_ACCOUNT_IS_ON" +
-      "LINE\020\005\022\034\n\030YOUR_ACCOUNT_LOGIN_AGAIN\020\006\022\027\n\023" +
-      "YOUR_DATA_IS_SAVING\020\007B\016B\014LoginMessage"
+      "rNotOpen:\004\220\265\030\014\"R\n\016SCLoginSuccess\022\016\n\006gate" +
+      "IP\030\001 \002(\t\022\020\n\010gatePort\030\002 \002(\005\022\030\n\020verificati" +
+      "onCode\030\003 \003(\005:\004\220\265\030\016\"N\n\013SCLoginFail\0229\n\nfai" +
+      "lReason\030\001 \002(\0162%.com.icewind.protobuf.Log",
+      "inFailReason:\004\220\265\030\r*\340\001\n\017LoginFailReason\022\025" +
+      "\n\021VERSION_NOT_ALLOW\020\000\022\022\n\016PLAYER_IS_FULL\020" +
+      "\001\022\025\n\021CHANNEL_NOT_EXIST\020\002\022\025\n\021ACCOUNT_NOT_" +
+      "EXIST\020\003\022\r\n\tKEY_WRONG\020\004\022\022\n\016LOAD_ROLE_FAIL" +
+      "\020\005\022\032\n\026YOUR_ACCOUNT_IS_ONLINE\020\006\022\034\n\030YOUR_A" +
+      "CCOUNT_LOGIN_AGAIN\020\007\022\027\n\023YOUR_DATA_IS_SAV" +
+      "ING\020\010B\016B\014LoginMessage"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3242,8 +4134,14 @@ public final class LoginMessage {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_icewind_protobuf_SCLoginServerNotOpen_descriptor,
         new java.lang.String[] { });
-    internal_static_com_icewind_protobuf_SCLoginFail_descriptor =
+    internal_static_com_icewind_protobuf_SCLoginSuccess_descriptor =
       getDescriptor().getMessageTypes().get(4);
+    internal_static_com_icewind_protobuf_SCLoginSuccess_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_icewind_protobuf_SCLoginSuccess_descriptor,
+        new java.lang.String[] { "GateIP", "GatePort", "VerificationCode", });
+    internal_static_com_icewind_protobuf_SCLoginFail_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_com_icewind_protobuf_SCLoginFail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_icewind_protobuf_SCLoginFail_descriptor,
@@ -3252,6 +4150,7 @@ public final class LoginMessage {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.icewind.protobuf.MessageType.cgMessageType);
     registry.add(com.icewind.protobuf.MessageType.cgMessageType);
+    registry.add(com.icewind.protobuf.MessageType.gcMessageType);
     registry.add(com.icewind.protobuf.MessageType.gcMessageType);
     registry.add(com.icewind.protobuf.MessageType.gcMessageType);
     registry.add(com.icewind.protobuf.MessageType.gcMessageType);

@@ -1,12 +1,18 @@
 package com.mokylin.td.loginserver.handlers;
 
+import com.genesis.redis.center.GateInfo;
 import com.icewind.protobuf.LoginMessage;
 import com.mokylin.bleach.core.isc.ServerType;
+import com.mokylin.bleach.core.util.RandomUtil;
 import com.mokylin.td.loginserver.core.process.IClientMsgHandler;
 import com.mokylin.td.loginserver.core.version.Version;
 import com.mokylin.td.loginserver.globals.Globals;
 import com.mokylin.td.network2client.core.session.IClientSession;
+import org.redisson.api.RMap;
 import org.redisson.api.RedissonClient;
+
+import java.util.ArrayList;
+import java.util.Map;
 
 /**
  * 客户端登陆
@@ -27,8 +33,7 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
         //0.0 检验版本
         if (!Version.Inst.isAllowed(version)) {
             // 无论是谁，版本不一致，都不允许登陆
-            notifyFail(session, LoginMessage.LoginFailReason.VERSION_NOT_ALLOW);
-            session.disconnect();
+            notifyFailAndDisconnect(session, LoginMessage.LoginFailReason.VERSION_NOT_ALLOW);
             return;
         }
 
@@ -77,8 +82,43 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
         // 2.如果有必要，则进入排队列表（一般全球服游戏很少排队） TODO
 
         // 3.分配一个Gate给此玩家 TODO
-        //ServerType.GATE
+        final String gateKey = ServerType.GATE.getKey();
         final RedissonClient redisson = Globals.getRedisson();
+        RMap<Long, GateInfo> map = redisson.getMap(gateKey);
+        double persent = 1.0;
+        long gateID = 0;
+        GateInfo gateInfo = null;
+        for (Map.Entry<Long, GateInfo> entry : map.entrySet()) {
+            final GateInfo value = entry.getValue();
+            double tempPer = value.currClientCount * 1.0 / value.maxClientCount;
+            if (tempPer < persent) {
+                persent = tempPer;
+                gateID = entry.getKey();
+                gateInfo = value;
+            }
+        }
+        if (gateID > 0) {
+            // 找到了相对空闲的Gate
+            final int length = 16;
+            ArrayList<Integer> vCode = new ArrayList<>();   // 验证码
+            for (int i = 0; i < length; i++) {
+                final int nextInt = RandomUtil.nextInt(Integer.MAX_VALUE);
+                vCode.add(nextInt);
+            }
+            // 先通知Gate
+
+            // 再通知Client
+            final LoginMessage.SCLoginSuccess.Builder builder = LoginMessage.SCLoginSuccess.newBuilder();
+            builder.setGateIP(gateInfo.ip2Client)
+                    .setGatePort(gateInfo.port2Client)
+                    .addAllVerificationCode(vCode);
+
+            // 不过这样，还是可能出现客户端比Gate更快的情况.如果改成先通知Gate，等Gate回复了再通知Client又太麻烦了。
+            // 所以，万一客户端的key验证不通过，就多重试2次吧
+        } else {
+            // Gate全部人满
+            this.notifyFailAndDisconnect(session, LoginMessage.LoginFailReason.PLAYER_IS_FULL);
+        }
     }
 
     /**
@@ -93,14 +133,17 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
     }
 
     /**
-     * 通知客户端，登陆失败
+     * 通知客户端，登陆失败。并断开连接
      * @param session   客户端连接
      * @param reason    失败原因
      */
-    private void notifyFail(IClientSession session, LoginMessage.LoginFailReason reason) {
+    private void notifyFailAndDisconnect(IClientSession session, LoginMessage.LoginFailReason reason) {
         final LoginMessage.SCLoginFail.Builder builder = LoginMessage.SCLoginFail.newBuilder();
         builder.setFailReason(reason);
         session.sendMessage(builder);
+
+        // 断开连接
+        session.disconnect();
     }
 
     /**

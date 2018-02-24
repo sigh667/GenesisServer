@@ -24,7 +24,7 @@ enum MessageTarget{
 	ISC_ACTOR = 1;
 	SERVER_MANAGER = 2;
 	SERVER = 3;
-	LOGIN_SERVER = 4;
+	LOGIN_SERVER = 4;	// 登陆服务器
 	PLAYER_MANAGER = 10;
 	PLAYER = 11;
 	SCENE = 12;
@@ -78,12 +78,11 @@ enum CGMessageType{
 
 enum GCMessageType{
 
-	//握手消息11-50
+	//登录消息 11-50
 	SC_LOGIN_HANDSHAKE_REPLY = 11;	//握手成功//
 	SC_LOGIN_SERVER_NOT_OPEN = 12;	//服务器尚未开放//
-
-	//登录消息，51-100
-	SC_LOGIN_FAIL = 51;
+	SC_LOGIN_FAIL = 13;		// 登陆失败//
+	SC_LOGIN_SUCCESS = 14;	// 登陆成功，并为其分配一个Gate//
 
 	//Human消息，101-200
 	GC_HUMAN_DETAIL_INFO = 101;

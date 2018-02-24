@@ -49,4 +49,11 @@ public enum ServerType implements ArrayIndexedEnum<ServerType> {
     public int getIndex() {
         return this.index;
     }
+
+    /**
+     * @return 该Server在中心Redis中的key
+     */
+    public String getKey() {
+        return this.name();
+    }
 }

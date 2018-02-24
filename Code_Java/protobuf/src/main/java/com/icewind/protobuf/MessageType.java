@@ -44,6 +44,10 @@ public final class MessageType {
     SERVER(3, 3),
     /**
      * <code>LOGIN_SERVER = 4;</code>
+     *
+     * <pre>
+     * 登陆服务器
+     * </pre>
      */
     LOGIN_SERVER(4, 4),
     /**
@@ -86,6 +90,10 @@ public final class MessageType {
     public static final int SERVER_VALUE = 3;
     /**
      * <code>LOGIN_SERVER = 4;</code>
+     *
+     * <pre>
+     * 登陆服务器
+     * </pre>
      */
     public static final int LOGIN_SERVER_VALUE = 4;
     /**
@@ -550,7 +558,7 @@ public final class MessageType {
      * <code>SC_LOGIN_HANDSHAKE_REPLY = 11;</code>
      *
      * <pre>
-     *握手消息11-50
+     *登录消息 11-50
      * </pre>
      */
     SC_LOGIN_HANDSHAKE_REPLY(0, 11),
@@ -563,13 +571,21 @@ public final class MessageType {
      */
     SC_LOGIN_SERVER_NOT_OPEN(1, 12),
     /**
-     * <code>SC_LOGIN_FAIL = 51;</code>
+     * <code>SC_LOGIN_FAIL = 13;</code>
      *
      * <pre>
-     *登录消息，51-100
+     * 登陆失败//
      * </pre>
      */
-    SC_LOGIN_FAIL(2, 51),
+    SC_LOGIN_FAIL(2, 13),
+    /**
+     * <code>SC_LOGIN_SUCCESS = 14;</code>
+     *
+     * <pre>
+     * 登陆成功，并为其分配一个Gate//
+     * </pre>
+     */
+    SC_LOGIN_SUCCESS(3, 14),
     /**
      * <code>GC_HUMAN_DETAIL_INFO = 101;</code>
      *
@@ -577,11 +593,11 @@ public final class MessageType {
      *Human消息，101-200
      * </pre>
      */
-    GC_HUMAN_DETAIL_INFO(3, 101),
+    GC_HUMAN_DETAIL_INFO(4, 101),
     /**
      * <code>GC_DATA_ERROR = 102;</code>
      */
-    GC_DATA_ERROR(4, 102),
+    GC_DATA_ERROR(5, 102),
     /**
      * <code>GC_HUMAN_BUY_ENERGY_ACK = 103;</code>
      *
@@ -589,7 +605,7 @@ public final class MessageType {
      *购买体力成功//
      * </pre>
      */
-    GC_HUMAN_BUY_ENERGY_ACK(5, 103),
+    GC_HUMAN_BUY_ENERGY_ACK(6, 103),
     /**
      * <code>GC_HUMAN_BUY_ENERGY_NEG = 104;</code>
      *
@@ -597,7 +613,7 @@ public final class MessageType {
      *购买体力失败//
      * </pre>
      */
-    GC_HUMAN_BUY_ENERGY_NEG(6, 104),
+    GC_HUMAN_BUY_ENERGY_NEG(7, 104),
     /**
      * <code>GC_HUMAN_ENERGY_RECOVER_INFO = 105;</code>
      *
@@ -605,7 +621,7 @@ public final class MessageType {
      *体力恢复信息//
      * </pre>
      */
-    GC_HUMAN_ENERGY_RECOVER_INFO(7, 105),
+    GC_HUMAN_ENERGY_RECOVER_INFO(8, 105),
     /**
      * <code>GC_HUMAN_COST_ENERGY_FAILED = 106;</code>
      *
@@ -613,7 +629,7 @@ public final class MessageType {
      *扣体力失败，体力值不够//
      * </pre>
      */
-    GC_HUMAN_COST_ENERGY_FAILED(8, 106),
+    GC_HUMAN_COST_ENERGY_FAILED(9, 106),
     /**
      * <code>GC_HUMAN_BUY_ENERGY_COUNTS_RESET = 107;</code>
      *
@@ -621,7 +637,7 @@ public final class MessageType {
      *重置体力购买次数//
      * </pre>
      */
-    GC_HUMAN_BUY_ENERGY_COUNTS_RESET(9, 107),
+    GC_HUMAN_BUY_ENERGY_COUNTS_RESET(10, 107),
     /**
      * <code>GC_VIP_LEVEL_UP = 108;</code>
      *
@@ -629,7 +645,7 @@ public final class MessageType {
      *VIP等级提升//
      * </pre>
      */
-    GC_VIP_LEVEL_UP(10, 108),
+    GC_VIP_LEVEL_UP(11, 108),
     /**
      * <code>GC_HUMAN_LEVEL_UP = 109;</code>
      *
@@ -637,7 +653,7 @@ public final class MessageType {
      *玩家角色等级提升//
      * </pre>
      */
-    GC_HUMAN_LEVEL_UP(11, 109),
+    GC_HUMAN_LEVEL_UP(12, 109),
     /**
      * <code>GC_HERO_CHANGED_PROPS = 201;</code>
      *
@@ -645,7 +661,7 @@ public final class MessageType {
      *英雄消息，201-300
      * </pre>
      */
-    GC_HERO_CHANGED_PROPS(12, 201),
+    GC_HERO_CHANGED_PROPS(13, 201),
     /**
      * <code>GC_ALL_HERO_INFO = 202;</code>
      *
@@ -653,7 +669,7 @@ public final class MessageType {
      *所有英雄信息//
      * </pre>
      */
-    GC_ALL_HERO_INFO(13, 202),
+    GC_ALL_HERO_INFO(14, 202),
     /**
      * <code>GC_HERO_ADD = 203;</code>
      *
@@ -661,7 +677,7 @@ public final class MessageType {
      *添加一个英雄//
      * </pre>
      */
-    GC_HERO_ADD(14, 203),
+    GC_HERO_ADD(15, 203),
     /**
      * <code>GC_HERO_UPDATE = 204;</code>
      *
@@ -669,7 +685,7 @@ public final class MessageType {
      *英雄信息更新//
      * </pre>
      */
-    GC_HERO_UPDATE(15, 204),
+    GC_HERO_UPDATE(16, 204),
     /**
      * <code>GC_INVENTORY_INFO = 301;</code>
      *
@@ -677,7 +693,7 @@ public final class MessageType {
      *道具，301-400
      * </pre>
      */
-    GC_INVENTORY_INFO(16, 301),
+    GC_INVENTORY_INFO(17, 301),
     /**
      * <code>GC_ITEM_UPDATE = 302;</code>
      *
@@ -685,7 +701,7 @@ public final class MessageType {
      *物品更新消息，注意该消息只能用在特定情况下，请咨询尽可能多的人//
      * </pre>
      */
-    GC_ITEM_UPDATE(17, 302),
+    GC_ITEM_UPDATE(18, 302),
     /**
      * <code>GC_DAILY_REWARD_INFO = 401;</code>
      *
@@ -693,7 +709,7 @@ public final class MessageType {
      *日常奖励，401-450
      * </pre>
      */
-    GC_DAILY_REWARD_INFO(18, 401),
+    GC_DAILY_REWARD_INFO(19, 401),
     /**
      * <code>GC_GET_DAILY_REWARD_FAILED = 402;</code>
      *
@@ -701,7 +717,7 @@ public final class MessageType {
      *日常奖励领取失败，已经过了月刷新//
      * </pre>
      */
-    GC_GET_DAILY_REWARD_FAILED(19, 402),
+    GC_GET_DAILY_REWARD_FAILED(20, 402),
     /**
      * <code>GC_SHOP_INFO = 451;</code>
      *
@@ -709,7 +725,7 @@ public final class MessageType {
      *商店，451-500
      * </pre>
      */
-    GC_SHOP_INFO(20, 451),
+    GC_SHOP_INFO(21, 451),
     /**
      * <code>GC_SHOP_MANUALLY_REFRESH_INFO = 452;</code>
      *
@@ -717,7 +733,7 @@ public final class MessageType {
      *商店刷新信息//
      * </pre>
      */
-    GC_SHOP_MANUALLY_REFRESH_INFO(21, 452),
+    GC_SHOP_MANUALLY_REFRESH_INFO(22, 452),
     /**
      * <code>GC_GOOD_BUY_SUCCESS = 453;</code>
      *
@@ -725,7 +741,7 @@ public final class MessageType {
      *商品购买成功
      * </pre>
      */
-    GC_GOOD_BUY_SUCCESS(22, 453),
+    GC_GOOD_BUY_SUCCESS(23, 453),
     /**
      * <code>GC_SHOP_MANUALLY_REFRESH_COUNT_RESET = 454;</code>
      *
@@ -733,7 +749,7 @@ public final class MessageType {
      *商店手动刷新次数重置消息//
      * </pre>
      */
-    GC_SHOP_MANUALLY_REFRESH_COUNT_RESET(23, 454),
+    GC_SHOP_MANUALLY_REFRESH_COUNT_RESET(24, 454),
     /**
      * <code>GC_SHOP_AUTO_REFRESH_INFO = 455;</code>
      *
@@ -741,7 +757,7 @@ public final class MessageType {
      *商店自动刷新信息//
      * </pre>
      */
-    GC_SHOP_AUTO_REFRESH_INFO(24, 455),
+    GC_SHOP_AUTO_REFRESH_INFO(25, 455),
     /**
      * <code>GC_SHOP_CLOSE = 456;</code>
      *
@@ -749,7 +765,7 @@ public final class MessageType {
      *商店关闭信息//
      * </pre>
      */
-    GC_SHOP_CLOSE(25, 456),
+    GC_SHOP_CLOSE(26, 456),
     /**
      * <code>GC_SHOP_PROMPT = 457;</code>
      *
@@ -757,7 +773,7 @@ public final class MessageType {
      *商店提示//
      * </pre>
      */
-    GC_SHOP_PROMPT(26, 457),
+    GC_SHOP_PROMPT(27, 457),
     /**
      * <code>GC_OPENED_TEMP_SHOP = 458;</code>
      *
@@ -765,7 +781,7 @@ public final class MessageType {
      *已经打开的商店//
      * </pre>
      */
-    GC_OPENED_TEMP_SHOP(27, 458),
+    GC_OPENED_TEMP_SHOP(28, 458),
     /**
      * <code>GC_OPEN_SHOP = 459;</code>
      *
@@ -773,7 +789,7 @@ public final class MessageType {
      *打开商店//
      * </pre>
      */
-    GC_OPEN_SHOP(28, 459),
+    GC_OPEN_SHOP(29, 459),
     /**
      * <code>GC_FUNCTION_OPEN_LIST = 501;</code>
      *
@@ -781,7 +797,7 @@ public final class MessageType {
      *功能开放，501-550
      * </pre>
      */
-    GC_FUNCTION_OPEN_LIST(29, 501),
+    GC_FUNCTION_OPEN_LIST(30, 501),
     /**
      * <code>GC_FUNCTION_OPEN = 502;</code>
      *
@@ -789,7 +805,7 @@ public final class MessageType {
      *功能开放//
      * </pre>
      */
-    GC_FUNCTION_OPEN(30, 502),
+    GC_FUNCTION_OPEN(31, 502),
     /**
      * <code>GC_GM_CMD = 551;</code>
      *
@@ -797,14 +813,14 @@ public final class MessageType {
      *GM命令，551-600
      * </pre>
      */
-    GC_GM_CMD(31, 551),
+    GC_GM_CMD(32, 551),
     ;
 
     /**
      * <code>SC_LOGIN_HANDSHAKE_REPLY = 11;</code>
      *
      * <pre>
-     *握手消息11-50
+     *登录消息 11-50
      * </pre>
      */
     public static final int SC_LOGIN_HANDSHAKE_REPLY_VALUE = 11;
@@ -817,13 +833,21 @@ public final class MessageType {
      */
     public static final int SC_LOGIN_SERVER_NOT_OPEN_VALUE = 12;
     /**
-     * <code>SC_LOGIN_FAIL = 51;</code>
+     * <code>SC_LOGIN_FAIL = 13;</code>
      *
      * <pre>
-     *登录消息，51-100
+     * 登陆失败//
      * </pre>
      */
-    public static final int SC_LOGIN_FAIL_VALUE = 51;
+    public static final int SC_LOGIN_FAIL_VALUE = 13;
+    /**
+     * <code>SC_LOGIN_SUCCESS = 14;</code>
+     *
+     * <pre>
+     * 登陆成功，并为其分配一个Gate//
+     * </pre>
+     */
+    public static final int SC_LOGIN_SUCCESS_VALUE = 14;
     /**
      * <code>GC_HUMAN_DETAIL_INFO = 101;</code>
      *
@@ -1060,7 +1084,8 @@ public final class MessageType {
       switch (value) {
         case 11: return SC_LOGIN_HANDSHAKE_REPLY;
         case 12: return SC_LOGIN_SERVER_NOT_OPEN;
-        case 51: return SC_LOGIN_FAIL;
+        case 13: return SC_LOGIN_FAIL;
+        case 14: return SC_LOGIN_SUCCESS;
         case 101: return GC_HUMAN_DETAIL_INFO;
         case 102: return GC_DATA_ERROR;
         case 103: return GC_HUMAN_BUY_ENERGY_ACK;
@@ -1300,39 +1325,39 @@ public final class MessageType {
       "ODS\020\222\003\032\004\210\265\030\013\022\026\n\013CG_BUY_GOOD\020\223\003\032\004\210\265\030\013\022\031\n\016" +
       "CG_OPEN_WINDOW\020\303\003\032\004\210\265\030\013\022\032\n\017CG_CLOSE_WIND",
       "OW\020\304\003\032\004\210\265\030\013\022\036\n\023CG_HUMAN_BUY_ENERGY\020\365\003\032\004\210" +
-      "\265\030\013*\322\006\n\rGCMessageType\022\034\n\030SC_LOGIN_HANDSH" +
+      "\265\030\013*\350\006\n\rGCMessageType\022\034\n\030SC_LOGIN_HANDSH" +
       "AKE_REPLY\020\013\022\034\n\030SC_LOGIN_SERVER_NOT_OPEN\020" +
-      "\014\022\021\n\rSC_LOGIN_FAIL\0203\022\030\n\024GC_HUMAN_DETAIL_" +
-      "INFO\020e\022\021\n\rGC_DATA_ERROR\020f\022\033\n\027GC_HUMAN_BU" +
-      "Y_ENERGY_ACK\020g\022\033\n\027GC_HUMAN_BUY_ENERGY_NE" +
-      "G\020h\022 \n\034GC_HUMAN_ENERGY_RECOVER_INFO\020i\022\037\n" +
-      "\033GC_HUMAN_COST_ENERGY_FAILED\020j\022$\n GC_HUM" +
-      "AN_BUY_ENERGY_COUNTS_RESET\020k\022\023\n\017GC_VIP_L" +
-      "EVEL_UP\020l\022\025\n\021GC_HUMAN_LEVEL_UP\020m\022\032\n\025GC_H",
-      "ERO_CHANGED_PROPS\020\311\001\022\025\n\020GC_ALL_HERO_INFO" +
-      "\020\312\001\022\020\n\013GC_HERO_ADD\020\313\001\022\023\n\016GC_HERO_UPDATE\020" +
-      "\314\001\022\026\n\021GC_INVENTORY_INFO\020\255\002\022\023\n\016GC_ITEM_UP" +
-      "DATE\020\256\002\022\031\n\024GC_DAILY_REWARD_INFO\020\221\003\022\037\n\032GC" +
-      "_GET_DAILY_REWARD_FAILED\020\222\003\022\021\n\014GC_SHOP_I" +
-      "NFO\020\303\003\022\"\n\035GC_SHOP_MANUALLY_REFRESH_INFO\020" +
-      "\304\003\022\030\n\023GC_GOOD_BUY_SUCCESS\020\305\003\022)\n$GC_SHOP_" +
-      "MANUALLY_REFRESH_COUNT_RESET\020\306\003\022\036\n\031GC_SH" +
-      "OP_AUTO_REFRESH_INFO\020\307\003\022\022\n\rGC_SHOP_CLOSE" +
-      "\020\310\003\022\023\n\016GC_SHOP_PROMPT\020\311\003\022\030\n\023GC_OPENED_TE",
-      "MP_SHOP\020\312\003\022\021\n\014GC_OPEN_SHOP\020\313\003\022\032\n\025GC_FUNC" +
-      "TION_OPEN_LIST\020\365\003\022\025\n\020GC_FUNCTION_OPEN\020\366\003" +
-      "\022\016\n\tGC_GM_CMD\020\247\004*\"\n\rMGMessageType\022\021\n\rMG_" +
-      "BROAD_CAST\020\001:_\n\017cg_message_type\022\037.google" +
-      ".protobuf.MessageOptions\030\321\206\003 \001(\0162#.com.i" +
-      "cewind.protobuf.CGMessageType:_\n\017gc_mess" +
-      "age_type\022\037.google.protobuf.MessageOption" +
-      "s\030\322\206\003 \001(\0162#.com.icewind.protobuf.GCMessa" +
-      "geType:_\n\017mg_message_type\022\037.google.proto" +
-      "buf.MessageOptions\030\323\206\003 \001(\0162#.com.icewind",
-      ".protobuf.MGMessageType:_\n\006TARGET\022!.goog" +
-      "le.protobuf.EnumValueOptions\030\321\206\003 \001(\0162#.c" +
-      "om.icewind.protobuf.MessageTarget:\005ERROR" +
-      "B\rB\013MessageType"
+      "\014\022\021\n\rSC_LOGIN_FAIL\020\r\022\024\n\020SC_LOGIN_SUCCESS" +
+      "\020\016\022\030\n\024GC_HUMAN_DETAIL_INFO\020e\022\021\n\rGC_DATA_" +
+      "ERROR\020f\022\033\n\027GC_HUMAN_BUY_ENERGY_ACK\020g\022\033\n\027" +
+      "GC_HUMAN_BUY_ENERGY_NEG\020h\022 \n\034GC_HUMAN_EN" +
+      "ERGY_RECOVER_INFO\020i\022\037\n\033GC_HUMAN_COST_ENE" +
+      "RGY_FAILED\020j\022$\n GC_HUMAN_BUY_ENERGY_COUN" +
+      "TS_RESET\020k\022\023\n\017GC_VIP_LEVEL_UP\020l\022\025\n\021GC_HU",
+      "MAN_LEVEL_UP\020m\022\032\n\025GC_HERO_CHANGED_PROPS\020" +
+      "\311\001\022\025\n\020GC_ALL_HERO_INFO\020\312\001\022\020\n\013GC_HERO_ADD" +
+      "\020\313\001\022\023\n\016GC_HERO_UPDATE\020\314\001\022\026\n\021GC_INVENTORY" +
+      "_INFO\020\255\002\022\023\n\016GC_ITEM_UPDATE\020\256\002\022\031\n\024GC_DAIL" +
+      "Y_REWARD_INFO\020\221\003\022\037\n\032GC_GET_DAILY_REWARD_" +
+      "FAILED\020\222\003\022\021\n\014GC_SHOP_INFO\020\303\003\022\"\n\035GC_SHOP_" +
+      "MANUALLY_REFRESH_INFO\020\304\003\022\030\n\023GC_GOOD_BUY_" +
+      "SUCCESS\020\305\003\022)\n$GC_SHOP_MANUALLY_REFRESH_C" +
+      "OUNT_RESET\020\306\003\022\036\n\031GC_SHOP_AUTO_REFRESH_IN" +
+      "FO\020\307\003\022\022\n\rGC_SHOP_CLOSE\020\310\003\022\023\n\016GC_SHOP_PRO",
+      "MPT\020\311\003\022\030\n\023GC_OPENED_TEMP_SHOP\020\312\003\022\021\n\014GC_O" +
+      "PEN_SHOP\020\313\003\022\032\n\025GC_FUNCTION_OPEN_LIST\020\365\003\022" +
+      "\025\n\020GC_FUNCTION_OPEN\020\366\003\022\016\n\tGC_GM_CMD\020\247\004*\"" +
+      "\n\rMGMessageType\022\021\n\rMG_BROAD_CAST\020\001:_\n\017cg" +
+      "_message_type\022\037.google.protobuf.MessageO" +
+      "ptions\030\321\206\003 \001(\0162#.com.icewind.protobuf.CG" +
+      "MessageType:_\n\017gc_message_type\022\037.google." +
+      "protobuf.MessageOptions\030\322\206\003 \001(\0162#.com.ic" +
+      "ewind.protobuf.GCMessageType:_\n\017mg_messa" +
+      "ge_type\022\037.google.protobuf.MessageOptions",
+      "\030\323\206\003 \001(\0162#.com.icewind.protobuf.MGMessag" +
+      "eType:_\n\006TARGET\022!.google.protobuf.EnumVa" +
+      "lueOptions\030\321\206\003 \001(\0162#.com.icewind.protobu" +
+      "f.MessageTarget:\005ERRORB\rB\013MessageType"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -52,6 +52,19 @@ message SCLoginServerNotOpen {
     /**空消息。服务器发完这个消息之后，就会断开连接*/
 }
 
+/**
+ * 服务器通知，登录成功并为其分配一个网关（Gate）
+ */
+message SCLoginSuccess {
+    option (gc_message_type) = SC_LOGIN_SUCCESS;
+
+    /**Gate的IP*/
+    required string gateIP = 1;
+    /**Gate的端口*/
+    required int32 gatePort = 2;
+    /**验证码*/
+    repeated int32 verificationCode = 3;
+}
 
 /**
  * 服务器通知，登录失败
@@ -67,18 +80,20 @@ message SCLoginFail{
 enum LoginFailReason{
     /**版本不符*/
     VERSION_NOT_ALLOW = 0;
+    /**服务器人满*/
+    PLAYER_IS_FULL = 1;
     /**渠道不存在 */
-    CHANNEL_NOT_EXIST = 1;
+    CHANNEL_NOT_EXIST = 2;
     /**账号不存在 */
-    ACCOUNT_NOT_EXIST = 2;
+    ACCOUNT_NOT_EXIST = 3;
     /**秘钥错误 */
-    KEY_WRONG = 3;
+    KEY_WRONG = 4;
     /**加载角色失败 */
-    LOAD_ROLE_FAIL = 4;
+    LOAD_ROLE_FAIL = 5;
     /**你所登录的账号当前已经在线（你顶号） */
-    YOUR_ACCOUNT_IS_ONLINE = 5;
+    YOUR_ACCOUNT_IS_ONLINE = 6;
     /**你的账号在另外的机器上登录了（别人顶你号） */
-    YOUR_ACCOUNT_LOGIN_AGAIN = 6;
+    YOUR_ACCOUNT_LOGIN_AGAIN = 7;
     /**你的角色信息正在保存，请稍候 */
-    YOUR_DATA_IS_SAVING = 7;
+    YOUR_DATA_IS_SAVING = 8;
 }
