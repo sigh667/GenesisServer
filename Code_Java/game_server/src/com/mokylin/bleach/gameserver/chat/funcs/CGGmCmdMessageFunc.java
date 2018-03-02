@@ -5,7 +5,7 @@ import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.core.msgfunc.AbstractClientMsgFunc;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.player.Player;
-import com.icewind.protobuf.ChatMessage.CGGmCmdMessage;
+import com.genesis.protobuf.ChatMessage.CGGmCmdMessage;
 
 /**
  * 执行客户端发来的GM命令的函数对象。<p>

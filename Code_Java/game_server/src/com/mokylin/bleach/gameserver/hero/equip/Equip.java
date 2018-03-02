@@ -7,8 +7,8 @@ import com.mokylin.bleach.common.prop.battleprop.propholder.Prop;
 import com.mokylin.bleach.common.prop.battleprop.source.PropSourceType;
 import com.mokylin.bleach.gamedb.orm.vo.HeroEquip;
 import com.mokylin.bleach.gameserver.core.global.Globals;
-import com.icewind.protobuf.HeroMessage.HeroEquipInfo;
-import com.icewind.protobuf.HeroMessage.HeroEquipInfo.Builder;
+import com.genesis.protobuf.HeroMessage.HeroEquipInfo;
+import com.genesis.protobuf.HeroMessage.HeroEquipInfo.Builder;
 
 import java.util.HashMap;
 import java.util.List;

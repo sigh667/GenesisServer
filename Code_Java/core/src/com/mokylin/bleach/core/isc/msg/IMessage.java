@@ -1,7 +1,7 @@
 package com.mokylin.bleach.core.isc.msg;
 
 import com.mokylin.bleach.core.isc.remote.IRemote;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 
 /**
  * 服务器间通信消息的接口。<p>

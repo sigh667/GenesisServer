@@ -3,7 +3,7 @@ package com.mokylin.bleach.gameserver.hero.skill;
 import com.mokylin.bleach.gamedb.orm.vo.HeroSkill;
 import com.mokylin.bleach.gameserver.hero.Hero;
 import com.mokylin.bleach.gameserver.human.Human;
-import com.icewind.protobuf.HeroMessage.HeroSkillInfo;
+import com.genesis.protobuf.HeroMessage.HeroSkillInfo;
 
 import java.util.ArrayList;
 

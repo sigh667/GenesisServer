@@ -4,7 +4,7 @@ import com.google.protobuf.GeneratedMessage;
 import com.mokylin.bleach.core.net.msg.CSMessage;
 import com.mokylin.bleach.core.net.msg.SCMessage;
 import com.mokylin.bleach.core.time.TimeService;
-import com.icewind.protobuf.MessageType;
+import com.genesis.protobuf.MessageType;
 import com.mokylin.td.network2client.core.channel.IChannelListener;
 import com.mokylin.td.network2client.core.id.IdGenerator;
 import com.mokylin.td.network2client.core.session.IClientSession;

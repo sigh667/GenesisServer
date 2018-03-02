@@ -7,9 +7,9 @@ import com.mokylin.bleach.gameserver.login.protocol.LoadHumanDataFailed;
 import com.mokylin.bleach.gameserver.player.LoginStatus;
 import com.mokylin.bleach.gameserver.player.Player;
 import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
-import com.icewind.protobuf.MessageType.MessageTarget;
-import com.icewind.protobuf.LoginMessage.SCLoginFail;
-import com.icewind.protobuf.LoginMessage.LoginFailReason;
+import com.genesis.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.LoginMessage.SCLoginFail;
+import com.genesis.protobuf.LoginMessage.LoginFailReason;
 
 /**
  * 处理加载角色错误的函数对象。<p>

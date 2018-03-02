@@ -10,7 +10,7 @@ import com.mokylin.bleach.gamedb.orm.entity.ShopEntity;
 import com.mokylin.bleach.gameserver.core.global.Globals;
 import com.mokylin.bleach.gameserver.core.persistance.ObjectInSqlImpl;
 import com.mokylin.bleach.gameserver.human.Human;
-import com.icewind.protobuf.ShopMessage.GoodInfo;
+import com.genesis.protobuf.ShopMessage.GoodInfo;
 
 import java.sql.Timestamp;
 import java.util.List;

@@ -5,7 +5,7 @@ import com.mokylin.bleach.core.isc.msg.ToPlayerMessage;
 import com.mokylin.bleach.core.isc.remote.IRemote;
 import com.mokylin.bleach.core.msgfunc.MsgArgs;
 import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 
 public class ToPlayerMessageFunc implements IServerMsgFunc<ToPlayerMessage, MsgArgs, MsgArgs> {
 

@@ -1,5 +1,5 @@
-package com.icewind.protobuf;
-option java_package = "com.icewind.protobuf.db";
+package com.genesis.protobuf;
+option java_package = "com.genesis.protobuf.db";
 option java_outer_classname = "DBOnlineMsgBlob";
 
 /**

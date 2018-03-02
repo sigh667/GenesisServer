@@ -1,6 +1,6 @@
 package com.mokylin.bleach.robot.func.ui.hero;
 
-import com.icewind.protobuf.HeroMessage.GCAllHeroInfo;
+import com.genesis.protobuf.HeroMessage.GCAllHeroInfo;
 import com.mokylin.bleach.robot.core.net.RobotBaseMsgFunc;
 import com.mokylin.bleach.robot.robot.Robot;
 

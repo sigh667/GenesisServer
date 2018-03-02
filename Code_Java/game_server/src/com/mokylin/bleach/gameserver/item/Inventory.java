@@ -8,9 +8,9 @@ import com.mokylin.bleach.common.item.template.ItemTemplate;
 import com.mokylin.bleach.gamedb.orm.entity.ItemEntity;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.item.ItemInfo.DetailItemInfo;
-import com.icewind.protobuf.ItemMessage.GCInventoryInfo;
-import com.icewind.protobuf.db.DBInventoryBlob.ItemData;
-import com.icewind.protobuf.db.DBInventoryBlob.ItemData.Builder;
+import com.genesis.protobuf.ItemMessage.GCInventoryInfo;
+import com.genesis.protobuf.db.DBInventoryBlob.ItemData;
+import com.genesis.protobuf.db.DBInventoryBlob.ItemData.Builder;
 
 import java.util.List;
 

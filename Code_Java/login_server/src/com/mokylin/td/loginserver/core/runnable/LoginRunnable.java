@@ -2,7 +2,7 @@ package com.mokylin.td.loginserver.core.runnable;
 
 import com.mokylin.bleach.core.concurrent.fixthreadpool.IRunnableBindId;
 import com.mokylin.bleach.core.net.msg.CSMessage;
-import com.icewind.protobuf.MessageType;
+import com.genesis.protobuf.MessageType;
 import com.mokylin.td.loginserver.globals.Globals;
 import com.mokylin.td.network2client.core.session.IClientSession;
 import org.slf4j.Logger;

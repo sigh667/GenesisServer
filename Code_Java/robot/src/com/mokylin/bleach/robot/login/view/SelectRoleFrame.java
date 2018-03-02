@@ -1,7 +1,7 @@
 package com.mokylin.bleach.robot.login.view;
 //
-//import com.icewind.protobuf.PlayerMessage.CGSelectRole;
-//import com.icewind.protobuf.PlayerMessage.Role;
+//import com.genesis.protobuf.PlayerMessage.CGSelectRole;
+//import com.genesis.protobuf.PlayerMessage.Role;
 //import com.mokylin.bleach.robot.font.FontFactory;
 //import com.mokylin.bleach.robot.login.view.model.DataModel;
 //import com.mokylin.bleach.robot.login.view.model.RoleToView;

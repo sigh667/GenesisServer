@@ -5,9 +5,9 @@ import com.mokylin.bleach.core.isc.msg.IMessage;
 import com.mokylin.bleach.core.isc.msg.ServerMessage;
 import com.mokylin.bleach.core.isc.remote.IRemote;
 import com.mokylin.bleach.core.net.msg.CSSMessage;
-import com.icewind.protobuf.MessageType;
-import com.icewind.protobuf.MessageType.CGMessageType;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType;
+import com.genesis.protobuf.MessageType.CGMessageType;
+import com.genesis.protobuf.MessageType.MessageTarget;
 import com.mokylin.td.network2client.core.session.IClientSession;
 
 import org.slf4j.Logger;

@@ -4,7 +4,7 @@ import com.mokylin.bleach.common.core.GlobalData;
 import com.mokylin.bleach.core.timeaxis.ITimeEvent;
 import com.mokylin.bleach.core.timeaxis.ITimeEventType;
 import com.mokylin.bleach.gameserver.human.Human;
-import com.icewind.protobuf.HumanMessage.GCEnergyRecoverInfo;
+import com.genesis.protobuf.HumanMessage.GCEnergyRecoverInfo;
 
 /**
  * 体力自动恢复任务

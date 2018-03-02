@@ -6,11 +6,11 @@ import com.mokylin.bleach.common.hero.template.HeroGroupTemplate;
 import com.mokylin.bleach.gamedb.orm.entity.HeroEntity;
 import com.mokylin.bleach.gameserver.core.global.Globals;
 import com.mokylin.bleach.gameserver.human.Human;
-import com.icewind.protobuf.HeroMessage.GCAllHeroInfo;
-import com.icewind.protobuf.HeroMessage.GCAllHeroInfo.Builder;
-import com.icewind.protobuf.HeroMessage.GCHeroAdd;
-import com.icewind.protobuf.HeroMessage.GCHeroUpdate;
-import com.icewind.protobuf.HeroMessage.HeroInfo;
+import com.genesis.protobuf.HeroMessage.GCAllHeroInfo;
+import com.genesis.protobuf.HeroMessage.GCAllHeroInfo.Builder;
+import com.genesis.protobuf.HeroMessage.GCHeroAdd;
+import com.genesis.protobuf.HeroMessage.GCHeroUpdate;
+import com.genesis.protobuf.HeroMessage.HeroInfo;
 
 import java.util.HashMap;
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.mokylin.bleach.robot.login.view.model;
 
-//import com.icewind.protobuf.LoginMessage.Role;
+//import com.genesis.protobuf.LoginMessage.Role;
 //
 //public class RoleToView {
 //

@@ -5,7 +5,7 @@ import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.core.msgfunc.AbstractClientMsgFunc;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.player.Player;
-import com.icewind.protobuf.WindowMessage.CGOpenWindow;
+import com.genesis.protobuf.WindowMessage.CGOpenWindow;
 
 /**
  * 处理打开窗口的消息对象

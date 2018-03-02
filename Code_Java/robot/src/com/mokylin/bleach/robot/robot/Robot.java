@@ -1,6 +1,6 @@
 package com.mokylin.bleach.robot.robot;
 
-import com.icewind.protobuf.HumanMessage.GCHumanDetailInfo;
+import com.genesis.protobuf.HumanMessage.GCHumanDetailInfo;
 import com.mokylin.bleach.robot.human.Human;
 
 import io.netty.channel.ChannelHandlerContext;

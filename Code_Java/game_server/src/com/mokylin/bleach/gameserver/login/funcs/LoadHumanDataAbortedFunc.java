@@ -5,7 +5,7 @@ import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.login.protocol.LoadHumanDataAborted;
 import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 
 /**
  * 放弃加载角色的函数对象。<p>

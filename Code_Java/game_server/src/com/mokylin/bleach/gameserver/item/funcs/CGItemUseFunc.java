@@ -4,7 +4,7 @@ import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.core.msgfunc.AbstractClientMsgFunc;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.player.Player;
-import com.icewind.protobuf.ItemMessage.CGItemUse;
+import com.genesis.protobuf.ItemMessage.CGItemUse;
 
 /**
  * 处理客户端使用物品消息的函数对象。

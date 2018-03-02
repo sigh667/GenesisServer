@@ -15,13 +15,13 @@ package com.mokylin.bleach.gameserver.login.funcs;
 //import com.mokylin.bleach.gameserver.player.LoginStatus;
 //import com.mokylin.bleach.gameserver.player.Player;
 //import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
-//import com.icewind.protobuf.MessageType.MessageTarget;
-//import com.icewind.protobuf.LoginMessage.SCCreateRole;
-//import com.icewind.protobuf.LoginMessage.SCLoginFail;
-//import com.icewind.protobuf.LoginMessage.SCLoginFail.Builder;
-//import com.icewind.protobuf.LoginMessage.SCRoleList;
-//import com.icewind.protobuf.LoginMessage.LoginFailReason;
-//import com.icewind.protobuf.LoginMessage.Role;
+//import com.genesis.protobuf.MessageType.MessageTarget;
+//import com.genesis.protobuf.LoginMessage.SCCreateRole;
+//import com.genesis.protobuf.LoginMessage.SCLoginFail;
+//import com.genesis.protobuf.LoginMessage.SCLoginFail.Builder;
+//import com.genesis.protobuf.LoginMessage.SCRoleList;
+//import com.genesis.protobuf.LoginMessage.LoginFailReason;
+//import com.genesis.protobuf.LoginMessage.Role;
 //
 //import org.slf4j.Logger;
 //

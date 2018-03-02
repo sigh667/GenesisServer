@@ -21,7 +21,7 @@ import com.mokylin.bleach.gameserver.core.timeout.TimeoutCallbackManager.Timeout
 import com.mokylin.bleach.gameserver.login.OnlinePlayerService;
 import com.mokylin.bleach.gameserver.login.protocol.RemoveHumanInfoMsg;
 import com.mokylin.bleach.gameserver.player.protocol.RegisterPlayer;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

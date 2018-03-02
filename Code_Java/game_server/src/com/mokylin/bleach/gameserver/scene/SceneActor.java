@@ -2,7 +2,7 @@ package com.mokylin.bleach.gameserver.scene;
 
 import com.mokylin.bleach.core.isc.remote.actorrefs.annotation.MessageAcception;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 
 import akka.actor.UntypedActor;
 

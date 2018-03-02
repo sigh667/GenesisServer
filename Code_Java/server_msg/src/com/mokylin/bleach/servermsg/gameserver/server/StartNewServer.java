@@ -2,7 +2,7 @@ package com.mokylin.bleach.servermsg.gameserver.server;
 
 import com.mokylin.bleach.core.config.ServerConfig;
 import com.mokylin.bleach.core.isc.msg.IMessage;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 
 import akka.actor.ActorRef;
 

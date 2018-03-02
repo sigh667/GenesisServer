@@ -5,7 +5,7 @@ import com.mokylin.bleach.core.timeaxis.ITimeEventType;
 import com.mokylin.bleach.gameserver.core.autoexecutetask.AbstractAutoExecuteTask;
 import com.mokylin.bleach.gameserver.core.global.Globals;
 import com.mokylin.bleach.gameserver.human.Human;
-import com.icewind.protobuf.HumanMessage.GCBuyEnergyCountsReset;
+import com.genesis.protobuf.HumanMessage.GCBuyEnergyCountsReset;
 
 import org.joda.time.LocalTime;
 

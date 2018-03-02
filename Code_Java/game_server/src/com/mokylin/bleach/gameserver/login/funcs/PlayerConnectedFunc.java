@@ -5,7 +5,7 @@ import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.player.Player;
 import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 import com.mokylin.bleach.servermsg.gameserver.PlayerConnected;
 
 /**

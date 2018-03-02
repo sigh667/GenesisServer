@@ -1,7 +1,7 @@
 package com.mokylin.bleach.servermsg.logserver;
 
 import com.mokylin.bleach.core.isc.msg.IMessage;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 
 /**
  * 停服消息

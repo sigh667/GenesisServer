@@ -6,7 +6,7 @@ import com.mokylin.bleach.gameserver.hero.skill.Skill;
 import com.mokylin.bleach.gameserver.hero.skill.SkillManager;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.player.Player;
-import com.icewind.protobuf.HeroMessage.CGHeroSkillLevelUp;
+import com.genesis.protobuf.HeroMessage.CGHeroSkillLevelUp;
 
 public class CGHeroSkillLevelUpFunc extends PlayerActorMsgFunc<CGHeroSkillLevelUp> {
 

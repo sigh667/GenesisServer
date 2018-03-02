@@ -1,6 +1,6 @@
 package com.mokylin.bleach.robot.login;
 
-import com.icewind.protobuf.MessageType.GCMessageType;
+import com.genesis.protobuf.MessageType.GCMessageType;
 
 public enum Status {
     Init {

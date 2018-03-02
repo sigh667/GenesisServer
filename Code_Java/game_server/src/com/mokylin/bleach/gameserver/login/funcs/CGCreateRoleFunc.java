@@ -8,10 +8,10 @@ package com.mokylin.bleach.gameserver.login.funcs;
 //import com.mokylin.bleach.gameserver.player.CreatePlayerActorHelper;
 //import com.mokylin.bleach.gameserver.player.Player;
 //import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
-//import com.icewind.protobuf.PlayerMessage.CGCreateRole;
-//import com.icewind.protobuf.PlayerMessage.CreateRoleFailReason;
-//import com.icewind.protobuf.PlayerMessage.GCCreateRoleFail;
-//import com.icewind.protobuf.PlayerMessage.GCCreateRoleFail.Builder;
+//import com.genesis.protobuf.PlayerMessage.CGCreateRole;
+//import com.genesis.protobuf.PlayerMessage.CreateRoleFailReason;
+//import com.genesis.protobuf.PlayerMessage.GCCreateRoleFail;
+//import com.genesis.protobuf.PlayerMessage.GCCreateRoleFail.Builder;
 //
 //import java.util.List;
 //

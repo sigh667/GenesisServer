@@ -1,7 +1,7 @@
 package com.mokylin.bleach.core.isc.msg;
 
 import com.mokylin.bleach.core.net.msg.SCMessage;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 
 /**
  * 广播消息，用于Server向指定的Clients广播消息。

@@ -11,7 +11,7 @@ import com.mokylin.bleach.gameserver.hero.HeroManager;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.item.Inventory;
 import com.mokylin.bleach.gameserver.player.Player;
-import com.icewind.protobuf.HeroMessage.CGHeroStarUp;
+import com.genesis.protobuf.HeroMessage.CGHeroStarUp;
 
 public class CGHeroStarUpFunc extends PlayerActorMsgFunc<CGHeroStarUp> {
 

@@ -1,7 +1,7 @@
 package com.mokylin.bleach.servermsg.agentserver;
 
 import com.mokylin.bleach.core.isc.msg.IMessage;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 
 /**
  * 从LoginServer来的消息

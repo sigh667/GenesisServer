@@ -1,6 +1,6 @@
 package com.mokylin.bleach.robot.func.ui.gm;
 
-import com.icewind.protobuf.ChatMessage.GCGmCmd;
+import com.genesis.protobuf.ChatMessage.GCGmCmd;
 import com.mokylin.bleach.robot.func.HumanBaseMsgFunc;
 import com.mokylin.bleach.robot.gm.GMFrame;
 import com.mokylin.bleach.robot.human.Human;

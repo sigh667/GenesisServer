@@ -1,6 +1,6 @@
-package com.icewind.protobuf;
+package com.genesis.protobuf;
 import "MessageType.proto";
-option java_package = "com.icewind.protobuf";
+option java_package = "com.genesis.protobuf";
 option java_outer_classname = "DailyRewardMessage";
 
 /**

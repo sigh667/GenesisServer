@@ -1,6 +1,6 @@
 package com.mokylin.td.loginserver.handlers;
 
-import com.icewind.protobuf.LoginMessage;
+import com.genesis.protobuf.LoginMessage;
 import com.mokylin.bleach.core.util.RandomUtil;
 import com.mokylin.td.loginserver.core.process.IClientMsgHandler;
 import com.mokylin.td.loginserver.globals.Globals;

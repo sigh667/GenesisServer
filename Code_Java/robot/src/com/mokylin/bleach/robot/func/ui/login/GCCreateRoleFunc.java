@@ -1,6 +1,6 @@
 package com.mokylin.bleach.robot.func.ui.login;
 //
-//import com.icewind.protobuf.PlayerMessage.GCCreateRole;
+//import com.genesis.protobuf.PlayerMessage.GCCreateRole;
 //import com.mokylin.bleach.robot.core.net.RobotBaseMsgFunc;
 //import com.mokylin.bleach.robot.login.Status;
 //import com.mokylin.bleach.robot.login.view.CreateRoleFrame;

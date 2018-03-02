@@ -10,8 +10,8 @@ import com.mokylin.bleach.gameserver.core.msgfunc.AbstractClientMsgFunc;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.player.Player;
 import com.mokylin.bleach.gameserver.shop.shop.Shop;
-import com.icewind.protobuf.ShopMessage.CGRefreshGoods;
-import com.icewind.protobuf.ShopMessage.ShopPrompt;
+import com.genesis.protobuf.ShopMessage.CGRefreshGoods;
+import com.genesis.protobuf.ShopMessage.ShopPrompt;
 
 /**
  * 处理商店手动刷新消息的函数对象

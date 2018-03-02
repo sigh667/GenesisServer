@@ -2,7 +2,7 @@ package com.mokylin.bleach.servermsg.gameserver;
 
 import com.mokylin.bleach.core.isc.msg.IMessage;
 import com.mokylin.bleach.gamedb.human.HumanData;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 
 public class HumanDataMsg implements IMessage {
 

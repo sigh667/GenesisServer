@@ -1,7 +1,7 @@
 package com.mokylin.bleach.gameserver.player;
 
-import com.icewind.protobuf.MessageType;
-import com.icewind.protobuf.MessageType.CGMessageType;
+import com.genesis.protobuf.MessageType;
+import com.genesis.protobuf.MessageType.CGMessageType;
 
 /**
  * 玩家的登录状态

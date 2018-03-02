@@ -3,7 +3,7 @@ package com.mokylin.td.loginserver.handlers;
 import com.genesis.redis.center.GateInfo;
 import com.genesis.redis.login.LoginClientInfo;
 import com.genesis.redis.login.RedisLoginKey;
-import com.icewind.protobuf.LoginMessage;
+import com.genesis.protobuf.LoginMessage;
 import com.mokylin.bleach.core.isc.ServerIdDef;
 import com.mokylin.bleach.core.isc.ServerType;
 import com.mokylin.bleach.core.util.RandomUtil;

@@ -3,7 +3,7 @@ package com.mokylin.bleach.core.msgfunc.protobufutil;
 import com.google.protobuf.Descriptors.Descriptor;
 import com.google.protobuf.Parser;
 
-import com.icewind.protobuf.MessageType;
+import com.genesis.protobuf.MessageType;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

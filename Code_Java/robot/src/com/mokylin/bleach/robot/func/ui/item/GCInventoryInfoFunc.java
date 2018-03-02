@@ -1,6 +1,6 @@
 package com.mokylin.bleach.robot.func.ui.item;
 
-import com.icewind.protobuf.ItemMessage.GCInventoryInfo;
+import com.genesis.protobuf.ItemMessage.GCInventoryInfo;
 import com.mokylin.bleach.robot.func.HumanBaseMsgFunc;
 import com.mokylin.bleach.robot.human.Human;
 import com.mokylin.bleach.robot.robot.Robot;

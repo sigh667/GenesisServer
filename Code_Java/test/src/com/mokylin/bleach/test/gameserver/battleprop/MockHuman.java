@@ -6,7 +6,7 @@ import com.google.protobuf.GeneratedMessage;
 import com.mokylin.bleach.gamedb.human.HumanInfo;
 import com.mokylin.bleach.gameserver.hero.Hero;
 import com.mokylin.bleach.gameserver.human.Human;
-import com.icewind.protobuf.HeroMessage.GCChangedProps;
+import com.genesis.protobuf.HeroMessage.GCChangedProps;
 import com.mokylin.bleach.test.dataserver.MockDataUpdater;
 
 import java.util.List;

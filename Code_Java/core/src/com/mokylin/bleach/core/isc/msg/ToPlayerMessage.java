@@ -1,7 +1,7 @@
 package com.mokylin.bleach.core.isc.msg;
 
 import com.mokylin.bleach.core.net.msg.SCMessage;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 
 /**
  * 需要转发给玩家客户端的消息

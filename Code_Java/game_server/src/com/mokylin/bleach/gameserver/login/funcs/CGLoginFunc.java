@@ -12,7 +12,7 @@ import com.mokylin.bleach.gameserver.login.protocol.PlatformAuthResult;
 import com.mokylin.bleach.gameserver.player.LoginStatus;
 import com.mokylin.bleach.gameserver.player.Player;
 import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
-import com.icewind.protobuf.LoginMessage.CSLogin;
+import com.genesis.protobuf.LoginMessage.CSLogin;
 
 import akka.actor.ActorRef;
 

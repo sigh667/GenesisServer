@@ -5,7 +5,7 @@ import com.mokylin.bleach.gamedb.orm.entity.ArenaSnapEntity;
 import com.mokylin.bleach.gameserver.arena.init.ArenaInitResult;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.core.persistance.DataUpdater;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 
 import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;

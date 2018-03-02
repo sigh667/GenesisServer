@@ -3,7 +3,7 @@ package com.mokylin.bleach.agentserver.funcs;
 import com.mokylin.bleach.core.isc.remote.IRemote;
 import com.mokylin.bleach.core.msgfunc.MsgArgs;
 import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 import com.mokylin.bleach.servermsg.agentserver.AcceptPlayer;
 
 import org.slf4j.Logger;

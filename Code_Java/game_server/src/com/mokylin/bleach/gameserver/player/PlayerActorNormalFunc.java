@@ -10,7 +10,7 @@ import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.core.heartbeat.PlayerHeartbeat;
 import com.mokylin.bleach.gameserver.core.persistance.DataUpdater;
 import com.mokylin.bleach.gameserver.human.Human;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

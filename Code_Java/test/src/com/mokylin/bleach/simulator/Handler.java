@@ -4,11 +4,11 @@ import com.google.protobuf.GeneratedMessage;
 
 import com.mokylin.bleach.core.net.msg.CSMessage;
 import com.mokylin.bleach.core.net.msg.SCMessage;
-import com.icewind.protobuf.MessageType.CGMessageType;
-import com.icewind.protobuf.MessageType.GCMessageType;
-import com.icewind.protobuf.LoginMessage.CSLogin;
-import com.icewind.protobuf.LoginMessage.CSLogin.Builder;
-import com.icewind.protobuf.agentserver.AgentMessage.CGGameServerInfo;
+import com.genesis.protobuf.MessageType.CGMessageType;
+import com.genesis.protobuf.MessageType.GCMessageType;
+import com.genesis.protobuf.LoginMessage.CSLogin;
+import com.genesis.protobuf.LoginMessage.CSLogin.Builder;
+import com.genesis.protobuf.agentserver.AgentMessage.CGGameServerInfo;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

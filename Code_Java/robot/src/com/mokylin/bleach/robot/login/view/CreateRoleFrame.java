@@ -1,6 +1,6 @@
 package com.mokylin.bleach.robot.login.view;
 //
-//import com.icewind.protobuf.PlayerMessage.CGCreateRole;
+//import com.genesis.protobuf.PlayerMessage.CGCreateRole;
 //import com.mokylin.bleach.robot.font.FontFactory;
 //import com.mokylin.bleach.robot.robot.Robot;
 //import com.mokylin.bleach.robot.ui.PanelFactory;

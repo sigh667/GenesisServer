@@ -7,7 +7,7 @@ import com.mokylin.bleach.dataserver.globals.Globals;
 import com.mokylin.bleach.dataserver.serverdb.ServerDBManager;
 import com.mokylin.bleach.dataserver.serverdb.ServerDBService;
 import com.mokylin.bleach.dataserver.serverdb.task.LoadHumanDataTask;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 import com.mokylin.bleach.servermsg.dataserver.LoadHumanDataMessage;
 
 /**

@@ -9,7 +9,7 @@ package com.mokylin.bleach.gameserver.login.funcs;
 //import com.mokylin.bleach.gameserver.player.LoginStatus;
 //import com.mokylin.bleach.gameserver.player.Player;
 //import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
-//import com.icewind.protobuf.PlayerMessage.CGSelectRole;
+//import com.genesis.protobuf.PlayerMessage.CGSelectRole;
 //
 //import java.util.List;
 //

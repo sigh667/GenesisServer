@@ -1,7 +1,7 @@
 package com.mokylin.bleach.core.isc.remote.actorrefs;
 
 import com.mokylin.bleach.core.isc.ServerType;
-import com.icewind.protobuf.MessageType.MessageTarget;
+import com.genesis.protobuf.MessageType.MessageTarget;
 
 import java.io.Serializable;
 
