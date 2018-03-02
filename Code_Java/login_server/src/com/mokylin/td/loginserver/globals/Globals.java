@@ -3,6 +3,7 @@ package com.mokylin.td.loginserver.globals;
 import akka.actor.Props;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.Parser;
+import com.mokylin.bleach.common.core.GlobalData;
 import com.mokylin.bleach.core.akka.Akka;
 import com.mokylin.bleach.core.concurrent.process.CommonProcessType;
 import com.mokylin.bleach.core.heartbeat.HeartbeatService;
@@ -69,9 +70,9 @@ public class Globals {
         serverConfig = LoginServerConfig.loadConfig();
         logger.info("conf文件读取完毕");
 
-        //		// 2.0表格数据初始化
-        //		GlobalData.init(LoginServerConfig.getBaseResourceDir(), LoginServerConfig.isXorLoad());
-        //		logger.info("Excel文件读取完毕");
+        // 2.0表格数据初始化
+        GlobalData.init(LoginServerConfig.getBaseResourceDir(), LoginServerConfig.isXorLoad());
+        logger.info("Excel文件读取完毕");
 
         // 3.0客户端消息分发器
         Pair<Map<Integer, IClientMsgHandler<GeneratedMessage>>, Map<Integer, Parser<? extends GeneratedMessage>>>
