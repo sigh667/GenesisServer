@@ -9,7 +9,6 @@ import com.mokylin.bleach.core.heartbeat.HeartbeatService;
 import com.mokylin.bleach.core.isc.ISCActorSupervisor;
 import com.mokylin.bleach.core.isc.ISCService;
 import com.mokylin.bleach.core.isc.RemoteActorManager;
-import com.mokylin.bleach.core.redis.IRedis;
 import com.mokylin.bleach.core.redis.RedisUtil;
 import com.mokylin.bleach.core.redis.config.RedisConfig;
 import com.mokylin.bleach.core.redis.redisson.RedisUtils;
@@ -51,10 +50,6 @@ public class Globals {
      */
     private static HeartbeatService heartBeatService = null;
     /**
-     * Redis连接
-     */
-    private static IRedis iRedis = null;
-    /**
      * Redis连接(运维中心Redis)
      */
     private static RedissonClient redisson;
@@ -73,11 +68,6 @@ public class Globals {
         // 1.0 读取配置
         serverConfig = LoginServerConfig.loadConfig();
         logger.info("conf文件读取完毕");
-        // 新的Redis
-        Config config = Config.fromYAML(new File("./login_server/config/redisson.yaml"));
-        redisson = RedisUtils.createRedisson(config);
-        Config configLogin = Config.fromYAML(new File("./login_server/config/redissonLogin.yaml"));
-        redissonLogin = RedisUtils.createRedisson(configLogin);
 
         //		// 2.0表格数据初始化
         //		GlobalData.init(LoginServerConfig.getBaseResourceDir(), LoginServerConfig.isXorLoad());
@@ -89,7 +79,10 @@ public class Globals {
         clientMsgProcessor = new ClientMsgProcessor(tableMapPair.getLeft(), tableMapPair.getRight());
 
         // 4.0初始化Redis访问服务
-        iRedis = RedisUtil.createRedis(null, RedisConfig.getRedisConfig());//TODO 正式上线时，不能传null
+        Config config = Config.fromYAML(new File("./login_server/config/redisson.yaml"));
+        redisson = RedisUtils.createRedisson(config);
+        Config configLogin = Config.fromYAML(new File("./login_server/config/redissonLogin.yaml"));
+        redissonLogin = RedisUtils.createRedisson(configLogin);
         logger.info("Redis访问服务初始化完毕");
 
         // 5.0实例化akka
@@ -123,10 +116,6 @@ public class Globals {
 
     public static HeartbeatService getHeartBeatService() {
         return heartBeatService;
-    }
-
-    public static IRedis getiRedis() {
-        return iRedis;
     }
 
     public static LoginServerConfig getServerConfig() {
