@@ -90,6 +90,14 @@ public final class LoginMessage {
      * </pre>
      */
     YOUR_DATA_IS_SAVING(8, 8),
+    /**
+     * <code>YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER = 9;</code>
+     *
+     * <pre>
+     **你的账号在另外的登录服上登录了（客户端仍然提示：别人顶你号） 
+     * </pre>
+     */
+    YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER(9, 9),
     ;
 
     /**
@@ -164,6 +172,14 @@ public final class LoginMessage {
      * </pre>
      */
     public static final int YOUR_DATA_IS_SAVING_VALUE = 8;
+    /**
+     * <code>YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER = 9;</code>
+     *
+     * <pre>
+     **你的账号在另外的登录服上登录了（客户端仍然提示：别人顶你号） 
+     * </pre>
+     */
+    public static final int YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER_VALUE = 9;
 
 
     public final int getNumber() { return value; }
@@ -179,6 +195,7 @@ public final class LoginMessage {
         case 6: return YOUR_ACCOUNT_IS_ONLINE;
         case 7: return YOUR_ACCOUNT_LOGIN_AGAIN;
         case 8: return YOUR_DATA_IS_SAVING;
+        case 9: return YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER;
         default: return null;
       }
     }
@@ -4089,13 +4106,14 @@ public final class LoginMessage {
       "IP\030\001 \002(\t\022\020\n\010gatePort\030\002 \002(\005\022\030\n\020verificati" +
       "onCode\030\003 \003(\005:\004\220\265\030\016\"N\n\013SCLoginFail\0229\n\nfai" +
       "lReason\030\001 \002(\0162%.com.icewind.protobuf.Log",
-      "inFailReason:\004\220\265\030\r*\340\001\n\017LoginFailReason\022\025" +
+      "inFailReason:\004\220\265\030\r*\210\002\n\017LoginFailReason\022\025" +
       "\n\021VERSION_NOT_ALLOW\020\000\022\022\n\016PLAYER_IS_FULL\020" +
       "\001\022\025\n\021CHANNEL_NOT_EXIST\020\002\022\025\n\021ACCOUNT_NOT_" +
       "EXIST\020\003\022\r\n\tKEY_WRONG\020\004\022\022\n\016LOAD_ROLE_FAIL" +
       "\020\005\022\032\n\026YOUR_ACCOUNT_IS_ONLINE\020\006\022\034\n\030YOUR_A" +
       "CCOUNT_LOGIN_AGAIN\020\007\022\027\n\023YOUR_DATA_IS_SAV" +
-      "ING\020\010B\016B\014LoginMessage"
+      "ING\020\010\022&\n\"YOUR_ACCOUNT_LOGIN_ON_OTHER_SER" +
+      "VER\020\tB\016B\014LoginMessage"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

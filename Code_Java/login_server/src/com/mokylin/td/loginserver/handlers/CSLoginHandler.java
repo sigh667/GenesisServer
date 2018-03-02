@@ -2,19 +2,22 @@ package com.mokylin.td.loginserver.handlers;
 
 import com.genesis.redis.center.GateInfo;
 import com.genesis.redis.login.LoginClientInfo;
+import com.genesis.redis.login.RedisLoginKey;
 import com.icewind.protobuf.LoginMessage;
-import com.icewind.protobuf.SSLoginMessage;
+import com.mokylin.bleach.core.isc.ServerIdDef;
 import com.mokylin.bleach.core.isc.ServerType;
 import com.mokylin.bleach.core.util.RandomUtil;
 import com.mokylin.td.loginserver.core.process.IClientMsgHandler;
 import com.mokylin.td.loginserver.core.version.Version;
 import com.mokylin.td.loginserver.globals.Globals;
 import com.mokylin.td.network2client.core.session.IClientSession;
+import org.redisson.api.RBucket;
 import org.redisson.api.RMap;
 import org.redisson.api.RedissonClient;
 
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 客户端登陆
@@ -81,14 +84,126 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
                 return;
         }
 
-        // 2.如果有必要，则进入排队列表（一般全球服游戏很少排队） TODO
+        // 2.1 加锁
+        if (!lock(channel, accountId)) {
+            notifyFailAndDisconnect(session, LoginMessage.LoginFailReason.YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER);
+            return;
+        }
 
-        // 3.分配一个Gate给此玩家 TODO
+        // 查询是否已经在某个Gate上了
+        final long gateID = findGate(channel, accountId);
+        if (gateID > ServerIdDef.InvalidServerID) {
+            // 将此Client定向到这台Gate上，取代旧连接
+            if (!selectGateById(session, gateID, channel, accountId)) {
+                notifyFailAndDisconnect(session, LoginMessage.LoginFailReason.YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER);
+            }
+            return;
+        }
+
+        // 2.如果有必要，则进入排队列表（一般全球服游戏很少排队）。目前没有此需求
+//        if (enqueue()) {
+//            return;
+//        }
+
+        // 3.分配一个Gate给此玩家
+        allotGate(session, channel, accountId);
+
+        // 解锁
+        if (!unlock(channel, accountId)) {
+            notifyFailAndDisconnect(session, LoginMessage.LoginFailReason.YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER);
+            return;
+        }
+    }
+
+    /**
+     * 加锁
+     * @param channel
+     * @param accountId
+     * @return 是否成功
+     */
+    private boolean lock(String channel, String accountId) {
+        final String key = RedisLoginKey.Lock.builderKey(channel, accountId);
+        final RedissonClient redissonLogin = Globals.getRedissonLogin();
+        final RBucket<Boolean> bucket = redissonLogin.getBucket(key);
+        // 不存在就创建一个
+        if (!bucket.isExists()) {
+            if (!bucket.trySet(false))
+                return false;
+        }
+
+        // 查看是否锁住
+        if (bucket.get())
+            return false;
+
+        // 尝试加锁
+        return bucket.compareAndSet(false, true);
+    }
+
+    /**
+     * 解锁
+     * @param channel
+     * @param accountId
+     * @return 是否成功
+     */
+    private boolean unlock(String channel, String accountId) {
+        final String key = RedisLoginKey.Lock.builderKey(channel, accountId);
+        final RedissonClient redissonLogin = Globals.getRedissonLogin();
+        final RBucket<Boolean> bucket = redissonLogin.getBucket(key);
+
+        final boolean bRet = bucket.compareAndSet(true, false);
+        bucket.expire(30, TimeUnit.SECONDS);
+        return bRet;
+    }
+
+    /**
+     * 查询该账号是否已经在某Gate上
+     * @param channel
+     * @param accountId
+     * @return  找到的GateID
+     */
+    private long findGate(String channel, String accountId) {
+        final String key = RedisLoginKey.InGate.builderKey(channel, accountId);
+        final RedissonClient redissonLogin = Globals.getRedissonLogin();
+        final RBucket<Long> bucket = redissonLogin.getBucket(key);
+        if (bucket.isExists()) {
+            return bucket.get();
+        }
+        return ServerIdDef.InvalidServerID;
+    }
+
+    /**
+     * 指定某Gate，供该玩家登陆
+     * @param session
+     * @param gateID
+     * @param channel
+     * @param accountId
+     * @return 是否成功
+     */
+    private boolean selectGateById(IClientSession session, long gateID, String channel, String accountId) {
         final String gateKey = ServerType.GATE.getKey();
         final RedissonClient redisson = Globals.getRedisson();
         RMap<Long, GateInfo> map = redisson.getMap(gateKey);
-        double persent = 1.0;
-        long gateID = 0;
+
+        GateInfo gateInfo = map.get(gateID);
+        if (gateInfo==null)
+            return false;
+
+        selectGate(session, channel, accountId, gateInfo);
+        return true;
+    }
+
+    /**
+     * 分配Gate
+     * @param session
+     * @param channel
+     * @param accountId
+     */
+    private void allotGate(IClientSession session, String channel, String accountId) {
+        final String gateKey = ServerType.GATE.getKey();
+        final RedissonClient redisson = Globals.getRedisson();
+        RMap<Long, GateInfo> map = redisson.getMap(gateKey);
+        double persent = 1.0;   // 1.0即100%，表示满载
+        long gateID = 0;        // 0为无效ID，有效ID是正整数
         GateInfo gateInfo = null;
         for (Map.Entry<Long, GateInfo> entry : map.entrySet()) {
             final GateInfo value = entry.getValue();
@@ -100,33 +215,48 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
             }
         }
         if (gateID > 0) {
-            // 找到了相对空闲的Gate
-            final int length = 16;
-            ArrayList<Integer> vCode = new ArrayList<>();   // 验证码
-            for (int i = 0; i < length; i++) {
-                final int nextInt = RandomUtil.nextInt(Integer.MAX_VALUE);
-                vCode.add(nextInt);
-            }
+            selectGate(session, channel, accountId, gateInfo);
 
-            // 先写入LoginRedis，之后由Gate读取
-            LoginClientInfo loginClientInfo = new LoginClientInfo();
-            loginClientInfo.accountId = accountId;
-            loginClientInfo.channel = channel;
-            loginClientInfo.vCode = vCode;
-            final RedissonClient redissonLogin = Globals.getRedissonLogin();
-            //redissonLogin.getBucket() // 组装待登陆的玩家key
-            // TODO
-
-            // 再通知Client
-            final LoginMessage.SCLoginSuccess.Builder builder = LoginMessage.SCLoginSuccess.newBuilder();
-            builder.setGateIP(gateInfo.ip2Client)
-                    .setGatePort(gateInfo.port2Client)
-                    .addAllVerificationCode(vCode);
-            session.sendMessage(builder);
         } else {
             // Gate全部人满
             this.notifyFailAndDisconnect(session, LoginMessage.LoginFailReason.PLAYER_IS_FULL);
         }
+    }
+
+    private void selectGate(IClientSession session, String channel, String accountId, GateInfo gateInfo) {
+        // 找到了相对空闲的Gate
+        final int length = 16;
+        ArrayList<Integer> vCode = new ArrayList<>();   // 验证码
+        for (int i = 0; i < length; i++) {
+            final int nextInt = RandomUtil.nextInt(Integer.MAX_VALUE);
+            vCode.add(nextInt);
+        }
+
+        // 先写入LoginRedis，之后由Gate读取
+        LoginClientInfo loginClientInfo = new LoginClientInfo();
+        loginClientInfo.accountId = accountId;
+        loginClientInfo.channel = channel;
+        loginClientInfo.vCode = vCode;
+        final RedissonClient redissonLogin = Globals.getRedissonLogin();
+        // 组装待登陆的玩家key
+        final String keyToGate = RedisLoginKey.ToGate.builderKey(channel, accountId);
+        final RBucket<LoginClientInfo> bucket = redissonLogin.getBucket(keyToGate);
+        bucket.set(loginClientInfo);
+
+        // 再通知Client
+        final LoginMessage.SCLoginSuccess.Builder builder = LoginMessage.SCLoginSuccess.newBuilder();
+        builder.setGateIP(gateInfo.ip2Client)
+                .setGatePort(gateInfo.port2Client)
+                .addAllVerificationCode(vCode);
+        session.sendMessage(builder);
+    }
+
+    /**
+     *
+     * @return true：进入排队或队列满断开连接； <p>false：无需排队。
+     */
+    private boolean enqueue() {
+        return false;
     }
 
     /**

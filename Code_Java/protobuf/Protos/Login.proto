@@ -96,4 +96,6 @@ enum LoginFailReason{
     YOUR_ACCOUNT_LOGIN_AGAIN = 7;
     /**你的角色信息正在保存，请稍候 */
     YOUR_DATA_IS_SAVING = 8;
+    /**你的账号在另外的登录服上登录了（客户端仍然提示：别人顶你号） */
+    YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER = 9;
 }
