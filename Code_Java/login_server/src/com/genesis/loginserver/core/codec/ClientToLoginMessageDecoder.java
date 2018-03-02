@@ -35,7 +35,7 @@ public class ClientToLoginMessageDecoder extends ByteToMessageDecoder {
      */
     private boolean isInited = false;
     /**
-     * 序号
+     * 序号（存放客户端上次发来的值）
      */
     private byte index = 0;
 
@@ -71,7 +71,7 @@ public class ClientToLoginMessageDecoder extends ByteToMessageDecoder {
             index = indexTmp;
             isInited = true;
         } else {
-            if (indexTmp + 1 == index) {
+            if (indexTmp - 1 == index) {
                 // 验证通过
                 index += 1;
             } else {
