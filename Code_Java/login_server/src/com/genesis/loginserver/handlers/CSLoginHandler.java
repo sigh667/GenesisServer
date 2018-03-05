@@ -74,7 +74,7 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
      */
     private void auth(IClientSession session, String channel, String accountId, String key) {
         // 1.认证
-        if (Globals.getServerConfig().isLocalAuth()) {
+        if (Globals.getLoginConfig().isLocalAuth()) {
             // 本地认证
             if (!authLocal(session, channel, accountId, key))
                 return;

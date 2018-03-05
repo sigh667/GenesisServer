@@ -1,14 +1,13 @@
 package com.genesis.loginserver;
 
-import com.mokylin.bleach.core.concurrent.fixthreadpool.FixThreadPool;
-import com.mokylin.bleach.core.config.model.NetInfo;
-import com.mokylin.bleach.core.net.NettyNetworkLayer;
-import com.genesis.loginserver.config.LoginServerConfig;
 import com.genesis.loginserver.core.channel.LoginClientChannelListener;
 import com.genesis.loginserver.core.codec.ClientToLoginMessageDecoder;
 import com.genesis.loginserver.core.handler.LoginClientMessageHandler;
 import com.genesis.loginserver.core.runnable.ActionOnExceptionOfLogin;
 import com.genesis.loginserver.globals.Globals;
+import com.mokylin.bleach.core.concurrent.fixthreadpool.FixThreadPool;
+import com.mokylin.bleach.core.config.model.NetInfo;
+import com.mokylin.bleach.core.net.NettyNetworkLayer;
 import com.mokylin.td.network2client.core.channel.ChannelInitializerImpl;
 import com.mokylin.td.network2client.core.handle.ClientIoHandler;
 import io.netty.channel.ChannelHandler;
@@ -21,7 +20,7 @@ public class LoginServer {
 
     public static void main(String[] args) {
 
-        // 内部初始化
+        // 1.内部初始化
         try {
             Globals.init();
         } catch (Exception e) {
@@ -29,9 +28,11 @@ public class LoginServer {
             System.exit(-1);
         }
 
-        // 一切都准备好了之后,启动用于监听客户端消息的Netty
-        LoginServerConfig serverConfig = Globals.getServerConfig();
-        NetInfo netInfoToClient = serverConfig.netInfoToClient;
+        // 2.启动监听Gate的端口
+        final NetInfo netInfoToGate = Globals.getLoginConfig().getNetInfoToGate();
+
+        // 3.一切都准备好了之后,启动用于监听客户端消息的Netty
+        final NetInfo netInfoToClient = Globals.getLoginConfig().getNetInfoToClient();
         try {
             LoginClientMessageHandler mp = new LoginClientMessageHandler(
                     new FixThreadPool(50, new ActionOnExceptionOfLogin()));

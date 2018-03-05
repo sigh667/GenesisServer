@@ -25,6 +25,10 @@ public class NetInfo {
         }
     }
 
+    public NetInfo() {
+        host = localHost;
+    }
+
     /**IP*/
     private String host;
     /**端口*/
