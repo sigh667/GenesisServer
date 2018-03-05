@@ -12,7 +12,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
  * Netty网络层通用启动器
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class NettyNetworkLayer {

@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * Hero基础属性表
- * @author baoliang.shen
+ * @author Joey
  *
  */
 @ExcelRowBinding

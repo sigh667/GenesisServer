@@ -14,7 +14,7 @@ import java.util.Map.Entry;
 /**
  * 负责管理客户端链接
  *
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum ClientSessionContainer implements IHeartbeat {

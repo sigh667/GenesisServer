@@ -2,7 +2,7 @@ package com.mokylin.bleach.common.combat.enumeration;
 
 /**
  * Buff结算时间
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum BuffWorkingTime {

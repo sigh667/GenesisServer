@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * 机器人需要的各种全局数据
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class Global {

@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * 机器人背包的逻辑数据模块
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class Inventory extends ItemContainer<Human, Item> {

@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
  * <p> 
  * Description:利用java反射调用类的的私有方法 
  * </p>
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class PrivateUtil {

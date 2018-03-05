@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * 背包
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class Inventory extends ItemContainer<Human, Item> {

@@ -2,7 +2,7 @@ package com.mokylin.bleach.gameserver.hero.skill;
 
 /**
  * Hero的技能系统的各种常量
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public interface SkillConstants {

@@ -2,7 +2,7 @@ package com.mokylin.bleach.common.combat.enumeration;
 
 /**
  * 效果器
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum EffectID {

@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
  * 需要持久化的类的接口
- * @author baoliang.shen
+ * @author Joey
  *
  * @param <IdType>
  * @param <T>

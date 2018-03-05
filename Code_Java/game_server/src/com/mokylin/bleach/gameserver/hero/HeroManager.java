@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * 玩家身上的英雄管理器
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class HeroManager {

@@ -4,7 +4,7 @@ import scala.collection.mutable.StringBuilder;
 
 /**
  * 战斗系统全局配置
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class CombatConfig {

@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadFactory;
 
 /**
  * 线程命名
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class ThreadNamingFactory implements ThreadFactory {

@@ -25,7 +25,7 @@ import java.util.Map;
 /**
  * LoginServer的全局服务
  *
- * @author baoliang.shen
+ * @author Joey
  */
 public class Globals {
     /**日志*/

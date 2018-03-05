@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * 自增Id生成器
- * @author baoliang.shen
+ * @author Joey
  *
  */
 @ThreadSafe

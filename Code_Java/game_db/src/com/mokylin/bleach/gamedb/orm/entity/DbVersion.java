@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 /**
  * 数据库版本号
- * @author baoliang.shen
+ * @author Joey
  *
  */
 @Entity

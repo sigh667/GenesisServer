@@ -20,7 +20,7 @@ import java.util.List;
  * 1. 消息体的长度: 4 byte, 用于解析时从byte流中剥离消息;<br>
  * 2. 消息号：2 byte, 用于指定具体的消息类型;<br>
  * 3. 消息体：长度由1指定, 具体的消息内容;<br>
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class ServerToRobotMessageDecoder extends ByteToMessageDecoder {

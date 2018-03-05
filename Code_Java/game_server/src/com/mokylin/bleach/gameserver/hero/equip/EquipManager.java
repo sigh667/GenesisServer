@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 /**
  * Hero的装备管理器
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class EquipManager {

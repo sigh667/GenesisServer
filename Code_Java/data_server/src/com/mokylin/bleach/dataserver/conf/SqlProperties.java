@@ -4,7 +4,7 @@ import java.util.Properties;
 
 /**
  * 数据库基础配置
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class SqlProperties {

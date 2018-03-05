@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 /**
  * 针对第二层结构为hash的实现
- * @author baoliang.shen
+ * @author Joey
  *
  */
 @SuppressWarnings("unchecked")

@@ -3,7 +3,7 @@ package com.mokylin.bleach.robot.ui.loading;
 
 /**
  * 模态阻挡框的类型
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum LoadingDlgType {

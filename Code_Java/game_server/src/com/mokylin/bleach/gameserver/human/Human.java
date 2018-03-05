@@ -46,7 +46,7 @@ import java.util.ArrayList;
 
 /**
  * 角色
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class Human extends ObjectInSqlImpl<Long, HumanEntity> implements MsgArgs, IPropNotifier {

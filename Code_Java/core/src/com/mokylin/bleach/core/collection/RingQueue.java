@@ -10,7 +10,7 @@ import java.util.NoSuchElementException;
 /**
  * 固定大小的队列<p>
  * 在末尾塞入数据时，如果队列已满，会把头部的数据弹出并通过返回值传出
- * @author baoliang.shen
+ * @author Joey
  *
  */
 @NotThreadSafe

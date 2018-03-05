@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 
 /**
  * 道具
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class Item extends ObjectInSqlImpl<Long, ItemEntity> implements IItem {

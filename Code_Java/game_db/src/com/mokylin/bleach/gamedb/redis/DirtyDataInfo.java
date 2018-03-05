@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
  * 描述一个脏数据信息
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class DirtyDataInfo {

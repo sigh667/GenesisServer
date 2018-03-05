@@ -2,7 +2,7 @@ package com.mokylin.bleach.common.combat.enumeration;
 
 /**
  * 招式结算公式类型
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum SpellExpType {

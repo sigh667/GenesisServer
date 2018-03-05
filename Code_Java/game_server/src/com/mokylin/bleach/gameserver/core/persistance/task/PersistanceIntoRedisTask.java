@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * 将数据保存到Redis中<br>
  * 在Redis线程处理<br>
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class PersistanceIntoRedisTask implements ArgsRunnable {

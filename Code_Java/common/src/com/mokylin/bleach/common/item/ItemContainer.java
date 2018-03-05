@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 /**
  * 持有Item的容器类，单纯的容器操作都可以写在这里
- * @author baoliang.shen
+ * @author Joey
  *
  * @param <K>	此容器的持有者，一般为Human
  * @param <V>	道具的具体实现

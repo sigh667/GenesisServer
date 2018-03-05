@@ -22,7 +22,7 @@ import io.netty.handler.codec.ByteToMessageDecoder;
  * 2. 消息号：无符号 2 byte, 用于指定具体的消息类型;<br>
  * 3. 消息体：长度由1指定, 具体的消息内容;<br>
  *
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class ClientToAgentMessageDecoder extends ByteToMessageDecoder {

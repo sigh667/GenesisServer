@@ -24,7 +24,7 @@ import java.util.TreeSet;
 
 /**
  * 数据库的自动更新功能
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class SqlUpdate {

@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  * 针对第二层结构为Set的实现
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum EntitySetRedisOp implements IEntityRedisOp {

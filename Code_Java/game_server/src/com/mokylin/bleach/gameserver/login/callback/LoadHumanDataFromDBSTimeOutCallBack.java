@@ -15,7 +15,7 @@ import akka.actor.ActorRef;
 
 /**
  * 让DataServer加载玩家数据超时的回调
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class LoadHumanDataFromDBSTimeOutCallBack implements ITimeoutCallback {

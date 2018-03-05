@@ -20,7 +20,7 @@ import java.util.TreeSet;
 
 /**
  * 所有需要UUID的类，在这里定义
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum UUIDType implements IUUIDType {

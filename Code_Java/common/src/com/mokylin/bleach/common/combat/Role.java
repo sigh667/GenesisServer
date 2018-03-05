@@ -5,7 +5,7 @@ import com.mokylin.bleach.common.prop.battleprop.BattlePropContainer;
 
 /**
  * 战斗单位
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class Role {

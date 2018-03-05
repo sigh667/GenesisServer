@@ -2,7 +2,7 @@ package com.mokylin.bleach.common.combat;
 
 /**
  * 战斗模块测试
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class CombatTest {

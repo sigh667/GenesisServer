@@ -2,7 +2,7 @@ package com.mokylin.bleach.core.orm;
 
 /**
  * 数据访问异常
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class DataAccessException extends RuntimeException {

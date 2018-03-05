@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * xml读取工具
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class XmlConfigUtil {

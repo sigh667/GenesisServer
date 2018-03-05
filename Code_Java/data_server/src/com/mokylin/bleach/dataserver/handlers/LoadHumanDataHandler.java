@@ -12,7 +12,7 @@ import com.mokylin.bleach.servermsg.dataserver.LoadHumanDataMessage;
 
 /**
  * GameServer请求某角色的全部数据
- * @author baoliang.shen
+ * @author Joey
  *
  */
 

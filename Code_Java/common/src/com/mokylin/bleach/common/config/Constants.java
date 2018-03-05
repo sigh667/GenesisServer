@@ -7,7 +7,7 @@ import scala.collection.mutable.StringBuilder;
 /**
  * 游戏逻辑中的所有由策划指定的一维常量<p>
  * 支持所有基本数据类型
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class Constants {

@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  * Hero身上的装备
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class Equip implements IPropHolder<EquipFixedPropOriginalType> {

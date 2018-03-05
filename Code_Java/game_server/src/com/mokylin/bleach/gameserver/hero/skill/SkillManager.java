@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  * Hero的技能管理器
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class SkillManager {

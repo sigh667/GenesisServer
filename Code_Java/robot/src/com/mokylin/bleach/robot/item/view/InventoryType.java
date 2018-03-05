@@ -4,7 +4,7 @@ import com.mokylin.bleach.common.item.ItemType;
 
 /**
  * 背包类型
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum InventoryType {

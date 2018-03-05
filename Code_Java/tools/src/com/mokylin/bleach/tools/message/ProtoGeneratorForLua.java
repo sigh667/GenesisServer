@@ -23,7 +23,7 @@ import java.util.Properties;
 
 /**
  * lua消息代码生成器
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class ProtoGeneratorForLua {

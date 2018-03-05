@@ -22,7 +22,7 @@ import javax.swing.table.TableRowSorter;
 
 /**
  * 背包界面
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class InventoryFrame extends JFrame {

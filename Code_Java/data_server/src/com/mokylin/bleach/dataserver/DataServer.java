@@ -4,7 +4,7 @@ import com.mokylin.bleach.dataserver.globals.Globals;
 
 /**
  * DataServer程序入口
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class DataServer {

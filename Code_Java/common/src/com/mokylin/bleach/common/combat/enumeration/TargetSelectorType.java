@@ -2,7 +2,7 @@ package com.mokylin.bleach.common.combat.enumeration;
 
 /**
  * 目标选择方式
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum TargetSelectorType {

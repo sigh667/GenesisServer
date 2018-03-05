@@ -8,7 +8,7 @@ import com.mokylin.bleach.dataserver.globals.Globals;
 
 /**
  * DataServer的Redis连接管理器，会访问多个Redis
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class RedisManager {

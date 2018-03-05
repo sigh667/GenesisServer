@@ -10,7 +10,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
  * 竞技场
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class ArenaService implements MsgArgs {

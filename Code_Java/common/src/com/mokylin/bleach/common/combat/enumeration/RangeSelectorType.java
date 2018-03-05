@@ -2,7 +2,7 @@ package com.mokylin.bleach.common.combat.enumeration;
 
 /**
  * 范围选择方式
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum RangeSelectorType {

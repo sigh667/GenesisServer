@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * 来自星级和级别的属性加成
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class StarAndLevelProp implements IPropHolder<StarAndLevelPropType> {

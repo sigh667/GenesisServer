@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * 战斗类型
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum CombatType implements ArrayIndexedEnum<CombatType> {

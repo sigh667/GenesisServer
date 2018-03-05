@@ -10,7 +10,7 @@ import java.util.TreeMap;
 
 /**
  * 英雄组信息全局缓冲
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class HeroGroupService {

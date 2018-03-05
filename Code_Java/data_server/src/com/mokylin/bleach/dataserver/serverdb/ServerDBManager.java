@@ -11,7 +11,7 @@ import java.util.concurrent.Future;
 
 /**
  * 负责单个服的数据操作
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class ServerDBManager {

@@ -7,7 +7,7 @@ import com.genesis.protobuf.HeroMessage.HeroSkillInfo.Builder;
 
 /**
  * Hero身上的技能
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class Skill {

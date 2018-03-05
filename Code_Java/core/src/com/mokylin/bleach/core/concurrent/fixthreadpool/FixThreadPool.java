@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
 
 /**
  * 针对绑定ID的任务的固定线程池
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class FixThreadPool {

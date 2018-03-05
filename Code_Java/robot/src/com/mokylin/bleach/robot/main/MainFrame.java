@@ -21,7 +21,7 @@ import javax.swing.border.EmptyBorder;
 
 /**
  * 主窗口
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class MainFrame extends JFrame {

@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 洪水攻击过滤服务
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum FloodFilterService {

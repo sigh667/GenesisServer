@@ -19,7 +19,7 @@ import io.netty.handler.codec.ByteToMessageDecoder;
  * <br>
  * 1. 消息体的长度: 4 byte, 用于解析时从byte流中剥离消息;<br>
  * 2. 消息体：长度由1指定, 具体的消息内容;<br>
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class MapToGateMessageDecoder extends ByteToMessageDecoder {

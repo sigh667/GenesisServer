@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 /**
  * 此类只在Redis中存储用，数据库中没有此类对应的表
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class AccountEntity implements BaseEntity {

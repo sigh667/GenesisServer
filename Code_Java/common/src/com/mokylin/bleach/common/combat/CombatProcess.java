@@ -5,7 +5,7 @@ import com.mokylin.bleach.common.core.GlobalData;
 
 /**
  * 战场主逻辑
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class CombatProcess {

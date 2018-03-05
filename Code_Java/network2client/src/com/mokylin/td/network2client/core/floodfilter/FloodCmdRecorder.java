@@ -5,7 +5,7 @@ import com.mokylin.bleach.core.time.TimeService;
 
 /**
  * 消息包记录器
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class FloodCmdRecorder {

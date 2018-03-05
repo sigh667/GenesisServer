@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * 读取目录及子目录下指定文件名的路径, 返回一个List
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class FileViewer {

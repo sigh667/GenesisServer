@@ -2,7 +2,7 @@ package com.mokylin.bleach.common.combat.enumeration;
 
 /**
  * Buff的正负面
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum BuffType {

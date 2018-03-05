@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  * 各种映射关系，暂时通过配置来对应。等光神的中控服务器完毕 TODO
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class Mapping {

@@ -10,7 +10,7 @@ import java.util.List;
  * 相同服务器类型的服务器之间ServerId不允许重复
  * 不同服务器类型的服务器之间ServerId允许重复
  *
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum ServerType implements ArrayIndexedEnum<ServerType> {

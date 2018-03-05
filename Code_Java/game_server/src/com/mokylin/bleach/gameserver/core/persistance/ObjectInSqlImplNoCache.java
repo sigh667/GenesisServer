@@ -21,7 +21,7 @@ import java.util.List;
  * 如果要持久化的对象需要在每次改动之后立即存库，那么请继承本类<p>
  * 本类会在一定时间内缓冲需要保存的数据，然后一次性提交到Redis线程
  * <p>由于java不能多继承，如果你的类还需要继承别的类，那么你可以仿照本类自行实现IObjectInSql接口
- * @author baoliang.shen
+ * @author Joey
  *
  * @param <IdType>
  * @param <T>

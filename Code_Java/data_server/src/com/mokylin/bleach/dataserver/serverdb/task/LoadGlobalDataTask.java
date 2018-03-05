@@ -21,7 +21,7 @@ import java.util.List;
 
 /**
  * 加载全局数据和账号数据，放进Redis
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class LoadGlobalDataTask implements Runnable {

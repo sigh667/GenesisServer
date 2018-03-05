@@ -5,7 +5,7 @@ import com.mokylin.bleach.core.template.exception.TemplateConfigException;
 
 /**
  * Hero成长表
- * @author baoliang.shen
+ * @author Joey
  *
  */
 @ExcelRowBinding

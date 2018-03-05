@@ -11,7 +11,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
  * 所有策划配置的数据表格都在这里
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class GlobalData {

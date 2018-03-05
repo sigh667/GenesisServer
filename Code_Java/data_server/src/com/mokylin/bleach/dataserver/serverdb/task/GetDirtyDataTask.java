@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 负责阻塞的等Redis中指定服中的脏数据信息
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class GetDirtyDataTask implements Runnable {

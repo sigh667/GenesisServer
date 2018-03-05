@@ -20,7 +20,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 
 /**
  * 有UI的机器人main函数入口
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class RobotUIMain {

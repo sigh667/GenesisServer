@@ -16,7 +16,7 @@ import java.util.Iterator;
 
 /**
  * 文件操作工具类
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class FileUtils {

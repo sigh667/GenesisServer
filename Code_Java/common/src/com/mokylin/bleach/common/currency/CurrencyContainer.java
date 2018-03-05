@@ -4,7 +4,7 @@ import com.mokylin.bleach.core.util.arr.EnumArray;
 
 /**
  * 金钱容器的基类
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class CurrencyContainer {

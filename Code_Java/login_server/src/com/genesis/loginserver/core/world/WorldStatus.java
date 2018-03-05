@@ -2,7 +2,7 @@ package com.genesis.loginserver.core.world;
 
 /**
  * 世界服状态
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum WorldStatus {

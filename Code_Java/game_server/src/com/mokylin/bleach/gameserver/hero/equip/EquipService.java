@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * 装备属性的全局缓冲<p>
  * 因为目前装备的部分属性是固定的，所以可以做个优化：所有玩家共用一份
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class EquipService {

@@ -6,7 +6,7 @@ import com.mokylin.bleach.gameserver.core.persistance.ObjectInSqlImpl;
 
 /**
  * 竞技场镜像
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class ArenaSnap extends ObjectInSqlImpl<Long, ArenaSnapEntity> {

@@ -32,7 +32,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @see IClientSession
  * @see IClientMessageHandler
  *
- * @author baoliang.shen
+ * @author Joey
  *
  */
 

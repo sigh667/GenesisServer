@@ -3,7 +3,7 @@ package com.mokylin.bleach.gamedb.redis.key;
 
 /**
  * Redis中与Entity无关的key生成器
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class SpecialRedisKeyBuilder {

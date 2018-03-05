@@ -7,7 +7,7 @@ import static com.google.common.base.Preconditions.checkArgument;
 
 /**
  * 网络配置信息
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class NetInfo {

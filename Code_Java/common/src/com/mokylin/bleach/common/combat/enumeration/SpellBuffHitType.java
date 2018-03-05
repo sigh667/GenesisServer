@@ -2,7 +2,7 @@ package com.mokylin.bleach.common.combat.enumeration;
 
 /**
  * Buff命中规则
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum SpellBuffHitType {

@@ -26,7 +26,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
  * 负责缓冲逻辑层的脏数据，然后发送到操作Redis的线程保存
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class DataUpdater implements IDataUpdater {

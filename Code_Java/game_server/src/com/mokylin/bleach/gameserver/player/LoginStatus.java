@@ -5,7 +5,7 @@ import com.genesis.protobuf.MessageType.CGMessageType;
 
 /**
  * 玩家的登录状态
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum LoginStatus {

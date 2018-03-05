@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.is;
 
 /**
  * {@link RingQueue}的单元测试
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class RingQueueTest {

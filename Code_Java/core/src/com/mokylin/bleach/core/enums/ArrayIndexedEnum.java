@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * 数组形式的IndexedEnum
- * @author baoliang.shen
+ * @author Joey
  *
  * @param <E>
  */

@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * 负责将Excel中的临时作用对象转换为BattlePropEffect
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum PropEffectConverter {

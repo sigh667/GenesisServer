@@ -16,7 +16,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
  * 通道初始化方法的实现类
  *
  * <p>因为添加了防洪水攻击的策略，所以适用于与client之间的通信
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class ChannelInitializerImpl extends ChannelInitializer<SocketChannel> {

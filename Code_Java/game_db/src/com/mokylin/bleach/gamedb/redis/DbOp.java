@@ -2,7 +2,7 @@ package com.mokylin.bleach.gamedb.redis;
 
 /**
  * 脏数据的操作类型
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum DbOp {

@@ -6,7 +6,7 @@ import com.mokylin.bleach.robot.item.Item;
 
 /**
  * 道具的显示对象
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class ItemToView implements Comparable<ItemToView> {

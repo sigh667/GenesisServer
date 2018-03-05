@@ -16,7 +16,7 @@ import java.util.Set;
 
 /**
  * Handler扫描工具类
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class ClientMsgHandlerUtil {

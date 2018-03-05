@@ -2,7 +2,7 @@ package com.mokylin.bleach.common.combat;
 
 /**
  * 战斗中的一方
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class CombatRoles {

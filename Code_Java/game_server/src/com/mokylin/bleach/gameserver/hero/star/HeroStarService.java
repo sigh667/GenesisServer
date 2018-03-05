@@ -19,7 +19,7 @@ import java.util.TreeMap;
 
 /**
  * 缓冲Hero星级相关的东西
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class HeroStarService {

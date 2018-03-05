@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
  * 用于放进全局脏数据列表的包装类
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class PersistanceWrapper {

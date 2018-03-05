@@ -19,7 +19,7 @@ import static org.hamcrest.Matchers.is;
 
 /**
  * 数据库版本更新测试
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class UpdateSqlTest {

@@ -9,7 +9,7 @@ import com.mokylin.bleach.gameserver.hero.Hero;
 
 /**
  * Hero品质带来的属性加成
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class QualityProp implements IPropHolder<QualityPropType> {

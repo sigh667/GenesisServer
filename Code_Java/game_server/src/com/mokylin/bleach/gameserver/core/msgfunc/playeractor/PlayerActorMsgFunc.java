@@ -9,7 +9,7 @@ import com.mokylin.bleach.gameserver.player.Player;
 
 /**
  * 专门为PlayerActor处理的消息处理定义一个基类
- * @author baoliang.shen
+ * @author Joey
  *
  * @param <Msg>
  */

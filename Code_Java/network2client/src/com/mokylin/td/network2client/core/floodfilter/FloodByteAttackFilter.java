@@ -8,7 +8,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
  * 流量攻击过滤器
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class FloodByteAttackFilter extends ChannelInboundHandlerAdapter {

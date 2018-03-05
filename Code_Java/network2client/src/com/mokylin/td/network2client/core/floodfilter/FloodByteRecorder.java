@@ -9,7 +9,7 @@ import io.netty.buffer.ByteBuf;
 
 /**
  * 流量记录器
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class FloodByteRecorder {

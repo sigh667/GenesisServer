@@ -27,7 +27,7 @@ import java.util.Map.Entry;
 /**
  * 脏数据缓冲
  * <p>每个原始服务器拥有一个
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class DataCache {

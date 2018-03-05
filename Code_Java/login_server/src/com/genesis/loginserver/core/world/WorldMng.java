@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * 负责管理WorldServer相关的业务
  *
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class WorldMng {

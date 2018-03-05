@@ -2,7 +2,7 @@ package com.mokylin.bleach.common.combat.enumeration;
 
 /**
  * 招式伤害类型
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum SpellDamageType {

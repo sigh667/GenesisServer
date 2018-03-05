@@ -6,7 +6,7 @@ import com.genesis.protobuf.MessageType.MessageTarget;
 /**
  * 从LoginServer来的消息
  * <p>请接收此客户端链接
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class AcceptPlayer implements IMessage {

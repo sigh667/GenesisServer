@@ -25,7 +25,7 @@ import java.util.concurrent.Future;
 
 /**
  * 管理所有服的数据操作
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class ServerDBService implements IHeartbeat {

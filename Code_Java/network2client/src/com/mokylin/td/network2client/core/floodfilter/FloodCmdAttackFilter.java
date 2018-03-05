@@ -7,7 +7,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
  * 消息包攻击过滤器
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class FloodCmdAttackFilter extends ChannelInboundHandlerAdapter {

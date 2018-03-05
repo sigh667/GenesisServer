@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * 查询Human属性
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class GetHumanAttrCmdFunc implements IGmCmdFunction {

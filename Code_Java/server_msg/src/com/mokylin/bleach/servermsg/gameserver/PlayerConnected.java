@@ -6,7 +6,7 @@ import com.genesis.protobuf.MessageType.MessageTarget;
 
 /**
  * 网关通知GameServer，创建Player对象，准备接受玩家登陆
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class PlayerConnected implements IMessage {

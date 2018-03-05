@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 玩家的登陆消息都会被扔到这里来
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class LoginRunnable implements IRunnableBindId {

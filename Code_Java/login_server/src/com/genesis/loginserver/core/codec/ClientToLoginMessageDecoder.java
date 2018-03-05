@@ -24,7 +24,7 @@ import java.util.List;
  * 3. 序列号：1 byte，无符号，每次发包都+1，首次的值暂由客户端随机;<br>
  * 4. 消息体：长度由1指定, 具体的消息内容;<br>
  *
- * @author baoliang.shen
+ * @author Joey
  */
 public class ClientToLoginMessageDecoder extends ByteToMessageDecoder {
 

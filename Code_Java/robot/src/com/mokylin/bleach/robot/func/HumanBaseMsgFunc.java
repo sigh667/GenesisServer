@@ -8,7 +8,7 @@ import com.mokylin.bleach.robot.robot.Robot;
 
 /**
  * 专门用于Human对象已经存在时的消息处理
- * @author baoliang.shen
+ * @author Joey
  *
  * @param <Msg>
  */

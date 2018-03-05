@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * 金钱管理器，管理一些金钱相关的逻辑
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class CurrencyManager {

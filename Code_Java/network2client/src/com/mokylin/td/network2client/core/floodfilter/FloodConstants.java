@@ -2,7 +2,7 @@ package com.mokylin.td.network2client.core.floodfilter;
 
 /**
  * 洪水攻击的全局控制开关
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public enum FloodConstants {

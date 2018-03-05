@@ -4,7 +4,7 @@ import com.mokylin.bleach.core.isc.remote.IRemote;
 
 /**
  * 世界服信息
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class WorldInfo {

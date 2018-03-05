@@ -2,7 +2,7 @@ package com.mokylin.bleach.gamedb.human;
 
 /**
  * 角色的简要信息
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class HumanInfo {

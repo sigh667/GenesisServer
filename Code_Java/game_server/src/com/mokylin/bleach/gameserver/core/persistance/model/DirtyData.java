@@ -5,7 +5,7 @@ import com.mokylin.bleach.gamedb.redis.DirtyDataInfo;
 
 /**
  * 用于脏数据保存的类
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class DirtyData {

@@ -25,7 +25,7 @@ import java.util.Set;
 
 /**
  * 数据库访问服务
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class HibernateDBService {

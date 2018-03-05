@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * 角色详细数据，用于human对象的加载
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class HumanData {

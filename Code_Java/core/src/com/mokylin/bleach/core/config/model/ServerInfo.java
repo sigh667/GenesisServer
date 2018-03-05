@@ -4,7 +4,7 @@ import com.mokylin.bleach.core.isc.ServerType;
 
 /**
  * 服务器信息
- * @author baoliang.shen
+ * @author Joey
  *
  */
 public class ServerInfo {
