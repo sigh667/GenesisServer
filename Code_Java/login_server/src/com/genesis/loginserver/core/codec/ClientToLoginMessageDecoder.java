@@ -1,6 +1,5 @@
 package com.genesis.loginserver.core.codec;
 
-import com.mokylin.bleach.core.net.msg.CSMessage;
 import com.mokylin.td.network2client.core.msg.ClientMsg;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
@@ -31,21 +30,12 @@ public class ClientToLoginMessageDecoder extends ByteToMessageDecoder {
 
     private static Logger log = LoggerFactory.getLogger(ClientToLoginMessageDecoder.class);
 
-    /**
-     * 是否初始化（以收到第一个消息为初始化标志）
-     */
-    private boolean isInited = false;
-    /**
-     * 序号（存放客户端上次发来的值）
-     */
-    private byte index = 0;
-
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out)
             throws Exception {
         in.markReaderIndex();
 
-        // 0.1 检查消息头
+        // 1.1 检查消息头
         int readableBytes = in.readableBytes();
         if (readableBytes < 5) {
             // 没有足够的数据用于解析
@@ -60,34 +50,16 @@ public class ClientToLoginMessageDecoder extends ByteToMessageDecoder {
         final int msgType = littleEdianIn.readUnsignedShort();
         final byte indexTmp = littleEdianIn.readByte();
 
-        // 0.2 检查消息体是否到达
+        // 1.2 检查消息体是否到达
         if (littleEdianIn.readableBytes() < msgBodyLength) {
             //全部消息没有完全到达，停止本次解析，等待全部到达后再解析
             in.resetReaderIndex();
             return;
         }
 
-        // 1.0 验证序号(目的：防止消息重放)
-        if (!isInited) {
-            index = indexTmp;
-            isInited = true;
-        } else {
-            if (indexTmp - 1 == index) {
-                // 验证通过
-                index += 1;
-            } else {
-                // 序号错误，直接踢掉
-                ctx.disconnect();
-                return;
-            }
-        }
-
         // 2.0 发给逻辑层
         ClientMsg cMsg = new ClientMsg(msgType, littleEdianIn.readBytes(msgBodyLength).array(), indexTmp);
         out.add(cMsg);
-
-//        CSMessage csMsg = new CSMessage(msgType, littleEdianIn.readBytes(msgBodyLength).array());
-//        out.add(csMsg);
     }
 
 }
