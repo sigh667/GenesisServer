@@ -1,47 +1,31 @@
 package com.mokylin.bleach.agentserver.core.global;
 
-import com.mokylin.bleach.agentserver.config.AgentServerConfig;
+import com.mokylin.bleach.agentserver.config.GateConfig;
 import com.mokylin.bleach.agentserver.core.frontend.gameserver.GameServerFrontManager;
-import com.mokylin.bleach.core.akka.Akka;
-import com.mokylin.bleach.core.isc.ISCService;
-import com.mokylin.bleach.core.isc.RemoteActorManager;
+import com.mokylin.bleach.core.config.ConfigBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Globals {
 
-    private static AgentServerConfig serverConfig = null;
+    /**日志*/
+    private static final Logger logger = LoggerFactory.getLogger(Globals.class);
 
-    private static Akka akka = null;
+    /**本服配置*/
+    private static GateConfig gateConfig;
 
     private static GameServerFrontManager gameServerManager = new GameServerFrontManager();
 
-    private static ISCService iscService = null;
-
-    private static RemoteActorManager remoteActorManager = null;
-
     public static void init() {
-        serverConfig = AgentServerConfig.getAgentServerConfig();
-        akka = new Akka(serverConfig.serverConfig.akkaConfig);
-        remoteActorManager = new RemoteActorManager(akka);
-        iscService = new ISCService(remoteActorManager, serverConfig.serverConfig);
+        // 1.0 读取配置
+        gateConfig = ConfigBuilder.buildConfigFromFileName("GateServer.conf", GateConfig.class);
+        logger.info("conf文件读取完毕");
     }
 
-    public static AgentServerConfig getServerConfig() {
-        return serverConfig;
-    }
+
+    public static GateConfig getGateConfig() { return gateConfig; }
 
     public static GameServerFrontManager getGameServerManager() {
         return gameServerManager;
-    }
-
-    public static Akka getAkka() {
-        return akka;
-    }
-
-    public static ISCService getISCService() {
-        return iscService;
-    }
-
-    public static RemoteActorManager getRemoteActorManager() {
-        return remoteActorManager;
     }
 }

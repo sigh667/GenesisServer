@@ -1,6 +1,6 @@
 package com.mokylin.bleach.launcher;
 
-import com.mokylin.bleach.agentserver.AgentServer;
+import com.mokylin.bleach.agentserver.GateServer;
 import com.mokylin.bleach.dataserver.DataServer;
 import com.mokylin.bleach.gameserver.GameServer;
 
@@ -25,7 +25,7 @@ public class Launcher {
             }
             if (arg.startsWith(AS_PREFIX)) {
                 arg = arg.replaceFirst(AS_PREFIX, "");
-                startServer(AgentServer.class, arg);
+                startServer(GateServer.class, arg);
             }
             if (arg.startsWith(GS_PREFIX)) {
                 arg = arg.replaceFirst(GS_PREFIX, "");

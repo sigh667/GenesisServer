@@ -30,6 +30,7 @@ public class LoginServer {
 
         // 2.启动监听Gate的端口
         final NetInfo netInfoToGate = Globals.getLoginConfig().getNetInfoToGate();
+        logger.info("网络层：监听Gate IP:" + netInfoToGate.getHost()  + ", port:"+ netInfoToGate.getPort());
 
         // 3.一切都准备好了之后,启动用于监听客户端消息的Netty
         final NetInfo netInfoToClient = Globals.getLoginConfig().getNetInfoToClient();
@@ -44,6 +45,7 @@ public class LoginServer {
             logger.error("Netty启动发生异常！", e);
             System.exit(-1);
         }
+        logger.info("网络层：监听客户端IP:" + netInfoToClient.getHost() + ", port:" + netInfoToClient.getPort());
 
         logger.info(
                 "\n\n-------------------------LoginServer startup successful！-----------------------------------------------\n\n");

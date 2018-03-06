@@ -1,14 +1,11 @@
 package com.mokylin.bleach.agentserver.core.net.codec;
 
-import com.mokylin.td.clientmsg.ProtoSerializationDefine;
-import com.mokylin.td.clientmsg.core.ICommunicationDataBase;
-
-import java.nio.ByteOrder;
-import java.util.List;
-
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
+
+import java.nio.ByteOrder;
+import java.util.List;
 
 /**
  * 客户端发送给Agent服务器的消息解析器。<p>
@@ -53,15 +50,15 @@ public class ClientToAgentMessageDecoder extends ByteToMessageDecoder {
 
         //TODO 只有特定消息号的消息，才会被解析，其余的都转发到其他Server
 
-        ProtoSerializationDefine pd = new ProtoSerializationDefine();
-        ICommunicationDataBase communicationData = pd.getCommunicationData(littleEdianIn, msgType);
-        System.out.println("msgBodyLength==" + msgBodyLength);
-        System.out.println("msgType==" + msgType);
-        if (communicationData == null) {
-            // log
-            return;
-        }
-        out.add(communicationData);
+//        ProtoSerializationDefine pd = new ProtoSerializationDefine();
+//        ICommunicationDataBase communicationData = pd.getCommunicationData(littleEdianIn, msgType);
+//        System.out.println("msgBodyLength==" + msgBodyLength);
+//        System.out.println("msgType==" + msgType);
+//        if (communicationData == null) {
+//            // log
+//            return;
+//        }
+//        out.add(communicationData);
         //CS_Message aa = new CS_Message(communicationData);
 
         //		out.add(new CSMessage(msgType, littleEdianIn.readBytes(msgBodyLength).array()));
