@@ -1,13 +1,13 @@
 package com.genesis.gateserver;
 
-import com.genesis.gateserver.channel.AgentServerChannelListener;
 import com.genesis.gateserver.core.global.Globals;
-import com.genesis.gateserver.core.net.codec.ClientToAgentMessageDecoder;
-import com.genesis.gateserver.handlers.AgentClientMessageHandler;
+import com.genesis.gateserver.core.net.channel.AgentServerChannelListener;
+import com.genesis.gateserver.core.net.handlers.AgentClientMessageHandler;
 import com.mokylin.bleach.core.config.model.NetInfo;
 import com.mokylin.bleach.core.net.NettyNetworkLayer;
 import com.mokylin.td.network2client.core.channel.ChannelInitializerImpl;
-import com.mokylin.td.network2client.core.handle.ServerIoHandler;
+import com.mokylin.td.network2client.core.codec.ClientToServerMessageDecoder;
+import com.mokylin.td.network2client.core.handle.ClientIoHandler;
 import io.netty.channel.ChannelHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,9 +48,9 @@ public class GateServer {
 
         AgentClientMessageHandler mp = new AgentClientMessageHandler();
         AgentServerChannelListener rs = new AgentServerChannelListener();
-        ServerIoHandler handler = new ServerIoHandler(mp, rs);
+        ClientIoHandler handler = new ClientIoHandler(mp, rs);
         ChannelHandler childHandler =
-                new ChannelInitializerImpl(handler, ClientToAgentMessageDecoder.class);
+                new ChannelInitializerImpl(handler, ClientToServerMessageDecoder.class);
 
         NettyNetworkLayer.configNet(netInfoToClient.getHost(), netInfoToClient.getPort())
                 .start(childHandler);

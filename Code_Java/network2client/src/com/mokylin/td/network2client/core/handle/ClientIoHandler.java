@@ -124,11 +124,11 @@ public class ClientIoHandler extends ChannelInboundHandlerAdapter {
     }
 
     /**
-     * ChannelHandlerContext包装类，实现了ISession，为之后的网络操作提供操作。
+     * ChannelHandlerContext包装类，实现了IClientSession，为之后的网络操作提供操作。
      *
      * @see IClientSession
      *
-     * @author pangchong
+     * @author Joey
      *
      */
     static class GameSession implements IClientSession {

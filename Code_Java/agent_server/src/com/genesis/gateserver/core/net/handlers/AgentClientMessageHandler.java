@@ -1,21 +1,18 @@
-package com.genesis.gateserver.handlers;
-
-import com.google.common.base.Optional;
-import com.google.protobuf.InvalidProtocolBufferException;
+package com.genesis.gateserver.core.net.handlers;
 
 import com.genesis.gateserver.core.frontend.gameserver.GameServerFrontend;
 import com.genesis.gateserver.core.global.Globals;
 import com.genesis.gateserver.core.msgtarget.MessageTargetManager;
 import com.genesis.gateserver.core.session.AgentClientSessions;
-import com.mokylin.bleach.core.isc.session.ISession;
-import com.mokylin.bleach.core.net.msg.CSMessage;
-import com.mokylin.bleach.core.net.msg.CSSMessage;
 import com.genesis.protobuf.MessageType;
 import com.genesis.protobuf.agentserver.AgentMessage.CGGameServerInfo;
+import com.google.common.base.Optional;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.mokylin.bleach.core.net.msg.CSSMessage;
 import com.mokylin.bleach.servermsg.gameserver.PlayerConnected;
-import com.mokylin.td.network2client.core.handle.INettyMessageHandler;
+import com.mokylin.td.network2client.core.handle.IClientMessageHandler;
+import com.mokylin.td.network2client.core.msg.ClientMsg;
 import com.mokylin.td.network2client.core.session.IClientSession;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,20 +20,21 @@ import org.slf4j.LoggerFactory;
  * 网关的客户端消息处理器
  *
  * <p>
- * 这里面的{@link #handle(ISession, CSMessage)}方法在netty的线程中执行<br>
+ * 这里面的{@link #handle(IClientSession, ClientMsg)}方法在netty的线程中执行<br>
  * 在netty中选用的线程策略是来自同一个客户端的消息必然在相同的线程中处理，来自不同客户端的消息不一定在相同的线程中处理
  *
- * @author yaguang.xiao
+ * @author Joey
  *
  */
-
-public class AgentClientMessageHandler implements INettyMessageHandler {
+public class AgentClientMessageHandler implements IClientMessageHandler {
 
     /** 日志 */
     private static final Logger logger = LoggerFactory.getLogger(AgentClientMessageHandler.class);
 
+
     @Override
-    public void handle(IClientSession session, CSMessage msg) {
+    public void handle(IClientSession session, ClientMsg msg) {
+
         if (msg.messageType == MessageType.CGMessageType.CG_GAME_SERVER_INFO_VALUE) {
             CGGameServerInfo gsInfo = null;
             try {

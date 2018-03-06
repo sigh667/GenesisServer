@@ -1,4 +1,4 @@
-package com.genesis.gateserver.channel;
+package com.genesis.gateserver.core.net.channel;
 
 import com.genesis.gateserver.core.frontend.gameserver.GameServerFrontend;
 import com.genesis.gateserver.core.global.Globals;

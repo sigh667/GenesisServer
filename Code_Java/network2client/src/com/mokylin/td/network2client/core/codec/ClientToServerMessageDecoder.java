@@ -1,4 +1,4 @@
-package com.genesis.loginserver.core.codec;
+package com.mokylin.td.network2client.core.codec;
 
 import com.mokylin.td.network2client.core.msg.ClientMsg;
 import io.netty.buffer.ByteBuf;
@@ -11,7 +11,8 @@ import java.nio.ByteOrder;
 import java.util.List;
 
 /**
- * 客户端发送给Login服务器的消息解析器。<p>
+ * 客户端发给服务器的消息的解析器
+ *
  * 每个客户端连接，都拥有一个这样的Decoder对象
  * <p>
  * 该解析器所解析的消息协议定义如下：<br>
@@ -24,15 +25,16 @@ import java.util.List;
  * 3. 序列号：1 byte，无符号，每次发包都+1，首次的值暂由客户端随机;<br>
  * 4. 消息体：长度由1指定, 具体的消息内容;<br>
  *
+ * <p>2018-03-06 19:40
+ *
  * @author Joey
- */
-public class ClientToLoginMessageDecoder extends ByteToMessageDecoder {
+ **/
+public class ClientToServerMessageDecoder extends ByteToMessageDecoder {
 
-    private static Logger log = LoggerFactory.getLogger(ClientToLoginMessageDecoder.class);
+    private static Logger log = LoggerFactory.getLogger(ClientToServerMessageDecoder.class);
 
     @Override
-    protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out)
-            throws Exception {
+    protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
         in.markReaderIndex();
 
         // 1.1 检查消息头
@@ -61,5 +63,4 @@ public class ClientToLoginMessageDecoder extends ByteToMessageDecoder {
         ClientMsg cMsg = new ClientMsg(msgType, littleEdianIn.readBytes(msgBodyLength).array(), indexTmp);
         out.add(cMsg);
     }
-
 }
