@@ -4100,7 +4100,7 @@ public final class LoginMessage {
       "sageType.proto\"\023\n\013CSHandshake:\004\210\265\030\013\"e\n\007C" +
       "SLogin\022\021\n\taccountId\030\001 \002(\t\022\017\n\007channel\030\002 \002" +
       "(\t\022\013\n\003key\030\003 \002(\t\022\017\n\007version\030\004 \002(\t\022\022\n\nmacA" +
-      "ddress\030\005 \002(\t:\004\210\265\0303\",\n\020SCHandshakeReply\022\022" +
+      "ddress\030\005 \002(\t:\004\210\265\030\014\",\n\020SCHandshakeReply\022\022" +
       "\n\nindexBegin\030\001 \002(\005:\004\220\265\030\013\"\034\n\024SCLoginServe" +
       "rNotOpen:\004\220\265\030\014\"R\n\016SCLoginSuccess\022\016\n\006gate" +
       "IP\030\001 \002(\t\022\020\n\010gatePort\030\002 \002(\005\022\030\n\020verificati" +

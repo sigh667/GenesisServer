@@ -1,6 +1,7 @@
 package com.genesis.loginserver.core.codec;
 
 import com.mokylin.bleach.core.net.msg.CSMessage;
+import com.mokylin.td.network2client.core.msg.ClientMsg;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
@@ -82,8 +83,11 @@ public class ClientToLoginMessageDecoder extends ByteToMessageDecoder {
         }
 
         // 2.0 发给逻辑层
-        CSMessage csMsg = new CSMessage(msgType, littleEdianIn.readBytes(msgBodyLength).array());
-        out.add(csMsg);
+        ClientMsg cMsg = new ClientMsg(msgType, littleEdianIn.readBytes(msgBodyLength).array(), indexTmp);
+        out.add(cMsg);
+
+//        CSMessage csMsg = new CSMessage(msgType, littleEdianIn.readBytes(msgBodyLength).array());
+//        out.add(csMsg);
     }
 
 }

@@ -1,8 +1,8 @@
 package com.genesis.loginserver.core.runnable;
 
-import com.mokylin.bleach.core.concurrent.fixthreadpool.IRunnableBindId;
-import com.mokylin.bleach.core.net.msg.CSMessage;
 import com.genesis.loginserver.globals.Globals;
+import com.mokylin.bleach.core.concurrent.fixthreadpool.IRunnableBindId;
+import com.mokylin.td.network2client.core.msg.ClientMsg;
 import com.mokylin.td.network2client.core.session.IClientSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,9 +16,9 @@ public class LoginRunnable implements IRunnableBindId {
     private static Logger log = LoggerFactory.getLogger(LoginRunnable.class);
 
     private final IClientSession session;
-    private final CSMessage msg;
+    private final ClientMsg msg;
 
-    public LoginRunnable(IClientSession session, CSMessage msg) {
+    public LoginRunnable(IClientSession session, ClientMsg msg) {
         this.session = session;
         this.msg = msg;
     }

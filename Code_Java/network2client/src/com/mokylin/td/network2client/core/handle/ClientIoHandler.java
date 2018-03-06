@@ -1,12 +1,14 @@
 package com.mokylin.td.network2client.core.handle;
 
+import com.genesis.protobuf.LoginMessage;
+import com.genesis.protobuf.MessageType;
 import com.google.protobuf.GeneratedMessage;
-import com.mokylin.bleach.core.net.msg.CSMessage;
 import com.mokylin.bleach.core.net.msg.SCMessage;
 import com.mokylin.bleach.core.time.TimeService;
-import com.genesis.protobuf.MessageType;
+import com.mokylin.bleach.core.util.RandomUtil;
 import com.mokylin.td.network2client.core.channel.IChannelListener;
 import com.mokylin.td.network2client.core.id.IdGenerator;
+import com.mokylin.td.network2client.core.msg.ClientMsg;
 import com.mokylin.td.network2client.core.session.IClientSession;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
@@ -81,17 +83,37 @@ public class ClientIoHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
-        if (!(msg instanceof CSMessage)) {
+        if (!(msg instanceof ClientMsg)) {
             log.warn("Something received strange: {}", msg);
             return;
         }
 
-        CSMessage cMsg = (CSMessage) msg;
+        ClientMsg cMsg = (ClientMsg) msg;
         IClientSession session = ctx.attr(sessionKey).get();
         if (log.isDebugEnabled()) {
             log.debug("[[[Received message]]]: session - {}, msgType - {}",
                     session.getSessionId(), cMsg.messageType);
         }
+
+        if (session.isIndexGenerated()) {
+            final byte index = session.incIndexAndGet();
+            if (index != cMsg.index) {
+                session.disconnect();
+                return;
+            }
+        } else if (MessageType.CGMessageType.CS_LOGIN_HANDSHAKE.getNumber() == cMsg.messageType) {
+            // 如果是握手消息，直接在这里回复
+            LoginMessage.SCHandshakeReply.Builder builder = LoginMessage.SCHandshakeReply.newBuilder();
+            final byte index = session.generateIndex();
+            builder.setIndexBegin(index);
+            session.sendMessage(builder);
+            return;
+        } else {
+            // 序号未初始化，不接收其他消息
+            session.disconnect();
+            return;
+        }
+
         msgProcess.handle(session, cMsg);
     }
 
@@ -120,7 +142,12 @@ public class ClientIoHandler extends ChannelInboundHandlerAdapter {
         /** 建立连接时的时间*/
         private long connectedTime;
 
-        public GameSession(ChannelHandlerContext ctx) {
+        /**是否初始化（收到握手消息时，进行初始化）*/
+        private boolean isGenerateed = false;
+        /**序号（存放客户端上次发来的值）*/
+        private byte index = 0;
+
+        GameSession(ChannelHandlerContext ctx) {
             this.ctx = ctx;
             sessionId = IdGenerator.getNextId();
             connectedTime = TimeService.Inst.now();
@@ -192,6 +219,17 @@ public class ClientIoHandler extends ChannelInboundHandlerAdapter {
         public String getClientAddress() {
             return ctx.channel().localAddress().toString();
         }
+
+        @Override
+        public boolean isIndexGenerated() { return isGenerateed;}
+        @Override
+        public byte generateIndex() {
+            index = (byte) RandomUtil.nextInt(128);
+            isGenerateed = true;
+            return index;
+        }
+        @Override
+        public byte incIndexAndGet() { return ++index; }
     }
 }
 

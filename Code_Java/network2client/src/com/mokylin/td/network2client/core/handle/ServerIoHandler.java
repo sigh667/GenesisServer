@@ -187,6 +187,21 @@ public class ServerIoHandler extends ChannelInboundHandlerAdapter {
         }
 
         @Override
+        public boolean isIndexGenerated() {
+            return false;
+        }
+
+        @Override
+        public byte generateIndex() {
+            return 0;
+        }
+
+        @Override
+        public byte incIndexAndGet() {
+            return 0;
+        }
+
+        @Override
         public boolean isInActive() {
             return !ctx.channel().isActive();
         }
