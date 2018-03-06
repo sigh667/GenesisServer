@@ -33,7 +33,7 @@ public class GateServer {
             // 启动用于监听客户端消息的Netty
             startNettyToClient();
 
-            log.info("GateServer 启动成功！");
+            log.info("===============GateServer 启动成功！===============");
         } catch (Exception e) {
             log.error("GateServer started fail!!! Cause by: ", e);
             System.exit(-2);
@@ -45,6 +45,7 @@ public class GateServer {
      */
     private static void startNettyToClient() throws Exception {
         NetInfo netInfoToClient = Globals.getGateConfig().getNetInfoToClient();
+
         AgentClientMessageHandler mp = new AgentClientMessageHandler();
         AgentServerChannelListener rs = new AgentServerChannelListener();
         ServerIoHandler handler = new ServerIoHandler(mp, rs);
