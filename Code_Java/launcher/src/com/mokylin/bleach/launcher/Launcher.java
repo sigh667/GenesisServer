@@ -1,6 +1,6 @@
 package com.mokylin.bleach.launcher;
 
-import com.mokylin.bleach.agentserver.GateServer;
+import com.genesis.gateserver.GateServer;
 import com.mokylin.bleach.dataserver.DataServer;
 import com.mokylin.bleach.gameserver.GameServer;
 
