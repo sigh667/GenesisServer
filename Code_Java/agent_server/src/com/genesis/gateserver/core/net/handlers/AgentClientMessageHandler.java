@@ -1,15 +1,7 @@
 package com.genesis.gateserver.core.net.handlers;
 
-import com.genesis.gateserver.core.frontend.gameserver.GameServerFrontend;
-import com.genesis.gateserver.core.global.Globals;
-import com.genesis.gateserver.core.msgtarget.MessageTargetManager;
-import com.genesis.gateserver.core.session.AgentClientSessions;
-import com.genesis.protobuf.MessageType;
-import com.genesis.protobuf.agentserver.AgentMessage.CGGameServerInfo;
-import com.google.common.base.Optional;
-import com.google.protobuf.InvalidProtocolBufferException;
-import com.mokylin.bleach.core.net.msg.CSSMessage;
-import com.mokylin.bleach.servermsg.gameserver.PlayerConnected;
+import com.mokylin.bleach.core.isc.ServerType;
+import com.mokylin.bleach.core.msgfunc.target.TargetService;
 import com.mokylin.td.network2client.core.handle.IClientMessageHandler;
 import com.mokylin.td.network2client.core.msg.ClientMsg;
 import com.mokylin.td.network2client.core.session.IClientSession;
@@ -36,59 +28,68 @@ public class AgentClientMessageHandler implements IClientMessageHandler {
     public void handle(IClientSession session, ClientMsg msg) {
 
         // 需要区分出哪些消息要转发
+        final ServerType serverType = TargetService.Inst.getServerType(msg.messageType);
+        switch (serverType) {
+            case GAME:
+                break;
+            case GATE:
+                break;
+            default:
+                break;
+        }
 
         // 哪些消息要在本Gate处理
 
 
 
-        if (msg.messageType == MessageType.CGMessageType.CG_GAME_SERVER_INFO_VALUE) {
-            CGGameServerInfo gsInfo = null;
-            try {
-                gsInfo = CGGameServerInfo.PARSER.parseFrom(msg.messageContent);
-            } catch (InvalidProtocolBufferException e) {
-                logger.error("CGGameServerInfo parse fail!", e);
-            }
-            if (gsInfo == null) {
-                return;
-            }
-
-            int gsId = gsInfo.getServerId();
-            Optional<GameServerFrontend> gsOption =
-                    Globals.getGameServerManager().getGameServerFrontend(gsId);
-
-            if (gsOption.isPresent()) {
-                final long id = session.getSessionId();
-                AgentClientSessions.Inst.put(id, session);
-
-                session.setTargetGameServerId(gsInfo.getServerId());
-                //TODO 这里面的有些数据是需要客户端发上来的，现在先填默认值
-                gsOption.get().sendMessage(id,
-                        new PlayerConnected(id, session.getClientAddress(), "", "", "", "", ""));
-            } else {
-                logger.warn("Can not find game server [{}].", gsId);
-                session.setTargetGameServerId(-1);
-                session.disconnect();
-                return;
-            }
-
-        } else {
-            if (session.isInActive()) {
-                return;
-            }
-
-            long agentSessionId = session.getSessionId();
-            CSSMessage cssMsg = new CSSMessage(agentSessionId, msg.messageType, msg.messageContent);
-            if (MessageTargetManager.isGameServerMsg(msg.messageType)) {
-                final int serverId = session.getTargetGameServerId();
-                Optional<GameServerFrontend> option =
-                        Globals.getGameServerManager().getGameServerFrontend(serverId);
-                if (option.isPresent()) {
-                    option.get().route(session, cssMsg);
-                }
-            } else {
-                MessageTargetManager.sendMsgToOtherServer(cssMsg);
-            }
-        }
+//        if (msg.messageType == MessageType.CGMessageType.CG_GAME_SERVER_INFO_VALUE) {
+//            CGGameServerInfo gsInfo = null;
+//            try {
+//                gsInfo = CGGameServerInfo.PARSER.parseFrom(msg.messageContent);
+//            } catch (InvalidProtocolBufferException e) {
+//                logger.error("CGGameServerInfo parse fail!", e);
+//            }
+//            if (gsInfo == null) {
+//                return;
+//            }
+//
+//            int gsId = gsInfo.getServerId();
+//            Optional<GameServerFrontend> gsOption =
+//                    Globals.getGameServerManager().getGameServerFrontend(gsId);
+//
+//            if (gsOption.isPresent()) {
+//                final long id = session.getSessionId();
+//                AgentClientSessions.Inst.put(id, session);
+//
+//                session.setTargetGameServerId(gsInfo.getServerId());
+//                //TODO 这里面的有些数据是需要客户端发上来的，现在先填默认值
+//                gsOption.get().sendMessage(id,
+//                        new PlayerConnected(id, session.getClientAddress(), "", "", "", "", ""));
+//            } else {
+//                logger.warn("Can not find game server [{}].", gsId);
+//                session.setTargetGameServerId(-1);
+//                session.disconnect();
+//                return;
+//            }
+//
+//        } else {
+//            if (session.isInActive()) {
+//                return;
+//            }
+//
+//            long agentSessionId = session.getSessionId();
+//            CSSMessage cssMsg = new CSSMessage(agentSessionId, msg.messageType, msg.messageContent);
+//            if (MessageTargetManager.isGameServerMsg(msg.messageType)) {
+//                final int serverId = session.getTargetGameServerId();
+//                Optional<GameServerFrontend> option =
+//                        Globals.getGameServerManager().getGameServerFrontend(serverId);
+//                if (option.isPresent()) {
+//                    option.get().route(session, cssMsg);
+//                }
+//            } else {
+//                MessageTargetManager.sendMsgToOtherServer(cssMsg);
+//            }
+//        }
     }
 
 }

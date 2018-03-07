@@ -1,6 +1,7 @@
 package com.mokylin.bleach.core.msgfunc.target;
 
 import com.genesis.protobuf.MessageType;
+import com.mokylin.bleach.core.isc.ServerType;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,10 +14,19 @@ import java.util.Map;
 public enum TargetService {
     Inst;
 
-    /**<消息号, 目标服务器类型>*/
+    /**<消息号, ProtoBuf中的服务器类型>*/
     private Map<Integer, MessageType.MessageTarget> map = new HashMap<>();
+    /**<ProtoBuf中的服务器类型，服务器类型>*/
+    private Map<MessageType.MessageTarget, ServerType> serverTypeMap = new HashMap<>();
 
     TargetService(){
+
+        for (ServerType serverType : ServerType.values()) {
+            if (serverType.target==null)
+                continue;
+
+            serverTypeMap.put(serverType.target, serverType);
+        }
 
         for (MessageType.CGMessageType msgType:MessageType.CGMessageType.values()) {
             MessageType.MessageTarget target =
@@ -34,7 +44,12 @@ public enum TargetService {
      * @param msgType   消息号
      * @return 目标服务器枚举
      */
-    public MessageType.MessageTarget getTarget(Integer msgType) {
-        return map.get(msgType);
+    public ServerType getServerType(Integer msgType) {
+        final MessageType.MessageTarget messageTarget = map.get(msgType);
+        if (messageTarget==null) {
+            return null;
+        } else {
+            return serverTypeMap.get(messageTarget);
+        }
     }
 }
