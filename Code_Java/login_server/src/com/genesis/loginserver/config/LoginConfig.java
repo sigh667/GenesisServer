@@ -12,8 +12,6 @@ public class LoginConfig {
 
     /**监听客户端的IP端口信息*/
     private NetInfo netInfoToClient;
-    /**监听Gate的IP端口信息*/
-    private NetInfo netInfoToGate;
 
     /**Excel配置文件所在目录*/
     private String baseResourceDir;
@@ -23,9 +21,6 @@ public class LoginConfig {
     /**是否开启本地登陆验证*/
     private boolean localAuth;
 
-    public NetInfo getNetInfoToGate() {
-        return netInfoToGate;
-    }
 
     public NetInfo getNetInfoToClient() {
         return netInfoToClient;

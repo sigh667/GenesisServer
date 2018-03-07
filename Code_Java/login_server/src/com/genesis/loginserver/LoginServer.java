@@ -20,35 +20,31 @@ public class LoginServer {
 
     public static void main(String[] args) {
 
-        // 1.内部初始化
         try {
+            // 全局资源初始化
             Globals.init();
+            // 启动用于监听客户端消息的Netty
+            startNettyToClient();
         } catch (Exception e) {
-            logger.error("LoginServer Globals 服务启动出现异常！", e);
+            logger.error("LoginServer 启动失败！！！", e);
             System.exit(-1);
         }
-
-        // 2.启动监听Gate的端口
-        final NetInfo netInfoToGate = Globals.getLoginConfig().getNetInfoToGate();
-        logger.info("网络层：监听Gate IP:" + netInfoToGate.getHost()  + ", port:"+ netInfoToGate.getPort());
-
-        // 3.一切都准备好了之后,启动用于监听客户端消息的Netty
-        final NetInfo netInfoToClient = Globals.getLoginConfig().getNetInfoToClient();
-        try {
-            LoginClientMessageHandler mp = new LoginClientMessageHandler(
-                    new FixThreadPool(50, new ActionOnExceptionOfLogin()));
-            LoginClientChannelListener rs = new LoginClientChannelListener();
-            ClientIoHandler handler = new ClientIoHandler(mp, rs);
-            ChannelHandler childHandler = new ChannelInitializerImpl(handler, ClientToServerMessageDecoder.class);
-            NettyNetworkLayer.configNet(netInfoToClient.getHost(), netInfoToClient.getPort()).start(childHandler);
-        } catch (Exception e) {
-            logger.error("Netty启动发生异常！", e);
-            System.exit(-1);
-        }
-        logger.info("网络层：监听客户端IP:" + netInfoToClient.getHost() + ", port:" + netInfoToClient.getPort());
 
         logger.info(
-                "\n\n-------------------------LoginServer startup successful！-----------------------------------------------\n\n");
+                "\n\n==========================LoginServer startup successful！==========================\n\n");
+    }
+
+    /**
+     * 启动用于监听Client消息的Netty网络层
+     */
+    private static void startNettyToClient() throws Exception {
+        final NetInfo netInfoToClient = Globals.getLoginConfig().getNetInfoToClient();
+        LoginClientMessageHandler mp = new LoginClientMessageHandler(
+                new FixThreadPool(50, new ActionOnExceptionOfLogin()));
+        LoginClientChannelListener rs = new LoginClientChannelListener();
+        ClientIoHandler handler = new ClientIoHandler(mp, rs);
+        ChannelHandler childHandler = new ChannelInitializerImpl(handler, ClientToServerMessageDecoder.class);
+        NettyNetworkLayer.configNet(netInfoToClient.getHost(), netInfoToClient.getPort()).start(childHandler);
     }
 
 }
