@@ -12,7 +12,7 @@ public class ActionOnExceptionOfLogin implements IActionOnException {
 
     @Override
     public void action(IRunnableBindId iRunnableBindId) {
-        LoginRunnable runnable = (LoginRunnable) iRunnableBindId;
+        MsgProcessRunnable runnable = (MsgProcessRunnable) iRunnableBindId;
         runnable.getSession().disconnect();
     }
 

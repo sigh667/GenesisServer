@@ -1,11 +1,13 @@
 package com.genesis.gateserver.core.handlers;
 
 import com.genesis.gateserver.global.Globals;
-import com.mokylin.bleach.core.isc.ServerType;
-import com.mokylin.bleach.core.msgfunc.target.TargetService;
 import com.genesis.network2client.handle.IClientMessageHandler;
 import com.genesis.network2client.msg.ClientMsg;
+import com.genesis.network2client.runnable.MsgProcessRunnable;
 import com.genesis.network2client.session.IClientSession;
+import com.mokylin.bleach.core.concurrent.fixthreadpool.FixThreadPool;
+import com.mokylin.bleach.core.isc.ServerType;
+import com.mokylin.bleach.core.msgfunc.target.TargetService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,6 +26,13 @@ public class AgentClientMessageHandler implements IClientMessageHandler {
     /** 日志 */
     private static final Logger logger = LoggerFactory.getLogger(AgentClientMessageHandler.class);
 
+    /**固定线程池*/
+    private FixThreadPool fixThreadPool;
+
+    public AgentClientMessageHandler(FixThreadPool fixThreadPool) {
+        this.fixThreadPool = fixThreadPool;
+    }
+
     @Override
     public void handle(IClientSession session, ClientMsg msg) {
 
@@ -36,7 +45,8 @@ public class AgentClientMessageHandler implements IClientMessageHandler {
             // 未来还会添加其他服的消息转发
             default:
                 // 默认为本服处理
-                Globals.getClientMsgProcessor().handle(msg.messageType, msg.messageContent, session);
+                // 当前是Netty线程，将其提交到固定线程池，是为了不阻塞其他玩家的消息处理
+                fixThreadPool.submit(new MsgProcessRunnable(session, msg, Globals.getClientMsgProcessor()));
                 break;
         }
     }

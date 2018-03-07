@@ -3,6 +3,8 @@ package com.genesis.gateserver;
 import com.genesis.gateserver.global.Globals;
 import com.genesis.gateserver.core.channel.AgentServerChannelListener;
 import com.genesis.gateserver.core.handlers.AgentClientMessageHandler;
+import com.genesis.network2client.runnable.ActionOnExceptionOfLogin;
+import com.mokylin.bleach.core.concurrent.fixthreadpool.FixThreadPool;
 import com.mokylin.bleach.core.config.model.NetInfo;
 import com.mokylin.bleach.core.net.NettyNetworkLayer;
 import com.genesis.network2client.channel.ChannelInitializerImpl;
@@ -46,7 +48,7 @@ public class GateServer {
     private static void startNettyToClient() throws Exception {
         NetInfo netInfoToClient = Globals.getGateConfig().getNetInfoToClient();
 
-        AgentClientMessageHandler mp = new AgentClientMessageHandler();
+        AgentClientMessageHandler mp = new AgentClientMessageHandler(new FixThreadPool(50, new ActionOnExceptionOfLogin()));
         AgentServerChannelListener rs = new AgentServerChannelListener();
         ClientIoHandler handler = new ClientIoHandler(mp, rs);
         ChannelHandler childHandler =
