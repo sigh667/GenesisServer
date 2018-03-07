@@ -2,9 +2,9 @@ package com.genesis.loginserver.globals;
 
 import com.genesis.loginserver.config.LoginConfig;
 import com.genesis.network2client.session.ClientSessionContainer;
-import com.genesis.loginserver.core.process.ClientMsgHandlerUtil;
-import com.genesis.loginserver.core.process.ClientMsgProcessor;
-import com.genesis.loginserver.core.process.IClientMsgHandler;
+import com.genesis.network2client.process.ClientMsgHandlerUtil;
+import com.genesis.network2client.process.ClientMsgProcessor;
+import com.genesis.network2client.process.IClientMsgHandler;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.Parser;
 import com.mokylin.bleach.common.core.GlobalData;

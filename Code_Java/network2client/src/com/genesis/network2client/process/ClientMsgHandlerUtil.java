@@ -1,4 +1,4 @@
-package com.genesis.loginserver.core.process;
+package com.genesis.network2client.process;
 
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.Parser;

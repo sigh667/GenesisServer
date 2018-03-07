@@ -1,6 +1,6 @@
 package com.genesis.loginserver.handlers;
 
-import com.genesis.loginserver.core.process.IClientMsgHandler;
+import com.genesis.network2client.process.IClientMsgHandler;
 import com.genesis.loginserver.core.version.Version;
 import com.genesis.redis.center.GateInfo;
 import com.genesis.redis.login.LoginClientInfo;
