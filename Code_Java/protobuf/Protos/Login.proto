@@ -31,6 +31,20 @@ message CSLogin{
     required string macAddress = 5;
 }
 
+/**
+ * 客户端请求，登录Gate
+ */
+message CSLoginGate{
+    option (cg_message_type) = CS_LOGIN_GATE;
+
+    /**账号ID */
+    required string accountId = 1;
+    /**渠道ID */
+    required string channel = 2;
+    /**验证码*/
+    repeated int32 verificationCode = 3;
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////
 /**

@@ -1964,6 +1964,968 @@ public final class LoginMessage {
     // @@protoc_insertion_point(class_scope:com.genesis.protobuf.CSLogin)
   }
 
+  public interface CSLoginGateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.genesis.protobuf.CSLoginGate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string accountId = 1;</code>
+     *
+     * <pre>
+     **账号ID 
+     * </pre>
+     */
+    boolean hasAccountId();
+    /**
+     * <code>required string accountId = 1;</code>
+     *
+     * <pre>
+     **账号ID 
+     * </pre>
+     */
+    java.lang.String getAccountId();
+    /**
+     * <code>required string accountId = 1;</code>
+     *
+     * <pre>
+     **账号ID 
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getAccountIdBytes();
+
+    /**
+     * <code>required string channel = 2;</code>
+     *
+     * <pre>
+     **渠道ID 
+     * </pre>
+     */
+    boolean hasChannel();
+    /**
+     * <code>required string channel = 2;</code>
+     *
+     * <pre>
+     **渠道ID 
+     * </pre>
+     */
+    java.lang.String getChannel();
+    /**
+     * <code>required string channel = 2;</code>
+     *
+     * <pre>
+     **渠道ID 
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getChannelBytes();
+
+    /**
+     * <code>repeated int32 verificationCode = 3;</code>
+     *
+     * <pre>
+     **验证码
+     * </pre>
+     */
+    java.util.List<java.lang.Integer> getVerificationCodeList();
+    /**
+     * <code>repeated int32 verificationCode = 3;</code>
+     *
+     * <pre>
+     **验证码
+     * </pre>
+     */
+    int getVerificationCodeCount();
+    /**
+     * <code>repeated int32 verificationCode = 3;</code>
+     *
+     * <pre>
+     **验证码
+     * </pre>
+     */
+    int getVerificationCode(int index);
+  }
+  /**
+   * Protobuf type {@code com.genesis.protobuf.CSLoginGate}
+   *
+   * <pre>
+   **
+   * 客户端请求，登录Gate
+   * </pre>
+   */
+  public static final class CSLoginGate extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.genesis.protobuf.CSLoginGate)
+      CSLoginGateOrBuilder {
+    // Use CSLoginGate.newBuilder() to construct.
+    private CSLoginGate(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSLoginGate(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSLoginGate defaultInstance;
+    public static CSLoginGate getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSLoginGate getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSLoginGate(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              accountId_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              channel_ = bs;
+              break;
+            }
+            case 24: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                verificationCode_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              verificationCode_.add(input.readInt32());
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
+                verificationCode_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                verificationCode_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          verificationCode_ = java.util.Collections.unmodifiableList(verificationCode_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.genesis.protobuf.LoginMessage.internal_static_com_genesis_protobuf_CSLoginGate_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.genesis.protobuf.LoginMessage.internal_static_com_genesis_protobuf_CSLoginGate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.genesis.protobuf.LoginMessage.CSLoginGate.class, com.genesis.protobuf.LoginMessage.CSLoginGate.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSLoginGate> PARSER =
+        new com.google.protobuf.AbstractParser<CSLoginGate>() {
+      public CSLoginGate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSLoginGate(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSLoginGate> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ACCOUNTID_FIELD_NUMBER = 1;
+    private java.lang.Object accountId_;
+    /**
+     * <code>required string accountId = 1;</code>
+     *
+     * <pre>
+     **账号ID 
+     * </pre>
+     */
+    public boolean hasAccountId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string accountId = 1;</code>
+     *
+     * <pre>
+     **账号ID 
+     * </pre>
+     */
+    public java.lang.String getAccountId() {
+      java.lang.Object ref = accountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          accountId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string accountId = 1;</code>
+     *
+     * <pre>
+     **账号ID 
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getAccountIdBytes() {
+      java.lang.Object ref = accountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHANNEL_FIELD_NUMBER = 2;
+    private java.lang.Object channel_;
+    /**
+     * <code>required string channel = 2;</code>
+     *
+     * <pre>
+     **渠道ID 
+     * </pre>
+     */
+    public boolean hasChannel() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string channel = 2;</code>
+     *
+     * <pre>
+     **渠道ID 
+     * </pre>
+     */
+    public java.lang.String getChannel() {
+      java.lang.Object ref = channel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          channel_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string channel = 2;</code>
+     *
+     * <pre>
+     **渠道ID 
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getChannelBytes() {
+      java.lang.Object ref = channel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        channel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERIFICATIONCODE_FIELD_NUMBER = 3;
+    private java.util.List<java.lang.Integer> verificationCode_;
+    /**
+     * <code>repeated int32 verificationCode = 3;</code>
+     *
+     * <pre>
+     **验证码
+     * </pre>
+     */
+    public java.util.List<java.lang.Integer>
+        getVerificationCodeList() {
+      return verificationCode_;
+    }
+    /**
+     * <code>repeated int32 verificationCode = 3;</code>
+     *
+     * <pre>
+     **验证码
+     * </pre>
+     */
+    public int getVerificationCodeCount() {
+      return verificationCode_.size();
+    }
+    /**
+     * <code>repeated int32 verificationCode = 3;</code>
+     *
+     * <pre>
+     **验证码
+     * </pre>
+     */
+    public int getVerificationCode(int index) {
+      return verificationCode_.get(index);
+    }
+
+    private void initFields() {
+      accountId_ = "";
+      channel_ = "";
+      verificationCode_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasAccountId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasChannel()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getAccountIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getChannelBytes());
+      }
+      for (int i = 0; i < verificationCode_.size(); i++) {
+        output.writeInt32(3, verificationCode_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getAccountIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getChannelBytes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < verificationCode_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(verificationCode_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getVerificationCodeList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.genesis.protobuf.LoginMessage.CSLoginGate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.genesis.protobuf.LoginMessage.CSLoginGate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.genesis.protobuf.LoginMessage.CSLoginGate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.genesis.protobuf.LoginMessage.CSLoginGate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.genesis.protobuf.LoginMessage.CSLoginGate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.genesis.protobuf.LoginMessage.CSLoginGate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.genesis.protobuf.LoginMessage.CSLoginGate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.genesis.protobuf.LoginMessage.CSLoginGate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.genesis.protobuf.LoginMessage.CSLoginGate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.genesis.protobuf.LoginMessage.CSLoginGate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.genesis.protobuf.LoginMessage.CSLoginGate prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.genesis.protobuf.CSLoginGate}
+     *
+     * <pre>
+     **
+     * 客户端请求，登录Gate
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.genesis.protobuf.CSLoginGate)
+        com.genesis.protobuf.LoginMessage.CSLoginGateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.genesis.protobuf.LoginMessage.internal_static_com_genesis_protobuf_CSLoginGate_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.genesis.protobuf.LoginMessage.internal_static_com_genesis_protobuf_CSLoginGate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.genesis.protobuf.LoginMessage.CSLoginGate.class, com.genesis.protobuf.LoginMessage.CSLoginGate.Builder.class);
+      }
+
+      // Construct using com.genesis.protobuf.LoginMessage.CSLoginGate.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        accountId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        channel_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        verificationCode_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.genesis.protobuf.LoginMessage.internal_static_com_genesis_protobuf_CSLoginGate_descriptor;
+      }
+
+      public com.genesis.protobuf.LoginMessage.CSLoginGate getDefaultInstanceForType() {
+        return com.genesis.protobuf.LoginMessage.CSLoginGate.getDefaultInstance();
+      }
+
+      public com.genesis.protobuf.LoginMessage.CSLoginGate build() {
+        com.genesis.protobuf.LoginMessage.CSLoginGate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.genesis.protobuf.LoginMessage.CSLoginGate buildPartial() {
+        com.genesis.protobuf.LoginMessage.CSLoginGate result = new com.genesis.protobuf.LoginMessage.CSLoginGate(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.accountId_ = accountId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.channel_ = channel_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          verificationCode_ = java.util.Collections.unmodifiableList(verificationCode_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.verificationCode_ = verificationCode_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.genesis.protobuf.LoginMessage.CSLoginGate) {
+          return mergeFrom((com.genesis.protobuf.LoginMessage.CSLoginGate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.genesis.protobuf.LoginMessage.CSLoginGate other) {
+        if (other == com.genesis.protobuf.LoginMessage.CSLoginGate.getDefaultInstance()) return this;
+        if (other.hasAccountId()) {
+          bitField0_ |= 0x00000001;
+          accountId_ = other.accountId_;
+          onChanged();
+        }
+        if (other.hasChannel()) {
+          bitField0_ |= 0x00000002;
+          channel_ = other.channel_;
+          onChanged();
+        }
+        if (!other.verificationCode_.isEmpty()) {
+          if (verificationCode_.isEmpty()) {
+            verificationCode_ = other.verificationCode_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureVerificationCodeIsMutable();
+            verificationCode_.addAll(other.verificationCode_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasAccountId()) {
+          
+          return false;
+        }
+        if (!hasChannel()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.genesis.protobuf.LoginMessage.CSLoginGate parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.genesis.protobuf.LoginMessage.CSLoginGate) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object accountId_ = "";
+      /**
+       * <code>required string accountId = 1;</code>
+       *
+       * <pre>
+       **账号ID 
+       * </pre>
+       */
+      public boolean hasAccountId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string accountId = 1;</code>
+       *
+       * <pre>
+       **账号ID 
+       * </pre>
+       */
+      public java.lang.String getAccountId() {
+        java.lang.Object ref = accountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            accountId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string accountId = 1;</code>
+       *
+       * <pre>
+       **账号ID 
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getAccountIdBytes() {
+        java.lang.Object ref = accountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string accountId = 1;</code>
+       *
+       * <pre>
+       **账号ID 
+       * </pre>
+       */
+      public Builder setAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        accountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string accountId = 1;</code>
+       *
+       * <pre>
+       **账号ID 
+       * </pre>
+       */
+      public Builder clearAccountId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        accountId_ = getDefaultInstance().getAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string accountId = 1;</code>
+       *
+       * <pre>
+       **账号ID 
+       * </pre>
+       */
+      public Builder setAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        accountId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object channel_ = "";
+      /**
+       * <code>required string channel = 2;</code>
+       *
+       * <pre>
+       **渠道ID 
+       * </pre>
+       */
+      public boolean hasChannel() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string channel = 2;</code>
+       *
+       * <pre>
+       **渠道ID 
+       * </pre>
+       */
+      public java.lang.String getChannel() {
+        java.lang.Object ref = channel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            channel_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string channel = 2;</code>
+       *
+       * <pre>
+       **渠道ID 
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getChannelBytes() {
+        java.lang.Object ref = channel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          channel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string channel = 2;</code>
+       *
+       * <pre>
+       **渠道ID 
+       * </pre>
+       */
+      public Builder setChannel(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        channel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string channel = 2;</code>
+       *
+       * <pre>
+       **渠道ID 
+       * </pre>
+       */
+      public Builder clearChannel() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        channel_ = getDefaultInstance().getChannel();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string channel = 2;</code>
+       *
+       * <pre>
+       **渠道ID 
+       * </pre>
+       */
+      public Builder setChannelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        channel_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> verificationCode_ = java.util.Collections.emptyList();
+      private void ensureVerificationCodeIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          verificationCode_ = new java.util.ArrayList<java.lang.Integer>(verificationCode_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated int32 verificationCode = 3;</code>
+       *
+       * <pre>
+       **验证码
+       * </pre>
+       */
+      public java.util.List<java.lang.Integer>
+          getVerificationCodeList() {
+        return java.util.Collections.unmodifiableList(verificationCode_);
+      }
+      /**
+       * <code>repeated int32 verificationCode = 3;</code>
+       *
+       * <pre>
+       **验证码
+       * </pre>
+       */
+      public int getVerificationCodeCount() {
+        return verificationCode_.size();
+      }
+      /**
+       * <code>repeated int32 verificationCode = 3;</code>
+       *
+       * <pre>
+       **验证码
+       * </pre>
+       */
+      public int getVerificationCode(int index) {
+        return verificationCode_.get(index);
+      }
+      /**
+       * <code>repeated int32 verificationCode = 3;</code>
+       *
+       * <pre>
+       **验证码
+       * </pre>
+       */
+      public Builder setVerificationCode(
+          int index, int value) {
+        ensureVerificationCodeIsMutable();
+        verificationCode_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 verificationCode = 3;</code>
+       *
+       * <pre>
+       **验证码
+       * </pre>
+       */
+      public Builder addVerificationCode(int value) {
+        ensureVerificationCodeIsMutable();
+        verificationCode_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 verificationCode = 3;</code>
+       *
+       * <pre>
+       **验证码
+       * </pre>
+       */
+      public Builder addAllVerificationCode(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureVerificationCodeIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, verificationCode_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 verificationCode = 3;</code>
+       *
+       * <pre>
+       **验证码
+       * </pre>
+       */
+      public Builder clearVerificationCode() {
+        verificationCode_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.genesis.protobuf.CSLoginGate)
+    }
+
+    static {
+      defaultInstance = new CSLoginGate(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.genesis.protobuf.CSLoginGate)
+  }
+
   public interface SCHandshakeReplyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.genesis.protobuf.SCHandshakeReply)
       com.google.protobuf.MessageOrBuilder {
@@ -4068,6 +5030,11 @@ public final class LoginMessage {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_genesis_protobuf_CSLogin_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_genesis_protobuf_CSLoginGate_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_genesis_protobuf_CSLoginGate_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_genesis_protobuf_SCHandshakeReply_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -4100,20 +5067,22 @@ public final class LoginMessage {
       "sageType.proto\"\023\n\013CSHandshake:\004\210\265\030\013\"e\n\007C" +
       "SLogin\022\021\n\taccountId\030\001 \002(\t\022\017\n\007channel\030\002 \002" +
       "(\t\022\013\n\003key\030\003 \002(\t\022\017\n\007version\030\004 \002(\t\022\022\n\nmacA" +
-      "ddress\030\005 \002(\t:\004\210\265\030\014\",\n\020SCHandshakeReply\022\022" +
-      "\n\nindexBegin\030\001 \002(\005:\004\220\265\030\013\"\034\n\024SCLoginServe" +
-      "rNotOpen:\004\220\265\030\014\"R\n\016SCLoginSuccess\022\016\n\006gate" +
-      "IP\030\001 \002(\t\022\020\n\010gatePort\030\002 \002(\005\022\030\n\020verificati" +
-      "onCode\030\003 \003(\005:\004\220\265\030\016\"N\n\013SCLoginFail\0229\n\nfai" +
-      "lReason\030\001 \002(\0162%.com.genesis.protobuf.Log",
-      "inFailReason:\004\220\265\030\r*\210\002\n\017LoginFailReason\022\025" +
-      "\n\021VERSION_NOT_ALLOW\020\000\022\022\n\016PLAYER_IS_FULL\020" +
-      "\001\022\025\n\021CHANNEL_NOT_EXIST\020\002\022\025\n\021ACCOUNT_NOT_" +
-      "EXIST\020\003\022\r\n\tKEY_WRONG\020\004\022\022\n\016LOAD_ROLE_FAIL" +
-      "\020\005\022\032\n\026YOUR_ACCOUNT_IS_ONLINE\020\006\022\034\n\030YOUR_A" +
-      "CCOUNT_LOGIN_AGAIN\020\007\022\027\n\023YOUR_DATA_IS_SAV" +
-      "ING\020\010\022&\n\"YOUR_ACCOUNT_LOGIN_ON_OTHER_SER" +
-      "VER\020\tB\016B\014LoginMessage"
+      "ddress\030\005 \002(\t:\004\210\265\030\014\"Q\n\013CSLoginGate\022\021\n\tacc" +
+      "ountId\030\001 \002(\t\022\017\n\007channel\030\002 \002(\t\022\030\n\020verific" +
+      "ationCode\030\003 \003(\005:\004\210\265\030\r\",\n\020SCHandshakeRepl" +
+      "y\022\022\n\nindexBegin\030\001 \002(\005:\004\220\265\030\013\"\034\n\024SCLoginSe" +
+      "rverNotOpen:\004\220\265\030\014\"R\n\016SCLoginSuccess\022\016\n\006g" +
+      "ateIP\030\001 \002(\t\022\020\n\010gatePort\030\002 \002(\005\022\030\n\020verific",
+      "ationCode\030\003 \003(\005:\004\220\265\030\016\"N\n\013SCLoginFail\0229\n\n" +
+      "failReason\030\001 \002(\0162%.com.genesis.protobuf." +
+      "LoginFailReason:\004\220\265\030\r*\210\002\n\017LoginFailReaso" +
+      "n\022\025\n\021VERSION_NOT_ALLOW\020\000\022\022\n\016PLAYER_IS_FU" +
+      "LL\020\001\022\025\n\021CHANNEL_NOT_EXIST\020\002\022\025\n\021ACCOUNT_N" +
+      "OT_EXIST\020\003\022\r\n\tKEY_WRONG\020\004\022\022\n\016LOAD_ROLE_F" +
+      "AIL\020\005\022\032\n\026YOUR_ACCOUNT_IS_ONLINE\020\006\022\034\n\030YOU" +
+      "R_ACCOUNT_LOGIN_AGAIN\020\007\022\027\n\023YOUR_DATA_IS_" +
+      "SAVING\020\010\022&\n\"YOUR_ACCOUNT_LOGIN_ON_OTHER_" +
+      "SERVER\020\tB\016B\014LoginMessage"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4140,32 +5109,39 @@ public final class LoginMessage {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_genesis_protobuf_CSLogin_descriptor,
         new java.lang.String[] { "AccountId", "Channel", "Key", "Version", "MacAddress", });
-    internal_static_com_genesis_protobuf_SCHandshakeReply_descriptor =
+    internal_static_com_genesis_protobuf_CSLoginGate_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_com_genesis_protobuf_CSLoginGate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_genesis_protobuf_CSLoginGate_descriptor,
+        new java.lang.String[] { "AccountId", "Channel", "VerificationCode", });
+    internal_static_com_genesis_protobuf_SCHandshakeReply_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_com_genesis_protobuf_SCHandshakeReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_genesis_protobuf_SCHandshakeReply_descriptor,
         new java.lang.String[] { "IndexBegin", });
     internal_static_com_genesis_protobuf_SCLoginServerNotOpen_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_com_genesis_protobuf_SCLoginServerNotOpen_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_genesis_protobuf_SCLoginServerNotOpen_descriptor,
         new java.lang.String[] { });
     internal_static_com_genesis_protobuf_SCLoginSuccess_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_com_genesis_protobuf_SCLoginSuccess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_genesis_protobuf_SCLoginSuccess_descriptor,
         new java.lang.String[] { "GateIP", "GatePort", "VerificationCode", });
     internal_static_com_genesis_protobuf_SCLoginFail_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_com_genesis_protobuf_SCLoginFail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_genesis_protobuf_SCLoginFail_descriptor,
         new java.lang.String[] { "FailReason", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.genesis.protobuf.MessageType.cgMessageType);
     registry.add(com.genesis.protobuf.MessageType.cgMessageType);
     registry.add(com.genesis.protobuf.MessageType.cgMessageType);
     registry.add(com.genesis.protobuf.MessageType.gcMessageType);
