@@ -1,10 +1,10 @@
-package com.mokylin.td.network2client.core.channel;
+package com.genesis.network2client.channel;
 
+import com.genesis.network2client.floodfilter.FloodByteAttackFilter;
+import com.genesis.network2client.floodfilter.FloodCmdAttackFilter;
+import com.genesis.network2client.floodfilter.FloodFilterService;
 import com.mokylin.bleach.core.net.msg.SCMessage;
-import com.mokylin.td.network2client.core.codec.ServerToClientMessageEncoder;
-import com.mokylin.td.network2client.core.floodfilter.FloodByteAttackFilter;
-import com.mokylin.td.network2client.core.floodfilter.FloodCmdAttackFilter;
-import com.mokylin.td.network2client.core.floodfilter.FloodFilterService;
+import com.genesis.network2client.codec.ServerToClientMessageEncoder;
 
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.ChannelInitializer;

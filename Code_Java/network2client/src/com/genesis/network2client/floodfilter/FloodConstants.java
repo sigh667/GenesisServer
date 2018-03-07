@@ -1,4 +1,4 @@
-package com.mokylin.td.network2client.core.floodfilter;
+package com.genesis.network2client.floodfilter;
 
 /**
  * 洪水攻击的全局控制开关

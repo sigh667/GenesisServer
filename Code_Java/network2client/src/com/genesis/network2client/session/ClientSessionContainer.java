@@ -1,4 +1,4 @@
-package com.mokylin.td.network2client.core.session;
+package com.genesis.network2client.session;
 
 import com.google.common.collect.Maps;
 import com.mokylin.bleach.core.heartbeat.IHeartbeat;

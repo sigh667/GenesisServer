@@ -4,8 +4,8 @@ import com.google.protobuf.InvalidProtocolBufferException;
 
 import com.mokylin.bleach.core.net.msg.CSMessage;
 import com.mokylin.bleach.test.gameserver.net.MockCGMessage.CGTEST;
-import com.mokylin.td.network2client.core.handle.INettyMessageHandler;
-import com.mokylin.td.network2client.core.session.IClientSession;
+import com.genesis.network2client.handle.INettyMessageHandler;
+import com.genesis.network2client.session.IClientSession;
 
 import java.util.concurrent.CountDownLatch;
 

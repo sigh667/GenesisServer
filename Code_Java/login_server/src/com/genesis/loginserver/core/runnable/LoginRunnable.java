@@ -2,8 +2,8 @@ package com.genesis.loginserver.core.runnable;
 
 import com.genesis.loginserver.globals.Globals;
 import com.mokylin.bleach.core.concurrent.fixthreadpool.IRunnableBindId;
-import com.mokylin.td.network2client.core.msg.ClientMsg;
-import com.mokylin.td.network2client.core.session.IClientSession;
+import com.genesis.network2client.msg.ClientMsg;
+import com.genesis.network2client.session.IClientSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

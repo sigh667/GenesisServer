@@ -1,4 +1,4 @@
-package com.mokylin.td.network2client.core.id;
+package com.genesis.network2client.id;
 
 import com.mokylin.bleach.core.annotation.ThreadSafe;
 

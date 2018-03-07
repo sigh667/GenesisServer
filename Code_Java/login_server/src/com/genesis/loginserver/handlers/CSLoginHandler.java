@@ -10,7 +10,7 @@ import com.mokylin.bleach.core.isc.ServerIdDef;
 import com.mokylin.bleach.core.isc.ServerType;
 import com.mokylin.bleach.core.util.RandomUtil;
 import com.genesis.loginserver.globals.Globals;
-import com.mokylin.td.network2client.core.session.IClientSession;
+import com.genesis.network2client.session.IClientSession;
 import org.redisson.api.RBucket;
 import org.redisson.api.RMap;
 import org.redisson.api.RedissonClient;

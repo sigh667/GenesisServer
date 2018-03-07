@@ -1,4 +1,4 @@
-package com.mokylin.td.network2client.core.session;
+package com.genesis.network2client.session;
 
 import com.google.protobuf.GeneratedMessage;
 import com.mokylin.bleach.core.net.msg.SCMessage;

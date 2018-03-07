@@ -1,4 +1,4 @@
-package com.mokylin.td.network2client.core.msg;
+package com.genesis.network2client.msg;
 
 import com.mokylin.bleach.core.net.msg.BaseMessage;
 

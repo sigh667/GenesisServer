@@ -1,7 +1,7 @@
 package com.mokylin.bleach.test.gameserver.net;
 
-import com.mokylin.td.network2client.core.channel.IChannelListener;
-import com.mokylin.td.network2client.core.session.IClientSession;
+import com.genesis.network2client.channel.IChannelListener;
+import com.genesis.network2client.session.IClientSession;
 
 public class RecordSessionImpl implements IChannelListener {
 

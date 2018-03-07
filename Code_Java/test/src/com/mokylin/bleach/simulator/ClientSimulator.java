@@ -1,7 +1,7 @@
 package com.mokylin.bleach.simulator;
 
 import com.mokylin.bleach.robot.core.net.codec.ServerToRobotMessageDecoder;
-import com.mokylin.td.network2client.core.codec.ServerToClientMessageEncoder;
+import com.genesis.network2client.codec.ServerToClientMessageEncoder;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

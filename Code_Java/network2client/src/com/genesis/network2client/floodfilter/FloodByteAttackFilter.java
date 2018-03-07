@@ -1,4 +1,4 @@
-package com.mokylin.td.network2client.core.floodfilter;
+package com.genesis.network2client.floodfilter;
 
 import com.mokylin.bleach.core.util.TimeUtils;
 

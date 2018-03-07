@@ -1,9 +1,9 @@
 package com.genesis.gateserver.core.net.channel;
 
 import com.mokylin.bleach.core.annotation.NotThreadSafe;
-import com.mokylin.td.network2client.core.channel.IChannelListener;
-import com.mokylin.td.network2client.core.session.ClientSessionContainer;
-import com.mokylin.td.network2client.core.session.IClientSession;
+import com.genesis.network2client.channel.IChannelListener;
+import com.genesis.network2client.session.ClientSessionContainer;
+import com.genesis.network2client.session.IClientSession;
 
 /**
  * 网关的netty通道监听器

@@ -5,7 +5,7 @@ import com.google.common.collect.Maps;
 import com.mokylin.bleach.core.annotation.ThreadSafe;
 import com.mokylin.bleach.core.isc.session.ISession;
 import com.mokylin.bleach.core.net.msg.SCMessage;
-import com.mokylin.td.network2client.core.session.IClientSession;
+import com.genesis.network2client.session.IClientSession;
 
 import java.util.Collection;
 import java.util.Map;

@@ -8,7 +8,7 @@ import com.mokylin.bleach.core.net.msg.CSSMessage;
 import com.genesis.protobuf.MessageType;
 import com.genesis.protobuf.MessageType.CGMessageType;
 import com.genesis.protobuf.MessageType.MessageTarget;
-import com.mokylin.td.network2client.core.session.IClientSession;
+import com.genesis.network2client.session.IClientSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

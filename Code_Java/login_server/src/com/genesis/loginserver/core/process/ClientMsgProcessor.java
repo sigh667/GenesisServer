@@ -3,7 +3,7 @@ package com.genesis.loginserver.core.process;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Parser;
-import com.mokylin.td.network2client.core.session.IClientSession;
+import com.genesis.network2client.session.IClientSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

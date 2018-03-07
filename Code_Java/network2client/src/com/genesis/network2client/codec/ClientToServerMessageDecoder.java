@@ -1,6 +1,6 @@
-package com.mokylin.td.network2client.core.codec;
+package com.genesis.network2client.codec;
 
-import com.mokylin.td.network2client.core.msg.ClientMsg;
+import com.genesis.network2client.msg.ClientMsg;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;

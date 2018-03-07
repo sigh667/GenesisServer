@@ -2,9 +2,9 @@ package com.genesis.gateserver.core.net.handlers;
 
 import com.mokylin.bleach.core.isc.ServerType;
 import com.mokylin.bleach.core.msgfunc.target.TargetService;
-import com.mokylin.td.network2client.core.handle.IClientMessageHandler;
-import com.mokylin.td.network2client.core.msg.ClientMsg;
-import com.mokylin.td.network2client.core.session.IClientSession;
+import com.genesis.network2client.handle.IClientMessageHandler;
+import com.genesis.network2client.msg.ClientMsg;
+import com.genesis.network2client.session.IClientSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

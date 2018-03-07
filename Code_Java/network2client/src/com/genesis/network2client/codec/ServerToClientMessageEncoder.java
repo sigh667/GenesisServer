@@ -1,4 +1,4 @@
-package com.mokylin.td.network2client.core.codec;
+package com.genesis.network2client.codec;
 
 import com.mokylin.bleach.core.net.msg.SCMessage;
 

@@ -1,9 +1,9 @@
 package com.mokylin.bleach.test.gameserver.net;
 
 import com.mokylin.bleach.core.net.NettyNetworkLayer;
-import com.mokylin.td.network2client.core.channel.ChannelInitializerImpl;
-import com.mokylin.td.network2client.core.channel.IChannelListener;
-import com.mokylin.td.network2client.core.handle.ServerIoHandler;
+import com.genesis.network2client.channel.ChannelInitializerImpl;
+import com.genesis.network2client.channel.IChannelListener;
+import com.genesis.network2client.handle.ServerIoHandler;
 
 import org.junit.Test;
 

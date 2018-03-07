@@ -1,13 +1,13 @@
-package com.mokylin.td.network2client.core.handle;
+package com.genesis.network2client.handle;
 
+import com.genesis.network2client.channel.IChannelListener;
+import com.genesis.network2client.id.IdGenerator;
+import com.genesis.network2client.session.IClientSession;
 import com.google.protobuf.GeneratedMessage;
 import com.mokylin.bleach.core.net.msg.CSMessage;
 import com.mokylin.bleach.core.net.msg.SCMessage;
 import com.mokylin.bleach.core.time.TimeService;
 import com.genesis.protobuf.MessageType;
-import com.mokylin.td.network2client.core.channel.IChannelListener;
-import com.mokylin.td.network2client.core.id.IdGenerator;
-import com.mokylin.td.network2client.core.session.IClientSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

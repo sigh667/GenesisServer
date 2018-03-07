@@ -8,8 +8,8 @@ import com.mokylin.bleach.test.gameserver.net.MockCGMessage.CGLogin;
 import com.mokylin.bleach.test.gameserver.net.MockCGMessage.GCLogin;
 import com.mokylin.bleach.test.gameserver.net.MockCGMessage.Player;
 import com.mokylin.bleach.test.protobuf.MockMessageType;
-import com.mokylin.td.network2client.core.handle.INettyMessageHandler;
-import com.mokylin.td.network2client.core.session.IClientSession;
+import com.genesis.network2client.handle.INettyMessageHandler;
+import com.genesis.network2client.session.IClientSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
