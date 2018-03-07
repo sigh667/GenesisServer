@@ -1,4 +1,4 @@
-package com.genesis.gateserver.core.global;
+package com.genesis.gateserver.global;
 
 import com.genesis.gateserver.config.GateConfig;
 import com.genesis.gateserver.core.frontend.gameserver.GameServerFrontManager;

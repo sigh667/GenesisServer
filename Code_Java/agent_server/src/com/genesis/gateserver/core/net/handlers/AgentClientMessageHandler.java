@@ -32,13 +32,12 @@ public class AgentClientMessageHandler implements IClientMessageHandler {
         switch (serverType) {
             case GAME:
                 break;
-            case GATE:
-                break;
+            // 未来还会添加其他服的消息转发
             default:
+                // 默认为本服处理
                 break;
         }
 
-        // 哪些消息要在本Gate处理
 
 
 

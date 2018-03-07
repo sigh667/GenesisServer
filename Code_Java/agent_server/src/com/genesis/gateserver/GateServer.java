@@ -1,6 +1,6 @@
 package com.genesis.gateserver;
 
-import com.genesis.gateserver.core.global.Globals;
+import com.genesis.gateserver.global.Globals;
 import com.genesis.gateserver.core.net.channel.AgentServerChannelListener;
 import com.genesis.gateserver.core.net.handlers.AgentClientMessageHandler;
 import com.mokylin.bleach.core.config.model.NetInfo;

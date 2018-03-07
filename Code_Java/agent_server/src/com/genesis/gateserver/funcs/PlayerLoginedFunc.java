@@ -3,7 +3,7 @@ package com.genesis.gateserver.funcs;
 import com.google.common.base.Optional;
 
 import com.genesis.gateserver.core.frontend.gameserver.GameServerFrontend;
-import com.genesis.gateserver.core.global.Globals;
+import com.genesis.gateserver.global.Globals;
 import com.genesis.gateserver.core.session.AgentClientSessions;
 import com.mokylin.bleach.core.isc.remote.IRemote;
 import com.mokylin.bleach.core.msgfunc.MsgArgs;

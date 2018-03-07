@@ -1,6 +1,6 @@
 package com.genesis.gateserver.core.frontend.gameserver;
 
-import com.genesis.gateserver.core.global.Globals;
+import com.genesis.gateserver.global.Globals;
 import com.mokylin.bleach.core.config.ServerConfig;
 import com.mokylin.bleach.core.isc.remote.DefaultRemoteFactory;
 import com.mokylin.bleach.core.isc.remote.IRemote;
