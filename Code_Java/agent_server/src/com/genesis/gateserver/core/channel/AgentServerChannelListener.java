@@ -1,4 +1,4 @@
-package com.genesis.gateserver.core.net.channel;
+package com.genesis.gateserver.core.channel;
 
 import com.mokylin.bleach.core.annotation.NotThreadSafe;
 import com.genesis.network2client.channel.IChannelListener;

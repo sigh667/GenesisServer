@@ -1,4 +1,4 @@
-package com.genesis.gateserver.core.net.map;
+package com.genesis.gateserver.core.map;
 
 import com.mokylin.bleach.core.net.msg.BaseMessage;
 

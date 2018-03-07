@@ -1,7 +1,6 @@
-package com.genesis.gateserver.core.net.handlers;
+package com.genesis.gateserver.core.handlers;
 
 import com.genesis.gateserver.global.Globals;
-import com.mokylin.bleach.core.concurrent.fixthreadpool.IActionOnException;
 import com.mokylin.bleach.core.isc.ServerType;
 import com.mokylin.bleach.core.msgfunc.target.TargetService;
 import com.genesis.network2client.handle.IClientMessageHandler;

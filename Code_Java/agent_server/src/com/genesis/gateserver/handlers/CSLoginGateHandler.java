@@ -19,6 +19,6 @@ public class CSLoginGateHandler implements IClientMsgHandler<LoginMessage.CSLogi
         final String accountId = csLoginGate.getAccountId();
         final String channel = csLoginGate.getChannel();
         final List<Integer> vCodeList = csLoginGate.getVerificationCodeList();
-        
+
     }
 }
