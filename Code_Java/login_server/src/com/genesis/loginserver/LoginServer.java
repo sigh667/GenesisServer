@@ -2,7 +2,7 @@ package com.genesis.loginserver;
 
 import com.genesis.loginserver.core.channel.LoginClientChannelListener;
 import com.genesis.loginserver.core.handler.LoginClientMessageHandler;
-import com.genesis.loginserver.core.runnable.ActionOnExceptionOfLogin;
+import com.genesis.network2client.runnable.ActionOnExceptionOfLogin;
 import com.genesis.loginserver.globals.Globals;
 import com.mokylin.bleach.core.concurrent.fixthreadpool.FixThreadPool;
 import com.mokylin.bleach.core.config.model.NetInfo;

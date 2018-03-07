@@ -1,4 +1,4 @@
-package com.genesis.loginserver.core.runnable;
+package com.genesis.network2client.runnable;
 
 import com.mokylin.bleach.core.concurrent.fixthreadpool.IActionOnException;
 import com.mokylin.bleach.core.concurrent.fixthreadpool.IRunnableBindId;
