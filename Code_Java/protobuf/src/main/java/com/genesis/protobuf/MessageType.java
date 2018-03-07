@@ -28,94 +28,174 @@ public final class MessageType {
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <code>ERROR = 0;</code>
+     *
+     * <pre>
+     * 无固定服务器
+     * </pre>
      */
     ERROR(0, 0),
     /**
-     * <code>ISC_ACTOR = 1;</code>
-     */
-    ISC_ACTOR(1, 1),
-    /**
-     * <code>SERVER_MANAGER = 2;</code>
-     */
-    SERVER_MANAGER(2, 2),
-    /**
-     * <code>SERVER = 3;</code>
-     */
-    SERVER(3, 3),
-    /**
-     * <code>LOGIN_SERVER = 4;</code>
+     * <code>LOGIN_SERVER = 1;</code>
      *
      * <pre>
      * 登陆服务器
      * </pre>
      */
-    LOGIN_SERVER(4, 4),
+    LOGIN_SERVER(1, 1),
     /**
-     * <code>PLAYER_MANAGER = 10;</code>
+     * <code>GATE_SERVER = 2;</code>
+     *
+     * <pre>
+     * 网关服务器
+     * </pre>
      */
-    PLAYER_MANAGER(5, 10),
+    GATE_SERVER(2, 2),
     /**
-     * <code>PLAYER = 11;</code>
+     * <code>GAME_SERVER = 3;</code>
+     *
+     * <pre>
+     * 游戏服务器
+     * </pre>
      */
-    PLAYER(6, 11),
+    GAME_SERVER(3, 3),
     /**
-     * <code>SCENE = 12;</code>
+     * <code>MATCH_SERVER = 4;</code>
+     *
+     * <pre>
+     * 匹配服务器
+     * </pre>
      */
-    SCENE(7, 12),
+    MATCH_SERVER(4, 4),
     /**
-     * <code>GUILD = 13;</code>
+     * <code>FIGHT_SERVER = 5;</code>
+     *
+     * <pre>
+     * 战斗服务器
+     * </pre>
      */
-    GUILD(8, 13),
+    FIGHT_SERVER(5, 5),
     /**
-     * <code>ARENA = 14;</code>
+     * <code>ISC_ACTOR = 51;</code>
+     *
+     * <pre>
+     * 以下为废弃的
+     * </pre>
      */
-    ARENA(9, 14),
+    ISC_ACTOR(6, 51),
+    /**
+     * <code>SERVER_MANAGER = 52;</code>
+     */
+    SERVER_MANAGER(7, 52),
+    /**
+     * <code>SERVER = 53;</code>
+     */
+    SERVER(8, 53),
+    /**
+     * <code>PLAYER_MANAGER = 54;</code>
+     */
+    PLAYER_MANAGER(9, 54),
+    /**
+     * <code>PLAYER = 55;</code>
+     */
+    PLAYER(10, 55),
+    /**
+     * <code>SCENE = 56;</code>
+     */
+    SCENE(11, 56),
+    /**
+     * <code>GUILD = 57;</code>
+     */
+    GUILD(12, 57),
+    /**
+     * <code>ARENA = 58;</code>
+     */
+    ARENA(13, 58),
     ;
 
     /**
      * <code>ERROR = 0;</code>
+     *
+     * <pre>
+     * 无固定服务器
+     * </pre>
      */
     public static final int ERROR_VALUE = 0;
     /**
-     * <code>ISC_ACTOR = 1;</code>
-     */
-    public static final int ISC_ACTOR_VALUE = 1;
-    /**
-     * <code>SERVER_MANAGER = 2;</code>
-     */
-    public static final int SERVER_MANAGER_VALUE = 2;
-    /**
-     * <code>SERVER = 3;</code>
-     */
-    public static final int SERVER_VALUE = 3;
-    /**
-     * <code>LOGIN_SERVER = 4;</code>
+     * <code>LOGIN_SERVER = 1;</code>
      *
      * <pre>
      * 登陆服务器
      * </pre>
      */
-    public static final int LOGIN_SERVER_VALUE = 4;
+    public static final int LOGIN_SERVER_VALUE = 1;
     /**
-     * <code>PLAYER_MANAGER = 10;</code>
+     * <code>GATE_SERVER = 2;</code>
+     *
+     * <pre>
+     * 网关服务器
+     * </pre>
      */
-    public static final int PLAYER_MANAGER_VALUE = 10;
+    public static final int GATE_SERVER_VALUE = 2;
     /**
-     * <code>PLAYER = 11;</code>
+     * <code>GAME_SERVER = 3;</code>
+     *
+     * <pre>
+     * 游戏服务器
+     * </pre>
      */
-    public static final int PLAYER_VALUE = 11;
+    public static final int GAME_SERVER_VALUE = 3;
     /**
-     * <code>SCENE = 12;</code>
+     * <code>MATCH_SERVER = 4;</code>
+     *
+     * <pre>
+     * 匹配服务器
+     * </pre>
      */
-    public static final int SCENE_VALUE = 12;
+    public static final int MATCH_SERVER_VALUE = 4;
     /**
-     * <code>GUILD = 13;</code>
+     * <code>FIGHT_SERVER = 5;</code>
+     *
+     * <pre>
+     * 战斗服务器
+     * </pre>
      */
-    public static final int GUILD_VALUE = 13;
+    public static final int FIGHT_SERVER_VALUE = 5;
     /**
-     * <code>ARENA = 14;</code>
+     * <code>ISC_ACTOR = 51;</code>
+     *
+     * <pre>
+     * 以下为废弃的
+     * </pre>
      */
-    public static final int ARENA_VALUE = 14;
+    public static final int ISC_ACTOR_VALUE = 51;
+    /**
+     * <code>SERVER_MANAGER = 52;</code>
+     */
+    public static final int SERVER_MANAGER_VALUE = 52;
+    /**
+     * <code>SERVER = 53;</code>
+     */
+    public static final int SERVER_VALUE = 53;
+    /**
+     * <code>PLAYER_MANAGER = 54;</code>
+     */
+    public static final int PLAYER_MANAGER_VALUE = 54;
+    /**
+     * <code>PLAYER = 55;</code>
+     */
+    public static final int PLAYER_VALUE = 55;
+    /**
+     * <code>SCENE = 56;</code>
+     */
+    public static final int SCENE_VALUE = 56;
+    /**
+     * <code>GUILD = 57;</code>
+     */
+    public static final int GUILD_VALUE = 57;
+    /**
+     * <code>ARENA = 58;</code>
+     */
+    public static final int ARENA_VALUE = 58;
 
 
     public final int getNumber() { return value; }
@@ -123,15 +203,19 @@ public final class MessageType {
     public static MessageTarget valueOf(int value) {
       switch (value) {
         case 0: return ERROR;
-        case 1: return ISC_ACTOR;
-        case 2: return SERVER_MANAGER;
-        case 3: return SERVER;
-        case 4: return LOGIN_SERVER;
-        case 10: return PLAYER_MANAGER;
-        case 11: return PLAYER;
-        case 12: return SCENE;
-        case 13: return GUILD;
-        case 14: return ARENA;
+        case 1: return LOGIN_SERVER;
+        case 2: return GATE_SERVER;
+        case 3: return GAME_SERVER;
+        case 4: return MATCH_SERVER;
+        case 5: return FIGHT_SERVER;
+        case 51: return ISC_ACTOR;
+        case 52: return SERVER_MANAGER;
+        case 53: return SERVER;
+        case 54: return PLAYER_MANAGER;
+        case 55: return PLAYER;
+        case 56: return SCENE;
+        case 57: return GUILD;
+        case 58: return ARENA;
         default: return null;
       }
     }
@@ -1288,59 +1372,60 @@ public final class MessageType {
   static {
     java.lang.String[] descriptorData = {
       "\n\021MessageType.proto\022\024com.genesis.protobu" +
-      "f\032 google/protobuf/descriptor.proto*\234\001\n\r" +
-      "MessageTarget\022\t\n\005ERROR\020\000\022\r\n\tISC_ACTOR\020\001\022" +
-      "\022\n\016SERVER_MANAGER\020\002\022\n\n\006SERVER\020\003\022\020\n\014LOGIN" +
-      "_SERVER\020\004\022\022\n\016PLAYER_MANAGER\020\n\022\n\n\006PLAYER\020" +
-      "\013\022\t\n\005SCENE\020\014\022\t\n\005GUILD\020\r\022\t\n\005ARENA\020\016*\306\004\n\rC" +
-      "GMessageType\022\027\n\023CG_GAME_SERVER_INFO\020\001\022\017\n" +
-      "\013CG_TEST_MSG\020\002\022\034\n\022CS_LOGIN_HANDSHAKE\020\013\032\004" +
-      "\210\265\030\004\022\022\n\010CS_LOGIN\020\014\032\004\210\265\030\n\022\025\n\013CG_ITEM_USE\020" +
-      "e\032\004\210\265\030\013\022\026\n\014CG_ITEM_SELL\020f\032\004\210\265\030\013\022\032\n\020CG_IT",
-      "EM_COMPOUND\020g\032\004\210\265\030\013\022\027\n\014CG_HIRE_HERO\020\311\001\032\004" +
-      "\210\265\030\013\022\032\n\017CG_HERO_STAR_UP\020\312\001\032\004\210\265\030\013\022\035\n\022CG_H" +
-      "ERO_QUALITY_UP\020\313\001\032\004\210\265\030\013\022!\n\026CG_HERO_SKILL" +
-      "_LEVEL_UP\020\314\001\032\004\210\265\030\013\022\035\n\022CG_HERO_WEAR_EQUIP" +
-      "\020\315\001\032\004\210\265\030\013\022\035\n\022CG_BUY_SKILL_POINT\020\316\001\032\004\210\265\030\013" +
-      "\022\024\n\tCG_GM_CMD\020\255\002\032\004\210\265\030\013\022\036\n\023CG_GET_DAILY_R" +
-      "EWARD\020\337\002\032\004\210\265\030\013\022\027\n\014CG_OPEN_SHOP\020\221\003\032\004\210\265\030\013\022" +
-      "\033\n\020CG_REFRESH_GOODS\020\222\003\032\004\210\265\030\013\022\026\n\013CG_BUY_G" +
-      "OOD\020\223\003\032\004\210\265\030\013\022\031\n\016CG_OPEN_WINDOW\020\303\003\032\004\210\265\030\013\022" +
-      "\032\n\017CG_CLOSE_WINDOW\020\304\003\032\004\210\265\030\013\022\036\n\023CG_HUMAN_",
-      "BUY_ENERGY\020\365\003\032\004\210\265\030\013*\350\006\n\rGCMessageType\022\034\n" +
-      "\030SC_LOGIN_HANDSHAKE_REPLY\020\013\022\034\n\030SC_LOGIN_" +
-      "SERVER_NOT_OPEN\020\014\022\021\n\rSC_LOGIN_FAIL\020\r\022\024\n\020" +
-      "SC_LOGIN_SUCCESS\020\016\022\030\n\024GC_HUMAN_DETAIL_IN" +
-      "FO\020e\022\021\n\rGC_DATA_ERROR\020f\022\033\n\027GC_HUMAN_BUY_" +
-      "ENERGY_ACK\020g\022\033\n\027GC_HUMAN_BUY_ENERGY_NEG\020" +
-      "h\022 \n\034GC_HUMAN_ENERGY_RECOVER_INFO\020i\022\037\n\033G" +
-      "C_HUMAN_COST_ENERGY_FAILED\020j\022$\n GC_HUMAN" +
-      "_BUY_ENERGY_COUNTS_RESET\020k\022\023\n\017GC_VIP_LEV" +
-      "EL_UP\020l\022\025\n\021GC_HUMAN_LEVEL_UP\020m\022\032\n\025GC_HER",
-      "O_CHANGED_PROPS\020\311\001\022\025\n\020GC_ALL_HERO_INFO\020\312" +
-      "\001\022\020\n\013GC_HERO_ADD\020\313\001\022\023\n\016GC_HERO_UPDATE\020\314\001" +
-      "\022\026\n\021GC_INVENTORY_INFO\020\255\002\022\023\n\016GC_ITEM_UPDA" +
-      "TE\020\256\002\022\031\n\024GC_DAILY_REWARD_INFO\020\221\003\022\037\n\032GC_G" +
-      "ET_DAILY_REWARD_FAILED\020\222\003\022\021\n\014GC_SHOP_INF" +
-      "O\020\303\003\022\"\n\035GC_SHOP_MANUALLY_REFRESH_INFO\020\304\003" +
-      "\022\030\n\023GC_GOOD_BUY_SUCCESS\020\305\003\022)\n$GC_SHOP_MA" +
-      "NUALLY_REFRESH_COUNT_RESET\020\306\003\022\036\n\031GC_SHOP" +
-      "_AUTO_REFRESH_INFO\020\307\003\022\022\n\rGC_SHOP_CLOSE\020\310" +
-      "\003\022\023\n\016GC_SHOP_PROMPT\020\311\003\022\030\n\023GC_OPENED_TEMP",
-      "_SHOP\020\312\003\022\021\n\014GC_OPEN_SHOP\020\313\003\022\032\n\025GC_FUNCTI" +
-      "ON_OPEN_LIST\020\365\003\022\025\n\020GC_FUNCTION_OPEN\020\366\003\022\016" +
-      "\n\tGC_GM_CMD\020\247\004*\"\n\rMGMessageType\022\021\n\rMG_BR" +
-      "OAD_CAST\020\001:_\n\017cg_message_type\022\037.google.p" +
-      "rotobuf.MessageOptions\030\321\206\003 \001(\0162#.com.gen" +
-      "esis.protobuf.CGMessageType:_\n\017gc_messag" +
-      "e_type\022\037.google.protobuf.MessageOptions\030" +
-      "\322\206\003 \001(\0162#.com.genesis.protobuf.GCMessage" +
-      "Type:_\n\017mg_message_type\022\037.google.protobu" +
-      "f.MessageOptions\030\323\206\003 \001(\0162#.com.genesis.p",
-      "rotobuf.MGMessageType:_\n\006TARGET\022!.google" +
-      ".protobuf.EnumValueOptions\030\321\206\003 \001(\0162#.com" +
-      ".genesis.protobuf.MessageTarget:\005ERRORB\r" +
-      "B\013MessageType"
+      "f\032 google/protobuf/descriptor.proto*\342\001\n\r" +
+      "MessageTarget\022\t\n\005ERROR\020\000\022\020\n\014LOGIN_SERVER" +
+      "\020\001\022\017\n\013GATE_SERVER\020\002\022\017\n\013GAME_SERVER\020\003\022\020\n\014" +
+      "MATCH_SERVER\020\004\022\020\n\014FIGHT_SERVER\020\005\022\r\n\tISC_" +
+      "ACTOR\0203\022\022\n\016SERVER_MANAGER\0204\022\n\n\006SERVER\0205\022" +
+      "\022\n\016PLAYER_MANAGER\0206\022\n\n\006PLAYER\0207\022\t\n\005SCENE" +
+      "\0208\022\t\n\005GUILD\0209\022\t\n\005ARENA\020:*\272\004\n\rCGMessageTy" +
+      "pe\022\027\n\023CG_GAME_SERVER_INFO\020\001\022\017\n\013CG_TEST_M" +
+      "SG\020\002\022\026\n\022CS_LOGIN_HANDSHAKE\020\013\022\014\n\010CS_LOGIN",
+      "\020\014\022\025\n\013CG_ITEM_USE\020e\032\004\210\265\0307\022\026\n\014CG_ITEM_SEL" +
+      "L\020f\032\004\210\265\0307\022\032\n\020CG_ITEM_COMPOUND\020g\032\004\210\265\0307\022\027\n" +
+      "\014CG_HIRE_HERO\020\311\001\032\004\210\265\0307\022\032\n\017CG_HERO_STAR_U" +
+      "P\020\312\001\032\004\210\265\0307\022\035\n\022CG_HERO_QUALITY_UP\020\313\001\032\004\210\265\030" +
+      "7\022!\n\026CG_HERO_SKILL_LEVEL_UP\020\314\001\032\004\210\265\0307\022\035\n\022" +
+      "CG_HERO_WEAR_EQUIP\020\315\001\032\004\210\265\0307\022\035\n\022CG_BUY_SK" +
+      "ILL_POINT\020\316\001\032\004\210\265\0307\022\024\n\tCG_GM_CMD\020\255\002\032\004\210\265\0307" +
+      "\022\036\n\023CG_GET_DAILY_REWARD\020\337\002\032\004\210\265\0307\022\027\n\014CG_O" +
+      "PEN_SHOP\020\221\003\032\004\210\265\0307\022\033\n\020CG_REFRESH_GOODS\020\222\003" +
+      "\032\004\210\265\0307\022\026\n\013CG_BUY_GOOD\020\223\003\032\004\210\265\0307\022\031\n\016CG_OPE",
+      "N_WINDOW\020\303\003\032\004\210\265\0307\022\032\n\017CG_CLOSE_WINDOW\020\304\003\032" +
+      "\004\210\265\0307\022\036\n\023CG_HUMAN_BUY_ENERGY\020\365\003\032\004\210\265\0307*\350\006" +
+      "\n\rGCMessageType\022\034\n\030SC_LOGIN_HANDSHAKE_RE" +
+      "PLY\020\013\022\034\n\030SC_LOGIN_SERVER_NOT_OPEN\020\014\022\021\n\rS" +
+      "C_LOGIN_FAIL\020\r\022\024\n\020SC_LOGIN_SUCCESS\020\016\022\030\n\024" +
+      "GC_HUMAN_DETAIL_INFO\020e\022\021\n\rGC_DATA_ERROR\020" +
+      "f\022\033\n\027GC_HUMAN_BUY_ENERGY_ACK\020g\022\033\n\027GC_HUM" +
+      "AN_BUY_ENERGY_NEG\020h\022 \n\034GC_HUMAN_ENERGY_R" +
+      "ECOVER_INFO\020i\022\037\n\033GC_HUMAN_COST_ENERGY_FA" +
+      "ILED\020j\022$\n GC_HUMAN_BUY_ENERGY_COUNTS_RES",
+      "ET\020k\022\023\n\017GC_VIP_LEVEL_UP\020l\022\025\n\021GC_HUMAN_LE" +
+      "VEL_UP\020m\022\032\n\025GC_HERO_CHANGED_PROPS\020\311\001\022\025\n\020" +
+      "GC_ALL_HERO_INFO\020\312\001\022\020\n\013GC_HERO_ADD\020\313\001\022\023\n" +
+      "\016GC_HERO_UPDATE\020\314\001\022\026\n\021GC_INVENTORY_INFO\020" +
+      "\255\002\022\023\n\016GC_ITEM_UPDATE\020\256\002\022\031\n\024GC_DAILY_REWA" +
+      "RD_INFO\020\221\003\022\037\n\032GC_GET_DAILY_REWARD_FAILED" +
+      "\020\222\003\022\021\n\014GC_SHOP_INFO\020\303\003\022\"\n\035GC_SHOP_MANUAL" +
+      "LY_REFRESH_INFO\020\304\003\022\030\n\023GC_GOOD_BUY_SUCCES" +
+      "S\020\305\003\022)\n$GC_SHOP_MANUALLY_REFRESH_COUNT_R" +
+      "ESET\020\306\003\022\036\n\031GC_SHOP_AUTO_REFRESH_INFO\020\307\003\022",
+      "\022\n\rGC_SHOP_CLOSE\020\310\003\022\023\n\016GC_SHOP_PROMPT\020\311\003" +
+      "\022\030\n\023GC_OPENED_TEMP_SHOP\020\312\003\022\021\n\014GC_OPEN_SH" +
+      "OP\020\313\003\022\032\n\025GC_FUNCTION_OPEN_LIST\020\365\003\022\025\n\020GC_" +
+      "FUNCTION_OPEN\020\366\003\022\016\n\tGC_GM_CMD\020\247\004*\"\n\rMGMe" +
+      "ssageType\022\021\n\rMG_BROAD_CAST\020\001:_\n\017cg_messa" +
+      "ge_type\022\037.google.protobuf.MessageOptions" +
+      "\030\321\206\003 \001(\0162#.com.genesis.protobuf.CGMessag" +
+      "eType:_\n\017gc_message_type\022\037.google.protob" +
+      "uf.MessageOptions\030\322\206\003 \001(\0162#.com.genesis." +
+      "protobuf.GCMessageType:_\n\017mg_message_typ",
+      "e\022\037.google.protobuf.MessageOptions\030\323\206\003 \001" +
+      "(\0162#.com.genesis.protobuf.MGMessageType:" +
+      "_\n\006TARGET\022!.google.protobuf.EnumValueOpt" +
+      "ions\030\321\206\003 \001(\0162#.com.genesis.protobuf.Mess" +
+      "ageTarget:\005ERRORB\rB\013MessageType"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1361,8 +1446,6 @@ public final class MessageType {
     tARGET.internalInit(descriptor.getExtensions().get(3));
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.genesis.protobuf.MessageType.tARGET);
-    registry.add(com.genesis.protobuf.MessageType.tARGET);
     registry.add(com.genesis.protobuf.MessageType.tARGET);
     registry.add(com.genesis.protobuf.MessageType.tARGET);
     registry.add(com.genesis.protobuf.MessageType.tARGET);

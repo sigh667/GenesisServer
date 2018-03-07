@@ -20,16 +20,22 @@ extend google.protobuf.EnumValueOptions{
  * 由GameServer处理的消息号的消息范围：1-20000
  */
 enum MessageTarget{
-	ERROR = 0;
-	ISC_ACTOR = 1;
-	SERVER_MANAGER = 2;
-	SERVER = 3;
-	LOGIN_SERVER = 4;	// 登陆服务器
-	PLAYER_MANAGER = 10;
-	PLAYER = 11;
-	SCENE = 12;
-	GUILD = 13;
-	ARENA = 14;
+	ERROR = 0;	// 无固定服务器
+	LOGIN_SERVER = 1;	// 登陆服务器
+	GATE_SERVER = 2;	// 网关服务器
+	GAME_SERVER = 3;	// 游戏服务器
+	MATCH_SERVER = 4;	// 匹配服务器
+	FIGHT_SERVER = 5;	// 战斗服务器
+
+	// 以下为废弃的
+	ISC_ACTOR = 51;
+	SERVER_MANAGER = 52;
+	SERVER = 53;
+	PLAYER_MANAGER = 54;
+	PLAYER = 55;
+	SCENE = 56;
+	GUILD = 57;
+	ARENA = 58;
 }
 
 enum CGMessageType{
@@ -38,8 +44,8 @@ enum CGMessageType{
 	CG_TEST_MSG = 2;
 
 	//登录消息，11-50
-	CS_LOGIN_HANDSHAKE = 11 [(TARGET) = LOGIN_SERVER];
-	CS_LOGIN = 12 [(TARGET) = PLAYER_MANAGER];
+	CS_LOGIN_HANDSHAKE = 11;
+	CS_LOGIN = 12;
 
 	//道具消息，101-200
 	CG_ITEM_USE = 101 [(TARGET) = PLAYER];

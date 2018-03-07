@@ -13,6 +13,7 @@ import java.util.Map;
 public enum TargetService {
     Inst;
 
+    /**<消息号, 目标服务器类型>*/
     private Map<Integer, MessageType.MessageTarget> map = new HashMap<>();
 
     TargetService(){
@@ -31,7 +32,7 @@ public enum TargetService {
     /**
      * 查询要发往哪里
      * @param msgType   消息号
-     * @return
+     * @return 目标服务器枚举
      */
     public MessageType.MessageTarget getTarget(Integer msgType) {
         return map.get(msgType);

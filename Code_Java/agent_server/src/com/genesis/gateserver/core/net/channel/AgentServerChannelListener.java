@@ -1,11 +1,8 @@
 package com.genesis.gateserver.core.net.channel;
 
-import com.genesis.gateserver.core.frontend.gameserver.GameServerFrontend;
-import com.genesis.gateserver.core.global.Globals;
-import com.genesis.gateserver.core.session.AgentClientSessions;
 import com.mokylin.bleach.core.annotation.NotThreadSafe;
-import com.mokylin.bleach.servermsg.gameserver.PlayerDisconnected;
 import com.mokylin.td.network2client.core.channel.IChannelListener;
+import com.mokylin.td.network2client.core.session.ClientSessionContainer;
 import com.mokylin.td.network2client.core.session.IClientSession;
 
 /**
@@ -23,20 +20,15 @@ public class AgentServerChannelListener implements IChannelListener {
 
     @Override
     public void onChannelActive(IClientSession session) {
-
+        ClientSessionContainer.Inst.insert(session);
     }
 
     @Override
     public void onChannelInActive(IClientSession session) {
-        //通知其所登录的GameServer，某玩家登出
-        long agentSessionId = session.getSessionId();
-        GameServerFrontend gameServer = Globals.getGameServerManager()
-                .getGameServerFrontend(session.getTargetGameServerId()).get();
-        if (gameServer != null) {
-            gameServer.logoutPlayer(agentSessionId);
-            gameServer.sendMessage(agentSessionId, new PlayerDisconnected(agentSessionId));
-        }
-        AgentClientSessions.Inst.remove(agentSessionId);
+        ClientSessionContainer.Inst.remove(session.getSessionId());
+
+        //通知其所登录的GameServer，某玩家登出 TODO
+
     }
 
 }

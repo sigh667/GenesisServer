@@ -35,6 +35,12 @@ public class AgentClientMessageHandler implements IClientMessageHandler {
     @Override
     public void handle(IClientSession session, ClientMsg msg) {
 
+        // 需要区分出哪些消息要转发
+
+        // 哪些消息要在本Gate处理
+
+
+
         if (msg.messageType == MessageType.CGMessageType.CG_GAME_SERVER_INFO_VALUE) {
             CGGameServerInfo gsInfo = null;
             try {

@@ -1,7 +1,7 @@
 package com.genesis.loginserver.globals;
 
 import com.genesis.loginserver.config.LoginConfig;
-import com.genesis.loginserver.core.ClientSessionContainer;
+import com.mokylin.td.network2client.core.session.ClientSessionContainer;
 import com.genesis.loginserver.core.process.ClientMsgHandlerUtil;
 import com.genesis.loginserver.core.process.ClientMsgProcessor;
 import com.genesis.loginserver.core.process.IClientMsgHandler;

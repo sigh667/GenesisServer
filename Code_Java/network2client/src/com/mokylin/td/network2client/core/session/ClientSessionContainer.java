@@ -1,11 +1,9 @@
-package com.genesis.loginserver.core;
+package com.mokylin.td.network2client.core.session;
 
 import com.google.common.collect.Maps;
-
 import com.mokylin.bleach.core.heartbeat.IHeartbeat;
 import com.mokylin.bleach.core.time.TimeService;
 import com.mokylin.bleach.core.util.TimeUtils;
-import com.mokylin.td.network2client.core.session.IClientSession;
 
 import java.util.Iterator;
 import java.util.Map;
@@ -21,9 +19,9 @@ public enum ClientSessionContainer implements IHeartbeat {
     Inst;
 
     /**已连通，但尚未发送登陆消息的连接，最多允许停留的毫秒数*/
-    private final long maxMsNotLogined = TimeUtils.MIN;
+    private final long maxMsNotLogined = TimeUtils.SECOND * 30;
     /**
-     * 已连通，但尚未发送登陆消息的所有连接
+     * 所有连接
      * <p><连接Id（由本服生成，自增的）, 连接会话>
      */
     private Map<Long, IClientSession> sessionsNotLogined = Maps.newConcurrentMap();

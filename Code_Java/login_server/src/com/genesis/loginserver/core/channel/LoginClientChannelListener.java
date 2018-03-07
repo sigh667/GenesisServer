@@ -1,6 +1,6 @@
 package com.genesis.loginserver.core.channel;
 
-import com.genesis.loginserver.core.ClientSessionContainer;
+import com.mokylin.td.network2client.core.session.ClientSessionContainer;
 import com.mokylin.td.network2client.core.channel.IChannelListener;
 import com.mokylin.td.network2client.core.session.IClientSession;
 

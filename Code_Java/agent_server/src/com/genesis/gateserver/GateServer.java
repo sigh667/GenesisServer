@@ -52,16 +52,7 @@ public class GateServer {
         ChannelHandler childHandler =
                 new ChannelInitializerImpl(handler, ClientToServerMessageDecoder.class);
 
-        NettyNetworkLayer.configNet(netInfoToClient.getHost(), netInfoToClient.getPort())
-                .start(childHandler);
-
-        //////////////////////////////////////////////////////////////
-//        LoginClientMessageHandler mp = new LoginClientMessageHandler(
-//                new FixThreadPool(50, new ActionOnExceptionOfLogin()));
-//        LoginClientChannelListener rs = new LoginClientChannelListener();
-//        ClientIoHandler handler = new ClientIoHandler(mp, rs);
-//        ChannelHandler childHandler = new ChannelInitializerImpl(handler, ClientToLoginMessageDecoder.class);
-//        NettyNetworkLayer.configNet(netInfoToClient.getHost(), netInfoToClient.getPort()).start(childHandler);
+        NettyNetworkLayer.configNet(netInfoToClient.getHost(), netInfoToClient.getPort()).start(childHandler);
     }
 
     /**
