@@ -1,16 +1,16 @@
 package com.mokylin.bleach.gameserver.hero;
 
+import com.genesis.protobuf.HeroMessage.GCAllHeroInfo;
+import com.genesis.protobuf.HeroMessage.GCAllHeroInfo.Builder;
+import com.genesis.protobuf.HeroMessage.GCHeroAdd;
+import com.genesis.protobuf.HeroMessage.GCHeroUpdate;
+import com.genesis.protobuf.HeroMessage.HeroInfo;
 import com.mokylin.bleach.common.core.GlobalData;
 import com.mokylin.bleach.common.hero.template.HeroAttrTemplate;
 import com.mokylin.bleach.common.hero.template.HeroGroupTemplate;
 import com.mokylin.bleach.gamedb.orm.entity.HeroEntity;
 import com.mokylin.bleach.gameserver.core.global.Globals;
 import com.mokylin.bleach.gameserver.human.Human;
-import com.genesis.protobuf.HeroMessage.GCAllHeroInfo;
-import com.genesis.protobuf.HeroMessage.GCAllHeroInfo.Builder;
-import com.genesis.protobuf.HeroMessage.GCHeroAdd;
-import com.genesis.protobuf.HeroMessage.GCHeroUpdate;
-import com.genesis.protobuf.HeroMessage.HeroInfo;
 
 import java.util.HashMap;
 import java.util.List;
@@ -61,7 +61,7 @@ public class HeroManager {
      */
     public void notifyOnLogin() {
         Builder allHeroBuilder = GCAllHeroInfo.newBuilder();
-        com.icewind.protobuf.HeroMessage.HeroInfo.Builder heroBuilder =
+        com.genesis.protobuf.HeroMessage.HeroInfo.Builder heroBuilder =
                 HeroInfo.newBuilder();
         for (Hero hero : heroMap.values()) {
             final HeroInfo heroInfo = hero.builderHeroInfo(heroBuilder);
