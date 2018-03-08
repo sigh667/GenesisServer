@@ -1,5 +1,6 @@
 package com.genesis.loginserver.handlers;
 
+import com.genesis.network2client.auth.AuthUtil;
 import com.genesis.network2client.process.IClientMsgHandler;
 import com.genesis.loginserver.core.version.Version;
 import com.genesis.redis.center.GateInfo;
@@ -88,7 +89,7 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
         }
 
         // 2.1 加锁
-        if (!lock(channel, accountId)) {
+        if (!AuthUtil.lock(channel, accountId, Globals.getRedissonLogin())) {
             notifyFailAndDisconnect(session, LoginMessage.LoginFailReason.YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER);
             return;
         }
@@ -112,50 +113,10 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
         allotGate(session, channel, accountId);
 
         // 解锁
-        if (!unlock(channel, accountId)) {
+        if (!AuthUtil.unlock(channel, accountId, Globals.getRedissonLogin())) {
             notifyFailAndDisconnect(session, LoginMessage.LoginFailReason.YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER);
             return;
         }
-    }
-
-    /**
-     * 加锁
-     * @param channel
-     * @param accountId
-     * @return 是否成功
-     */
-    private boolean lock(String channel, String accountId) {
-        final String key = RedisLoginKey.Lock.builderKey(channel, accountId);
-        final RedissonClient redissonLogin = Globals.getRedissonLogin();
-        final RBucket<Boolean> bucket = redissonLogin.getBucket(key);
-        // 不存在就创建一个
-        if (!bucket.isExists()) {
-            if (!bucket.trySet(false))
-                return false;
-        }
-
-        // 查看是否锁住
-        if (bucket.get())
-            return false;
-
-        // 尝试加锁
-        return bucket.compareAndSet(false, true);
-    }
-
-    /**
-     * 解锁
-     * @param channel
-     * @param accountId
-     * @return 是否成功
-     */
-    private boolean unlock(String channel, String accountId) {
-        final String key = RedisLoginKey.Lock.builderKey(channel, accountId);
-        final RedissonClient redissonLogin = Globals.getRedissonLogin();
-        final RBucket<Boolean> bucket = redissonLogin.getBucket(key);
-
-        final boolean bRet = bucket.compareAndSet(true, false);
-        bucket.expire(30, TimeUnit.SECONDS);
-        return bRet;
     }
 
     /**
