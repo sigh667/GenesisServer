@@ -87,6 +87,7 @@ enum GCMessageType{
 	SC_LOGIN_SERVER_NOT_OPEN = 12;	//服务器尚未开放//
 	SC_LOGIN_FAIL = 13;		// 登陆失败//
 	SC_LOGIN_SUCCESS = 14;	// 登陆成功，并为其分配一个Gate//
+	SC_LOGIN_GATE_FAIL = 15;	// 登陆Gate失败//
 
 	//Human消息，101-200
 	GC_HUMAN_DETAIL_INFO = 101;

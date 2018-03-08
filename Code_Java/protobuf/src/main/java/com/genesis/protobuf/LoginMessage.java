@@ -59,45 +59,29 @@ public final class LoginMessage {
      */
     KEY_WRONG(4, 4),
     /**
-     * <code>LOAD_ROLE_FAIL = 5;</code>
-     *
-     * <pre>
-     **加载角色失败 
-     * </pre>
-     */
-    LOAD_ROLE_FAIL(5, 5),
-    /**
-     * <code>YOUR_ACCOUNT_IS_ONLINE = 6;</code>
+     * <code>YOUR_ACCOUNT_IS_ONLINE = 5;</code>
      *
      * <pre>
      **你所登录的账号当前已经在线（你顶号） 
      * </pre>
      */
-    YOUR_ACCOUNT_IS_ONLINE(6, 6),
+    YOUR_ACCOUNT_IS_ONLINE(5, 5),
     /**
-     * <code>YOUR_ACCOUNT_LOGIN_AGAIN = 7;</code>
+     * <code>YOUR_ACCOUNT_LOGIN_AGAIN = 6;</code>
      *
      * <pre>
      **你的账号在另外的机器上登录了（别人顶你号） 
      * </pre>
      */
-    YOUR_ACCOUNT_LOGIN_AGAIN(7, 7),
+    YOUR_ACCOUNT_LOGIN_AGAIN(6, 6),
     /**
-     * <code>YOUR_DATA_IS_SAVING = 8;</code>
-     *
-     * <pre>
-     **你的角色信息正在保存，请稍候 
-     * </pre>
-     */
-    YOUR_DATA_IS_SAVING(8, 8),
-    /**
-     * <code>YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER = 9;</code>
+     * <code>YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER = 7;</code>
      *
      * <pre>
      **你的账号在另外的登录服上登录了（客户端仍然提示：别人顶你号） 
      * </pre>
      */
-    YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER(9, 9),
+    YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER(7, 7),
     ;
 
     /**
@@ -141,45 +125,29 @@ public final class LoginMessage {
      */
     public static final int KEY_WRONG_VALUE = 4;
     /**
-     * <code>LOAD_ROLE_FAIL = 5;</code>
-     *
-     * <pre>
-     **加载角色失败 
-     * </pre>
-     */
-    public static final int LOAD_ROLE_FAIL_VALUE = 5;
-    /**
-     * <code>YOUR_ACCOUNT_IS_ONLINE = 6;</code>
+     * <code>YOUR_ACCOUNT_IS_ONLINE = 5;</code>
      *
      * <pre>
      **你所登录的账号当前已经在线（你顶号） 
      * </pre>
      */
-    public static final int YOUR_ACCOUNT_IS_ONLINE_VALUE = 6;
+    public static final int YOUR_ACCOUNT_IS_ONLINE_VALUE = 5;
     /**
-     * <code>YOUR_ACCOUNT_LOGIN_AGAIN = 7;</code>
+     * <code>YOUR_ACCOUNT_LOGIN_AGAIN = 6;</code>
      *
      * <pre>
      **你的账号在另外的机器上登录了（别人顶你号） 
      * </pre>
      */
-    public static final int YOUR_ACCOUNT_LOGIN_AGAIN_VALUE = 7;
+    public static final int YOUR_ACCOUNT_LOGIN_AGAIN_VALUE = 6;
     /**
-     * <code>YOUR_DATA_IS_SAVING = 8;</code>
-     *
-     * <pre>
-     **你的角色信息正在保存，请稍候 
-     * </pre>
-     */
-    public static final int YOUR_DATA_IS_SAVING_VALUE = 8;
-    /**
-     * <code>YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER = 9;</code>
+     * <code>YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER = 7;</code>
      *
      * <pre>
      **你的账号在另外的登录服上登录了（客户端仍然提示：别人顶你号） 
      * </pre>
      */
-    public static final int YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER_VALUE = 9;
+    public static final int YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER_VALUE = 7;
 
 
     public final int getNumber() { return value; }
@@ -191,11 +159,9 @@ public final class LoginMessage {
         case 2: return CHANNEL_NOT_EXIST;
         case 3: return ACCOUNT_NOT_EXIST;
         case 4: return KEY_WRONG;
-        case 5: return LOAD_ROLE_FAIL;
-        case 6: return YOUR_ACCOUNT_IS_ONLINE;
-        case 7: return YOUR_ACCOUNT_LOGIN_AGAIN;
-        case 8: return YOUR_DATA_IS_SAVING;
-        case 9: return YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER;
+        case 5: return YOUR_ACCOUNT_IS_ONLINE;
+        case 6: return YOUR_ACCOUNT_LOGIN_AGAIN;
+        case 7: return YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER;
         default: return null;
       }
     }
@@ -245,6 +211,143 @@ public final class LoginMessage {
     }
 
     // @@protoc_insertion_point(enum_scope:com.genesis.protobuf.LoginFailReason)
+  }
+
+  /**
+   * Protobuf enum {@code com.genesis.protobuf.LoginGateFailReason}
+   *
+   * <pre>
+   **
+   * 登陆到网关失败的原因
+   * </pre>
+   */
+  public enum LoginGateFailReason
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>VCODE_WRONG = 1;</code>
+     *
+     * <pre>
+     **验证码错误
+     * </pre>
+     */
+    VCODE_WRONG(0, 1),
+    /**
+     * <code>LOAD_ROLE_FAIL = 2;</code>
+     *
+     * <pre>
+     **加载角色失败 
+     * </pre>
+     */
+    LOAD_ROLE_FAIL(1, 2),
+    /**
+     * <code>YOUR_DATA_IS_SAVING = 3;</code>
+     *
+     * <pre>
+     **你的角色信息正在保存，请稍候 
+     * </pre>
+     */
+    YOUR_DATA_IS_SAVING(2, 3),
+    /**
+     * <code>YOUR_ACCOUNT_LOGINING = 4;</code>
+     *
+     * <pre>
+     **你的账号在另外的登录服上登录了（客户端仍然提示：别人顶你号） 
+     * </pre>
+     */
+    YOUR_ACCOUNT_LOGINING(3, 4),
+    ;
+
+    /**
+     * <code>VCODE_WRONG = 1;</code>
+     *
+     * <pre>
+     **验证码错误
+     * </pre>
+     */
+    public static final int VCODE_WRONG_VALUE = 1;
+    /**
+     * <code>LOAD_ROLE_FAIL = 2;</code>
+     *
+     * <pre>
+     **加载角色失败 
+     * </pre>
+     */
+    public static final int LOAD_ROLE_FAIL_VALUE = 2;
+    /**
+     * <code>YOUR_DATA_IS_SAVING = 3;</code>
+     *
+     * <pre>
+     **你的角色信息正在保存，请稍候 
+     * </pre>
+     */
+    public static final int YOUR_DATA_IS_SAVING_VALUE = 3;
+    /**
+     * <code>YOUR_ACCOUNT_LOGINING = 4;</code>
+     *
+     * <pre>
+     **你的账号在另外的登录服上登录了（客户端仍然提示：别人顶你号） 
+     * </pre>
+     */
+    public static final int YOUR_ACCOUNT_LOGINING_VALUE = 4;
+
+
+    public final int getNumber() { return value; }
+
+    public static LoginGateFailReason valueOf(int value) {
+      switch (value) {
+        case 1: return VCODE_WRONG;
+        case 2: return LOAD_ROLE_FAIL;
+        case 3: return YOUR_DATA_IS_SAVING;
+        case 4: return YOUR_ACCOUNT_LOGINING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<LoginGateFailReason>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<LoginGateFailReason>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<LoginGateFailReason>() {
+            public LoginGateFailReason findValueByNumber(int number) {
+              return LoginGateFailReason.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.genesis.protobuf.LoginMessage.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final LoginGateFailReason[] VALUES = values();
+
+    public static LoginGateFailReason valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private LoginGateFailReason(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.genesis.protobuf.LoginGateFailReason)
   }
 
   public interface CSHandshakeOrBuilder extends
@@ -5019,6 +5122,462 @@ public final class LoginMessage {
     // @@protoc_insertion_point(class_scope:com.genesis.protobuf.SCLoginFail)
   }
 
+  public interface SCLoginGateFailOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.genesis.protobuf.SCLoginGateFail)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .com.genesis.protobuf.LoginGateFailReason failReason = 1;</code>
+     *
+     * <pre>
+     **失败原因 
+     * </pre>
+     */
+    boolean hasFailReason();
+    /**
+     * <code>required .com.genesis.protobuf.LoginGateFailReason failReason = 1;</code>
+     *
+     * <pre>
+     **失败原因 
+     * </pre>
+     */
+    com.genesis.protobuf.LoginMessage.LoginGateFailReason getFailReason();
+  }
+  /**
+   * Protobuf type {@code com.genesis.protobuf.SCLoginGateFail}
+   *
+   * <pre>
+   **
+   * 服务器通知，登录Gate失败
+   * </pre>
+   */
+  public static final class SCLoginGateFail extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.genesis.protobuf.SCLoginGateFail)
+      SCLoginGateFailOrBuilder {
+    // Use SCLoginGateFail.newBuilder() to construct.
+    private SCLoginGateFail(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCLoginGateFail(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCLoginGateFail defaultInstance;
+    public static SCLoginGateFail getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCLoginGateFail getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCLoginGateFail(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              com.genesis.protobuf.LoginMessage.LoginGateFailReason value = com.genesis.protobuf.LoginMessage.LoginGateFailReason.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                failReason_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.genesis.protobuf.LoginMessage.internal_static_com_genesis_protobuf_SCLoginGateFail_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.genesis.protobuf.LoginMessage.internal_static_com_genesis_protobuf_SCLoginGateFail_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.genesis.protobuf.LoginMessage.SCLoginGateFail.class, com.genesis.protobuf.LoginMessage.SCLoginGateFail.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCLoginGateFail> PARSER =
+        new com.google.protobuf.AbstractParser<SCLoginGateFail>() {
+      public SCLoginGateFail parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCLoginGateFail(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCLoginGateFail> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int FAILREASON_FIELD_NUMBER = 1;
+    private com.genesis.protobuf.LoginMessage.LoginGateFailReason failReason_;
+    /**
+     * <code>required .com.genesis.protobuf.LoginGateFailReason failReason = 1;</code>
+     *
+     * <pre>
+     **失败原因 
+     * </pre>
+     */
+    public boolean hasFailReason() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .com.genesis.protobuf.LoginGateFailReason failReason = 1;</code>
+     *
+     * <pre>
+     **失败原因 
+     * </pre>
+     */
+    public com.genesis.protobuf.LoginMessage.LoginGateFailReason getFailReason() {
+      return failReason_;
+    }
+
+    private void initFields() {
+      failReason_ = com.genesis.protobuf.LoginMessage.LoginGateFailReason.VCODE_WRONG;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasFailReason()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, failReason_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, failReason_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.genesis.protobuf.LoginMessage.SCLoginGateFail parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.genesis.protobuf.LoginMessage.SCLoginGateFail parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.genesis.protobuf.LoginMessage.SCLoginGateFail parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.genesis.protobuf.LoginMessage.SCLoginGateFail parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.genesis.protobuf.LoginMessage.SCLoginGateFail parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.genesis.protobuf.LoginMessage.SCLoginGateFail parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.genesis.protobuf.LoginMessage.SCLoginGateFail parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.genesis.protobuf.LoginMessage.SCLoginGateFail parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.genesis.protobuf.LoginMessage.SCLoginGateFail parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.genesis.protobuf.LoginMessage.SCLoginGateFail parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.genesis.protobuf.LoginMessage.SCLoginGateFail prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.genesis.protobuf.SCLoginGateFail}
+     *
+     * <pre>
+     **
+     * 服务器通知，登录Gate失败
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.genesis.protobuf.SCLoginGateFail)
+        com.genesis.protobuf.LoginMessage.SCLoginGateFailOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.genesis.protobuf.LoginMessage.internal_static_com_genesis_protobuf_SCLoginGateFail_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.genesis.protobuf.LoginMessage.internal_static_com_genesis_protobuf_SCLoginGateFail_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.genesis.protobuf.LoginMessage.SCLoginGateFail.class, com.genesis.protobuf.LoginMessage.SCLoginGateFail.Builder.class);
+      }
+
+      // Construct using com.genesis.protobuf.LoginMessage.SCLoginGateFail.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        failReason_ = com.genesis.protobuf.LoginMessage.LoginGateFailReason.VCODE_WRONG;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.genesis.protobuf.LoginMessage.internal_static_com_genesis_protobuf_SCLoginGateFail_descriptor;
+      }
+
+      public com.genesis.protobuf.LoginMessage.SCLoginGateFail getDefaultInstanceForType() {
+        return com.genesis.protobuf.LoginMessage.SCLoginGateFail.getDefaultInstance();
+      }
+
+      public com.genesis.protobuf.LoginMessage.SCLoginGateFail build() {
+        com.genesis.protobuf.LoginMessage.SCLoginGateFail result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.genesis.protobuf.LoginMessage.SCLoginGateFail buildPartial() {
+        com.genesis.protobuf.LoginMessage.SCLoginGateFail result = new com.genesis.protobuf.LoginMessage.SCLoginGateFail(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.failReason_ = failReason_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.genesis.protobuf.LoginMessage.SCLoginGateFail) {
+          return mergeFrom((com.genesis.protobuf.LoginMessage.SCLoginGateFail)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.genesis.protobuf.LoginMessage.SCLoginGateFail other) {
+        if (other == com.genesis.protobuf.LoginMessage.SCLoginGateFail.getDefaultInstance()) return this;
+        if (other.hasFailReason()) {
+          setFailReason(other.getFailReason());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasFailReason()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.genesis.protobuf.LoginMessage.SCLoginGateFail parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.genesis.protobuf.LoginMessage.SCLoginGateFail) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.genesis.protobuf.LoginMessage.LoginGateFailReason failReason_ = com.genesis.protobuf.LoginMessage.LoginGateFailReason.VCODE_WRONG;
+      /**
+       * <code>required .com.genesis.protobuf.LoginGateFailReason failReason = 1;</code>
+       *
+       * <pre>
+       **失败原因 
+       * </pre>
+       */
+      public boolean hasFailReason() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .com.genesis.protobuf.LoginGateFailReason failReason = 1;</code>
+       *
+       * <pre>
+       **失败原因 
+       * </pre>
+       */
+      public com.genesis.protobuf.LoginMessage.LoginGateFailReason getFailReason() {
+        return failReason_;
+      }
+      /**
+       * <code>required .com.genesis.protobuf.LoginGateFailReason failReason = 1;</code>
+       *
+       * <pre>
+       **失败原因 
+       * </pre>
+       */
+      public Builder setFailReason(com.genesis.protobuf.LoginMessage.LoginGateFailReason value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        failReason_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .com.genesis.protobuf.LoginGateFailReason failReason = 1;</code>
+       *
+       * <pre>
+       **失败原因 
+       * </pre>
+       */
+      public Builder clearFailReason() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        failReason_ = com.genesis.protobuf.LoginMessage.LoginGateFailReason.VCODE_WRONG;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.genesis.protobuf.SCLoginGateFail)
+    }
+
+    static {
+      defaultInstance = new SCLoginGateFail(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.genesis.protobuf.SCLoginGateFail)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_genesis_protobuf_CSHandshake_descriptor;
   private static
@@ -5054,6 +5613,11 @@ public final class LoginMessage {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_genesis_protobuf_SCLoginFail_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_genesis_protobuf_SCLoginGateFail_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_genesis_protobuf_SCLoginGateFail_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5075,14 +5639,18 @@ public final class LoginMessage {
       "ateIP\030\001 \002(\t\022\020\n\010gatePort\030\002 \002(\005\022\030\n\020verific",
       "ationCode\030\003 \003(\005:\004\220\265\030\016\"N\n\013SCLoginFail\0229\n\n" +
       "failReason\030\001 \002(\0162%.com.genesis.protobuf." +
-      "LoginFailReason:\004\220\265\030\r*\210\002\n\017LoginFailReaso" +
-      "n\022\025\n\021VERSION_NOT_ALLOW\020\000\022\022\n\016PLAYER_IS_FU" +
-      "LL\020\001\022\025\n\021CHANNEL_NOT_EXIST\020\002\022\025\n\021ACCOUNT_N" +
-      "OT_EXIST\020\003\022\r\n\tKEY_WRONG\020\004\022\022\n\016LOAD_ROLE_F" +
-      "AIL\020\005\022\032\n\026YOUR_ACCOUNT_IS_ONLINE\020\006\022\034\n\030YOU" +
-      "R_ACCOUNT_LOGIN_AGAIN\020\007\022\027\n\023YOUR_DATA_IS_" +
-      "SAVING\020\010\022&\n\"YOUR_ACCOUNT_LOGIN_ON_OTHER_" +
-      "SERVER\020\tB\016B\014LoginMessage"
+      "LoginFailReason:\004\220\265\030\r\"V\n\017SCLoginGateFail" +
+      "\022=\n\nfailReason\030\001 \002(\0162).com.genesis.proto" +
+      "buf.LoginGateFailReason:\004\220\265\030\017*\333\001\n\017LoginF" +
+      "ailReason\022\025\n\021VERSION_NOT_ALLOW\020\000\022\022\n\016PLAY" +
+      "ER_IS_FULL\020\001\022\025\n\021CHANNEL_NOT_EXIST\020\002\022\025\n\021A" +
+      "CCOUNT_NOT_EXIST\020\003\022\r\n\tKEY_WRONG\020\004\022\032\n\026YOU" +
+      "R_ACCOUNT_IS_ONLINE\020\005\022\034\n\030YOUR_ACCOUNT_LO" +
+      "GIN_AGAIN\020\006\022&\n\"YOUR_ACCOUNT_LOGIN_ON_OTH",
+      "ER_SERVER\020\007*n\n\023LoginGateFailReason\022\017\n\013VC" +
+      "ODE_WRONG\020\001\022\022\n\016LOAD_ROLE_FAIL\020\002\022\027\n\023YOUR_" +
+      "DATA_IS_SAVING\020\003\022\031\n\025YOUR_ACCOUNT_LOGININ" +
+      "G\020\004B\016B\014LoginMessage"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5139,11 +5707,18 @@ public final class LoginMessage {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_genesis_protobuf_SCLoginFail_descriptor,
         new java.lang.String[] { "FailReason", });
+    internal_static_com_genesis_protobuf_SCLoginGateFail_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_com_genesis_protobuf_SCLoginGateFail_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_genesis_protobuf_SCLoginGateFail_descriptor,
+        new java.lang.String[] { "FailReason", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.genesis.protobuf.MessageType.cgMessageType);
     registry.add(com.genesis.protobuf.MessageType.cgMessageType);
     registry.add(com.genesis.protobuf.MessageType.cgMessageType);
+    registry.add(com.genesis.protobuf.MessageType.gcMessageType);
     registry.add(com.genesis.protobuf.MessageType.gcMessageType);
     registry.add(com.genesis.protobuf.MessageType.gcMessageType);
     registry.add(com.genesis.protobuf.MessageType.gcMessageType);

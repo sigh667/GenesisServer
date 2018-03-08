@@ -14,6 +14,9 @@ import java.util.concurrent.TimeUnit;
  **/
 public class AuthUtil {
 
+    /**登陆锁存活秒数*/
+    static final int anthLockExpireSec = 30;
+
     /**
      * 加锁
      * @param channel   渠道
@@ -48,7 +51,7 @@ public class AuthUtil {
         final RBucket<Boolean> bucket = redissonLogin.getBucket(key);
 
         final boolean bRet = bucket.compareAndSet(true, false);
-        bucket.expire(30, TimeUnit.SECONDS);
+        bucket.expire(anthLockExpireSec, TimeUnit.SECONDS);
         return bRet;
     }
 }

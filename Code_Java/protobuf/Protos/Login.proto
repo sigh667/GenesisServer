@@ -102,14 +102,32 @@ enum LoginFailReason{
     ACCOUNT_NOT_EXIST = 3;
     /**秘钥错误 */
     KEY_WRONG = 4;
-    /**加载角色失败 */
-    LOAD_ROLE_FAIL = 5;
     /**你所登录的账号当前已经在线（你顶号） */
-    YOUR_ACCOUNT_IS_ONLINE = 6;
+    YOUR_ACCOUNT_IS_ONLINE = 5;
     /**你的账号在另外的机器上登录了（别人顶你号） */
-    YOUR_ACCOUNT_LOGIN_AGAIN = 7;
-    /**你的角色信息正在保存，请稍候 */
-    YOUR_DATA_IS_SAVING = 8;
+    YOUR_ACCOUNT_LOGIN_AGAIN = 6;
     /**你的账号在另外的登录服上登录了（客户端仍然提示：别人顶你号） */
-    YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER = 9;
+    YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER = 7;
+}
+
+/**
+ * 服务器通知，登录Gate失败
+ */
+message SCLoginGateFail{
+    option (gc_message_type) = SC_LOGIN_GATE_FAIL;
+    /**失败原因 */
+    required LoginGateFailReason failReason = 1;
+}
+/**
+ * 登陆到网关失败的原因
+ */
+enum LoginGateFailReason{
+    /**验证码错误*/
+    VCODE_WRONG = 1;
+    /**加载角色失败 */
+    LOAD_ROLE_FAIL = 2;
+    /**你的角色信息正在保存，请稍候 */
+    YOUR_DATA_IS_SAVING = 3;
+    /**你的账号在另外的登录服上登录了（客户端仍然提示：别人顶你号） */
+    YOUR_ACCOUNT_LOGINING = 4;
 }
