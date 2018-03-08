@@ -5,9 +5,12 @@ import com.genesis.gateserver.core.frontend.gameserver.GameServerFrontManager;
 import com.genesis.network2client.process.ClientMsgHandlerUtil;
 import com.genesis.network2client.process.ClientMsgProcessor;
 import com.genesis.network2client.process.IClientMsgHandler;
+import com.genesis.network2client.session.ClientSessionContainer;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.Parser;
+import com.mokylin.bleach.core.concurrent.process.CommonProcessType;
 import com.mokylin.bleach.core.config.ConfigBuilder;
+import com.mokylin.bleach.core.heartbeat.HeartbeatService;
 import com.mokylin.bleach.core.redis.redisson.RedisUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.redisson.api.RedissonClient;
@@ -41,6 +44,11 @@ public class Globals {
      */
     private static ClientMsgProcessor clientMsgProcessor;
 
+    /**
+     * 心跳服务
+     */
+    private static HeartbeatService heartBeatService = null;
+
     private static GameServerFrontManager gameServerManager = new GameServerFrontManager();
 
     public static void init() throws IOException {
@@ -60,6 +68,13 @@ public class Globals {
         Config configLogin = Config.fromYAML(new File("./login_server/config/redissonLogin.yaml"));
         redissonLogin = RedisUtils.createRedisson(configLogin);
         logger.info(" Redis访问服务初始化完毕.");
+
+        // 4.0启动心跳
+        heartBeatService = HeartbeatService.INSTANCE;
+        heartBeatService.start(CommonProcessType.MAIN, 1000);
+        logger.info("心跳线程启动完毕");
+        // 4.1注册心跳
+        heartBeatService.registerHeartbeat(ClientSessionContainer.Inst);//清理死连接
     }
 
 

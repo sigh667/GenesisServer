@@ -48,7 +48,9 @@ public class GateServer {
     private static void startNettyToClient() throws Exception {
         NetInfo netInfoToClient = Globals.getGateConfig().getNetInfoToClient();
 
-        AgentClientMessageHandler mp = new AgentClientMessageHandler(new FixThreadPool(50, new ActionOnExceptionOfLogin()));
+        // 该线程池只用来访问Redis缓存，1就够了
+        AgentClientMessageHandler mp = new AgentClientMessageHandler(
+                new FixThreadPool(1, new ActionOnExceptionOfLogin()));
         AgentServerChannelListener rs = new AgentServerChannelListener();
         ClientIoHandler handler = new ClientIoHandler(mp, rs);
         ChannelHandler childHandler =
