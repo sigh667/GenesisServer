@@ -69,4 +69,11 @@ public enum ServerType implements ArrayIndexedEnum<ServerType> {
     public String getKey() {
         return this.name();
     }
+
+    /**
+     * @return 该类型Server在Redis中的ID生成器的key
+     */
+    public String getIdKey() {
+        return this.name() + ":ID";
+    }
 }

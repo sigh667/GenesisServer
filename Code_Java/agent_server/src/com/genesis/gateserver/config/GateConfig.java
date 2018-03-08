@@ -16,11 +16,14 @@ public class GateConfig {
     /**监听Game的IP端口信息*/
     private NetInfo netInfoToGame;
 
-    public NetInfo getNetInfoToClient() {
-        return netInfoToClient;
-    }
+    /**能承载的Client数量上限*/
+    private int maxClientCount;
+
+    public NetInfo getNetInfoToClient() { return netInfoToClient; }
 
     public NetInfo getNetInfoToGame() {
         return netInfoToGame;
     }
+
+    public int getMaxClientCount() { return maxClientCount; }
 }

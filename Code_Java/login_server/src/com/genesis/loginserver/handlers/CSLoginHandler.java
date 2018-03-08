@@ -204,11 +204,11 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
     private void allotGate(IClientSession session, String channel, String accountId) {
         final String gateKey = ServerType.GATE.getKey();
         final RedissonClient redisson = Globals.getRedisson();
-        RMap<Long, GateInfo> map = redisson.getMap(gateKey);
+        RMap<Integer, GateInfo> map = redisson.getMap(gateKey);
         double persent = 1.0;   // 1.0即100%，表示满载
         long gateID = 0;        // 0为无效ID，有效ID是正整数
         GateInfo gateInfo = null;
-        for (Map.Entry<Long, GateInfo> entry : map.entrySet()) {
+        for (Map.Entry<Integer, GateInfo> entry : map.entrySet()) {
             final GateInfo value = entry.getValue();
             double tempPer = value.currClientCount * 1.0 / value.maxClientCount;
             if (tempPer < persent) {
@@ -248,8 +248,8 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
 
         // 再通知Client
         final LoginMessage.SCLoginSuccess.Builder builder = LoginMessage.SCLoginSuccess.newBuilder();
-        builder.setGateIP(gateInfo.ip2Client)
-                .setGatePort(gateInfo.port2Client)
+        builder.setGateIP(gateInfo.netInfoToClient.getHost())
+                .setGatePort(gateInfo.netInfoToClient.getPort())
                 .addAllVerificationCode(vCode);
         session.sendMessage(builder);
     }
