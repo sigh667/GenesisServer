@@ -1,5 +1,6 @@
 package com.genesis.gateserver.core.channel;
 
+import com.genesis.gateserver.global.Globals;
 import com.mokylin.bleach.core.annotation.NotThreadSafe;
 import com.genesis.network2client.channel.IChannelListener;
 import com.genesis.network2client.session.ClientSessionContainer;
@@ -21,11 +22,13 @@ public class AgentServerChannelListener implements IChannelListener {
     @Override
     public void onChannelActive(IClientSession session) {
         ClientSessionContainer.Inst.insert(session);
+        Globals.onlineClientChange(1);
     }
 
     @Override
     public void onChannelInActive(IClientSession session) {
         ClientSessionContainer.Inst.remove(session.getSessionId());
+        Globals.onlineClientChange(-1);
 
         //通知其所登录的GameServer，某玩家登出 TODO
 
