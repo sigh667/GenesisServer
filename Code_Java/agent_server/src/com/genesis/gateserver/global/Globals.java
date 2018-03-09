@@ -46,10 +46,6 @@ public class Globals {
      * Redis连接(运维中心Redis)
      */
     private static RedissonClient redisson;
-    /**
-     * Redis连接(登陆Redis)
-     */
-    private static RedissonClient redissonLogin;
 
     /**
      * 客户端消息分发器
@@ -77,8 +73,6 @@ public class Globals {
         // 3.0初始化Redis访问服务
         Config config = Config.fromYAML(new File("./agent_server/config/redisson.yaml"));
         redisson = RedisUtils.createRedisson(config);
-        Config configLogin = Config.fromYAML(new File("./agent_server/config/redissonLogin.yaml"));
-        redissonLogin = RedisUtils.createRedisson(configLogin);
         logger.info(" Redis访问服务初始化完毕.");
 
         // 4.0 通过redis_center生成服务器ID，并向redis_center中插入本服信息
@@ -148,8 +142,6 @@ public class Globals {
     public static GameServerFrontManager getGameServerManager() {
         return gameServerManager;
     }
-
-    public static RedissonClient getRedissonLogin() { return redissonLogin; }
 
     public static RedissonClient getRedisson() { return redisson; }
 

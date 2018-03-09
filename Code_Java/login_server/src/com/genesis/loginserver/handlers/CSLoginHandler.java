@@ -88,7 +88,7 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
         }
 
         // 2.1 加锁
-        if (!AuthUtil.lock(channel, accountId, Globals.getRedissonLogin())) {
+        if (!AuthUtil.lock(channel, accountId, Globals.getRedisson())) {
             notifyFailAndDisconnect(session, LoginMessage.LoginFailReason.YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER);
             return;
         }
@@ -107,7 +107,7 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
         allotGate(session, channel, accountId);
 
         // 解锁
-        if (!AuthUtil.unlock(channel, accountId, Globals.getRedissonLogin())) {
+        if (!AuthUtil.unlock(channel, accountId, Globals.getRedisson())) {
             notifyFailAndDisconnect(session, LoginMessage.LoginFailReason.YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER);
             return;
         }
@@ -121,8 +121,8 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
      */
     private long findGate(String channel, String accountId) {
         final String key = RedisLoginKey.InGate.builderKey(channel, accountId);
-        final RedissonClient redissonLogin = Globals.getRedissonLogin();
-        final RBucket<Long> bucket = redissonLogin.getBucket(key);
+        final RedissonClient redisson = Globals.getRedisson();
+        final RBucket<Long> bucket = redisson.getBucket(key);
         if (bucket.isExists()) {
             return bucket.get();
         }
@@ -199,10 +199,10 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
 
         // 先写入LoginRedis，之后由Gate读取
         LoginClientInfo loginClientInfo = new LoginClientInfo(channel, accountId, vCode);
-        final RedissonClient redissonLogin = Globals.getRedissonLogin();
+        final RedissonClient redisson = Globals.getRedisson();
         // 组装待登陆的玩家key
         final String keyToGate = RedisLoginKey.ToGate.builderKey(channel, accountId);
-        final RBucket<LoginClientInfo> bucket = redissonLogin.getBucket(keyToGate);
+        final RBucket<LoginClientInfo> bucket = redisson.getBucket(keyToGate);
         bucket.set(loginClientInfo);
 
         // 再通知Client

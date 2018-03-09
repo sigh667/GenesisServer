@@ -22,10 +22,10 @@ public class CSLoginGateHandler implements IClientMsgHandler<LoginMessage.CSLogi
         final String accountId = csLoginGate.getAccountId();
         final String channel = csLoginGate.getChannel();
         final List<Integer> vCodeList = csLoginGate.getVerificationCodeList();
-        final RedissonClient redissonLogin = Globals.getRedissonLogin();
+        final RedissonClient redisson = Globals.getRedisson();
 
         // 加锁
-        if (!AuthUtil.lock(channel, accountId, redissonLogin)) {
+        if (!AuthUtil.lock(channel, accountId, redisson)) {
             notifyFailAndDisconnect(session, LoginMessage.LoginGateFailReason.YOUR_ACCOUNT_LOGINING);
             return;
         }
@@ -33,7 +33,7 @@ public class CSLoginGateHandler implements IClientMsgHandler<LoginMessage.CSLogi
         // 验证 TODO
 
         // 解锁
-        if (!AuthUtil.unlock(channel, accountId, redissonLogin)) {
+        if (!AuthUtil.unlock(channel, accountId, redisson)) {
             notifyFailAndDisconnect(session, LoginMessage.LoginGateFailReason.YOUR_ACCOUNT_LOGINING);
             return;
         }

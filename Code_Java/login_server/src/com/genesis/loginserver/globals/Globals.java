@@ -45,10 +45,6 @@ public class Globals {
      * Redis连接(运维中心Redis)
      */
     private static RedissonClient redisson;
-    /**
-     * Redis连接(登陆Redis)
-     */
-    private static RedissonClient redissonLogin;
 
     /**
      * 客户端消息分发器
@@ -74,8 +70,6 @@ public class Globals {
         // 4.0初始化Redis访问服务
         Config config = Config.fromYAML(new File("./login_server/config/redisson.yaml"));
         redisson = RedisUtils.createRedisson(config);
-        Config configLogin = Config.fromYAML(new File("./login_server/config/redissonLogin.yaml"));
-        redissonLogin = RedisUtils.createRedisson(configLogin);
         logger.info("Redis访问服务初始化完毕");
 
         // 5.0启动心跳
@@ -90,7 +84,6 @@ public class Globals {
     public static LoginConfig getLoginConfig() { return loginConfig; }
 
     public static RedissonClient getRedisson() { return redisson; }
-    public static RedissonClient getRedissonLogin() { return redissonLogin; }
 
     public static boolean isIsServerOpen() {
         return isServerOpen;
