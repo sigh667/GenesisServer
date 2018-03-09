@@ -94,7 +94,7 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
         }
 
         // 查询是否已经在某个Gate上了
-        final long gateID = findGate(channel, accountId);
+        final int gateID = findGate(channel, accountId);
         if (gateID > ServerIdDef.InvalidServerID) {
             // 将此Client定向到这台Gate上，取代旧连接
             if (!selectGateById(session, gateID, channel, accountId)) {
@@ -119,10 +119,10 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
      * @param accountId
      * @return  找到的GateID
      */
-    private long findGate(String channel, String accountId) {
+    private int findGate(String channel, String accountId) {
         final String key = RedisLoginKey.InGate.builderKey(channel, accountId);
         final RedissonClient redisson = Globals.getRedisson();
-        final RBucket<Long> bucket = redisson.getBucket(key);
+        final RBucket<Integer> bucket = redisson.getBucket(key);
         if (bucket.isExists()) {
             return bucket.get();
         }
@@ -137,10 +137,10 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
      * @param accountId
      * @return 是否成功
      */
-    private boolean selectGateById(IClientSession session, long gateID, String channel, String accountId) {
+    private boolean selectGateById(IClientSession session, int gateID, String channel, String accountId) {
         final String gateKey = ServerType.GATE.getKey();
         final RedissonClient redisson = Globals.getRedisson();
-        RMap<Long, GateInfo> map = redisson.getMap(gateKey);
+        RMap<Integer, GateInfo> map = redisson.getMap(gateKey);
 
         GateInfo gateInfo = map.get(gateID);
         if (gateInfo==null)
