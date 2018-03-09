@@ -67,19 +67,20 @@ public interface IClientSession {
      */
     long getConnectedTime();
 
+    ///////////////////////////////////////////
+    // 用来防止消息重放的自增序号，相关接口
     /**
      * 序号：用来防止客户端消息重放的一种手段
      * @return 序号是否初始化过
      */
     boolean isIndexGenerated();
-
     /**
      * @return 初始化序号
      */
     byte generateIndex();
-
     /**
      * @return 获取序号值，然后++
      */
     byte incIndexAndGet();
+    ///////////////////////////////////////////
 }

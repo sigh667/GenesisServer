@@ -35,8 +35,8 @@ public class CSLoginGateHandler implements IClientMsgHandler<LoginMessage.CSLogi
 
         // 组装待登陆的玩家key
         final String keyToGate = RedisLoginKey.ToGate.builderKey(channel, accountId);
-        final RBucket<LoginClientInfo> bucket = redisson.getBucket(keyToGate);
-        final LoginClientInfo loginClientInfo = bucket.get();
+        final RBucket<LoginClientInfo> bucketToGate = redisson.getBucket(keyToGate);
+        final LoginClientInfo loginClientInfo = bucketToGate.get();
         for (int i = 0; i < loginClientInfo.vCode.size(); i++) {
             if (loginClientInfo.vCode.get(i)!=vCodeList.get(i)) {
                 notifyFailAndDisconnect(session, LoginMessage.LoginGateFailReason.VCODE_WRONG);
@@ -50,7 +50,7 @@ public class CSLoginGateHandler implements IClientMsgHandler<LoginMessage.CSLogi
         final RBucket<Integer> bucketInGate = redisson.getBucket(key);
         bucketInGate.set(Globals.getGateInfo().id);
         // 删除验证信息
-        bucket.delete();
+        bucketToGate.delete();
 
         // 解锁
         if (!AuthUtil.unlock(channel, accountId, redisson)) {
