@@ -1,4 +1,4 @@
-package com.genesis.redis.login;
+package com.genesis.redis.center;
 
 import java.util.HashSet;
 import java.util.Set;

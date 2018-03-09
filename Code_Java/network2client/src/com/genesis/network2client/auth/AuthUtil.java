@@ -1,6 +1,6 @@
 package com.genesis.network2client.auth;
 
-import com.genesis.redis.login.RedisLoginKey;
+import com.genesis.redis.center.RedisLoginKey;
 import org.redisson.api.RBucket;
 import org.redisson.api.RedissonClient;
 

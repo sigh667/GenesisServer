@@ -4,8 +4,8 @@ import com.genesis.network2client.auth.AuthUtil;
 import com.genesis.network2client.process.IClientMsgHandler;
 import com.genesis.loginserver.core.version.Version;
 import com.genesis.redis.center.GateInfo;
-import com.genesis.redis.login.LoginClientInfo;
-import com.genesis.redis.login.RedisLoginKey;
+import com.genesis.redis.center.LoginClientInfo;
+import com.genesis.redis.center.RedisLoginKey;
 import com.genesis.protobuf.LoginMessage;
 import com.mokylin.bleach.core.isc.ServerIdDef;
 import com.mokylin.bleach.core.isc.ServerType;
@@ -18,7 +18,6 @@ import org.redisson.api.RedissonClient;
 
 import java.util.ArrayList;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 /**
  * 客户端登陆
@@ -104,11 +103,6 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
             return;
         }
 
-        // 2.如果有必要，则进入排队列表（一般全球服游戏很少排队）。目前没有此需求
-//        if (enqueue()) {
-//            return;
-//        }
-
         // 3.分配一个Gate给此玩家
         allotGate(session, channel, accountId);
 
@@ -187,20 +181,24 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
         }
     }
 
+    /**
+     * 选择指定的Gate
+     * @param session
+     * @param channel
+     * @param accountId
+     * @param gateInfo
+     */
     private void selectGate(IClientSession session, String channel, String accountId, GateInfo gateInfo) {
-        // 找到了相对空闲的Gate
+        // 生成验证码
         final int length = 16;
-        ArrayList<Integer> vCode = new ArrayList<>();   // 验证码
+        ArrayList<Integer> vCode = new ArrayList<>(length);   // 验证码
         for (int i = 0; i < length; i++) {
             final int nextInt = RandomUtil.nextInt(Integer.MAX_VALUE);
             vCode.add(nextInt);
         }
 
         // 先写入LoginRedis，之后由Gate读取
-        LoginClientInfo loginClientInfo = new LoginClientInfo();
-        loginClientInfo.accountId = accountId;
-        loginClientInfo.channel = channel;
-        loginClientInfo.vCode = vCode;
+        LoginClientInfo loginClientInfo = new LoginClientInfo(channel, accountId, vCode);
         final RedissonClient redissonLogin = Globals.getRedissonLogin();
         // 组装待登陆的玩家key
         final String keyToGate = RedisLoginKey.ToGate.builderKey(channel, accountId);

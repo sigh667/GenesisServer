@@ -10,9 +10,12 @@ import com.mokylin.bleach.core.net.NettyNetworkLayer;
 import com.genesis.network2client.channel.ChannelInitializerImpl;
 import com.genesis.network2client.codec.ClientToServerMessageDecoder;
 import com.genesis.network2client.handle.ClientIoHandler;
+import com.mokylin.bleach.core.util.RandomUtil;
 import io.netty.channel.ChannelHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
 
 /**
  * 网关服务器

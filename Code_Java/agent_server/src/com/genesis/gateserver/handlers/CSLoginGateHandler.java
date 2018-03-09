@@ -5,6 +5,7 @@ import com.genesis.network2client.auth.AuthUtil;
 import com.genesis.network2client.process.IClientMsgHandler;
 import com.genesis.network2client.session.IClientSession;
 import com.genesis.protobuf.LoginMessage;
+import org.redisson.api.RedissonClient;
 
 import java.util.List;
 
@@ -21,9 +22,10 @@ public class CSLoginGateHandler implements IClientMsgHandler<LoginMessage.CSLogi
         final String accountId = csLoginGate.getAccountId();
         final String channel = csLoginGate.getChannel();
         final List<Integer> vCodeList = csLoginGate.getVerificationCodeList();
+        final RedissonClient redissonLogin = Globals.getRedissonLogin();
 
         // 加锁
-        if (!AuthUtil.lock(channel, accountId, Globals.getRedissonLogin())) {
+        if (!AuthUtil.lock(channel, accountId, redissonLogin)) {
             notifyFailAndDisconnect(session, LoginMessage.LoginGateFailReason.YOUR_ACCOUNT_LOGINING);
             return;
         }
@@ -31,7 +33,7 @@ public class CSLoginGateHandler implements IClientMsgHandler<LoginMessage.CSLogi
         // 验证 TODO
 
         // 解锁
-        if (!AuthUtil.unlock(channel, accountId, Globals.getRedissonLogin())) {
+        if (!AuthUtil.unlock(channel, accountId, redissonLogin)) {
             notifyFailAndDisconnect(session, LoginMessage.LoginGateFailReason.YOUR_ACCOUNT_LOGINING);
             return;
         }
