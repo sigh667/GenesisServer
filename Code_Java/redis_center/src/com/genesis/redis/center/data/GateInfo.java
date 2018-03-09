@@ -1,4 +1,4 @@
-package com.genesis.redis.center;
+package com.genesis.redis.center.data;
 
 import com.mokylin.bleach.core.config.model.NetInfo;
 
