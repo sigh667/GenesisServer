@@ -1,5 +1,7 @@
 package com.genesis.redis.center;
 
+import com.mokylin.bleach.core.isc.ServerType;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,12 +25,22 @@ public enum RedisLoginKey {
     private static String separator = ":";  // 分隔符
     private static Set<String> checkSet = new HashSet<>();
     static {
-        // 运行时，自动检测前缀是否重复
+        // 运行时，惰性检测
+        // 1.前缀是否重复
         for (RedisLoginKey e : RedisLoginKey.values()) {
-            if (checkSet.contains(e.prefix)) {
-                throw new RuntimeException("RedisLoginKey's prefix repeated! prefix==" + e.prefix);
-            }
+            insert2CheckSet(e.prefix);
         }
+        // 2.其他key是否重复
+        for (ServerType serverType : ServerType.values()) {
+            insert2CheckSet(serverType.getKey());
+            insert2CheckSet(serverType.getIdKey());
+        }
+    }
+    private static void insert2CheckSet(String key) {
+        if (checkSet.contains(key)) {
+            throw new RuntimeException("RedisKey is repeated! key==" + key);
+        }
+        checkSet.add(key);
     }
 
     private String prefix;
