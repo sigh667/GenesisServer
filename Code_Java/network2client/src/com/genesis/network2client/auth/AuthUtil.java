@@ -51,7 +51,7 @@ public class AuthUtil {
         final RBucket<Boolean> bucket = redissonLogin.getBucket(key);
 
         final boolean bRet = bucket.compareAndSet(true, false);
-        bucket.expire(anthLockExpireSec, TimeUnit.SECONDS);
+        bucket.expire(anthLockExpireSec, TimeUnit.SECONDS);// 设置锁的过期时间，节省内存
         return bRet;
     }
 }

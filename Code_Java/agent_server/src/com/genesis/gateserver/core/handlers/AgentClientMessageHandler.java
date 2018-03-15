@@ -27,7 +27,7 @@ public class AgentClientMessageHandler implements IClientMessageHandler {
     private static final Logger logger = LoggerFactory.getLogger(AgentClientMessageHandler.class);
 
     /**固定线程池*/
-    private FixThreadPool fixThreadPool;
+    private final FixThreadPool fixThreadPool;
 
     public AgentClientMessageHandler(FixThreadPool fixThreadPool) {
         this.fixThreadPool = fixThreadPool;

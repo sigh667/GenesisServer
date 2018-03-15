@@ -5,10 +5,12 @@ import com.genesis.gateserver.core.frontend.gameserver.GameServerFrontManager;
 import com.genesis.network2client.process.ClientMsgHandlerUtil;
 import com.genesis.network2client.process.ClientMsgProcessor;
 import com.genesis.network2client.process.IClientMsgHandler;
+import com.genesis.network2client.runnable.ActionOnExceptionOfLogin;
 import com.genesis.network2client.session.ClientSessionContainer;
 import com.genesis.redis.center.data.GateInfo;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.Parser;
+import com.mokylin.bleach.core.concurrent.fixthreadpool.FixThreadPool;
 import com.mokylin.bleach.core.concurrent.process.CommonProcessType;
 import com.mokylin.bleach.core.concurrent.process.ProcessUnit;
 import com.mokylin.bleach.core.concurrent.process.ProcessUnitHelper;
@@ -41,12 +43,13 @@ public class Globals {
 
     /**Redis线程（需要保证时序的Redis相关任务都可以扔到这里）*/
     private static ProcessUnit redisSingleThread;
-
     /**
      * Redis连接(运维中心Redis)
      */
     private static RedissonClient redisson;
 
+    /**固定线程池*/
+    private static FixThreadPool fixThreadPool;
     /**
      * 客户端消息分发器
      */
@@ -55,7 +58,7 @@ public class Globals {
     /**
      * 心跳服务
      */
-    private static HeartbeatService heartBeatService = null;
+    private static HeartbeatService heartBeatService;
 
     private static GameServerFrontManager gameServerManager = new GameServerFrontManager();
 
@@ -70,22 +73,25 @@ public class Globals {
         clientMsgProcessor = new ClientMsgProcessor(tableMapPair.getLeft(), tableMapPair.getRight());
         logger.info(" 客户端消息分发器初始化完毕.");
 
-        // 3.0初始化Redis访问服务
+        // 3.0初始化逻辑线程(单线程)
+        fixThreadPool = new FixThreadPool(1, new ActionOnExceptionOfLogin());
+
+        // 4.0初始化Redis访问服务
         Config config = Config.fromYAML(new File("./agent_server/config/redisson.yaml"));
         redisson = RedisUtils.createRedisson(config);
         logger.info(" Redis访问服务初始化完毕.");
 
-        // 4.0 通过redis_center生成服务器ID，并向redis_center中插入本服信息
+        // 5.0 通过redis_center生成服务器ID，并向redis_center中插入本服信息
         generatServerID();
 
-        // 5.0 初始化Redis线程
+        // 6.0 初始化Redis线程
         redisSingleThread = ProcessUnitHelper.createSingleProcessUnit("Redis Single");
 
-        // 6.0启动心跳
+        // 7.0启动心跳
         heartBeatService = HeartbeatService.INSTANCE;
         heartBeatService.start(CommonProcessType.MAIN, 1000);
         logger.info("心跳线程启动完毕");
-        // 6.1注册心跳
+        // 7.1注册心跳
         heartBeatService.registerHeartbeat(ClientSessionContainer.Inst);//清理死连接
     }
 
@@ -134,6 +140,9 @@ public class Globals {
             }
         });
     }
+
+
+    public static FixThreadPool getLogicThread() { return fixThreadPool; }
 
     public static GateInfo getGateInfo() { return gateInfo; }
 
