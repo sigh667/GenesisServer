@@ -67,6 +67,8 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
 
         //2.0 认证
         auth(session, channel, accountId, key);
+
+        //需要确认是否可以直接断开连接（怕玩家收不到刚发的消息），如果不行就要注册Timer
     }
 
     /**
