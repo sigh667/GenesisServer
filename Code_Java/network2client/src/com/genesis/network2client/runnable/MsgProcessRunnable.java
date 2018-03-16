@@ -12,15 +12,14 @@ import org.slf4j.LoggerFactory;
  * @author Joey
  *
  */
-public class MsgProcessRunnable implements IRunnableBindId {
+public class MsgProcessRunnable extends IRunnableWithClientSession {
     private static Logger log = LoggerFactory.getLogger(MsgProcessRunnable.class);
 
-    private final IClientSession session;
     private final ClientMsg msg;
     private final ClientMsgProcessor msgProcessor;
 
     public MsgProcessRunnable(IClientSession session, ClientMsg msg, ClientMsgProcessor msgProcessor) {
-        this.session = session;
+        super(session);
         this.msg = msg;
         this.msgProcessor = msgProcessor;
     }
@@ -33,9 +32,5 @@ public class MsgProcessRunnable implements IRunnableBindId {
     @Override
     public long bindId() {
         return session.getSessionId();
-    }
-
-    public IClientSession getSession() {
-        return session;
     }
 }

@@ -162,6 +162,26 @@ public class ServerIoHandler extends ChannelInboundHandlerAdapter {
         }
 
         @Override
+        public void setChannel(String channel) {
+
+        }
+
+        @Override
+        public String getChannel() {
+            return null;
+        }
+
+        @Override
+        public void setAccountId(String accountId) {
+
+        }
+
+        @Override
+        public String getAccountId() {
+            return null;
+        }
+
+        @Override
         public int getTargetGameServerId() {
             return targetGameServerId;
         }

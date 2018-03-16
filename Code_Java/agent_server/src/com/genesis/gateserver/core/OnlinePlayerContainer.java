@@ -1,4 +1,4 @@
-package com.genesis.loginserver.core;
+package com.genesis.gateserver.core;
 
 import com.genesis.network2client.session.IClientSession;
 import com.google.common.collect.HashBasedTable;
@@ -29,6 +29,8 @@ public class OnlinePlayerContainer {
     public static void onLogin(String channel, String accountId, IClientSession session) {
         checkThread();
         sessionsLogined.put(channel,accountId, session);
+        session.setChannel(channel);
+        session.setAccountId(accountId);
     }
 
     /**
@@ -57,7 +59,7 @@ public class OnlinePlayerContainer {
      * 检查线程
      */
     private static void checkThread() {
-        if (threadId== INVALID_THREAD_ID) {
+        if (threadId == INVALID_THREAD_ID) {
             threadId = Thread.currentThread().getId();
         } else {
             final long tmpId = Thread.currentThread().getId();

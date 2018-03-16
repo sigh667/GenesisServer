@@ -147,6 +147,11 @@ public class ClientIoHandler extends ChannelInboundHandlerAdapter {
         /**序号（存放客户端上次发来的值）*/
         private byte index = 0;
 
+        /**渠道*/
+        private String channel;
+        /**账号*/
+        private String accountId;
+
         GameSession(ChannelHandlerContext ctx) {
             this.ctx = ctx;
             sessionId = IdGenerator.getNextId();
@@ -183,6 +188,26 @@ public class ClientIoHandler extends ChannelInboundHandlerAdapter {
         @Override
         public long getSessionId() {
             return sessionId;
+        }
+
+        @Override
+        public void setChannel(String channel) {
+            this.channel = channel;
+        }
+
+        @Override
+        public String getChannel() {
+            return channel;
+        }
+
+        @Override
+        public void setAccountId(String accountId) {
+            this.accountId = accountId;
+        }
+
+        @Override
+        public String getAccountId() {
+            return accountId;
         }
 
         @Override

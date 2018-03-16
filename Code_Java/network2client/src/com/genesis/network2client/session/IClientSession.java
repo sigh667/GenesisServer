@@ -33,6 +33,13 @@ public interface IClientSession {
      */
     long getSessionId();
 
+    /**渠道*/
+    void setChannel(String channel);
+    String getChannel();
+    /**账号ID*/
+    void setAccountId(String accountId);
+    String getAccountId();
+
     /**
      * 此连接要登入的GameServer的ID
      * @return

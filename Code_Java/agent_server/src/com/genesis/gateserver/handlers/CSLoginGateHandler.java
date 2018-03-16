@@ -1,5 +1,6 @@
 package com.genesis.gateserver.handlers;
 
+import com.genesis.gateserver.core.OnlinePlayerContainer;
 import com.genesis.gateserver.global.Globals;
 import com.genesis.network2client.auth.AuthUtil;
 import com.genesis.network2client.process.IClientMsgHandler;
@@ -57,6 +58,9 @@ public class CSLoginGateHandler implements IClientMsgHandler<LoginMessage.CSLogi
             notifyFailAndDisconnect(session, LoginMessage.LoginGateFailReason.YOUR_ACCOUNT_LOGINING);
             return;
         }
+
+        // 标记登陆状态
+        OnlinePlayerContainer.onLogin(channel, accountId, session);
     }
 
     /**
