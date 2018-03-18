@@ -29,7 +29,6 @@ dependencies {
     compile project(":protobuf")
     compile project(":core")
     compile project(":common")
-    compile project(":client_msg")
 }
 
 sourceSets {

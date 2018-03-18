@@ -32,6 +32,7 @@ dependencies {
     compile project(":common")
     compile project(":network2client")
     compile project(":server_msg")
+    compile project(":redis_center")
 }
 
 sourceSets {

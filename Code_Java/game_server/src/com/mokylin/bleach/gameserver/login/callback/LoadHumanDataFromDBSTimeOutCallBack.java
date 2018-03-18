@@ -50,9 +50,9 @@ public class LoadHumanDataFromDBSTimeOutCallBack implements ITimeoutCallback {
                 player.getChannel(), player.getId(), humanInfo.getId());
 
         //告知玩家，数据加载失败
-        SCLoginFail msg = SCLoginFail.newBuilder()
-                .setFailReason(LoginFailReason.LOAD_ROLE_FAIL).build();
-        player.sendMessage(msg);
+        //        SCLoginFail msg = SCLoginFail.newBuilder()
+        //                .setFailReason(LoginFailReason.LOAD_ROLE_FAIL).build();
+        //        player.sendMessage(msg);
 
         //断开连接
         player.disconnect();

@@ -27,13 +27,16 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 
     compile project(":core")
-    compile project(":redis_center")
 }
 
 sourceSets {
     main {
         java {
             srcDirs = ['src']
+        }
+
+        resources {
+            srcDir 'config'
         }
     }
 }

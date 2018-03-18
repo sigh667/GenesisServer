@@ -28,8 +28,8 @@ public class LoadHumanDataFailedFunc
         Player player = msg.player;
         if (player.getStatus() != LoginStatus.Logouting) {
             player.setStatus(LoginStatus.LoadingHumanFailed);
-            player.sendMessage(SCLoginFail.newBuilder()
-                    .setFailReason(LoginFailReason.LOAD_ROLE_FAIL));
+            //            player.sendMessage(SCLoginFail.newBuilder()
+            //                    .setFailReason(LoginFailReason.LOAD_ROLE_FAIL));
             player.disconnect();
         } else {
             playerManagerArgs.onlinePlayerService
