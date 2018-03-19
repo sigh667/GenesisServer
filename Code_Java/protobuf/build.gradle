@@ -13,6 +13,7 @@ apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
 apply plugin: 'idea'
 apply plugin: 'maven'
+apply from: "../gradle/common.gradle"
 
 sourceCompatibility = 1.8
 
