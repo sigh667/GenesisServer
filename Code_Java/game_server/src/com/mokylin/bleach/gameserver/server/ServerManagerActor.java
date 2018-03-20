@@ -4,7 +4,7 @@ import com.mokylin.bleach.core.isc.ServerType;
 import com.mokylin.bleach.core.isc.remote.actorrefs.annotation.MessageAcception;
 import com.mokylin.bleach.gameserver.core.config.GameServerConfig;
 import com.genesis.protobuf.MessageType.MessageTarget;
-import com.mokylin.bleach.servermsg.gameserver.server.StartNewServer;
+import com.genesis.servermsg.gameserver.server.StartNewServer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

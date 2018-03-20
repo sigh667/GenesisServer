@@ -5,7 +5,7 @@ import com.mokylin.bleach.core.isc.remote.IRemote;
 import com.mokylin.bleach.core.msgfunc.MsgArgs;
 import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
 import com.genesis.protobuf.MessageType.MessageTarget;
-import com.mokylin.bleach.servermsg.agentserver.RemovePlayerMsg;
+import com.genesis.servermsg.agentserver.RemovePlayerMsg;
 import com.genesis.network2client.session.IClientSession;
 
 public class RemovePlayerMsgFunc implements IServerMsgFunc<RemovePlayerMsg, MsgArgs, MsgArgs> {

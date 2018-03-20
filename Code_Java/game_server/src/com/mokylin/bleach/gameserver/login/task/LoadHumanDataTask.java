@@ -29,7 +29,7 @@ import com.mokylin.bleach.gameserver.login.protocol.LoadHumanDataSuccess;
 import com.mokylin.bleach.gameserver.player.LoginStatus;
 import com.mokylin.bleach.gameserver.player.Player;
 import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
-import com.mokylin.bleach.servermsg.dataserver.LoadHumanDataMessage;
+import com.genesis.servermsg.dataserver.LoadHumanDataMessage;
 
 import org.slf4j.Logger;
 

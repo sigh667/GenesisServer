@@ -4,7 +4,7 @@ import com.mokylin.bleach.core.annotation.NotThreadSafe;
 import com.mokylin.bleach.core.isc.remote.IRemote;
 import com.mokylin.bleach.core.isc.session.PlayerSession;
 import com.mokylin.bleach.gameserver.core.global.Globals;
-import com.mokylin.bleach.servermsg.agentserver.RemovePlayerMsg;
+import com.genesis.servermsg.agentserver.RemovePlayerMsg;
 
 /**
  * 玩家的Session对象。<p>

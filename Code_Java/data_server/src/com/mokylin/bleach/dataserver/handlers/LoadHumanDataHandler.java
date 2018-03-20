@@ -8,7 +8,7 @@ import com.mokylin.bleach.dataserver.serverdb.ServerDBManager;
 import com.mokylin.bleach.dataserver.serverdb.ServerDBService;
 import com.mokylin.bleach.dataserver.serverdb.task.LoadHumanDataTask;
 import com.genesis.protobuf.MessageType.MessageTarget;
-import com.mokylin.bleach.servermsg.dataserver.LoadHumanDataMessage;
+import com.genesis.servermsg.dataserver.LoadHumanDataMessage;
 
 /**
  * GameServer请求某角色的全部数据

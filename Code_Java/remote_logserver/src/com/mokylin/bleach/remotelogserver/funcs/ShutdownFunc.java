@@ -5,7 +5,7 @@ import com.mokylin.bleach.core.msgfunc.MsgArgs;
 import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
 import com.genesis.protobuf.MessageType.MessageTarget;
 import com.mokylin.bleach.remotelogserver.Globals;
-import com.mokylin.bleach.servermsg.remotelogserver.Shutdown;
+import com.genesis.servermsg.remotelogserver.Shutdown;
 
 /**
  * 关闭日志服务器的消息处理器

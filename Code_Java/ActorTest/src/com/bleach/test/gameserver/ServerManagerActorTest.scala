@@ -13,7 +13,7 @@ import com.mokylin.bleach.core.isc.ServerType
 import com.mokylin.bleach.core.redis.RedisService
 import com.mokylin.bleach.gameserver.core.global.Globals
 import com.mokylin.bleach.gameserver.server.ServerManagerActor
-import com.mokylin.bleach.servermsg.gameserver.server.StartNewServer
+import StartNewServer
 import akka.actor.ActorSystem
 import akka.actor.Props
 import akka.testkit.TestKit

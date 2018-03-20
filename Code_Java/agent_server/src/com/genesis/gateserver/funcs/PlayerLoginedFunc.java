@@ -9,7 +9,7 @@ import com.mokylin.bleach.core.isc.remote.IRemote;
 import com.mokylin.bleach.core.msgfunc.MsgArgs;
 import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
 import com.genesis.protobuf.MessageType.MessageTarget;
-import com.mokylin.bleach.servermsg.agentserver.PlayerLogined;
+import com.genesis.servermsg.agentserver.PlayerLogined;
 
 public class PlayerLoginedFunc implements IServerMsgFunc<PlayerLogined, MsgArgs, MsgArgs> {
 

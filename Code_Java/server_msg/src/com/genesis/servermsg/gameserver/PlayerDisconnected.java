@@ -1,4 +1,4 @@
-package com.mokylin.bleach.servermsg.gameserver;
+package com.genesis.servermsg.gameserver;
 
 import com.mokylin.bleach.core.isc.msg.IMessage;
 import com.genesis.protobuf.MessageType.MessageTarget;

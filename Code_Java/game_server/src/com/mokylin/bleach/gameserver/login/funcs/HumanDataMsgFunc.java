@@ -11,7 +11,7 @@ import com.mokylin.bleach.gameserver.player.LoginStatus;
 import com.mokylin.bleach.gameserver.player.Player;
 import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
 import com.genesis.protobuf.MessageType.MessageTarget;
-import com.mokylin.bleach.servermsg.gameserver.HumanDataMsg;
+import com.genesis.servermsg.gameserver.HumanDataMsg;
 
 /**
  * 处理DataServer返回的加载角色消息的函数对象。<p>

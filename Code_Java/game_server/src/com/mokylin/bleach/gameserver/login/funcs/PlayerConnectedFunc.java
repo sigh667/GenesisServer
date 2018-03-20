@@ -6,7 +6,7 @@ import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.player.Player;
 import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
 import com.genesis.protobuf.MessageType.MessageTarget;
-import com.mokylin.bleach.servermsg.gameserver.PlayerConnected;
+import com.genesis.servermsg.gameserver.PlayerConnected;
 
 /**
  * 处理AgentServer发来的PlayerConnneted消息的函数对象。该消息在玩家上线连接后触发。<p>

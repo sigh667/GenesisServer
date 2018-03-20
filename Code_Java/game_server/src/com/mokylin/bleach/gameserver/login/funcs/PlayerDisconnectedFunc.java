@@ -10,7 +10,7 @@ import com.mokylin.bleach.gameserver.player.LoginStatus;
 import com.mokylin.bleach.gameserver.player.Player;
 import com.mokylin.bleach.gameserver.player.PlayerManagerArgs;
 import com.genesis.protobuf.MessageType.MessageTarget;
-import com.mokylin.bleach.servermsg.gameserver.PlayerDisconnected;
+import com.genesis.servermsg.gameserver.PlayerDisconnected;
 
 /**
  *

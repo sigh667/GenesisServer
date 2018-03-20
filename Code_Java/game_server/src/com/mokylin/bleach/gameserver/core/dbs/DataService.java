@@ -2,7 +2,7 @@ package com.mokylin.bleach.gameserver.core.dbs;
 
 import com.mokylin.bleach.core.isc.remote.IRemote;
 import com.mokylin.bleach.gameserver.core.global.Globals;
-import com.mokylin.bleach.servermsg.dataserver.LoadHumanDataMessage;
+import com.genesis.servermsg.dataserver.LoadHumanDataMessage;
 
 import java.util.concurrent.ConcurrentHashMap;
 

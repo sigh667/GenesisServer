@@ -4,8 +4,8 @@ import com.mokylin.bleach.core.isc.remote.IRemote;
 import com.mokylin.bleach.core.msgfunc.MsgArgs;
 import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
 import com.genesis.protobuf.MessageType.MessageTarget;
-import com.mokylin.bleach.servermsg.agentserver.AcceptPlayer;
-import com.mokylin.bleach.servermsg.loginserver.PlayerLogout;
+import com.genesis.servermsg.agentserver.AcceptPlayer;
+import com.genesis.servermsg.loginserver.PlayerLogout;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

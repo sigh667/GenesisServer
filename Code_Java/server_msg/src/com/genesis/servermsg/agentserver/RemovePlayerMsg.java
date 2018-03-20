@@ -1,4 +1,4 @@
-package com.mokylin.bleach.servermsg.agentserver;
+package com.genesis.servermsg.agentserver;
 
 /**
  * 断开某玩家的链接并将其移除

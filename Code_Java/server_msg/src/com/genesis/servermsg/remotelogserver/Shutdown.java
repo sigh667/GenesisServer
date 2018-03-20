@@ -1,4 +1,4 @@
-package com.mokylin.bleach.servermsg.remotelogserver;
+package com.genesis.servermsg.remotelogserver;
 
 import com.mokylin.bleach.core.isc.msg.IMessage;
 import com.genesis.protobuf.MessageType.MessageTarget;

@@ -1,9 +1,16 @@
-package com.mokylin.bleach.servermsg.agentserver;
+package com.genesis.servermsg.logserver;
 
 import com.mokylin.bleach.core.isc.msg.IMessage;
 import com.genesis.protobuf.MessageType.MessageTarget;
 
-public abstract class AbstractAgentMessage implements IMessage {
+/**
+ * 停服消息
+ *
+ * @author yaguang.xiao
+ *
+ */
+
+public class Shutdown implements IMessage {
 
     @Override
     public MessageTarget getTarget() {

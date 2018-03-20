@@ -8,7 +8,7 @@ import com.mokylin.bleach.gamedb.uuid.UUIDType;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.shop.discount.ShopDiscount;
 import com.genesis.protobuf.MessageType.MessageTarget;
-import com.mokylin.bleach.servermsg.gameserver.shop.ShopDiscountInfo;
+import com.genesis.servermsg.gameserver.shop.ShopDiscountInfo;
 
 /**
  * 添加物品打折信息的处理器

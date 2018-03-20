@@ -14,7 +14,7 @@ import com.mokylin.bleach.gameserver.core.persistance.DataUpdater;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.login.protocol.RemoveHumanInfoMsg;
 import com.mokylin.bleach.gameserver.player.exception.PlayerInitException;
-import com.mokylin.bleach.servermsg.agentserver.PlayerLogined;
+import com.genesis.servermsg.agentserver.PlayerLogined;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

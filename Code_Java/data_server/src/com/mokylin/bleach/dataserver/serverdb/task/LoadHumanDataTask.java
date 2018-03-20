@@ -17,8 +17,8 @@ import com.mokylin.bleach.gamedb.redis.key.model.HeroKey;
 import com.mokylin.bleach.gamedb.redis.key.model.HumanKey;
 import com.mokylin.bleach.gamedb.redis.key.model.ItemKey;
 import com.mokylin.bleach.gamedb.redis.key.model.ShopKey;
-import com.mokylin.bleach.servermsg.dataserver.LoadHumanDataMessage;
-import com.mokylin.bleach.servermsg.gameserver.HumanDataMsg;
+import com.genesis.servermsg.dataserver.LoadHumanDataMessage;
+import com.genesis.servermsg.gameserver.HumanDataMsg;
 
 public class LoadHumanDataTask implements Runnable {
 
