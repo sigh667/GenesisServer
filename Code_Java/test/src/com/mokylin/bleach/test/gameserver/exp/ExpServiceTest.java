@@ -3,7 +3,7 @@ package com.mokylin.bleach.test.gameserver.exp;
 import com.genesis.common.exp.ExpData;
 import com.genesis.common.human.template.ExpTemplate;
 import com.mokylin.bleach.core.template.TemplateService;
-import com.mokylin.bleach.gameserver.exp.ExpService;
+import com.genesis.gameserver.exp.ExpService;
 
 import org.junit.BeforeClass;
 import org.junit.Test;

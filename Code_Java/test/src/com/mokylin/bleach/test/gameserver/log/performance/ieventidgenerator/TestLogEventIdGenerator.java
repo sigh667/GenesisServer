@@ -1,6 +1,6 @@
 package com.mokylin.bleach.test.gameserver.log.performance.ieventidgenerator;
 
-import com.mokylin.bleach.gameserver.core.log.LogEventIdGenerator;
+import com.genesis.gameserver.core.log.LogEventIdGenerator;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;

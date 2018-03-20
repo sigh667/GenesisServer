@@ -1,6 +1,6 @@
 package com.mokylin.bleach.test.tools.lang;
 
-import com.mokylin.bleach.gameserver.core.lang.LangContent;
+import com.genesis.gameserver.core.lang.LangContent;
 
 public class LangConstants {
 

@@ -3,7 +3,7 @@ package com.mokylin.bleach.test.gameserver.currency;
 import com.genesis.common.currency.Currency;
 import com.genesis.common.currency.CurrencyPropId;
 import com.mokylin.bleach.gamedb.orm.entity.HumanEntity;
-import com.mokylin.bleach.gameserver.human.Human;
+import com.genesis.gameserver.human.Human;
 import com.mokylin.bleach.test.gameserver.battleprop.MockHuman;
 
 import org.junit.Rule;

@@ -11,8 +11,8 @@ import com.bleach.test.common.ActorTest
 import com.mokylin.bleach.core.config.ServerConfig
 import com.mokylin.bleach.core.isc.ServerType
 import com.mokylin.bleach.core.redis.RedisService
-import com.mokylin.bleach.gameserver.core.global.Globals
-import com.mokylin.bleach.gameserver.server.ServerManagerActor
+import Globals
+import ServerManagerActor
 import StartNewServer
 import akka.actor.ActorSystem
 import akka.actor.Props

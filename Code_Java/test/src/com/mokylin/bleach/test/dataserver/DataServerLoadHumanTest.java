@@ -12,7 +12,7 @@ import com.mokylin.bleach.core.isc.remote.RemoteServerConfig;
 import com.mokylin.bleach.core.isc.remote.actorrefs.SingleTargetActorRef;
 import com.mokylin.bleach.core.msgfunc.MsgArgs;
 import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
-import com.mokylin.bleach.dataserver.globals.Globals;
+import com.genesis.dataserver.globals.Globals;
 import com.mokylin.bleach.gamedb.orm.entity.HumanEntity;
 import com.mokylin.bleach.gamedb.redis.key.model.HumanKey;
 import com.genesis.protobuf.MessageType.MessageTarget;

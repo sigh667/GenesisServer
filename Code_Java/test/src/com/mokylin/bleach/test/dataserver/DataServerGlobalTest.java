@@ -1,6 +1,6 @@
 package com.mokylin.bleach.test.dataserver;
 
-import com.mokylin.bleach.dataserver.globals.Globals;
+import com.genesis.dataserver.globals.Globals;
 import com.mokylin.bleach.gamedb.human.HumanInfo;
 import com.mokylin.bleach.gamedb.orm.entity.AccountEntity;
 import com.mokylin.bleach.gamedb.orm.entity.ArenaSnapEntity;

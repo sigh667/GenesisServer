@@ -1,6 +1,6 @@
 package com.mokylin.bleach.test.gameserver.log.performance;
 
-import com.mokylin.bleach.gameserver.core.log.disruptor.sendlog.SendLogManager;
+import com.genesis.gameserver.core.log.disruptor.sendlog.SendLogManager;
 
 import java.util.Calendar;
 import java.util.Scanner;

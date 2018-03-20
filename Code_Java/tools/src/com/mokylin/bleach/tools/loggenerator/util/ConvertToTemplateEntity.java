@@ -3,7 +3,7 @@ package com.mokylin.bleach.tools.loggenerator.util;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
-import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
+import com.genesis.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.tools.loggenerator.component.LogEntityForTemplate;
 import com.mokylin.bleach.tools.loggenerator.component.LogField;
 import com.mokylin.bleach.tools.loggenerator.component.LogTemplate;

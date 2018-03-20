@@ -7,7 +7,7 @@ import com.genesis.common.prop.battleprop.propeffect.BattlePropEffect;
 import com.genesis.common.prop.battleprop.propeffect.PEIdFactory;
 import com.genesis.common.prop.battleprop.propeffect.PropEffectType;
 import com.genesis.common.prop.battleprop.propholder.Prop;
-import com.mokylin.bleach.gameserver.hero.Hero;
+import com.genesis.gameserver.hero.Hero;
 
 import java.util.List;
 

@@ -10,7 +10,7 @@ import com.mokylin.bleach.core.util.ExcelOperation;
 import com.mokylin.bleach.core.util.ExcelOperation.LoadRowOperation;
 import com.mokylin.bleach.core.util.ExcelOperation.ModifyWorkbookOperation;
 import com.mokylin.bleach.core.util.PoiUtils;
-import com.mokylin.bleach.gameserver.core.lang.LangContent;
+import com.genesis.gameserver.core.lang.LangContent;
 import com.mokylin.bleach.tools.lang.Constants;
 import com.mokylin.bleach.tools.lang.item.ChangeFootprint;
 import com.mokylin.bleach.tools.lang.item.LangItem;

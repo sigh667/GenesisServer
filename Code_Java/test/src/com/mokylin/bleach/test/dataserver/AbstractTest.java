@@ -9,8 +9,8 @@ import com.mokylin.bleach.core.orm.hibernate.HibernateDBService;
 import com.mokylin.bleach.core.redis.IRedis;
 import com.mokylin.bleach.core.redis.RedisService;
 import com.mokylin.bleach.core.redis.config.RedisConfig;
-import com.mokylin.bleach.dataserver.conf.DataServerConfig;
-import com.mokylin.bleach.dataserver.globals.Globals;
+import com.genesis.dataserver.conf.DataServerConfig;
+import com.genesis.dataserver.globals.Globals;
 import com.mokylin.bleach.test.common.util.MultiThread;
 
 import org.junit.After;

@@ -14,9 +14,9 @@ import com.mokylin.bleach.core.template.TemplateService;
 import com.mokylin.bleach.core.time.TimeService;
 import com.mokylin.bleach.core.timeaxis.TimeAxis;
 import com.mokylin.bleach.core.util.TimeUtils;
-import com.mokylin.bleach.gameserver.core.global.Globals;
-import com.mokylin.bleach.gameserver.human.Human;
-import com.mokylin.bleach.gameserver.human.energy.EnergyManager;
+import com.genesis.gameserver.core.global.Globals;
+import com.genesis.gameserver.human.Human;
+import com.genesis.gameserver.human.energy.EnergyManager;
 
 import org.joda.time.LocalTime;
 import org.junit.BeforeClass;

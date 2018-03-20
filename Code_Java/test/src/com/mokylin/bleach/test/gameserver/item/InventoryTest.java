@@ -5,10 +5,10 @@ import com.genesis.common.item.template.ItemTemplate;
 import com.mokylin.bleach.core.template.TemplateService;
 import com.mokylin.bleach.core.time.TimeService;
 import com.mokylin.bleach.core.uuid.IUUIDGenerator;
-import com.mokylin.bleach.gameserver.core.global.Globals;
-import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
-import com.mokylin.bleach.gameserver.human.Human;
-import com.mokylin.bleach.gameserver.item.Inventory;
+import com.genesis.gameserver.core.global.Globals;
+import com.genesis.gameserver.core.global.ServerGlobals;
+import com.genesis.gameserver.human.Human;
+import com.genesis.gameserver.item.Inventory;
 import com.mokylin.bleach.test.dataserver.MockDataUpdater;
 
 import org.junit.Before;

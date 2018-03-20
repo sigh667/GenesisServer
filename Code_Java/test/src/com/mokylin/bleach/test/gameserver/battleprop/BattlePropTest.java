@@ -6,8 +6,8 @@ import com.genesis.common.prop.battleprop.propeffect.BattlePropEffect;
 import com.genesis.common.prop.battleprop.propeffect.PEIdFactory;
 import com.genesis.common.prop.battleprop.propeffect.PropEffectType;
 import com.genesis.common.prop.battleprop.source.PropSourceType;
-import com.mokylin.bleach.gameserver.hero.Hero;
-import com.mokylin.bleach.gameserver.human.Human;
+import com.genesis.gameserver.hero.Hero;
+import com.genesis.gameserver.human.Human;
 import com.genesis.protobuf.HeroMessage.GCChangedProps;
 import com.genesis.protobuf.HeroMessage.PropData;
 

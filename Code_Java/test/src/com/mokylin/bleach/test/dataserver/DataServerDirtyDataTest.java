@@ -1,13 +1,13 @@
 package com.mokylin.bleach.test.dataserver;
 
-import com.mokylin.bleach.dataserver.globals.Globals;
+import com.genesis.dataserver.globals.Globals;
 import com.mokylin.bleach.gamedb.orm.entity.ItemEntity;
 import com.mokylin.bleach.gamedb.redis.DbOp;
 import com.mokylin.bleach.gamedb.redis.DirtyDataInfo;
 import com.mokylin.bleach.gamedb.redis.key.SpecialRedisKeyBuilder;
 import com.mokylin.bleach.gamedb.redis.key.model.ItemKey;
-import com.mokylin.bleach.gameserver.core.persistance.IDataUpdater;
-import com.mokylin.bleach.gameserver.item.Item;
+import com.genesis.gameserver.core.persistance.IDataUpdater;
+import com.genesis.gameserver.item.Item;
 import com.mokylin.bleach.test.dataserver.gamedb.ItemTable;
 
 import org.junit.Assert;

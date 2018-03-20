@@ -1,7 +1,7 @@
 package com.mokylin.bleach.test.dataserver;
 
 import com.mokylin.bleach.gamedb.persistance.PersistanceWrapper;
-import com.mokylin.bleach.gameserver.core.persistance.IDataUpdater;
+import com.genesis.gameserver.core.persistance.IDataUpdater;
 
 public class MockDataUpdater implements IDataUpdater {
 

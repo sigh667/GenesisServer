@@ -4,8 +4,8 @@ import com.google.common.collect.Lists;
 import com.google.protobuf.GeneratedMessage;
 
 import com.mokylin.bleach.gamedb.human.HumanInfo;
-import com.mokylin.bleach.gameserver.hero.Hero;
-import com.mokylin.bleach.gameserver.human.Human;
+import com.genesis.gameserver.hero.Hero;
+import com.genesis.gameserver.human.Human;
 import com.genesis.protobuf.HeroMessage.GCChangedProps;
 import com.mokylin.bleach.test.dataserver.MockDataUpdater;
 

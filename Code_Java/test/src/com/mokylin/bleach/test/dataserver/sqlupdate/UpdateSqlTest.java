@@ -5,7 +5,7 @@ import com.google.common.collect.Sets;
 
 import com.mokylin.bleach.core.orm.hibernate.HibernateDBService;
 import com.mokylin.bleach.core.reflect.PrivateUtil;
-import com.mokylin.bleach.dataserver.sqlupdate.SqlUpdate;
+import com.genesis.dataserver.sqlupdate.SqlUpdate;
 
 import org.junit.Test;
 

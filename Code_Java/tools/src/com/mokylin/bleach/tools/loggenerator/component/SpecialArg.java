@@ -5,9 +5,9 @@ import com.google.common.collect.Sets;
 
 import com.genesis.common.currency.CurrencyPropId;
 import com.genesis.common.human.HumanPropId;
-import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
-import com.mokylin.bleach.gameserver.human.Human;
-import com.mokylin.bleach.gameserver.player.Player;
+import com.genesis.gameserver.core.global.ServerGlobals;
+import com.genesis.gameserver.human.Human;
+import com.genesis.gameserver.player.Player;
 
 import java.util.Map;
 import java.util.Set;
