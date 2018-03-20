@@ -1,8 +1,8 @@
 package com.mokylin.bleach.gameserver.hero.equip;
 
-import com.mokylin.bleach.common.hero.HeroConstants;
-import com.mokylin.bleach.common.hero.template.HeroAttrTemplate;
-import com.mokylin.bleach.common.prop.battleprop.source.PropSourceType;
+import com.genesis.common.hero.HeroConstants;
+import com.genesis.common.hero.template.HeroAttrTemplate;
+import com.genesis.common.prop.battleprop.source.PropSourceType;
 import com.mokylin.bleach.gamedb.orm.vo.HeroEquip;
 import com.mokylin.bleach.gameserver.hero.Hero;
 import com.mokylin.bleach.gameserver.human.Human;

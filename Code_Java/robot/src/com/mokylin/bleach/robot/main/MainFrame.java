@@ -1,7 +1,7 @@
 package com.mokylin.bleach.robot.main;
 
-import com.mokylin.bleach.common.currency.Currency;
-import com.mokylin.bleach.common.human.HumanPropId;
+import com.genesis.common.currency.Currency;
+import com.genesis.common.human.HumanPropId;
 import com.genesis.protobuf.HumanMessage.GCHumanDetailInfo;
 import com.mokylin.bleach.robot.currency.CurrencyManager;
 import com.mokylin.bleach.robot.font.FontFactory;

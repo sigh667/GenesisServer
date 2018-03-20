@@ -3,8 +3,8 @@ package com.mokylin.bleach.tools.loggenerator.component;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 
-import com.mokylin.bleach.common.currency.CurrencyPropId;
-import com.mokylin.bleach.common.human.HumanPropId;
+import com.genesis.common.currency.CurrencyPropId;
+import com.genesis.common.human.HumanPropId;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.gameserver.player.Player;

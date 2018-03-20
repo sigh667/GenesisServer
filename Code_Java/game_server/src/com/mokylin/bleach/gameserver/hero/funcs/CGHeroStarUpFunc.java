@@ -1,8 +1,8 @@
 package com.mokylin.bleach.gameserver.hero.funcs;
 
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.currency.Currency;
-import com.mokylin.bleach.common.hero.template.HeroGrowStarTemplate;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.currency.Currency;
+import com.genesis.common.hero.template.HeroGrowStarTemplate;
 import com.mokylin.bleach.gameserver.core.global.Globals;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.core.msgfunc.playeractor.PlayerActorMsgFunc;

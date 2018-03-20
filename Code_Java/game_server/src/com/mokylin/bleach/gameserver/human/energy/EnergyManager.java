@@ -1,9 +1,9 @@
 package com.mokylin.bleach.gameserver.human.energy;
 
 
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.dailyrefresh.DailyTaskType;
-import com.mokylin.bleach.common.human.HumanPropId;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.dailyrefresh.DailyTaskType;
+import com.genesis.common.human.HumanPropId;
 import com.mokylin.bleach.core.util.MathUtils;
 import com.mokylin.bleach.gameserver.core.global.Globals;
 import com.mokylin.bleach.gameserver.human.Human;

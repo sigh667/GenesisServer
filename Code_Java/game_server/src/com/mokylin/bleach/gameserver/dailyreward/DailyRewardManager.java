@@ -1,6 +1,6 @@
 package com.mokylin.bleach.gameserver.dailyreward;
 
-import com.mokylin.bleach.common.dailyrefresh.DailyTaskType;
+import com.genesis.common.dailyrefresh.DailyTaskType;
 import com.mokylin.bleach.core.timeaxis.ITimeEvent;
 import com.mokylin.bleach.core.timeaxis.ITimeEventType;
 import com.mokylin.bleach.core.util.TimeUtils;

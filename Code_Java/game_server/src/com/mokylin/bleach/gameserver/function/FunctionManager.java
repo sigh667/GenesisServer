@@ -2,9 +2,9 @@ package com.mokylin.bleach.gameserver.function;
 
 import com.google.common.collect.Maps;
 
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.function.FunctionType;
-import com.mokylin.bleach.common.function.template.FunctionTemplate;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.function.FunctionType;
+import com.genesis.common.function.template.FunctionTemplate;
 import com.mokylin.bleach.gamedb.orm.entity.FunctionEntity;
 import com.mokylin.bleach.gamedb.uuid.UUIDType;
 import com.mokylin.bleach.gameserver.core.global.Globals;

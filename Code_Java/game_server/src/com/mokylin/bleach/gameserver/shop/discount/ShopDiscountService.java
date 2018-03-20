@@ -2,7 +2,7 @@ package com.mokylin.bleach.gameserver.shop.discount;
 
 import com.google.common.collect.Maps;
 
-import com.mokylin.bleach.common.shop.ShopType;
+import com.genesis.common.shop.ShopType;
 import com.mokylin.bleach.gamedb.orm.entity.ShopDiscountEntity;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 

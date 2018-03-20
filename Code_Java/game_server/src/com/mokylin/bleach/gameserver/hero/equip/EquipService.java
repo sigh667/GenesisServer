@@ -1,9 +1,9 @@
 package com.mokylin.bleach.gameserver.hero.equip;
 
-import com.mokylin.bleach.common.core.excelmodel.TempAttrNode3Col;
-import com.mokylin.bleach.common.item.template.ItemTemplate;
-import com.mokylin.bleach.common.prop.battleprop.propeffect.BattlePropEffect;
-import com.mokylin.bleach.common.prop.battleprop.propeffect.PropEffectConverter;
+import com.genesis.common.core.excelmodel.TempAttrNode3Col;
+import com.genesis.common.item.template.ItemTemplate;
+import com.genesis.common.prop.battleprop.propeffect.BattlePropEffect;
+import com.genesis.common.prop.battleprop.propeffect.PropEffectConverter;
 import com.mokylin.bleach.core.template.TemplateService;
 
 import java.util.ArrayList;

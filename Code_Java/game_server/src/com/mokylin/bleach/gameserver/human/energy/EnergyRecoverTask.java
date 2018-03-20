@@ -1,6 +1,6 @@
 package com.mokylin.bleach.gameserver.human.energy;
 
-import com.mokylin.bleach.common.core.GlobalData;
+import com.genesis.common.core.GlobalData;
 import com.mokylin.bleach.core.timeaxis.ITimeEvent;
 import com.mokylin.bleach.core.timeaxis.ITimeEventType;
 import com.mokylin.bleach.gameserver.human.Human;

@@ -1,8 +1,8 @@
 package com.mokylin.bleach.gameserver.hero;
 
-import com.mokylin.bleach.common.prop.IProp;
-import com.mokylin.bleach.common.prop.PropScope;
-import com.mokylin.bleach.common.prop.PropType;
+import com.genesis.common.prop.IProp;
+import com.genesis.common.prop.PropScope;
+import com.genesis.common.prop.PropType;
 
 import java.util.Map;
 

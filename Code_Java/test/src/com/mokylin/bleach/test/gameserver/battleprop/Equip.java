@@ -1,9 +1,9 @@
 package com.mokylin.bleach.test.gameserver.battleprop;
 
-import com.mokylin.bleach.common.prop.battleprop.BattlePropContainer;
-import com.mokylin.bleach.common.prop.battleprop.propholder.IPropHolder;
-import com.mokylin.bleach.common.prop.battleprop.propholder.Prop;
-import com.mokylin.bleach.common.prop.battleprop.source.PropSourceType;
+import com.genesis.common.prop.battleprop.BattlePropContainer;
+import com.genesis.common.prop.battleprop.propholder.IPropHolder;
+import com.genesis.common.prop.battleprop.propholder.Prop;
+import com.genesis.common.prop.battleprop.source.PropSourceType;
 
 public class Equip implements IPropHolder<EquipPropPart> {
 

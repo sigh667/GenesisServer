@@ -1,6 +1,6 @@
 package com.mokylin.bleach.gameserver.window.funcs;
 
-import com.mokylin.bleach.common.window.Window;
+import com.genesis.common.window.Window;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.core.msgfunc.AbstractClientMsgFunc;
 import com.mokylin.bleach.gameserver.human.Human;

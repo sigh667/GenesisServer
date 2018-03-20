@@ -3,12 +3,12 @@ package com.mokylin.bleach.gameserver.hero.star;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
 
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.core.excelmodel.TempAttrNode2Col;
-import com.mokylin.bleach.common.hero.template.HeroGrowStarTemplate;
-import com.mokylin.bleach.common.hero.template.HeroGrowTemplate;
-import com.mokylin.bleach.common.prop.battleprop.propeffect.BattlePropEffect;
-import com.mokylin.bleach.common.prop.battleprop.propeffect.PropEffectConverter;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.core.excelmodel.TempAttrNode2Col;
+import com.genesis.common.hero.template.HeroGrowStarTemplate;
+import com.genesis.common.hero.template.HeroGrowTemplate;
+import com.genesis.common.prop.battleprop.propeffect.BattlePropEffect;
+import com.genesis.common.prop.battleprop.propeffect.PropEffectConverter;
 import com.mokylin.bleach.core.template.TemplateService;
 
 import java.util.ArrayList;

@@ -4,8 +4,8 @@ import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Table;
 
-import com.mokylin.bleach.common.item.ItemType;
-import com.mokylin.bleach.common.item.template.ItemTemplate;
+import com.genesis.common.item.ItemType;
+import com.genesis.common.item.template.ItemTemplate;
 import com.mokylin.bleach.core.template.TemplateService;
 import com.mokylin.bleach.core.util.RandomUtil;
 

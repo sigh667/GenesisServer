@@ -1,4 +1,4 @@
-com.mokylin.bleach.common.shop.ShopType shopType;//商店类型
+com.genesis.common.shop.ShopType shopType;//商店类型
 int sellPosition;[notNull=false;minValue=0]//出售位置
 int storeRoomId;[notNull=true]//库Id
 int baseNum;[notNull=true]//基础数量

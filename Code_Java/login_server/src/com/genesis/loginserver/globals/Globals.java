@@ -7,7 +7,7 @@ import com.genesis.network2client.process.ClientMsgProcessor;
 import com.genesis.network2client.process.IClientMsgHandler;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.Parser;
-import com.mokylin.bleach.common.core.GlobalData;
+import com.genesis.common.core.GlobalData;
 import com.mokylin.bleach.core.concurrent.process.CommonProcessType;
 import com.mokylin.bleach.core.config.ConfigBuilder;
 import com.mokylin.bleach.core.heartbeat.HeartbeatService;

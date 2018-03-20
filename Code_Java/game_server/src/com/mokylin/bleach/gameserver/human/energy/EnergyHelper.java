@@ -1,8 +1,8 @@
 package com.mokylin.bleach.gameserver.human.energy;
 
 
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.human.template.EnergyTemplate;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.human.template.EnergyTemplate;
 
 import java.util.Map;
 

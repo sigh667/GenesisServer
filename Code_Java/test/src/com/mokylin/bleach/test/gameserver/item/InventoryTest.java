@@ -1,7 +1,7 @@
 package com.mokylin.bleach.test.gameserver.item;
 
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.item.template.ItemTemplate;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.item.template.ItemTemplate;
 import com.mokylin.bleach.core.template.TemplateService;
 import com.mokylin.bleach.core.time.TimeService;
 import com.mokylin.bleach.core.uuid.IUUIDGenerator;

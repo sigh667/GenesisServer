@@ -1,11 +1,11 @@
 package com.mokylin.bleach.gameserver.human.energy.funcs;
 
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.currency.Currency;
-import com.mokylin.bleach.common.human.CostByCountsType;
-import com.mokylin.bleach.common.human.HumanPropId;
-import com.mokylin.bleach.common.human.vip.VipPrivilege;
-import com.mokylin.bleach.common.human.vip.VipPrivilegeType;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.currency.Currency;
+import com.genesis.common.human.CostByCountsType;
+import com.genesis.common.human.HumanPropId;
+import com.genesis.common.human.vip.VipPrivilege;
+import com.genesis.common.human.vip.VipPrivilegeType;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.core.msgfunc.AbstractClientMsgFunc;
 import com.mokylin.bleach.gameserver.human.Human;

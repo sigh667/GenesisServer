@@ -1,7 +1,7 @@
 package com.mokylin.bleach.gameserver.core.log;
 
-import com.mokylin.bleach.common.currency.CurrencyPropId;
-import com.mokylin.bleach.common.human.HumanPropId;
+import com.genesis.common.currency.CurrencyPropId;
+import com.genesis.common.human.HumanPropId;
 import com.mokylin.bleach.core.time.TimeService;
 import com.mokylin.bleach.gameserver.core.global.Globals;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;

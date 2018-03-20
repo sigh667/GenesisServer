@@ -1,13 +1,13 @@
 package com.mokylin.bleach.gameserver.hero;
 
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.exp.ExpData;
-import com.mokylin.bleach.common.hero.template.HeroAttrTemplate;
-import com.mokylin.bleach.common.hero.template.HeroGroupTemplate;
-import com.mokylin.bleach.common.human.HumanPropId;
-import com.mokylin.bleach.common.human.template.ExpTemplate;
-import com.mokylin.bleach.common.prop.battleprop.BattlePropContainer;
-import com.mokylin.bleach.common.prop.battleprop.HeroBattlePropId;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.exp.ExpData;
+import com.genesis.common.hero.template.HeroAttrTemplate;
+import com.genesis.common.hero.template.HeroGroupTemplate;
+import com.genesis.common.human.HumanPropId;
+import com.genesis.common.human.template.ExpTemplate;
+import com.genesis.common.prop.battleprop.BattlePropContainer;
+import com.genesis.common.prop.battleprop.HeroBattlePropId;
 import com.mokylin.bleach.core.util.arr.EnumArray;
 import com.mokylin.bleach.gamedb.orm.entity.HeroEntity;
 import com.mokylin.bleach.gamedb.orm.vo.HeroEquip;

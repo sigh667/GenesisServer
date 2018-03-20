@@ -1,6 +1,6 @@
 package com.mokylin.bleach.robot.currency;
 
-import com.mokylin.bleach.common.currency.Currency;
+import com.genesis.common.currency.Currency;
 import com.mokylin.bleach.core.util.arr.EnumArray;
 import com.mokylin.bleach.robot.human.Human;
 

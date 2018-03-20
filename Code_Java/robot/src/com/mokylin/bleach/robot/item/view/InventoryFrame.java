@@ -1,6 +1,6 @@
 package com.mokylin.bleach.robot.item.view;
 
-import com.mokylin.bleach.common.core.GlobalData;
+import com.genesis.common.core.GlobalData;
 import com.genesis.protobuf.ItemMessage.CGItemSell;
 import com.mokylin.bleach.robot.font.FontFactory;
 import com.mokylin.bleach.robot.item.Inventory;

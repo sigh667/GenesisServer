@@ -1,9 +1,9 @@
 package com.mokylin.bleach.test.gameserver.prop;
 
-import com.mokylin.bleach.common.prop.battleprop.HeroBattlePropId;
-import com.mokylin.bleach.common.prop.battleprop.propeffect.BattlePropEffect;
-import com.mokylin.bleach.common.prop.battleprop.propeffect.PEIdFactory;
-import com.mokylin.bleach.common.prop.battleprop.propeffect.PropEffectType;
+import com.genesis.common.prop.battleprop.HeroBattlePropId;
+import com.genesis.common.prop.battleprop.propeffect.BattlePropEffect;
+import com.genesis.common.prop.battleprop.propeffect.PEIdFactory;
+import com.genesis.common.prop.battleprop.propeffect.PropEffectType;
 import com.mokylin.bleach.gameserver.hero.Hero;
 import com.mokylin.bleach.gameserver.human.Human;
 import com.mokylin.bleach.test.gameserver.battleprop.Equip;

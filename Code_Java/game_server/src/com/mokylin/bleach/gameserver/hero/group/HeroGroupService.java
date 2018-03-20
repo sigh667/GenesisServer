@@ -1,6 +1,6 @@
 package com.mokylin.bleach.gameserver.hero.group;
 
-import com.mokylin.bleach.common.hero.template.HeroAttrTemplate;
+import com.genesis.common.hero.template.HeroAttrTemplate;
 import com.mokylin.bleach.core.template.TemplateService;
 
 import java.util.HashMap;

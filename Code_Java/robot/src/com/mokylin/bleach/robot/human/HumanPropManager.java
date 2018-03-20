@@ -1,7 +1,7 @@
 package com.mokylin.bleach.robot.human;
 
-import com.mokylin.bleach.common.human.HumanPropContainer;
-import com.mokylin.bleach.common.human.HumanPropId;
+import com.genesis.common.human.HumanPropContainer;
+import com.genesis.common.human.HumanPropId;
 
 import java.util.List;
 

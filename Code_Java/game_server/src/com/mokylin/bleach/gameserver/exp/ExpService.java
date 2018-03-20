@@ -1,7 +1,7 @@
 package com.mokylin.bleach.gameserver.exp;
 
-import com.mokylin.bleach.common.exp.ExpData;
-import com.mokylin.bleach.common.human.template.ExpTemplate;
+import com.genesis.common.exp.ExpData;
+import com.genesis.common.human.template.ExpTemplate;
 import com.mokylin.bleach.core.template.TemplateService;
 import com.mokylin.bleach.core.util.MathUtils;
 

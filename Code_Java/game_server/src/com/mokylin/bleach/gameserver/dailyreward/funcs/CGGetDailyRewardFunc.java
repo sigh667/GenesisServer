@@ -1,8 +1,8 @@
 package com.mokylin.bleach.gameserver.dailyreward.funcs;
 
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.dailyreward.template.DailyRewardElemTemplate;
-import com.mokylin.bleach.common.dailyreward.template.DailyRewardsTemplate;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.dailyreward.template.DailyRewardElemTemplate;
+import com.genesis.common.dailyreward.template.DailyRewardsTemplate;
 import com.mokylin.bleach.core.util.TimeUtils;
 import com.mokylin.bleach.gameserver.core.global.Globals;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;

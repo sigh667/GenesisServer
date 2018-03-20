@@ -2,9 +2,9 @@ package com.mokylin.bleach.gameserver.currency;
 
 import com.google.common.collect.Lists;
 
-import com.mokylin.bleach.common.currency.Currency;
-import com.mokylin.bleach.common.currency.CurrencyContainer;
-import com.mokylin.bleach.common.currency.CurrencyPropId;
+import com.genesis.common.currency.Currency;
+import com.genesis.common.currency.CurrencyContainer;
+import com.genesis.common.currency.CurrencyPropId;
 import com.mokylin.bleach.core.util.MathUtils;
 import com.mokylin.bleach.gameserver.core.global.Globals;
 import com.mokylin.bleach.gameserver.currency.event.AddChargeDiamondEvent;

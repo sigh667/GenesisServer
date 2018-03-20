@@ -1,10 +1,10 @@
 package com.mokylin.bleach.gameserver.hero.star;
 
-import com.mokylin.bleach.common.prop.battleprop.BattlePropContainer;
-import com.mokylin.bleach.common.prop.battleprop.propeffect.BattlePropEffect;
-import com.mokylin.bleach.common.prop.battleprop.propholder.IPropHolder;
-import com.mokylin.bleach.common.prop.battleprop.propholder.Prop;
-import com.mokylin.bleach.common.prop.battleprop.source.PropSourceType;
+import com.genesis.common.prop.battleprop.BattlePropContainer;
+import com.genesis.common.prop.battleprop.propeffect.BattlePropEffect;
+import com.genesis.common.prop.battleprop.propholder.IPropHolder;
+import com.genesis.common.prop.battleprop.propholder.Prop;
+import com.genesis.common.prop.battleprop.source.PropSourceType;
 import com.mokylin.bleach.gameserver.core.global.Globals;
 import com.mokylin.bleach.gameserver.hero.Hero;
 

@@ -2,7 +2,7 @@ package com.mokylin.bleach.robot.core;
 
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.Parser;
-import com.mokylin.bleach.common.core.GlobalData;
+import com.genesis.common.core.GlobalData;
 import com.mokylin.bleach.core.event.EventBus;
 import com.mokylin.bleach.robot.core.config.RobotConfig;
 import com.mokylin.bleach.robot.core.msgfunc.GCMsgFunctionService;

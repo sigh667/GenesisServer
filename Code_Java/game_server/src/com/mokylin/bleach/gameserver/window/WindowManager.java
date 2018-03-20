@@ -1,6 +1,6 @@
 package com.mokylin.bleach.gameserver.window;
 
-import com.mokylin.bleach.common.window.Window;
+import com.genesis.common.window.Window;
 
 /**
  * 窗口服务

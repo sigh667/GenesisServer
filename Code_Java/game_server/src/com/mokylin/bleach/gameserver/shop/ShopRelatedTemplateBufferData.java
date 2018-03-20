@@ -4,8 +4,8 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ListMultimap;
 import com.google.common.collect.Maps;
 
-import com.mokylin.bleach.common.shop.ShopType;
-import com.mokylin.bleach.common.shop.template.ShopGoodTemplate;
+import com.genesis.common.shop.ShopType;
+import com.genesis.common.shop.template.ShopGoodTemplate;
 import com.mokylin.bleach.core.template.TemplateService;
 
 import org.joda.time.LocalTime;

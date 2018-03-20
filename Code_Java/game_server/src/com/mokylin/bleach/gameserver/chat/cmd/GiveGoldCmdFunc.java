@@ -1,6 +1,6 @@
 package com.mokylin.bleach.gameserver.chat.cmd;
 
-import com.mokylin.bleach.common.currency.CurrencyPropId;
+import com.genesis.common.currency.CurrencyPropId;
 import com.mokylin.bleach.gameserver.human.Human;
 
 /**

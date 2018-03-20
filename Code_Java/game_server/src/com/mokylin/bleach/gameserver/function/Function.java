@@ -1,6 +1,6 @@
 package com.mokylin.bleach.gameserver.function;
 
-import com.mokylin.bleach.common.function.FunctionType;
+import com.genesis.common.function.FunctionType;
 import com.mokylin.bleach.gamedb.orm.entity.FunctionEntity;
 import com.mokylin.bleach.gameserver.core.persistance.ObjectInSqlImpl;
 import com.mokylin.bleach.gameserver.human.Human;

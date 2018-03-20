@@ -4,12 +4,12 @@ package com.mokylin.bleach.test.gameserver.energy;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
-import com.mokylin.bleach.common.config.Constants;
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.dailyrefresh.DailyTaskType;
-import com.mokylin.bleach.common.dailyrefresh.template.DailyRefreshTimeTemplate;
-import com.mokylin.bleach.common.human.HumanPropId;
-import com.mokylin.bleach.common.human.template.EnergyTemplate;
+import com.genesis.common.config.Constants;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.dailyrefresh.DailyTaskType;
+import com.genesis.common.dailyrefresh.template.DailyRefreshTimeTemplate;
+import com.genesis.common.human.HumanPropId;
+import com.genesis.common.human.template.EnergyTemplate;
 import com.mokylin.bleach.core.template.TemplateService;
 import com.mokylin.bleach.core.time.TimeService;
 import com.mokylin.bleach.core.timeaxis.TimeAxis;

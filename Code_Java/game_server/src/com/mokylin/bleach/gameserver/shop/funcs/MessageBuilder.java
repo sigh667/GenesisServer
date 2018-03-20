@@ -1,7 +1,7 @@
 package com.mokylin.bleach.gameserver.shop.funcs;
 
-import com.mokylin.bleach.common.currency.Currency;
-import com.mokylin.bleach.common.currency.Price;
+import com.genesis.common.currency.Currency;
+import com.genesis.common.currency.Price;
 import com.mokylin.bleach.gameserver.shop.shop.Shop;
 import com.genesis.protobuf.CommonMessage.CurrencyChangeInfo;
 import com.genesis.protobuf.ShopMessage.GCGoodBuySuccess;

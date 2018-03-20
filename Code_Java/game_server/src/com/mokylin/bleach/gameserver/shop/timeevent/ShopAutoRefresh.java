@@ -1,6 +1,6 @@
 package com.mokylin.bleach.gameserver.shop.timeevent;
 
-import com.mokylin.bleach.common.human.HumanPropId;
+import com.genesis.common.human.HumanPropId;
 import com.mokylin.bleach.core.timeaxis.ITimeEventType;
 import com.mokylin.bleach.core.timeaxis.TimeAxis;
 import com.mokylin.bleach.gameserver.core.autoexecutetask.AbstractAutoExecuteTaskWithHandleObjectInSql;

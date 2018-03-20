@@ -1,6 +1,6 @@
 package com.mokylin.bleach.gameserver.chat.cmd;
 
-import com.mokylin.bleach.common.function.FunctionType;
+import com.genesis.common.function.FunctionType;
 import com.mokylin.bleach.gameserver.chat.cmd.core.IGmCmdFunction;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.human.Human;

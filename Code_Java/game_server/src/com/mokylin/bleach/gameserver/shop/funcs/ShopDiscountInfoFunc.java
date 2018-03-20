@@ -1,6 +1,6 @@
 package com.mokylin.bleach.gameserver.shop.funcs;
 
-import com.mokylin.bleach.common.shop.ShopType;
+import com.genesis.common.shop.ShopType;
 import com.mokylin.bleach.core.isc.remote.IRemote;
 import com.mokylin.bleach.core.msgfunc.MsgArgs;
 import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;

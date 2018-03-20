@@ -1,7 +1,7 @@
 package com.mokylin.bleach.robot.item.view.model;
 
-import com.mokylin.bleach.common.item.ItemType;
-import com.mokylin.bleach.common.item.template.ItemTemplate;
+import com.genesis.common.item.ItemType;
+import com.genesis.common.item.template.ItemTemplate;
 import com.mokylin.bleach.robot.item.Item;
 
 /**

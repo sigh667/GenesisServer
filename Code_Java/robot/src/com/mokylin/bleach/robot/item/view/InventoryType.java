@@ -1,6 +1,6 @@
 package com.mokylin.bleach.robot.item.view;
 
-import com.mokylin.bleach.common.item.ItemType;
+import com.genesis.common.item.ItemType;
 
 /**
  * 背包类型

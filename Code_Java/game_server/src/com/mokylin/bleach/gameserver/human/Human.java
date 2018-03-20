@@ -1,15 +1,15 @@
 package com.mokylin.bleach.gameserver.human;
 
 import com.google.protobuf.GeneratedMessage;
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.currency.Currency;
-import com.mokylin.bleach.common.currency.CurrencyPropId;
-import com.mokylin.bleach.common.exp.ExpData;
-import com.mokylin.bleach.common.human.HumanPropContainer;
-import com.mokylin.bleach.common.human.HumanPropId;
-import com.mokylin.bleach.common.human.template.ExpTemplate;
-import com.mokylin.bleach.common.prop.IPropNotifier;
-import com.mokylin.bleach.common.prop.battleprop.notify.PropsToNotify;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.currency.Currency;
+import com.genesis.common.currency.CurrencyPropId;
+import com.genesis.common.exp.ExpData;
+import com.genesis.common.human.HumanPropContainer;
+import com.genesis.common.human.HumanPropId;
+import com.genesis.common.human.template.ExpTemplate;
+import com.genesis.common.prop.IPropNotifier;
+import com.genesis.common.prop.battleprop.notify.PropsToNotify;
 import com.mokylin.bleach.core.msgfunc.MsgArgs;
 import com.mokylin.bleach.core.timeaxis.TimeAxis;
 import com.mokylin.bleach.core.util.MathUtils;

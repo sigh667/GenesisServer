@@ -2,10 +2,10 @@ package com.mokylin.bleach.gameserver.core.humaninfocache;
 
 import com.google.common.collect.HashBasedTable;
 
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.human.template.Name1Template;
-import com.mokylin.bleach.common.human.template.Name2Template;
-import com.mokylin.bleach.common.human.template.Name3Template;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.human.template.Name1Template;
+import com.genesis.common.human.template.Name2Template;
+import com.genesis.common.human.template.Name3Template;
 import com.mokylin.bleach.core.redis.IRedis;
 import com.mokylin.bleach.core.redis.IRedisResponse;
 import com.mokylin.bleach.core.redis.op.IPipelineOp;

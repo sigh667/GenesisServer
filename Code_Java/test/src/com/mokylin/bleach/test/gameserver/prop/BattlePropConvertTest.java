@@ -1,10 +1,10 @@
 package com.mokylin.bleach.test.gameserver.prop;
 
-import com.mokylin.bleach.common.core.excelmodel.TempAttrNode3Col;
-import com.mokylin.bleach.common.prop.battleprop.HeroBattlePropId;
-import com.mokylin.bleach.common.prop.battleprop.propeffect.BattlePropEffect;
-import com.mokylin.bleach.common.prop.battleprop.propeffect.PropEffectConverter;
-import com.mokylin.bleach.common.prop.battleprop.propeffect.PropEffectType;
+import com.genesis.common.core.excelmodel.TempAttrNode3Col;
+import com.genesis.common.prop.battleprop.HeroBattlePropId;
+import com.genesis.common.prop.battleprop.propeffect.BattlePropEffect;
+import com.genesis.common.prop.battleprop.propeffect.PropEffectConverter;
+import com.genesis.common.prop.battleprop.propeffect.PropEffectType;
 
 import org.junit.Test;
 

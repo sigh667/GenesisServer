@@ -1,7 +1,7 @@
 package com.mokylin.bleach.robot.item;
 
-import com.mokylin.bleach.common.item.ItemContainer;
-import com.mokylin.bleach.common.item.template.ItemTemplate;
+import com.genesis.common.item.ItemContainer;
+import com.genesis.common.item.template.ItemTemplate;
 import com.genesis.protobuf.ItemMessage.GCInventoryInfo;
 import com.genesis.protobuf.db.DBInventoryBlob.ItemData;
 import com.mokylin.bleach.robot.human.Human;

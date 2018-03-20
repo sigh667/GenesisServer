@@ -3,9 +3,9 @@ package com.mokylin.bleach.gameserver.item;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.ImmutableSet.Builder;
 
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.item.template.ItemCompoundMaterial;
-import com.mokylin.bleach.common.item.template.ItemCompoundTemplate;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.item.template.ItemCompoundMaterial;
+import com.genesis.common.item.template.ItemCompoundTemplate;
 
 import java.util.Map;
 

@@ -1,7 +1,7 @@
 package com.mokylin.bleach.gameserver.shop.funcs;
 
-import com.mokylin.bleach.common.currency.Price;
-import com.mokylin.bleach.common.shop.ShopType;
+import com.genesis.common.currency.Price;
+import com.genesis.common.shop.ShopType;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.core.msgfunc.AbstractClientMsgFunc;
 import com.mokylin.bleach.gameserver.human.Human;

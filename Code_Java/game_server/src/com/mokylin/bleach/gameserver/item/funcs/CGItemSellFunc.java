@@ -1,7 +1,7 @@
 package com.mokylin.bleach.gameserver.item.funcs;
 
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.item.template.ItemTemplate;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.item.template.ItemTemplate;
 import com.mokylin.bleach.core.util.MathUtils;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.core.msgfunc.AbstractClientMsgFunc;

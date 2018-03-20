@@ -2,9 +2,9 @@ package com.mokylin.bleach.gameserver.shop.shop;
 
 import com.google.common.collect.Lists;
 
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.currency.Price;
-import com.mokylin.bleach.common.item.template.ItemTemplate;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.currency.Price;
+import com.genesis.common.item.template.ItemTemplate;
 import com.genesis.protobuf.ShopMessage.GoodInfo;
 
 import java.util.List;

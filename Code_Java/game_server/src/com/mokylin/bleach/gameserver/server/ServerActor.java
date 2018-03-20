@@ -2,8 +2,8 @@ package com.mokylin.bleach.gameserver.server;
 
 import com.google.common.base.Optional;
 
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.dailyreward.template.DailyRewardsTemplate;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.dailyreward.template.DailyRewardsTemplate;
 import com.mokylin.bleach.core.isc.ServerType;
 import com.mokylin.bleach.core.isc.msg.ServerMessage;
 import com.mokylin.bleach.core.isc.remote.IRemote;

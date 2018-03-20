@@ -1,9 +1,9 @@
 package com.mokylin.bleach.gameserver.item.funcs;
 
-import com.mokylin.bleach.common.core.GlobalData;
-import com.mokylin.bleach.common.currency.Currency;
-import com.mokylin.bleach.common.item.template.ItemCompoundMaterial;
-import com.mokylin.bleach.common.item.template.ItemCompoundTemplate;
+import com.genesis.common.core.GlobalData;
+import com.genesis.common.currency.Currency;
+import com.genesis.common.item.template.ItemCompoundMaterial;
+import com.genesis.common.item.template.ItemCompoundTemplate;
 import com.mokylin.bleach.gameserver.core.global.ServerGlobals;
 import com.mokylin.bleach.gameserver.core.msgfunc.AbstractClientMsgFunc;
 import com.mokylin.bleach.gameserver.human.Human;
