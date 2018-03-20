@@ -43,10 +43,10 @@ import java.util.regex.Pattern;
  */
 public class ExcelTemplateGenerator {
 
-    private static final String path_common = "..\\common\\src\\";
-    private static final String path_gs = "..\\game_server\\src\\";
-    private static final String path_core = "..\\core\\src\\";
-    private static final String path_tool = "..\\tools\\src\\";
+    private static final String path_common = "common/src/";
+    private static final String path_gs = "game_server/src/";
+    private static final String path_core = "core/src/";
+    private static final String path_tool = "tools/src/";
 
     private static final String CONFIG_DIR = "excel/";
     private static final String MODEL_DIR = "excel/model/";
@@ -102,7 +102,7 @@ public class ExcelTemplateGenerator {
 
     private static void initVelocityPath() {
         Properties _vp = new Properties();
-        _vp.put("file.resource.loader.path", "config/excel/template");
+        _vp.put("file.resource.loader.path", "tools/config/excel/template");
         try {
             Velocity.init(_vp);
         } catch (Exception e) {
@@ -193,7 +193,6 @@ public class ExcelTemplateGenerator {
     /**
      * 生成Java VO模板类
      *
-     * @param config
      * @throws IOException
      * @throws UnsupportedEncodingException
      */

@@ -102,7 +102,7 @@ protected $field.fieldType $field.fieldName;
 
 	@Override
 	public String toString() {
-		return "$className[#foreach($field in $fields)$field.fieldName=" + $field.fieldName + ",#end]";
+		return "$className{#foreach($field in $fields)$field.fieldName=" + $field.fieldName + ",#end}";
 
 	}
 }
