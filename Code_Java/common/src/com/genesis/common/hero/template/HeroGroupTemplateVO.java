@@ -1,6 +1,6 @@
 package com.genesis.common.hero.template;
 
-import ExcelRowBinding;
+import com.genesis.core.template.annotation.ExcelRowBinding;
 import com.genesis.core.template.exception.TemplateConfigException;
 import com.genesis.core.template.TemplateObject;
 import com.genesis.core.template.annotation.ExcelCellBinding;

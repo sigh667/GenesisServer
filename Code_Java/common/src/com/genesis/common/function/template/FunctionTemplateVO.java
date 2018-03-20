@@ -1,8 +1,8 @@
 package com.genesis.common.function.template;
 
-import ExcelRowBinding;
 import com.genesis.core.template.TemplateObject;
 import com.genesis.core.template.annotation.ExcelCellBinding;
+import com.genesis.core.template.annotation.ExcelRowBinding;
 
 /**
  * 功能模板
