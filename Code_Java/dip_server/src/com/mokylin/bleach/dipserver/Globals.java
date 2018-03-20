@@ -1,8 +1,8 @@
 package com.mokylin.bleach.dipserver;
 
-import com.mokylin.bleach.core.concurrent.process.ProcessUnit;
-import com.mokylin.bleach.core.concurrent.process.ProcessUnitHelper;
-import com.mokylin.bleach.core.config.ConfigBuilder;
+import com.genesis.core.concurrent.process.ProcessUnit;
+import com.genesis.core.concurrent.process.ProcessUnitHelper;
+import com.genesis.core.config.ConfigBuilder;
 import com.mokylin.bleach.dipserver.core.config.DipServerConfig;
 import com.mokylin.bleach.dipserver.core.handler.HttpRequestHandlerManager;
 

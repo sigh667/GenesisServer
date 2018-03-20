@@ -2,8 +2,8 @@ package com.genesis.gameserver.human.energy;
 
 import com.genesis.common.core.GlobalData;
 import com.genesis.gameserver.human.Human;
-import com.mokylin.bleach.core.timeaxis.ITimeEvent;
-import com.mokylin.bleach.core.timeaxis.ITimeEventType;
+import com.genesis.core.timeaxis.ITimeEvent;
+import com.genesis.core.timeaxis.ITimeEventType;
 import com.genesis.protobuf.HumanMessage.GCEnergyRecoverInfo;
 
 /**

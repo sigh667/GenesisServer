@@ -1,6 +1,6 @@
 package com.genesis.common.combat;
 
-import com.mokylin.bleach.core.enums.ArrayIndexedEnum;
+import com.genesis.core.enums.ArrayIndexedEnum;
 
 import java.util.List;
 

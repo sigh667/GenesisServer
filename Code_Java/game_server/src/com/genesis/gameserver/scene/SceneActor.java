@@ -1,6 +1,6 @@
 package com.genesis.gameserver.scene;
 
-import com.mokylin.bleach.core.isc.remote.actorrefs.annotation.MessageAcception;
+import com.genesis.core.isc.remote.actorrefs.annotation.MessageAcception;
 import com.genesis.gameserver.core.global.ServerGlobals;
 import com.genesis.protobuf.MessageType.MessageTarget;
 

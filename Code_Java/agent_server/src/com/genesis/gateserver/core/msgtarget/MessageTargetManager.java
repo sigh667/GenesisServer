@@ -2,7 +2,7 @@ package com.genesis.gateserver.core.msgtarget;
 
 import com.google.common.collect.Lists;
 
-import com.mokylin.bleach.core.net.msg.CSSMessage;
+import com.genesis.core.net.msg.CSSMessage;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

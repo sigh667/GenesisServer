@@ -1,7 +1,7 @@
 package com.genesis.gameserver.human.event;
 
 import com.genesis.gameserver.human.Human;
-import com.mokylin.bleach.core.event.IEventListener;
+import com.genesis.core.event.IEventListener;
 
 /**
  * 记录玩家升级日志监听类

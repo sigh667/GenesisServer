@@ -1,7 +1,7 @@
 package com.mokylin.bleach.test.core.serviceinit.servicefilter;
 
-import com.mokylin.bleach.core.serviceinit.Depend;
-import com.mokylin.bleach.core.serviceinit.ServiceInitializeRequired;
+import com.genesis.core.serviceinit.Depend;
+import com.genesis.core.serviceinit.ServiceInitializeRequired;
 
 @Filter
 @Depend({Service13.class, Service14.class})

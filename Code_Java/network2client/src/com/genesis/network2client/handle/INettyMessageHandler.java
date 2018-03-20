@@ -1,6 +1,6 @@
 package com.genesis.network2client.handle;
 
-import com.mokylin.bleach.core.net.msg.CSMessage;
+import com.genesis.core.net.msg.CSMessage;
 import com.genesis.network2client.session.IClientSession;
 
 /**

@@ -4,7 +4,7 @@ import com.genesis.gameserver.core.humaninfocache.HumanInfoCache;
 import com.genesis.gameserver.login.LoginService;
 import com.genesis.gameserver.login.OnlinePlayerService;
 import com.genesis.gameserver.player.protocol.RegisterPlayer;
-import com.mokylin.bleach.core.msgfunc.MsgArgs;
+import com.genesis.core.msgfunc.MsgArgs;
 
 import java.util.HashMap;
 

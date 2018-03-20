@@ -13,7 +13,7 @@ import com.genesis.common.prop.battleprop.propeffect.BattlePropEffect;
 import com.genesis.common.prop.battleprop.propholder.IPropHolder;
 import com.genesis.common.prop.battleprop.propholder.Prop;
 import com.genesis.common.prop.battleprop.source.PropSource;
-import com.mokylin.bleach.core.util.MathUtils;
+import com.genesis.core.util.MathUtils;
 
 import java.util.ArrayList;
 import java.util.Map;

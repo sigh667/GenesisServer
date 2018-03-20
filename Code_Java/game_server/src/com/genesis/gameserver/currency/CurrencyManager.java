@@ -8,7 +8,7 @@ import com.google.common.collect.Lists;
 import com.genesis.common.currency.Currency;
 import com.genesis.common.currency.CurrencyContainer;
 import com.genesis.common.currency.CurrencyPropId;
-import com.mokylin.bleach.core.util.MathUtils;
+import com.genesis.core.util.MathUtils;
 import com.genesis.gameserver.currency.event.CostMoneySuccessEvent;
 
 import org.slf4j.Logger;

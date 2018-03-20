@@ -1,6 +1,6 @@
 package ${packageName};
 
-import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
+import com.genesis.core.template.annotation.ExcelRowBinding;
 #foreach($type in $types)
 import $type;
 #end

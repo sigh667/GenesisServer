@@ -6,7 +6,7 @@ import com.genesis.network2client.channel.IChannelListener;
 import com.genesis.network2client.runnable.IRunnableWithClientSession;
 import com.genesis.network2client.session.ClientSessionContainer;
 import com.genesis.network2client.session.IClientSession;
-import com.mokylin.bleach.core.annotation.ThreadSafe;
+import com.genesis.core.annotation.ThreadSafe;
 
 /**
  * 网关的netty通道监听器

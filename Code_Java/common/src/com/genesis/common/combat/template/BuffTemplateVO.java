@@ -1,13 +1,13 @@
 package com.genesis.common.combat.template;
 
-import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
+import ExcelRowBinding;
+import com.genesis.core.template.exception.TemplateConfigException;
+import com.genesis.core.template.annotation.ExcelCollectionMapping;
+import com.genesis.core.template.TemplateObject;
 import java.util.List;
-import com.mokylin.bleach.core.template.annotation.ExcelCellBinding;
-import com.mokylin.bleach.core.template.annotation.ExcelCollectionMapping;
-import com.mokylin.bleach.core.template.annotation.ExcelObjectMapping;
-import com.mokylin.bleach.core.template.TemplateObject;
+import com.genesis.core.template.annotation.ExcelCellBinding;
+import com.genesis.core.template.annotation.ExcelObjectMapping;
 import org.apache.commons.lang3.StringUtils;
-import com.mokylin.bleach.core.template.exception.TemplateConfigException;
 
 /**
  * Buff模板

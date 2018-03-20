@@ -1,6 +1,6 @@
 package com.genesis.common.human;
 
-import com.mokylin.bleach.core.util.arr.EnumArray;
+import com.genesis.core.util.arr.EnumArray;
 
 public class HumanPropContainer {
 

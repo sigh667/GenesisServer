@@ -3,8 +3,8 @@ package com.genesis.common.dailyreward.template;
 import com.genesis.common.core.GlobalData;
 import com.genesis.common.dailyreward.DailyRewardsCheckUtil;
 import com.genesis.common.hero.template.HeroAttrTemplate;
-import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
-import com.mokylin.bleach.core.template.exception.TemplateConfigException;
+import com.genesis.core.template.annotation.ExcelRowBinding;
+import com.genesis.core.template.exception.TemplateConfigException;
 
 @ExcelRowBinding
 public class DailyRewardsTemplate extends DailyRewardsTemplateVO {

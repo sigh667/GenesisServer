@@ -1,8 +1,8 @@
 package com.mokylin.bleach.remotelogserver.funcs;
 
-import com.mokylin.bleach.core.isc.remote.IRemote;
-import com.mokylin.bleach.core.msgfunc.MsgArgs;
-import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
+import com.genesis.core.isc.remote.IRemote;
+import com.genesis.core.msgfunc.MsgArgs;
+import com.genesis.core.msgfunc.server.IServerMsgFunc;
 import com.genesis.protobuf.MessageType.MessageTarget;
 import com.mokylin.bleach.remotelogserver.Globals;
 import com.genesis.servermsg.remotelogserver.Shutdown;

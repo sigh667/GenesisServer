@@ -8,9 +8,9 @@ import org.powermock.api.mockito.PowerMockito
 import org.powermock.core.classloader.annotations.PrepareForTest
 import org.powermock.modules.junit4.rule.PowerMockRule
 import com.bleach.test.common.ActorTest
-import com.mokylin.bleach.core.config.ServerConfig
-import com.mokylin.bleach.core.isc.ServerType
-import com.mokylin.bleach.core.redis.RedisService
+import ServerConfig
+import ServerType
+import RedisService
 import Globals
 import ServerManagerActor
 import StartNewServer
@@ -18,7 +18,7 @@ import akka.actor.ActorSystem
 import akka.actor.Props
 import akka.testkit.TestKit
 import org.scalatest.junit.JUnitRunner
-import com.mokylin.bleach.core.akka.config.AkkaConfig
+import AkkaConfig
 
 @PrepareForTest(Array(classOf[Globals]))
 class ServerManagerActorTest extends TestKit(ActorSystem("System")) with ActorTest{

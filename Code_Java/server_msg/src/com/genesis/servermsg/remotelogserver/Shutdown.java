@@ -1,6 +1,6 @@
 package com.genesis.servermsg.remotelogserver;
 
-import com.mokylin.bleach.core.isc.msg.IMessage;
+import com.genesis.core.isc.msg.IMessage;
 import com.genesis.protobuf.MessageType.MessageTarget;
 
 public class Shutdown implements IMessage {

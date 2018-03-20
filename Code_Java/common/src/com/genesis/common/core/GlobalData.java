@@ -3,7 +3,7 @@ package com.genesis.common.core;
 import com.genesis.common.config.Constants;
 import com.genesis.common.config.XmlConfigUtil;
 import com.genesis.common.config.CombatConfig;
-import com.mokylin.bleach.core.template.TemplateService;
+import com.genesis.core.template.TemplateService;
 
 import java.net.URL;
 

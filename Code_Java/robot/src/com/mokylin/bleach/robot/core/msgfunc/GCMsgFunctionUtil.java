@@ -3,11 +3,11 @@ package com.mokylin.bleach.robot.core.msgfunc;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.Parser;
 
-import com.mokylin.bleach.core.function.FunctionUtil;
-import com.mokylin.bleach.core.msgfunc.exception.MessageFunctionParseException;
-import com.mokylin.bleach.core.msgfunc.protobufutil.MsgUtil;
-import com.mokylin.bleach.core.util.GenericityUtil;
-import com.mokylin.bleach.core.util.PackageUtil;
+import com.genesis.core.function.FunctionUtil;
+import com.genesis.core.msgfunc.exception.MessageFunctionParseException;
+import com.genesis.core.msgfunc.protobufutil.MsgUtil;
+import com.genesis.core.util.GenericityUtil;
+import com.genesis.core.util.PackageUtil;
 
 import org.apache.commons.lang3.tuple.Pair;
 

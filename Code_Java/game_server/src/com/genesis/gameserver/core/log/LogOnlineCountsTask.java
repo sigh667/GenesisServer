@@ -1,7 +1,7 @@
 package com.genesis.gameserver.core.log;
 
-import com.mokylin.bleach.core.timeaxis.ITimeEvent;
-import com.mokylin.bleach.core.timeaxis.ITimeEventType;
+import com.genesis.core.timeaxis.ITimeEvent;
+import com.genesis.core.timeaxis.ITimeEventType;
 import com.genesis.gameserver.core.global.ServerGlobals;
 import com.genesis.gameserver.login.OnlinePlayerService;
 import com.genesis.gameserver.player.PlayerManagerActor;

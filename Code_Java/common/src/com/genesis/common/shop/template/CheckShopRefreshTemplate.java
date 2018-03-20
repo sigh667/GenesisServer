@@ -1,8 +1,8 @@
 package com.genesis.common.shop.template;
 
 import com.genesis.common.core.GlobalData;
-import com.mokylin.bleach.core.template.IAfterTemplateReady;
-import com.mokylin.bleach.core.template.util.TemplateCheckUtil;
+import com.genesis.core.template.IAfterTemplateReady;
+import com.genesis.core.template.util.TemplateCheckUtil;
 
 import java.util.Map;
 

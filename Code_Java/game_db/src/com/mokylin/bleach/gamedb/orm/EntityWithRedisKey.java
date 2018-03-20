@@ -1,6 +1,6 @@
 package com.mokylin.bleach.gamedb.orm;
 
-import com.mokylin.bleach.core.orm.BaseEntity;
+import com.genesis.core.orm.BaseEntity;
 import com.mokylin.bleach.gamedb.redis.key.IRedisKey;
 
 

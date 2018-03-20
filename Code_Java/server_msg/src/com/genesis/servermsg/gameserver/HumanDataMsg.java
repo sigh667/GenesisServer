@@ -1,6 +1,6 @@
 package com.genesis.servermsg.gameserver;
 
-import com.mokylin.bleach.core.isc.msg.IMessage;
+import com.genesis.core.isc.msg.IMessage;
 import com.mokylin.bleach.gamedb.human.HumanData;
 import com.genesis.protobuf.MessageType.MessageTarget;
 

@@ -6,7 +6,7 @@ import com.google.common.collect.Maps;
 
 import com.genesis.common.shop.ShopType;
 import com.genesis.common.shop.template.ShopGoodTemplate;
-import com.mokylin.bleach.core.template.TemplateService;
+import com.genesis.core.template.TemplateService;
 
 import org.joda.time.LocalTime;
 

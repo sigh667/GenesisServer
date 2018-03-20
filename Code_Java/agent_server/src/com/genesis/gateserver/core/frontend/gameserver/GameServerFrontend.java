@@ -1,10 +1,10 @@
 package com.genesis.gateserver.core.frontend.gameserver;
 
-import com.mokylin.bleach.core.config.ServerConfig;
-import com.mokylin.bleach.core.isc.msg.IMessage;
-import com.mokylin.bleach.core.isc.msg.ServerMessage;
-import com.mokylin.bleach.core.isc.remote.IRemote;
-import com.mokylin.bleach.core.net.msg.CSSMessage;
+import com.genesis.core.config.ServerConfig;
+import com.genesis.core.isc.msg.IMessage;
+import com.genesis.core.isc.msg.ServerMessage;
+import com.genesis.core.isc.remote.IRemote;
+import com.genesis.core.net.msg.CSSMessage;
 import com.genesis.protobuf.MessageType;
 import com.genesis.protobuf.MessageType.CGMessageType;
 import com.genesis.protobuf.MessageType.MessageTarget;

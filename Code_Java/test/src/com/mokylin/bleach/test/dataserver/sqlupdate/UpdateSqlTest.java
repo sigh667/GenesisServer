@@ -3,8 +3,8 @@ package com.mokylin.bleach.test.dataserver.sqlupdate;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
-import com.mokylin.bleach.core.orm.hibernate.HibernateDBService;
-import com.mokylin.bleach.core.reflect.PrivateUtil;
+import com.genesis.core.orm.hibernate.HibernateDBService;
+import com.genesis.core.reflect.PrivateUtil;
 import com.genesis.dataserver.sqlupdate.SqlUpdate;
 
 import org.junit.Test;

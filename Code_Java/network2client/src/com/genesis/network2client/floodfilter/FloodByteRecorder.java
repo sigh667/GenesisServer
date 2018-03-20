@@ -1,6 +1,6 @@
 package com.genesis.network2client.floodfilter;
 
-import com.mokylin.bleach.core.time.TimeService;
+import com.genesis.core.time.TimeService;
 
 import java.util.LinkedList;
 import java.util.Queue;

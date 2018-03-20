@@ -2,7 +2,7 @@ package com.genesis.common.function.template;
 
 import com.genesis.common.function.FunctionType;
 import com.genesis.common.core.GlobalData;
-import com.mokylin.bleach.core.template.IAfterTemplateReady;
+import com.genesis.core.template.IAfterTemplateReady;
 
 import java.util.Map;
 

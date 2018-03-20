@@ -1,7 +1,7 @@
 package com.genesis.common.core.excelmodel;
 
-import com.mokylin.bleach.core.template.annotation.BeanFieldNumber;
-import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
+import com.genesis.core.template.annotation.BeanFieldNumber;
+import com.genesis.core.template.annotation.ExcelRowBinding;
 
 @ExcelRowBinding
 public class TempAttrNode2Col {

@@ -1,6 +1,6 @@
 package com.genesis.redis.center.data;
 
-import com.mokylin.bleach.core.config.model.NetInfo;
+import com.genesis.core.config.model.NetInfo;
 
 /**
  * Redis中Gate的实时信息

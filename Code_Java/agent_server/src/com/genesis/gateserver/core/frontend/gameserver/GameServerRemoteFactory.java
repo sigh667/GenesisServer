@@ -1,10 +1,10 @@
 package com.genesis.gateserver.core.frontend.gameserver;
 
 import com.genesis.gateserver.global.Globals;
-import com.mokylin.bleach.core.config.ServerConfig;
-import com.mokylin.bleach.core.isc.remote.DefaultRemoteFactory;
-import com.mokylin.bleach.core.isc.remote.IRemote;
-import com.mokylin.bleach.core.isc.remote.actorrefs.IActorPackages;
+import com.genesis.core.config.ServerConfig;
+import com.genesis.core.isc.remote.DefaultRemoteFactory;
+import com.genesis.core.isc.remote.IRemote;
+import com.genesis.core.isc.remote.actorrefs.IActorPackages;
 
 public class GameServerRemoteFactory extends DefaultRemoteFactory {
 

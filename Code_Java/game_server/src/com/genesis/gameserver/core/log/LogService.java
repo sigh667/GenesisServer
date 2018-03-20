@@ -4,7 +4,7 @@ import com.genesis.common.currency.CurrencyPropId;
 import com.genesis.common.human.HumanPropId;
 import com.genesis.gameserver.core.global.Globals;
 import com.genesis.gameserver.human.Human;
-import com.mokylin.bleach.core.time.TimeService;
+import com.genesis.core.time.TimeService;
 import com.genesis.gameserver.core.global.ServerGlobals;
 import com.genesis.gameserver.core.log.disruptor.sendlog.ISendLog;
 import com.genesis.gameserver.player.Player;

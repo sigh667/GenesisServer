@@ -1,7 +1,7 @@
 package com.genesis.common.config;
 
-import com.mokylin.bleach.core.config.anno.Ignore;
-import com.mokylin.bleach.core.util.JdomUtils;
+import com.genesis.core.config.anno.Ignore;
+import com.genesis.core.util.JdomUtils;
 
 import org.jdom2.Element;
 

@@ -1,6 +1,6 @@
 package com.genesis.gateserver.core.map;
 
-import com.mokylin.bleach.core.net.msg.BaseMessage;
+import com.genesis.core.net.msg.BaseMessage;
 
 import java.nio.ByteOrder;
 import java.util.List;

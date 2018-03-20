@@ -1,8 +1,8 @@
 package com.mokylin.bleach.test.core.uuid;
 
-import com.mokylin.bleach.core.orm.hibernate.HibernateDBService;
-import com.mokylin.bleach.core.redis.IRedis;
-import com.mokylin.bleach.core.uuid.type.IUUIDType;
+import com.genesis.core.orm.hibernate.HibernateDBService;
+import com.genesis.core.redis.IRedis;
+import com.genesis.core.uuid.type.IUUIDType;
 
 /**
  * 测试类型

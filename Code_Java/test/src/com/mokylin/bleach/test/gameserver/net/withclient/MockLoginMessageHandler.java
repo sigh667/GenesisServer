@@ -2,8 +2,8 @@ package com.mokylin.bleach.test.gameserver.net.withclient;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 
-import com.mokylin.bleach.core.net.msg.CSMessage;
-import com.mokylin.bleach.core.net.msg.SCMessage;
+import com.genesis.core.net.msg.CSMessage;
+import com.genesis.core.net.msg.SCMessage;
 import com.mokylin.bleach.test.gameserver.net.MockCGMessage.CGLogin;
 import com.mokylin.bleach.test.gameserver.net.MockCGMessage.GCLogin;
 import com.mokylin.bleach.test.gameserver.net.MockCGMessage.Player;

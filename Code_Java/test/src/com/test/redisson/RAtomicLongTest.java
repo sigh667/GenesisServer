@@ -1,6 +1,6 @@
 package com.test.redisson;
 
-import com.mokylin.bleach.core.redis.redisson.RedisUtils;
+import com.genesis.core.redis.redisson.RedisUtils;
 import org.junit.Test;
 import org.redisson.api.RAtomicLong;
 

@@ -1,6 +1,6 @@
 package com.mokylin.bleach.test.core.event;
 
-import com.mokylin.bleach.core.event.IEventListener;
+import com.genesis.core.event.IEventListener;
 
 public class TestEventListener implements IEventListener<TestEvent> {
 

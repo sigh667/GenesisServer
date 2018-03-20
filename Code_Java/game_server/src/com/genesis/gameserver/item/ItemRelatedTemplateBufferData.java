@@ -6,8 +6,8 @@ import com.google.common.collect.Table;
 
 import com.genesis.common.item.ItemType;
 import com.genesis.common.item.template.ItemTemplate;
-import com.mokylin.bleach.core.template.TemplateService;
-import com.mokylin.bleach.core.util.RandomUtil;
+import com.genesis.core.template.TemplateService;
+import com.genesis.core.util.RandomUtil;
 
 import java.util.List;
 

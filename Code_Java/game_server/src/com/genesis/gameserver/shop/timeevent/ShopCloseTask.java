@@ -1,8 +1,8 @@
 package com.genesis.gameserver.shop.timeevent;
 
 import com.genesis.gameserver.human.Human;
-import com.mokylin.bleach.core.timeaxis.ITimeEvent;
-import com.mokylin.bleach.core.timeaxis.ITimeEventType;
+import com.genesis.core.timeaxis.ITimeEvent;
+import com.genesis.core.timeaxis.ITimeEventType;
 import com.genesis.gameserver.shop.shop.Shop;
 import com.genesis.protobuf.ShopMessage.GCShopClose;
 

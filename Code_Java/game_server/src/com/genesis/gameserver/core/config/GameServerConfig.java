@@ -1,10 +1,10 @@
 package com.genesis.gameserver.core.config;
 
-import com.mokylin.bleach.core.akka.config.AkkaConfig;
-import com.mokylin.bleach.core.config.ConfigBuilder;
-import com.mokylin.bleach.core.config.Mapping;
-import com.mokylin.bleach.core.config.ServerConfig;
-import com.mokylin.bleach.core.isc.ServerType;
+import com.genesis.core.akka.config.AkkaConfig;
+import com.genesis.core.config.ConfigBuilder;
+import com.genesis.core.config.Mapping;
+import com.genesis.core.config.ServerConfig;
+import com.genesis.core.isc.ServerType;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigObject;
 import com.typesafe.config.ConfigValue;

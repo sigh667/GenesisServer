@@ -3,7 +3,7 @@ package com.genesis.gateserver.core;
 import com.genesis.network2client.session.IClientSession;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
-import com.mokylin.bleach.core.annotation.NotThreadSafe;
+import com.genesis.core.annotation.NotThreadSafe;
 
 /**
  * 在线玩家容器

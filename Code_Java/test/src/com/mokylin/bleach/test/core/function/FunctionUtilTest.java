@@ -1,7 +1,7 @@
 package com.mokylin.bleach.test.core.function;
 
-import com.mokylin.bleach.core.function.FunctionUtil;
-import com.mokylin.bleach.core.function.exception.NotAFunctionException;
+import com.genesis.core.function.FunctionUtil;
+import com.genesis.core.function.exception.NotAFunctionException;
 import com.mokylin.bleach.test.core.function.mock.MockClass1;
 import com.mokylin.bleach.test.core.function.mock.MockClass2;
 

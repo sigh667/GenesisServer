@@ -1,9 +1,9 @@
 package com.genesis.gameserver;
 
-import com.mokylin.bleach.core.akka.Akka;
-import com.mokylin.bleach.core.config.ServerConfig;
-import com.mokylin.bleach.core.isc.ISCActorSupervisor;
-import com.mokylin.bleach.core.isc.remote.RemoteServerConfig;
+import com.genesis.core.akka.Akka;
+import com.genesis.core.config.ServerConfig;
+import com.genesis.core.isc.ISCActorSupervisor;
+import com.genesis.core.isc.remote.RemoteServerConfig;
 import com.genesis.gameserver.core.config.GameServerConfig;
 import com.genesis.gameserver.core.global.Globals;
 import com.genesis.gameserver.server.ServerManagerActor;

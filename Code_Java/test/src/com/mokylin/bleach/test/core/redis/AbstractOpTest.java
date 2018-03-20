@@ -1,9 +1,9 @@
 package com.mokylin.bleach.test.core.redis;
 
-import com.mokylin.bleach.core.function.Function0;
-import com.mokylin.bleach.core.redis.IRedis;
-import com.mokylin.bleach.core.redis.RedisService;
-import com.mokylin.bleach.core.redis.config.RedisConfig;
+import com.genesis.core.function.Function0;
+import com.genesis.core.redis.IRedis;
+import com.genesis.core.redis.RedisService;
+import com.genesis.core.redis.config.RedisConfig;
 import com.mokylin.bleach.test.common.util.MultiThread;
 
 import org.junit.AfterClass;

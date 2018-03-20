@@ -1,6 +1,6 @@
 package com.genesis.logindbserver.globals;
 
-import com.mokylin.bleach.core.heartbeat.HeartbeatService;
+import com.genesis.core.heartbeat.HeartbeatService;
 import org.redisson.api.RedissonClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

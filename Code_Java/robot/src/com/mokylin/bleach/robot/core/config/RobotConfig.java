@@ -1,7 +1,7 @@
 package com.mokylin.bleach.robot.core.config;
 
-import com.mokylin.bleach.core.config.ConfigBuilder;
-import com.mokylin.bleach.core.template.TemplateService;
+import com.genesis.core.config.ConfigBuilder;
+import com.genesis.core.template.TemplateService;
 import com.typesafe.config.Config;
 
 import java.net.URL;

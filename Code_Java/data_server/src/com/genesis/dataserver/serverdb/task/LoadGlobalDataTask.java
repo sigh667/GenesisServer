@@ -5,10 +5,10 @@ import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
 import com.google.common.collect.Table.Cell;
 
-import com.mokylin.bleach.core.orm.hibernate.HibernateDBService;
-import com.mokylin.bleach.core.redis.IRedis;
-import com.mokylin.bleach.core.redis.op.IPipelineOp;
-import com.mokylin.bleach.core.redis.op.PipelineProcess;
+import com.genesis.core.orm.hibernate.HibernateDBService;
+import com.genesis.core.redis.IRedis;
+import com.genesis.core.redis.op.IPipelineOp;
+import com.genesis.core.redis.op.PipelineProcess;
 import com.genesis.dataserver.serverdb.ServerDBManager;
 import com.genesis.dataserver.serverdb.task.loadglobaldata.GlobalDataLoader;
 import com.mokylin.bleach.gamedb.human.HumanInfo;

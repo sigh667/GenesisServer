@@ -1,6 +1,6 @@
 package com.genesis.gameserver.core.redis;
 
-import com.mokylin.bleach.core.redis.op.actiononconnectfail.IActionOnCannotConnectRedis;
+import com.genesis.core.redis.op.actiononconnectfail.IActionOnCannotConnectRedis;
 
 /**
  * 无法连接redis的操作

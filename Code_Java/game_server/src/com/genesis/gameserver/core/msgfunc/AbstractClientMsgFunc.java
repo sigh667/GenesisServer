@@ -2,9 +2,9 @@ package com.genesis.gameserver.core.msgfunc;
 
 import com.google.protobuf.GeneratedMessage;
 
-import com.mokylin.bleach.core.isc.session.ISession;
-import com.mokylin.bleach.core.msgfunc.MsgArgs;
-import com.mokylin.bleach.core.msgfunc.client.IClientMsgFunc;
+import com.genesis.core.isc.session.ISession;
+import com.genesis.core.msgfunc.MsgArgs;
+import com.genesis.core.msgfunc.client.IClientMsgFunc;
 import com.genesis.gameserver.player.Player;
 
 /**

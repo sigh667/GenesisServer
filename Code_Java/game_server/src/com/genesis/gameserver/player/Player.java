@@ -1,9 +1,9 @@
 package com.genesis.gameserver.player;
 
 import com.genesis.gameserver.core.global.Globals;
-import com.mokylin.bleach.core.annotation.NotThreadSafe;
-import com.mokylin.bleach.core.isc.remote.IRemote;
-import com.mokylin.bleach.core.isc.session.PlayerSession;
+import com.genesis.core.annotation.NotThreadSafe;
+import com.genesis.core.isc.remote.IRemote;
+import com.genesis.core.isc.session.PlayerSession;
 import com.genesis.servermsg.agentserver.RemovePlayerMsg;
 
 /**

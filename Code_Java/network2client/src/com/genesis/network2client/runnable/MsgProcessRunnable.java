@@ -3,7 +3,6 @@ package com.genesis.network2client.runnable;
 import com.genesis.network2client.msg.ClientMsg;
 import com.genesis.network2client.process.ClientMsgProcessor;
 import com.genesis.network2client.session.IClientSession;
-import com.mokylin.bleach.core.concurrent.fixthreadpool.IRunnableBindId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,6 +1,6 @@
 package com.mokylin.bleach.robot.core.net.codec;
 
-import com.mokylin.bleach.core.net.msg.CSMessage;
+import com.genesis.core.net.msg.CSMessage;
 
 import java.nio.ByteOrder;
 

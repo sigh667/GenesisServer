@@ -1,6 +1,6 @@
 package com.genesis.gateserver.config;
 
-import com.mokylin.bleach.core.config.model.NetInfo;
+import com.genesis.core.config.model.NetInfo;
 
 /**
  * Gate的配置

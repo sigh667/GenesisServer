@@ -5,8 +5,8 @@ import com.genesis.common.core.excelmodel.TempAttrNode3Col;
 import com.genesis.common.hero.HeroConstants;
 import com.genesis.common.prop.battleprop.propeffect.BattlePropEffect;
 import com.genesis.common.prop.battleprop.propeffect.PropEffectConverter;
-import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
-import com.mokylin.bleach.core.template.exception.TemplateConfigException;
+import com.genesis.core.template.annotation.ExcelRowBinding;
+import com.genesis.core.template.exception.TemplateConfigException;
 
 import java.util.ArrayList;
 import java.util.HashSet;

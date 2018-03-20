@@ -1,7 +1,7 @@
 package com.mokylin.bleach.test.core.serviceinit.servicecirculardep;
 
-import com.mokylin.bleach.core.serviceinit.Depend;
-import com.mokylin.bleach.core.serviceinit.ServiceInitializeRequired;
+import com.genesis.core.serviceinit.Depend;
+import com.genesis.core.serviceinit.ServiceInitializeRequired;
 
 @Depend({Service9.class})
 public class Service8 implements ServiceInitializeRequired {

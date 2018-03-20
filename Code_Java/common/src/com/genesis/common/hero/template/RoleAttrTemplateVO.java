@@ -1,10 +1,10 @@
 package com.genesis.common.hero.template;
 
-import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
+import ExcelRowBinding;
+import com.genesis.core.template.exception.TemplateConfigException;
+import com.genesis.core.template.annotation.ExcelCollectionMapping;
+import com.genesis.core.template.TemplateObject;
 import java.util.List;
-import com.mokylin.bleach.core.template.annotation.ExcelCollectionMapping;
-import com.mokylin.bleach.core.template.TemplateObject;
-import com.mokylin.bleach.core.template.exception.TemplateConfigException;
 
 /**
  * hero基础属性模板

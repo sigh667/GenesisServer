@@ -1,6 +1,6 @@
 package com.mokylin.bleach.test.core.util;
 
-import com.mokylin.bleach.core.util.TimeUtils;
+import com.genesis.core.util.TimeUtils;
 
 import org.joda.time.LocalTime;
 import org.joda.time.format.ISODateTimeFormat;

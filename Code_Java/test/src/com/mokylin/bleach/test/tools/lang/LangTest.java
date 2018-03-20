@@ -2,8 +2,8 @@ package com.mokylin.bleach.test.tools.lang;
 
 import com.google.common.collect.Lists;
 
-import com.mokylin.bleach.core.util.ExcelOperation;
-import com.mokylin.bleach.core.util.ExcelOperation.ModifyWorkbookOperation;
+import com.genesis.core.util.ExcelOperation;
+import com.genesis.core.util.ExcelOperation.ModifyWorkbookOperation;
 import com.mokylin.bleach.tools.lang.Constants;
 import com.mokylin.bleach.tools.lang.Lang_zh_CN_Generator;
 import com.mokylin.bleach.tools.lang.Language;

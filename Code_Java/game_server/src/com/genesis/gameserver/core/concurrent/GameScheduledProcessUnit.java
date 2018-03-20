@@ -1,7 +1,7 @@
 package com.genesis.gameserver.core.concurrent;
 
-import com.mokylin.bleach.core.akka.Akka;
-import com.mokylin.bleach.core.timeaxis.TimeAxis;
+import com.genesis.core.akka.Akka;
+import com.genesis.core.timeaxis.TimeAxis;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

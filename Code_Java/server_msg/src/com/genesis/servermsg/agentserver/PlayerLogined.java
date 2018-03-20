@@ -1,6 +1,6 @@
 package com.genesis.servermsg.agentserver;
 
-import com.mokylin.bleach.core.isc.msg.IMessage;
+import com.genesis.core.isc.msg.IMessage;
 import com.genesis.protobuf.MessageType.MessageTarget;
 
 import java.io.Serializable;

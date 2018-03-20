@@ -2,10 +2,9 @@ package com.mokylin.bleach.simulator;
 
 import com.google.protobuf.GeneratedMessage;
 
-import com.mokylin.bleach.core.net.msg.CSMessage;
-import com.mokylin.bleach.core.net.msg.SCMessage;
+import com.genesis.core.net.msg.CSMessage;
+import com.genesis.core.net.msg.SCMessage;
 import com.genesis.protobuf.MessageType.CGMessageType;
-import com.genesis.protobuf.MessageType.GCMessageType;
 import com.genesis.protobuf.LoginMessage.CSLogin;
 import com.genesis.protobuf.LoginMessage.CSLogin.Builder;
 import com.genesis.protobuf.agentserver.AgentMessage.CGGameServerInfo;

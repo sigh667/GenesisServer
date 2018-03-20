@@ -2,8 +2,8 @@ package com.genesis.gameserver.login.funcs;
 //
 //import com.google.common.base.Optional;
 //
-//import com.mokylin.bleach.core.isc.remote.IRemote;
-//import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
+//import IRemote;
+//import IServerMsgFunc;
 //import com.mokylin.bleach.gamedb.human.HumanInfo;
 //import ServerGlobals;
 //import HumanInfoCache;

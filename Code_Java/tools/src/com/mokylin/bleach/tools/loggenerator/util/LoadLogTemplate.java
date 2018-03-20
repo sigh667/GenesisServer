@@ -2,8 +2,8 @@ package com.mokylin.bleach.tools.loggenerator.util;
 
 import com.google.common.collect.Lists;
 
-import com.mokylin.bleach.core.util.ExcelOperation;
-import com.mokylin.bleach.core.util.ExcelOperation.LoadSheetsOperation;
+import com.genesis.core.util.ExcelOperation;
+import com.genesis.core.util.ExcelOperation.LoadSheetsOperation;
 import com.mokylin.bleach.tools.loggenerator.component.LogField;
 import com.mokylin.bleach.tools.loggenerator.component.LogTemplate;
 

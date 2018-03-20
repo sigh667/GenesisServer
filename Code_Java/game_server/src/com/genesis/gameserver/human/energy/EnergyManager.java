@@ -5,7 +5,7 @@ import com.genesis.common.core.GlobalData;
 import com.genesis.common.dailyrefresh.DailyTaskType;
 import com.genesis.common.human.HumanPropId;
 import com.genesis.gameserver.human.Human;
-import com.mokylin.bleach.core.util.MathUtils;
+import com.genesis.core.util.MathUtils;
 import com.genesis.gameserver.core.global.Globals;
 
 import org.joda.time.LocalTime;

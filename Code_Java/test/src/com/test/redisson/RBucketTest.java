@@ -1,10 +1,8 @@
 package com.test.redisson;
 
-import com.mokylin.bleach.core.redis.redisson.RedisUtils;
+import com.genesis.core.redis.redisson.RedisUtils;
 import org.junit.Test;
 import org.redisson.api.RBucket;
-
-import java.util.concurrent.TimeUnit;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;

@@ -9,7 +9,7 @@ import com.genesis.common.hero.template.HeroGrowStarTemplate;
 import com.genesis.common.hero.template.HeroGrowTemplate;
 import com.genesis.common.prop.battleprop.propeffect.BattlePropEffect;
 import com.genesis.common.prop.battleprop.propeffect.PropEffectConverter;
-import com.mokylin.bleach.core.template.TemplateService;
+import com.genesis.core.template.TemplateService;
 
 import java.util.ArrayList;
 import java.util.List;

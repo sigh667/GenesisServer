@@ -10,8 +10,8 @@ import java.util.UUID;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.mokylin.bleach.core.redis.IRedisResponse;
-import com.mokylin.bleach.core.redis.op.IValueOp;
+import com.genesis.core.redis.IRedisResponse;
+import com.genesis.core.redis.op.IValueOp;
 
 public class RedisValueOpTest extends AbstractOpTest {
 	

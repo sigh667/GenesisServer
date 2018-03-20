@@ -4,7 +4,7 @@ import com.genesis.common.human.HumanPropId;
 import com.genesis.gameserver.core.autoexecutetask.AbstractAutoExecuteTask;
 import com.genesis.gameserver.core.global.Globals;
 import com.genesis.gameserver.human.Human;
-import com.mokylin.bleach.core.timeaxis.ITimeEventType;
+import com.genesis.core.timeaxis.ITimeEventType;
 import com.genesis.protobuf.HumanMessage.GCBuyEnergyCountsReset;
 
 import org.joda.time.LocalTime;

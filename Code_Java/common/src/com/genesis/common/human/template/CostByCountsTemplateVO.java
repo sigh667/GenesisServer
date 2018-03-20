@@ -1,9 +1,9 @@
 package com.genesis.common.human.template;
 
-import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
-import com.mokylin.bleach.core.template.annotation.ExcelCollectionMapping;
-import com.mokylin.bleach.core.template.TemplateObject;
-import com.mokylin.bleach.core.template.exception.TemplateConfigException;
+import ExcelRowBinding;
+import com.genesis.core.template.exception.TemplateConfigException;
+import com.genesis.core.template.annotation.ExcelCollectionMapping;
+import com.genesis.core.template.TemplateObject;
 
 /**
  * 随次数改变的钻石消耗数量模板

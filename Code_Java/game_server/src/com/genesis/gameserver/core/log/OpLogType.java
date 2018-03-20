@@ -1,6 +1,6 @@
 package com.genesis.gameserver.core.log;
 
-import com.mokylin.bleach.core.timeaxis.ITimeEventType;
+import com.genesis.core.timeaxis.ITimeEventType;
 
 /**
  * @author ChangXiao

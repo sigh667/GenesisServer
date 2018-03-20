@@ -1,6 +1,6 @@
 package com.genesis.common.currency;
 
-import com.mokylin.bleach.core.util.arr.EnumArray;
+import com.genesis.core.util.arr.EnumArray;
 
 /**
  * 金钱容器的基类

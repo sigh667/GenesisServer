@@ -6,7 +6,7 @@ import com.google.common.collect.Lists;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
-import com.mokylin.bleach.core.util.PackageUtil;
+import com.genesis.core.util.PackageUtil;
 import com.mokylin.bleach.test.core.serializer.mockentity.FinalMessage;
 import com.mokylin.bleach.test.core.serializer.mockentity.ListMessage;
 import com.mokylin.bleach.test.core.serializer.mockentity.Message;

@@ -2,8 +2,8 @@ package com.mokylin.bleach.test.core.serializer;
 
 import com.google.common.collect.Lists;
 
-import com.mokylin.bleach.core.serializer.ISerializer;
-import com.mokylin.bleach.core.serializer.KryoPool;
+import com.genesis.core.serializer.ISerializer;
+import com.genesis.core.serializer.KryoPool;
 
 import java.util.List;
 

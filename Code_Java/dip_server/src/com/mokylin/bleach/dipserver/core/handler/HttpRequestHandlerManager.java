@@ -3,8 +3,8 @@ package com.mokylin.bleach.dipserver.core.handler;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Maps;
 
-import com.mokylin.bleach.core.function.FunctionUtil;
-import com.mokylin.bleach.core.util.PackageUtil;
+import com.genesis.core.function.FunctionUtil;
+import com.genesis.core.util.PackageUtil;
 
 import org.restlet.Request;
 import org.restlet.Response;

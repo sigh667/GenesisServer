@@ -3,8 +3,8 @@ package com.genesis.dataserver.serverdb.task.loadglobaldata.loaders;
 import com.genesis.dataserver.globals.Globals;
 import com.genesis.dataserver.serverdb.ServerDBManager;
 import com.genesis.dataserver.serverdb.task.loadglobaldata.ILoadGlobalData;
-import com.mokylin.bleach.core.orm.hibernate.HibernateDBService;
-import com.mokylin.bleach.core.redis.IRedis;
+import com.genesis.core.orm.hibernate.HibernateDBService;
+import com.genesis.core.redis.IRedis;
 import com.mokylin.bleach.gamedb.orm.entity.ServerStatusEntity;
 
 public class LoadServerStatus implements ILoadGlobalData {

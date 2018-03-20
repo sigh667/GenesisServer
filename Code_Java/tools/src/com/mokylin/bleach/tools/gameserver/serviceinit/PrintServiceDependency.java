@@ -2,7 +2,7 @@ package com.mokylin.bleach.tools.gameserver.serviceinit;
 
 import com.google.common.collect.Lists;
 
-import com.mokylin.bleach.core.serviceinit.ServiceInitManager;
+import com.genesis.core.serviceinit.ServiceInitManager;
 
 import java.util.List;
 import java.util.Set;

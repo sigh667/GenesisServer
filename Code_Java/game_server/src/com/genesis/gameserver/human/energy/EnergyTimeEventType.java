@@ -1,6 +1,6 @@
 package com.genesis.gameserver.human.energy;
 
-import com.mokylin.bleach.core.timeaxis.ITimeEventType;
+import com.genesis.core.timeaxis.ITimeEventType;
 
 /**
  * 体力时间轴时间类型

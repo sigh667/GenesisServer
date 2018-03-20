@@ -3,9 +3,9 @@ package com.genesis.gameserver.dailyreward;
 import com.genesis.common.dailyrefresh.DailyTaskType;
 import com.genesis.gameserver.core.global.Globals;
 import com.genesis.gameserver.human.Human;
-import com.mokylin.bleach.core.timeaxis.ITimeEvent;
-import com.mokylin.bleach.core.timeaxis.ITimeEventType;
-import com.mokylin.bleach.core.util.TimeUtils;
+import com.genesis.core.timeaxis.ITimeEvent;
+import com.genesis.core.timeaxis.ITimeEventType;
+import com.genesis.core.util.TimeUtils;
 import com.genesis.protobuf.DailyRewardMessage.GCDailyRewardInfo;
 
 import org.joda.time.Days;

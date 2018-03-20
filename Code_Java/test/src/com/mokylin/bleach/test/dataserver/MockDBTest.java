@@ -1,6 +1,6 @@
 package com.mokylin.bleach.test.dataserver;
 
-import com.mokylin.bleach.core.orm.hibernate.HibernateDBService;
+import com.genesis.core.orm.hibernate.HibernateDBService;
 import com.mokylin.bleach.gamedb.orm.entity.HumanEntity;
 import com.mokylin.bleach.test.dataserver.gamedb.HumanTable;
 

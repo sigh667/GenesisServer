@@ -1,9 +1,9 @@
 package com.genesis.common.dailyrefresh.template;
 
-import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
-import com.mokylin.bleach.core.template.annotation.ExcelCollectionMapping;
-import com.mokylin.bleach.core.template.TemplateObject;
-import com.mokylin.bleach.core.template.exception.TemplateConfigException;
+import ExcelRowBinding;
+import com.genesis.core.template.exception.TemplateConfigException;
+import com.genesis.core.template.annotation.ExcelCollectionMapping;
+import com.genesis.core.template.TemplateObject;
 
 /**
  * 每日定时刷新模板

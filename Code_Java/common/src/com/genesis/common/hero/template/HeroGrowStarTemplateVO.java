@@ -1,9 +1,9 @@
 package com.genesis.common.hero.template;
 
-import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
-import com.mokylin.bleach.core.template.annotation.ExcelCellBinding;
-import com.mokylin.bleach.core.template.TemplateObject;
-import com.mokylin.bleach.core.template.exception.TemplateConfigException;
+import ExcelRowBinding;
+import com.genesis.core.template.exception.TemplateConfigException;
+import com.genesis.core.template.TemplateObject;
+import com.genesis.core.template.annotation.ExcelCellBinding;
 
 /**
  * hero星级成长率模板

@@ -2,7 +2,7 @@ package com.mokylin.bleach.robot.core.net;
 
 import com.google.protobuf.GeneratedMessage;
 
-import com.mokylin.bleach.core.isc.session.ISession;
+import com.genesis.core.isc.session.ISession;
 import com.mokylin.bleach.robot.core.msgfunc.IGCMsgFunc;
 import com.mokylin.bleach.robot.robot.Robot;
 

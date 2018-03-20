@@ -1,6 +1,6 @@
 package com.mokylin.bleach.test.core.serviceinit.servicenostaticservicefield;
 
-import com.mokylin.bleach.core.serviceinit.ServiceInitializeRequired;
+import com.genesis.core.serviceinit.ServiceInitializeRequired;
 
 public class Service10 implements ServiceInitializeRequired {
 

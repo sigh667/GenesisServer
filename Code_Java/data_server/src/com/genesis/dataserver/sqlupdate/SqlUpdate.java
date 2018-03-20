@@ -2,9 +2,9 @@ package com.genesis.dataserver.sqlupdate;
 
 import com.google.common.base.Charsets;
 
-import com.mokylin.bleach.core.file.FileViewer;
-import com.mokylin.bleach.core.orm.hibernate.HibernateDBService;
-import com.mokylin.bleach.core.util.IOUtils;
+import com.genesis.core.file.FileViewer;
+import com.genesis.core.orm.hibernate.HibernateDBService;
+import com.genesis.core.util.IOUtils;
 import com.genesis.dataserver.conf.DataServerConfig;
 import com.mokylin.bleach.gamedb.orm.entity.DbVersion;
 

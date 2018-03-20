@@ -1,6 +1,6 @@
 package com.mokylin.bleach.test.core.collection;
 
-import com.mokylin.bleach.core.collection.RingQueue;
+import com.genesis.core.collection.RingQueue;
 
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
 package com.genesis.gameserver.core.concurrent;
 
-import com.mokylin.bleach.core.akka.Akka;
+import com.genesis.core.akka.Akka;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;

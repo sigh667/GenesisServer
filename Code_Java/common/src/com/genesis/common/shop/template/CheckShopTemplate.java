@@ -2,7 +2,7 @@ package com.genesis.common.shop.template;
 
 import com.genesis.common.core.GlobalData;
 import com.genesis.common.shop.ShopType;
-import com.mokylin.bleach.core.template.IAfterTemplateReady;
+import com.genesis.core.template.IAfterTemplateReady;
 
 import java.util.Set;
 

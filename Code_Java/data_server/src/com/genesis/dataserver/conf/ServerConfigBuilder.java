@@ -1,6 +1,6 @@
 package com.genesis.dataserver.conf;
 
-import com.mokylin.bleach.core.config.ConfigBuilder;
+import com.genesis.core.config.ConfigBuilder;
 import com.typesafe.config.Config;
 
 public class ServerConfigBuilder {

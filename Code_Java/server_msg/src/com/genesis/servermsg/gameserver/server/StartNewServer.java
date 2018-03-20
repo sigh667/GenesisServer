@@ -1,7 +1,7 @@
 package com.genesis.servermsg.gameserver.server;
 
-import com.mokylin.bleach.core.config.ServerConfig;
-import com.mokylin.bleach.core.isc.msg.IMessage;
+import com.genesis.core.config.ServerConfig;
+import com.genesis.core.isc.msg.IMessage;
 import com.genesis.protobuf.MessageType.MessageTarget;
 
 import akka.actor.ActorRef;

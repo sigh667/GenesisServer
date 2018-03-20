@@ -11,8 +11,8 @@ import java.util.concurrent.TimeUnit;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.mokylin.bleach.core.function.Function0;
-import com.mokylin.bleach.core.redis.op.IListOp;
+import com.genesis.core.function.Function0;
+import com.genesis.core.redis.op.IListOp;
 import com.mokylin.bleach.test.common.util.MultiThread;
 
 public class RedisListOpTest extends AbstractOpTest {

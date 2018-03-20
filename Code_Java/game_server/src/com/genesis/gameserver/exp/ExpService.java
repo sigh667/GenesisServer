@@ -2,8 +2,8 @@ package com.genesis.gameserver.exp;
 
 import com.genesis.common.exp.ExpData;
 import com.genesis.common.human.template.ExpTemplate;
-import com.mokylin.bleach.core.template.TemplateService;
-import com.mokylin.bleach.core.util.MathUtils;
+import com.genesis.core.template.TemplateService;
+import com.genesis.core.util.MathUtils;
 
 import java.util.Map;
 

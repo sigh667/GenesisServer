@@ -3,10 +3,10 @@ package com.mokylin.bleach.tools.lang;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
-import com.mokylin.bleach.core.util.ExcelOperation;
-import com.mokylin.bleach.core.util.ExcelOperation.LoadRowOperation;
-import com.mokylin.bleach.core.util.ExcelOperation.ModifyWorkbookOperation;
-import com.mokylin.bleach.core.util.PoiUtils;
+import com.genesis.core.util.ExcelOperation;
+import com.genesis.core.util.ExcelOperation.LoadRowOperation;
+import com.genesis.core.util.ExcelOperation.ModifyWorkbookOperation;
+import com.genesis.core.util.PoiUtils;
 import com.mokylin.bleach.tools.lang.item.ChangeFootprint;
 import com.mokylin.bleach.tools.lang.item.LangItem;
 import com.mokylin.bleach.tools.lang.util.LangUtil;

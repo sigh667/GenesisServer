@@ -2,8 +2,8 @@ package com.genesis.gameserver.login.funcs;
 
 import com.genesis.gameserver.core.global.ServerGlobals;
 import com.genesis.gameserver.player.LoginStatus;
-import com.mokylin.bleach.core.isc.remote.IRemote;
-import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
+import com.genesis.core.isc.remote.IRemote;
+import com.genesis.core.msgfunc.server.IServerMsgFunc;
 import com.genesis.gameserver.login.protocol.LoadHumanDataFailed;
 import com.genesis.gameserver.player.Player;
 import com.genesis.gameserver.player.PlayerManagerArgs;

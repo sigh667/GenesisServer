@@ -1,9 +1,9 @@
 package com.mokylin.bleach.test.core.uuid;
 
-import com.mokylin.bleach.core.uuid.IUUIDGenerator;
-import com.mokylin.bleach.core.uuid.UUIDGeneratorFactory;
-import com.mokylin.bleach.core.uuid.UUIDHelper;
-import com.mokylin.bleach.core.uuid.helper.Scope;
+import com.genesis.core.uuid.IUUIDGenerator;
+import com.genesis.core.uuid.UUIDGeneratorFactory;
+import com.genesis.core.uuid.UUIDHelper;
+import com.genesis.core.uuid.helper.Scope;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -3,7 +3,7 @@ package com.genesis.network2client.channel;
 import com.genesis.network2client.floodfilter.FloodByteAttackFilter;
 import com.genesis.network2client.floodfilter.FloodCmdAttackFilter;
 import com.genesis.network2client.floodfilter.FloodFilterService;
-import com.mokylin.bleach.core.net.msg.SCMessage;
+import com.genesis.core.net.msg.SCMessage;
 import com.genesis.network2client.codec.ServerToClientMessageEncoder;
 
 import io.netty.channel.ChannelInboundHandlerAdapter;

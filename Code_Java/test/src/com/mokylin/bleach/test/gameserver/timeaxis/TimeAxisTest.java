@@ -1,10 +1,10 @@
 package com.mokylin.bleach.test.gameserver.timeaxis;
 
-import com.mokylin.bleach.core.concurrent.process.CommonProcessType;
-import com.mokylin.bleach.core.heartbeat.HeartbeatService;
-import com.mokylin.bleach.core.time.TimeService;
-import com.mokylin.bleach.core.timeaxis.ITimeEvent;
-import com.mokylin.bleach.core.timeaxis.TimeAxis;
+import com.genesis.core.concurrent.process.CommonProcessType;
+import com.genesis.core.heartbeat.HeartbeatService;
+import com.genesis.core.time.TimeService;
+import com.genesis.core.timeaxis.ITimeEvent;
+import com.genesis.core.timeaxis.TimeAxis;
 import com.mokylin.bleach.test.gameserver.timeaxis.task.SimpleTimeAxisEventImpl;
 
 import org.junit.Assert;

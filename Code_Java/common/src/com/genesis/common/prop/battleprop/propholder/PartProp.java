@@ -8,7 +8,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import com.genesis.common.prop.battleprop.HeroBattlePropId;
-import com.mokylin.bleach.core.annotation.InternalUse;
+import com.genesis.core.annotation.InternalUse;
 
 import java.util.Iterator;
 import java.util.List;

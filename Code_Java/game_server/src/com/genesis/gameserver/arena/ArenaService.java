@@ -1,6 +1,6 @@
 package com.genesis.gameserver.arena;
 
-import com.mokylin.bleach.core.msgfunc.MsgArgs;
+import com.genesis.core.msgfunc.MsgArgs;
 
 import java.util.LinkedList;
 import java.util.Map.Entry;

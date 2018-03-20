@@ -8,7 +8,7 @@ import com.genesis.common.prop.battleprop.IPropObserver;
 import com.genesis.common.prop.battleprop.propeffect.BattlePropEffect;
 import com.genesis.common.prop.battleprop.propeffect.FinalBattleProp;
 import com.genesis.common.prop.battleprop.source.PropSource;
-import com.mokylin.bleach.core.annotation.InternalUse;
+import com.genesis.core.annotation.InternalUse;
 
 import java.util.List;
 import java.util.Set;

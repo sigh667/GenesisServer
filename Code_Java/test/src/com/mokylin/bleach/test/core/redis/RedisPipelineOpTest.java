@@ -1,8 +1,8 @@
 package com.mokylin.bleach.test.core.redis;
 
-import com.mokylin.bleach.core.redis.IRedisResponse;
-import com.mokylin.bleach.core.redis.op.IPipelineOp;
-import com.mokylin.bleach.core.redis.op.PipelineProcess;
+import com.genesis.core.redis.IRedisResponse;
+import com.genesis.core.redis.op.IPipelineOp;
+import com.genesis.core.redis.op.PipelineProcess;
 
 import org.junit.Test;
 

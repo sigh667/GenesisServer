@@ -1,6 +1,6 @@
 package com.genesis.gameserver.shop.timeevent;
 
-import com.mokylin.bleach.core.timeaxis.ITimeEventType;
+import com.genesis.core.timeaxis.ITimeEventType;
 
 /**
  * 商店时间轴时间类型

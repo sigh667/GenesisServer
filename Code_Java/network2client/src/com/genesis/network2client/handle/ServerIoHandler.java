@@ -4,9 +4,9 @@ import com.genesis.network2client.channel.IChannelListener;
 import com.genesis.network2client.id.IdGenerator;
 import com.genesis.network2client.session.IClientSession;
 import com.google.protobuf.GeneratedMessage;
-import com.mokylin.bleach.core.net.msg.CSMessage;
-import com.mokylin.bleach.core.net.msg.SCMessage;
-import com.mokylin.bleach.core.time.TimeService;
+import com.genesis.core.net.msg.CSMessage;
+import com.genesis.core.net.msg.SCMessage;
+import com.genesis.core.time.TimeService;
 import com.genesis.protobuf.MessageType;
 
 import org.slf4j.Logger;

@@ -1,9 +1,9 @@
 package com.genesis.common.combat.model;
 
 import com.genesis.common.combat.enumeration.EffectID;
-import com.mokylin.bleach.core.template.annotation.BeanFieldNumber;
-import com.mokylin.bleach.core.template.annotation.ExcelCollectionMapping;
-import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
+import com.genesis.core.template.annotation.BeanFieldNumber;
+import com.genesis.core.template.annotation.ExcelCollectionMapping;
+import com.genesis.core.template.annotation.ExcelRowBinding;
 
 @ExcelRowBinding
 public class EffectBase {

@@ -1,6 +1,6 @@
 package com.genesis.common.prop.battleprop.source;
 
-import com.mokylin.bleach.core.annotation.InternalUse;
+import com.genesis.core.annotation.InternalUse;
 
 /**
  * 属性来源

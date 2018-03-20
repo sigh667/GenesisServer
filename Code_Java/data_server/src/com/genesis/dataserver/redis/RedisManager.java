@@ -1,10 +1,10 @@
 package com.genesis.dataserver.redis;
 
 import com.genesis.dataserver.globals.Globals;
-import com.mokylin.bleach.core.config.Mapping;
-import com.mokylin.bleach.core.redis.IRedis;
-import com.mokylin.bleach.core.redis.RedisService;
-import com.mokylin.bleach.core.redis.config.RedisConfig;
+import com.genesis.core.config.Mapping;
+import com.genesis.core.redis.IRedis;
+import com.genesis.core.redis.RedisService;
+import com.genesis.core.redis.config.RedisConfig;
 
 /**
  * DataServer的Redis连接管理器，会访问多个Redis

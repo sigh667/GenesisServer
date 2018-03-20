@@ -1,7 +1,7 @@
 package com.mokylin.bleach.test.core.serviceinit.servicedep;
 
-import com.mokylin.bleach.core.serviceinit.Depend;
-import com.mokylin.bleach.core.serviceinit.ServiceInitializeRequired;
+import com.genesis.core.serviceinit.Depend;
+import com.genesis.core.serviceinit.ServiceInitializeRequired;
 
 @Depend({Service5.class, Service6.class})
 public class Service4 implements ServiceInitializeRequired {

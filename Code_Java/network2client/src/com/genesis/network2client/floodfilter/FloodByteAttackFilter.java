@@ -1,6 +1,6 @@
 package com.genesis.network2client.floodfilter;
 
-import com.mokylin.bleach.core.util.TimeUtils;
+import com.genesis.core.util.TimeUtils;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;

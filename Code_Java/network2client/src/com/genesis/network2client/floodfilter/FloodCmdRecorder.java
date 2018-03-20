@@ -1,7 +1,7 @@
 package com.genesis.network2client.floodfilter;
 
-import com.mokylin.bleach.core.collection.RingQueue;
-import com.mokylin.bleach.core.time.TimeService;
+import com.genesis.core.collection.RingQueue;
+import com.genesis.core.time.TimeService;
 
 /**
  * 消息包记录器

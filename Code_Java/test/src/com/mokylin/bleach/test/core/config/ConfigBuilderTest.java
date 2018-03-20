@@ -2,8 +2,8 @@ package com.mokylin.bleach.test.core.config;
 
 import com.google.common.collect.Table;
 
-import com.mokylin.bleach.core.config.ConfigBuilder;
-import com.mokylin.bleach.core.config.exception.ConfigBuildException;
+import com.genesis.core.config.ConfigBuilder;
+import com.genesis.core.config.exception.ConfigBuildException;
 import com.mokylin.bleach.test.core.config.mock.MapConfig;
 import com.mokylin.bleach.test.core.config.mock.TableConfig;
 import com.mokylin.bleach.test.core.config.mock.TestClass;

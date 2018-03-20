@@ -1,8 +1,8 @@
 package com.genesis.common.function.template;
 
-import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
-import com.mokylin.bleach.core.template.annotation.ExcelCellBinding;
-import com.mokylin.bleach.core.template.TemplateObject;
+import ExcelRowBinding;
+import com.genesis.core.template.TemplateObject;
+import com.genesis.core.template.annotation.ExcelCellBinding;
 
 /**
  * 功能模板

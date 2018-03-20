@@ -2,7 +2,7 @@ package com.mokylin.bleach.test.core.event;
 
 import com.google.common.collect.Lists;
 
-import com.mokylin.bleach.core.event.EventBus;
+import com.genesis.core.event.EventBus;
 
 import org.junit.Test;
 

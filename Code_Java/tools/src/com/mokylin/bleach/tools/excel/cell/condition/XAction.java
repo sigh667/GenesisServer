@@ -1,6 +1,6 @@
 package com.mokylin.bleach.tools.excel.cell.condition;
 
-import com.mokylin.bleach.core.template.exception.TemplateConfigException;
+import com.genesis.core.template.exception.TemplateConfigException;
 
 /**
  * x定义的解析。

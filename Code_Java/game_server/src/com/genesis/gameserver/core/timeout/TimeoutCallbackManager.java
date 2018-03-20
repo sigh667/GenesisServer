@@ -3,7 +3,7 @@ package com.genesis.gameserver.core.timeout;
 import com.genesis.gameserver.core.global.Globals;
 import com.google.common.base.Optional;
 
-import com.mokylin.bleach.core.annotation.ThreadSafe;
+import com.genesis.core.annotation.ThreadSafe;
 import com.genesis.gameserver.core.timeout.callback.ITimeoutCallback;
 
 import java.util.concurrent.ConcurrentHashMap;

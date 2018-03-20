@@ -1,7 +1,7 @@
 package com.genesis.network2client.runnable;
 
-import com.mokylin.bleach.core.concurrent.fixthreadpool.IActionOnException;
-import com.mokylin.bleach.core.concurrent.fixthreadpool.IRunnableBindId;
+import com.genesis.core.concurrent.fixthreadpool.IActionOnException;
+import com.genesis.core.concurrent.fixthreadpool.IRunnableBindId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

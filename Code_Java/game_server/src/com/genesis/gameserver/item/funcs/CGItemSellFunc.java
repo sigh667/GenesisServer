@@ -2,7 +2,7 @@ package com.genesis.gameserver.item.funcs;
 
 import com.genesis.common.core.GlobalData;
 import com.genesis.common.item.template.ItemTemplate;
-import com.mokylin.bleach.core.util.MathUtils;
+import com.genesis.core.util.MathUtils;
 import com.genesis.gameserver.core.global.ServerGlobals;
 import com.genesis.gameserver.core.msgfunc.AbstractClientMsgFunc;
 import com.genesis.gameserver.human.Human;

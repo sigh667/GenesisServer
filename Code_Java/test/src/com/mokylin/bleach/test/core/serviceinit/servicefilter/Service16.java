@@ -1,6 +1,6 @@
 package com.mokylin.bleach.test.core.serviceinit.servicefilter;
 
-import com.mokylin.bleach.core.serviceinit.ServiceInitializeRequired;
+import com.genesis.core.serviceinit.ServiceInitializeRequired;
 
 public class Service16 implements ServiceInitializeRequired {
 

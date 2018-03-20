@@ -1,7 +1,7 @@
 package com.genesis.dataserver.serverdb.task;
 
-import com.mokylin.bleach.core.redis.IRedis;
-import com.mokylin.bleach.core.redis.IRedisResponse;
+import com.genesis.core.redis.IRedis;
+import com.genesis.core.redis.IRedisResponse;
 import com.genesis.dataserver.serverdb.ServerDBManager;
 import com.mokylin.bleach.gamedb.redis.DirtyDataInfo;
 import com.mokylin.bleach.gamedb.redis.key.SpecialRedisKeyBuilder;

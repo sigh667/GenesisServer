@@ -1,6 +1,6 @@
 package com.mokylin.bleach.tools.lang.item;
 
-import com.mokylin.bleach.core.annotation.ThreadSafe;
+import com.genesis.core.annotation.ThreadSafe;
 
 /**
  * 文字的修改足迹

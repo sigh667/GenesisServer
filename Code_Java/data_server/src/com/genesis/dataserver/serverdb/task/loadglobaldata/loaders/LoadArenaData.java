@@ -1,10 +1,10 @@
 package com.genesis.dataserver.serverdb.task.loadglobaldata.loaders;
 
 import com.genesis.dataserver.globals.Globals;
-import com.mokylin.bleach.core.orm.hibernate.HibernateDBService;
-import com.mokylin.bleach.core.redis.IRedis;
-import com.mokylin.bleach.core.redis.op.IPipelineOp;
-import com.mokylin.bleach.core.redis.op.PipelineProcess;
+import com.genesis.core.orm.hibernate.HibernateDBService;
+import com.genesis.core.redis.IRedis;
+import com.genesis.core.redis.op.IPipelineOp;
+import com.genesis.core.redis.op.PipelineProcess;
 import com.genesis.dataserver.serverdb.ServerDBManager;
 import com.genesis.dataserver.serverdb.task.loadglobaldata.ILoadHumanRelatedGlobalData;
 import com.mokylin.bleach.gamedb.orm.entity.ArenaSnapEntity;

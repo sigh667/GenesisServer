@@ -2,8 +2,8 @@ package com.mokylin.bleach.robot.robot;
 
 import com.google.protobuf.GeneratedMessage;
 
-import com.mokylin.bleach.core.isc.session.ISession;
-import com.mokylin.bleach.core.net.msg.SCMessage;
+import com.genesis.core.isc.session.ISession;
+import com.genesis.core.net.msg.SCMessage;
 import com.genesis.protobuf.MessageType;
 import com.mokylin.bleach.robot.login.Status;
 

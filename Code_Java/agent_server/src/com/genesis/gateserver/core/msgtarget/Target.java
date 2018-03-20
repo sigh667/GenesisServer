@@ -1,6 +1,6 @@
 package com.genesis.gateserver.core.msgtarget;
 
-import com.mokylin.bleach.core.isc.ServerType;
+import com.genesis.core.isc.ServerType;
 
 public class Target {
 

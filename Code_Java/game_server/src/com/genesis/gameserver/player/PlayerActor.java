@@ -2,10 +2,10 @@ package com.genesis.gameserver.player;
 
 import com.google.common.base.Optional;
 
-import com.mokylin.bleach.core.isc.ServerType;
-import com.mokylin.bleach.core.isc.msg.ActorRefMessage;
-import com.mokylin.bleach.core.isc.remote.actorrefs.IActorPackages;
-import com.mokylin.bleach.core.isc.remote.actorrefs.annotation.MessageAcception;
+import com.genesis.core.isc.ServerType;
+import com.genesis.core.isc.msg.ActorRefMessage;
+import com.genesis.core.isc.remote.actorrefs.IActorPackages;
+import com.genesis.core.isc.remote.actorrefs.annotation.MessageAcception;
 import com.mokylin.bleach.gamedb.human.HumanData;
 import com.mokylin.bleach.gamedb.human.HumanInfo;
 import com.genesis.gameserver.core.global.Globals;

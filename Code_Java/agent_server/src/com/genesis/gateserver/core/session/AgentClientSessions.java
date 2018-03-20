@@ -2,9 +2,9 @@ package com.genesis.gateserver.core.session;
 
 import com.google.common.collect.Maps;
 
-import com.mokylin.bleach.core.annotation.ThreadSafe;
-import com.mokylin.bleach.core.isc.session.ISession;
-import com.mokylin.bleach.core.net.msg.SCMessage;
+import com.genesis.core.annotation.ThreadSafe;
+import com.genesis.core.isc.session.ISession;
+import com.genesis.core.net.msg.SCMessage;
 import com.genesis.network2client.session.IClientSession;
 
 import java.util.Collection;

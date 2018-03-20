@@ -1,10 +1,10 @@
 package com.genesis.gateserver.funcs;
 
 import com.genesis.gateserver.core.session.AgentClientSessions;
-import com.mokylin.bleach.core.isc.msg.ToPlayerMessage;
-import com.mokylin.bleach.core.isc.remote.IRemote;
-import com.mokylin.bleach.core.msgfunc.MsgArgs;
-import com.mokylin.bleach.core.msgfunc.server.IServerMsgFunc;
+import com.genesis.core.isc.msg.ToPlayerMessage;
+import com.genesis.core.isc.remote.IRemote;
+import com.genesis.core.msgfunc.MsgArgs;
+import com.genesis.core.msgfunc.server.IServerMsgFunc;
 import com.genesis.protobuf.MessageType.MessageTarget;
 
 public class ToPlayerMessageFunc implements IServerMsgFunc<ToPlayerMessage, MsgArgs, MsgArgs> {

@@ -1,6 +1,6 @@
 package com.mokylin.bleach.test.core.serviceinit.servicedep;
 
-import com.mokylin.bleach.core.serviceinit.ServiceInitializeRequired;
+import com.genesis.core.serviceinit.ServiceInitializeRequired;
 
 public class Service5 implements ServiceInitializeRequired {
 

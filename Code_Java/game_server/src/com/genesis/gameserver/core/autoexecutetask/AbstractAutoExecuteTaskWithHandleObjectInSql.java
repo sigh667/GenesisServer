@@ -1,6 +1,6 @@
 package com.genesis.gameserver.core.autoexecutetask;
 
-import com.mokylin.bleach.core.timeaxis.TimeAxis;
+import com.genesis.core.timeaxis.TimeAxis;
 import com.mokylin.bleach.gamedb.persistance.IObjectInSql;
 import com.genesis.gameserver.core.global.Globals;
 

@@ -10,9 +10,9 @@ import com.genesis.gameserver.player.LoginStatus;
 import com.genesis.gameserver.player.Player;
 import com.google.common.collect.Lists;
 
-import com.mokylin.bleach.core.redis.IRedisResponse;
-import com.mokylin.bleach.core.redis.op.IPipelineOp;
-import com.mokylin.bleach.core.redis.op.PipelineProcess;
+import com.genesis.core.redis.IRedisResponse;
+import com.genesis.core.redis.op.IPipelineOp;
+import com.genesis.core.redis.op.PipelineProcess;
 import com.mokylin.bleach.gamedb.human.HumanData;
 import com.mokylin.bleach.gamedb.human.HumanInfo;
 import com.mokylin.bleach.gamedb.orm.entity.FunctionEntity;

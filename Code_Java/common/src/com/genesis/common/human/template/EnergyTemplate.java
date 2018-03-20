@@ -1,8 +1,8 @@
 package com.genesis.common.human.template;
 
 import com.genesis.common.core.GlobalData;
-import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
-import com.mokylin.bleach.core.template.exception.TemplateConfigException;
+import com.genesis.core.template.annotation.ExcelRowBinding;
+import com.genesis.core.template.exception.TemplateConfigException;
 
 @ExcelRowBinding
 public class EnergyTemplate extends EnergyTemplateVO {

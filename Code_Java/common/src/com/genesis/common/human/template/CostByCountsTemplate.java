@@ -1,8 +1,8 @@
 package com.genesis.common.human.template;
 
 import com.genesis.common.human.CostByCountsType;
-import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
-import com.mokylin.bleach.core.template.exception.TemplateConfigException;
+import com.genesis.core.template.annotation.ExcelRowBinding;
+import com.genesis.core.template.exception.TemplateConfigException;
 
 @ExcelRowBinding
 public class CostByCountsTemplate extends CostByCountsTemplateVO {

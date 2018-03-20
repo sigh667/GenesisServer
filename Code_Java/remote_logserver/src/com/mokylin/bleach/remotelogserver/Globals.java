@@ -1,14 +1,14 @@
 package com.mokylin.bleach.remotelogserver;
 
-import com.mokylin.bleach.core.akka.Akka;
-import com.mokylin.bleach.core.akka.config.AkkaConfig;
-import com.mokylin.bleach.core.config.ConfigBuilder;
-import com.mokylin.bleach.core.config.ServerConfig;
-import com.mokylin.bleach.core.isc.ISCActorSupervisor;
-import com.mokylin.bleach.core.isc.ISCService;
-import com.mokylin.bleach.core.isc.RemoteActorManager;
-import com.mokylin.bleach.core.isc.ServerType;
-import com.mokylin.bleach.core.isc.remote.DefaultRemoteFactory;
+import com.genesis.core.akka.Akka;
+import com.genesis.core.akka.config.AkkaConfig;
+import com.genesis.core.config.ConfigBuilder;
+import com.genesis.core.config.ServerConfig;
+import com.genesis.core.isc.ISCActorSupervisor;
+import com.genesis.core.isc.ISCService;
+import com.genesis.core.isc.RemoteActorManager;
+import com.genesis.core.isc.ServerType;
+import com.genesis.core.isc.remote.DefaultRemoteFactory;
 import com.mokylin.bleach.remotelogserver.disruptor.LogManager;
 
 import org.apache.thrift.protocol.TBinaryProtocol;

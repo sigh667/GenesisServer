@@ -1,8 +1,8 @@
 package com.genesis.gameserver.core.timeevent;
 
 import com.genesis.gameserver.core.global.Globals;
-import com.mokylin.bleach.core.timeaxis.ITimeEvent;
-import com.mokylin.bleach.core.timeaxis.TimeAxis;
+import com.genesis.core.timeaxis.ITimeEvent;
+import com.genesis.core.timeaxis.TimeAxis;
 
 import org.joda.time.DateTime;
 import org.joda.time.LocalTime;

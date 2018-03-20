@@ -1,6 +1,6 @@
 package com.genesis.network2client.codec;
 
-import com.mokylin.bleach.core.net.msg.SCMessage;
+import com.genesis.core.net.msg.SCMessage;
 
 import java.nio.ByteOrder;
 

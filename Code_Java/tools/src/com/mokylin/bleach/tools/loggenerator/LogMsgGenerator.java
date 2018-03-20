@@ -2,10 +2,10 @@ package com.mokylin.bleach.tools.loggenerator;
 
 import com.google.common.collect.Lists;
 
-import com.mokylin.bleach.core.config.ConfigBuilder;
-import com.mokylin.bleach.core.util.BleachStringUtil;
-import com.mokylin.bleach.core.util.FileUtil;
-import com.mokylin.bleach.core.util.PackageUtil;
+import com.genesis.core.config.ConfigBuilder;
+import com.genesis.core.util.BleachStringUtil;
+import com.genesis.core.util.FileUtil;
+import com.genesis.core.util.PackageUtil;
 import com.mokylin.bleach.dblog.DbLog;
 import com.mokylin.bleach.dblog.HumanDbLog;
 import com.mokylin.bleach.dblog.anno.Index;

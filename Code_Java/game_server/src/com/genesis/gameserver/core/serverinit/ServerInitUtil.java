@@ -1,7 +1,7 @@
 package com.genesis.gameserver.core.serverinit;
 
-import com.mokylin.bleach.core.function.FunctionUtil;
-import com.mokylin.bleach.core.util.PackageUtil;
+import com.genesis.core.function.FunctionUtil;
+import com.genesis.core.util.PackageUtil;
 
 import org.apache.commons.lang3.reflect.TypeUtils;
 

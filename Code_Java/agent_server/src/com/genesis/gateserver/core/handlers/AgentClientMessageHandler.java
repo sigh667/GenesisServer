@@ -5,9 +5,9 @@ import com.genesis.network2client.handle.IClientMessageHandler;
 import com.genesis.network2client.msg.ClientMsg;
 import com.genesis.network2client.runnable.MsgProcessRunnable;
 import com.genesis.network2client.session.IClientSession;
-import com.mokylin.bleach.core.concurrent.fixthreadpool.FixThreadPool;
-import com.mokylin.bleach.core.isc.ServerType;
-import com.mokylin.bleach.core.msgfunc.target.TargetService;
+import com.genesis.core.concurrent.fixthreadpool.FixThreadPool;
+import com.genesis.core.isc.ServerType;
+import com.genesis.core.msgfunc.target.TargetService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

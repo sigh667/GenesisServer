@@ -1,6 +1,6 @@
 package com.genesis.network2client.msg;
 
-import com.mokylin.bleach.core.net.msg.BaseMessage;
+import com.genesis.core.net.msg.BaseMessage;
 
 /**
  * 客户端发来的消息

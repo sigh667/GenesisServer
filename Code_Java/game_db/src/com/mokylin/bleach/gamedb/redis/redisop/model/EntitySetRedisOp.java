@@ -1,6 +1,6 @@
 package com.mokylin.bleach.gamedb.redis.redisop.model;
 
-import com.mokylin.bleach.core.redis.op.PipelineProcess;
+import com.genesis.core.redis.op.PipelineProcess;
 import com.mokylin.bleach.gamedb.orm.EntityWithRedisKey;
 import com.mokylin.bleach.gamedb.redis.key.IRedisKey;
 import com.mokylin.bleach.gamedb.redis.redisop.IEntityRedisOp;

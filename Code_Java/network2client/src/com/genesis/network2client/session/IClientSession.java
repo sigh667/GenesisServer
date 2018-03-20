@@ -1,7 +1,7 @@
 package com.genesis.network2client.session;
 
 import com.google.protobuf.GeneratedMessage;
-import com.mokylin.bleach.core.net.msg.SCMessage;
+import com.genesis.core.net.msg.SCMessage;
 
 /**
  * 用于操作和维护与客户端连接的接口。<p>

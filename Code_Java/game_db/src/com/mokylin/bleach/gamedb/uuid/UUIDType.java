@@ -1,12 +1,12 @@
 package com.mokylin.bleach.gamedb.uuid;
 
-import com.mokylin.bleach.core.orm.BaseEntity;
-import com.mokylin.bleach.core.orm.hibernate.HibernateDBService;
-import com.mokylin.bleach.core.redis.IRedis;
-import com.mokylin.bleach.core.redis.IRedisResponse;
-import com.mokylin.bleach.core.uuid.UUIDHelper;
-import com.mokylin.bleach.core.uuid.helper.Scope;
-import com.mokylin.bleach.core.uuid.type.IUUIDType;
+import com.genesis.core.orm.BaseEntity;
+import com.genesis.core.orm.hibernate.HibernateDBService;
+import com.genesis.core.redis.IRedis;
+import com.genesis.core.redis.IRedisResponse;
+import com.genesis.core.uuid.UUIDHelper;
+import com.genesis.core.uuid.helper.Scope;
+import com.genesis.core.uuid.type.IUUIDType;
 import com.mokylin.bleach.gamedb.orm.entity.FunctionEntity;
 import com.mokylin.bleach.gamedb.orm.entity.HumanEntity;
 import com.mokylin.bleach.gamedb.orm.entity.ItemEntity;

@@ -1,6 +1,6 @@
 package com.mokylin.bleach.gamedb.orm.entity;
 
-import com.mokylin.bleach.core.orm.BaseEntity;
+import com.genesis.core.orm.BaseEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Id;

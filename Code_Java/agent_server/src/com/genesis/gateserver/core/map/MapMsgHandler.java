@@ -3,8 +3,8 @@ package com.genesis.gateserver.core.map;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import com.genesis.gateserver.core.session.AgentClientSessions;
-import com.mokylin.bleach.core.net.msg.BaseMessage;
-import com.mokylin.bleach.core.net.msg.SCMessage;
+import com.genesis.core.net.msg.BaseMessage;
+import com.genesis.core.net.msg.SCMessage;
 import com.genesis.protobuf.MessageType.MGMessageType;
 import com.genesis.protobuf.agentserver.AgentMessage.MGBroadCast;
 

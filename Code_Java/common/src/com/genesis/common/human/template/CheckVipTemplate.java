@@ -3,8 +3,8 @@ package com.genesis.common.human.template;
 import com.genesis.common.core.GlobalData;
 import com.genesis.common.human.vip.VipPrivilegeType;
 import com.genesis.common.human.vip.VipPrivilege;
-import com.mokylin.bleach.core.template.IAfterTemplateReady;
-import com.mokylin.bleach.core.template.util.TemplateCheckUtil;
+import com.genesis.core.template.IAfterTemplateReady;
+import com.genesis.core.template.util.TemplateCheckUtil;
 
 import java.util.Arrays;
 import java.util.Map;

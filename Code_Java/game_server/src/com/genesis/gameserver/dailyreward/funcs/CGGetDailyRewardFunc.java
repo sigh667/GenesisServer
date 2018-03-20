@@ -8,7 +8,7 @@ import com.genesis.gameserver.core.global.ServerGlobals;
 import com.genesis.gameserver.core.msgfunc.AbstractClientMsgFunc;
 import com.genesis.gameserver.dailyreward.DailyRewardManager;
 import com.genesis.gameserver.human.Human;
-import com.mokylin.bleach.core.util.TimeUtils;
+import com.genesis.core.util.TimeUtils;
 import com.genesis.gameserver.player.Player;
 import com.genesis.protobuf.DailyRewardMessage.CGGetDailyReward;
 import com.genesis.protobuf.DailyRewardMessage.GCGetDailyRewardFailed;

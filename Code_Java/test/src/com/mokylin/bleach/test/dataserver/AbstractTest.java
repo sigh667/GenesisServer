@@ -1,14 +1,14 @@
 package com.mokylin.bleach.test.dataserver;
 
-import com.mokylin.bleach.core.concurrent.process.ProcessUnit;
-import com.mokylin.bleach.core.concurrent.process.ProcessUnitHelper;
-import com.mokylin.bleach.core.config.ConfigBuilder;
-import com.mokylin.bleach.core.config.Mapping;
-import com.mokylin.bleach.core.function.Function0;
-import com.mokylin.bleach.core.orm.hibernate.HibernateDBService;
-import com.mokylin.bleach.core.redis.IRedis;
-import com.mokylin.bleach.core.redis.RedisService;
-import com.mokylin.bleach.core.redis.config.RedisConfig;
+import com.genesis.core.concurrent.process.ProcessUnit;
+import com.genesis.core.concurrent.process.ProcessUnitHelper;
+import com.genesis.core.config.ConfigBuilder;
+import com.genesis.core.config.Mapping;
+import com.genesis.core.function.Function0;
+import com.genesis.core.orm.hibernate.HibernateDBService;
+import com.genesis.core.redis.IRedis;
+import com.genesis.core.redis.RedisService;
+import com.genesis.core.redis.config.RedisConfig;
 import com.genesis.dataserver.conf.DataServerConfig;
 import com.genesis.dataserver.globals.Globals;
 import com.mokylin.bleach.test.common.util.MultiThread;

@@ -2,9 +2,9 @@ package com.mokylin.bleach.test.gameserver.item;
 
 import com.genesis.common.core.GlobalData;
 import com.genesis.common.item.template.ItemTemplate;
-import com.mokylin.bleach.core.template.TemplateService;
-import com.mokylin.bleach.core.time.TimeService;
-import com.mokylin.bleach.core.uuid.IUUIDGenerator;
+import com.genesis.core.template.TemplateService;
+import com.genesis.core.time.TimeService;
+import com.genesis.core.uuid.IUUIDGenerator;
 import com.genesis.gameserver.core.global.Globals;
 import com.genesis.gameserver.core.global.ServerGlobals;
 import com.genesis.gameserver.human.Human;

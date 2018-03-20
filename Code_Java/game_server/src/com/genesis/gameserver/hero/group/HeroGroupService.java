@@ -1,7 +1,7 @@
 package com.genesis.gameserver.hero.group;
 
 import com.genesis.common.hero.template.HeroAttrTemplate;
-import com.mokylin.bleach.core.template.TemplateService;
+import com.genesis.core.template.TemplateService;
 
 import java.util.HashMap;
 import java.util.Map;

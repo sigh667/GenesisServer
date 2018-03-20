@@ -5,7 +5,7 @@ import com.genesis.common.human.HumanPropId;
 import com.genesis.common.human.template.VipTemplate;
 import com.genesis.common.human.vip.VipPrivilege;
 import com.genesis.common.human.vip.VipPrivilegeType;
-import com.mokylin.bleach.core.util.MathUtils;
+import com.genesis.core.util.MathUtils;
 import com.genesis.gameserver.core.global.Globals;
 import com.genesis.gameserver.human.Human;
 import com.genesis.gameserver.human.vip.event.VipLevelUpEvent;

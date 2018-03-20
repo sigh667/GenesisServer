@@ -2,7 +2,7 @@ package com.mokylin.bleach.tools.loggenerator;
 
 import com.google.common.collect.Lists;
 
-import com.mokylin.bleach.core.util.PackageUtil;
+import com.genesis.core.util.PackageUtil;
 import com.mokylin.bleach.dblog.DbLog;
 import com.mokylin.bleach.tools.loggenerator.LogReasons.ILogReason;
 import com.mokylin.bleach.tools.loggenerator.LogReasons.LogDesc;

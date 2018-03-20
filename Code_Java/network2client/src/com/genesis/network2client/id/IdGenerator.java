@@ -1,6 +1,6 @@
 package com.genesis.network2client.id;
 
-import com.mokylin.bleach.core.annotation.ThreadSafe;
+import com.genesis.core.annotation.ThreadSafe;
 
 import java.util.concurrent.atomic.AtomicLong;
 

@@ -1,8 +1,8 @@
 package com.mokylin.bleach.test.core.serviceinit;
 
-import com.mokylin.bleach.core.serviceinit.ServiceInitManager;
-import com.mokylin.bleach.core.serviceinit.exception.CircularDependencyException;
-import com.mokylin.bleach.core.serviceinit.exception.WrongServiceObjectFieldException;
+import com.genesis.core.serviceinit.ServiceInitManager;
+import com.genesis.core.serviceinit.exception.CircularDependencyException;
+import com.genesis.core.serviceinit.exception.WrongServiceObjectFieldException;
 import com.mokylin.bleach.test.core.serviceinit.service.Statistics;
 import com.mokylin.bleach.test.core.serviceinit.servicedep.StatisticsDep;
 import com.mokylin.bleach.test.core.serviceinit.servicefilter.Filter;

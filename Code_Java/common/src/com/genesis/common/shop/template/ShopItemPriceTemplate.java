@@ -1,8 +1,8 @@
 package com.genesis.common.shop.template;
 
 import com.genesis.common.currency.Currency;
-import com.mokylin.bleach.core.template.annotation.ExcelRowBinding;
-import com.mokylin.bleach.core.template.exception.TemplateConfigException;
+import com.genesis.core.template.annotation.ExcelRowBinding;
+import com.genesis.core.template.exception.TemplateConfigException;
 
 /**
  * 物品价格模板

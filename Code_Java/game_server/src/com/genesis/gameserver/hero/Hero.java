@@ -10,7 +10,7 @@ import com.genesis.common.prop.battleprop.BattlePropContainer;
 import com.genesis.common.prop.battleprop.HeroBattlePropId;
 import com.genesis.gameserver.core.global.Globals;
 import com.genesis.gameserver.human.Human;
-import com.mokylin.bleach.core.util.arr.EnumArray;
+import com.genesis.core.util.arr.EnumArray;
 import com.mokylin.bleach.gamedb.orm.entity.HeroEntity;
 import com.mokylin.bleach.gamedb.orm.vo.HeroEquip;
 import com.mokylin.bleach.gamedb.orm.vo.HeroSkill;

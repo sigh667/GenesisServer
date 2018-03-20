@@ -1,7 +1,7 @@
 package com.mokylin.bleach.test.gameserver.timeaxis.task;
 
-import com.mokylin.bleach.core.timeaxis.ITimeEvent;
-import com.mokylin.bleach.core.timeaxis.ITimeEventType;
+import com.genesis.core.timeaxis.ITimeEvent;
+import com.genesis.core.timeaxis.ITimeEventType;
 import com.mokylin.bleach.test.gameserver.timeaxis.Human;
 import com.mokylin.bleach.test.gameserver.timeaxis.TestTimeEventType;
 

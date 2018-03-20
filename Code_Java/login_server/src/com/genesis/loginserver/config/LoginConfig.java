@@ -1,6 +1,6 @@
 package com.genesis.loginserver.config;
 
-import com.mokylin.bleach.core.config.model.NetInfo;
+import com.genesis.core.config.model.NetInfo;
 
 /**
  * 登陆服务器配置

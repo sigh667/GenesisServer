@@ -1,7 +1,7 @@
 package com.mokylin.bleach.robot.currency;
 
 import com.genesis.common.currency.Currency;
-import com.mokylin.bleach.core.util.arr.EnumArray;
+import com.genesis.core.util.arr.EnumArray;
 import com.mokylin.bleach.robot.human.Human;
 
 import java.util.List;

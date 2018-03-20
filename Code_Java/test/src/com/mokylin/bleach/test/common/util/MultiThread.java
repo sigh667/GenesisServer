@@ -1,6 +1,6 @@
 package com.mokylin.bleach.test.common.util;
 
-import com.mokylin.bleach.core.function.Function0;
+import com.genesis.core.function.Function0;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;

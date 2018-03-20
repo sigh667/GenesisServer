@@ -1,13 +1,13 @@
 package com.genesis.dataserver.globals;
 
-import com.mokylin.bleach.core.akka.Akka;
-import com.mokylin.bleach.core.concurrent.process.CommonProcessType;
-import com.mokylin.bleach.core.config.ServerAddressTable;
-import com.mokylin.bleach.core.heartbeat.HeartbeatService;
-import com.mokylin.bleach.core.isc.ISCActorSupervisor;
-import com.mokylin.bleach.core.isc.ISCService;
-import com.mokylin.bleach.core.isc.RemoteActorManager;
-import com.mokylin.bleach.core.orm.hibernate.HibernateDBService;
+import com.genesis.core.akka.Akka;
+import com.genesis.core.concurrent.process.CommonProcessType;
+import com.genesis.core.config.ServerAddressTable;
+import com.genesis.core.heartbeat.HeartbeatService;
+import com.genesis.core.isc.ISCActorSupervisor;
+import com.genesis.core.isc.ISCService;
+import com.genesis.core.isc.RemoteActorManager;
+import com.genesis.core.orm.hibernate.HibernateDBService;
 import com.genesis.dataserver.conf.DataServerConfig;
 import com.genesis.dataserver.conf.SqlProperties;
 import com.genesis.dataserver.redis.RedisManager;
