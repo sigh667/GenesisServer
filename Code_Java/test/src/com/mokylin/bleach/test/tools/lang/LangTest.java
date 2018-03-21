@@ -4,15 +4,15 @@ import com.google.common.collect.Lists;
 
 import com.genesis.core.util.ExcelOperation;
 import com.genesis.core.util.ExcelOperation.ModifyWorkbookOperation;
-import com.mokylin.bleach.tools.lang.Constants;
-import com.mokylin.bleach.tools.lang.Lang_zh_CN_Generator;
-import com.mokylin.bleach.tools.lang.Language;
-import com.mokylin.bleach.tools.lang.MergeTranslatedLang;
-import com.mokylin.bleach.tools.lang.TranslatingFileGenerator;
-import com.mokylin.bleach.tools.lang.item.ChangeFootprint;
-import com.mokylin.bleach.tools.lang.item.LangItem;
-import com.mokylin.bleach.tools.lang.localgenerator.Local_Lang_zh_CN_Generator;
-import com.mokylin.bleach.tools.lang.util.LangUtil;
+import com.genesis.tools.lang.Constants;
+import com.genesis.tools.lang.Lang_zh_CN_Generator;
+import com.genesis.tools.lang.Language;
+import com.genesis.tools.lang.MergeTranslatedLang;
+import com.genesis.tools.lang.TranslatingFileGenerator;
+import com.genesis.tools.lang.item.ChangeFootprint;
+import com.genesis.tools.lang.item.LangItem;
+import com.genesis.tools.lang.localgenerator.Local_Lang_zh_CN_Generator;
+import com.genesis.tools.lang.util.LangUtil;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
