@@ -5,7 +5,7 @@ import com.genesis.common.hero.template.HeroAttrTemplate;
 import com.genesis.common.prop.battleprop.source.PropSourceType;
 import com.genesis.gameserver.hero.Hero;
 import com.genesis.gameserver.human.Human;
-import com.mokylin.bleach.gamedb.orm.vo.HeroEquip;
+import com.genesis.gamedb.orm.vo.HeroEquip;
 import com.genesis.protobuf.HeroMessage.HeroEquipInfo;
 
 import org.slf4j.Logger;

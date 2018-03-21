@@ -12,7 +12,7 @@ import com.genesis.core.redis.IRedis;
 import com.genesis.core.timeaxis.TimeAxis;
 import com.genesis.core.uuid.IUUIDGenerator;
 import com.genesis.core.uuid.UUIDGeneratorFactory;
-import com.mokylin.bleach.gamedb.uuid.UUIDType;
+import com.genesis.gamedb.uuid.UUIDType;
 import com.genesis.gameserver.core.concurrent.GameProcessUnit;
 import com.genesis.gameserver.core.concurrent.GameServerProcessUnitHelper;
 import com.genesis.gameserver.core.config.GameServerConfig;

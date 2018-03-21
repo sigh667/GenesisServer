@@ -1,6 +1,6 @@
 package com.genesis.gameserver.login.protocol;
 
-import com.mokylin.bleach.gamedb.human.HumanData;
+import com.genesis.gamedb.human.HumanData;
 import com.genesis.gameserver.player.Player;
 
 /**

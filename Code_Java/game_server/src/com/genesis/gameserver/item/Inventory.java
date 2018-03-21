@@ -8,7 +8,7 @@ import com.google.common.base.Optional;
 import com.genesis.common.core.GlobalData;
 import com.genesis.common.item.ItemContainer;
 import com.genesis.common.item.template.ItemTemplate;
-import com.mokylin.bleach.gamedb.orm.entity.ItemEntity;
+import com.genesis.gamedb.orm.entity.ItemEntity;
 import com.genesis.gameserver.item.ItemInfo.DetailItemInfo;
 
 import java.util.List;

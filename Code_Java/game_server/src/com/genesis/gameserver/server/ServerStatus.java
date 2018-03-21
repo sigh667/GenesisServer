@@ -1,6 +1,6 @@
 package com.genesis.gameserver.server;
 
-import com.mokylin.bleach.gamedb.orm.entity.ServerStatusEntity;
+import com.genesis.gamedb.orm.entity.ServerStatusEntity;
 import com.genesis.gameserver.core.global.ServerGlobals;
 import com.genesis.gameserver.core.persistance.ObjectInSqlImplNoCache;
 

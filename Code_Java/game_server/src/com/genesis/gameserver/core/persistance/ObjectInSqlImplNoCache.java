@@ -2,11 +2,11 @@ package com.genesis.gameserver.core.persistance;
 
 import com.genesis.gameserver.core.global.ServerGlobals;
 import com.genesis.gameserver.core.persistance.task.PersistanceIntoRedisTask;
-import com.mokylin.bleach.gamedb.orm.EntityWithRedisKey;
-import com.mokylin.bleach.gamedb.persistance.IObjectInSql;
-import com.mokylin.bleach.gamedb.redis.DbOp;
-import com.mokylin.bleach.gamedb.redis.DirtyDataInfo;
-import com.mokylin.bleach.gamedb.redis.key.IRedisKey;
+import com.genesis.gamedb.orm.EntityWithRedisKey;
+import com.genesis.gamedb.persistance.IObjectInSql;
+import com.genesis.gamedb.redis.DbOp;
+import com.genesis.gamedb.redis.DirtyDataInfo;
+import com.genesis.gamedb.redis.key.IRedisKey;
 import com.genesis.gameserver.core.persistance.model.DirtyData;
 
 import org.slf4j.Logger;

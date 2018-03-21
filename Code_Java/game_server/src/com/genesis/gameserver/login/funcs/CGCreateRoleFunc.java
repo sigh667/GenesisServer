@@ -1,7 +1,7 @@
 package com.genesis.gameserver.login.funcs;
 //
-//import com.mokylin.bleach.gamedb.human.HumanInfo;
-//import com.mokylin.bleach.gamedb.uuid.UUIDType;
+//import HumanInfo;
+//import UUIDType;
 //import ServerGlobals;
 //import HumanInfoCache;
 //import AbstractClientMsgFunc;

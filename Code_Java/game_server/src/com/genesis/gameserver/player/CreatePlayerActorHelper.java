@@ -2,8 +2,8 @@ package com.genesis.gameserver.player;
 
 import com.genesis.gameserver.core.global.ServerGlobals;
 import com.genesis.gameserver.player.protocol.RegisterPlayer;
-import com.mokylin.bleach.gamedb.human.HumanData;
-import com.mokylin.bleach.gamedb.human.HumanInfo;
+import com.genesis.gamedb.human.HumanData;
+import com.genesis.gamedb.human.HumanInfo;
 
 import akka.actor.ActorRef;
 import akka.actor.Props;

@@ -10,7 +10,7 @@ import com.genesis.protobuf.HeroMessage.HeroInfo;
 import com.genesis.common.core.GlobalData;
 import com.genesis.common.hero.template.HeroAttrTemplate;
 import com.genesis.common.hero.template.HeroGroupTemplate;
-import com.mokylin.bleach.gamedb.orm.entity.HeroEntity;
+import com.genesis.gamedb.orm.entity.HeroEntity;
 
 import java.util.HashMap;
 import java.util.List;

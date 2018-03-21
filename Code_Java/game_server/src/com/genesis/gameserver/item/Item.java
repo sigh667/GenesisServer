@@ -4,8 +4,8 @@ import com.genesis.common.core.GlobalData;
 import com.genesis.common.item.IItem;
 import com.genesis.common.item.template.ItemTemplate;
 import com.genesis.gameserver.human.Human;
-import com.mokylin.bleach.gamedb.orm.entity.ItemEntity;
-import com.mokylin.bleach.gamedb.uuid.UUIDType;
+import com.genesis.gamedb.orm.entity.ItemEntity;
+import com.genesis.gamedb.uuid.UUIDType;
 import com.genesis.gameserver.core.persistance.IDataUpdater;
 import com.genesis.gameserver.core.persistance.ObjectInSqlImpl;
 

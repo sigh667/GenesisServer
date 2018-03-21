@@ -4,7 +4,7 @@ import com.genesis.gameserver.core.timeout.callback.ITimeoutCallback;
 import com.genesis.gameserver.player.LoginStatus;
 import com.genesis.gameserver.player.Player;
 import com.genesis.gameserver.player.PlayerManagerArgs;
-import com.mokylin.bleach.gamedb.human.HumanInfo;
+import com.genesis.gamedb.human.HumanInfo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

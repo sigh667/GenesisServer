@@ -7,12 +7,12 @@ import com.genesis.core.config.Mapping;
 import com.genesis.core.redis.IRedis;
 import com.genesis.core.redis.op.IPipelineOp;
 import com.genesis.core.redis.op.PipelineProcess;
-import com.mokylin.bleach.gamedb.orm.EntityWithRedisKey;
-import com.mokylin.bleach.gamedb.orm.IHumanRelatedEntity;
-import com.mokylin.bleach.gamedb.orm.IServerRelatedEntity;
-import com.mokylin.bleach.gamedb.redis.DbOp;
-import com.mokylin.bleach.gamedb.redis.key.IRedisKey;
-import com.mokylin.bleach.gamedb.redis.key.SpecialRedisKeyBuilder;
+import com.genesis.gamedb.orm.EntityWithRedisKey;
+import com.genesis.gamedb.orm.IHumanRelatedEntity;
+import com.genesis.gamedb.orm.IServerRelatedEntity;
+import com.genesis.gamedb.redis.DbOp;
+import com.genesis.gamedb.redis.key.IRedisKey;
+import com.genesis.gamedb.redis.key.SpecialRedisKeyBuilder;
 import com.genesis.gameserver.core.concurrent.AsyncArgs;
 import com.genesis.gameserver.core.persistance.model.DirtyData;
 

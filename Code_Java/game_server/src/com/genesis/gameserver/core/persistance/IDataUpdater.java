@@ -1,6 +1,6 @@
 package com.genesis.gameserver.core.persistance;
 
-import com.mokylin.bleach.gamedb.persistance.PersistanceWrapper;
+import com.genesis.gamedb.persistance.PersistanceWrapper;
 
 public interface IDataUpdater {
 

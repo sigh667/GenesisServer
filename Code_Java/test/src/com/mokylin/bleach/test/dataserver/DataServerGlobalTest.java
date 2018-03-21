@@ -1,11 +1,11 @@
 package com.mokylin.bleach.test.dataserver;
 
 import com.genesis.dataserver.globals.Globals;
-import com.mokylin.bleach.gamedb.human.HumanInfo;
-import com.mokylin.bleach.gamedb.orm.entity.AccountEntity;
-import com.mokylin.bleach.gamedb.orm.entity.ArenaSnapEntity;
-import com.mokylin.bleach.gamedb.redis.key.SpecialRedisKeyBuilder;
-import com.mokylin.bleach.gamedb.redis.key.model.ArenaSnapKey;
+import com.genesis.gamedb.human.HumanInfo;
+import com.genesis.gamedb.orm.entity.AccountEntity;
+import com.genesis.gamedb.orm.entity.ArenaSnapEntity;
+import com.genesis.gamedb.redis.key.SpecialRedisKeyBuilder;
+import com.genesis.gamedb.redis.key.model.ArenaSnapKey;
 import com.mokylin.bleach.test.dataserver.gamedb.ArenaSnapTable;
 import com.mokylin.bleach.test.dataserver.gamedb.HumanTable;
 

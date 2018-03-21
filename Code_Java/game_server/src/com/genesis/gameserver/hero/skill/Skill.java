@@ -1,7 +1,7 @@
 package com.genesis.gameserver.hero.skill;
 
 import com.genesis.gameserver.hero.Hero;
-import com.mokylin.bleach.gamedb.orm.vo.HeroSkill;
+import com.genesis.gamedb.orm.vo.HeroSkill;
 import com.genesis.protobuf.HeroMessage.HeroSkillInfo;
 import com.genesis.protobuf.HeroMessage.HeroSkillInfo.Builder;
 

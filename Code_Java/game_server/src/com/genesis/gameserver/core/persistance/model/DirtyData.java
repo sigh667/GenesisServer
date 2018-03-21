@@ -1,7 +1,7 @@
 package com.genesis.gameserver.core.persistance.model;
 
-import com.mokylin.bleach.gamedb.orm.EntityWithRedisKey;
-import com.mokylin.bleach.gamedb.redis.DirtyDataInfo;
+import com.genesis.gamedb.orm.EntityWithRedisKey;
+import com.genesis.gamedb.redis.DirtyDataInfo;
 
 /**
  * 用于脏数据保存的类

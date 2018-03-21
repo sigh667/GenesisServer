@@ -7,9 +7,9 @@ import com.genesis.core.redis.op.IPipelineOp;
 import com.genesis.core.redis.op.PipelineProcess;
 import com.genesis.dataserver.serverdb.ServerDBManager;
 import com.genesis.dataserver.serverdb.task.loadglobaldata.ILoadHumanRelatedGlobalData;
-import com.mokylin.bleach.gamedb.orm.entity.ArenaSnapEntity;
-import com.mokylin.bleach.gamedb.orm.entity.HumanEntity;
-import com.mokylin.bleach.gamedb.redis.key.model.ArenaSnapKey;
+import com.genesis.gamedb.orm.entity.ArenaSnapEntity;
+import com.genesis.gamedb.orm.entity.HumanEntity;
+import com.genesis.gamedb.redis.key.model.ArenaSnapKey;
 
 import java.util.ArrayList;
 import java.util.Iterator;

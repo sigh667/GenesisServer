@@ -10,8 +10,8 @@ import com.genesis.common.core.GlobalData;
 import com.genesis.common.human.HumanPropId;
 import com.genesis.common.shop.ShopType;
 import com.genesis.common.shop.template.ShopTemplate;
-import com.mokylin.bleach.gamedb.orm.entity.ShopEntity;
-import com.mokylin.bleach.gamedb.uuid.UUIDType;
+import com.genesis.gamedb.orm.entity.ShopEntity;
+import com.genesis.gamedb.uuid.UUIDType;
 import com.genesis.protobuf.ShopMessage.GCOpenShop;
 import com.genesis.protobuf.ShopMessage.GCOpenedTempShop;
 

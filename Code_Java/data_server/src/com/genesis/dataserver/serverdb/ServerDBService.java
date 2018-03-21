@@ -10,7 +10,7 @@ import com.genesis.core.heartbeat.IHeartbeat;
 import com.genesis.core.isc.ServerType;
 import com.genesis.core.redis.IRedis;
 import com.genesis.dataserver.redis.RedisManager;
-import com.mokylin.bleach.gamedb.uuid.UUIDType;
+import com.genesis.gamedb.uuid.UUIDType;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

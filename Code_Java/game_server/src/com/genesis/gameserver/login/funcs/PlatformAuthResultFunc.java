@@ -4,7 +4,7 @@ package com.genesis.gameserver.login.funcs;
 //
 //import IRemote;
 //import IServerMsgFunc;
-//import com.mokylin.bleach.gamedb.human.HumanInfo;
+//import HumanInfo;
 //import ServerGlobals;
 //import HumanInfoCache;
 //import LoginService;

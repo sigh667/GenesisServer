@@ -5,7 +5,7 @@ import com.genesis.gameserver.core.global.ServerGlobals;
 import com.genesis.core.isc.remote.IRemote;
 import com.genesis.core.msgfunc.MsgArgs;
 import com.genesis.core.msgfunc.server.IServerMsgFunc;
-import com.mokylin.bleach.gamedb.uuid.UUIDType;
+import com.genesis.gamedb.uuid.UUIDType;
 import com.genesis.gameserver.shop.discount.ShopDiscount;
 import com.genesis.protobuf.MessageType.MessageTarget;
 import com.genesis.servermsg.gameserver.shop.ShopDiscountInfo;

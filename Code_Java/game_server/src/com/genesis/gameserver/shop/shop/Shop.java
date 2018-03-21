@@ -8,7 +8,7 @@ import com.alibaba.fastjson.JSON;
 import com.genesis.common.core.GlobalData;
 import com.genesis.common.shop.ShopType;
 import com.genesis.common.shop.template.ShopTemplate;
-import com.mokylin.bleach.gamedb.orm.entity.ShopEntity;
+import com.genesis.gamedb.orm.entity.ShopEntity;
 import com.genesis.gameserver.core.persistance.ObjectInSqlImpl;
 import com.genesis.protobuf.ShopMessage.GoodInfo;
 

@@ -1,6 +1,6 @@
 package com.genesis.gameserver.shop.discount.init;
 
-import com.mokylin.bleach.gamedb.orm.entity.ShopDiscountEntity;
+import com.genesis.gamedb.orm.entity.ShopDiscountEntity;
 
 import java.util.Collection;
 

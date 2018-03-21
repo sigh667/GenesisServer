@@ -1,7 +1,7 @@
 package com.genesis.servermsg.gameserver;
 
 import com.genesis.core.isc.msg.IMessage;
-import com.mokylin.bleach.gamedb.human.HumanData;
+import com.genesis.gamedb.human.HumanData;
 import com.genesis.protobuf.MessageType.MessageTarget;
 
 public class HumanDataMsg implements IMessage {

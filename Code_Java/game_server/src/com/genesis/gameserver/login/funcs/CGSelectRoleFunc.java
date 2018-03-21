@@ -1,6 +1,6 @@
 package com.genesis.gameserver.login.funcs;
 //
-//import com.mokylin.bleach.gamedb.human.HumanInfo;
+//import HumanInfo;
 //import ServerGlobals;
 //import HumanInfoCache;
 //import AbstractClientMsgFunc;

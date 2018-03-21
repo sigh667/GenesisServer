@@ -4,7 +4,7 @@ import com.genesis.gameserver.core.global.ServerGlobals;
 import com.google.common.collect.Maps;
 
 import com.genesis.common.shop.ShopType;
-import com.mokylin.bleach.gamedb.orm.entity.ShopDiscountEntity;
+import com.genesis.gamedb.orm.entity.ShopDiscountEntity;
 
 import java.util.Collection;
 import java.util.Map;

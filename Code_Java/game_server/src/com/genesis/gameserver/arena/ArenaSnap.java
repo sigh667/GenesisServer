@@ -1,7 +1,7 @@
 package com.genesis.gameserver.arena;
 
 import com.genesis.gameserver.core.persistance.IDataUpdater;
-import com.mokylin.bleach.gamedb.orm.entity.ArenaSnapEntity;
+import com.genesis.gamedb.orm.entity.ArenaSnapEntity;
 import com.genesis.gameserver.core.persistance.ObjectInSqlImpl;
 
 /**

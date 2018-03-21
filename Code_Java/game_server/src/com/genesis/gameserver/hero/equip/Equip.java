@@ -6,7 +6,7 @@ import com.genesis.common.prop.battleprop.propholder.IPropHolder;
 import com.genesis.common.prop.battleprop.propholder.Prop;
 import com.genesis.common.prop.battleprop.source.PropSourceType;
 import com.genesis.gameserver.core.global.Globals;
-import com.mokylin.bleach.gamedb.orm.vo.HeroEquip;
+import com.genesis.gamedb.orm.vo.HeroEquip;
 import com.genesis.protobuf.HeroMessage.HeroEquipInfo;
 import com.genesis.protobuf.HeroMessage.HeroEquipInfo.Builder;
 

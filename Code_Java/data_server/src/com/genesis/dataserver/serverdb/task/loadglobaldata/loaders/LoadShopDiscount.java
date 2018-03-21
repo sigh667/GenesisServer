@@ -7,8 +7,8 @@ import com.genesis.core.redis.op.PipelineProcess;
 import com.genesis.dataserver.globals.Globals;
 import com.genesis.dataserver.serverdb.ServerDBManager;
 import com.genesis.dataserver.serverdb.task.loadglobaldata.ILoadGlobalData;
-import com.mokylin.bleach.gamedb.orm.entity.ShopDiscountEntity;
-import com.mokylin.bleach.gamedb.redis.key.model.ShopDiscountKey;
+import com.genesis.gamedb.orm.entity.ShopDiscountEntity;
+import com.genesis.gamedb.redis.key.model.ShopDiscountKey;
 
 import java.util.Iterator;
 import java.util.List;

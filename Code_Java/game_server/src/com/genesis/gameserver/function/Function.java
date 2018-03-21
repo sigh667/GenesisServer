@@ -3,7 +3,7 @@ package com.genesis.gameserver.function;
 import com.genesis.common.function.FunctionType;
 import com.genesis.gameserver.core.persistance.ObjectInSqlImpl;
 import com.genesis.gameserver.human.Human;
-import com.mokylin.bleach.gamedb.orm.entity.FunctionEntity;
+import com.genesis.gamedb.orm.entity.FunctionEntity;
 
 import java.sql.Timestamp;
 

@@ -7,8 +7,8 @@ import com.google.common.collect.Maps;
 import com.genesis.common.core.GlobalData;
 import com.genesis.common.function.FunctionType;
 import com.genesis.common.function.template.FunctionTemplate;
-import com.mokylin.bleach.gamedb.orm.entity.FunctionEntity;
-import com.mokylin.bleach.gamedb.uuid.UUIDType;
+import com.genesis.gamedb.orm.entity.FunctionEntity;
+import com.genesis.gamedb.uuid.UUIDType;
 import com.genesis.protobuf.FunctionMessage.GCFunctionOpen;
 import com.genesis.protobuf.FunctionMessage.GCFunctionOpenList;
 

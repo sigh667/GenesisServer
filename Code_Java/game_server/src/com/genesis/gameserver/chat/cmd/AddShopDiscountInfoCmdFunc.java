@@ -4,7 +4,7 @@ import com.genesis.common.shop.ShopType;
 import com.genesis.gameserver.chat.cmd.core.IGmCmdFunction;
 import com.genesis.gameserver.core.global.ServerGlobals;
 import com.genesis.gameserver.human.Human;
-import com.mokylin.bleach.gamedb.uuid.UUIDType;
+import com.genesis.gamedb.uuid.UUIDType;
 import com.genesis.gameserver.shop.discount.ShopDiscount;
 
 import java.sql.Timestamp;

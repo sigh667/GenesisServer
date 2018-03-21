@@ -2,7 +2,7 @@ package com.genesis.dataserver.serverdb.task.loadglobaldata;
 
 import com.genesis.dataserver.serverdb.ServerDBManager;
 import com.genesis.core.util.PackageUtil;
-import com.mokylin.bleach.gamedb.orm.entity.HumanEntity;
+import com.genesis.gamedb.orm.entity.HumanEntity;
 
 import java.util.List;
 import java.util.Set;

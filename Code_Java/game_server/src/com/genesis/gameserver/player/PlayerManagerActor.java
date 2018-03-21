@@ -16,7 +16,7 @@ import com.genesis.core.isc.remote.IRemote;
 import com.genesis.core.isc.remote.actorrefs.annotation.MessageAcception;
 import com.genesis.core.net.msg.CSSMessage;
 import com.genesis.core.timeaxis.TimeAxis;
-import com.mokylin.bleach.gamedb.human.HumanInfo;
+import com.genesis.gamedb.human.HumanInfo;
 import com.genesis.gameserver.core.heartbeat.Heartbeat;
 import com.genesis.gameserver.core.timeout.TimeoutCallbackManager.TimeoutCBWrapper;
 import com.genesis.gameserver.login.OnlinePlayerService;

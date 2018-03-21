@@ -3,7 +3,7 @@ package com.genesis.gameserver.shop.discount;
 import com.genesis.common.shop.ShopType;
 import com.genesis.gameserver.core.global.Globals;
 import com.genesis.gameserver.core.global.ServerGlobals;
-import com.mokylin.bleach.gamedb.orm.entity.ShopDiscountEntity;
+import com.genesis.gamedb.orm.entity.ShopDiscountEntity;
 import com.genesis.gameserver.core.persistance.ObjectInSqlImplNoCache;
 
 import java.sql.Timestamp;

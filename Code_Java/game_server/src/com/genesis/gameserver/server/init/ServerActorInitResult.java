@@ -1,6 +1,6 @@
 package com.genesis.gameserver.server.init;
 
-import com.mokylin.bleach.gamedb.orm.entity.ServerStatusEntity;
+import com.genesis.gamedb.orm.entity.ServerStatusEntity;
 import com.genesis.gameserver.core.humaninfocache.HumanInfoCache;
 
 import java.util.HashMap;

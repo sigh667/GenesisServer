@@ -1,7 +1,7 @@
 package com.genesis.gameserver.core.autoexecutetask;
 
 import com.genesis.core.timeaxis.TimeAxis;
-import com.mokylin.bleach.gamedb.persistance.IObjectInSql;
+import com.genesis.gamedb.persistance.IObjectInSql;
 import com.genesis.gameserver.core.global.Globals;
 
 import org.joda.time.LocalTime;

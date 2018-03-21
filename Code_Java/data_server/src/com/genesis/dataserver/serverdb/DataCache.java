@@ -9,10 +9,10 @@ import com.genesis.core.redis.IRedis;
 import com.genesis.core.redis.IRedisResponse;
 import com.genesis.core.redis.op.IPipelineOp;
 import com.genesis.core.redis.op.PipelineProcess;
-import com.mokylin.bleach.gamedb.orm.EntityWithRedisKey;
-import com.mokylin.bleach.gamedb.redis.DbOp;
-import com.mokylin.bleach.gamedb.redis.DirtyDataInfo;
-import com.mokylin.bleach.gamedb.redis.key.IRedisKey;
+import com.genesis.gamedb.orm.EntityWithRedisKey;
+import com.genesis.gamedb.redis.DbOp;
+import com.genesis.gamedb.redis.DirtyDataInfo;
+import com.genesis.gamedb.redis.key.IRedisKey;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

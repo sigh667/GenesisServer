@@ -3,8 +3,8 @@ package com.genesis.dataserver.serverdb.task;
 import com.genesis.core.redis.IRedis;
 import com.genesis.core.redis.IRedisResponse;
 import com.genesis.dataserver.serverdb.ServerDBManager;
-import com.mokylin.bleach.gamedb.redis.DirtyDataInfo;
-import com.mokylin.bleach.gamedb.redis.key.SpecialRedisKeyBuilder;
+import com.genesis.gamedb.redis.DirtyDataInfo;
+import com.genesis.gamedb.redis.key.SpecialRedisKeyBuilder;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

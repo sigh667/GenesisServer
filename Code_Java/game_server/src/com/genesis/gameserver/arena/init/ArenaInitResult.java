@@ -1,6 +1,6 @@
 package com.genesis.gameserver.arena.init;
 
-import com.mokylin.bleach.gamedb.orm.entity.ArenaSnapEntity;
+import com.genesis.gamedb.orm.entity.ArenaSnapEntity;
 
 import java.util.Collection;
 

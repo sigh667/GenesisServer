@@ -1,8 +1,8 @@
 package com.genesis.gameserver.arena.init;
 
 import com.genesis.gameserver.core.serverinit.ServerInitFunction;
-import com.mokylin.bleach.gamedb.orm.entity.ArenaSnapEntity;
-import com.mokylin.bleach.gamedb.redis.key.model.ArenaSnapKey;
+import com.genesis.gamedb.orm.entity.ArenaSnapEntity;
+import com.genesis.gamedb.redis.key.model.ArenaSnapKey;
 import com.genesis.gameserver.core.global.ServerGlobals;
 
 import java.util.ArrayList;

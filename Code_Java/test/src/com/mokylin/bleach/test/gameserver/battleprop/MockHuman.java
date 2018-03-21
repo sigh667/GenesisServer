@@ -3,7 +3,7 @@ package com.mokylin.bleach.test.gameserver.battleprop;
 import com.google.common.collect.Lists;
 import com.google.protobuf.GeneratedMessage;
 
-import com.mokylin.bleach.gamedb.human.HumanInfo;
+import com.genesis.gamedb.human.HumanInfo;
 import com.genesis.gameserver.hero.Hero;
 import com.genesis.gameserver.human.Human;
 import com.genesis.protobuf.HeroMessage.GCChangedProps;

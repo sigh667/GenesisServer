@@ -1,6 +1,6 @@
 package com.genesis.gameserver.login.protocol;
 
-import com.mokylin.bleach.gamedb.human.HumanInfo;
+import com.genesis.gamedb.human.HumanInfo;
 
 public class RemoveHumanInfoMsg {
 

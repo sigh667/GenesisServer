@@ -1,8 +1,8 @@
 package com.genesis.gameserver.core.persistance;
 
-import com.mokylin.bleach.gamedb.orm.EntityWithRedisKey;
-import com.mokylin.bleach.gamedb.persistance.IObjectInSql;
-import com.mokylin.bleach.gamedb.persistance.PersistanceWrapper;
+import com.genesis.gamedb.orm.EntityWithRedisKey;
+import com.genesis.gamedb.persistance.IObjectInSql;
+import com.genesis.gamedb.persistance.PersistanceWrapper;
 
 import java.io.Serializable;
 

@@ -1,7 +1,7 @@
 package com.genesis.dataserver.serverdb.task;
 
 import com.genesis.dataserver.serverdb.ServerDBManager;
-import com.mokylin.bleach.gamedb.redis.DirtyDataInfo;
+import com.genesis.gamedb.redis.DirtyDataInfo;
 
 public class PutDirtyDataToCacheTask implements Runnable {
 
