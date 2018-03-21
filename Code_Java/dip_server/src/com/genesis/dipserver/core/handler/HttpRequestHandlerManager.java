@@ -1,4 +1,4 @@
-package com.mokylin.bleach.dipserver.core.handler;
+package com.genesis.dipserver.core.handler;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.Maps;

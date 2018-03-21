@@ -1,10 +1,10 @@
-package com.mokylin.bleach.dipserver;
+package com.genesis.dipserver;
 
 import com.genesis.core.concurrent.process.ProcessUnit;
 import com.genesis.core.concurrent.process.ProcessUnitHelper;
 import com.genesis.core.config.ConfigBuilder;
-import com.mokylin.bleach.dipserver.core.config.DipServerConfig;
-import com.mokylin.bleach.dipserver.core.handler.HttpRequestHandlerManager;
+import com.genesis.dipserver.core.handler.HttpRequestHandlerManager;
+import com.genesis.dipserver.core.config.DipServerConfig;
 
 import org.restlet.Application;
 import org.restlet.Component;
