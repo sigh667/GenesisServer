@@ -6,9 +6,9 @@ import com.genesis.core.config.ConfigBuilder;
 import com.genesis.core.util.BleachStringUtil;
 import com.genesis.core.util.FileUtil;
 import com.genesis.core.util.PackageUtil;
-import com.mokylin.bleach.dblog.DbLog;
-import com.mokylin.bleach.dblog.HumanDbLog;
-import com.mokylin.bleach.dblog.anno.Index;
+import com.genesis.dblog.DbLog;
+import com.genesis.dblog.HumanDbLog;
+import com.genesis.dblog.anno.Index;
 
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.Velocity;
