@@ -1,4 +1,4 @@
-package com.mokylin.bleach.launcher;
+package com.genesis.launcher;
 
 import com.genesis.gateserver.GateServer;
 import com.genesis.dataserver.DataServer;
