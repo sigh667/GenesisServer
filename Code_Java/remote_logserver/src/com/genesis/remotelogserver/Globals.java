@@ -1,4 +1,4 @@
-package com.mokylin.bleach.remotelogserver;
+package com.genesis.remotelogserver;
 
 import com.genesis.core.akka.Akka;
 import com.genesis.core.akka.config.AkkaConfig;
@@ -9,7 +9,7 @@ import com.genesis.core.isc.ISCService;
 import com.genesis.core.isc.RemoteActorManager;
 import com.genesis.core.isc.ServerType;
 import com.genesis.core.isc.remote.DefaultRemoteFactory;
-import com.mokylin.bleach.remotelogserver.disruptor.LogManager;
+import com.genesis.remotelogserver.disruptor.LogManager;
 
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.server.TServer;
