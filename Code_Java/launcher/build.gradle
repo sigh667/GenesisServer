@@ -30,7 +30,7 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 
-    compile project(":agent_server")
+    compile project(":gate_server")
     compile project(":game_server")
     compile project(":data_server")
 }

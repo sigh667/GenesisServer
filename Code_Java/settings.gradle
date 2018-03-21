@@ -19,5 +19,5 @@ rootProject.name = 'Code_Java'
 
 include "common", "core", "protobuf", "db_log", "dip_server", "game_db"
 include "server_msg", "game_server", "remote_logserver", "swing", "tools"
-include "robot", "network2client", "agent_server", "data_server"
+include "robot", "network2client", "gate_server", "data_server"
 include "gm_server", "launcher", "log_server", "login_server", "redis_center", "test"
