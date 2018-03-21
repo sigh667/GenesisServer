@@ -29,7 +29,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 
     compile project(":network2client")
-    compile project(":game_server")
 }
 
 sourceSets {
