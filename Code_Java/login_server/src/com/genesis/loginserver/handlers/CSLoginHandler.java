@@ -89,13 +89,21 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
                 return;
         }
 
-        // 2.1 加锁
+        // 2.0 处理全球服登陆事宜 TODO
+        // 2.1 总登陆中心加锁（如果失败，则踢下线）
+        // 2.2 查询上次登陆，是否在本数据中心
+        // 2.2.1 是：跳到流程2.3
+        // 2.2.2 否：开始走跨区域加载数据流程(此流程走完之后，进入流程2.3)
+        // 2.3 置为在线状态，然后总登陆中心解锁（如果失败，则踢下线）（锁存在超时时间，暂定1分钟）
+
+        // 4.0 分配网关
+        // 加锁
         if (!AuthUtil.lock(channel, accountId, Globals.getRedisson())) {
             notifyFailAndDisconnect(session, LoginMessage.LoginFailReason.YOUR_ACCOUNT_LOGIN_ON_OTHER_SERVER);
             return;
         }
 
-        // 查询是否已经在某个Gate上了
+        // 4.1 查询是否已经在某个Gate上了
         final int gateID = findGate(channel, accountId);
         if (gateID > ServerIdDef.InvalidServerID) {
             // 将此Client定向到这台Gate上，取代旧连接
@@ -105,7 +113,7 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
             return;
         }
 
-        // 3.分配一个Gate给此玩家
+        // 4.2 分配一个Gate给此玩家
         allotGate(session, channel, accountId);
 
         // 解锁
