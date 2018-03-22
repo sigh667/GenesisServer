@@ -12,6 +12,7 @@ import org.redisson.api.RBucket;
 import org.redisson.api.RedissonClient;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Client登陆Gate
@@ -39,7 +40,7 @@ public class CSLoginGateHandler implements IClientMsgHandler<LoginMessage.CSLogi
         final RBucket<LoginClientInfo> bucketToGate = redisson.getBucket(keyToGate);
         final LoginClientInfo loginClientInfo = bucketToGate.get();
         for (int i = 0; i < loginClientInfo.vCode.size(); i++) {
-            if (loginClientInfo.vCode.get(i)!=vCodeList.get(i)) {
+            if (!Objects.equals(loginClientInfo.vCode.get(i), vCodeList.get(i))) {
                 notifyFailAndDisconnect(session, LoginMessage.LoginGateFailReason.VCODE_WRONG);
                 return;
             }

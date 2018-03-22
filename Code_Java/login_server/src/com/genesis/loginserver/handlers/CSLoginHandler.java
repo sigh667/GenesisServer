@@ -89,7 +89,7 @@ public class CSLoginHandler implements IClientMsgHandler<LoginMessage.CSLogin> {
                 return;
         }
 
-        // 2.0 处理全球服登陆事宜 TODO
+        // 2.0 处理全球服登陆事宜（以下流程，当准备部署第二个地理区域时，再做） TODO
         // 2.1 总登陆中心加锁（如果失败，则踢下线）
         // 2.2 查询上次登陆，是否在本数据中心
         // 2.2.1 是：跳到流程2.3
