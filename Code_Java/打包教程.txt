@@ -1,8 +1,16 @@
-到gradle目录下执行build.sh文件，格式如下
+一、到gradle目录下执行build.sh文件，格式如下
 
 sh build.sh [要打包的工程目录名字]
 
 比如用 sh build.sh login_server  命令进行login_server的打包
+
+二、在IDEA的Terminal（Alt+F12）窗口中，进入要打包的工程目录，
+比如login_server，先后执行这两个命令：
+gradle clean
+gradle fatJar
+
+以上两个方法可择一执行。
+
 
 打包完成后会在指定工程路径下创建一个build文件夹，结构如下
     build
