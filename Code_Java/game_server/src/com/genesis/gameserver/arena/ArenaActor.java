@@ -2,7 +2,7 @@ package com.genesis.gameserver.arena;
 
 import com.genesis.gameserver.arena.init.ArenaInitResult;
 import com.genesis.gameserver.core.global.ServerGlobals;
-import com.genesis.core.isc.remote.actorrefs.annotation.MessageAcception;
+import com.genesis.servermsg.core.isc.remote.actorrefs.annotation.MessageAcception;
 import com.genesis.gamedb.orm.entity.ArenaSnapEntity;
 import com.genesis.gameserver.core.persistance.DataUpdater;
 import com.genesis.protobuf.MessageType.MessageTarget;

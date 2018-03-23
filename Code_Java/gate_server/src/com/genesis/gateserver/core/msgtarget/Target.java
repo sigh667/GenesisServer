@@ -1,6 +1,6 @@
 package com.genesis.gateserver.core.msgtarget;
 
-import com.genesis.core.isc.ServerType;
+import com.genesis.servermsg.core.isc.ServerType;
 
 public class Target {
 

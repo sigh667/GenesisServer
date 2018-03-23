@@ -14,12 +14,12 @@ import com.google.common.base.Optional;
 
 import com.genesis.common.core.GlobalData;
 import com.genesis.common.dailyreward.template.DailyRewardsTemplate;
-import com.genesis.core.isc.ServerType;
-import com.genesis.core.isc.msg.ServerMessage;
-import com.genesis.core.isc.remote.IRemote;
-import com.genesis.core.isc.remote.actorrefs.IActorPackages;
-import com.genesis.core.isc.remote.actorrefs.MultiTargetActorRefs;
-import com.genesis.core.isc.remote.actorrefs.annotation.MessageAcception;
+import com.genesis.servermsg.core.isc.ServerType;
+import com.genesis.servermsg.core.isc.msg.ServerMessage;
+import com.genesis.servermsg.core.isc.remote.IRemote;
+import com.genesis.servermsg.core.isc.remote.actorrefs.IActorPackages;
+import com.genesis.servermsg.core.isc.remote.actorrefs.MultiTargetActorRefs;
+import com.genesis.servermsg.core.isc.remote.actorrefs.annotation.MessageAcception;
 import com.genesis.core.msgfunc.MsgArgs;
 import com.genesis.core.util.TimeUtils;
 import com.genesis.gameserver.arena.ArenaActor;

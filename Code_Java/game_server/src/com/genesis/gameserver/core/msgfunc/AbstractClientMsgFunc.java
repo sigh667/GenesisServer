@@ -2,9 +2,9 @@ package com.genesis.gameserver.core.msgfunc;
 
 import com.google.protobuf.GeneratedMessage;
 
-import com.genesis.core.isc.session.ISession;
+import com.genesis.servermsg.core.isc.session.ISession;
 import com.genesis.core.msgfunc.MsgArgs;
-import com.genesis.core.msgfunc.client.IClientMsgFunc;
+import com.genesis.servermsg.core.utilOld.clientOld.IClientMsgFunc;
 import com.genesis.gameserver.player.Player;
 
 /**

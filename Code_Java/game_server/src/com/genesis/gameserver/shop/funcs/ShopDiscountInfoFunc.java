@@ -2,9 +2,9 @@ package com.genesis.gameserver.shop.funcs;
 
 import com.genesis.common.shop.ShopType;
 import com.genesis.gameserver.core.global.ServerGlobals;
-import com.genesis.core.isc.remote.IRemote;
+import com.genesis.servermsg.core.isc.remote.IRemote;
 import com.genesis.core.msgfunc.MsgArgs;
-import com.genesis.core.msgfunc.server.IServerMsgFunc;
+import com.genesis.servermsg.core.msgfunc.IServerMsgFunc;
 import com.genesis.gamedb.uuid.UUIDType;
 import com.genesis.gameserver.shop.discount.ShopDiscount;
 import com.genesis.protobuf.MessageType.MessageTarget;

@@ -11,10 +11,10 @@ import com.genesis.gameserver.login.protocol.RemoveHumanInfoMsg;
 import com.google.common.base.Optional;
 
 import com.genesis.common.core.GlobalData;
-import com.genesis.core.isc.msg.ServerMessage;
-import com.genesis.core.isc.remote.IRemote;
-import com.genesis.core.isc.remote.actorrefs.annotation.MessageAcception;
-import com.genesis.core.net.msg.CSSMessage;
+import com.genesis.servermsg.core.isc.msg.ServerMessage;
+import com.genesis.servermsg.core.isc.remote.IRemote;
+import com.genesis.servermsg.core.isc.remote.actorrefs.annotation.MessageAcception;
+import com.genesis.servermsg.core.msg.CSSMessage;
 import com.genesis.core.timeaxis.TimeAxis;
 import com.genesis.gamedb.human.HumanInfo;
 import com.genesis.gameserver.core.heartbeat.Heartbeat;

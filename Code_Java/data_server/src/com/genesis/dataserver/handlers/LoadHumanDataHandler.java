@@ -1,9 +1,9 @@
 package com.genesis.dataserver.handlers;
 
 import com.genesis.dataserver.globals.Globals;
-import com.genesis.core.isc.remote.IRemote;
+import com.genesis.servermsg.core.isc.remote.IRemote;
 import com.genesis.core.msgfunc.MsgArgs;
-import com.genesis.core.msgfunc.server.IServerMsgFunc;
+import com.genesis.servermsg.core.msgfunc.IServerMsgFunc;
 import com.genesis.dataserver.serverdb.ServerDBManager;
 import com.genesis.dataserver.serverdb.ServerDBService;
 import com.genesis.dataserver.serverdb.task.LoadHumanDataTask;

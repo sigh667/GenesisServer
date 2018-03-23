@@ -6,9 +6,9 @@ import com.genesis.gameserver.core.heartbeat.PlayerHeartbeat;
 import com.genesis.gameserver.human.Human;
 import com.google.common.base.Optional;
 
-import com.genesis.core.isc.msg.ServerMessage;
-import com.genesis.core.isc.remote.IRemote;
-import com.genesis.core.net.msg.CSSMessage;
+import com.genesis.servermsg.core.isc.msg.ServerMessage;
+import com.genesis.servermsg.core.isc.remote.IRemote;
+import com.genesis.servermsg.core.msg.CSSMessage;
 import com.genesis.gameserver.core.persistance.DataUpdater;
 import com.genesis.protobuf.MessageType.MessageTarget;
 

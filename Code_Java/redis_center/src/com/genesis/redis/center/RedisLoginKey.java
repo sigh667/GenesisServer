@@ -1,6 +1,6 @@
 package com.genesis.redis.center;
 
-import com.genesis.core.isc.ServerType;
+import com.genesis.servermsg.core.isc.ServerType;
 
 import java.util.HashSet;
 import java.util.Set;

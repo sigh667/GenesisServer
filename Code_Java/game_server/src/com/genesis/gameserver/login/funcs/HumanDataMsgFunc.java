@@ -4,8 +4,8 @@ import com.genesis.gameserver.core.global.ServerGlobals;
 import com.genesis.gameserver.player.LoginStatus;
 import com.google.common.base.Optional;
 
-import com.genesis.core.isc.remote.IRemote;
-import com.genesis.core.msgfunc.server.IServerMsgFunc;
+import com.genesis.servermsg.core.isc.remote.IRemote;
+import com.genesis.servermsg.core.msgfunc.IServerMsgFunc;
 import com.genesis.gameserver.core.timeout.TimeoutCallbackManager.TimeoutCBWrapper;
 import com.genesis.gameserver.player.CreatePlayerActorHelper;
 import com.genesis.gameserver.player.Player;

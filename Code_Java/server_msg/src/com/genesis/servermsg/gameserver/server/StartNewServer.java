@@ -1,7 +1,7 @@
 package com.genesis.servermsg.gameserver.server;
 
-import com.genesis.core.config.ServerConfig;
-import com.genesis.core.isc.msg.IMessage;
+import com.genesis.servermsg.core.config.ServerConfig;
+import com.genesis.servermsg.core.msg.IMessage;
 import com.genesis.protobuf.MessageType.MessageTarget;
 
 import akka.actor.ActorRef;

@@ -1,10 +1,10 @@
 package com.genesis.gateserver.funcs;
 
 import com.genesis.gateserver.core.session.AgentClientSessions;
-import com.genesis.core.isc.msg.BroadcastMessage;
-import com.genesis.core.isc.remote.IRemote;
+import com.genesis.servermsg.core.isc.msg.BroadcastMessage;
+import com.genesis.servermsg.core.isc.remote.IRemote;
 import com.genesis.core.msgfunc.MsgArgs;
-import com.genesis.core.msgfunc.server.IServerMsgFunc;
+import com.genesis.servermsg.core.msgfunc.IServerMsgFunc;
 import com.genesis.protobuf.MessageType.MessageTarget;
 
 public class BroadcastMessageFunc implements IServerMsgFunc<BroadcastMessage, MsgArgs, MsgArgs> {

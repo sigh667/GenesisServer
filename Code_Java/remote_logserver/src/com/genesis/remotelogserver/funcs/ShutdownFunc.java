@@ -1,8 +1,8 @@
 package com.genesis.remotelogserver.funcs;
 
-import com.genesis.core.isc.remote.IRemote;
+import com.genesis.servermsg.core.isc.remote.IRemote;
 import com.genesis.core.msgfunc.MsgArgs;
-import com.genesis.core.msgfunc.server.IServerMsgFunc;
+import com.genesis.servermsg.core.msgfunc.IServerMsgFunc;
 import com.genesis.protobuf.MessageType.MessageTarget;
 import com.genesis.remotelogserver.Globals;
 import com.genesis.servermsg.remotelogserver.Shutdown;

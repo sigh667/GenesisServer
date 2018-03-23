@@ -3,7 +3,7 @@ package com.genesis.robot.robot;
 import com.genesis.robot.login.Status;
 import com.google.protobuf.GeneratedMessage;
 
-import com.genesis.core.isc.session.ISession;
+import com.genesis.servermsg.core.isc.session.ISession;
 import com.genesis.core.net.msg.SCMessage;
 import com.genesis.protobuf.MessageType;
 

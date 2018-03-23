@@ -4,9 +4,9 @@ import com.genesis.gameserver.core.log.LogService;
 import com.genesis.gameserver.server.ServerStatus;
 import com.google.common.base.Optional;
 
-import com.genesis.core.isc.ISCService;
-import com.genesis.core.isc.ServerType;
-import com.genesis.core.isc.remote.IRemote;
+import com.genesis.servermsg.core.isc.ISCService;
+import com.genesis.servermsg.core.isc.ServerType;
+import com.genesis.servermsg.core.isc.remote.IRemote;
 import com.genesis.core.msgfunc.MsgArgs;
 import com.genesis.core.redis.IRedis;
 import com.genesis.core.timeaxis.TimeAxis;

@@ -1,6 +1,6 @@
 package com.genesis.servermsg.gameserver;
 
-import com.genesis.core.isc.msg.IMessage;
+import com.genesis.servermsg.core.msg.IMessage;
 import com.genesis.gamedb.human.HumanData;
 import com.genesis.protobuf.MessageType.MessageTarget;
 

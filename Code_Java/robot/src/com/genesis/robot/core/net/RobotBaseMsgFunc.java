@@ -4,7 +4,7 @@ import com.genesis.robot.core.msgfunc.IGCMsgFunc;
 import com.genesis.robot.robot.Robot;
 import com.google.protobuf.GeneratedMessage;
 
-import com.genesis.core.isc.session.ISession;
+import com.genesis.servermsg.core.isc.session.ISession;
 
 public abstract class RobotBaseMsgFunc<Msg extends GeneratedMessage> implements IGCMsgFunc<Msg> {
 

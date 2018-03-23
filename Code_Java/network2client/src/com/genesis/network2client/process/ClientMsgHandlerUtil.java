@@ -1,10 +1,10 @@
 package com.genesis.network2client.process;
 
+import com.genesis.servermsg.core.utilOld.MsgUtil;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.Parser;
 import com.genesis.core.function.FunctionUtil;
 import com.genesis.core.msgfunc.exception.MessageFunctionParseException;
-import com.genesis.core.msgfunc.protobufutil.MsgUtil;
 import com.genesis.core.util.GenericityUtil;
 import com.genesis.core.util.PackageUtil;
 import com.genesis.protobuf.MessageType;

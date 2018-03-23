@@ -1,6 +1,6 @@
 package com.genesis.loginserver.core.world;
 
-import com.genesis.core.isc.remote.IRemote;
+import com.genesis.servermsg.core.isc.remote.IRemote;
 
 /**
  * 世界服信息

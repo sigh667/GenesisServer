@@ -16,7 +16,7 @@ import com.genesis.core.concurrent.process.ProcessUnit;
 import com.genesis.core.concurrent.process.ProcessUnitHelper;
 import com.genesis.core.config.ConfigBuilder;
 import com.genesis.core.heartbeat.HeartbeatService;
-import com.genesis.core.isc.ServerType;
+import com.genesis.servermsg.core.isc.ServerType;
 import com.genesis.core.redis.redisson.RedisUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.redisson.api.RAtomicLong;

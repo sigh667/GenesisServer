@@ -1,6 +1,6 @@
 package com.genesis.servermsg.loginserver;
 
-import com.genesis.core.isc.msg.IMessage;
+import com.genesis.servermsg.core.msg.IMessage;
 import com.genesis.protobuf.MessageType.MessageTarget;
 
 public class PlayerLogout implements IMessage {

@@ -3,7 +3,7 @@ package com.genesis.gateserver.core.session;
 import com.google.common.collect.Maps;
 
 import com.genesis.core.annotation.ThreadSafe;
-import com.genesis.core.isc.session.ISession;
+import com.genesis.servermsg.core.isc.session.ISession;
 import com.genesis.core.net.msg.SCMessage;
 import com.genesis.network2client.session.IClientSession;
 

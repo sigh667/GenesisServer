@@ -6,8 +6,8 @@ import com.genesis.network2client.msg.ClientMsg;
 import com.genesis.network2client.runnable.MsgProcessRunnable;
 import com.genesis.network2client.session.IClientSession;
 import com.genesis.core.concurrent.fixthreadpool.FixThreadPool;
-import com.genesis.core.isc.ServerType;
-import com.genesis.core.msgfunc.target.TargetService;
+import com.genesis.servermsg.core.isc.ServerType;
+import com.genesis.servermsg.core.target.TargetService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

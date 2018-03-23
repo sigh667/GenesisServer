@@ -2,10 +2,10 @@ package com.genesis.gameserver.player;
 
 import com.google.common.base.Optional;
 
-import com.genesis.core.isc.ServerType;
-import com.genesis.core.isc.msg.ActorRefMessage;
-import com.genesis.core.isc.remote.actorrefs.IActorPackages;
-import com.genesis.core.isc.remote.actorrefs.annotation.MessageAcception;
+import com.genesis.servermsg.core.isc.ServerType;
+import com.genesis.servermsg.core.isc.msg.ActorRefMessage;
+import com.genesis.servermsg.core.isc.remote.actorrefs.IActorPackages;
+import com.genesis.servermsg.core.isc.remote.actorrefs.annotation.MessageAcception;
 import com.genesis.gamedb.human.HumanData;
 import com.genesis.gamedb.human.HumanInfo;
 import com.genesis.gameserver.core.global.Globals;

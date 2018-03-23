@@ -2,11 +2,11 @@ package com.genesis.dataserver.globals;
 
 import com.genesis.core.akka.Akka;
 import com.genesis.core.concurrent.process.CommonProcessType;
-import com.genesis.core.config.ServerAddressTable;
+import com.genesis.servermsg.core.config.ServerAddressTable;
 import com.genesis.core.heartbeat.HeartbeatService;
-import com.genesis.core.isc.ISCActorSupervisor;
-import com.genesis.core.isc.ISCService;
-import com.genesis.core.isc.RemoteActorManager;
+import com.genesis.servermsg.core.isc.ISCActorSupervisor;
+import com.genesis.servermsg.core.isc.ISCService;
+import com.genesis.servermsg.core.isc.RemoteActorManager;
 import com.genesis.core.orm.hibernate.HibernateDBService;
 import com.genesis.dataserver.conf.DataServerConfig;
 import com.genesis.dataserver.conf.SqlProperties;

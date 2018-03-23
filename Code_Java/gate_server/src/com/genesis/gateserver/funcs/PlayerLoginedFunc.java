@@ -5,9 +5,9 @@ import com.google.common.base.Optional;
 import com.genesis.gateserver.core.frontend.gameserver.GameServerFrontend;
 import com.genesis.gateserver.global.Globals;
 import com.genesis.gateserver.core.session.AgentClientSessions;
-import com.genesis.core.isc.remote.IRemote;
+import com.genesis.servermsg.core.isc.remote.IRemote;
 import com.genesis.core.msgfunc.MsgArgs;
-import com.genesis.core.msgfunc.server.IServerMsgFunc;
+import com.genesis.servermsg.core.msgfunc.IServerMsgFunc;
 import com.genesis.protobuf.MessageType.MessageTarget;
 import com.genesis.servermsg.agentserver.PlayerLogined;
 

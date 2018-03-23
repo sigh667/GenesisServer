@@ -3,12 +3,12 @@ package com.genesis.remotelogserver;
 import com.genesis.core.akka.Akka;
 import com.genesis.core.akka.config.AkkaConfig;
 import com.genesis.core.config.ConfigBuilder;
-import com.genesis.core.config.ServerConfig;
-import com.genesis.core.isc.ISCActorSupervisor;
-import com.genesis.core.isc.ISCService;
-import com.genesis.core.isc.RemoteActorManager;
-import com.genesis.core.isc.ServerType;
-import com.genesis.core.isc.remote.DefaultRemoteFactory;
+import com.genesis.servermsg.core.config.ServerConfig;
+import com.genesis.servermsg.core.isc.ISCActorSupervisor;
+import com.genesis.servermsg.core.isc.ISCService;
+import com.genesis.servermsg.core.isc.RemoteActorManager;
+import com.genesis.servermsg.core.isc.ServerType;
+import com.genesis.servermsg.core.isc.remote.DefaultRemoteFactory;
 import com.genesis.remotelogserver.disruptor.LogManager;
 
 import org.apache.thrift.protocol.TBinaryProtocol;

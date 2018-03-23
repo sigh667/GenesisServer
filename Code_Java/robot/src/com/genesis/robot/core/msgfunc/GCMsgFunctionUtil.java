@@ -5,7 +5,7 @@ import com.google.protobuf.Parser;
 
 import com.genesis.core.function.FunctionUtil;
 import com.genesis.core.msgfunc.exception.MessageFunctionParseException;
-import com.genesis.core.msgfunc.protobufutil.MsgUtil;
+import com.genesis.protobuf.core.util.MsgUtil;
 import com.genesis.core.util.GenericityUtil;
 import com.genesis.core.util.PackageUtil;
 

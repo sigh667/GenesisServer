@@ -1,7 +1,7 @@
 package com.genesis.dataserver.serverdb.task;
 
 import com.genesis.dataserver.globals.Globals;
-import com.genesis.core.isc.remote.IRemote;
+import com.genesis.servermsg.core.isc.remote.IRemote;
 import com.genesis.core.orm.hibernate.HibernateDBService;
 import com.genesis.core.redis.IRedis;
 import com.genesis.core.redis.op.IPipelineOp;

@@ -1,10 +1,10 @@
 package com.genesis.gateserver.core.frontend.gameserver;
 
-import com.genesis.core.config.ServerConfig;
-import com.genesis.core.isc.msg.IMessage;
-import com.genesis.core.isc.msg.ServerMessage;
-import com.genesis.core.isc.remote.IRemote;
-import com.genesis.core.net.msg.CSSMessage;
+import com.genesis.servermsg.core.config.ServerConfig;
+import com.genesis.servermsg.core.msg.IMessage;
+import com.genesis.servermsg.core.isc.msg.ServerMessage;
+import com.genesis.servermsg.core.isc.remote.IRemote;
+import com.genesis.servermsg.core.msg.CSSMessage;
 import com.genesis.protobuf.MessageType;
 import com.genesis.protobuf.MessageType.CGMessageType;
 import com.genesis.protobuf.MessageType.MessageTarget;

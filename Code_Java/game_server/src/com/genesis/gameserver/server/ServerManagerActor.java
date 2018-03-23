@@ -1,7 +1,7 @@
 package com.genesis.gameserver.server;
 
-import com.genesis.core.isc.ServerType;
-import com.genesis.core.isc.remote.actorrefs.annotation.MessageAcception;
+import com.genesis.servermsg.core.isc.ServerType;
+import com.genesis.servermsg.core.isc.remote.actorrefs.annotation.MessageAcception;
 import com.genesis.gameserver.core.config.GameServerConfig;
 import com.genesis.protobuf.MessageType.MessageTarget;
 import com.genesis.servermsg.gameserver.server.StartNewServer;
