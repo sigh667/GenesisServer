@@ -62,7 +62,7 @@ task fatJar(type: Jar) {
 
 buildscript {
     repositories {
-        flatDir dirs: '/Users/xiaoyaguang/Documents/tech/proguard6.0.1/lib'
+        flatDir dirs: project.buildDir.path + '/../../gradle/proguardlib'
     }
     dependencies {
         classpath ':proguard:'
