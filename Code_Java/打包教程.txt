@@ -7,7 +7,7 @@ sh build.sh [要打包的工程目录名字]
 二、在IDEA的Terminal（Alt+F12）窗口中，进入要打包的工程目录，
 比如login_server，先后执行这两个命令：
 gradle clean
-gradle fatJar
+gradle buildSingleProject
 
 以上两个方法可择一执行。
 

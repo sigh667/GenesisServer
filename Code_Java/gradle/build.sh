@@ -11,4 +11,4 @@ projectName=$1
 cd ../$projectName/
 
 gradle clean
-gradle fatJar
+gradle buildSingleProject

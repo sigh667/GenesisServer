@@ -30,6 +30,7 @@ dependencies {
     compile project(":protobuf")
     compile project(":core")
     compile project(":common")
+    compile project(":server_msg")
 }
 
 sourceSets {
