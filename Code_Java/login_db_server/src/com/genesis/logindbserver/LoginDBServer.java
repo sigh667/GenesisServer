@@ -1,5 +1,7 @@
 package com.genesis.logindbserver;
 
+import com.genesis.core.concurrent.fixthreadpool.FixThreadPool;
+import com.genesis.core.concurrent.fixthreadpool.IRunnableBindId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,6 +18,19 @@ public class LoginDBServer {
     public static void main(String[] args) {
 
         try {
+            FixThreadPool pool = new FixThreadPool(1, null);
+            pool.submit(new IRunnableBindId() {
+                @Override
+                public long bindId() {
+                    return 0;
+                }
+
+                @Override
+                public void run() {
+
+                    System.out.println("hahaha");
+                }
+            });
 
         } catch (Exception e) {
             logger.error("LoginDBServer 启动失败！！！", e);
