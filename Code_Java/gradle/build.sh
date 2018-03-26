@@ -11,4 +11,5 @@ projectName=$1
 cd ../$projectName/
 
 gradle clean
+gradle build
 gradle buildSingleProject
