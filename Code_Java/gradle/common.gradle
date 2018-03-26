@@ -91,7 +91,7 @@ task myProguardTask(type: proguard.gradle.ProGuardTask) {
     // tables to get line numbers in the stack traces.
     // You can comment this out if you're not interested in stack traces.
 
-    printmapping 'out.map'
+    printmapping project.buildDir.path + '/out.map'
 //    keepparameternames
     renamesourcefileattribute 'SourceFile'
     keepattributes 'Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable,EnclosingMethod'
@@ -153,7 +153,7 @@ task myProguardTask(type: proguard.gradle.ProGuardTask) {
 
 task buildSingleProject {
     doLast {
-
+        print System.getProperty('java.version')
     }
 }
 
