@@ -1,5 +1,8 @@
 package com.genesis.network2client.handle;
 
+import com.genesis.core.net.msg.SCMessage;
+import com.genesis.core.time.TimeService;
+import com.genesis.core.util.RandomUtil;
 import com.genesis.network2client.channel.IChannelListener;
 import com.genesis.network2client.id.IdGenerator;
 import com.genesis.network2client.msg.ClientMsg;
@@ -7,9 +10,6 @@ import com.genesis.network2client.session.IClientSession;
 import com.genesis.protobuf.LoginMessage;
 import com.genesis.protobuf.MessageType;
 import com.google.protobuf.GeneratedMessage;
-import com.genesis.core.net.msg.SCMessage;
-import com.genesis.core.time.TimeService;
-import com.genesis.core.util.RandomUtil;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -40,12 +40,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Sharable
 public class ClientIoHandler extends ChannelInboundHandlerAdapter {
+    /** 日志 */
+    private final static Logger log = LoggerFactory.getLogger(ClientIoHandler.class);
 
     /** 会话对应的键 */
     public final static AttributeKey<IClientSession> sessionKey =
             AttributeKey.valueOf("SessionKey");
-    /** 日志 */
-    private final static Logger log = LoggerFactory.getLogger(ServerIoHandler.class);
     /** 网络消息处理器 */
     private final IClientMessageHandler msgProcess;
     /** 网络通道监听器 */
